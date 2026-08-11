@@ -1,1 +1,10 @@
-*.txt
+# Playwright test artifacts
+.playwright/
+.playwright-mcp/
+
+# Build / archive
+Licenbase.com.zip
+
+# OS junk
+.DS_Store
+Thumbs.db

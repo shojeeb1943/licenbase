@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LicenBase — Your Software License Partner</title>
+  <meta name="description" content="LicenBase is a trusted platform for genuine software licenses — business software, hosting licenses, developer tools, security solutions and bundles with fast digital delivery and transparent pricing." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://licenbase.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="LicenBase — Your Software License Partner" />
+  <meta property="og:description" content="Buy genuine software licenses for your business — Microsoft, cPanel, hosting, developer tools and more from one trusted platform." />
+  <meta property="og:url" content="https://licenbase.com/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LicenBase — Your Software License Partner" />
+  <meta name="twitter:description" content="Genuine software licenses and business tools from one trusted platform." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E40AF'/%3E%3Cpath d='M10 17l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+
+  <!-- Tailwind (Play CDN). Play CDN does not send CORS headers, so no SRI/crossorigin here. -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#1E40AF',
+            brandDeep: '#1E3A8A',
+            brandSoft: '#EFF4FF',
+            navy: '#111827',
+            navyLight: '#1F2937',
+            accent: '#10B981',
+            accentDeep: '#047857',
+            accentSoft: '#ECFDF5',
+            mist: '#F8FAFC',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+
+  <!-- ============ 01 · ANNOUNCEMENT BAR ============ -->
+  <div id="announcement" class="relative z-40 bg-brand text-white">
+    <div class="lb-shell flex items-center justify-center py-2.5 pr-10 text-center">
+      <p class="text-[13px] font-medium leading-snug sm:text-sm">
+        <span class="font-semibold">NEW:</span>
+        <span class="opacity-90">Business software licensing made simple —</span>
+        <a href="#bundles" class="group ml-1 inline-flex items-center gap-1 font-semibold underline-offset-2 hover:underline">
+          Save more with bundles
+          <i data-lucide="arrow-right" class="lb-link-arrow h-3.5 w-3.5"></i>
+        </a>
+      </p>
+      <button id="announce-close" type="button" aria-label="Dismiss announcement"
+        class="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-white/80 transition hover:bg-white/15 hover:text-white">
+        <i data-lucide="x" class="h-4 w-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ 02 · MAIN NAVIGATION ============ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300">
+    <div class="lb-shell">
+      <div class="flex h-16 items-center justify-between gap-3 lg:h-[72px]">
+
+        <!-- Logo -->
+        <a href="#" class="flex shrink-0 items-center gap-2.5" aria-label="LicenBase home">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-white shadow-sm shadow-brand/20">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <path d="m9 15 2 2 4-4" />
+            </svg>
+          </span>
+          <span class="font-display text-xl font-extrabold tracking-tight text-navy">
+            Licen<span class="text-brand">Base</span>
+          </span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden items-center lg:flex" aria-label="Main navigation">
+          <!-- Software -->
+          <div class="lb-drop relative">
+            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
+              Software <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
+            </button>
+            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
+              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
+                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Operating Systems</a>
+                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Business Software</a>
+                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Developer Tools</a>
+                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Creative Tools</a>
+              </div>
+            </div>
+          </div>
+          <!-- Hosting -->
+          <div class="lb-drop relative">
+            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
+              Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
+            </button>
+            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
+              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">cPanel Licenses</a>
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Plesk Licenses</a>
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">LiteSpeed Web Server</a>
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">CloudLinux OS</a>
+              </div>
+            </div>
+          </div>
+          <!-- Business -->
+          <div class="lb-drop relative">
+            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
+              Business <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
+            </button>
+            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
+              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
+                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Microsoft 365</a>
+                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Volume Licensing</a>
+                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Business Subscriptions</a>
+                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Dedicated Support</a>
+              </div>
+            </div>
+          </div>
+          <!-- Security -->
+          <div class="lb-drop relative">
+            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
+              Security <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
+            </button>
+            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
+              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Antivirus</a>
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Endpoint Protection</a>
+                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Security Bundles</a>
+              </div>
+            </div>
+          </div>
+          <!-- Deals -->
+          <a href="#best-deals" class="rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist">Deals</a>
+        </nav>
+
+        <!-- Right actions -->
+        <div class="flex shrink-0 items-center gap-1.5 sm:gap-2">
+          <button id="search-open" type="button" aria-label="Search software"
+            class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+            <i data-lucide="search" class="h-5 w-5"></i>
+          </button>
+          <button id="cart-btn" type="button" aria-label="Open cart"
+            class="relative grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+            <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+            <span id="cart-count" class="absolute -right-0.5 -top-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand px-1 text-[10px] font-bold leading-none text-white">0</span>
+          </button>
+          <a href="#" class="hidden rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:text-brand sm:block">Sign In</a>
+          <a href="#search" class="hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brandDeep sm:inline-flex">Get Started</a>
+          <button id="menu-open" type="button" aria-label="Open menu"
+            class="grid h-9 w-9 place-items-center rounded-lg text-navy transition hover:bg-mist lg:hidden">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 03 · TRUST FEATURE STRIP ============ -->
+  <div class="border-b border-gray-200 bg-mist">
+    <div class="lb-shell flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-2.5">
+      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
+        <i data-lucide="badge-check" class="h-4 w-4 text-accent"></i> Genuine Software
+      </span>
+      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
+        <i data-lucide="zap" class="h-4 w-4 text-accent"></i> Instant Digital Delivery
+      </span>
+      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
+        <i data-lucide="shield-check" class="h-4 w-4 text-accent"></i> Secure Payments
+      </span>
+      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
+        <i data-lucide="headset" class="h-4 w-4 text-accent"></i> Dedicated Support
+      </span>
+    </div>
+  </div>
+
+  <!-- ============ 04 · HERO ============ -->
+  <section class="relative overflow-hidden bg-mist">
+    <div class="lb-shell grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:py-24">
+      <!-- Copy -->
+      <div>
+        <span class="lb-eyebrow inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brandSoft px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span> Software Licensing, Simplified
+        </span>
+        <h1 class="lb-hero-title mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem]">
+          Everything Your Business Needs.<br />
+          <span class="text-brand">One Licensing Platform.</span>
+        </h1>
+        <p class="lb-hero-sub mt-6 max-w-xl text-base leading-relaxed text-gray-500 sm:text-lg">
+          Get genuine software licenses and business tools from one trusted platform. Simple purchasing, fast digital delivery, transparent pricing, and support when you need it.
+        </p>
+        <div class="lb-hero-cta mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="#popular-software" class="lb-btn lb-btn--primary">Browse All Software</a>
+          <a href="#business-licensing" class="lb-btn lb-btn--secondary">Explore Business Solutions</a>
+        </div>
+        <ul class="lb-hero-trust mt-9 flex flex-wrap gap-x-6 gap-y-2.5">
+          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Genuine Software</li>
+          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Fast Digital Delivery</li>
+          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Secure Checkout</li>
+          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Business Support</li>
+        </ul>
+      </div>
+
+      <!-- Dashboard mockup -->
+      <div class="lb-hero-visual relative mx-auto w-full max-w-lg lg:max-w-none">
+        <div class="lb-float rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl shadow-brand/10 sm:p-6">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <div class="flex items-center gap-2">
+              <span class="grid h-7 w-7 place-items-center rounded-lg bg-navy text-white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <path d="m9 15 2 2 4-4" />
+                </svg>
+              </span>
+              <span class="text-sm font-semibold text-navy">LicenBase Dashboard</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-2.5 w-2.5 rounded-full bg-gray-200"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-gray-200"></span>
+              <span class="h-6 w-6 rounded-full bg-brandSoft text-[10px] font-bold text-brand grid place-items-center">L</span>
+            </div>
+          </div>
+
+          <div class="mt-5 flex items-center justify-between">
+            <h2 class="text-sm font-bold text-navy">Active Licenses</h2>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-accentSoft px-2.5 py-1 text-xs font-semibold text-accentDeep">
+              <span class="lb-live h-1.5 w-1.5 rounded-full bg-accent"></span> 4 active
+            </span>
+          </div>
+
+          <ul class="mt-2 divide-y divide-gray-100">
+            <!-- cPanel -->
+            <li class="flex items-center justify-between gap-3 py-3">
+              <div class="flex min-w-0 items-center gap-3">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">cP</span>
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-semibold text-navy">cPanel</p>
+                  <p class="truncate text-xs text-gray-500">Solo License · Monthly</p>
+                </div>
+              </div>
+              <div class="flex shrink-0 items-center gap-3">
+                <span class="text-sm font-semibold text-navy">$XX.XX</span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
+              </div>
+            </li>
+            <!-- Microsoft 365 -->
+            <li class="flex items-center justify-between gap-3 py-3">
+              <div class="flex min-w-0 items-center gap-3">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">M36</span>
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-semibold text-navy">Microsoft 365 Business</p>
+                  <p class="truncate text-xs text-gray-500">Business Standard · 1 Year</p>
+                </div>
+              </div>
+              <div class="flex shrink-0 items-center gap-3">
+                <span class="text-sm font-semibold text-navy">$XX.XX</span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
+              </div>
+            </li>
+            <!-- LiteSpeed -->
+            <li class="flex items-center justify-between gap-3 py-3">
+              <div class="flex min-w-0 items-center gap-3">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">LS</span>
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-semibold text-navy">LiteSpeed</p>
+                  <p class="truncate text-xs text-gray-500">Standard License · 1 Year</p>
+                </div>
+              </div>
+              <div class="flex shrink-0 items-center gap-3">
+                <span class="text-sm font-semibold text-navy">$XX.XX</span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
+              </div>
+            </li>
+            <!-- Windows Server -->
+            <li class="flex items-center justify-between gap-3 py-3">
+              <div class="flex min-w-0 items-center gap-3">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">WS</span>
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-semibold text-navy">Windows Server</p>
+                  <p class="truncate text-xs text-gray-500">Standard · Perpetual</p>
+                </div>
+              </div>
+              <div class="flex shrink-0 items-center gap-3">
+                <span class="text-sm font-semibold text-navy">$XXX.XX</span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#" class="group mt-3 inline-flex items-center gap-1.5 border-t border-gray-100 pt-4 text-sm font-semibold text-brand">
+            View All Licenses
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </a>
+        </div>
+
+        <!-- Floating chips -->
+        <div class="lb-float-slow absolute -left-4 top-10 hidden items-center gap-2 rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 shadow-lg shadow-navy/5 sm:flex">
+          <span class="grid h-7 w-7 place-items-center rounded-lg bg-accentSoft text-accentDeep"><i data-lucide="lock" class="h-4 w-4"></i></span>
+          <span class="text-xs font-semibold text-navy">Secure Checkout</span>
+        </div>
+        <div class="lb-float-slow2 absolute -bottom-5 -right-3 hidden items-center gap-2 rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 shadow-lg shadow-navy/5 sm:flex">
+          <span class="grid h-7 w-7 place-items-center rounded-lg bg-brandSoft text-brand"><i data-lucide="mail-check" class="h-4 w-4"></i></span>
+          <span class="text-xs font-semibold text-navy">License Delivered</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · TRUSTED BRANDS ============ -->
+  <section class="border-b border-gray-200 bg-white">
+    <div class="lb-shell py-12 lg:py-14">
+      <p class="text-center text-sm font-medium text-gray-500">Trusted software from the brands businesses rely on</p>
+      <div class="lb-brands mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-5 lg:justify-between">
+        <span class="lb-brand text-base font-bold text-gray-400 transition hover:text-navy">Microsoft</span>
+        <span class="lb-brand text-base font-extrabold lowercase tracking-tight text-gray-400 transition hover:text-navy">cPanel</span>
+        <span class="lb-brand text-base font-bold text-gray-400 transition hover:text-navy">Lite<span class="text-gray-400">Speed</span></span>
+        <span class="lb-brand text-base font-extrabold tracking-tight text-gray-400 transition hover:text-navy">Plesk</span>
+        <span class="lb-brand text-base font-semibold text-gray-400 transition hover:text-navy">CloudLinux</span>
+        <span class="lb-brand text-base font-extrabold text-gray-400 transition hover:text-navy">JetBrains</span>
+        <span class="lb-brand text-base font-extrabold text-gray-400 transition hover:text-navy">Adobe</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · CATEGORY EXPLORER ============ -->
+  <section id="categories" class="bg-mist">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Shop by Category</h2>
+        <p class="mt-3 text-base text-gray-500">Find the software and tools your business needs.</p>
+      </div>
+      <div class="lb-stagger mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="#popular-software" class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="monitor" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Operating Systems</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Windows, Windows Server &amp; Microsoft software</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+            <span class="lb-product-count" data-count="120">XX+ Products</span>
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </span>
+        </a>
+        <a href="#popular-software" class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="server" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Hosting &amp; Infrastructure</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500">cPanel, Plesk, LiteSpeed, CloudLinux &amp; more</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+            <span class="lb-product-count" data-count="95">XX+ Products</span>
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </span>
+        </a>
+        <a href="#popular-software" class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="briefcase" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Business Software</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Productivity, collaboration and business tools</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+            <span class="lb-product-count" data-count="140">XX+ Products</span>
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </span>
+        </a>
+        <a href="#popular-software" class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="code-2" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Developer Tools</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500">IDE, DevOps, version control and developer software</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+            <span class="lb-product-count" data-count="85">XX+ Products</span>
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </span>
+        </a>
+        <a href="#popular-software" class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="shield-check" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Security</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Antivirus, endpoint protection and security solutions</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+            <span class="lb-product-count" data-count="110">XX+ Products</span>
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </span>
+        </a>
+        <a href="#popular-software" class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="palette" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Creative Tools</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Design, video editing and creative software</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+            <span class="lb-product-count" data-count="75">XX+ Products</span>
+            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 · POPULAR PRODUCTS ============ -->
+  <section id="popular-software" class="bg-white">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Popular Software</h2>
+          <p class="mt-3 text-base text-gray-500">The tools trusted by professionals, developers and businesses.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="lb-swiper-prev lb-swiper-btn" type="button" aria-label="Previous products"><i data-lucide="arrow-left" class="h-4 w-4"></i></button>
+          <button class="lb-swiper-next lb-swiper-btn" type="button" aria-label="Next products"><i data-lucide="arrow-right" class="h-4 w-4"></i></button>
+          <a href="#" class="group inline-flex items-center gap-1.5 text-sm font-semibold text-brand">View All Products <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i></a>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <div class="swiper lb-product-swiper">
+          <div class="swiper-wrapper">
+            <!-- cPanel -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">cP</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">cPanel</h3>
+                    <p class="text-xs font-medium text-gray-400">Solo License</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Professional hosting control panel for managing websites and servers.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XX.XX<span class="text-sm font-semibold text-gray-400">/mo</span></p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- LiteSpeed -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">LS</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">LiteSpeed Web Server</h3>
+                    <p class="text-xs font-medium text-gray-400">Standard License</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">High-performance web server software for hosting providers.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- Microsoft 365 -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">M36</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">Microsoft 365 Business</h3>
+                    <p class="text-xs font-medium text-gray-400">Business Standard · 1 Year</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Productivity suite with apps, email and collaboration for modern teams.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- Windows Server -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">WS</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">Windows Server 2022</h3>
+                    <p class="text-xs font-medium text-gray-400">Standard License</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Enterprise server operating system with secure, scalable infrastructure.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XXX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- CloudLinux -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">CL</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">CloudLinux</h3>
+                    <p class="text-xs font-medium text-gray-400">Single Server License</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Secure, stable Linux OS built for hosting providers and shared environments.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- WHMCS -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">WH</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">WHMCS</h3>
+                    <p class="text-xs font-medium text-gray-400">Owned License</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Billing, client management and automation for hosting businesses.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XXX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- Plesk -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">PL</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">Plesk</h3>
+                    <p class="text-xs font-medium text-gray-400">Web Host Edition</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Complete hosting control panel with WordPress and security tools.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+            <!-- JetBrains -->
+            <div class="swiper-slide h-auto">
+              <div class="lb-card flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">JB</span>
+                  <div>
+                    <h3 class="font-display text-base font-bold text-navy">JetBrains All Products</h3>
+                    <p class="text-xs font-medium text-gray-400">1 Year License</p>
+                  </div>
+                </div>
+                <p class="mt-4 flex-1 text-sm leading-relaxed text-gray-500">Every JetBrains IDE and tool in a single developer license pack.</p>
+                <div class="mt-5 border-t border-gray-100 pt-4">
+                  <p class="text-xs font-medium text-gray-400">From</p>
+                  <p class="font-display text-xl font-extrabold text-navy">$XXX.XX</p>
+                  <a href="#" class="lb-btn lb-btn--ghost mt-4 w-full">View License</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 · BEST DEALS ============ -->
+  <section id="best-deals" class="bg-mist">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Today's Best Software Deals</h2>
+          <p class="mt-3 text-base text-gray-500">Save on popular software and business tools.</p>
+        </div>
+        <div class="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5">
+          <span class="relative flex h-2 w-2"><span class="lb-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span></span>
+          <span class="text-xs font-semibold text-navy">Offers ending soon</span>
+        </div>
+      </div>
+
+      <div class="lb-stagger mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Windows 11 Pro -->
+        <div class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+          <div class="flex items-start justify-between">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">W11</span>
+            <span class="rounded-full bg-navy px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">Popular</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold text-navy">Windows 11 Pro</h3>
+          <p class="mt-1 text-sm text-gray-500">Perpetual License</p>
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+            <span class="font-display text-2xl font-extrabold text-navy">$XX.XX</span>
+          </div>
+          <p class="mt-1.5 inline-flex rounded-full bg-accentSoft px-2.5 py-1 text-xs font-bold text-accentDeep">Save 30%</p>
+          <button type="button" class="lb-btn lb-btn--primary lb-add-cart mt-5 w-full">Get Deal</button>
+        </div>
+        <!-- Microsoft Office -->
+        <div class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+          <div class="flex items-start justify-between">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">MOff</span>
+            <span class="rounded-full bg-brand px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">Limited</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold text-navy">Microsoft Office</h3>
+          <p class="mt-1 text-sm text-gray-500">1 Year License</p>
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+            <span class="font-display text-2xl font-extrabold text-navy">$XX.XX</span>
+          </div>
+          <p class="mt-1.5 inline-flex rounded-full bg-accentSoft px-2.5 py-1 text-xs font-bold text-accentDeep">Save 25%</p>
+          <button type="button" class="lb-btn lb-btn--primary lb-add-cart mt-5 w-full">Get Deal</button>
+        </div>
+        <!-- cPanel -->
+        <div class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+          <div class="flex items-start justify-between">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">cP</span>
+            <span class="rounded-full bg-accent px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">Best Value</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold text-navy">cPanel</h3>
+          <p class="mt-1 text-sm text-gray-500">Solo License · Monthly</p>
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="text-sm font-medium text-gray-400 line-through">$XX.XX</span>
+            <span class="font-display text-2xl font-extrabold text-navy">$XX.XX</span>
+          </div>
+          <p class="mt-1.5 inline-flex rounded-full bg-accentSoft px-2.5 py-1 text-xs font-bold text-accentDeep">Save 20%</p>
+          <button type="button" class="lb-btn lb-btn--primary lb-add-cart mt-5 w-full">Get Deal</button>
+        </div>
+        <!-- Adobe CC -->
+        <div class="lb-card group relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/5">
+          <div class="flex items-start justify-between">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brandSoft font-display text-sm font-bold text-brand">CC</span>
+            <span class="rounded-full bg-navy px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">Popular</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold text-navy">Adobe Creative Cloud</h3>
+          <p class="mt-1 text-sm text-gray-500">1 Year License</p>
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+            <span class="font-display text-2xl font-extrabold text-navy">$XXX.XX</span>
+          </div>
+          <p class="mt-1.5 inline-flex rounded-full bg-accentSoft px-2.5 py-1 text-xs font-bold text-accentDeep">Save 15%</p>
+          <button type="button" class="lb-btn lb-btn--primary lb-add-cart mt-5 w-full">Get Deal</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 09 · BUNDLE SHOWCASE ============ -->
+  <section id="bundles" class="bg-navy text-white">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Powerful Bundles. Bigger Savings.</h2>
+        <p class="mt-3 text-base text-gray-300">Get more of the tools you need for less with curated LicenBase bundles.</p>
+      </div>
+
+      <div class="lb-stagger mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Web Hosting Essentials -->
+        <div class="lb-card group flex flex-col rounded-2xl border border-white/10 bg-navyLight p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:shadow-2xl hover:shadow-black/30">
+          <div class="flex items-center gap-2">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">cP</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">LS</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">CL</span>
+          </div>
+          <h3 class="mt-5 font-display text-lg font-bold text-white">Web Hosting Essentials</h3>
+          <ul class="mt-3 flex-1 space-y-1.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> cPanel</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> LiteSpeed</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> CloudLinux</li>
+          </ul>
+          <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="flex items-baseline gap-2">
+              <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+              <span class="font-display text-2xl font-extrabold text-white">$XXX.XX</span>
+            </div>
+            <p class="mt-1.5 inline-flex rounded-full bg-accent/15 px-2.5 py-1 text-xs font-bold text-accent">Save 25%</p>
+            <button type="button" class="lb-btn lb-btn--dark mt-4 w-full">View Bundle</button>
+          </div>
+        </div>
+        <!-- Business Productivity Pack -->
+        <div class="lb-card group flex flex-col rounded-2xl border border-white/10 bg-navyLight p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:shadow-2xl hover:shadow-black/30">
+          <div class="flex items-center gap-2">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">M36</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">Off</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">Biz</span>
+          </div>
+          <h3 class="mt-5 font-display text-lg font-bold text-white">Business Productivity Pack</h3>
+          <ul class="mt-3 flex-1 space-y-1.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> Microsoft 365</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> Microsoft Office</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> Business productivity tools</li>
+          </ul>
+          <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="flex items-baseline gap-2">
+              <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+              <span class="font-display text-2xl font-extrabold text-white">$XXX.XX</span>
+            </div>
+            <p class="mt-1.5 inline-flex rounded-full bg-accent/15 px-2.5 py-1 text-xs font-bold text-accent">Save 20%</p>
+            <button type="button" class="lb-btn lb-btn--dark mt-4 w-full">View Bundle</button>
+          </div>
+        </div>
+        <!-- Developer Power Pack -->
+        <div class="lb-card group flex flex-col rounded-2xl border border-white/10 bg-navyLight p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:shadow-2xl hover:shadow-black/30">
+          <div class="flex items-center gap-2">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">JB</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">GK</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">Do</span>
+          </div>
+          <h3 class="mt-5 font-display text-lg font-bold text-white">Developer Power Pack</h3>
+          <ul class="mt-3 flex-1 space-y-1.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> JetBrains</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> GitKraken</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> Docker</li>
+          </ul>
+          <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="flex items-baseline gap-2">
+              <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+              <span class="font-display text-2xl font-extrabold text-white">$XXX.XX</span>
+            </div>
+            <p class="mt-1.5 inline-flex rounded-full bg-accent/15 px-2.5 py-1 text-xs font-bold text-accent">Save 30%</p>
+            <button type="button" class="lb-btn lb-btn--dark mt-4 w-full">View Bundle</button>
+          </div>
+        </div>
+        <!-- Security Plus Bundle -->
+        <div class="lb-card group flex flex-col rounded-2xl border border-white/10 bg-navyLight p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:shadow-2xl hover:shadow-black/30">
+          <div class="flex items-center gap-2">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">BD</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">ES</span>
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 font-display text-xs font-bold text-white">MB</span>
+          </div>
+          <h3 class="mt-5 font-display text-lg font-bold text-white">Security Plus Bundle</h3>
+          <ul class="mt-3 flex-1 space-y-1.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> Bitdefender</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> ESET</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-accent"></i> Malwarebytes</li>
+          </ul>
+          <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="flex items-baseline gap-2">
+              <span class="text-sm font-medium text-gray-400 line-through">$XXX.XX</span>
+              <span class="font-display text-2xl font-extrabold text-white">$XXX.XX</span>
+            </div>
+            <p class="mt-1.5 inline-flex rounded-full bg-accent/15 px-2.5 py-1 text-xs font-bold text-accent">Save 22%</p>
+            <button type="button" class="lb-btn lb-btn--dark mt-4 w-full">View Bundle</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="#" class="lb-btn lb-btn--dark-inline">View All Bundles <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 · WHY LICENBASE ============ -->
+  <section class="bg-white">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Why businesses choose LicenBase</h2>
+        <p class="mt-3 text-base text-gray-500">A licensing platform built on trust, speed and clarity.</p>
+      </div>
+      <div class="lb-stagger mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="lb-card rounded-2xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="badge-check" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Genuine Software</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Purchase legitimate software licenses from trusted sources.</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="zap" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Fast Digital Delivery</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Get your license information quickly after purchase.</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="tag" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Transparent Pricing</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Know exactly what you're paying before checkout.</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="life-buoy" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Expert Support</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Get help choosing and managing your software.</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="lock" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">Secure Checkout</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Protected payments and secure order processing.</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="folder-kanban" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-lg font-bold text-navy">License Management</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Keep your software purchases organized.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 · BUSINESS LICENSING ============ -->
+  <section id="business-licensing" class="bg-mist">
+    <div class="lb-shell grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-14 lg:py-24">
+      <div>
+        <h2 class="font-display text-3xl font-extrabold leading-tight tracking-tight text-navy sm:text-4xl">Software licensing for growing businesses</h2>
+        <p class="mt-5 max-w-xl text-base leading-relaxed text-gray-500">
+          Managing multiple software licenses shouldn't become another IT headache. LicenBase helps businesses source the software they depend on and simplify license management.
+        </p>
+        <ul class="lb-stagger mt-7 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Volume licensing</li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Multi-user software</li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Hosting licenses</li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Developer tools</li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Security software</li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Business subscriptions</li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-navy"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-accent"></i> Dedicated support</li>
+        </ul>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="#" class="lb-btn lb-btn--primary">Talk to Sales</a>
+          <a href="#search" class="lb-btn lb-btn--secondary">Explore Business Solutions</a>
+        </div>
+      </div>
+
+      <!-- Business license-management mockup -->
+      <div class="lb-hero-visual relative mx-auto w-full max-w-lg lg:max-w-none">
+        <div class="lb-float rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl shadow-brand/10">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-navy font-display text-sm font-bold text-white">AC</span>
+              <div>
+                <p class="text-sm font-bold text-navy">Acme Technologies</p>
+                <p class="text-xs text-gray-500">Business Account · 24 seats</p>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-accentSoft px-2.5 py-1 text-xs font-semibold text-accentDeep"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span> Verified</span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-3 gap-3">
+            <div class="rounded-xl bg-mist p-3">
+              <p class="text-xs font-medium text-gray-400">Licenses</p>
+              <p class="mt-1 font-display text-xl font-extrabold text-navy">24</p>
+            </div>
+            <div class="rounded-xl bg-mist p-3">
+              <p class="text-xs font-medium text-gray-400">Active</p>
+              <p class="mt-1 font-display text-xl font-extrabold text-navy">22</p>
+            </div>
+            <div class="rounded-xl bg-mist p-3">
+              <p class="text-xs font-medium text-gray-400">Due soon</p>
+              <p class="mt-1 font-display text-xl font-extrabold text-navy">3</p>
+            </div>
+          </div>
+
+          <ul class="mt-4 divide-y divide-gray-100">
+            <li class="flex items-center justify-between py-3">
+              <div class="flex items-center gap-3">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brandSoft text-[11px] font-bold text-brand">M36</span>
+                <span class="text-sm font-medium text-navy">Microsoft 365 Business</span>
+              </div>
+              <span class="text-xs font-semibold text-gray-400">10 seats</span>
+            </li>
+            <li class="flex items-center justify-between py-3">
+              <div class="flex items-center gap-3">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brandSoft text-[11px] font-bold text-brand">cP</span>
+                <span class="text-sm font-medium text-navy">cPanel Licenses</span>
+              </div>
+              <span class="text-xs font-semibold text-gray-400">6 seats</span>
+            </li>
+            <li class="flex items-center justify-between py-3">
+              <div class="flex items-center gap-3">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brandSoft text-[11px] font-bold text-brand">JB</span>
+                <span class="text-sm font-medium text-navy">JetBrains All Products</span>
+              </div>
+              <span class="text-xs font-semibold text-gray-400">8 seats</span>
+            </li>
+          </ul>
+
+          <div class="mt-3 flex items-center justify-between rounded-xl bg-brandSoft px-4 py-3">
+            <span class="text-sm font-semibold text-brand">Renewal due in 12 days</span>
+            <a href="#" class="group inline-flex items-center gap-1 text-sm font-bold text-brand">Manage <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12 · LIMITED-TIME DEALS ============ -->
+  <section class="bg-white">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Limited-Time Offers</h2>
+          <p class="mt-3 text-base text-gray-500">Grab these deals before they end.</p>
+        </div>
+        <div class="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5">
+          <span class="text-xs font-semibold text-gray-500">Ends in</span>
+          <span class="lb-countdown flex items-center gap-1 font-display text-sm font-bold text-navy">
+            <span class="rounded-md bg-mist px-1.5 py-0.5" data-unit="d">02d</span>
+            <span class="rounded-md bg-mist px-1.5 py-0.5" data-unit="h">14h</span>
+            <span class="rounded-md bg-mist px-1.5 py-0.5" data-unit="m">32m</span>
+            <span class="rounded-md bg-mist px-1.5 py-0.5" data-unit="s">08s</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="lb-stagger mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="lb-card group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brandSoft font-display text-xs font-bold text-brand">M36</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">Microsoft 365</p>
+              <p class="text-xs text-gray-400">1 Year · Business Standard</p>
+            </div>
+          </div>
+          <div class="shrink-0 text-right">
+            <p class="text-xs text-gray-400 line-through">$XXX.XX</p>
+            <p class="font-display text-lg font-extrabold text-navy">$XX.XX</p>
+            <button type="button" class="lb-add-cart mt-1 text-xs font-bold text-brand hover:underline">Get Deal</button>
+          </div>
+        </div>
+        <div class="lb-card group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brandSoft font-display text-xs font-bold text-brand">cP</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">cPanel Solo</p>
+              <p class="text-xs text-gray-400">Monthly · Hosting</p>
+            </div>
+          </div>
+          <div class="shrink-0 text-right">
+            <p class="text-xs text-gray-400 line-through">$XX.XX</p>
+            <p class="font-display text-lg font-extrabold text-navy">$XX.XX</p>
+            <button type="button" class="lb-add-cart mt-1 text-xs font-bold text-brand hover:underline">Get Deal</button>
+          </div>
+        </div>
+        <div class="lb-card group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brandSoft font-display text-xs font-bold text-brand">BD</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">Bitdefender</p>
+              <p class="text-xs text-gray-400">1 Year · 3 Devices</p>
+            </div>
+          </div>
+          <div class="shrink-0 text-right">
+            <p class="text-xs text-gray-400 line-through">$XX.XX</p>
+            <p class="font-display text-lg font-extrabold text-navy">$XX.XX</p>
+            <button type="button" class="lb-add-cart mt-1 text-xs font-bold text-brand hover:underline">Get Deal</button>
+          </div>
+        </div>
+        <div class="lb-card group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brandSoft font-display text-xs font-bold text-brand">JB</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">JetBrains</p>
+              <p class="text-xs text-gray-400">1 Year · All Products</p>
+            </div>
+          </div>
+          <div class="shrink-0 text-right">
+            <p class="text-xs text-gray-400 line-through">$XXX.XX</p>
+            <p class="font-display text-lg font-extrabold text-navy">$XXX.XX</p>
+            <button type="button" class="lb-add-cart mt-1 text-xs font-bold text-brand hover:underline">Get Deal</button>
+          </div>
+        </div>
+        <div class="lb-card group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brandSoft font-display text-xs font-bold text-brand">PL</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">Plesk</p>
+              <p class="text-xs text-gray-400">1 Year · Web Host</p>
+            </div>
+          </div>
+          <div class="shrink-0 text-right">
+            <p class="text-xs text-gray-400 line-through">$XX.XX</p>
+            <p class="font-display text-lg font-extrabold text-navy">$XX.XX</p>
+            <button type="button" class="lb-add-cart mt-1 text-xs font-bold text-brand hover:underline">Get Deal</button>
+          </div>
+        </div>
+        <div class="lb-card group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-navy/5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brandSoft font-display text-xs font-bold text-brand">WS</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">Windows Server</p>
+              <p class="text-xs text-gray-400">Standard · Perpetual</p>
+            </div>
+          </div>
+          <div class="shrink-0 text-right">
+            <p class="text-xs text-gray-400 line-through">$XXX.XX</p>
+            <p class="font-display text-lg font-extrabold text-navy">$XXX.XX</p>
+            <button type="button" class="lb-add-cart mt-1 text-xs font-bold text-brand hover:underline">Get Deal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 13 · HOW IT WORKS ============ -->
+  <section id="how-it-works" class="bg-mist">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Software licensing made simple</h2>
+        <p class="mt-3 text-base text-gray-500">Three steps between you and your software.</p>
+      </div>
+
+      <div class="lb-stagger relative mx-auto mt-14 grid max-w-4xl gap-10 lg:grid-cols-3 lg:gap-8">
+        <span class="lb-hiw-line" aria-hidden="true"></span>
+        <div class="lb-step relative pl-14 lg:pl-0 lg:text-center">
+          <span class="absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-2xl bg-brand font-display text-lg font-extrabold text-white shadow-md shadow-brand/20 lg:mx-auto lg:static">01</span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy lg:mt-5">Choose your software</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Find the product and license that fits your needs.</p>
+        </div>
+        <div class="lb-step relative pl-14 lg:pl-0 lg:text-center">
+          <span class="absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-2xl bg-brand font-display text-lg font-extrabold text-white shadow-md shadow-brand/20 lg:mx-auto lg:static">02</span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy lg:mt-5">Secure checkout</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Complete your purchase with transparent pricing.</p>
+        </div>
+        <div class="lb-step relative pl-14 lg:pl-0 lg:text-center">
+          <span class="absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-2xl bg-brand font-display text-lg font-extrabold text-white shadow-md shadow-brand/20 lg:mx-auto lg:static">03</span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy lg:mt-5">Receive your license</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">Get your license information and activation instructions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 14 · CUSTOMER TRUST ============ -->
+  <!-- NOTE: Metrics and testimonials below are editable placeholder sample content.
+       Replace with verified customer data before launch. Do not publish fabricated statistics. -->
+  <section class="bg-white">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Trusted by businesses and IT professionals</h2>
+        <p class="mt-3 text-base text-gray-500">Placeholder metrics — update with verified figures.</p>
+      </div>
+
+      <div class="lb-stagger mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="lb-card rounded-2xl border border-gray-200 bg-mist p-7 text-center">
+          <p class="font-display text-4xl font-extrabold text-navy"><span class="lb-count" data-count="5000">X,XXX</span>+</p>
+          <p class="mt-2 text-sm font-medium text-gray-500">Customers</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-mist p-7 text-center">
+          <p class="font-display text-4xl font-extrabold text-navy"><span class="lb-count" data-count="25000">XX,XXX</span>+</p>
+          <p class="mt-2 text-sm font-medium text-gray-500">Licenses Delivered</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-mist p-7 text-center">
+          <p class="font-display text-4xl font-extrabold text-navy"><span class="lb-count" data-count="450">XXX</span>+</p>
+          <p class="mt-2 text-sm font-medium text-gray-500">Software Products</p>
+        </div>
+        <div class="lb-card rounded-2xl border border-gray-200 bg-mist p-7 text-center">
+          <p class="font-display text-4xl font-extrabold text-navy">4.8<span class="text-lg text-gray-400">/5</span></p>
+          <div class="mt-2 flex items-center justify-center gap-1">
+            <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+          </div>
+          <p class="mt-1 text-sm font-medium text-gray-500">Customer Rating</p>
+        </div>
+      </div>
+
+      <!-- Editable sample testimonials -->
+      <div class="lb-stagger mt-10 grid gap-5 md:grid-cols-3">
+        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7">
+          <i data-lucide="quote" class="h-6 w-6 text-brandSoft fill-brandSoft"></i>
+          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"Licenses were delivered minutes after checkout. Clear instructions, no back-and-forth. Ordering could not be easier."</blockquote>
+          <figcaption class="mt-5 border-t border-gray-100 pt-4">
+            <p class="text-sm font-bold text-navy">Systems Administrator</p>
+            <p class="text-xs text-gray-400">Hosting provider · Sample testimonial</p>
+          </figcaption>
+        </figure>
+        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7">
+          <i data-lucide="quote" class="h-6 w-6 text-brandSoft fill-brandSoft"></i>
+          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"We consolidated all our business software purchases with LicenBase. Transparent pricing and professional support throughout."</blockquote>
+          <figcaption class="mt-5 border-t border-gray-100 pt-4">
+            <p class="text-sm font-bold text-navy">IT Manager</p>
+            <p class="text-xs text-gray-400">Growing business · Sample testimonial</p>
+          </figcaption>
+        </figure>
+        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7">
+          <i data-lucide="quote" class="h-6 w-6 text-brandSoft fill-brandSoft"></i>
+          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"The team helped me choose the right license for our clients. Quick responses, honest recommendations, zero hassle."</blockquote>
+          <figcaption class="mt-5 border-t border-gray-100 pt-4">
+            <p class="text-sm font-bold text-navy">Agency Owner</p>
+            <p class="text-xs text-gray-400">Web agency · Sample testimonial</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 15 · PRODUCT SEARCH ============ -->
+  <section id="search" class="bg-brandSoft">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Looking for something specific?</h2>
+        <p class="mt-3 text-base text-gray-500">Search thousands of software products, brands and license types.</p>
+
+        <form id="hero-search" class="lb-hero-visual mt-8" role="search">
+          <label for="hero-search-input" class="sr-only">Search software</label>
+          <div class="flex items-center gap-2 rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-brand/10 transition focus-within:border-brand">
+            <i data-lucide="search" class="ml-3 h-5 w-5 shrink-0 text-gray-400"></i>
+            <input id="hero-search-input" type="search" placeholder="Search software, products, brands or license types..."
+              class="w-full bg-transparent py-2.5 text-[15px] text-navy placeholder:text-gray-400 focus:outline-none" autocomplete="off" />
+            <button type="submit" class="shrink-0 rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-white transition hover:bg-brandDeep">Search</button>
+          </div>
+        </form>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
+          <span class="text-sm text-gray-500">Popular:</span>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">Microsoft 365</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">cPanel</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">Windows Server</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">LiteSpeed</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">CloudLinux</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">JetBrains</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">WHMCS</button>
+          <button type="button" class="lb-chip rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-brand/40 hover:text-brand">Plesk</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 16 · FAQ ============ -->
+  <section id="faq" class="bg-mist">
+    <div class="lb-shell py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="text-center">
+          <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Frequently Asked Questions</h2>
+          <p class="mt-3 text-base text-gray-500">Quick answers about buying and managing licenses.</p>
+        </div>
+
+        <div class="lb-stagger mt-10 space-y-3">
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">Are the software licenses genuine?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">LicenBase sources licenses from authorized channels and trusted distributors. Every order is handled as a legitimate software purchase. If you ever have a concern, contact support and we will review your order.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">How quickly will I receive my license?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Most licenses are delivered digitally within minutes of payment confirmation. A few products may take longer depending on the vendor — delivery time is shown on each product page.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">What happens after I purchase?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">You receive your license information and activation instructions by email and in your LicenBase account, where you can also track and manage your licenses.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">Do you offer volume licensing?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Yes. For multi-user and volume needs, our business team can help you source the right licensing structure. Reach out via Talk to Sales for a tailored quote.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">Can you help me choose a license?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Absolutely. Our support team helps customers pick the right product, license type and subscription term — before and after purchase.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">How does renewal work?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Subscription renewals are managed from your LicenBase account. You'll see your license terms and expiry dates so you can renew on your own schedule.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">What payment methods are supported?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">We support major credit and debit cards as well as common online payment options. Available methods are shown at checkout.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
+            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-base font-bold text-navy">What is the refund policy?</span>
+              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Because digital licenses are delivered immediately, refunds are evaluated on a case-by-case basis. Contact support if you have an issue with your order and we'll review it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 17 · NEWSLETTER ============ -->
+  <section class="bg-white">
+    <div class="lb-shell py-16 lg:py-20">
+      <div class="lb-hero-visual mx-auto max-w-3xl rounded-3xl border border-gray-200 bg-mist px-6 py-12 text-center sm:px-12">
+        <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-brand text-white shadow-md shadow-brand/20"><i data-lucide="mail" class="h-7 w-7"></i></span>
+        <h2 class="mt-6 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Get the latest software deals</h2>
+        <p class="mx-auto mt-3 max-w-md text-base text-gray-500">Receive new product announcements, exclusive offers, bundle deals and licensing insights.</p>
+
+        <form id="newsletter-form" class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input id="newsletter-email" type="email" required placeholder="Enter your email address"
+            class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] text-navy placeholder:text-gray-400 focus:border-brand focus:outline-none" />
+          <button type="submit" class="shrink-0 rounded-xl bg-brand px-7 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brandDeep">Subscribe</button>
+        </form>
+        <p id="newsletter-status" class="mt-4 text-sm font-medium text-gray-500" role="status" aria-live="polite">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 18 · FINAL CTA ============ -->
+  <section class="bg-white pb-16 lg:pb-24">
+    <div class="lb-shell">
+      <div class="lb-hero-visual overflow-hidden rounded-3xl bg-navy px-6 py-14 text-center sm:px-12 lg:py-20">
+        <h2 class="mx-auto max-w-2xl font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Ready to simplify software licensing?</h2>
+        <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-300">Find the software your business needs and get started with LicenBase.</p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="#popular-software" class="lb-btn lb-btn--light">Browse Software</a>
+          <a href="#" class="lb-btn lb-btn--dark-inline">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 19 · FOOTER ============ -->
+  <footer class="bg-navy text-gray-300">
+    <div class="lb-shell pb-10 pt-16 lg:pt-20">
+      <div class="grid gap-10 lg:grid-cols-[1.4fr_2fr]">
+        <!-- Brand -->
+        <div>
+          <a href="#" class="flex items-center gap-2.5" aria-label="LicenBase home">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="m9 15 2 2 4-4" />
+              </svg>
+            </span>
+            <span class="font-display text-xl font-extrabold tracking-tight text-white">Licen<span class="text-brand">Base</span></span>
+          </a>
+          <p class="mt-2 text-sm font-semibold text-white/90">Your Software License Partner</p>
+          <p class="mt-3 max-w-xs text-sm leading-relaxed text-gray-400">Professional software licensing for businesses, developers and IT teams.</p>
+          <div class="mt-6 flex items-center gap-3">
+            <a href="#" aria-label="X (Twitter)" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-gray-400 transition hover:border-brand hover:bg-brand hover:text-white"><i data-lucide="twitter" class="h-4 w-4"></i></a>
+            <a href="#" aria-label="LinkedIn" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-gray-400 transition hover:border-brand hover:bg-brand hover:text-white"><i data-lucide="linkedin" class="h-4 w-4"></i></a>
+            <a href="#" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-gray-400 transition hover:border-brand hover:bg-brand hover:text-white"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+            <a href="#" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-gray-400 transition hover:border-brand hover:bg-brand hover:text-white"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Link columns -->
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+          <nav aria-label="Products">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-white/80">Products</h3>
+            <ul class="mt-4 space-y-2.5 text-sm">
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Microsoft</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Hosting</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Business Software</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Developer Tools</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Security</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Creative Tools</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Company">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-white/80">Company</h3>
+            <ul class="mt-4 space-y-2.5 text-sm">
+              <li><a href="#" class="text-gray-400 transition hover:text-white">About LicenBase</a></li>
+              <li><a href="#business-licensing" class="text-gray-400 transition hover:text-white">Business</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Partners</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Contact</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Support">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-white/80">Support</h3>
+            <ul class="mt-4 space-y-2.5 text-sm">
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Help Center</a></li>
+              <li><a href="#faq" class="text-gray-400 transition hover:text-white">FAQs</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">License Guide</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Contact Support</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Resources">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-white/80">Resources</h3>
+            <ul class="mt-4 space-y-2.5 text-sm">
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Blog</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Software Guides</a></li>
+              <li><a href="#business-licensing" class="text-gray-400 transition hover:text-white">Business Licensing</a></li>
+              <li><a href="#best-deals" class="text-gray-400 transition hover:text-white">Deals</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Legal">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-white/80">Legal</h3>
+            <ul class="mt-4 space-y-2.5 text-sm">
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Terms of Service</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">Refund Policy</a></li>
+              <li><a href="#" class="text-gray-400 transition hover:text-white">License Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-sm text-gray-400">© 2026 LicenBase. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <span class="rounded-md border border-white/10 px-2.5 py-1 text-[11px] font-semibold text-gray-400">VISA</span>
+          <span class="rounded-md border border-white/10 px-2.5 py-1 text-[11px] font-semibold text-gray-400">Mastercard</span>
+          <span class="rounded-md border border-white/10 px-2.5 py-1 text-[11px] font-semibold text-gray-400">PayPal</span>
+          <span class="rounded-md border border-white/10 px-2.5 py-1 text-[11px] font-semibold text-gray-400">Bank Transfer</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ OVERLAYS ============ -->
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true">
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <span class="flex items-center gap-2.5">
+          <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand text-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <path d="m9 15 2 2 4-4" />
+            </svg>
+          </span>
+          <span class="font-display text-lg font-extrabold text-navy">Menu</span>
+        </span>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile navigation">
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="#popular-software" class="lb-mobile-link block rounded-xl px-3 py-3 text-[15px] font-semibold text-navy transition hover:bg-mist">Software</a></li>
+          <li><a href="#categories" class="lb-mobile-link block rounded-xl px-3 py-3 text-[15px] font-semibold text-navy transition hover:bg-mist">Hosting</a></li>
+          <li><a href="#business-licensing" class="lb-mobile-link block rounded-xl px-3 py-3 text-[15px] font-semibold text-navy transition hover:bg-mist">Business</a></li>
+          <li><a href="#categories" class="lb-mobile-link block rounded-xl px-3 py-3 text-[15px] font-semibold text-navy transition hover:bg-mist">Security</a></li>
+          <li><a href="#best-deals" class="lb-mobile-link block rounded-xl px-3 py-3 text-[15px] font-semibold text-navy transition hover:bg-mist">Deals</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="#" class="lb-mobile-link block rounded-xl px-3 py-3 text-[15px] font-semibold text-navy transition hover:bg-mist">Sign In</a></li>
+          <li><a href="#search" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Get Started</a></li>
+        </ul>
+      </nav>
+      <div class="border-t border-gray-100 px-5 py-4">
+        <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[13px] font-medium text-gray-500">
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="badge-check" class="h-4 w-4 text-accent"></i> Genuine</span>
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="zap" class="h-4 w-4 text-accent"></i> Fast Delivery</span>
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="shield-check" class="h-4 w-4 text-accent"></i> Secure</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search overlay -->
+  <div id="search-overlay" class="invisible fixed inset-0 z-[70] opacity-0 transition-opacity duration-200" aria-hidden="true">
+    <button id="search-backdrop" type="button" class="absolute inset-0 h-full w-full bg-navy/60 backdrop-blur-sm" aria-label="Close search"></button>
+    <div class="relative mx-auto mt-24 w-full max-w-2xl px-4">
+      <form id="overlay-search" class="lb-hero-visual rounded-2xl bg-white p-3 shadow-2xl" role="search">
+        <label for="overlay-search-input" class="sr-only">Search software</label>
+        <div class="flex items-center gap-3">
+          <i data-lucide="search" class="ml-2 h-5 w-5 shrink-0 text-gray-400"></i>
+          <input id="overlay-search-input" type="search" placeholder="Search software, products, brands or license types..."
+            class="w-full bg-transparent py-3 text-[15px] text-navy placeholder:text-gray-400 focus:outline-none" autocomplete="off" />
+          <button type="button" id="search-close" class="shrink-0 grid h-9 w-9 place-items-center rounded-lg text-gray-400 transition hover:bg-mist hover:text-navy" aria-label="Close search">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="mt-2 border-t border-gray-100 px-2 pt-3">
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-400">Popular searches</p>
+          <div class="mt-2.5 flex flex-wrap gap-2">
+            <button type="button" class="lb-chip rounded-full bg-mist px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:text-brand">Microsoft 365</button>
+            <button type="button" class="lb-chip rounded-full bg-mist px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:text-brand">cPanel</button>
+            <button type="button" class="lb-chip rounded-full bg-mist px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:text-brand">Windows Server</button>
+            <button type="button" class="lb-chip rounded-full bg-mist px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:text-brand">LiteSpeed</button>
+            <button type="button" class="lb-chip rounded-full bg-mist px-3.5 py-1.5 text-xs font-medium text-gray-600 transition hover:text-brand">CloudLinux</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="to-top" type="button" aria-label="Back to top"
+    class="invisible fixed bottom-6 right-6 z-40 grid h-11 w-11 translate-y-2 place-items-center rounded-full bg-navy text-white opacity-0 shadow-xl shadow-navy/30 transition-all duration-300 hover:bg-brand">
+    <i data-lucide="arrow-up" class="h-5 w-5"></i>
+  </button>
+
+  <!-- Cart toast -->
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-[80] -translate-x-1/2 translate-y-3 opacity-0 transition-all duration-300" role="status" aria-live="polite">
+    <div class="flex items-center gap-3 rounded-2xl border border-gray-200 bg-white px-5 py-3.5 shadow-2xl shadow-navy/10">
+      <span class="grid h-8 w-8 place-items-center rounded-full bg-accentSoft text-accentDeep"><i data-lucide="check" class="h-4 w-4"></i></span>
+      <div>
+        <p class="text-sm font-bold text-navy">Added to cart</p>
+        <p class="text-xs text-gray-500">Checkout is coming soon.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>

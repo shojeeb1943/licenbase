@@ -1,0 +1,313 @@
+/* ============================================================
+   LicenBase — custom styles
+   Brand: blue #1E40AF · navy #111827 · emerald #10B981
+   ============================================================ */
+
+:root {
+  --brand: #1e40af;
+  --brand-deep: #1e3a8a;
+  --brand-soft: #eff4ff;
+  --navy: #111827;
+  --navy-light: #1f2937;
+  --accent: #10b981;
+  --accent-deep: #047857;
+  --accent-soft: #ecfdf5;
+  --mist: #f8fafc;
+  --gray: #6b7280;
+}
+
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+section[id],
+div[id],
+footer[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* ---------- Layout shell ---------- */
+.lb-shell {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* ---------- Buttons ---------- */
+.lb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lb-btn--primary {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(30, 64, 175, 0.25);
+}
+.lb-btn--primary:hover {
+  background: var(--brand-deep);
+}
+
+.lb-btn--secondary {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid #e5e7eb;
+}
+.lb-btn--secondary:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.lb-btn--ghost {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid #e5e7eb;
+}
+.lb-btn--ghost:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* Buttons on navy surfaces */
+.lb-btn--dark {
+  background: #fff;
+  color: var(--navy);
+}
+.lb-btn--dark:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+.lb-btn--dark-inline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.lb-btn--dark-inline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.lb-btn--light {
+  background: #fff;
+  color: var(--navy);
+}
+.lb-btn--light:hover {
+  background: #f3f4f6;
+}
+
+/* ---------- Small interactive bits ---------- */
+.lb-link-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.group:hover .lb-link-arrow,
+.lb-link-arrow:hover {
+  transform: translateX(4px);
+}
+
+.lb-chip {
+  appearance: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.lb-brand {
+  white-space: nowrap;
+}
+
+/* ---------- Navigation dropdowns ---------- */
+.lb-drop-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.lb-drop:hover .lb-drop-panel,
+.lb-drop.is-open .lb-drop-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lb-drop:hover .lb-nav-link svg,
+.lb-drop.is-open .lb-nav-link svg {
+  transform: rotate(180deg);
+}
+.lb-nav-link svg {
+  transition: transform 0.2s ease;
+}
+
+/* ---------- Header on scroll ---------- */
+#site-header.lb-scrolled {
+  box-shadow: 0 1px 0 0 #e5e7eb, 0 8px 24px -16px rgba(17, 24, 39, 0.15);
+}
+
+/* ---------- Motion ---------- */
+@keyframes lb-float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-10px); }
+}
+.lb-float {
+  animation: lb-float 6s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.lb-float-slow {
+  animation: lb-float 7s ease-in-out infinite alternate 0.6s;
+}
+.lb-float-slow2 {
+  animation: lb-float 8s ease-in-out infinite alternate 1.2s;
+}
+
+@keyframes lb-live {
+  0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70%  { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.lb-live {
+  animation: lb-live 2.4s ease-out infinite;
+}
+
+@keyframes lb-ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+.lb-ping {
+  animation: lb-ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ---------- How it works timeline ---------- */
+.lb-hiw-line {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .lb-hiw-line {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    width: 66%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #e5e7eb;
+  }
+}
+
+/* ---------- Swiper ---------- */
+.lb-swiper-btn {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.lb-swiper-btn:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.lb-swiper-btn.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ---------- FAQ accordion ---------- */
+.lb-faq-panel {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+.lb-faq-panel.lb-faq-open {
+  grid-template-rows: 1fr;
+}
+.lb-faq.lb-faq-active .lb-faq-icon {
+  transform: rotate(180deg);
+}
+.lb-faq-icon {
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Mobile drawer ---------- */
+#mobile-menu {
+  transition: none;
+}
+#mobile-menu.lb-open {
+  pointer-events: auto;
+}
+#mobile-menu.lb-open #drawer {
+  transform: translateX(0);
+}
+#mobile-menu.lb-open #drawer-backdrop {
+  opacity: 1;
+}
+
+/* ---------- Search overlay ---------- */
+#search-overlay {
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+#search-overlay.lb-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- Back to top ---------- */
+#to-top.lb-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* ---------- Cart toast ---------- */
+#toast {
+  transform: translateX(-50%) translateY(12px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#toast.lb-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .lb-float,
+  .lb-float-slow,
+  .lb-float-slow2,
+  .lb-live,
+  .lb-ping {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

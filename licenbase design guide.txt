@@ -1,0 +1,864 @@
+Create a new, production-ready, long-form homepage for **LicenBase**, a professional software licensing and business software marketplace.
+
+The attached reference image shows the general visual direction I like. Use it as inspiration for the overall polish, spacing, card style, typography, navigation, and professional SaaS/ecommerce feel, but create a new and more complete homepage layout.
+
+==================================================
+BRAND
+==================================================
+
+Brand: LicenBase
+
+Primary tagline:
+"Your Software License Partner"
+
+Brand positioning:
+LicenBase is a trusted platform for purchasing genuine software licenses, subscriptions, hosting licenses, developer tools, security software, productivity software, and business solutions.
+
+The website must NOT look like:
+- A cheap key reseller
+- A gaming key marketplace
+- A coupon website
+- A gray-market activation site
+- A generic ecommerce template
+
+It should feel like:
+- Premium software marketplace
+- Professional B2B SaaS platform
+- Enterprise software licensing company
+- Modern technology company
+- Trusted digital commerce platform
+
+Brand personality:
+- Professional
+- Trustworthy
+- Modern
+- Enterprise-focused
+- Transparent
+- Fast
+- Reliable
+
+==================================================
+BRAND COLORS
+==================================================
+
+Primary Blue:
+#1E40AF
+
+Dark Navy:
+#111827
+
+Accent Emerald:
+#10B981
+
+White:
+#FFFFFF
+
+Neutral Gray:
+#6B7280
+
+Light Background:
+#F8FAFC
+
+Use blue primarily for CTAs, navigation accents, links, and important actions.
+
+Use emerald only for positive states such as:
+- Active
+- Verified
+- Savings
+- Genuine
+- Available
+
+Do not use gradients.
+
+Do not use excessive shadows.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Primary font:
+Inter
+
+Optional heading font:
+Manrope
+
+Use strong typography hierarchy.
+
+Large bold headlines.
+Compact supporting text.
+Excellent readability.
+Professional B2B appearance.
+
+==================================================
+HEADER
+==================================================
+
+Create a polished sticky header.
+
+Top announcement bar:
+
+"NEW: Business software licensing made simple — Save more with bundles →"
+
+Main navigation:
+
+Left:
+LicenBase logo
+
+Navigation:
+- Software
+- Hosting
+- Business
+- Security
+- Deals
+
+Some navigation items should have dropdown indicators.
+
+Center/right:
+Large search field:
+"Search products, brands, licenses..."
+
+Right:
+- Search icon
+- Cart icon with item count
+- Sign In
+- Primary button: "Get Started"
+
+Below the navigation, add a slim trust bar:
+
+✓ Genuine Software
+✓ Instant Digital Delivery
+✓ Secure Payments
+✓ Dedicated Support
+
+Keep the header compact and professional.
+
+==================================================
+HERO SECTION
+==================================================
+
+Create a large conversion-focused hero.
+
+Eyebrow:
+"SOFTWARE LICENSING, SIMPLIFIED"
+
+Headline:
+
+"Everything Your Business Needs.
+One Licensing Platform."
+
+Alternative supporting phrase:
+"Your Software License Partner"
+
+Supporting copy:
+
+"Get genuine software licenses and business tools from one trusted platform. Simple purchasing, fast digital delivery, transparent pricing, and support when you need it."
+
+Primary CTA:
+"Browse All Software"
+
+Secondary CTA:
+"Explore Business Solutions"
+
+Below CTA include compact trust indicators:
+
+✓ Genuine software
+✓ Fast digital delivery
+✓ Secure checkout
+✓ Business support
+
+Right side:
+
+Create a sophisticated LicenBase dashboard/product management visualization.
+
+The dashboard should show:
+
+"LicenBase Dashboard"
+
+Active Licenses
+
+cPanel
+Solo License
+Monthly
+$XX.XX
+Active
+
+Microsoft 365 Business
+Business Standard
+1 Year
+$XX.XX
+Active
+
+LiteSpeed Web Server
+Standard License
+1 Year
+$XX.XX
+Active
+
+Windows Server
+Standard
+Perpetual
+$XXX.XX
+Active
+
+Also show:
+"View All Licenses →"
+
+The dashboard is a LicenBase-designed UI mockup, not an imitation of any vendor dashboard.
+
+==================================================
+TRUSTED BRANDS
+==================================================
+
+Create a clean logo strip.
+
+Heading:
+"Trusted software from the brands businesses rely on"
+
+Show:
+Microsoft
+cPanel
+LiteSpeed
+Plesk
+CloudLinux
+JetBrains
+Adobe
+
+Use restrained monochrome/neutral treatments.
+
+Do not create fake logos.
+
+==================================================
+CATEGORY SECTION
+==================================================
+
+Heading:
+"Shop by Category"
+
+Subheading:
+"Find the software and tools your business needs."
+
+Create 6 large category cards.
+
+1. Operating Systems
+Windows, Windows Server & Microsoft software
+
+2. Hosting & Infrastructure
+cPanel, Plesk, LiteSpeed, CloudLinux & more
+
+3. Business Software
+Productivity, collaboration and business tools
+
+4. Developer Tools
+IDE, DevOps, version control and developer software
+
+5. Security
+Antivirus, endpoint protection and security solutions
+
+6. Creative Tools
+Design, video editing and creative software
+
+Each card should have:
+- Clean icon
+- Category name
+- Description
+- Number of products
+- "View Products →"
+
+Make these visually premium and easy to scan.
+
+==================================================
+POPULAR PRODUCTS
+==================================================
+
+Create a strong ecommerce product section.
+
+Heading:
+"Popular Software"
+
+Subheading:
+"The tools trusted by professionals, developers and businesses."
+
+Add:
+"View All Products →"
+
+Create a horizontal product carousel or 5-column desktop grid.
+
+Product examples:
+
+cPanel
+Solo License
+From $XX.XX/mo
+[View License]
+
+LiteSpeed Web Server
+Standard License
+From $XX.XX
+[View License]
+
+Microsoft 365 Business Standard
+1 Year License
+From $XX.XX
+[View License]
+
+Windows Server 2022
+Standard License
+From $XXX.XX
+[View License]
+
+JetBrains All Products Pack
+1 Year License
+From $XXX.XX
+[View License]
+
+Product cards should include:
+- Vendor/product logo area
+- Product name
+- Short description
+- License type
+- Pricing
+- Optional savings badge
+- CTA
+
+Do not invent real prices.
+
+Use "$XX.XX" or "$XXX.XX" placeholders.
+
+==================================================
+FEATURED DEALS
+==================================================
+
+Create a highly visible sales-focused section.
+
+Heading:
+"Today's Best Software Deals"
+
+Subheading:
+"Limited-time offers on popular software and business tools."
+
+Create 4 deal cards.
+
+Each card:
+- Product logo
+- Product name
+- License type
+- Old price placeholder
+- Current price placeholder
+- Savings percentage
+- "Get Deal" CTA
+
+Use realistic placeholder values only.
+
+Example:
+
+Windows 11 Pro
+Perpetual License
+$XXX.XX
+$XX.XX
+Save XX%
+[Get Deal]
+
+Add a subtle countdown header:
+
+"Offers ending soon"
+
+Do not make the countdown overly aggressive.
+
+==================================================
+BUNDLE SECTION
+==================================================
+
+This should be one of the most prominent sections on the homepage.
+
+Create a dark navy section using #111827.
+
+Heading:
+"Powerful Bundles. Bigger Savings."
+
+Subheading:
+"Combine the software your business needs and save more with curated LicenBase bundles."
+
+Create 4 premium bundle cards.
+
+BUNDLE 1:
+"Web Hosting Essentials"
+
+Includes:
+cPanel
+LiteSpeed
+CloudLinux
+
+Description:
+"Everything you need for a professional hosting environment."
+
+Show:
+Bundle price placeholder
+Original price placeholder
+"Save XX%"
+
+CTA:
+"View Bundle"
+
+BUNDLE 2:
+"Business Productivity Pack"
+
+Includes:
+Microsoft 365
+Microsoft Office
+Business productivity tools
+
+CTA:
+"View Bundle"
+
+BUNDLE 3:
+"Developer Power Pack"
+
+Includes:
+JetBrains
+GitKraken
+Docker
+
+CTA:
+"View Bundle"
+
+BUNDLE 4:
+"Security Plus Bundle"
+
+Includes:
+Bitdefender
+ESET
+Malwarebytes
+
+CTA:
+"View Bundle"
+
+Use product logos or clean product identity treatments.
+
+Make bundles feel like high-value packages rather than ordinary product cards.
+
+Add:
+"View All Bundles →"
+
+==================================================
+WHY LICENBASE
+==================================================
+
+Heading:
+"Why businesses choose LicenBase"
+
+Create 4–6 feature blocks.
+
+1.
+"Genuine Software"
+"Purchase legitimate software licenses from trusted sources."
+
+2.
+"Instant Digital Delivery"
+"Get your license information quickly after purchase."
+
+3.
+"Transparent Pricing"
+"Know exactly what you're paying before checkout."
+
+4.
+"Expert Support"
+"Get help choosing, activating and managing your software."
+
+5.
+"Secure Checkout"
+"Protected payments and secure order processing."
+
+6.
+"License Management"
+"Keep your software purchases organized in one place."
+
+Use clean line icons.
+
+==================================================
+BUSINESS LICENSING SECTION
+==================================================
+
+Create a premium enterprise-focused section.
+
+Heading:
+
+"Licensing for teams, agencies and enterprises"
+
+Copy:
+
+"Managing multiple software licenses shouldn't become an IT headache. LicenBase helps businesses source, organize and manage the software they depend on."
+
+Feature list:
+
+✓ Volume licensing
+✓ Multi-user software
+✓ Hosting licenses
+✓ Developer tools
+✓ Security software
+✓ Business subscriptions
+✓ Dedicated business support
+
+Primary CTA:
+"Talk to Sales"
+
+Secondary CTA:
+"Explore Business Solutions"
+
+Add a subtle enterprise dashboard or license management visual on the right.
+
+==================================================
+LIMITED TIME SALE
+==================================================
+
+Create another conversion-focused section.
+
+Heading:
+"Save More on Software You Already Need"
+
+Create 4–6 smaller deal cards.
+
+Categories:
+- Microsoft
+- Hosting
+- Security
+- Developer
+- Business
+- Creative
+
+Each card should show:
+Product
+License
+Discount
+Current price placeholder
+CTA
+
+Use badges such as:
+"BEST SELLER"
+"POPULAR"
+"LIMITED"
+"BEST VALUE"
+
+Do not overuse badges.
+
+==================================================
+HOW IT WORKS
+==================================================
+
+Heading:
+"Software licensing made simple"
+
+Create 3 steps.
+
+01
+Choose your software
+
+"Find the product and license that fits your needs."
+
+02
+Secure checkout
+
+"Complete your purchase with transparent pricing."
+
+03
+Receive your license
+
+"Get your license information and activation instructions."
+
+Use a clean horizontal timeline on desktop and vertical timeline on mobile.
+
+==================================================
+CUSTOMER TRUST / SOCIAL PROOF
+==================================================
+
+Create a professional trust section.
+
+Do NOT invent real statistics or fake testimonials.
+
+Use clearly labeled placeholder content where necessary.
+
+Show:
+
+"Trusted by businesses and IT professionals"
+
+Metrics placeholders:
+"X,XXX+ Customers"
+"XX,XXX+ Licenses Delivered"
+"XXX+ Software Products"
+"X.X/5 Customer Rating"
+
+Create 3–4 testimonial cards using placeholder names and clearly editable sample content.
+
+Testimonials should focus on:
+- Fast delivery
+- Easy purchasing
+- Professional support
+- Business licensing
+
+Avoid exaggerated claims.
+
+==================================================
+PRODUCT DISCOVERY
+==================================================
+
+Create a section called:
+
+"Looking for something specific?"
+
+Large search field:
+
+"Search software, products, brands or license types..."
+
+Below it show popular searches:
+
+Microsoft 365
+cPanel
+Windows Server
+LiteSpeed
+CloudLinux
+JetBrains
+WHMCS
+Plesk
+
+This section should encourage users to search instead of browsing endlessly.
+
+==================================================
+FAQ
+==================================================
+
+Heading:
+"Frequently Asked Questions"
+
+Accordion questions:
+
+- Are the software licenses genuine?
+- How quickly will I receive my license?
+- What happens after I place an order?
+- Do you offer volume or business licensing?
+- Can I get help choosing a license?
+- How does license renewal work?
+- What payment methods are supported?
+- What is your refund policy?
+
+Keep the answers concise and professional.
+
+Do not invent legal guarantees.
+
+==================================================
+NEWSLETTER / SALE CAPTURE
+==================================================
+
+Create a strong but clean newsletter section.
+
+Heading:
+
+"Get the latest software deals"
+
+Copy:
+
+"Receive new product announcements, exclusive offers, bundle deals and licensing insights."
+
+Input:
+"Enter your email address"
+
+Button:
+"Subscribe"
+
+Add small text:
+"No spam. Unsubscribe anytime."
+
+==================================================
+FINAL CTA
+==================================================
+
+Create a clean high-conversion CTA.
+
+Heading:
+
+"Ready to simplify software licensing?"
+
+Copy:
+
+"Find the software your business needs and get started with LicenBase."
+
+Buttons:
+
+"Browse Software"
+"Contact Sales"
+
+==================================================
+FOOTER
+==================================================
+
+Create a large professional footer.
+
+Brand:
+LicenBase
+
+Tagline:
+"Your Software License Partner"
+
+Short description:
+"Professional software licensing for businesses, developers and IT teams."
+
+Columns:
+
+PRODUCTS
+- Microsoft
+- Hosting
+- Business Software
+- Developer Tools
+- Security
+- Creative Tools
+
+COMPANY
+- About LicenBase
+- Contact
+- Business
+- Partners
+- Careers
+
+SUPPORT
+- Help Center
+- FAQs
+- License Guide
+- Contact Support
+
+LEGAL
+- Terms of Service
+- Privacy Policy
+- Refund Policy
+- License Policy
+
+RESOURCES
+- Blog
+- Software Guides
+- Business Licensing
+- Deals
+
+Bottom:
+© 2026 LicenBase. All rights reserved.
+
+Include payment method placeholders and social icons.
+
+==================================================
+UX / CONVERSION REQUIREMENTS
+==================================================
+
+This is an ecommerce + SaaS hybrid homepage.
+
+The user journey should be extremely clear:
+
+Homepage
+→ Category
+→ Product
+→ License Type
+→ Cart
+→ Checkout
+→ License Delivery
+
+Prioritize:
+
+1. Product discovery
+2. Deals
+3. Bundles
+4. Clear pricing
+5. Trust
+6. Fast checkout
+7. Business licensing
+8. Support
+
+Make CTAs visually consistent.
+
+Primary CTA:
+Blue filled button
+
+Secondary CTA:
+White/outlined button
+
+Sale CTA:
+Blue or emerald accent
+
+Do not make every section look identical.
+
+Use visual rhythm:
+- White sections
+- Light gray sections
+- Dark navy bundle/enterprise sections
+- White product cards
+- Strong blue CTAs
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+- 1440px primary design
+- Maximum content width around 1200–1280px
+- 12-column grid
+
+Tablet:
+- 2–3 column cards
+
+Mobile:
+- Single-column cards
+- Sticky mobile navigation
+- Collapsible categories
+- Horizontal product carousels where appropriate
+- Full-width CTA buttons
+- Proper spacing
+- No horizontal overflow
+
+==================================================
+DESIGN QUALITY
+==================================================
+
+The final homepage must look like a real production website.
+
+Use:
+- Consistent spacing system
+- Consistent card radius
+- Consistent iconography
+- Clear hierarchy
+- Accessible contrast
+- Realistic ecommerce UI patterns
+- Polished hover states
+- Product cards designed for conversion
+- Clean responsive behavior
+
+Avoid:
+- Generic AI illustrations
+- Random decorative shapes
+- Excessive animations
+- Excessive gradients
+- Glassmorphism
+- Neon colors
+- Fake logos
+- Fake statistics
+- Fake guarantees
+- Fake reviews
+- Cheap marketplace aesthetics
+
+OVERALL CREATIVE DIRECTION:
+
+"Premium software marketplace meets modern SaaS platform."
+
+The homepage should be noticeably longer and richer than a basic corporate homepage.
+
+It should contain:
+Hero
+→ Trust strip
+→ Categories
+→ Popular Products
+→ Best Deals
+→ Bundles
+→ Why LicenBase
+→ Business Licensing
+→ Limited-Time Sale
+→ How It Works
+→ Customer Trust
+→ Product Search
+→ FAQ
+→ Newsletter
+→ Final CTA
+→ Footer
+
+The result should feel polished, trustworthy, sale-focused and highly conversion-oriented while maintaining the professional LicenBase brand identity.
