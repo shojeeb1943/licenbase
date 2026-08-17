@@ -37,57 +37,60 @@
     });
   });
 
-  /* ---------- Header scroll state ---------- */
+  /* ---------- Unified scroll handler ---------- */
   var header = document.getElementById("site-header");
-  function onScroll() {
-    var y = window.scrollY || (lenis ? lenis.scroll : 0);
-    header.classList.toggle("lb-scrolled", y > 8);
-  }
-  if (lenis) {
-    lenis.on("scroll", onScroll);
-  } else {
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-  onScroll();
-
-  /* ---------- Back to top ---------- */
   var toTop = document.getElementById("to-top");
-  function toggleToTop() {
-    var y = window.scrollY || (lenis ? lenis.scroll : 0);
-    toTop.classList.toggle("lb-visible", y > 600);
-  }
-  if (lenis) lenis.on("scroll", toggleToTop);
-  window.addEventListener("scroll", toggleToTop, { passive: true });
-  toggleToTop();
-  toTop.addEventListener("click", function () {
-    if (lenis) lenis.scrollTo(0, { duration: 1.2 });
-    else window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  /* ---------- Announcement bar ---------- */
   var announce = document.getElementById("announcement");
-  var topbar = document.querySelector(".lb-topbar");
-  document.getElementById("announce-close").addEventListener("click", function () {
-    announce.style.display = "none";
-  });
+  var lastScrollY = lenis ? lenis.scroll : window.scrollY;
+  var announceHidden = false;
+  var lastAnnounceY = lastScrollY;
 
-  /* ---------- Pre-header hide on scroll down, reappear on scroll up ---------- */
-  var lastScrollY = window.scrollY || (lenis ? lenis.scroll : 0);
-  function hideTopbarOnScroll() {
-    var y = window.scrollY || (lenis ? lenis.scroll : 0);
-    if (y > 30 && y > lastScrollY) {
-      topbar.classList.add("lb-topbar-hidden");
-    } else {
-      topbar.classList.remove("lb-topbar-hidden");
+  function handleScroll() {
+    var y = lenis ? lenis.scroll : window.scrollY;
+    var scrollingDown = y > lastScrollY;
+
+    /* Header scrolled state */
+    header.classList.toggle("lb-scrolled", y > 8);
+
+    /* Back to top visibility */
+    if (toTop) {
+      toTop.classList.toggle("lb-visible", y > 600);
     }
+
+    /* Announcement hide on scroll down, reappear on scroll up (with hysteresis) */
+    if (scrollingDown && y > 30 && !announceHidden) {
+      announce.classList.add("lb-announce-hidden");
+      announceHidden = true;
+      lastAnnounceY = y;
+    } else if (!scrollingDown && announceHidden && (lastAnnounceY - y) >= 50) {
+      announce.classList.remove("lb-announce-hidden");
+      announceHidden = false;
+      lastAnnounceY = y;
+    }
+
     lastScrollY = y;
   }
+
   if (lenis) {
-    lenis.on("scroll", hideTopbarOnScroll);
+    lenis.on("scroll", handleScroll);
   } else {
-    window.addEventListener("scroll", hideTopbarOnScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
   }
-  hideTopbarOnScroll();
+  handleScroll();
+
+  /* ---------- Announcement close button ---------- */
+  document.getElementById("announce-close").addEventListener("click", function () {
+    announce.classList.add("lb-announce-hidden");
+    announceHidden = true;
+  });
+
+  /* ---------- Back to top click ---------- */
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      if (lenis) lenis.scrollTo(0, { duration: 1.2 });
+      else window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   /* ---------- Dropdowns (desktop nav) ---------- */
   var drops = Array.prototype.slice.call(document.querySelectorAll(".lb-drop"));
