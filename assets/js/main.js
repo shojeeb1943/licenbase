@@ -71,14 +71,16 @@
     announce.style.display = "none";
   });
 
-  /* ---------- Pre-header hide on scroll ---------- */
+  /* ---------- Pre-header hide on scroll down, reappear on scroll up ---------- */
+  var lastScrollY = window.scrollY || (lenis ? lenis.scroll : 0);
   function hideTopbarOnScroll() {
     var y = window.scrollY || (lenis ? lenis.scroll : 0);
-    if (y > 30) {
+    if (y > 30 && y > lastScrollY) {
       topbar.classList.add("lb-topbar-hidden");
     } else {
       topbar.classList.remove("lb-topbar-hidden");
     }
+    lastScrollY = y;
   }
   if (lenis) {
     lenis.on("scroll", hideTopbarOnScroll);
