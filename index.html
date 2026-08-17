@@ -64,272 +64,330 @@
 
 <body class="bg-white font-sans text-navy antialiased">
 
-  <!-- ============ 01 · ANNOUNCEMENT BAR ============ -->
-  <div id="announcement" class="relative z-40 bg-brand text-white">
-    <div class="lb-shell flex items-center justify-center py-2.5 pr-10 text-center">
-      <p class="text-[13px] font-medium leading-snug sm:text-sm">
-        <span class="font-semibold">NEW:</span>
-        <span class="opacity-90">Business software licensing made simple —</span>
-        <a href="#bundles" class="group ml-1 inline-flex items-center gap-1 font-semibold underline-offset-2 hover:underline">
-          Save more with bundles
-          <i data-lucide="arrow-right" class="lb-link-arrow h-3.5 w-3.5"></i>
-        </a>
-      </p>
-      <button id="announce-close" type="button" aria-label="Dismiss announcement"
-        class="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-white/80 transition hover:bg-white/15 hover:text-white">
-        <i data-lucide="x" class="h-4 w-4"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- ============ 02 · MAIN NAVIGATION ============ -->
-  <header id="site-header" class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300">
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
     <div class="lb-shell">
-      <div class="flex h-16 items-center justify-between gap-3 lg:h-[72px]">
-
-        <!-- Logo -->
-        <a href="#" class="flex shrink-0 items-center gap-2.5" aria-label="LicenBase home">
-          <span class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-white shadow-sm shadow-brand/20">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <path d="M14 2v6h6" />
-              <path d="m9 15 2 2 4-4" />
-            </svg>
-          </span>
-          <span class="font-display text-xl font-extrabold tracking-tight text-navy">
-            Licen<span class="text-brand">Base</span>
-          </span>
-        </a>
-
-        <!-- Desktop nav -->
-        <nav class="hidden items-center lg:flex" aria-label="Main navigation">
-          <!-- Software -->
-          <div class="lb-drop relative">
-            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
-              Software <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
-            </button>
-            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
-              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
-                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Operating Systems</a>
-                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Business Software</a>
-                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Developer Tools</a>
-                <a href="#popular-software" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Creative Tools</a>
-              </div>
-            </div>
-          </div>
-          <!-- Hosting -->
-          <div class="lb-drop relative">
-            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
-              Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
-            </button>
-            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
-              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">cPanel Licenses</a>
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Plesk Licenses</a>
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">LiteSpeed Web Server</a>
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">CloudLinux OS</a>
-              </div>
-            </div>
-          </div>
-          <!-- Business -->
-          <div class="lb-drop relative">
-            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
-              Business <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
-            </button>
-            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
-              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
-                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Microsoft 365</a>
-                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Volume Licensing</a>
-                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Business Subscriptions</a>
-                <a href="#business-licensing" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Dedicated Support</a>
-              </div>
-            </div>
-          </div>
-          <!-- Security -->
-          <div class="lb-drop relative">
-            <button type="button" class="lb-nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist" data-drop aria-haspopup="true" aria-expanded="false">
-              Security <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform duration-200"></i>
-            </button>
-            <div class="lb-drop-panel absolute left-0 top-full w-64 pt-2">
-              <div class="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl shadow-navy/5">
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Antivirus</a>
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Endpoint Protection</a>
-                <a href="#categories" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-navy transition hover:bg-mist">Security Bundles</a>
-              </div>
-            </div>
-          </div>
-          <!-- Deals -->
-          <a href="#best-deals" class="rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:bg-mist">Deals</a>
-        </nav>
-
-        <!-- Right actions -->
-        <div class="flex shrink-0 items-center gap-1.5 sm:gap-2">
-          <button id="search-open" type="button" aria-label="Search software"
-            class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
-            <i data-lucide="search" class="h-5 w-5"></i>
-          </button>
-          <button id="cart-btn" type="button" aria-label="Open cart"
-            class="relative grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
-            <i data-lucide="shopping-cart" class="h-5 w-5"></i>
-            <span id="cart-count" class="absolute -right-0.5 -top-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand px-1 text-[10px] font-bold leading-none text-white">0</span>
-          </button>
-          <a href="#" class="hidden rounded-lg px-3 py-2 text-sm font-medium text-navy transition hover:text-brand sm:block">Sign In</a>
-          <a href="#search" class="hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brandDeep sm:inline-flex">Get Started</a>
-          <button id="menu-open" type="button" aria-label="Open menu"
-            class="grid h-9 w-9 place-items-center rounded-lg text-navy transition hover:bg-mist lg:hidden">
-            <i data-lucide="menu" class="h-6 w-6"></i>
-          </button>
-        </div>
+      <div id="announcement" class="lb-announce">
+        <p class="lb-announce-copy">
+          <span class="lb-announce-new">NEW:</span>
+          Business software licensing made simple —
+          <a href="#bundles" class="lb-announce-link">
+            Save more with bundles
+            <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i>
+          </a>
+        </p>
+        <button id="announce-close" type="button" class="lb-announce-close" aria-label="Dismiss announcement">
+          <i data-lucide="x" class="h-4 w-4"></i>
+        </button>
       </div>
-    </div>
-  </header>
 
-  <!-- ============ 03 · TRUST FEATURE STRIP ============ -->
-  <div class="border-b border-gray-200 bg-mist">
-    <div class="lb-shell flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-2.5">
-      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
-        <i data-lucide="badge-check" class="h-4 w-4 text-accent"></i> Genuine Software
-      </span>
-      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
-        <i data-lucide="zap" class="h-4 w-4 text-accent"></i> Instant Digital Delivery
-      </span>
-      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
-        <i data-lucide="shield-check" class="h-4 w-4 text-accent"></i> Secure Payments
-      </span>
-      <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-500">
-        <i data-lucide="headset" class="h-4 w-4 text-accent"></i> Dedicated Support
-      </span>
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="#" class="lb-logo" aria-label="LicenBase home">
+            <span class="lb-logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="m9 15 2 2 4-4" />
+              </svg>
+            </span>
+            <span class="lb-logo-text">Licen<span>Base</span></span>
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega">
+                  <a href="#popular-software" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="monitor" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Operating Systems</span>
+                      <span class="lb-mega-desc">Windows, Windows Server, and more.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#popular-software" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="briefcase" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Business Software</span>
+                      <span class="lb-mega-desc">Productivity, email, and business applications.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#popular-software" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="code-2" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Developer Tools</span>
+                      <span class="lb-mega-desc">IDE, databases, runtimes, and utilities.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#popular-software" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="pen-tool" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Creative Tools</span>
+                      <span class="lb-mega-desc">Design, video, and creative software.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega">
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="server" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">cPanel Licenses</span>
+                      <span class="lb-mega-desc">Cloud, VPS, and dedicated server licenses.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="layout-dashboard" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Plesk Licenses</span>
+                      <span class="lb-mega-desc">Web hosting panels for agencies and hosts.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="zap" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">LiteSpeed Web Server</span>
+                      <span class="lb-mega-desc">High-performance server software licenses.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="cloud" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">CloudLinux OS</span>
+                      <span class="lb-mega-desc">Secure multi-tenant hosting operating systems.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Business <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega">
+                  <a href="#business-licensing" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="building-2" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Microsoft 365</span>
+                      <span class="lb-mega-desc">Business productivity and collaboration suites.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#business-licensing" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="users" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Volume Licensing</span>
+                      <span class="lb-mega-desc">Multi-seat and team licensing options.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#business-licensing" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="refresh-cw" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Business Subscriptions</span>
+                      <span class="lb-mega-desc">Renewable plans for growing companies.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#business-licensing" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="headset" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Dedicated Support</span>
+                      <span class="lb-mega-desc">Help choosing and managing business licenses.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Security -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Security <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega lb-mega--three">
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="shield" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Antivirus</span>
+                      <span class="lb-mega-desc">Protect devices with trusted security software.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Endpoint Protection</span>
+                      <span class="lb-mega-desc">Business-grade protection for teams and fleets.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                  <a href="#categories" class="lb-mega-item">
+                    <span class="lb-mega-icon" aria-hidden="true"><i data-lucide="package" class="h-5 w-5"></i></span>
+                    <span class="lb-mega-copy">
+                      <span class="lb-mega-title">Security Bundles</span>
+                      <span class="lb-mega-desc">Combined protection packages at better value.</span>
+                      <span class="lb-mega-link">View all <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#best-deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <button id="search-open" type="button" class="lb-icon-btn" aria-label="Search software">
+              <i data-lucide="search" class="h-5 w-5"></i>
+            </button>
+            <button id="cart-btn" type="button" class="lb-icon-btn lb-cart-btn" aria-label="Open cart">
+              <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+              <span id="cart-count" class="lb-cart-count">0</span>
+            </button>
+            <a href="#" class="lb-header-signin">Sign In</a>
+            <a href="#search" class="lb-btn lb-btn--primary lb-header-cta">Get Started</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
     </div>
   </div>
 
-  <!-- ============ 04 · HERO ============ -->
-  <section class="relative overflow-hidden bg-mist">
-    <div class="lb-shell grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:py-24">
-      <!-- Copy -->
-      <div>
-        <span class="lb-eyebrow inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brandSoft px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
-          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span> Software Licensing, Simplified
-        </span>
-        <h1 class="lb-hero-title mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem]">
-          Everything Your Business Needs.<br />
-          <span class="text-brand">One Licensing Platform.</span>
-        </h1>
-        <p class="lb-hero-sub mt-6 max-w-xl text-base leading-relaxed text-gray-500 sm:text-lg">
-          Get genuine software licenses and business tools from one trusted platform. Simple purchasing, fast digital delivery, transparent pricing, and support when you need it.
-        </p>
-        <div class="lb-hero-cta mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href="#popular-software" class="lb-btn lb-btn--primary">Browse All Software</a>
-          <a href="#business-licensing" class="lb-btn lb-btn--secondary">Explore Business Solutions</a>
+  <!-- ============ 03 · HERO ============ -->
+  <section class="lb-hero relative overflow-hidden bg-mist">
+    <div class="lb-shell py-14 lg:py-20">
+      <div class="lb-hero-grid">
+        <!-- Copy -->
+        <div class="lb-hero-copy">
+          <span class="lb-eyebrow">
+            <span class="lb-eyebrow-dot" aria-hidden="true"></span>
+            Software Licensing, Simplified
+          </span>
+          <h1 class="lb-hero-title">
+            Everything Your Business Needs.<br />
+            <span>One Licensing Platform.</span>
+          </h1>
+          <p class="lb-hero-sub">
+            Streamline your IT procurement. Manage, deploy, and scale genuine software licenses for cPanel, Microsoft 365, and enterprise tools from a single, secure dashboard.
+          </p>
+          <div class="lb-hero-cta">
+            <a href="#popular-software" class="lb-btn lb-btn--primary">
+              Browse Catalog
+              <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+            </a>
+            <a href="#business-licensing" class="lb-btn lb-btn--secondary">Talk to Sales</a>
+          </div>
+          <ul class="lb-hero-trust">
+            <li><i data-lucide="check-circle-2" class="h-4 w-4" aria-hidden="true"></i> Genuine Software</li>
+            <li><i data-lucide="check-circle-2" class="h-4 w-4" aria-hidden="true"></i> Instant Delivery</li>
+            <li><i data-lucide="check-circle-2" class="h-4 w-4" aria-hidden="true"></i> Secure Checkout</li>
+          </ul>
         </div>
-        <ul class="lb-hero-trust mt-9 flex flex-wrap gap-x-6 gap-y-2.5">
-          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Genuine Software</li>
-          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Fast Digital Delivery</li>
-          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Secure Checkout</li>
-          <li class="flex items-center gap-1.5 text-sm font-medium text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 text-accent"></i> Business Support</li>
-        </ul>
+
+        <!-- Dashboard mockup -->
+        <div class="lb-hero-visual">
+          <div class="lb-hero-stage" aria-hidden="true">
+            <span class="lb-hero-blob lb-hero-blob--one"></span>
+            <span class="lb-hero-blob lb-hero-blob--two"></span>
+            <span class="lb-hero-dots"></span>
+          </div>
+
+          <div class="lb-hero-dashboard">
+            <div class="lb-hero-dash-head">
+              <div class="lb-hero-dash-brand">
+                <span class="lb-hero-dash-logo">LB</span>
+                <span>LicenBase Dashboard</span>
+              </div>
+              <div class="lb-hero-dash-meta">
+                <span class="lb-hero-dash-dots" aria-hidden="true"></span>
+                <span class="lb-hero-dash-avatar">L</span>
+              </div>
+            </div>
+
+            <div class="lb-hero-dash-section">
+              <div class="lb-hero-dash-section-head">
+                <h2>Active Licenses</h2>
+                <a href="#popular-software">Manage All</a>
+              </div>
+
+              <ul class="lb-hero-license-list">
+                <li class="lb-hero-license">
+                  <span class="lb-hero-license-icon lb-hero-license-icon--cp">cP</span>
+                  <div class="lb-hero-license-copy">
+                    <p class="lb-hero-license-name">cPanel Premier Cloud</p>
+                    <p class="lb-hero-license-meta">100 Accounts · Auto-renews in 12 days</p>
+                  </div>
+                  <span class="lb-hero-license-status">Active</span>
+                </li>
+                <li class="lb-hero-license">
+                  <span class="lb-hero-license-icon lb-hero-license-icon--ms">M</span>
+                  <div class="lb-hero-license-copy">
+                    <p class="lb-hero-license-name">Microsoft 365 Business Premium</p>
+                    <p class="lb-hero-license-meta">50 Seats · Annual Billing</p>
+                  </div>
+                  <span class="lb-hero-license-status">Active</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lb-hero-compliance">
+            <span class="lb-hero-compliance-icon" aria-hidden="true">
+              <i data-lucide="shield-check" class="h-5 w-5"></i>
+            </span>
+            <p>All licenses are genuine and fully compliant. Manage everything from one secure place.</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Dashboard mockup -->
-      <div class="lb-hero-visual relative mx-auto w-full max-w-lg lg:max-w-none">
-        <div class="lb-float rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl shadow-brand/10 sm:p-6">
-          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-            <div class="flex items-center gap-2">
-              <span class="grid h-7 w-7 place-items-center rounded-lg bg-navy text-white">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <path d="M14 2v6h6" />
-                  <path d="m9 15 2 2 4-4" />
-                </svg>
-              </span>
-              <span class="text-sm font-semibold text-navy">LicenBase Dashboard</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-2.5 w-2.5 rounded-full bg-gray-200"></span>
-              <span class="h-2.5 w-2.5 rounded-full bg-gray-200"></span>
-              <span class="h-6 w-6 rounded-full bg-brandSoft text-[10px] font-bold text-brand grid place-items-center">L</span>
-            </div>
-          </div>
-
-          <div class="mt-5 flex items-center justify-between">
-            <h2 class="text-sm font-bold text-navy">Active Licenses</h2>
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-accentSoft px-2.5 py-1 text-xs font-semibold text-accentDeep">
-              <span class="lb-live h-1.5 w-1.5 rounded-full bg-accent"></span> 4 active
-            </span>
-          </div>
-
-          <ul class="mt-2 divide-y divide-gray-100">
-            <!-- cPanel -->
-            <li class="flex items-center justify-between gap-3 py-3">
-              <div class="flex min-w-0 items-center gap-3">
-                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">cP</span>
-                <div class="min-w-0">
-                  <p class="truncate text-sm font-semibold text-navy">cPanel</p>
-                  <p class="truncate text-xs text-gray-500">Solo License · Monthly</p>
-                </div>
-              </div>
-              <div class="flex shrink-0 items-center gap-3">
-                <span class="text-sm font-semibold text-navy">$XX.XX</span>
-                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
-              </div>
-            </li>
-            <!-- Microsoft 365 -->
-            <li class="flex items-center justify-between gap-3 py-3">
-              <div class="flex min-w-0 items-center gap-3">
-                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">M36</span>
-                <div class="min-w-0">
-                  <p class="truncate text-sm font-semibold text-navy">Microsoft 365 Business</p>
-                  <p class="truncate text-xs text-gray-500">Business Standard · 1 Year</p>
-                </div>
-              </div>
-              <div class="flex shrink-0 items-center gap-3">
-                <span class="text-sm font-semibold text-navy">$XX.XX</span>
-                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
-              </div>
-            </li>
-            <!-- LiteSpeed -->
-            <li class="flex items-center justify-between gap-3 py-3">
-              <div class="flex min-w-0 items-center gap-3">
-                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">LS</span>
-                <div class="min-w-0">
-                  <p class="truncate text-sm font-semibold text-navy">LiteSpeed</p>
-                  <p class="truncate text-xs text-gray-500">Standard License · 1 Year</p>
-                </div>
-              </div>
-              <div class="flex shrink-0 items-center gap-3">
-                <span class="text-sm font-semibold text-navy">$XX.XX</span>
-                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
-              </div>
-            </li>
-            <!-- Windows Server -->
-            <li class="flex items-center justify-between gap-3 py-3">
-              <div class="flex min-w-0 items-center gap-3">
-                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brandSoft font-display text-xs font-bold text-brand">WS</span>
-                <div class="min-w-0">
-                  <p class="truncate text-sm font-semibold text-navy">Windows Server</p>
-                  <p class="truncate text-xs text-gray-500">Standard · Perpetual</p>
-                </div>
-              </div>
-              <div class="flex shrink-0 items-center gap-3">
-                <span class="text-sm font-semibold text-navy">$XXX.XX</span>
-                <span class="inline-flex items-center gap-1 rounded-full bg-accentSoft px-2 py-0.5 text-[11px] font-semibold text-accentDeep">Active</span>
-              </div>
-            </li>
-          </ul>
-
-          <a href="#" class="group mt-3 inline-flex items-center gap-1.5 border-t border-gray-100 pt-4 text-sm font-semibold text-brand">
-            View All Licenses
-            <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
-          </a>
+      <!-- Value band -->
+      <div class="lb-hero-values">
+        <div class="lb-hero-value">
+          <p class="lb-hero-value-title">Genuine Software</p>
+          <p class="lb-hero-value-text">100% authentic products</p>
         </div>
-
-        <!-- Floating chips -->
-        <div class="lb-float-slow absolute -left-4 top-10 hidden items-center gap-2 rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 shadow-lg shadow-navy/5 sm:flex">
-          <span class="grid h-7 w-7 place-items-center rounded-lg bg-accentSoft text-accentDeep"><i data-lucide="lock" class="h-4 w-4"></i></span>
-          <span class="text-xs font-semibold text-navy">Secure Checkout</span>
+        <div class="lb-hero-value">
+          <p class="lb-hero-value-title">Instant Digital Delivery</p>
+          <p class="lb-hero-value-text">Get your license right away</p>
         </div>
-        <div class="lb-float-slow2 absolute -bottom-5 -right-3 hidden items-center gap-2 rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 shadow-lg shadow-navy/5 sm:flex">
-          <span class="grid h-7 w-7 place-items-center rounded-lg bg-brandSoft text-brand"><i data-lucide="mail-check" class="h-4 w-4"></i></span>
-          <span class="text-xs font-semibold text-navy">License Delivered</span>
+        <div class="lb-hero-value">
+          <p class="lb-hero-value-title">Secure Payments</p>
+          <p class="lb-hero-value-text">Encrypted &amp; safe checkout</p>
+        </div>
+        <div class="lb-hero-value">
+          <p class="lb-hero-value-title">Dedicated Support</p>
+          <p class="lb-hero-value-text">We're here to help</p>
         </div>
       </div>
     </div>
@@ -1100,136 +1158,156 @@
   </section>
 
   <!-- ============ 16 · FAQ ============ -->
-  <section id="faq" class="bg-mist">
+  <section id="faq" class="lb-faq-section bg-mist">
+    <span class="lb-faq-dots lb-faq-dots--left" aria-hidden="true"></span>
+    <span class="lb-faq-dots lb-faq-dots--right" aria-hidden="true"></span>
     <div class="lb-shell py-16 lg:py-24">
-      <div class="mx-auto max-w-3xl">
-        <div class="text-center">
-          <h2 class="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Frequently Asked Questions</h2>
+      <div class="mx-auto max-w-5xl">
+        <div class="lb-faq-heading text-center">
+          <span class="lb-faq-eyebrow">FAQ</span>
+          <h2 class="mt-5 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Frequently Asked Questions</h2>
           <p class="mt-3 text-base text-gray-500">Quick answers about buying and managing licenses.</p>
         </div>
 
         <div class="lb-stagger mt-10 space-y-3">
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">Are the software licenses genuine?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq lb-faq-active">
+            <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+              <span class="lb-faq-icon-wrap"><i data-lucide="shield-check" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">Are the software licenses genuine?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">LicenBase sources licenses from authorized channels and trusted distributors. Every order is handled as a legitimate software purchase. If you ever have a concern, contact support and we will review your order.</p>
-              </div>
+            <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">LicenBase sources licenses from authorized channels and trusted distributors. Every order is handled as a legitimate software purchase. If you ever have a concern, contact support and we will review your order.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">How quickly will I receive my license?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+              <span class="lb-faq-icon-wrap"><i data-lucide="zap" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">How quickly will I receive my license?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Most licenses are delivered digitally within minutes of payment confirmation. A few products may take longer depending on the vendor — delivery time is shown on each product page.</p>
-              </div>
+            <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">Most licenses are delivered digitally within minutes of payment confirmation. A few products may take longer depending on the vendor — delivery time is shown on each product page.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">What happens after I purchase?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+              <span class="lb-faq-icon-wrap"><i data-lucide="shopping-bag" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">What happens after I purchase?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">You receive your license information and activation instructions by email and in your LicenBase account, where you can also track and manage your licenses.</p>
-              </div>
+            <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">You receive your license information and activation instructions by email and in your LicenBase account, where you can also track and manage your licenses.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">Do you offer volume licensing?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+              <span class="lb-faq-icon-wrap"><i data-lucide="users" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">Do you offer volume licensing?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Yes. For multi-user and volume needs, our business team can help you source the right licensing structure. Reach out via Talk to Sales for a tailored quote.</p>
-              </div>
+            <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">Yes. For multi-user and volume needs, our business team can help you source the right licensing structure. Reach out via Talk to Sales for a tailored quote.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">Can you help me choose a license?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+              <span class="lb-faq-icon-wrap"><i data-lucide="headset" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">Can you help me choose a license?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Absolutely. Our support team helps customers pick the right product, license type and subscription term — before and after purchase.</p>
-              </div>
+            <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">Absolutely. Our support team helps customers pick the right product, license type and subscription term — before and after purchase.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">How does renewal work?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-6" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+              <span class="lb-faq-icon-wrap"><i data-lucide="refresh-cw" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">How does renewal work?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Subscription renewals are managed from your LicenBase account. You'll see your license terms and expiry dates so you can renew on your own schedule.</p>
-              </div>
+            <div id="faq-answer-6" class="lb-faq-panel" role="region" aria-labelledby="faq-question-6">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">Subscription renewals are managed from your LicenBase account. You'll see your license terms and expiry dates so you can renew on your own schedule.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">What payment methods are supported?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-7" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-7">
+              <span class="lb-faq-icon-wrap"><i data-lucide="credit-card" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">What payment methods are supported?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">We support major credit and debit cards as well as common online payment options. Available methods are shown at checkout.</p>
-              </div>
+            <div id="faq-answer-7" class="lb-faq-panel" role="region" aria-labelledby="faq-question-7">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">We support major credit and debit cards as well as common online payment options. Available methods are shown at checkout.</p></div>
             </div>
           </div>
-          <div class="lb-faq rounded-2xl border border-gray-200 bg-white">
-            <button class="lb-faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
-              <span class="font-display text-base font-bold text-navy">What is the refund policy?</span>
-              <i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300"></i>
+          <div class="lb-faq">
+            <button id="faq-question-8" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-8">
+              <span class="lb-faq-icon-wrap"><i data-lucide="shield-alert" class="h-5 w-5" aria-hidden="true"></i></span>
+              <span class="lb-faq-question">What is the refund policy?</span>
+              <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
             </button>
-            <div class="lb-faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
-              <div class="overflow-hidden">
-                <p class="px-6 pb-5 text-sm leading-relaxed text-gray-500">Because digital licenses are delivered immediately, refunds are evaluated on a case-by-case basis. Contact support if you have an issue with your order and we'll review it.</p>
-              </div>
+            <div id="faq-answer-8" class="lb-faq-panel" role="region" aria-labelledby="faq-question-8">
+              <div class="lb-faq-answer-wrap"><p class="lb-faq-answer">Because digital licenses are delivered immediately, refunds are evaluated on a case-by-case basis. Contact support if you have an issue with your order and we'll review it.</p></div>
             </div>
           </div>
         </div>
+
+        <aside class="lb-faq-support" aria-label="Support options">
+          <span class="lb-faq-support-icon"><i data-lucide="message-square-text" class="h-6 w-6" aria-hidden="true"></i></span>
+          <div class="lb-faq-support-copy">
+            <h3 class="font-display text-lg font-bold text-navy">Still have questions?</h3>
+            <p class="mt-1 text-sm text-gray-500">Our support team is ready to help you.</p>
+          </div>
+          <div class="lb-faq-support-actions">
+            <a href="#" class="lb-btn lb-btn--secondary">Contact Support</a>
+            <a href="#" class="lb-btn lb-btn--primary">Live Chat</a>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
-  <!-- ============ 17 · NEWSLETTER ============ -->
-  <section class="bg-white">
-    <div class="lb-shell py-16 lg:py-20">
-      <div class="lb-hero-visual mx-auto max-w-3xl rounded-3xl border border-gray-200 bg-mist px-6 py-12 text-center sm:px-12">
-        <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-brand text-white shadow-md shadow-brand/20"><i data-lucide="mail" class="h-7 w-7"></i></span>
-        <h2 class="mt-6 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Get the latest software deals</h2>
-        <p class="mx-auto mt-3 max-w-md text-base text-gray-500">Receive new product announcements, exclusive offers, bundle deals and licensing insights.</p>
-
-        <form id="newsletter-form" class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" novalidate>
-          <label for="newsletter-email" class="sr-only">Email address</label>
-          <input id="newsletter-email" type="email" required placeholder="Enter your email address"
-            class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] text-navy placeholder:text-gray-400 focus:border-brand focus:outline-none" />
-          <button type="submit" class="shrink-0 rounded-xl bg-brand px-7 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brandDeep">Subscribe</button>
-        </form>
-        <p id="newsletter-status" class="mt-4 text-sm font-medium text-gray-500" role="status" aria-live="polite">No spam. Unsubscribe anytime.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 18 · FINAL CTA ============ -->
-  <section class="bg-white pb-16 lg:pb-24">
+  <!-- ============ 17 · CLOSING CONVERSION ============ -->
+  <section class="lb-conversion-section bg-white pb-16 pt-8 lg:pb-24 lg:pt-12">
     <div class="lb-shell">
-      <div class="lb-hero-visual overflow-hidden rounded-3xl bg-navy px-6 py-14 text-center sm:px-12 lg:py-20">
-        <h2 class="mx-auto max-w-2xl font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Ready to simplify software licensing?</h2>
-        <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-300">Find the software your business needs and get started with LicenBase.</p>
-        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-          <a href="#popular-software" class="lb-btn lb-btn--light">Browse Software</a>
-          <a href="#" class="lb-btn lb-btn--dark-inline">Contact Sales</a>
+      <div class="lb-conversion-card">
+        <div class="lb-conversion-newsletter">
+          <div class="lb-conversion-copy">
+            <span class="lb-conversion-mail" aria-hidden="true"><i data-lucide="mail" class="h-7 w-7"></i></span>
+            <h2 class="lb-conversion-title">Get the latest software deals<br class="hidden sm:block" /> <span>&amp; simplify licensing</span></h2>
+            <p class="lb-conversion-description">Receive new product announcements, exclusive offers, bundle deals and licensing insights.</p>
+
+            <form id="newsletter-form" class="lb-newsletter-form" novalidate>
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <div class="lb-newsletter-field">
+                <i data-lucide="mail" class="h-5 w-5" aria-hidden="true"></i>
+                <input id="newsletter-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="Enter your email address" />
+              </div>
+              <button type="submit" class="lb-btn lb-btn--primary">Subscribe <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></button>
+            </form>
+            <div class="lb-newsletter-trust"><i data-lucide="shield-check" class="h-4 w-4" aria-hidden="true"></i><p id="newsletter-status" role="status" aria-live="polite">No spam. Unsubscribe anytime.</p></div>
+          </div>
+
+          <div class="lb-conversion-visual" aria-hidden="true">
+            <span class="lb-conversion-dots"></span>
+            <span class="lb-conversion-float lb-conversion-float--deal lb-float"><i data-lucide="percent" class="h-6 w-6"></i></span>
+            <span class="lb-conversion-float lb-conversion-float--software lb-float-slow"><i data-lucide="key-round" class="h-6 w-6"></i></span>
+            <span class="lb-conversion-float lb-conversion-float--secure lb-float-slow2"><i data-lucide="shield-check" class="h-6 w-6"></i></span>
+          </div>
+        </div>
+
+        <div class="lb-conversion-divider" aria-hidden="true"><span>OR</span></div>
+
+        <div class="lb-conversion-cta">
+          <span class="lb-conversion-rocket" aria-hidden="true"><i data-lucide="rocket" class="h-6 w-6"></i></span>
+          <div class="lb-conversion-cta-copy">
+            <h3>Ready to simplify software licensing?</h3>
+            <p>Find the software your business needs and get started with LicenBase.</p>
+          </div>
+          <div class="lb-conversion-actions">
+            <a href="#popular-software" class="lb-btn lb-btn--primary">Browse Software</a>
+            <a href="#business-licensing" class="lb-btn lb-btn--secondary">Contact Sales</a>
+          </div>
         </div>
       </div>
     </div>

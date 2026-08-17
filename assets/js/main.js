@@ -32,7 +32,7 @@
       if (!target) return;
       if (lenis) {
         e.preventDefault();
-        lenis.scrollTo(target, { offset: -96, duration: 1.2 });
+        lenis.scrollTo(target, { offset: -120, duration: 1.2 });
       }
     });
   });
@@ -66,9 +66,26 @@
 
   /* ---------- Announcement bar ---------- */
   var announce = document.getElementById("announcement");
+  var topbar = document.querySelector(".lb-topbar");
   document.getElementById("announce-close").addEventListener("click", function () {
     announce.style.display = "none";
   });
+
+  /* ---------- Pre-header hide on scroll ---------- */
+  function hideTopbarOnScroll() {
+    var y = window.scrollY || (lenis ? lenis.scroll : 0);
+    if (y > 30) {
+      topbar.classList.add("lb-topbar-hidden");
+    } else {
+      topbar.classList.remove("lb-topbar-hidden");
+    }
+  }
+  if (lenis) {
+    lenis.on("scroll", hideTopbarOnScroll);
+  } else {
+    window.addEventListener("scroll", hideTopbarOnScroll, { passive: true });
+  }
+  hideTopbarOnScroll();
 
   /* ---------- Dropdowns (desktop nav) ---------- */
   var drops = Array.prototype.slice.call(document.querySelectorAll(".lb-drop"));
@@ -185,20 +202,26 @@
 
   /* ---------- FAQ accordion ---------- */
   var faqs = Array.prototype.slice.call(document.querySelectorAll(".lb-faq"));
-  faqs.forEach(function (faq) {
+  function setFaqState(faq, shouldOpen) {
     var btn = faq.querySelector(".lb-faq-btn");
     var panel = faq.querySelector(".lb-faq-panel");
+    faq.classList.toggle("lb-faq-active", shouldOpen);
+    panel.classList.toggle("lb-faq-open", shouldOpen);
+    btn.setAttribute("aria-expanded", String(shouldOpen));
+  }
+
+  faqs.forEach(function (faq) {
+    var btn = faq.querySelector(".lb-faq-btn");
+    var isInitiallyOpen = btn.getAttribute("aria-expanded") === "true";
+    setFaqState(faq, isInitiallyOpen);
+
     btn.addEventListener("click", function () {
-      var isOpen = faq.classList.contains("lb-faq-active");
-      faqs.forEach(function (f) {
-        f.classList.remove("lb-faq-active");
-        f.querySelector(".lb-faq-panel").classList.remove("lb-faq-open");
-        f.querySelector(".lb-faq-btn").setAttribute("aria-expanded", "false");
+      var isOpen = btn.getAttribute("aria-expanded") === "true";
+      faqs.forEach(function (item) {
+        setFaqState(item, false);
       });
       if (!isOpen) {
-        faq.classList.add("lb-faq-active");
-        panel.classList.add("lb-faq-open");
-        btn.setAttribute("aria-expanded", "true");
+        setFaqState(faq, true);
       }
     });
   });
@@ -238,20 +261,22 @@
 
   /* ---------- Newsletter (frontend-only) ---------- */
   var newsForm = document.getElementById("newsletter-form");
+  var newsEmail = document.getElementById("newsletter-email");
   var newsStatus = document.getElementById("newsletter-status");
-  newsForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var email = document.getElementById("newsletter-email").value.trim();
-    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!valid) {
-      newsStatus.textContent = "Please enter a valid email address.";
-      newsStatus.classList.add("text-red-500");
-      return;
-    }
-    newsStatus.classList.remove("text-red-500");
-    newsStatus.textContent = "Thanks! You're subscribed. Watch your inbox for deals.";
-    newsForm.reset();
-  });
+  if (newsForm && newsEmail && newsStatus) {
+    newsForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = newsEmail.value.trim();
+      var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      newsStatus.classList.toggle("text-red-500", !valid);
+      if (!valid) {
+        newsStatus.textContent = "Please enter a valid email address.";
+        newsEmail.focus();
+        return;
+      }
+      newsStatus.textContent = "Newsletter signup is not connected yet. Please check back soon.";
+    });
+  }
 
   /* ---------- Countdown (visual, non-binding) ---------- */
   var countdown = document.querySelector(".lb-countdown");
@@ -283,7 +308,7 @@
     mm.add("(prefers-reduced-motion: no-preference)", function () {
       /* Hero entrance */
       var heroEls = gsap.utils.toArray(
-        ".lb-eyebrow, .lb-hero-title, .lb-hero-sub, .lb-hero-cta, .lb-hero-trust, .lb-hero-visual"
+        ".lb-eyebrow, .lb-hero-title, .lb-hero-sub, .lb-hero-cta, .lb-hero-trust, .lb-hero-visual, .lb-hero-values"
       );
       gsap.set(heroEls, { y: 24, opacity: 0 });
       gsap.timeline({ defaults: { duration: 0.7, ease: "power3.out" } })
