@@ -432,14 +432,20 @@
 
   /* ---------- Live Chat (Tawk.to) Trigger ---------- */
   function openLiveChat(e) {
-    if (e) e.preventDefault();
+    if (e && typeof e.preventDefault === "function") e.preventDefault();
     if (window.Tawk_API && typeof window.Tawk_API.maximize === "function") {
+      if (typeof window.Tawk_API.showWidget === "function") {
+        window.Tawk_API.showWidget();
+      }
       window.Tawk_API.maximize();
     } else {
       window.Tawk_API = window.Tawk_API || {};
       var prevOnLoad = window.Tawk_API.onLoad;
       window.Tawk_API.onLoad = function () {
         if (typeof prevOnLoad === "function") prevOnLoad();
+        if (typeof window.Tawk_API.showWidget === "function") {
+          window.Tawk_API.showWidget();
+        }
         if (typeof window.Tawk_API.maximize === "function") {
           window.Tawk_API.maximize();
         }
@@ -449,11 +455,11 @@
   window.openLiveChat = openLiveChat;
 
   document.addEventListener("click", function (e) {
-    var trigger = e.target.closest("[data-open-chat], a[href='#live-chat'], a[href='#chat']");
+    var trigger = e.target.closest("[data-open-chat], .open-chat, .open-chat-btn, a[href='#live-chat'], a[href='#chat']");
     if (!trigger && e.target.closest("a, button")) {
       var btn = e.target.closest("a, button");
       var txt = btn.textContent ? btn.textContent.trim().toLowerCase() : "";
-      if (txt === "live chat") {
+      if (txt === "live chat" || txt === "contact support") {
         trigger = btn;
       }
     }
