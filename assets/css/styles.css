@@ -148,7 +148,6 @@ footer[id] {
   background: rgba(247, 249, 252, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  overflow: hidden;
   border-bottom: 1px solid rgba(231, 237, 245, 0.5);
   transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -246,6 +245,8 @@ footer[id] {
 }
 
 .lb-header {
+  position: relative;
+  background: #fff;
   border: 1px solid rgba(231, 237, 245, 0.6);
   border-radius: 1.25rem;
   box-shadow: 0 8px 32px -28px rgba(17, 24, 39, 0.35), 0 1px 2px rgba(17, 24, 39, 0.04);
@@ -296,6 +297,13 @@ footer[id] {
 
 .lb-logo-text span {
   color: var(--brand);
+}
+
+.lb-logo-img {
+  height: 2.35rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .lb-nav {
@@ -417,7 +425,7 @@ footer[id] {
   position: absolute;
   top: calc(100% + 0.85rem);
   left: 0;
-  z-index: 30;
+  z-index: 60;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -425,9 +433,27 @@ footer[id] {
   pointer-events: none;
 }
 
+/* Mega menu drops stay inside the header area */
+.lb-drop--mega {
+  position: static;
+}
+
 .lb-drop--mega .lb-drop-panel {
+  top: calc(100% + 0.6rem);
   left: 0;
-  transform: translateY(10px);
+  right: 0;
+  width: 100%;
+  transform: translateY(8px);
+}
+
+/* Hover bridge so mouse does not lose focus between header and panel */
+.lb-drop-panel::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 0.85rem;
 }
 
 .lb-drop:hover .lb-drop-panel,
@@ -445,19 +471,19 @@ footer[id] {
 
 .lb-mega {
   display: grid;
-  grid-template-columns: repeat(4, minmax(11.5rem, 1fr));
-  gap: 0.35rem;
-  min-width: min(60rem, calc(100vw - 2rem));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
   padding: 0.85rem;
   border: 1px solid #e7edf5;
   border-radius: 1.25rem;
   background: #fff;
-  box-shadow: 0 24px 50px -30px rgba(17, 24, 39, 0.45);
+  box-shadow: 0 24px 50px -30px rgba(17, 24, 39, 0.35), 0 4px 12px -2px rgba(17, 24, 39, 0.05);
 }
 
 .lb-mega--three {
-  grid-template-columns: repeat(3, minmax(12rem, 1fr));
-  min-width: min(48rem, calc(100vw - 2rem));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .lb-mega-item {

@@ -21,7 +21,9 @@
   <meta name="twitter:description" content="Genuine software licenses and business tools from one trusted platform." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E40AF'/%3E%3Cpath d='M10 17l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
   <link rel="icon" href="favicon.ico" sizes="any" />
 
   <!-- Fonts -->
@@ -33,7 +35,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
 
   <!-- Tailwind (Play CDN). Play CDN does not send CORS headers, so no SRI/crossorigin here. -->
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
@@ -85,14 +87,7 @@
         <div class="lb-header-inner">
           <!-- Logo -->
           <a href="#" class="lb-logo" aria-label="LicenBase home">
-            <span class="lb-logo-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="m9 15 2 2 4-4" />
-              </svg>
-            </span>
-            <span class="lb-logo-text">Licen<span>Base</span></span>
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" />
           </a>
 
           <!-- Desktop nav -->
@@ -1259,8 +1254,8 @@
             <p class="mt-1 text-sm text-gray-500">Our support team is ready to help you.</p>
           </div>
           <div class="lb-faq-support-actions">
-            <a href="#" class="lb-btn lb-btn--secondary">Contact Support</a>
-            <a href="#" class="lb-btn lb-btn--primary">Live Chat</a>
+            <a href="#live-chat" data-open-chat class="lb-btn lb-btn--secondary">Contact Support</a>
+            <a href="#live-chat" data-open-chat class="lb-btn lb-btn--primary">Live Chat</a>
           </div>
         </aside>
       </div>
@@ -1319,15 +1314,8 @@
       <div class="grid gap-10 lg:grid-cols-[1.4fr_2fr]">
         <!-- Brand -->
         <div>
-          <a href="#" class="flex items-center gap-2.5" aria-label="LicenBase home">
-            <span class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-white">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="m9 15 2 2 4-4" />
-              </svg>
-            </span>
-            <span class="font-display text-xl font-extrabold tracking-tight text-white">Licen<span class="text-brand">Base</span></span>
+          <a href="#" class="inline-block" aria-label="LicenBase home">
+            <img src="assets/img/logo-white.png" alt="LicenBase" class="h-10 w-auto" />
           </a>
           <p class="mt-2 text-sm font-semibold text-white/90">Your Software License Partner</p>
           <p class="mt-3 max-w-xs text-sm leading-relaxed text-gray-400">Professional software licensing for businesses, developers and IT teams.</p>
@@ -1367,7 +1355,8 @@
               <li><a href="#" class="text-gray-400 transition hover:text-white">Help Center</a></li>
               <li><a href="#faq" class="text-gray-400 transition hover:text-white">FAQs</a></li>
               <li><a href="#" class="text-gray-400 transition hover:text-white">License Guide</a></li>
-              <li><a href="#" class="text-gray-400 transition hover:text-white">Contact Support</a></li>
+              <li><a href="#live-chat" data-open-chat class="text-gray-400 transition hover:text-white">Live Chat</a></li>
+              <li><a href="#live-chat" data-open-chat class="text-gray-400 transition hover:text-white">Contact Support</a></li>
             </ul>
           </nav>
           <nav aria-label="Resources">
@@ -1410,16 +1399,9 @@
     <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
     <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
       <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
-        <span class="flex items-center gap-2.5">
-          <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand text-white">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <path d="M14 2v6h6" />
-              <path d="m9 15 2 2 4-4" />
-            </svg>
-          </span>
-          <span class="font-display text-lg font-extrabold text-navy">Menu</span>
-        </span>
+        <a href="#" class="inline-block" aria-label="LicenBase home">
+          <img src="assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" />
+        </a>
         <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
           <i data-lucide="x" class="h-5 w-5"></i>
         </button>
@@ -1500,6 +1482,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/main.js?v=4"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>

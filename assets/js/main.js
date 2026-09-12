@@ -97,11 +97,26 @@
   function closeDrops() {
     drops.forEach(function (d) {
       d.classList.remove("is-open");
-      d.querySelector("[data-drop]").setAttribute("aria-expanded", "false");
+      var btn = d.querySelector("[data-drop]");
+      if (btn) btn.setAttribute("aria-expanded", "false");
     });
   }
   drops.forEach(function (d) {
     var btn = d.querySelector("[data-drop]");
+    var panel = d.querySelector(".lb-drop-panel");
+    if (!btn) return;
+
+    // Switch cleanly on mouse hover if another menu was pinned open
+    d.addEventListener("mouseenter", function () {
+      drops.forEach(function (other) {
+        if (other !== d && other.classList.contains("is-open")) {
+          other.classList.remove("is-open");
+          var obtn = other.querySelector("[data-drop]");
+          if (obtn) obtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
       var open = d.classList.toggle("is-open");
@@ -109,10 +124,21 @@
       drops.forEach(function (other) {
         if (other !== d) {
           other.classList.remove("is-open");
-          other.querySelector("[data-drop]").setAttribute("aria-expanded", "false");
+          var obtn = other.querySelector("[data-drop]");
+          if (obtn) obtn.setAttribute("aria-expanded", "false");
         }
       });
     });
+
+    if (panel) {
+      panel.addEventListener("click", function (e) {
+        if (e.target.closest("a")) {
+          closeDrops();
+        } else {
+          e.stopPropagation();
+        }
+      });
+    }
   });
   document.addEventListener("click", closeDrops);
   document.addEventListener("keydown", function (e) {
@@ -403,4 +429,36 @@
       ScrollTrigger.refresh();
     });
   }
+
+  /* ---------- Live Chat (Tawk.to) Trigger ---------- */
+  function openLiveChat(e) {
+    if (e) e.preventDefault();
+    if (window.Tawk_API && typeof window.Tawk_API.maximize === "function") {
+      window.Tawk_API.maximize();
+    } else {
+      window.Tawk_API = window.Tawk_API || {};
+      var prevOnLoad = window.Tawk_API.onLoad;
+      window.Tawk_API.onLoad = function () {
+        if (typeof prevOnLoad === "function") prevOnLoad();
+        if (typeof window.Tawk_API.maximize === "function") {
+          window.Tawk_API.maximize();
+        }
+      };
+    }
+  }
+  window.openLiveChat = openLiveChat;
+
+  document.addEventListener("click", function (e) {
+    var trigger = e.target.closest("[data-open-chat], a[href='#live-chat'], a[href='#chat']");
+    if (!trigger && e.target.closest("a, button")) {
+      var btn = e.target.closest("a, button");
+      var txt = btn.textContent ? btn.textContent.trim().toLowerCase() : "";
+      if (txt === "live chat") {
+        trigger = btn;
+      }
+    }
+    if (trigger) {
+      openLiveChat(e);
+    }
+  });
 })();
