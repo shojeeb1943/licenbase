@@ -72,19 +72,7 @@
   <!-- ============ 01 · TOP BAR ============ -->
   <div class="lb-topbar">
     <div class="lb-shell">
-      <div id="announcement" class="lb-announce">
-        <p class="lb-announce-copy">
-          <span class="lb-announce-new">NEW:</span>
-          Business software licensing made simple —
-          <a href="#bundles" class="lb-announce-link">
-            Save more with bundles
-            <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i>
-          </a>
-        </p>
-        <button id="announce-close" type="button" class="lb-announce-close" aria-label="Dismiss announcement">
-          <i data-lucide="x" class="h-4 w-4"></i>
-        </button>
-      </div>
+
 
       <header id="site-header" class="lb-header">
         <div class="lb-header-inner">
@@ -264,13 +252,6 @@
 
           <!-- Right actions -->
           <div class="lb-header-actions">
-            <button id="search-open" type="button" class="lb-icon-btn" aria-label="Search software">
-              <i data-lucide="search" class="h-5 w-5"></i>
-            </button>
-            <button id="cart-btn" type="button" class="lb-icon-btn lb-cart-btn" aria-label="Open cart">
-              <i data-lucide="shopping-cart" class="h-5 w-5"></i>
-              <span id="cart-count" class="lb-cart-count">0</span>
-            </button>
             <a href="#" class="lb-header-signin">Sign In</a>
             <a href="#search" class="lb-btn lb-btn--primary lb-header-cta">Get Started</a>
             <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
@@ -289,7 +270,6 @@
         <!-- Copy -->
         <div class="lb-hero-copy">
           <span class="lb-eyebrow">
-            <span class="lb-eyebrow-dot" aria-hidden="true"></span>
             Software Licensing, Simplified
           </span>
           <h1 class="lb-hero-title">
@@ -304,7 +284,7 @@
               Browse Catalog
               <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
             </a>
-            <a href="#business-licensing" class="lb-btn lb-btn--secondary">Talk to Sales</a>
+            <a href="#live-chat" data-open-chat class="lb-btn lb-btn--secondary">Talk to Sales</a>
           </div>
           <ul class="lb-hero-trust">
             <li><i data-lucide="check-circle-2" class="h-4 w-4" aria-hidden="true"></i> Genuine Software</li>
@@ -395,14 +375,63 @@
   <section class="border-b border-gray-200 bg-white">
     <div class="lb-shell py-12 lg:py-14">
       <p class="text-center text-sm font-medium text-gray-500">Trusted software from the brands businesses rely on</p>
-      <div class="lb-brands mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-5 lg:justify-between">
-        <span class="lb-brand text-base font-bold text-gray-400 transition hover:text-navy">Microsoft</span>
-        <span class="lb-brand text-base font-extrabold lowercase tracking-tight text-gray-400 transition hover:text-navy">cPanel</span>
-        <span class="lb-brand text-base font-bold text-gray-400 transition hover:text-navy">Lite<span class="text-gray-400">Speed</span></span>
-        <span class="lb-brand text-base font-extrabold tracking-tight text-gray-400 transition hover:text-navy">Plesk</span>
-        <span class="lb-brand text-base font-semibold text-gray-400 transition hover:text-navy">CloudLinux</span>
-        <span class="lb-brand text-base font-extrabold text-gray-400 transition hover:text-navy">JetBrains</span>
-        <span class="lb-brand text-base font-extrabold text-gray-400 transition hover:text-navy">Adobe</span>
+      <div class="lb-brands mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:justify-between">
+        <!-- Microsoft -->
+        <div class="lb-brand-item" title="Microsoft">
+          <svg class="h-6 w-auto" viewBox="0 0 108 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Microsoft">
+            <rect x="0" y="0" width="10.5" height="10.5" fill="#F25022"/>
+            <rect x="12.5" y="0" width="10.5" height="10.5" fill="#7FBA00"/>
+            <rect x="0" y="12.5" width="10.5" height="10.5" fill="#00A4EF"/>
+            <rect x="12.5" y="12.5" width="10.5" height="10.5" fill="#FFB900"/>
+            <text x="31" y="17" fill="#24292F" font-family="Segoe UI, -apple-system, system-ui, sans-serif" font-size="16" font-weight="600" letter-spacing="-0.3px">Microsoft</text>
+          </svg>
+        </div>
+        <!-- cPanel -->
+        <div class="lb-brand-item" title="cPanel">
+          <svg class="h-7 w-auto" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="cPanel">
+            <path d="M14 0C6.268 0 0 6.268 0 14s6.268 14 14 14c5.845 0 10.87-3.57 13.018-8.657l-5.632-2.37A8.17 8.17 0 0114 22.167c-4.51 0-8.167-3.657-8.167-8.167 0-4.51 3.657-8.167 8.167-8.167 3.325 0 6.19 1.982 7.452 4.815l5.632-2.37C24.87 3.57 19.845 0 14 0z" fill="#FF6C2C"/>
+            <path d="M21 9h-5v10h5a5 5 0 000-10zm-1.5 6.8h-1.7v-3.6h1.7a1.8 1.8 0 010 3.6z" fill="#FF6C2C"/>
+            <text x="32" y="20" fill="#24292F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="800" letter-spacing="-0.5px">cPanel</text>
+          </svg>
+        </div>
+        <!-- LiteSpeed -->
+        <div class="lb-brand-item" title="LiteSpeed Technologies">
+          <svg class="h-7 w-auto" viewBox="0 0 135 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LiteSpeed">
+            <path d="M7.5 2C7.5 2 13 8 13 13.5C13 17 10.5 20 7.5 20C4.5 20 2 17 2 13.5C2 10.5 5 6 7.5 2Z" fill="#0070BA"/>
+            <path d="M12 7C12 7 18 13 18 18C18 22 15 25 12 25C9.5 25 7.5 22.5 7.5 19.5C7.5 16 10 11.5 12 7Z" fill="#00A2FF"/>
+            <text x="24" y="19.5" fill="#24292F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.3px">Lite<tspan fill="#0070BA">Speed</tspan></text>
+          </svg>
+        </div>
+        <!-- Plesk -->
+        <div class="lb-brand-item" title="Plesk">
+          <svg class="h-6 w-auto" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Plesk">
+            <path d="M0 0h12a8 8 0 018 8c0 4.418-3.582 8-8 8H5.5v8H0V0zm5.5 11.5h6a3.5 3.5 0 000-7h-6v7z" fill="#0066FF"/>
+            <text x="25" y="18" fill="#24292F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" letter-spacing="-0.4px">plesk</text>
+          </svg>
+        </div>
+        <!-- CloudLinux -->
+        <div class="lb-brand-item" title="CloudLinux">
+          <svg class="h-6 w-auto" viewBox="0 0 135 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CloudLinux">
+            <path d="M16 11.5c-.3-3.2-3-5.5-6.2-5.5-2.2 0-4.1 1.2-5.2 3C2 9.5 0 11.7 0 14.5 0 17.5 2.5 20 5.5 20h10c2.5 0 4.5-2 4.5-4.5 0-2.1-1.5-3.8-3.5-4z" fill="#1B4D89"/>
+            <circle cx="9" cy="13.5" r="2.5" fill="#F4911E"/>
+            <text x="24" y="17.5" fill="#24292F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="-0.3px">CloudLinux</text>
+          </svg>
+        </div>
+        <!-- JetBrains -->
+        <div class="lb-brand-item" title="JetBrains">
+          <svg class="h-6 w-auto" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JetBrains">
+            <rect width="22" height="22" rx="4" fill="#000000"/>
+            <path d="M3 17h6v2H3v-2zm0-10h11v2H3V7z" fill="#FFFFFF"/>
+            <text x="28" y="17" fill="#24292F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" letter-spacing="-0.3px">JetBrains</text>
+          </svg>
+        </div>
+        <!-- Adobe -->
+        <div class="lb-brand-item" title="Adobe">
+          <svg class="h-6 w-auto" viewBox="0 0 95 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Adobe">
+            <path d="M14.5 0L22 20h-5.2l-2.4-6.5h-5.8l3.6-9.5h.3l2 5.5zM0 0h8.2L0 20V0zm22 0h-8.2L22 20V0z" fill="#FA0F00"/>
+            <text x="28" y="17" fill="#24292F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.2px">Adobe</text>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -419,7 +448,7 @@
           <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="monitor" class="h-6 w-6"></i></span>
           <h3 class="mt-5 font-display text-lg font-bold text-navy">Operating Systems</h3>
           <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Windows, Windows Server &amp; Microsoft software</p>
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-black transition group-hover:text-brand">
             <span class="lb-product-count" data-count="120">XX+ Products</span>
             <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
           </span>
@@ -428,7 +457,7 @@
           <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="server" class="h-6 w-6"></i></span>
           <h3 class="mt-5 font-display text-lg font-bold text-navy">Hosting &amp; Infrastructure</h3>
           <p class="mt-1.5 text-sm leading-relaxed text-gray-500">cPanel, Plesk, LiteSpeed, CloudLinux &amp; more</p>
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-black transition group-hover:text-brand">
             <span class="lb-product-count" data-count="95">XX+ Products</span>
             <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
           </span>
@@ -437,7 +466,7 @@
           <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="briefcase" class="h-6 w-6"></i></span>
           <h3 class="mt-5 font-display text-lg font-bold text-navy">Business Software</h3>
           <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Productivity, collaboration and business tools</p>
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-black transition group-hover:text-brand">
             <span class="lb-product-count" data-count="140">XX+ Products</span>
             <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
           </span>
@@ -446,7 +475,7 @@
           <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="code-2" class="h-6 w-6"></i></span>
           <h3 class="mt-5 font-display text-lg font-bold text-navy">Developer Tools</h3>
           <p class="mt-1.5 text-sm leading-relaxed text-gray-500">IDE, DevOps, version control and developer software</p>
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-black transition group-hover:text-brand">
             <span class="lb-product-count" data-count="85">XX+ Products</span>
             <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
           </span>
@@ -455,7 +484,7 @@
           <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="shield-check" class="h-6 w-6"></i></span>
           <h3 class="mt-5 font-display text-lg font-bold text-navy">Security</h3>
           <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Antivirus, endpoint protection and security solutions</p>
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-black transition group-hover:text-brand">
             <span class="lb-product-count" data-count="110">XX+ Products</span>
             <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
           </span>
@@ -464,7 +493,7 @@
           <span class="grid h-12 w-12 place-items-center rounded-xl bg-brandSoft text-brand transition group-hover:bg-brand group-hover:text-white"><i data-lucide="palette" class="h-6 w-6"></i></span>
           <h3 class="mt-5 font-display text-lg font-bold text-navy">Creative Tools</h3>
           <p class="mt-1.5 text-sm leading-relaxed text-gray-500">Design, video editing and creative software</p>
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition group-hover:text-brand">
+          <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-black transition group-hover:text-brand">
             <span class="lb-product-count" data-count="75">XX+ Products</span>
             <i data-lucide="arrow-right" class="lb-link-arrow h-4 w-4"></i>
           </span>
@@ -1125,30 +1154,72 @@
         </div>
       </div>
 
-      <!-- Editable sample testimonials -->
+      <!-- Testimonials -->
       <div class="lb-stagger mt-10 grid gap-5 md:grid-cols-3">
-        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7">
-          <i data-lucide="quote" class="h-6 w-6 text-brandSoft fill-brandSoft"></i>
-          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"Licenses were delivered minutes after checkout. Clear instructions, no back-and-forth. Ordering could not be easier."</blockquote>
-          <figcaption class="mt-5 border-t border-gray-100 pt-4">
-            <p class="text-sm font-bold text-navy">Systems Administrator</p>
-            <p class="text-xs text-gray-400">Hosting provider · Sample testimonial</p>
+        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-400">
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+            </div>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600">
+              <i data-lucide="check-circle-2" class="h-3.5 w-3.5"></i> Verified Customer
+            </span>
+          </div>
+          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"Licenses were delivered literally 3 minutes after checkout with complete activation keys and instant provisioning scripts. No back-and-forth ticket delays. Ordering our server infrastructure licenses could not be smoother."</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3 border-t border-gray-100 pt-4">
+            <div class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brandSoft font-display text-sm font-bold text-brand">MV</div>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">Marcus Vance</p>
+              <p class="truncate text-xs text-gray-500">Lead DevOps Engineer · CloudScale Hosting</p>
+            </div>
           </figcaption>
         </figure>
-        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7">
-          <i data-lucide="quote" class="h-6 w-6 text-brandSoft fill-brandSoft"></i>
-          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"We consolidated all our business software purchases with LicenBase. Transparent pricing and professional support throughout."</blockquote>
-          <figcaption class="mt-5 border-t border-gray-100 pt-4">
-            <p class="text-sm font-bold text-navy">IT Manager</p>
-            <p class="text-xs text-gray-400">Growing business · Sample testimonial</p>
+        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-400">
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+            </div>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600">
+              <i data-lucide="check-circle-2" class="h-3.5 w-3.5"></i> Verified Customer
+            </span>
+          </div>
+          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"We consolidated all our corporate software procurement and 180 Microsoft 365 seats through LicenBase. Saved 22% on annual licensing costs and our IT department now manages all license renewals from a single, transparent dashboard."</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3 border-t border-gray-100 pt-4">
+            <div class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-emerald-50 font-display text-sm font-bold text-emerald-600">SL</div>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">Sarah Lin</p>
+              <p class="truncate text-xs text-gray-500">VP of Technology · VentureMetrics</p>
+            </div>
           </figcaption>
         </figure>
-        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7">
-          <i data-lucide="quote" class="h-6 w-6 text-brandSoft fill-brandSoft"></i>
-          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"The team helped me choose the right license for our clients. Quick responses, honest recommendations, zero hassle."</blockquote>
-          <figcaption class="mt-5 border-t border-gray-100 pt-4">
-            <p class="text-sm font-bold text-navy">Agency Owner</p>
-            <p class="text-xs text-gray-400">Web agency · Sample testimonial</p>
+        <figure class="lb-card flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-400">
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-amber-400"></i>
+            </div>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600">
+              <i data-lucide="check-circle-2" class="h-3.5 w-3.5"></i> Verified Customer
+            </span>
+          </div>
+          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-gray-600">"The team guided us directly to the ideal LiteSpeed and Plesk license tiers for our customer clusters. Immediate live chat support, honest tier recommendations, and instantaneous key delivery. Top tier service."</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3 border-t border-gray-100 pt-4">
+            <div class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brandSoft font-display text-sm font-bold text-brand">DK</div>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-navy">David Kross</p>
+              <p class="truncate text-xs text-gray-500">Managing Director · Kross Media Group</p>
+            </div>
           </figcaption>
         </figure>
       </div>
@@ -1318,7 +1389,7 @@
         <!-- Brand -->
         <div>
           <a href="#" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo-white.png" alt="LicenBase" class="h-10 w-auto" />
+            <img src="assets/img/logo-white.png" alt="LicenBase" class="h-[90px] w-auto" />
           </a>
           <p class="mt-2 text-sm font-semibold text-white/90">Your Software License Partner</p>
           <p class="mt-3 max-w-xs text-sm leading-relaxed text-gray-400">Professional software licensing for businesses, developers and IT teams.</p>
