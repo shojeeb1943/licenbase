@@ -492,9 +492,25 @@ footer[id] {
   transform: translateY(0);
 }
 
-.lb-mega {
+.lb-mega-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border: 1px solid #e7edf5;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 24px 50px -30px rgba(17, 24, 39, 0.35), 0 4px 12px -2px rgba(17, 24, 39, 0.05);
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.lb-mega-tiles {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.5rem;
   width: 100%;
   box-sizing: border-box;
@@ -505,76 +521,19 @@ footer[id] {
   box-shadow: 0 24px 50px -30px rgba(17, 24, 39, 0.35), 0 4px 12px -2px rgba(17, 24, 39, 0.05);
 }
 
-.lb-mega--three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.lb-mega-item {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 0.85rem;
-  align-items: start;
-  min-height: 100%;
-  padding: 1rem 0.95rem;
-  border-radius: 1rem;
+.lb-mega-tile {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
-.lb-mega-item + .lb-mega-item {
-  border-left: 1px solid #eef2f7;
-}
-
-.lb-mega-item:hover {
+.lb-mega-tile:hover {
   background: #f7faff;
-}
-
-.lb-mega-icon {
-  display: grid;
-  place-items: center;
-  width: 2.45rem;
-  height: 2.45rem;
-  border-radius: 0.8rem;
-  background: #f4f7fc;
-  color: #475467;
-}
-
-.lb-mega-item:hover .lb-mega-icon {
-  background: var(--brand-soft);
   color: var(--brand);
-}
-
-.lb-mega-copy {
-  display: grid;
-  gap: 0.3rem;
-  min-width: 0;
-}
-
-.lb-mega-title {
-  color: var(--navy);
-  font-size: 0.95rem;
-  font-weight: 800;
-  line-height: 1.3;
-}
-
-.lb-mega-desc {
-  color: #667085;
-  font-size: 0.8rem;
-  line-height: 1.45;
-}
-
-.lb-mega-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  margin-top: 0.35rem;
-  color: var(--brand);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.lb-mega-item:hover .lb-mega-link {
-  gap: 0.45rem;
 }
 
 @media (min-width: 640px) {

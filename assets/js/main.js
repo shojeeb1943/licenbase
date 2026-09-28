@@ -108,13 +108,18 @@
       if (btn) btn.setAttribute("aria-expanded", "false");
     });
   }
+  var HOVER_CLOSE_DELAY = 350;
   drops.forEach(function (d) {
     var btn = d.querySelector("[data-drop]");
     var panel = d.querySelector(".lb-drop-panel");
+    var closeTimer = null;
     if (!btn) return;
 
     // Switch cleanly on mouse hover if another menu was pinned open
     d.addEventListener("mouseenter", function () {
+      clearTimeout(closeTimer);
+      d.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
       drops.forEach(function (other) {
         if (other !== d && other.classList.contains("is-open")) {
           other.classList.remove("is-open");
@@ -122,6 +127,15 @@
           if (obtn) obtn.setAttribute("aria-expanded", "false");
         }
       });
+    });
+
+    // Give the cursor time to travel down into the panel before closing
+    d.addEventListener("mouseleave", function () {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () {
+        d.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      }, HOVER_CLOSE_DELAY);
     });
 
     btn.addEventListener("click", function (e) {
@@ -303,22 +317,52 @@
     }, 2600);
   }
 
-  /* ---------- Newsletter (frontend-only) ---------- */
+  /* ---------- Newsletter (Web3Forms) ---------- */
   var newsForm = document.getElementById("newsletter-form");
   var newsEmail = document.getElementById("newsletter-email");
   var newsStatus = document.getElementById("newsletter-status");
+  var WEB3FORMS_ACCESS_KEY = "df5e4a4f-9f37-46ea-a108-8a16b03d8468";
   if (newsForm && newsEmail && newsStatus) {
     newsForm.addEventListener("submit", function (e) {
       e.preventDefault();
       var email = newsEmail.value.trim();
       var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      newsStatus.classList.toggle("text-red-500", !valid);
+      newsStatus.classList.remove("text-red-500");
       if (!valid) {
+        newsStatus.classList.add("text-red-500");
         newsStatus.textContent = "Please enter a valid email address.";
         newsEmail.focus();
         return;
       }
-      newsStatus.textContent = "Newsletter signup is not connected yet. Please check back soon.";
+      var submitBtn = newsForm.querySelector("button[type=submit]");
+      submitBtn.disabled = true;
+      newsStatus.textContent = "Subscribing…";
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New LicenBase newsletter signup",
+          from_name: "LicenBase Newsletter",
+          email: email,
+        }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          submitBtn.disabled = false;
+          if (data.success) {
+            newsStatus.textContent = "You're subscribed. Thanks!";
+            newsForm.reset();
+          } else {
+            newsStatus.classList.add("text-red-500");
+            newsStatus.textContent = "Something went wrong. Please try again.";
+          }
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          newsStatus.classList.add("text-red-500");
+          newsStatus.textContent = "Something went wrong. Please try again.";
+        });
     });
   }
 
