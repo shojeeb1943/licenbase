@@ -58,14 +58,16 @@
     }
 
     /* Announcement hide on scroll down, reappear on scroll up (with hysteresis) */
-    if (scrollingDown && y > 30 && !announceHidden) {
-      announce.classList.add("lb-announce-hidden");
-      announceHidden = true;
-      lastAnnounceY = y;
-    } else if (!scrollingDown && announceHidden && (lastAnnounceY - y) >= 50) {
-      announce.classList.remove("lb-announce-hidden");
-      announceHidden = false;
-      lastAnnounceY = y;
+    if (announce) {
+      if (scrollingDown && y > 30 && !announceHidden) {
+        announce.classList.add("lb-announce-hidden");
+        announceHidden = true;
+        lastAnnounceY = y;
+      } else if (!scrollingDown && announceHidden && (lastAnnounceY - y) >= 50) {
+        announce.classList.remove("lb-announce-hidden");
+        announceHidden = false;
+        lastAnnounceY = y;
+      }
     }
 
     lastScrollY = y;
@@ -79,10 +81,15 @@
   handleScroll();
 
   /* ---------- Announcement close button ---------- */
-  document.getElementById("announce-close").addEventListener("click", function () {
-    announce.classList.add("lb-announce-hidden");
-    announceHidden = true;
-  });
+  var announceClose = document.getElementById("announce-close");
+  if (announceClose) {
+    announceClose.addEventListener("click", function () {
+      if (announce) {
+        announce.classList.add("lb-announce-hidden");
+        announceHidden = true;
+      }
+    });
+  }
 
   /* ---------- Back to top click ---------- */
   if (toTop) {
@@ -184,9 +191,12 @@
     searchOverlay.classList.remove("lb-open");
     searchOverlay.setAttribute("aria-hidden", "true");
   }
-  document.getElementById("search-open").addEventListener("click", openSearch);
-  document.getElementById("search-close").addEventListener("click", closeSearch);
-  document.getElementById("search-backdrop").addEventListener("click", closeSearch);
+  var searchOpen = document.getElementById("search-open");
+  if (searchOpen) searchOpen.addEventListener("click", openSearch);
+  var searchClose = document.getElementById("search-close");
+  if (searchClose) searchClose.addEventListener("click", closeSearch);
+  var searchBackdrop = document.getElementById("search-backdrop");
+  if (searchBackdrop) searchBackdrop.addEventListener("click", closeSearch);
 
   /* Popular-search chips fill the visible input */
   document.querySelectorAll(".lb-chip").forEach(function (chip) {
@@ -262,19 +272,22 @@
   var cartTotal = 0;
   function addToCart() {
     cartTotal += 1;
-    cartCount.textContent = String(cartTotal);
+    if (cartCount) cartCount.textContent = String(cartTotal);
     showToast("Added to cart", "Checkout is coming soon.");
   }
   document.querySelectorAll(".lb-add-cart").forEach(function (b) {
     b.addEventListener("click", addToCart);
   });
-  document.getElementById("cart-btn").addEventListener("click", function () {
-    if (cartTotal === 0) {
-      showToast("Your cart is empty", "Browse software to add a license.");
-    } else {
-      showToast("Cart has " + cartTotal + " item" + (cartTotal > 1 ? "s" : ""), "Checkout is coming soon.");
-    }
-  });
+  var cartBtn = document.getElementById("cart-btn");
+  if (cartBtn) {
+    cartBtn.addEventListener("click", function () {
+      if (cartTotal === 0) {
+        showToast("Your cart is empty", "Browse software to add a license.");
+      } else {
+        showToast("Cart has " + cartTotal + " item" + (cartTotal > 1 ? "s" : ""), "Checkout is coming soon.");
+      }
+    });
+  }
 
   /* ---------- Toast ---------- */
   var toast = document.getElementById("toast");
@@ -433,24 +446,35 @@
   /* ---------- Live Chat (Tawk.to) Trigger ---------- */
   function openLiveChat(e) {
     if (e && typeof e.preventDefault === "function") e.preventDefault();
-    if (window.Tawk_API && typeof window.Tawk_API.maximize === "function") {
-      if (typeof window.Tawk_API.showWidget === "function") {
-        window.Tawk_API.showWidget();
-      }
-      window.Tawk_API.maximize();
-    } else {
-      window.Tawk_API = window.Tawk_API || {};
-      var prevOnLoad = window.Tawk_API.onLoad;
-      window.Tawk_API.onLoad = function () {
-        if (typeof prevOnLoad === "function") prevOnLoad();
-        if (typeof window.Tawk_API.showWidget === "function") {
-          window.Tawk_API.showWidget();
-        }
-        if (typeof window.Tawk_API.maximize === "function") {
+
+    function tryOpen() {
+      if (window.Tawk_API && typeof window.Tawk_API.maximize === "function") {
+        try {
+          if (typeof window.Tawk_API.showWidget === "function") {
+            window.Tawk_API.showWidget();
+          }
           window.Tawk_API.maximize();
+          return true;
+        } catch (err) {
+          console.warn("Tawk maximize error", err);
         }
-      };
+      }
+      return false;
     }
+
+    if (tryOpen()) return;
+
+    var attempts = 0;
+    var maxAttempts = 20;
+    var poll = setInterval(function () {
+      attempts++;
+      if (tryOpen()) {
+        clearInterval(poll);
+      } else if (attempts >= maxAttempts) {
+        clearInterval(poll);
+        showToast("Live Chat", "Connecting to live support. If the chat widget does not appear, please ensure chat is not blocked by your browser extensions.");
+      }
+    }, 200);
   }
   window.openLiveChat = openLiveChat;
 
@@ -459,11 +483,12 @@
     if (!trigger && e.target.closest("a, button")) {
       var btn = e.target.closest("a, button");
       var txt = btn.textContent ? btn.textContent.trim().toLowerCase() : "";
-      if (txt === "live chat" || txt === "contact support") {
+      if (txt === "live chat" || txt === "contact support" || txt === "talk to sales") {
         trigger = btn;
       }
     }
     if (trigger) {
+      e.preventDefault();
       openLiveChat(e);
     }
   });
