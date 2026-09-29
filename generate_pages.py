@@ -1,3 +1,5 @@
+import html as _html
+import json
 import os
 
 products = [
@@ -1248,6 +1250,49 @@ def generate_page(p):
 
     specs_pills = "".join([f'<span class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-navy border border-gray-200 shadow-sm"><i data-lucide="check" class="h-3.5 w-3.5 text-accent"></i> {spec}</span>' for spec in p["specs"]])
 
+    url = "https://licenbase.com/" + p["filename"][:-5]
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": p["name"] + " License",
+            "description": _html.unescape(p["seo_desc"]),
+            "image": "https://licenbase.com/assets/img/og-default.png",
+            "url": url,
+            "brand": {"@type": "Brand", "name": p["name"]},
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": t["name"],
+                    "price": t["price"].replace("$", ""),
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "url": url,
+                    "seller": {"@type": "Organization", "name": "LicenBase"},
+                }
+                for t in p["tiers"]
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://licenbase.com/products"},
+                {"@type": "ListItem", "position": 3, "name": p["name"] + " License", "item": url},
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": _html.unescape(f["q"]), "acceptedAnswer": {"@type": "Answer", "text": _html.unescape(f["a"])}}
+                for f in p["faqs"]
+            ],
+        },
+    ]
+    ld_json = "\n".join(f'  <script type="application/ld+json">{json.dumps(o, ensure_ascii=False)}</script>' for o in ld)
+
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1264,11 +1309,16 @@ def generate_page(p):
   <meta property="og:title" content="{p["seo_title"]}" />
   <meta property="og:description" content="{p["seo_desc"]}" />
   <meta property="og:url" content="https://licenbase.com/{p["filename"][:-5]}" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og-default.png" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og-default.png" />
   <meta name="twitter:title" content="{p["seo_title"]}" />
   <meta name="twitter:description" content="{p["seo_desc"]}" />
+
+{ld_json}
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?v=2" />
