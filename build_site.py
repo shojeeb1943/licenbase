@@ -38,8 +38,8 @@ subprocess.run(
 # 4. Update generate_pages.py reference to main.min.js
 with open("generate_pages.py", "r", encoding="utf-8") as f:
     gen_content = f.read()
-gen_content = gen_content.replace('assets/js/main.js?v=7', 'assets/js/main.min.js?v=1')
-gen_content = gen_content.replace('assets/js/main.js?v=6', 'assets/js/main.min.js?v=1')
+gen_content = gen_content.replace('assets/js/main.js?v=7', 'assets/js/main.min.js?v=2')
+gen_content = gen_content.replace('assets/js/main.js?v=6', 'assets/js/main.min.js?v=2')
 with open("generate_pages.py", "w", encoding="utf-8") as f:
     f.write(gen_content)
 
@@ -53,8 +53,8 @@ files = glob.glob("*.html")
 for file in files:
     with open(file, "r", encoding="utf-8") as f:
         html = f.read()
-    html = html.replace('assets/js/main.js?v=7', 'assets/js/main.min.js?v=1')
-    html = html.replace('assets/js/main.js?v=6', 'assets/js/main.min.js?v=1')
+    html = html.replace('assets/js/main.js?v=7', 'assets/js/main.min.js?v=2')
+    html = html.replace('assets/js/main.js?v=6', 'assets/js/main.min.js?v=2')
     with open(file, "w", encoding="utf-8") as f:
         f.write(html)
 

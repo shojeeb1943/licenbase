@@ -73,7 +73,7 @@
 
   <!-- Precompiled Production CSS -->
   <link rel="stylesheet" href="assets/css/tailwind.min.css?v=1" />
-  <link rel="stylesheet" href="assets/css/styles.min.css?v=1" />
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=2" />
 </head>
 
 <body class="bg-white font-sans text-navy antialiased">
@@ -93,6 +93,8 @@
 
           <!-- Desktop nav -->
           <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
             <!-- Software mega menu -->
             <div class="lb-drop lb-drop--mega">
               <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
@@ -497,12 +499,51 @@
     </div>
   </footer>
 
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
   <!-- Lucide Icons & Scripts -->
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
-  <script>
-    if (window.lucide) {
-      lucide.createIcons();
-    }
-  </script>
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script defer src="assets/js/main.min.js?v=2"></script>
 </body>
 </html>

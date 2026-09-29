@@ -180,17 +180,22 @@
     mobileMenu.setAttribute("aria-hidden", "false");
     mobileMenu.inert = false;
     document.body.style.overflow = "hidden";
+    if (lenis) lenis.stop();
     menuCloseBtn.focus();
   }
   function closeDrawer() {
+    if (!mobileMenu) return;
     mobileMenu.classList.remove("lb-open");
     mobileMenu.setAttribute("aria-hidden", "true");
     mobileMenu.inert = true;
     document.body.style.overflow = "";
+    if (lenis) lenis.start();
   }
-  menuOpenBtn.addEventListener("click", openDrawer);
-  menuCloseBtn.addEventListener("click", closeDrawer);
-  drawerBackdrop.addEventListener("click", closeDrawer);
+  if (menuOpenBtn && mobileMenu) {
+    menuOpenBtn.addEventListener("click", openDrawer);
+    menuCloseBtn.addEventListener("click", closeDrawer);
+    drawerBackdrop.addEventListener("click", closeDrawer);
+  }
   document.querySelectorAll(".lb-mobile-link").forEach(function (a) {
     a.addEventListener("click", closeDrawer);
   });
@@ -204,6 +209,7 @@
     setTimeout(function () { overlayInput.focus(); }, 100);
   }
   function closeSearch() {
+    if (!searchOverlay) return;
     searchOverlay.classList.remove("lb-open");
     searchOverlay.setAttribute("aria-hidden", "true");
   }

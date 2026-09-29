@@ -1765,3 +1765,6 @@ footer[id] {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Grid items must be allowed to shrink or wide content clips on mobile */
+.grid > * { min-width: 0; }
