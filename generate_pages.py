@@ -3,8 +3,30 @@ import json
 import os
 
 GTM_ID = "GTM-MWQQGP5R"
-GTM_HEAD = """  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','""" + GTM_ID + """');</script>
+GTM_HEAD = """  <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + 'GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+""" + GTM_ID + """');</script>
   <!-- End Google Tag Manager -->
 """
 GTM_BODY = """  <!-- Google Tag Manager (noscript) -->
@@ -1205,14 +1227,14 @@ def generate_page(p):
         "litespeed-license.html": "litespeed.svg",
         "plesk-license.html": "plesk.svg",
         "whmcs-license.html": "whmcs.svg",
-        "cloudlinux-license.html": "cloudlinux.png",
-        "virtualizor-license.html": "virtualizor.png",
-        "sitepad-license.html": "sitepad.png",
-        "whmreseller-license.html": "whmreseller.png",
-        "softaculous-license.html": "softaculous.png",
-        "jetbackup-license.html": "jetbackup.png",
-        "imunify360-license.html": "imunify360.png",
-        "webuzo-license.html": "webuzo.png",
+        "cloudlinux-license.html": "cloudlinux.svg",
+        "virtualizor-license.html": "virtualizor.svg",
+        "sitepad-license.html": "sitepad.svg",
+        "whmreseller-license.html": "whmreseller.svg",
+        "softaculous-license.html": "softaculous.svg",
+        "jetbackup-license.html": "jetbackup.svg",
+        "imunify360-license.html": "imunify360.svg",
+        "webuzo-license.html": "webuzo.svg",
         "wp-squared-license.html": "wp-squared.svg"
     }
     for rel in p["related"]:
@@ -1339,42 +1361,21 @@ def generate_page(p):
   <link rel="icon" href="favicon.ico?v=2" sizes="any" />
   <link rel="shortcut icon" href="favicon.ico?v=2" />
 
-  <!-- Fonts -->
+  <!-- Fonts (Optimized Non-Blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" /></noscript>
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
-
-  <!-- Tailwind (Play CDN) -->
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {{
-      theme: {{
-        extend: {{
-          colors: {{
-            brand: '#1E40AF',
-            brandDeep: '#1E3A8A',
-            brandSoft: '#EFF4FF',
-            navy: '#111827',
-            navyLight: '#1F2937',
-            accent: '#10B981',
-            accentDeep: '#047857',
-            accentSoft: '#ECFDF5',
-            mist: '#F8FAFC',
-          }},
-          fontFamily: {{
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          }},
-        }},
-      }},
-    }};
-  </script>
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=1" />
 </head>
 
 <body class="bg-white font-sans text-navy antialiased">
@@ -1386,7 +1387,7 @@ def generate_page(p):
         <div class="lb-header-inner">
           <!-- Logo -->
           <a href="/" class="lb-logo" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
           </a>
 
           <!-- Desktop nav -->
@@ -1884,7 +1885,7 @@ def generate_page(p):
         <!-- Col 1: Brand -->
         <div class="lg:col-span-2 space-y-4">
           <a href="/" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
           </a>
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
@@ -1945,7 +1946,7 @@ def generate_page(p):
     <div class="relative ml-auto flex h-full w-full max-w-xs flex-col bg-white shadow-2xl">
       <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
         <a href="/" class="lb-logo" aria-label="LicenBase home">
-          <img src="assets/img/logo.png" alt="LicenBase" class="h-7 w-auto" />
+          <img src="assets/img/logo.png" alt="LicenBase" class="h-7 w-auto" width="70" height="28" loading="lazy" decoding="async" />
         </a>
         <button id="menu-close" type="button" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 hover:bg-mist" aria-label="Close menu">
           <i data-lucide="x" class="h-5 w-5"></i>
@@ -2011,28 +2012,38 @@ def generate_page(p):
     </div>
   </div>
 
-  <!-- Libraries -->
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <!-- Deferred Libraries -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{{}}, Tawk_LoadStart=new Date();
-  (function(){{
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  }})();
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {{
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {{}};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }}
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {{
+      window.addEventListener(e, loadTawk, {{ once: true, passive: true }});
+    }});
+    if ('requestIdleCallback' in window) {{
+      requestIdleCallback(function() {{ setTimeout(loadTawk, 3500); }});
+    }} else {{
+      setTimeout(loadTawk, 4000);
+    }}
   </script>
-  <!--End of Tawk.to Script-->
 
-  <script src="assets/js/main.js?v=6"></script>
+  <script defer src="assets/js/main.min.js?v=1"></script>
 </body>
 </html>
 """

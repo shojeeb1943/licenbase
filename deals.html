@@ -2,8 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWQQGP5R');</script>
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
   <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cheap Hosting License Bundles &amp; Combo Deals | LicenBase</title>
@@ -37,42 +57,21 @@
   <link rel="icon" href="favicon.ico?v=2" sizes="any" />
   <link rel="shortcut icon" href="favicon.ico?v=2" />
 
-  <!-- Fonts -->
+    <!-- Fonts (Optimized Non-Blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" /></noscript>
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
-
-  <!-- Tailwind (Play CDN) -->
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#1E40AF',
-            brandDeep: '#1E3A8A',
-            brandSoft: '#EFF4FF',
-            navy: '#111827',
-            navyLight: '#1F2937',
-            accent: '#10B981',
-            accentDeep: '#047857',
-            accentSoft: '#ECFDF5',
-            mist: '#F8FAFC',
-          },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=1" />
 </head>
 
 <body class="bg-white font-sans text-navy antialiased">
@@ -87,7 +86,7 @@
         <div class="lb-header-inner">
           <!-- Logo -->
           <a href="/" class="lb-logo" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
           </a>
 
           <!-- Desktop nav -->
@@ -112,55 +111,55 @@
               <div class="lb-drop-panel">
                                 <div class="lb-mega-tiles">
                   <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>cPanel License</span>
                   </a>
                   <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>LiteSpeed License</span>
                   </a>
                   <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Plesk License</span>
                   </a>
                   <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WHMCS License</span>
                   </a>
                   <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>CloudLinux License</span>
                   </a>
                   <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/virtualizor.svg" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Virtualizor License</span>
                   </a>
                   <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/sitepad.svg" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>SitePad License</span>
                   </a>
                   <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/whmreseller.svg" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WHMReseller License</span>
                   </a>
                   <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/softaculous.svg" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Softaculous License</span>
                   </a>
                   <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/jetbackup.svg" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>JetBackup License</span>
                   </a>
                   <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/imunify360.svg" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Imunify360 License</span>
                   </a>
                   <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/webuzo.svg" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Webuzo Control Panel</span>
                   </a>
                   <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WP Squared</span>
                   </a>
                 </div>
@@ -255,19 +254,19 @@
             <!-- Software icons included -->
             <div class="grid grid-cols-4 gap-2 text-center">
               <div class="rounded-xl bg-mist p-2.5 border border-gray-100 flex flex-col items-center justify-center shadow-sm">
-                <img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-6 w-6 object-contain" />
+                <img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-6 w-6 object-contain"  width="24" height="24" decoding="async" loading="lazy" />
                 <p class="mt-1.5 text-[11px] font-bold text-navy">cPanel</p>
               </div>
               <div class="rounded-xl bg-mist p-2.5 border border-gray-100 flex flex-col items-center justify-center shadow-sm">
-                <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-6 w-6 object-contain" />
+                <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-6 w-6 object-contain"  width="24" height="24" decoding="async" loading="lazy" />
                 <p class="mt-1.5 text-[11px] font-bold text-navy">LiteSpeed</p>
               </div>
               <div class="rounded-xl bg-mist p-2.5 border border-gray-100 flex flex-col items-center justify-center shadow-sm">
-                <img src="assets/img/icons/cloudlinux.png" alt="CloudLinux" class="h-6 w-6 object-contain" />
+                <img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux" class="h-6 w-6 object-contain"  width="24" height="24" decoding="async" loading="lazy" />
                 <p class="mt-1.5 text-[11px] font-bold text-navy">CloudLinux</p>
               </div>
               <div class="rounded-xl bg-mist p-2.5 border border-gray-100 flex flex-col items-center justify-center shadow-sm">
-                <img src="assets/img/icons/imunify360.png" alt="Imunify360" class="h-6 w-6 object-contain" />
+                <img src="assets/img/icons/imunify360.svg" alt="Imunify360" class="h-6 w-6 object-contain"  width="24" height="24" decoding="async" loading="lazy" />
                 <p class="mt-1.5 text-[11px] font-bold text-navy">Imunify360</p>
               </div>
             </div>
@@ -328,12 +327,12 @@
             </div>
 
             <ul class="mt-6 space-y-3">
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>1. cPanel & WHM License – VPS</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>2. LiteSpeed License – 2 Core</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/imunify360.png" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>3. Imunify360 Security License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/whmreseller.png" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>4. WHMReseller License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/softaculous.png" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>5. Softaculous Auto-Installer License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/sitepad.png" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>6. SitePad Website Builder License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>1. cPanel & WHM License – VPS</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>2. LiteSpeed License – 2 Core</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/imunify360.svg" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>3. Imunify360 Security License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/whmreseller.svg" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>4. WHMReseller License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/softaculous.svg" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>5. Softaculous Auto-Installer License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/sitepad.svg" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>6. SitePad Website Builder License</strong></span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>Unlimited Free IP Changes</span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>24/7/365 Technical Support & Instant Delivery</span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>Cancel Anytime · No Contracts</span></li>
@@ -368,12 +367,12 @@
             </div>
 
             <ul class="mt-6 space-y-3">
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>1. cPanel & WHM License – Dedicated</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>2. LiteSpeed License – 2 Core</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/imunify360.png" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>3. Imunify360 Security License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/whmreseller.png" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>4. WHMReseller License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/softaculous.png" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>5. Softaculous Auto-Installer License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/sitepad.png" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>6. SitePad Website Builder License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>1. cPanel & WHM License – Dedicated</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>2. LiteSpeed License – 2 Core</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/imunify360.svg" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>3. Imunify360 Security License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/whmreseller.svg" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>4. WHMReseller License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/softaculous.svg" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>5. Softaculous Auto-Installer License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><img src="assets/img/icons/sitepad.svg" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>6. SitePad Website Builder License</strong></span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>2 Free IP Changes</span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>24/7/365 Technical Support & Instant Delivery</span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>Cancel Anytime · No Contracts</span></li>
@@ -411,14 +410,14 @@
             </div>
 
             <ul class="mt-6 space-y-3">
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>1. cPanel & WHM License – VPS</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cloudlinux.png" alt="CloudLinux" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>2. CloudLinux OS License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>3. LiteSpeed License – 2 Core</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/imunify360.png" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>4. Imunify360 Security Suite</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/jetbackup.png" alt="JetBackup" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>5. JetBackup 5 Enterprise License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/whmreseller.png" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>6. WHMReseller Pro License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/softaculous.png" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>7. Softaculous Auto-Installer</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/sitepad.png" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>8. SitePad Website Builder</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>1. cPanel & WHM License – VPS</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>2. CloudLinux OS License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>3. LiteSpeed License – 2 Core</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/imunify360.svg" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>4. Imunify360 Security Suite</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/jetbackup.svg" alt="JetBackup" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>5. JetBackup 5 Enterprise License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/whmreseller.svg" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>6. WHMReseller Pro License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/softaculous.svg" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>7. Softaculous Auto-Installer</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/sitepad.svg" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>8. SitePad Website Builder</strong></span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>2 Free IP Changes · Instant Delivery</span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>24/7/365 Technical Support · Cancel Anytime</span></li>
             </ul>
@@ -452,14 +451,14 @@
             </div>
 
             <ul class="mt-6 space-y-3">
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>1. cPanel & WHM License – Dedicated</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cloudlinux.png" alt="CloudLinux" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>2. CloudLinux OS License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>3. LiteSpeed License – 2 Core</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/imunify360.png" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>4. Imunify360 Security Suite</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/jetbackup.png" alt="JetBackup" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>5. JetBackup 5 Enterprise License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/whmreseller.png" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>6. WHMReseller Pro License</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/softaculous.png" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>7. Softaculous Auto-Installer</strong></span></li>
-              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/sitepad.png" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain" /><span><strong>8. SitePad Website Builder</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cpanel.svg" alt="cPanel" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>1. cPanel & WHM License – Dedicated</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>2. CloudLinux OS License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/litespeed.svg" alt="LiteSpeed" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>3. LiteSpeed License – 2 Core</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/imunify360.svg" alt="Imunify360" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>4. Imunify360 Security Suite</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/jetbackup.svg" alt="JetBackup" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>5. JetBackup 5 Enterprise License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/whmreseller.svg" alt="WHMReseller" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>6. WHMReseller Pro License</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/softaculous.svg" alt="Softaculous" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>7. Softaculous Auto-Installer</strong></span></li>
+              <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-800 font-medium"><img src="assets/img/icons/sitepad.svg" alt="SitePad" class="h-4 w-4 shrink-0 mt-0.5 object-contain"  width="16" height="16" decoding="async" loading="lazy" /><span><strong>8. SitePad Website Builder</strong></span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>2 Free IP Changes · Instant Delivery</span></li>
               <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-500"><i data-lucide="check" class="h-4 w-4 shrink-0 text-accent mt-0.5"></i><span>24/7/365 Technical Support · Cancel Anytime</span></li>
             </ul>
@@ -879,7 +878,7 @@
         <!-- Col 1: Brand -->
         <div class="lg:col-span-2 space-y-4">
           <a href="/" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
           </a>
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
@@ -940,7 +939,7 @@
     <div class="relative ml-auto flex h-full w-full max-w-xs flex-col bg-white shadow-2xl">
       <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
         <a href="/" class="lb-logo" aria-label="LicenBase home">
-          <img src="assets/img/logo.png" alt="LicenBase" class="h-7 w-auto" />
+          <img src="assets/img/logo.png" alt="LicenBase" class="h-7 w-auto" width="70" height="28" loading="lazy" decoding="async" />
         </a>
         <button id="menu-close" type="button" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 hover:bg-mist" aria-label="Close menu">
           <i data-lucide="x" class="h-5 w-5"></i>
@@ -1005,27 +1004,37 @@
     </div>
   </div>
 
-  <!-- Libraries -->
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <!-- Deferred Libraries -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
   </script>
-  <!--End of Tawk.to Script-->
 
-  <script src="assets/js/main.js?v=6"></script>
+  <script defer src="assets/js/main.min.js?v=1"></script>
 </body>
 </html>

@@ -2,8 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWQQGP5R');</script>
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
   <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>License Policy — LicenBase</title>
@@ -37,39 +57,21 @@
   <link rel="icon" href="favicon.ico?v=2" sizes="any" />
   <link rel="shortcut icon" href="favicon.ico?v=2" />
 
-  <!-- Fonts -->
+    <!-- Fonts (Optimized Non-Blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" /></noscript>
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
 
-  <!-- Tailwind (Play CDN) -->
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#1E40AF',
-            brandDeep: '#1E3A8A',
-            brandSoft: '#EFF4FF',
-            navy: '#111827',
-            navyLight: '#1F2937',
-            accent: '#10B981',
-            accentDeep: '#047857',
-            accentSoft: '#ECFDF5',
-            mist: '#F8FAFC',
-          },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=1" />
 </head>
 
 <body class="bg-white font-sans text-navy antialiased">
@@ -84,7 +86,7 @@
         <div class="lb-header-inner">
           <!-- Logo -->
           <a href="/" class="lb-logo" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
           </a>
 
           <!-- Desktop nav -->
@@ -109,55 +111,55 @@
               <div class="lb-drop-panel">
                                 <div class="lb-mega-tiles">
                   <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>cPanel License</span>
                   </a>
                   <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>LiteSpeed License</span>
                   </a>
                   <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Plesk License</span>
                   </a>
                   <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WHMCS License</span>
                   </a>
                   <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>CloudLinux License</span>
                   </a>
                   <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/virtualizor.svg" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Virtualizor License</span>
                   </a>
                   <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/sitepad.svg" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>SitePad License</span>
                   </a>
                   <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/whmreseller.svg" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WHMReseller License</span>
                   </a>
                   <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/softaculous.svg" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Softaculous License</span>
                   </a>
                   <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/jetbackup.svg" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>JetBackup License</span>
                   </a>
                   <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/imunify360.svg" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Imunify360 License</span>
                   </a>
                   <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/webuzo.svg" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>Webuzo Control Panel</span>
                   </a>
                   <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WP Squared</span>
                   </a>
                 </div>
@@ -434,7 +436,7 @@
         <!-- Col 1: Brand -->
         <div class="lg:col-span-2 space-y-4">
           <a href="/" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
           </a>
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
