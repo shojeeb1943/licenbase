@@ -79,10 +79,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Accelerate WordPress and PHP up to 10x with drop-in Apache replacement.", "icon": "zap"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate tenants, stabilize server resources, and prevent noisy neighbor crashes.", "icon": "shield-check"},
-            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "imunify360-license.html", "desc": "Complete AI-powered web application firewall and automated malware removal.", "icon": "lock"},
-            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "jetbackup-license.html", "desc": "Enterprise automated incremental server backups to S3, Wasabi, or Google Cloud.", "icon": "database"}
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Accelerate WordPress and PHP up to 10x with drop-in Apache replacement.", "icon": "zap"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate tenants, stabilize server resources, and prevent noisy neighbor crashes.", "icon": "shield-check"},
+            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "Complete AI-powered web application firewall and automated malware removal.", "icon": "lock"},
+            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "/jetbackup-license", "desc": "Enterprise automated incremental server backups to S3, Wasabi, or Google Cloud.", "icon": "database"}
         ],
         "articles": [
             {"title": "How to Install cPanel & WHM on AlmaLinux / Rocky Linux", "cat": "Installation Guide", "time": "4 min read", "desc": "Step-by-step guide to installing cPanel & WHM and activating your LicenBase license in under 5 minutes."},
@@ -202,10 +202,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Optimize server stability and isolate tenants for maximum security.", "icon": "shield-check"},
-            {"title": "Imunify360", "price": "$1.50/mo", "url": "imunify360-license.html", "desc": "Automated security suite with proactive PHP defense and real-time scanning.", "icon": "lock"},
-            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "whmcs-license.html", "desc": "Automate billing, client provisioning, and hosting support.", "icon": "credit-card"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Optimize server stability and isolate tenants for maximum security.", "icon": "shield-check"},
+            {"title": "Imunify360", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "Automated security suite with proactive PHP defense and real-time scanning.", "icon": "lock"},
+            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "/whmcs-license", "desc": "Automate billing, client provisioning, and hosting support.", "icon": "credit-card"}
         ],
         "articles": [
             {"title": "How to Replace Apache with LiteSpeed in WHM", "cat": "Tutorial", "time": "3 min read", "desc": "Easy 5-minute migration from Apache to LiteSpeed Web Server with zero website downtime."},
@@ -283,10 +283,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Accelerate WordPress and dynamic PHP sites with LSCache.", "icon": "zap"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate tenants, stabilize server resources, and prevent crashes.", "icon": "shield-check"},
-            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "imunify360-license.html", "desc": "Automated security suite with AI firewall and proactive malware defense.", "icon": "lock"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Accelerate WordPress and dynamic PHP sites with LSCache.", "icon": "zap"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate tenants, stabilize server resources, and prevent crashes.", "icon": "shield-check"},
+            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "Automated security suite with AI firewall and proactive malware defense.", "icon": "lock"}
         ],
         "articles": [
             {"title": "Installing Plesk on AlmaLinux 9 in 5 Minutes", "cat": "Installation Guide", "time": "4 min read", "desc": "A step-by-step walkthrough to installing Plesk Web Host Edition on modern Linux servers."},
@@ -368,10 +368,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "Virtualizor License", "price": "$3.50/mo", "url": "virtualizor-license.html", "desc": "Powerful VPS management panel with seamless WHMCS automation.", "icon": "cpu"},
-            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "softaculous-license.html", "desc": "450+ 1-click script auto-installations for cPanel and DirectAdmin.", "icon": "layers"},
-            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "sitepad-license.html", "desc": "1000+ drag-and-drop website templates for your hosting clients.", "icon": "globe"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "Virtualizor License", "price": "$3.50/mo", "url": "/virtualizor-license", "desc": "Powerful VPS management panel with seamless WHMCS automation.", "icon": "cpu"},
+            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "/softaculous-license", "desc": "450+ 1-click script auto-installations for cPanel and DirectAdmin.", "icon": "layers"},
+            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "/sitepad-license", "desc": "1000+ drag-and-drop website templates for your hosting clients.", "icon": "globe"}
         ],
         "articles": [
             {"title": "Setting Up Automated cPanel Provisioning in WHMCS", "cat": "Automation Guide", "time": "5 min read", "desc": "How to connect WHM API tokens to WHMCS for instant package setup upon invoice payment."},
@@ -434,10 +434,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "imunify360-license.html", "desc": "AI firewall, proactive defense, and automatic malware cleanup.", "icon": "lock"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
-            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "jetbackup-license.html", "desc": "Automated incremental backup manager for hosting providers.", "icon": "database"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "AI firewall, proactive defense, and automatic malware cleanup.", "icon": "lock"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
+            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "/jetbackup-license", "desc": "Automated incremental backup manager for hosting providers.", "icon": "database"}
         ],
         "articles": [
             {"title": "Converting AlmaLinux 8/9 to CloudLinux OS", "cat": "Installation", "time": "5 min read", "desc": "How to convert an active cPanel or DirectAdmin server to CloudLinux with zero downtime."},
@@ -496,10 +496,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "whmcs-license.html", "desc": "Complete billing automation and client portal for VPS providers.", "icon": "credit-card"},
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel for your VPS clients.", "icon": "server"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate tenants and stabilize server resources.", "icon": "shield-check"},
-            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "sitepad-license.html", "desc": "1000+ drag-and-drop templates for hosting clients.", "icon": "globe"}
+            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "/whmcs-license", "desc": "Complete billing automation and client portal for VPS providers.", "icon": "credit-card"},
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel for your VPS clients.", "icon": "server"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate tenants and stabilize server resources.", "icon": "shield-check"},
+            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "/sitepad-license", "desc": "1000+ drag-and-drop templates for hosting clients.", "icon": "globe"}
         ],
         "articles": [
             {"title": "How to Install Virtualizor KVM on AlmaLinux 9", "cat": "Installation", "time": "5 min read", "desc": "Step-by-step setup of KVM virtualization, bridge networking, and storage pools."},
@@ -558,10 +558,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "softaculous-license.html", "desc": "450+ 1-click script auto-installations for cPanel.", "icon": "layers"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
-            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "whmcs-license.html", "desc": "Complete billing automation and client portal.", "icon": "credit-card"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "/softaculous-license", "desc": "450+ 1-click script auto-installations for cPanel.", "icon": "layers"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
+            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "/whmcs-license", "desc": "Complete billing automation and client portal.", "icon": "credit-card"}
         ],
         "articles": [
             {"title": "Installing SitePad on cPanel & WHM Servers", "cat": "Installation", "time": "3 min read", "desc": "Enable the SitePad builder icon for all cPanel users in under 3 minutes."},
@@ -620,10 +620,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate reseller accounts and stabilize server resources.", "icon": "shield-check"},
-            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "whmcs-license.html", "desc": "Automate billing, client provisioning, and reseller packages.", "icon": "credit-card"},
-            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "softaculous-license.html", "desc": "450+ 1-click script auto-installations for cPanel.", "icon": "layers"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate reseller accounts and stabilize server resources.", "icon": "shield-check"},
+            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "/whmcs-license", "desc": "Automate billing, client provisioning, and reseller packages.", "icon": "credit-card"},
+            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "/softaculous-license", "desc": "450+ 1-click script auto-installations for cPanel.", "icon": "layers"}
         ],
         "articles": [
             {"title": "Installing and Configuring WHMReseller on WHM", "cat": "Installation", "time": "3 min read", "desc": "Quick guide to deploying WHMReseller and configuring Master Reseller packages."},
@@ -682,10 +682,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Accelerate WordPress with LSCache acceleration.", "icon": "zap"},
-            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "sitepad-license.html", "desc": "1000+ drag-and-drop templates for hosting clients.", "icon": "globe"},
-            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "jetbackup-license.html", "desc": "Automated incremental backup manager for hosting providers.", "icon": "database"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Accelerate WordPress with LSCache acceleration.", "icon": "zap"},
+            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "/sitepad-license", "desc": "1000+ drag-and-drop templates for hosting clients.", "icon": "globe"},
+            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "/jetbackup-license", "desc": "Automated incremental backup manager for hosting providers.", "icon": "database"}
         ],
         "articles": [
             {"title": "Installing Softaculous on cPanel & WHM in 2 Minutes", "cat": "Installation", "time": "2 min read", "desc": "Single command installation to deploy Softaculous across all WHM users."},
@@ -744,10 +744,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate tenants and stabilize server resources.", "icon": "shield-check"},
-            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "imunify360-license.html", "desc": "AI firewall, proactive defense, and automatic malware cleanup.", "icon": "lock"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate tenants and stabilize server resources.", "icon": "shield-check"},
+            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "AI firewall, proactive defense, and automatic malware cleanup.", "icon": "lock"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"}
         ],
         "articles": [
             {"title": "Configuring Wasabi / S3 Storage Destinations in JetBackup 5", "cat": "Configuration", "time": "4 min read", "desc": "Step-by-step setup of cost-effective cloud object storage for incremental backups."},
@@ -806,10 +806,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate tenants, stabilize server resources, and prevent crashes.", "icon": "shield-check"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
-            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "jetbackup-license.html", "desc": "Automated incremental backup manager for hosting providers.", "icon": "database"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate tenants, stabilize server resources, and prevent crashes.", "icon": "shield-check"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
+            {"title": "JetBackup 5", "price": "$1.50/mo", "url": "/jetbackup-license", "desc": "Automated incremental backup manager for hosting providers.", "icon": "database"}
         ],
         "articles": [
             {"title": "Deploying Imunify360 on cPanel & WHM in 3 Minutes", "cat": "Installation", "time": "3 min read", "desc": "One-command deployment and initial firewall tuning guide."},
@@ -868,10 +868,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "softaculous-license.html", "desc": "450+ 1-click script auto-installations.", "icon": "layers"},
-            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "sitepad-license.html", "desc": "1000+ drag-and-drop templates for hosting clients.", "icon": "globe"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
-            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "whmcs-license.html", "desc": "Automate billing, client provisioning, and hosting support.", "icon": "credit-card"}
+            {"title": "Softaculous Auto-Installer", "price": "$1.00/mo", "url": "/softaculous-license", "desc": "450+ 1-click script auto-installations.", "icon": "layers"},
+            {"title": "SitePad Website Builder", "price": "$1.50/mo", "url": "/sitepad-license", "desc": "1000+ drag-and-drop templates for hosting clients.", "icon": "globe"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
+            {"title": "WHMCS License", "price": "$20.00 one-time", "url": "/whmcs-license", "desc": "Automate billing, client provisioning, and hosting support.", "icon": "credit-card"}
         ],
         "articles": [
             {"title": "How to Install Webuzo on AlmaLinux 9 in 5 Minutes", "cat": "Installation Guide", "time": "3 min read", "desc": "Quick deployment guide for installing Webuzo on a fresh VPS."},
@@ -930,10 +930,10 @@ products = [
             }
         ],
         "related": [
-            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "cpanel-license.html", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
-            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "litespeed-license.html", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
-            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "imunify360-license.html", "desc": "AI firewall, proactive defense, and automatic malware cleanup.", "icon": "lock"},
-            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "cloudlinux-license.html", "desc": "Isolate tenants, stabilize server resources, and prevent crashes.", "icon": "shield-check"}
+            {"title": "cPanel & WHM License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "server"},
+            {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Ultra-fast Apache drop-in replacement with LSCache acceleration.", "icon": "zap"},
+            {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "AI firewall, proactive defense, and automatic malware cleanup.", "icon": "lock"},
+            {"title": "CloudLinux OS", "price": "$4.00/mo", "url": "/cloudlinux-license", "desc": "Isolate tenants, stabilize server resources, and prevent crashes.", "icon": "shield-check"}
         ],
         "articles": [
             {"title": "Getting Started with WP Squared on AlmaLinux 9", "cat": "Installation Guide", "time": "4 min read", "desc": "Complete walkthrough of installing WP Squared and launching your first managed WP instance."},
@@ -1178,14 +1178,14 @@ def generate_page(p):
   <title>{p["title"]} — LicenBase</title>
   <meta name="description" content="{p["meta_desc"]}" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://licenbase.com/{p["filename"]}" />
+  <link rel="canonical" href="https://licenbase.com/{p["filename"][:-5]}" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="LicenBase" />
   <meta property="og:title" content="{p["title"]} — LicenBase" />
   <meta property="og:description" content="{p["meta_desc"]}" />
-  <meta property="og:url" content="https://licenbase.com/{p["filename"]}" />
+  <meta property="og:url" content="https://licenbase.com/{p["filename"][:-5]}" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
@@ -1247,7 +1247,7 @@ def generate_page(p):
       <header id="site-header" class="lb-header">
         <div class="lb-header-inner">
           <!-- Logo -->
-          <a href="index.html" class="lb-logo" aria-label="LicenBase home">
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
             <img src="assets/img/logo.png" alt="LicenBase" class="lb-logo-img" />
           </a>
 
@@ -1272,55 +1272,55 @@ def generate_page(p):
               </button>
               <div class="lb-drop-panel">
                                 <div class="lb-mega-tiles">
-                  <a href="cpanel-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>cPanel License</span>
                   </a>
-                  <a href="litespeed-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>LiteSpeed License</span>
                   </a>
-                  <a href="plesk-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>Plesk License</span>
                   </a>
-                  <a href="whmcs-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>WHMCS License</span>
                   </a>
-                  <a href="cloudlinux-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>CloudLinux License</span>
                   </a>
-                  <a href="virtualizor-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>Virtualizor License</span>
                   </a>
-                  <a href="sitepad-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>SitePad License</span>
                   </a>
-                  <a href="whmreseller-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>WHMReseller License</span>
                   </a>
-                  <a href="softaculous-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>Softaculous License</span>
                   </a>
-                  <a href="jetbackup-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>JetBackup License</span>
                   </a>
-                  <a href="imunify360-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain" />
                     <span>Imunify360 License</span>
                   </a>
-                  <a href="webuzo-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain" />
                     <span>Webuzo Control Panel</span>
                   </a>
-                  <a href="wp-squared-license.html" class="lb-mega-tile flex items-center gap-2.5">
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain" />
                     <span>WP Squared</span>
                   </a>
@@ -1328,13 +1328,13 @@ def generate_page(p):
               </div>
             </div>
 
-            <a href="deals.html" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
           </nav>
 
           <!-- Right actions -->
           <div class="lb-header-actions">
             <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-header-signin">Dashboard</a>
-            <a href="products.html" class="lb-btn lb-btn--primary lb-header-cta">Get Started</a>
+            <a href="/products" class="lb-btn lb-btn--primary lb-header-cta">Get Started</a>
             <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
               <i data-lucide="menu" class="h-6 w-6"></i>
             </button>
@@ -1351,9 +1351,9 @@ def generate_page(p):
         <!-- Copy -->
         <div class="space-y-6">
           <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-semibold text-gray-500">
-            <a href="index.html" class="transition hover:text-brand">Home</a>
+            <a href="/" class="transition hover:text-brand">Home</a>
             <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
-            <a href="index.html#categories" class="transition hover:text-brand">Hosting Licenses</a>
+            <a href="/#categories" class="transition hover:text-brand">Hosting Licenses</a>
             <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
             <span class="text-brand font-bold">{p["slug"].upper()}</span>
           </nav>
@@ -1736,8 +1736,8 @@ def generate_page(p):
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
         <!-- Col 1: Brand -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="h-9 w-auto" />
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" />
           </a>
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
@@ -1752,11 +1752,11 @@ def generate_page(p):
         <div class="space-y-3">
           <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
           <ul class="space-y-2 text-xs">
-            <li><a href="cpanel-license.html" class="transition hover:text-brand">cPanel & WHM</a></li>
-            <li><a href="litespeed-license.html" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
-            <li><a href="plesk-license.html" class="transition hover:text-brand">Plesk Control Panel</a></li>
-            <li><a href="cloudlinux-license.html" class="transition hover:text-brand">CloudLinux OS</a></li>
-            <li><a href="whmcs-license.html" class="transition hover:text-brand">WHMCS Billing</a></li>
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel & WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
           </ul>
         </div>
 
@@ -1764,11 +1764,11 @@ def generate_page(p):
         <div class="space-y-3">
           <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels & Utilities</h3>
           <ul class="space-y-2 text-xs">
-            <li><a href="virtualizor-license.html" class="transition hover:text-brand">Virtualizor VPS</a></li>
-            <li><a href="imunify360-license.html" class="transition hover:text-brand">Imunify360 Security</a></li>
-            <li><a href="jetbackup-license.html" class="transition hover:text-brand">JetBackup 5</a></li>
-            <li><a href="softaculous-license.html" class="transition hover:text-brand">Softaculous</a></li>
-            <li><a href="sitepad-license.html" class="transition hover:text-brand">SitePad Builder</a></li>
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
           </ul>
         </div>
 
@@ -1776,10 +1776,10 @@ def generate_page(p):
         <div class="space-y-3">
           <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal & Policies</h3>
           <ul class="space-y-2 text-xs">
-            <li><a href="terms-of-service.html" class="transition hover:text-brand">Terms of Service</a></li>
-            <li><a href="privacy-policy.html" class="transition hover:text-brand">Privacy Policy</a></li>
-            <li><a href="refund-policy.html" class="transition hover:text-brand">Refund Policy</a></li>
-            <li><a href="license-policy.html" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
             <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
           </ul>
         </div>
@@ -1797,7 +1797,7 @@ def generate_page(p):
     <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 backdrop-blur-sm"></div>
     <div class="relative ml-auto flex h-full w-full max-w-xs flex-col bg-white shadow-2xl">
       <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
-        <a href="index.html" class="lb-logo" aria-label="LicenBase home">
+        <a href="/" class="lb-logo" aria-label="LicenBase home">
           <img src="assets/img/logo.png" alt="LicenBase" class="h-7 w-auto" />
         </a>
         <button id="menu-close" type="button" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 hover:bg-mist" aria-label="Close menu">
@@ -1807,25 +1807,25 @@ def generate_page(p):
       <nav class="flex-1 overflow-y-auto px-4 py-4 text-sm" aria-label="Mobile Navigation">
         <p class="px-3 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
         <ul class="mt-2 space-y-1">
-          <li><a href="products.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-bold text-brand hover:bg-mist">📦 All Products</a></li>
-          <li><a href="deals.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-bold text-brand hover:bg-mist">🔥 Combo Deals</a></li>
-          <li><a href="cpanel-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">cPanel & WHM</a></li>
-          <li><a href="litespeed-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">LiteSpeed Web Server</a></li>
-          <li><a href="plesk-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Plesk Control Panel</a></li>
-          <li><a href="whmcs-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">WHMCS License</a></li>
-          <li><a href="cloudlinux-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">CloudLinux OS</a></li>
-          <li><a href="virtualizor-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Virtualizor</a></li>
-          <li><a href="imunify360-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Imunify360</a></li>
-          <li><a href="jetbackup-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">JetBackup</a></li>
-          <li><a href="softaculous-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Softaculous</a></li>
-          <li><a href="sitepad-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">SitePad</a></li>
-          <li><a href="webuzo-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Webuzo Panel</a></li>
-          <li><a href="wp-squared-license.html" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">WP Squared</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2 font-bold text-brand hover:bg-mist">📦 All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2 font-bold text-brand hover:bg-mist">🔥 Combo Deals</a></li>
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">SitePad</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2 font-medium text-navy hover:bg-mist">WP Squared</a></li>
         </ul>
         <div class="mt-4 border-t border-gray-100 pt-4">
           <ul class="space-y-1">
             <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy hover:bg-mist">Dashboard</a></li>
-            <li><a href="products.html" class="lb-mobile-link block rounded-xl bg-brand px-3 py-2.5 text-center font-semibold text-white hover:bg-brandDeep">Get Started</a></li>
+            <li><a href="/products" class="lb-mobile-link block rounded-xl bg-brand px-3 py-2.5 text-center font-semibold text-white hover:bg-brandDeep">Get Started</a></li>
           </ul>
         </div>
       </nav>

@@ -5,7 +5,7 @@ import re
 old_col1 = '''        <!-- Col 1: Brand -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="h-9 w-auto" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" />
           </a>
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
@@ -20,7 +20,7 @@ old_col1 = '''        <!-- Col 1: Brand -->
 new_col1 = '''        <!-- Col 1: Brand -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="inline-block" aria-label="LicenBase home">
-            <img src="assets/img/logo.png" alt="LicenBase" class="h-9 w-auto" />
+            <img src="assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" />
           </a>
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.

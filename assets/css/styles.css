@@ -329,6 +329,13 @@ footer[id] {
   object-fit: contain;
 }
 
+.lb-footer-logo {
+  height: 4.5rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .lb-nav {
   display: none;
   align-items: center;
