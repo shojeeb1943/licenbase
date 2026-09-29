@@ -78,8 +78,11 @@ RewriteRule ^([^/]+)$ $1.html [L]
   <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|webp|avif|js|css|swf|svg|woff|woff2|ttf)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
-  <FilesMatch "\.(html|htm|php)$">
+  # HTML: browsers always revalidate; CDN (Cloudflare) may cache 1h. Purge CDN cache after each deploy.
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=0, s-maxage=3600, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.php$">
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
   </FilesMatch>
 </IfModule>
