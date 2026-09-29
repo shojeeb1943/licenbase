@@ -178,12 +178,14 @@
   function openDrawer() {
     mobileMenu.classList.add("lb-open");
     mobileMenu.setAttribute("aria-hidden", "false");
+    mobileMenu.inert = false;
     document.body.style.overflow = "hidden";
     menuCloseBtn.focus();
   }
   function closeDrawer() {
     mobileMenu.classList.remove("lb-open");
     mobileMenu.setAttribute("aria-hidden", "true");
+    mobileMenu.inert = true;
     document.body.style.overflow = "";
   }
   menuOpenBtn.addEventListener("click", openDrawer);

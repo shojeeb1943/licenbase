@@ -1250,7 +1250,7 @@ def generate_page(p):
             <p class="mt-2 text-xs leading-relaxed text-gray-500">{rel['desc']}</p>
           </div>
           <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-gray-400">IP-Bound License</span>
+            <span class="text-xs font-semibold text-gray-500">IP-Bound License</span>
             <a href="{rel['url']}" class="inline-flex items-center gap-1 text-xs font-bold text-brand hover:underline">
               View Details <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
             </a>
@@ -1481,6 +1481,8 @@ def generate_page(p):
     </div>
   </div>
 
+  <main id="main">
+
   <!-- ============ 02 · HERO SECTION ============ -->
   <section class="lb-hero relative overflow-hidden bg-mist border-b border-gray-200">
     <div class="lb-shell py-14 lg:py-20">
@@ -1542,7 +1544,7 @@ def generate_page(p):
                 </span>
                 <div>
                   <h2 class="font-display text-lg font-bold text-navy">{p["title"].split('(')[0]}</h2>
-                  <p class="text-xs text-gray-400">Verified IP-Bound Authentication</p>
+                  <p class="text-xs text-gray-500">Verified IP-Bound Authentication</p>
                 </div>
               </div>
               <span class="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-accentDeep border border-emerald-200">
@@ -1737,9 +1739,9 @@ def generate_page(p):
             <span class="h-3 w-3 rounded-full bg-red-500"></span>
             <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
             <span class="h-3 w-3 rounded-full bg-green-500"></span>
-            <span class="ml-2 font-mono text-xs text-gray-400">root@server:~#</span>
+            <span class="ml-2 font-mono text-xs text-gray-500">root@server:~#</span>
           </div>
-          <span class="text-xs font-semibold text-gray-400">LicenBase Automated Deployment</span>
+          <span class="text-xs font-semibold text-gray-500">LicenBase Automated Deployment</span>
         </div>
 
         <!-- Install Command -->
@@ -1877,6 +1879,8 @@ def generate_page(p):
   </section>
 
   <!-- ============ 10 · FOOTER ============ -->
+  </main>
+
   <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
     <div class="lb-shell">
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
@@ -1931,7 +1935,7 @@ def generate_page(p):
         </div>
       </div>
 
-      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-400 sm:flex-row">
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
         <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
         <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted & Non-Refundable Digital Provisioning</p>
       </div>
