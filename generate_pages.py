@@ -2,6 +2,16 @@ import html as _html
 import json
 import os
 
+GTM_ID = "GTM-XXXXXXX"  # TODO: replace with the real Google Tag Manager container ID, then re-run generate_pages.py and seo_apply.py
+GTM_HEAD = """  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','""" + GTM_ID + """');</script>
+  <!-- End Google Tag Manager -->
+"""
+GTM_BODY = """  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=""" + GTM_ID + """" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+"""
+
 products = [
     {
         "filename": "cpanel-license.html",
@@ -1297,7 +1307,7 @@ def generate_page(p):
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{GTM_HEAD}  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{p["seo_title"]}</title>
   <meta name="description" content="{p["seo_desc"]}" />
   <meta name="robots" content="index, follow" />
@@ -1368,7 +1378,7 @@ def generate_page(p):
 </head>
 
 <body class="bg-white font-sans text-navy antialiased">
-
+{GTM_BODY}
   <!-- ============ 01 · TOP BAR & FIXED HEADER ============ -->
   <div class="lb-topbar">
     <div class="lb-shell">

@@ -33,6 +33,13 @@ def meta(s, prop):
     return re.search(rf'<meta (?:property|name)="{prop}" content="([^"]*)"', s).group(1)
 
 
+for f in list(PAGES) + ["404.html"]:  # GTM on every hand-edited page
+    s = open(f, encoding="utf-8", newline="").read()
+    if "googletagmanager.com/gtm.js" not in s:
+        s = s.replace('  <meta charset="UTF-8" />\n', '  <meta charset="UTF-8" />\n' + ns["GTM_HEAD"], 1)
+        s = re.sub(r"(<body[^>]*>\n)", lambda m: m.group(1) + ns["GTM_BODY"], s, count=1)
+        open(f, "w", encoding="utf-8", newline="").write(s)
+        print("gtm", f)
 for f, label in PAGES.items():
     s = open(f, encoding="utf-8", newline="").read()
     if "application/ld+json" in s:
@@ -56,11 +63,11 @@ for f, label in PAGES.items():
             for i, p in enumerate(products, 1)]})
 
     tags = f'  <meta property="og:image" content="{IMG}" />\n  <meta property="og:locale" content="en_US" />\n'
-    s = re.sub(r'(<meta property="og:url"[^>]*/>\n)', lambda m: m.group(1) + tags, s, 1)
+    s = re.sub(r'(<meta property="og:url"[^>]*/>\n)', lambda m: m.group(1) + tags, s, count=1)
     tw = ""
     if 'name="twitter:card"' in s:
         s = s.replace('content="summary" />', 'content="summary_large_image" />', 1)
-        s = re.sub(r'(<meta name="twitter:description"[^>]*/>\n)', lambda m: m.group(1) + f'  <meta name="twitter:image" content="{IMG}" />\n', s, 1)
+        s = re.sub(r'(<meta name="twitter:description"[^>]*/>\n)', lambda m: m.group(1) + f'  <meta name="twitter:image" content="{IMG}" />\n', s, count=1)
     else:
         t, d = meta(s, "og:title"), meta(s, "og:description")
         tw = (f'\n  <!-- Twitter -->\n  <meta name="twitter:card" content="summary_large_image" />\n  <meta name="twitter:title" content="{t}" />\n'

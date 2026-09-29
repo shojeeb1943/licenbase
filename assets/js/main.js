@@ -317,6 +317,14 @@
     }, 2600);
   }
 
+  /* ---------- GTM: checkout link clicks ---------- */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="dashboard.licenbase.com/cart.php"]');
+    if (!a) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "begin_checkout_click", link_url: a.href, link_text: a.textContent.trim().slice(0, 60) });
+  });
+
   /* ---------- Newsletter (Web3Forms) ---------- */
   var newsForm = document.getElementById("newsletter-form");
   var newsEmail = document.getElementById("newsletter-email");
@@ -352,6 +360,8 @@
           submitBtn.disabled = false;
           if (data.success) {
             newsStatus.textContent = "You're subscribed. Thanks!";
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: "newsletter_signup" });
             newsForm.reset();
           } else {
             newsStatus.classList.add("text-red-500");
