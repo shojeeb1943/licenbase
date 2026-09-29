@@ -4,6 +4,12 @@ products = [
     {
         "filename": "cpanel-license.html",
         "slug": "cpanel",
+        "name": "cPanel & WHM",
+        "seo_title": "Cheap cPanel License – VPS &amp; Dedicated from $4/mo | LicenBase",
+        "seo_desc": "Reliable cPanel &amp; WHM license for VPS ($4/mo) and dedicated servers ($8/mo). Cheap monthly cPanel license key, unlimited accounts, instant IP activation.",
+        "seo_h2": "Reliable, Cheap cPanel License for VPS, Dedicated &amp; Shared Hosting Servers",
+        "seo_p1": "Looking for a cheap cPanel license you can depend on? LicenBase sells genuine, IP-bound cPanel &amp; WHM licenses from $4.00/mo for VPS and $8.00/mo for dedicated servers. There are no per-account fees, so one license covers unlimited cPanel accounts.",
+        "seo_p2": "Hosting providers use these licenses to run shared hosting and reseller plans on KVM, Proxmox, cloud VPS and bare-metal servers. Activation is a single command, updates come from official cPanel repositories, and you can change your server IP for free.",
         "title": "cPanel & WHM License (VPS & Dedicated)",
         "meta_desc": "Buy genuine cPanel & WHM licenses for VPS ($4.00/mo) and Dedicated Servers ($8.00/mo) with instant activation, unlimited accounts, free SSL, and single-command install.",
         "badge": "Industry Standard Web Hosting Control Panel",
@@ -93,6 +99,12 @@ products = [
     {
         "filename": "litespeed-license.html",
         "slug": "litespeed",
+        "name": "LiteSpeed",
+        "seo_title": "Cheap LiteSpeed License – 2, 4, 8 Core from $4/mo | LicenBase",
+        "seo_desc": "Reliable LiteSpeed Web Server license from $4/mo. Cheap LiteSpeed for VPS, dedicated and shared hosting servers, with LSCache, HTTP/3 and instant activation.",
+        "seo_h2": "Reliable, Cheap LiteSpeed License for VPS, Dedicated &amp; Shared Hosting",
+        "seo_p1": "A LiteSpeed Web Server license replaces Apache with a faster, drop-in web server, and LicenBase prices it from $4.00/mo for 2 cores up to $11.50/mo for the X Core plan. Pick the core count that matches your VPS or dedicated server.",
+        "seo_p2": "LiteSpeed works with cPanel, Plesk and DirectAdmin, so shared hosting servers can use LSCache for WordPress and HTTP/3 without changing their stack. Licenses activate instantly after checkout and are billed monthly.",
         "title": "LiteSpeed Web Server License (2, 4, 8 & X Core)",
         "meta_desc": "Get genuine LiteSpeed Web Server licenses starting at $4.00/mo. Drop-in Apache replacement, LSCache acceleration, HTTP/3, and instant automated activation.",
         "badge": "Ultra-High Performance Web Server",
@@ -216,6 +228,12 @@ products = [
     {
         "filename": "plesk-license.html",
         "slug": "plesk",
+        "name": "Plesk",
+        "seo_title": "Cheap Plesk License, VPS from $2.50/mo | LicenBase",
+        "seo_desc": "Reliable Plesk Web Host Edition license: VPS $2.50/mo, dedicated $6.50/mo. Cheap Plesk license key with unlimited domains and instant IP activation.",
+        "seo_h2": "Reliable, Cheap Plesk License for VPS &amp; Dedicated Servers",
+        "seo_p1": "LicenBase offers genuine Plesk Web Host Edition licenses at $2.50/mo for VPS and $6.50/mo for dedicated servers. It is a low-cost way to run a full hosting control panel with unlimited domains and the WordPress Toolkit.",
+        "seo_p2": "Whether you host client sites on shared plans or manage your own WordPress portfolio, the license activates on your server IP within moments of ordering. Billing is monthly, so you can scale up or down as your servers change.",
         "title": "Plesk Control Panel License (VPS & Dedicated)",
         "meta_desc": "Get genuine Plesk Web Host Edition licenses for VPS ($2.50/mo) and Dedicated ($6.50/mo). Unlimited domains, WordPress Toolkit, and instant IP activation.",
         "badge": "Leading Multi-Cloud Control Panel",
@@ -297,6 +315,12 @@ products = [
     {
         "filename": "whmcs-license.html",
         "slug": "whmcs",
+        "name": "WHMCS",
+        "seo_title": "Cheap WHMCS License – Owned $20 One-Time or $4/mo | LicenBase",
+        "seo_desc": "Reliable WHMCS license: owned one-time for $20 or monthly for $4. Cheap WHMCS license for hosting billing and automation with instant delivery.",
+        "seo_h2": "Reliable, Cheap WHMCS License for Hosting Providers",
+        "seo_p1": "WHMCS runs billing, provisioning and support for web hosts. LicenBase sells it as a one-time owned license for $20.00 or a monthly license at $4.00/mo, so you can choose the cheaper option for the way you operate.",
+        "seo_p2": "It connects to cPanel, Plesk, Virtualizor and other panels to create accounts as soon as an invoice is paid. Delivery is digital and immediate, which makes it a practical fit for new hosting startups and resellers.",
         "title": "WHMCS License (Owned One-Time & Monthly)",
         "meta_desc": "Buy genuine WHMCS licenses starting at $20.00 one-time. Complete hosting automation, unlimited clients, multi-currency billing, and instant digital delivery.",
         "badge": "Industry Leading Web Hosting Automation",
@@ -382,6 +406,12 @@ products = [
     {
         "filename": "cloudlinux-license.html",
         "slug": "cloudlinux",
+        "name": "CloudLinux OS",
+        "seo_title": "Cheap CloudLinux License – Shared OS from $4/mo | LicenBase",
+        "seo_desc": "Reliable CloudLinux OS license for shared hosting servers at $4/mo. Cheap CloudLinux with CageFS, LVE Manager and instant activation.",
+        "seo_h2": "Reliable, Cheap CloudLinux License for Shared Hosting Servers",
+        "seo_p1": "CloudLinux OS is built for multi-tenant hosting. Our Shared license costs $4.00/mo and gives every account its own resource limits through LVE Manager, so one noisy site cannot slow down the rest of the server.",
+        "seo_p2": "CageFS keeps user directories isolated and PHP Selector lets customers pick their PHP version. It works on cPanel and other supported panels, and you can convert an existing AlmaLinux server without reinstalling.",
         "title": "CloudLinux OS License",
         "meta_desc": "Buy genuine CloudLinux OS licenses for $4.00/mo. Isolate tenants with CageFS, control CPU/RAM with LVE Manager, and secure multi-tenant hosting servers.",
         "badge": "The #1 Operating System for Web Hosting",
@@ -448,6 +478,12 @@ products = [
     {
         "filename": "virtualizor-license.html",
         "slug": "virtualizor",
+        "name": "Virtualizor",
+        "seo_title": "Cheap Virtualizor License – VPS Panel $3.50/mo | LicenBase",
+        "seo_desc": "Reliable Virtualizor license for VPS hosting at $3.50/mo. Cheap Virtualizor node license for KVM, OpenVZ and LXC with WHMCS integration.",
+        "seo_h2": "Reliable, Cheap Virtualizor License for VPS Providers",
+        "seo_p1": "If you sell VPS plans, a Virtualizor node license lets you manage KVM, OpenVZ and LXC guests from one panel. LicenBase provides it for $3.50/mo per node with instant activation on your host server.",
+        "seo_p2": "OS templates, IP pools and the WHMCS module are included in the panel, so orders can turn into running VPS instances automatically. It is a low-cost option for growing VPS hosting businesses.",
         "title": "Virtualizor VPS Panel License",
         "meta_desc": "Buy genuine Virtualizor licenses for $3.50/mo. Manage KVM, OpenVZ, and LXC virtualization with automated OS templates, WHMCS integration, and instant activation.",
         "badge": "Enterprise Hypervisor & Cloud VPS Manager",
@@ -510,6 +546,12 @@ products = [
     {
         "filename": "sitepad-license.html",
         "slug": "sitepad",
+        "name": "SitePad",
+        "seo_title": "Cheap SitePad License – Website Builder $1.50/mo | LicenBase",
+        "seo_desc": "Reliable SitePad website builder license for $1.50/mo. Cheap SitePad for cPanel and Plesk hosting servers with 1,000+ themes and instant activation.",
+        "seo_h2": "Reliable, Cheap SitePad License for Shared Hosting Servers",
+        "seo_p1": "SitePad gives your hosting customers a drag-and-drop website builder with over 1,000 responsive templates. A server license costs $1.50/mo at LicenBase and activates as soon as you order.",
+        "seo_p2": "It integrates with cPanel and Plesk, so shared hosting clients can launch a site without a developer. Offering a builder is an easy way to add value to entry-level hosting plans.",
         "title": "SitePad Website Builder License",
         "meta_desc": "Buy genuine SitePad Website Builder licenses for $1.50/mo. 1,000+ responsive themes, drag & drop editor, cPanel/Plesk integration, and instant activation.",
         "badge": "No-Code Website Builder for Hosting Providers",
@@ -572,6 +614,12 @@ products = [
     {
         "filename": "whmreseller-license.html",
         "slug": "whmreseller",
+        "name": "WHMReseller",
+        "seo_title": "WHMReseller License – Reseller Plugin $1.50/mo | LicenBase",
+        "seo_desc": "Reliable WHMReseller license for $1.50/mo. Cheap reseller plugin for cPanel &amp; WHM with Master and Alpha reseller tiers and instant activation.",
+        "seo_h2": "Reliable, Cheap WHMReseller License for cPanel Hosting",
+        "seo_p1": "WHMReseller adds multi-level Master and Alpha reseller tiers to cPanel &amp; WHM. LicenBase offers the Pro license for $1.50/mo, activated automatically on your server IP.",
+        "seo_p2": "It suits providers who sell reseller hosting on VPS or dedicated servers and want their own resellers to manage sub-accounts. Pair it with a cPanel license from us to cover the full stack.",
         "title": "WHMReseller License",
         "meta_desc": "Buy genuine WHMReseller licenses for $1.50/mo. Enable multi-level Master and Alpha reseller tiers in cPanel & WHM with instant automated activation.",
         "badge": "Multi-Level Master & Alpha Reseller Plugin for WHM",
@@ -634,6 +682,12 @@ products = [
     {
         "filename": "softaculous-license.html",
         "slug": "softaculous",
+        "name": "Softaculous",
+        "seo_title": "Cheap Softaculous License – Premium $1/mo | LicenBase",
+        "seo_desc": "Reliable Softaculous Premium license for $1/mo. Cheap Softaculous for shared hosting with 450+ one-click installers and instant activation.",
+        "seo_h2": "Reliable, Cheap Softaculous License for Shared Hosting Servers",
+        "seo_p1": "Softaculous Premium installs WordPress and 450+ other scripts in one click, and LicenBase offers it for $1.00/mo. It is one of the most requested add-ons for shared hosting servers.",
+        "seo_p2": "The license includes WordPress staging and automated backups for your clients, works with cPanel and DirectAdmin, and activates instantly on your server IP.",
         "title": "Softaculous Auto-Installer License",
         "meta_desc": "Buy genuine Softaculous Premium licenses for $1.00/mo. 450+ 1-click script auto-installations, WordPress staging, automated backups, and instant activation.",
         "badge": "The Premier 1-Click Application Auto-Installer",
@@ -696,6 +750,12 @@ products = [
     {
         "filename": "jetbackup-license.html",
         "slug": "jetbackup",
+        "name": "JetBackup 5",
+        "seo_title": "Cheap JetBackup License – Backups $1.50/mo | LicenBase",
+        "seo_desc": "Reliable JetBackup 5 license for $1.50/mo. Cheap incremental server backups to S3, Wasabi and FTP for VPS, dedicated and shared hosting servers.",
+        "seo_h2": "Reliable, Cheap JetBackup License for Hosting Servers",
+        "seo_p1": "JetBackup 5 automates incremental backups for cPanel and other hosting servers, and LicenBase offers the server license for $1.50/mo. Backups can go to S3-compatible storage, Wasabi or FTP.",
+        "seo_p2": "Customers can restore their own files, databases and emails from the panel, which cuts down support tickets on shared hosting. Activation is instant on the server IP you register.",
         "title": "JetBackup 5 License",
         "meta_desc": "Buy genuine JetBackup 5 licenses for $1.50/mo. Enterprise automated incremental backups to S3, Wasabi, and FTP with self-service client restore.",
         "badge": "Enterprise Server Backup & Disaster Recovery",
@@ -758,6 +818,12 @@ products = [
     {
         "filename": "imunify360-license.html",
         "slug": "imunify360",
+        "name": "Imunify360",
+        "seo_title": "Cheap Imunify360 License – Unlimited $1.50/mo | LicenBase",
+        "seo_desc": "Reliable Imunify360 license, Unlimited plan at $1.50/mo. Cheap server security for shared hosting: malware scanner, proactive defense and firewall.",
+        "seo_h2": "Reliable, Cheap Imunify360 License for Shared &amp; VPS Hosting Security",
+        "seo_p1": "Imunify360 protects hosting servers with a firewall, malware scanner and cleanup, and proactive PHP defense. LicenBase offers the Unlimited plan for $1.50/mo with instant activation.",
+        "seo_p2": "It runs on cPanel, Plesk and DirectAdmin servers and pairs well with CloudLinux. Shared hosting providers use it to catch infected accounts before they affect other customers.",
         "title": "Imunify360 Security Suite License",
         "meta_desc": "Buy genuine Imunify360 licenses for $1.50/mo. Multi-layered AI security, automated malware scanner & cleanup, proactive PHP defense, and instant activation.",
         "badge": "Complete Multi-Layered Linux Web Server Security",
@@ -820,6 +886,12 @@ products = [
     {
         "filename": "webuzo-license.html",
         "slug": "webuzo",
+        "name": "Webuzo",
+        "seo_title": "Cheap Webuzo License – Control Panel $4/mo | LicenBase",
+        "seo_desc": "Reliable Webuzo control panel license for $4/mo. Cheap Webuzo for VPS and dedicated servers with one-click apps and instant activation.",
+        "seo_h2": "Reliable, Cheap Webuzo License for VPS &amp; Dedicated Servers",
+        "seo_p1": "Webuzo is a multi-user hosting control panel with one-click app installs. LicenBase offers the Premium license for $4.00/mo and activates it right after checkout.",
+        "seo_p2": "It supports Apache, Nginx and LiteSpeed, making it a lightweight alternative for VPS and dedicated servers where you want a simple panel to host client sites.",
         "title": "Webuzo Control Panel License",
         "meta_desc": "Buy genuine Webuzo Control Panel licenses for $4.00/mo. Multi-user hosting control panel, Apache/Nginx/LiteSpeed support, 1-click apps, and instant activation.",
         "badge": "Modern Multi-User Cloud Web Hosting Control Panel",
@@ -882,6 +954,12 @@ products = [
     {
         "filename": "wp-squared-license.html",
         "slug": "wpsquared",
+        "name": "WP Squared",
+        "seo_title": "Cheap WP Squared License – WordPress Hosting $4/mo | LicenBase",
+        "seo_desc": "Reliable WP Squared license for $4/mo. Cheap WordPress hosting platform from cPanel with isolated tenants, WP-CLI and instant IP activation.",
+        "seo_h2": "Reliable, Cheap WP Squared License for WordPress Hosting",
+        "seo_p1": "WP Squared is the WordPress-focused hosting platform built by cPanel. LicenBase offers the Enterprise license for $4.00/mo, activated instantly on your server IP.",
+        "seo_p2": "Each site is isolated, WP-CLI is built in, and management is centered on WordPress, making it a fit for VPS and dedicated servers that host only WordPress sites.",
         "title": "WP Squared (WordPress Hosting Platform by cPanel)",
         "meta_desc": "Buy genuine WP Squared licenses for $4.00/mo. Native WordPress hosting control panel engineered by cPanel, isolated tenants, WP-CLI, and instant IP activation.",
         "badge": "Turnkey Enterprise WordPress Hosting Platform by cPanel",
@@ -1175,22 +1253,22 @@ def generate_page(p):
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{p["title"]} — LicenBase</title>
-  <meta name="description" content="{p["meta_desc"]}" />
+  <title>{p["seo_title"]}</title>
+  <meta name="description" content="{p["seo_desc"]}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://licenbase.com/{p["filename"][:-5]}" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="LicenBase" />
-  <meta property="og:title" content="{p["title"]} — LicenBase" />
-  <meta property="og:description" content="{p["meta_desc"]}" />
+  <meta property="og:title" content="{p["seo_title"]}" />
+  <meta property="og:description" content="{p["seo_desc"]}" />
   <meta property="og:url" content="https://licenbase.com/{p["filename"][:-5]}" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{p["title"]} — LicenBase" />
-  <meta name="twitter:description" content="{p["meta_desc"]}" />
+  <meta name="twitter:title" content="{p["seo_title"]}" />
+  <meta name="twitter:description" content="{p["seo_desc"]}" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?v=2" />
@@ -1355,7 +1433,7 @@ def generate_page(p):
             <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
             <a href="/#categories" class="transition hover:text-brand">Hosting Licenses</a>
             <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
-            <span class="text-brand font-bold">{p["slug"].upper()}</span>
+            <span class="text-brand font-bold">{p["name"]}</span>
           </nav>
 
           <div class="inline-flex items-center gap-2.5 rounded-full bg-brandSoft px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-brand">
@@ -1447,7 +1525,7 @@ def generate_page(p):
       <div class="text-center max-w-3xl mx-auto">
         <span class="lb-eyebrow">Affordable Wholesale Pricing</span>
         <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-          Choose Your {p["slug"].upper()} License Tier
+          Choose Your {p["name"]} License Tier
         </h2>
         <p class="mt-3 text-base text-gray-500">
           Transparent pricing with zero hidden fees. Instant automated provisioning right after checkout.
@@ -1467,13 +1545,22 @@ def generate_page(p):
     </div>
   </section>
 
+  <!-- ============ 03b · SEO COPY ============ -->
+  <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+    <div class="lb-shell max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">{p["seo_h2"]}</h2>
+      <p class="mt-4 text-base leading-relaxed text-gray-600">{p["seo_p1"]}</p>
+      <p class="mt-3 text-base leading-relaxed text-gray-600">{p["seo_p2"]}</p>
+    </div>
+  </section>
+
   <!-- ============ 04 · WHY CHOOSE US ============ -->
   <section class="py-16 lg:py-24 bg-mist border-b border-gray-200">
     <div class="lb-shell">
       <div class="text-center max-w-3xl mx-auto">
         <span class="lb-eyebrow">Enterprise Reliability</span>
         <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-          Why Thousands of Sysadmins Trust LicenBase
+          Why Hosting Providers Choose LicenBase
         </h2>
         <p class="mt-3 text-base text-gray-500">
           We combine wholesale pricing with enterprise-grade authentication uptime and dedicated support.
@@ -1639,7 +1726,7 @@ def generate_page(p):
             Frequently Asked Questions
           </h2>
           <p class="mt-3 text-base text-gray-500">
-            Quick answers about purchasing and managing your {p["slug"].upper()} license.
+            Quick answers about purchasing and managing your {p["name"]} license.
           </p>
         </div>
 
@@ -1650,7 +1737,7 @@ def generate_page(p):
         <aside class="lb-faq-support" aria-label="Support options">
           <span class="lb-faq-support-icon"><i data-lucide="message-square-text" class="h-6 w-6" aria-hidden="true"></i></span>
           <div class="lb-faq-support-copy">
-            <h3 class="font-display text-lg font-bold text-navy">Still have questions about {p["slug"].upper()}?</h3>
+            <h3 class="font-display text-lg font-bold text-navy">Still have questions about {p["name"]}?</h3>
             <p class="mt-1 text-sm text-gray-500">Our senior server engineering support team is ready to assist you.</p>
           </div>
           <div class="lb-faq-support-actions">
@@ -1671,7 +1758,7 @@ def generate_page(p):
           Complementary Hosting Licenses
         </h2>
         <p class="mt-3 text-base text-gray-500">
-          Pair your {p["slug"].upper()} installation with industry-standard security, performance, and automation tools.
+          Pair your {p["name"]} installation with industry-standard security, performance, and automation tools.
         </p>
       </div>
 
@@ -1707,7 +1794,7 @@ def generate_page(p):
         <div class="lb-conversion-newsletter">
           <div class="lb-conversion-copy">
             <span class="lb-conversion-mail"><i data-lucide="zap" class="h-7 w-7"></i></span>
-            <h2 class="lb-conversion-title">Ready to activate your <span>{p["slug"].upper()} license?</span></h2>
+            <h2 class="lb-conversion-title">Ready to activate your <span>{p["name"]} license?</span></h2>
             <p class="lb-conversion-description">
               Join thousands of web hosts, system administrators, and digital agencies who trust LicenBase for their licensing infrastructure.
             </p>
