@@ -2,6 +2,9 @@
 module.exports = {
   content: [
     "./*.html",
+    "./blog/*.html",
+    "./blog_posts.py",
+    "./generate_blog.py",
     "./assets/js/**/*.js",
     "./generate_pages.py"
   ],

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Linux Server cPanel Installation &amp; IP Activation Flowchart</title>
+  <desc id="d">Six sequential phases from clean OS setup and hostname configuration to running the installer and IP license verification.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Step 1 -->
+  <rect x="40" y="50" width="260" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="4" rx="2" fill="#2563EB"/>
+  <circle cx="70" cy="85" r="14" fill="#EFF6FF"/>
+  <text x="70" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8" text-anchor="middle">1</text>
+  <text x="95" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Clean Linux OS</text>
+  <text x="55" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">AlmaLinux 8/9, Rocky, Ubuntu</text>
+  <text x="55" y="148" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Fresh install, no prior web server</text>
+  <text x="55" y="171" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981">Static Public IPv4 ready</text>
+
+  <!-- Step 2 -->
+  <rect x="350" y="50" width="260" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="4" rx="2" fill="#2563EB"/>
+  <circle cx="380" cy="85" r="14" fill="#EFF6FF"/>
+  <text x="380" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8" text-anchor="middle">2</text>
+  <text x="405" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">FQDN Hostname</text>
+  <text x="365" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">hostnamectl set-hostname</text>
+  <text x="365" y="148" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Ensure DNS A record resolves</text>
+  <text x="365" y="171" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981">Avoid localhost / base domain</text>
+
+  <!-- Step 3 -->
+  <rect x="660" y="50" width="260" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="4" rx="2" fill="#2563EB"/>
+  <circle cx="690" cy="85" r="14" fill="#EFF6FF"/>
+  <text x="690" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8" text-anchor="middle">3</text>
+  <text x="715" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Network &amp; Perl</text>
+  <text x="675" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">dnf/apt update -y</text>
+  <text x="675" y="148" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Install perl, curl, screen/tmux</text>
+  <text x="675" y="171" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981">Disable NetworkManager if RHEL</text>
+
+  <!-- Step 4 -->
+  <rect x="40" y="230" width="260" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="230" width="260" height="4" rx="2" fill="#10B981"/>
+  <circle cx="70" cy="265" r="14" fill="#ECFDF5"/>
+  <text x="70" y="270" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">4</text>
+  <text x="95" y="270" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Run Installer</text>
+  <text x="55" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">curl -o latest -L cpanel.net</text>
+  <text x="55" y="328" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">sh latest (Inside screen/tmux)</text>
+  <text x="55" y="351" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">30-60 min automated build</text>
+
+  <!-- Step 5 -->
+  <rect x="350" y="230" width="260" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="230" width="260" height="4" rx="2" fill="#10B981"/>
+  <circle cx="380" cy="265" r="14" fill="#ECFDF5"/>
+  <text x="380" y="270" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">5</text>
+  <text x="405" y="270" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">LicenBase IP Sync</text>
+  <text x="365" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">One-line license activation</text>
+  <text x="365" y="328" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">/usr/local/cpanel/cpkeyclt</text>
+  <text x="365" y="351" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#047857">IP instant handshake verified</text>
+
+  <!-- Step 6 -->
+  <rect x="660" y="230" width="260" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="230" width="260" height="4" rx="2" fill="#10B981"/>
+  <circle cx="690" cy="265" r="14" fill="#ECFDF5"/>
+  <text x="690" y="270" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">6</text>
+  <text x="715" y="270" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">WHM Initial Setup</text>
+  <text x="675" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">https://SERVER_IP:2087</text>
+  <text x="675" y="328" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Configure contact &amp; nameservers</text>
+  <text x="675" y="351" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#047857">Production Ready</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel versus DirectAdmin Feature and Architecture Comparison</title>
+  <desc id="d">Side-by-side comparison of cPanel and DirectAdmin on interface, resource utilization, ecosystem, and pricing structure.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Left Card: cPanel -->
+  <rect x="40" y="40" width="420" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="40" y="40" width="420" height="8" rx="4" fill="#1E40AF"/>
+  <text x="70" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#0F172A">cPanel &amp; WHM</text>
+  <circle cx="80" cy="145" r="10" fill="#10B981"/>
+  <path d="M75 145 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Industry standard hosting interface</text>
+  
+  <circle cx="80" cy="195" r="10" fill="#10B981"/>
+  <path d="M75 195 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Extensive plugin &amp; billing ecosystem (WHMCS)</text>
+
+  <circle cx="80" cy="245" r="10" fill="#10B981"/>
+  <path d="M75 245 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">CloudLinux, Imunify360 &amp; LiteSpeed 1-click</text>
+
+  <circle cx="80" cy="295" r="10" fill="#F59E0B"/>
+  <circle cx="80" cy="295" r="3" fill="#fff"/>
+  <text x="105" y="300" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Higher base memory usage (~1.5GB RAM)</text>
+
+  <rect x="70" y="335" width="360" height="30" rx="6" fill="#EFF6FF"/>
+  <text x="250" y="355" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#1D4ED8" text-anchor="middle">Best for Commercial Resellers &amp; Agencies</text>
+
+  <!-- Right Card: DirectAdmin -->
+  <rect x="500" y="40" width="420" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="500" y="40" width="420" height="8" rx="4" fill="#0284C7"/>
+  <text x="530" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#0F172A">DirectAdmin</text>
+  
+  <circle cx="540" cy="145" r="10" fill="#10B981"/>
+  <path d="M535 145 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="565" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Ultra-lightweight resource footprint (&lt;500MB)</text>
+  
+  <circle cx="540" cy="195" r="10" fill="#10B981"/>
+  <path d="M535 195 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="565" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Built-in CustomBuild compiler engine</text>
+
+  <circle cx="540" cy="245" r="10" fill="#10B981"/>
+  <path d="M535 245 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="565" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Flat tiered license options with low entry cost</text>
+
+  <circle cx="540" cy="295" r="10" fill="#F59E0B"/>
+  <circle cx="540" cy="295" r="3" fill="#fff"/>
+  <text x="565" y="300" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#334155">Steeper learning curve for non-technical users</text>
+
+  <rect x="530" y="335" width="360" height="30" rx="6" fill="#F0F9FF"/>
+  <text x="710" y="355" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0369A1" text-anchor="middle">Best for Budget Hosts &amp; Low-Spec VPS</text>
+
+  <!-- VS Badge -->
+  <circle cx="480" cy="210" r="24" fill="#1E40AF"/>
+  <text x="480" y="217" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">vs</text>
+</svg>

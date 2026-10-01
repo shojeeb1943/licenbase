@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Converting cPanel to CloudLinux OS in Five Steps</title>
+  <desc id="d">Visual walkthrough of registering license, executing cldeploy conversion script, rebooting into CloudLinux kernel, and initializing CageFS and MySQL Governor.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Step 1 -->
+  <rect x="35" y="50" width="165" height="320" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="35" y="50" width="165" height="4" rx="2" fill="#2563EB"/>
+  <circle cx="60" cy="80" r="14" fill="#EFF6FF"/>
+  <text x="60" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8" text-anchor="middle">1</text>
+  <text x="85" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Backup Server</text>
+  <text x="48" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Take snapshot or JetBackup</text>
+  <text x="48" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Verify disk space &gt; 5GB</text>
+  <text x="48" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Check active cPanel version</text>
+  <rect x="45" y="295" width="145" height="30" rx="6" fill="#EFF6FF"/>
+  <text x="117" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">Pre-flight check</text>
+
+  <!-- Step 2 -->
+  <rect x="215" y="50" width="165" height="320" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="215" y="50" width="165" height="4" rx="2" fill="#2563EB"/>
+  <circle cx="240" cy="80" r="14" fill="#EFF6FF"/>
+  <text x="240" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8" text-anchor="middle">2</text>
+  <text x="265" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Get cldeploy</text>
+  <text x="228" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">wget repo.cloudlinux.com/cldeploy</text>
+  <text x="228" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">LicenBase IP automated authorization</text>
+  <rect x="225" y="295" width="145" height="30" rx="6" fill="#EFF6FF"/>
+  <text x="297" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">Fetch installer</text>
+
+  <!-- Step 3 -->
+  <rect x="395" y="50" width="165" height="320" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="395" y="50" width="165" height="4" rx="2" fill="#2563EB"/>
+  <circle cx="420" cy="80" r="14" fill="#EFF6FF"/>
+  <text x="420" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8" text-anchor="middle">3</text>
+  <text x="445" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Run Conversion</text>
+  <text x="408" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">sh cldeploy -i (IP license)</text>
+  <text x="408" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Replaces kernel &amp; packages</text>
+  <text x="408" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Zero site downtime during run</text>
+  <rect x="405" y="295" width="145" height="30" rx="6" fill="#EFF6FF"/>
+  <text x="477" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">RPM replacement</text>
+
+  <!-- Step 4 -->
+  <rect x="575" y="50" width="165" height="320" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="575" y="50" width="165" height="4" rx="2" fill="#10B981"/>
+  <circle cx="600" cy="80" r="14" fill="#ECFDF5"/>
+  <text x="600" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">4</text>
+  <text x="625" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Reboot Node</text>
+  <text x="588" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">reboot server</text>
+  <text x="588" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Boots CloudLinux hybrid kernel</text>
+  <text x="588" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">uname -r check</text>
+  <rect x="585" y="295" width="145" height="30" rx="6" fill="#ECFDF5"/>
+  <text x="657" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">Kernel active</text>
+
+  <!-- Step 5 -->
+  <rect x="755" y="50" width="170" height="320" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <rect x="755" y="50" width="170" height="4" rx="2" fill="#10B981"/>
+  <circle cx="780" cy="80" r="14" fill="#ECFDF5"/>
+  <text x="780" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">5</text>
+  <text x="805" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Enable CageFS</text>
+  <text x="768" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">cagefsctl --init</text>
+  <text x="768" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">cagefsctl --enable-all</text>
+  <text x="768" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Install PHP Selector</text>
+  <rect x="765" y="295" width="150" height="30" rx="6" fill="#ECFDF5"/>
+  <text x="840" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">Protected Hosting</text>
+</svg>

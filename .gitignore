@@ -4,7 +4,12 @@
 
 # Build / archive
 Licenbase.com.zip
-.txt
 # OS junk
 .DS_Store
 Thumbs.db
+.freebuff/
+__pycache__/
+*.bak
+*.db
+*.db-shm
+*.db-wal

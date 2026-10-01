@@ -1,99 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://licenbase.com/about</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/about.png</image:loc>
+      <image:title>About LicenBase</image:title>
+      <image:caption>Hosting software licenses activated on your server IP</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/best-server-management-tools</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-best-server-management-tools.png</image:loc>
+      <image:title>Best Server Management Tools in 2026</image:title>
+      <image:caption>Explore the top server management tools for web hosting in 2026 across control panels, automated billing, web servers, security, and backup software.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cheap-licenses-explained</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-licenses-explained.png</image:loc>
+      <image:title>Are Cheap Hosting Licenses Safe &amp; Legit?</image:title>
+      <image:caption>How automated IP licensing works, why cheap reseller licenses are safe, how they differ from dangerous nulled scripts, and how server security is maintained.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cheap-whmcs-license-guide</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-guide.png</image:loc>
+      <image:title>Cheap WHMCS License: 2026 Buying Guide</image:title>
+      <image:caption>Discover what to check when buying a cheap WHMCS license, including IP authentication, addon support, upgrade paths, and security verification.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/choose-right-cpanel-license</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-choose-right-cpanel-license.png</image:loc>
+      <image:title>How to Choose the Right cPanel License</image:title>
+      <image:caption>Learn how to choose the right cPanel license tier for your VPS or dedicated server based on account limits, virtualization, and hosting workload.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cloudlinux-vs-almalinux</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-vs-almalinux.png</image:loc>
+      <image:title>CloudLinux vs AlmaLinux: OS Comparison</image:title>
+      <image:caption>Compare CloudLinux OS and AlmaLinux for web hosting servers. Learn how tenant isolation, LVE limits, CageFS, and kernel patching impact performance.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-vs-directadmin</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-directadmin.png</image:loc>
+      <image:title>cPanel vs DirectAdmin: 2026 Comparison</image:title>
+      <image:caption>Compare cPanel and DirectAdmin on resource usage, user interface, license pricing, security, and third-party integrations for web hosting servers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-vs-plesk</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-plesk.png</image:loc>
+      <image:title>cPanel vs Plesk: Which Control Panel to Choose?</image:title>
+      <image:caption>Compare cPanel and Plesk on operating systems, interface, pricing model, ecosystem and WordPress tools to pick the right hosting control panel.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/directadmin-license-pricing</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-directadmin-license-pricing.png</image:loc>
+      <image:title>DirectAdmin License Pricing Guide 2026</image:title>
+      <image:caption>A comprehensive guide to DirectAdmin license pricing tiers in 2026, comparing Personal, Lite, and Standard plans against cPanel and Webuzo costs.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/fix-cpanel-license-errors</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-fix-cpanel-license-errors.png</image:loc>
+      <image:title>How to Fix cPanel License Errors</image:title>
+      <image:caption>Resolve common cPanel license activation errors, invalid license warnings, NAT IP mismatches, firewall blocks, and cpkeyclt command failures quickly.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog.png</image:loc>
+      <image:title>LicenBase Blog – Hosting Guides &amp; License Comparisons</image:title>
+      <image:caption>Guides and comparisons on cPanel, Plesk, LiteSpeed and other hosting licenses</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/install-cloudlinux-cpanel</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-install-cloudlinux-cpanel.png</image:loc>
+      <image:title>Install CloudLinux on cPanel Step by Step</image:title>
+      <image:caption>Step-by-step tutorial on converting an existing cPanel server to CloudLinux OS without downtime, configuring CageFS, LVE Manager, and PHP Selector.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/install-cpanel-license-linux</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-install-cpanel-license-linux.png</image:loc>
+      <image:title>Install &amp; Activate cPanel on Linux Server</image:title>
+      <image:caption>Step-by-step guide to installing cPanel &amp; WHM on AlmaLinux, Rocky Linux, and Ubuntu, followed by automated IP license activation and verification.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/install-cpanel-license-vps</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-install-cpanel-license-vps.png</image:loc>
+      <image:title>Install &amp; Activate a cPanel License on a VPS</image:title>
+      <image:caption>Step-by-step guide to installing cPanel &amp; WHM on a fresh VPS, activating your license by server IP and fixing the most common activation errors.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-vs-apache</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-apache.png</image:loc>
+      <image:title>LiteSpeed vs Apache for Hosting Providers</image:title>
+      <image:caption>How LiteSpeed Web Server compares with Apache on architecture, caching, HTTP/3, compatibility and cost, and when switching makes sense for hosts.</image:caption>
+    </image:image>
+  </url>
   <url>
     <loc>https://licenbase.com/cloudlinux-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/cloudlinux.png</image:loc>
+      <image:title>Cheap CloudLinux License – Shared OS from $4/mo | LicenBase</image:title>
+      <image:caption>Reliable CloudLinux OS license for shared hosting servers at $4/mo. Cheap CloudLinux with CageFS, LVE Manager and instant activation.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/contact</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/contact.png</image:loc>
+      <image:title>Contact LicenBase</image:title>
+      <image:caption>Pre-sales questions, order help and license support</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/cpanel-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/cpanel.png</image:loc>
+      <image:title>Cheap cPanel License – VPS &amp; Dedicated from $4/mo</image:title>
+      <image:caption>Reliable cPanel &amp; WHM license for VPS ($4/mo) and dedicated servers ($8/mo). Cheap monthly cPanel license key, unlimited accounts, instant IP activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/deals</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/deals.png</image:loc>
+      <image:title>Hosting License Bundles &amp; Combo Deals – LicenBase</image:title>
+      <image:caption>Save more with server licensing stacks and combo discounts</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/imunify360-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/imunify360.png</image:loc>
+      <image:title>Cheap Imunify360 License – Unlimited $1.50/mo | LicenBase</image:title>
+      <image:caption>Reliable Imunify360 license, Unlimited plan at $1.50/mo. Cheap server security for shared hosting: malware scanner, proactive defense and firewall.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/home.png</image:loc>
+      <image:title>Cheap Hosting Software Licenses – LicenBase</image:title>
+      <image:caption>Reliable and cheap hosting licenses with instant activation</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/jetbackup-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/jetbackup.png</image:loc>
+      <image:title>Cheap JetBackup License – Backups $1.50/mo | LicenBase</image:title>
+      <image:caption>Reliable JetBackup 5 license for $1.50/mo. Cheap incremental server backups to S3, Wasabi and FTP for VPS, dedicated and shared hosting servers.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/license-policy</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
+      <image:title>License Policy – LicenBase</image:title>
+      <image:caption>LicenBase software license terms and automated IP replacement policies</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/litespeed-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/litespeed.png</image:loc>
+      <image:title>Cheap LiteSpeed License – 2, 4, 8 Core from $4/mo</image:title>
+      <image:caption>Reliable LiteSpeed Web Server license from $4/mo. Cheap LiteSpeed for VPS, dedicated and shared hosting servers, with LSCache, HTTP/3 and instant activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/plesk-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/plesk.png</image:loc>
+      <image:title>Cheap Plesk License, VPS from $2.50/mo | LicenBase</image:title>
+      <image:caption>Reliable Plesk Web Host Edition license: VPS $2.50/mo, dedicated $6.50/mo. Cheap Plesk license key with unlimited domains and instant IP activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/privacy-policy</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
+      <image:title>Privacy Policy – LicenBase</image:title>
+      <image:caption>LicenBase privacy policy and data protection terms</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/products</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/products.png</image:loc>
+      <image:title>All Hosting Software Licenses – LicenBase</image:title>
+      <image:caption>Browse all cPanel, LiteSpeed, Plesk, and server management licenses</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/refund-policy</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
+      <image:title>Refund Policy – LicenBase</image:title>
+      <image:caption>LicenBase refund policy and money-back guarantee terms</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/sitepad-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/sitepad.png</image:loc>
+      <image:title>Cheap SitePad License – Website Builder $1.50/mo | LicenBase</image:title>
+      <image:caption>Reliable SitePad website builder license for $1.50/mo. Cheap SitePad for cPanel and Plesk hosting servers with 1,000+ themes and instant activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/softaculous-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/softaculous.png</image:loc>
+      <image:title>Cheap Softaculous License – Premium $1/mo | LicenBase</image:title>
+      <image:caption>Reliable Softaculous Premium license for $1/mo. Cheap Softaculous for shared hosting with 450+ one-click installers and instant activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/terms-of-service</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
+      <image:title>Terms of Service – LicenBase</image:title>
+      <image:caption>LicenBase general terms and conditions of service</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/virtualizor-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/virtualizor.png</image:loc>
+      <image:title>Cheap Virtualizor License – VPS Panel $3.50/mo | LicenBase</image:title>
+      <image:caption>Reliable Virtualizor license for VPS hosting at $3.50/mo. Cheap Virtualizor node license for KVM, OpenVZ and LXC with WHMCS integration.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/webuzo-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/webuzo.png</image:loc>
+      <image:title>Cheap Webuzo License – Control Panel $4/mo | LicenBase</image:title>
+      <image:caption>Reliable Webuzo control panel license for $4/mo. Cheap Webuzo for VPS and dedicated servers with one-click apps and instant activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/whmcs-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/whmcs.png</image:loc>
+      <image:title>Cheap WHMCS License – $20 One-Time or $4/mo</image:title>
+      <image:caption>Reliable WHMCS license: owned one-time for $20 or monthly for $4. Cheap WHMCS license for hosting billing and automation with instant delivery.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/whmreseller-license</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/whmreseller.png</image:loc>
+      <image:title>WHMReseller License – Reseller Plugin $1.50/mo | LicenBase</image:title>
+      <image:caption>Reliable WHMReseller license for $1.50/mo. Cheap reseller plugin for cPanel &amp; WHM with Master and Alpha reseller tiers and instant activation.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://licenbase.com/wp-squared-license</loc>

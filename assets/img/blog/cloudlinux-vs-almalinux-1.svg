@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">CloudLinux Multi-Tenant CageFS Architecture vs AlmaLinux Standard Linux</title>
+  <desc id="d">Visual comparison of CloudLinux LVE limits and CageFS isolation versus shared process execution on standard AlmaLinux.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Left: AlmaLinux Standard Shared -->
+  <rect x="40" y="40" width="420" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="40" y="40" width="420" height="8" rx="4" fill="#0284C7"/>
+  <text x="70" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#0F172A">AlmaLinux (Standard OS)</text>
+  
+  <rect x="70" y="120" width="360" height="180" rx="10" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="250" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">Shared Resource Pool (Single Global Limit)</text>
+  
+  <rect x="85" y="165" width="95" height="110" rx="8" fill="#FEE2E2" stroke="#F87171"/>
+  <text x="132" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#991B1B" text-anchor="middle">Bad User</text>
+  <text x="132" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#B91C1C" text-anchor="middle">Consumes 95%</text>
+  <text x="132" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#B91C1C" text-anchor="middle">CPU &amp; RAM</text>
+  <text x="132" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#DC2626" text-anchor="middle">Spike / Crash</text>
+
+  <rect x="195" y="165" width="110" height="110" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="250" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Tenant 2</text>
+  <text x="250" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Slowdowns</text>
+  <text x="250" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#DC2626" text-anchor="middle">503 Errors</text>
+
+  <rect x="320" y="165" width="95" height="110" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="367" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Tenant 3</text>
+  <text x="367" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Database</text>
+  <text x="367" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#DC2626" text-anchor="middle">Timeouts</text>
+
+  <rect x="70" y="325" width="360" height="36" rx="6" fill="#F0F9FF"/>
+  <text x="250" y="348" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0369A1" text-anchor="middle">Free OS · Best for Single-Tenant &amp; Private VPS</text>
+
+  <!-- Right: CloudLinux OS CageFS -->
+  <rect x="500" y="40" width="420" height="340" rx="16" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <rect x="500" y="40" width="420" height="8" rx="4" fill="#10B981"/>
+  <text x="530" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#0F172A">CloudLinux (CageFS + LVE)</text>
+
+  <rect x="530" y="120" width="360" height="180" rx="10" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="710" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#065F46" text-anchor="middle">Isolated LVE Containers per Cpanel Account</text>
+
+  <rect x="545" y="165" width="95" height="110" rx="8" fill="#EFF6FF" stroke="#3B82F6"/>
+  <text x="592" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#1E40AF" text-anchor="middle">Tenant 1</text>
+  <text x="592" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#2563EB" text-anchor="middle">Capped 1 CPU</text>
+  <text x="592" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#2563EB" text-anchor="middle">1GB RAM Max</text>
+  <text x="592" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#10B981" text-anchor="middle">Isolated</text>
+
+  <rect x="655" y="165" width="110" height="110" rx="8" fill="#ECFDF5" stroke="#10B981"/>
+  <text x="710" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">Tenant 2</text>
+  <text x="710" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#047857" text-anchor="middle">100% Stable</text>
+  <text x="710" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#047857" text-anchor="middle">Fast Response</text>
+  <text x="710" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#059669" text-anchor="middle">Protected</text>
+
+  <rect x="780" y="165" width="95" height="110" rx="8" fill="#ECFDF5" stroke="#10B981"/>
+  <text x="827" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">Tenant 3</text>
+  <text x="827" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#047857" text-anchor="middle">Secure PHP</text>
+  <text x="827" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#047857" text-anchor="middle">CageFS Path</text>
+  <text x="827" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#059669" text-anchor="middle">Protected</text>
+
+  <rect x="530" y="325" width="360" height="36" rx="6" fill="#ECFDF5"/>
+  <text x="710" y="348" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#047857" text-anchor="middle">Commercial OS · Essential for Shared Web Hosting</text>
+</svg>

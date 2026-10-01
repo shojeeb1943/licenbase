@@ -17,8 +17,8 @@ with open("assets/css/styles.css", "r", encoding="utf-8") as f:
 css = re.sub(r'/\*[\s\S]*?\*/', '', css)
 # Normalize whitespace
 css = re.sub(r'\s+', ' ', css)
-# Remove spaces around symbols
-css = re.sub(r'\s*([\{\}:;,>+~])\s*', r'\1', css)
+# Remove spaces around symbols (excluding + and - to preserve CSS calc operations)
+css = re.sub(r'\s*([\{\}:;,>~])\s*', r'\1', css)
 css = re.sub(r';\}', '}', css)
 css = css.strip()
 

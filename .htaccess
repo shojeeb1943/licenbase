@@ -15,6 +15,10 @@ RewriteRule ^ https://licenbase.com%{REQUEST_URI} [L,R=301]
 RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
 RewriteRule ^index\.html$ / [L,R=301]
 
+# /blog/index.html -> /blog/
+RewriteCond %{THE_REQUEST} \s/blog/index\.html[\s?] [NC]
+RewriteRule ^blog/index\.html$ /blog/ [L,R=301]
+
 # /page.html -> /page (only on the client's original request, avoids loops)
 RewriteCond %{THE_REQUEST} \s/([^\s?]+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [L,R=301]
@@ -24,6 +28,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
+
+# /blog/post -> blog/post.html internally
+RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
+RewriteRule ^blog/([^/]+)$ blog/$1.html [L]
 </IfModule>
 
 # Enable Gzip / Brotli Compression
@@ -86,3 +94,12 @@ RewriteRule ^([^/]+)$ $1.html [L]
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
   </FilesMatch>
 </IfModule>
+
+# Never serve build scripts, backups, DBs, notes, docs or dotfiles
+<FilesMatch "(\.(py|pyc|bak|db|db-shm|db-wal|txt|md|log|zip|json|sh|ps1)$|^\.)">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(robots\.txt|site\.webmanifest)$">
+  Require all granted
+</FilesMatch>
+RedirectMatch 404 ^/(\.git|\.freebuff|\.playwright|\.playwright-mcp|docs|__pycache__)(/|$)

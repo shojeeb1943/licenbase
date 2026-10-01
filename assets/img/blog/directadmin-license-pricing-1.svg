@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">DirectAdmin License Pricing Tiers and Account Thresholds</title>
+  <desc id="d">Breakdown of DirectAdmin Personal, Lite, and Standard license plans detailing account caps and domain capacity.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Personal -->
+  <rect x="40" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="260" height="6" rx="3" fill="#0284C7"/>
+  <text x="65" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">DA Personal</text>
+  <text x="65" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0284C7">1 User Account · 10 Domains</text>
+  <path d="M65 125 h210" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="65" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Full root administrator access</text>
+  <text x="65" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• CustomBuild 2.0 compiler</text>
+  <text x="65" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Free SSL (Let's Encrypt)</text>
+  <text x="65" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Auto DNS &amp; Mail Server</text>
+  <rect x="65" y="305" width="210" height="45" rx="8" fill="#F0F9FF"/>
+  <text x="170" y="333" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0369A1" text-anchor="middle">Personal VPS &amp; Labs</text>
+
+  <!-- Lite -->
+  <rect x="350" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="40" width="260" height="6" rx="3" fill="#2563EB"/>
+  <text x="375" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">DA Lite</text>
+  <text x="375" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#2563EB">10 Accounts · 50 Domains</text>
+  <path d="M375 125 h210" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="375" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Reseller account creation</text>
+  <text x="375" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Softaculous integration</text>
+  <text x="375" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Low memory footprint</text>
+  <text x="375" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Community + Ticket Support</text>
+  <rect x="375" y="305" width="210" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="480" y="333" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle">Small Agencies</text>
+
+  <!-- Standard -->
+  <rect x="660" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <rect x="660" y="40" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="685" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">DA Standard</text>
+  <text x="685" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#059669">Unlimited Accounts &amp; Domains</text>
+  <path d="M685 125 h210" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="685" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Full unlimited multi-tenancy</text>
+  <text x="685" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• WHMCS automated provisioning</text>
+  <text x="685" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• CloudLinux &amp; LiteSpeed support</text>
+  <text x="685" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Fixed monthly licensing cost</text>
+  <rect x="685" y="305" width="210" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="790" y="333" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="middle">Web Hosting Providers</text>
+</svg>

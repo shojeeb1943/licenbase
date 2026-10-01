@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-    <!-- Google Tag Manager (Non-blocking) -->
+  <!-- Google Tag Manager (Non-blocking) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function loadGTM() {
@@ -29,23 +29,116 @@
   <title>Page Not Found — LicenBase</title>
   <meta name="robots" content="noindex, follow" />
   <base href="/" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
   <link rel="icon" href="favicon.ico?v=2" sizes="any" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="shortcut icon" href="favicon.ico?v=2" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <link rel="stylesheet" href="assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=2" />
 </head>
-<body class="bg-white font-sans text-navy antialiased">
+<body class="bg-[#0a0f1d] text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-brand selection:text-white">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <main class="mx-auto max-w-xl px-6 py-32 text-center">
-    <p class="text-sm font-bold text-blue-800">404</p>
-    <h1 class="mt-2 text-3xl font-extrabold">Page not found</h1>
-    <p class="mt-3 text-gray-500">The page you're looking for doesn't exist or has moved.</p>
-    <p class="mt-8 flex justify-center gap-4 text-sm font-semibold">
-      <a class="text-blue-800 hover:underline" href="/">Home</a>
-      <a class="text-blue-800 hover:underline" href="/products">All licenses</a>
-      <a class="text-blue-800 hover:underline" href="/deals">Deals</a>
-    </p>
+
+  <!-- Simple Header -->
+  <header class="w-full border-b border-slate-800/80 bg-[#0a0f1d]/90 backdrop-blur px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2" aria-label="LicenBase Homepage">
+        <img src="assets/img/logo-white.png" alt="LicenBase Logo" width="140" height="32" class="h-8 w-auto object-contain" fetchpriority="high" decoding="async" />
+      </a>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="/products" class="text-slate-300 hover:text-white transition">All Licenses</a>
+        <a href="/deals" class="text-slate-300 hover:text-white transition">Deals</a>
+        <a href="https://my.licenbase.com" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition text-xs">
+          Client Area
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Main Container -->
+  <main class="flex-1 flex items-center justify-center px-6 py-16">
+    <div class="max-w-2xl w-full text-center">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-6">
+        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        404 &bull; Page Not Found
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+        Lost in Server Space?
+      </h1>
+      <p class="text-slate-400 text-base sm:text-lg max-w-lg mx-auto mb-10 leading-relaxed">
+        The page or licensing resource you requested doesn't exist, has been removed, or was moved to a new URL.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <a href="/" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 transition">
+          Return to Homepage
+        </a>
+        <a href="/products" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-slate-700 bg-slate-800/60 hover:bg-slate-800 text-slate-200 font-semibold text-sm transition">
+          Browse All 13+ Licenses
+        </a>
+      </div>
+
+      <!-- Quick Popular Licenses Grid -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-left">
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 text-center">
+          Popular Hosting Licenses
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <a href="/cpanel-license" class="flex items-center gap-2.5 p-2.5 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-950/40 hover:bg-slate-800/50 transition group">
+            <span class="text-sm font-medium text-slate-200 group-hover:text-white">cPanel / WHM</span>
+          </a>
+          <a href="/litespeed-license" class="flex items-center gap-2.5 p-2.5 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-950/40 hover:bg-slate-800/50 transition group">
+            <span class="text-sm font-medium text-slate-200 group-hover:text-white">LiteSpeed</span>
+          </a>
+          <a href="/plesk-license" class="flex items-center gap-2.5 p-2.5 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-950/40 hover:bg-slate-800/50 transition group">
+            <span class="text-sm font-medium text-slate-200 group-hover:text-white">Plesk Host</span>
+          </a>
+          <a href="/whmcs-license" class="flex items-center gap-2.5 p-2.5 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-950/40 hover:bg-slate-800/50 transition group">
+            <span class="text-sm font-medium text-slate-200 group-hover:text-white">WHMCS</span>
+          </a>
+          <a href="/cloudlinux-license" class="flex items-center gap-2.5 p-2.5 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-950/40 hover:bg-slate-800/50 transition group">
+            <span class="text-sm font-medium text-slate-200 group-hover:text-white">CloudLinux</span>
+          </a>
+          <a href="/deals" class="flex items-center gap-2.5 p-2.5 rounded-lg border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 transition group">
+            <span class="text-sm font-medium text-amber-300 group-hover:text-amber-200">Combo Deals &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <!-- Simple Footer -->
+  <footer class="w-full border-t border-slate-800/80 bg-[#0a0f1d] px-6 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 LicenBase. All rights reserved. Instant automated license provisioning.</p>
+      <div class="flex items-center gap-4">
+        <a href="/license-policy" class="hover:text-slate-400 transition">License Policy</a>
+        <a href="/refund-policy" class="hover:text-slate-400 transition">Refund Policy</a>
+        <a href="/privacy-policy" class="hover:text-slate-400 transition">Privacy Policy</a>
+        <a href="/terms-of-service" class="hover:text-slate-400 transition">Terms</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

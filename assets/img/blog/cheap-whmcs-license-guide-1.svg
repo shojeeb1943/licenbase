@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Cheap WHMCS License Checklist and Verification Flowchart</title>
+  <desc id="d">Essential factors to evaluate when selecting a discounted WHMCS license: update authenticity, security checks, and IP authentication.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <rect x="40" y="40" width="420" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="40" y="40" width="420" height="8" rx="4" fill="#10B981"/>
+  <text x="70" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#065F46">Genuine Automated WHMCS Licensing</text>
+  
+  <circle cx="80" cy="140" r="10" fill="#10B981"/>
+  <path d="M75 140 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Direct official vendor ZIP downloads</text>
+
+  <circle cx="80" cy="190" r="10" fill="#10B981"/>
+  <path d="M75 190 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Zero IonCube decoding or source patching</text>
+
+  <circle cx="80" cy="240" r="10" fill="#10B981"/>
+  <path d="M75 240 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Full cPanel, Plesk, &amp; Payment Gateway API</text>
+
+  <circle cx="80" cy="290" r="10" fill="#10B981"/>
+  <path d="M75 290 l4 4 l7 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="295" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Instant IP transfer on server migration</text>
+
+  <rect x="70" y="335" width="360" height="30" rx="6" fill="#ECFDF5"/>
+  <text x="250" y="355" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#047857" text-anchor="middle">Safe for Production Billing &amp; Invoicing</text>
+
+  <!-- Right: Dangerous Nulled -->
+  <rect x="500" y="40" width="420" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="500" y="40" width="420" height="8" rx="4" fill="#EF4444"/>
+  <text x="530" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#991B1B">Nulled / Cracked WHMCS Scripts</text>
+
+  <circle cx="540" cy="140" r="10" fill="#EF4444"/>
+  <path d="M535 135 l10 10 M545 135 l-10 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="565" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Modified core files with backdoors &amp; miners</text>
+
+  <circle cx="540" cy="190" r="10" fill="#EF4444"/>
+  <path d="M535 185 l10 10 M545 185 l-10 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="565" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Breaking auto-updates and security hotfixes</text>
+
+  <circle cx="540" cy="240" r="10" fill="#EF4444"/>
+  <path d="M535 235 l10 10 M545 235 l-10 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="565" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Payment gateway API data leakage risks</text>
+
+  <circle cx="540" cy="290" r="10" fill="#EF4444"/>
+  <path d="M535 285 l10 10 M545 285 l-10 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="565" y="295" font-family="Inter, Segoe UI, sans-serif" font-size="15" fill="#334155">Zero vendor support or module compatibility</text>
+
+  <rect x="530" y="335" width="360" height="30" rx="6" fill="#FEF2F2"/>
+  <text x="710" y="355" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#B91C1C" text-anchor="middle">Severe Security &amp; Compliance Hazard</text>
+</svg>
