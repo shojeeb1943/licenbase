@@ -1254,14 +1254,14 @@ def generate_page(p):
         "litespeed-license.html": "litespeed.svg",
         "plesk-license.html": "plesk.svg",
         "whmcs-license.html": "whmcs.svg",
-        "cloudlinux-license.html": "cloudlinux.svg",
-        "virtualizor-license.html": "virtualizor.svg",
-        "sitepad-license.html": "sitepad.svg",
-        "whmreseller-license.html": "whmreseller.svg",
-        "softaculous-license.html": "softaculous.svg",
-        "jetbackup-license.html": "jetbackup.svg",
-        "imunify360-license.html": "imunify360.svg",
-        "webuzo-license.html": "webuzo.svg",
+        "cloudlinux-license.html": "cloudlinux.png",
+        "virtualizor-license.html": "virtualizor.png",
+        "sitepad-license.html": "sitepad.png",
+        "whmreseller-license.html": "whmreseller.png",
+        "softaculous-license.html": "softaculous.png",
+        "jetbackup-license.html": "jetbackup.png",
+        "imunify360-license.html": "imunify360.png",
+        "webuzo-license.html": "webuzo.png",
         "wp-squared-license.html": "wp-squared.svg"
     }
     for rel in p["related"]:
