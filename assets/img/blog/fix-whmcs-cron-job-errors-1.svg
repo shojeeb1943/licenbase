@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">WHMCS Automation &amp; Cron Troubleshooting Flow</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Resolving CLI Binary Path, Memory Caps, and Timeout Blockers</text>
+
+  <rect x="70" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="195" y="180" text-anchor="middle" fill="#F87171" font-family="system-ui, sans-serif" font-size="16" font-weight="700">1. PHP Path Mismatch</text>
+  <text x="90" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Symptom: ionCube Loader error</text>
+  <text x="90" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Cause: /usr/bin/php defaults to OS</text>
+  <text x="90" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Fix: Point to ea-php81 or ea-php82</text>
+  <text x="90" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Verify: php -v matches web PHP</text>
+  <rect x="90" y="310" width="210" height="24" rx="6" fill="#EF4444" fill-opacity="0.15"/>
+  <text x="195" y="326" text-anchor="middle" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Runtime Binary Resolution</text>
+
+  <rect x="355" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="480" y="180" text-anchor="middle" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="16" font-weight="700">2. Memory Exhaustion</text>
+  <text x="480" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Allowed Memory Size Exhausted</text>
+  <text x="375" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Cause: Massive invoice generation</text>
+  <text x="375" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Fix: Pass -d memory_limit=512M</text>
+  <text x="375" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Increase max_execution_time</text>
+  <rect x="375" y="310" width="210" height="24" rx="6" fill="#F59E0B" fill-opacity="0.15"/>
+  <text x="480" y="326" text-anchor="middle" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Memory Allocation Tuning</text>
+
+  <rect x="640" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="765" y="180" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="700">3. Task Lock Clearance</text>
+  <text x="765" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Stuck Cron Lock in Database</text>
+  <text x="660" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Symptom: Cron already running</text>
+  <text x="660" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Fix: Clear tbltaskstatus locks</text>
+  <text x="660" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Run php -q cron.php -f</text>
+  <rect x="660" y="310" width="210" height="24" rx="6" fill="#10B981" fill-opacity="0.15"/>
+  <text x="765" y="326" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Lock Reset &amp; Verification</text>
+</svg>

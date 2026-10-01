@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">WHMCS License Tiers &amp; Capabilities</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Client Tiers vs Lifetime Owned License Comparison</text>
+
+  <rect x="70" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="195" y="180" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Starter &amp; Plus</text>
+  <text x="195" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Up to 250 Active Clients</text>
+  <text x="90" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Automated billing &amp; invoicing</text>
+  <text x="90" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Standard support tickets</text>
+  <text x="90" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• "Powered by WHMCS" branding</text>
+  <rect x="90" y="310" width="210" height="24" rx="6" fill="#3B82F6" fill-opacity="0.15"/>
+  <text x="195" y="326" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Entry Hosts &amp; Resellers</text>
+
+  <rect x="355" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="480" y="180" text-anchor="middle" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Professional / Business</text>
+  <text x="480" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">500 to 1,000+ Active Clients</text>
+  <text x="375" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Complete no-branding white-label</text>
+  <text x="375" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Advanced automation workflows</text>
+  <text x="375" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Escalated priority support</text>
+  <rect x="375" y="310" width="210" height="24" rx="6" fill="#8B5CF6" fill-opacity="0.15"/>
+  <text x="480" y="326" text-anchor="middle" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Growing Web Hosts</text>
+
+  <rect x="640" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="765" y="180" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Lifetime Owned License</text>
+  <text x="765" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Unlimited Clients · No Monthly Fees</text>
+  <text x="660" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• 100% Unbranded enterprise</text>
+  <text x="660" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Full provisioning module support</text>
+  <text x="660" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• $20 one-time flat pricing</text>
+  <rect x="660" y="310" width="210" height="24" rx="6" fill="#10B981" fill-opacity="0.15"/>
+  <text x="765" y="326" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Maximum Long-Term ROI</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">cPanel VPS License Provisioning &amp; Setup Workflow</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">From IP Binding to Instant Server Activation</text>
+
+  <!-- Step 1 -->
+  <rect x="70" y="150" width="180" height="190" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <circle cx="160" cy="190" r="22" fill="#3B82F6" fill-opacity="0.2"/>
+  <text x="160" y="196" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="16" font-weight="800">1</text>
+  <text x="160" y="235" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Select Tier &amp; IP</text>
+  <text x="160" y="265" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Enter Public IPv4</text>
+  <text x="160" y="285" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Choose VPS Edition</text>
+  <text x="160" y="305" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Wholesale Pricing</text>
+
+  <!-- Step 2 -->
+  <rect x="285" y="150" width="180" height="190" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <circle cx="375" cy="190" r="22" fill="#3B82F6" fill-opacity="0.2"/>
+  <text x="375" y="196" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="16" font-weight="800">2</text>
+  <text x="375" y="235" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">API Provisioning</text>
+  <text x="375" y="265" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Instant Activation</text>
+  <text x="375" y="285" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">IP Verified in Cluster</text>
+  <text x="375" y="305" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">No License Keys</text>
+
+  <!-- Step 3 -->
+  <rect x="500" y="150" width="180" height="190" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="590" cy="190" r="22" fill="#10B981" fill-opacity="0.2"/>
+  <text x="590" y="196" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="800">3</text>
+  <text x="590" y="235" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Run Command</text>
+  <text x="590" y="265" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Execute 1-Line Script</text>
+  <text x="590" y="285" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Auto Validates Binary</text>
+  <text x="590" y="305" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Zero Reinstallations</text>
+
+  <!-- Step 4 -->
+  <rect x="715" y="150" width="180" height="190" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="805" cy="190" r="22" fill="#10B981" fill-opacity="0.2"/>
+  <text x="805" y="196" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="800">4</text>
+  <text x="805" y="235" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">WHM Ready</text>
+  <text x="805" y="265" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">100% Genuine Status</text>
+  <text x="805" y="285" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Official upcp Updates</text>
+  <text x="805" y="305" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Unlimited Accounts</text>
+</svg>

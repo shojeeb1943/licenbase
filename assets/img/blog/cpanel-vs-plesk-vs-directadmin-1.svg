@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Hosting Control Panel Architecture Comparison</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">cPanel &amp; WHM vs Plesk Obsidian vs DirectAdmin CustomBuild</text>
+
+  <!-- Panel 1: cPanel -->
+  <rect x="70" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#FF6C2C" stroke-width="1.5"/>
+  <rect x="90" y="165" width="36" height="36" rx="8" fill="#FF6C2C" fill-opacity="0.2"/>
+  <text x="108" y="189" text-anchor="middle" fill="#FF6C2C" font-family="system-ui, sans-serif" font-size="16" font-weight="800">cP</text>
+  <text x="138" y="188" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" font-weight="700">cPanel &amp; WHM</text>
+  <text x="90" y="225" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Industry standard shared hosting</text>
+  <text x="90" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Per-account licensing model</text>
+  <text x="90" y="271" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Deep WHMCS &amp; plugin ecosystem</text>
+  <text x="90" y="294" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• ~1.5 GB idle RAM baseline</text>
+  <rect x="90" y="312" width="210" height="24" rx="6" fill="#FF6C2C" fill-opacity="0.15"/>
+  <text x="195" y="328" text-anchor="middle" fill="#FF8A50" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Commercial &amp; Enterprise Tier</text>
+
+  <!-- Panel 2: Plesk -->
+  <rect x="355" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="375" y="165" width="36" height="36" rx="8" fill="#0284C7" fill-opacity="0.2"/>
+  <text x="393" y="189" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">PL</text>
+  <text x="423" y="188" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Plesk Obsidian</text>
+  <text x="375" y="225" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Linux + Windows Server support</text>
+  <text x="375" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• WP Toolkit &amp; Docker native</text>
+  <text x="375" y="271" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Web Host Edition domain limits</text>
+  <text x="375" y="294" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• ~1.0 GB idle RAM footprint</text>
+  <rect x="375" y="312" width="210" height="24" rx="6" fill="#0284C7" fill-opacity="0.15"/>
+  <text x="480" y="328" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">DevOps &amp; Agency Focused</text>
+
+  <!-- Panel 3: DirectAdmin -->
+  <rect x="640" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="660" y="165" width="36" height="36" rx="8" fill="#10B981" fill-opacity="0.2"/>
+  <text x="678" y="189" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="16" font-weight="800">DA</text>
+  <text x="708" y="188" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" font-weight="700">DirectAdmin</text>
+  <text x="660" y="225" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Lightweight C++ binary core</text>
+  <text x="660" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Flat monthly / unlimited pricing</text>
+  <text x="660" y="271" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• CustomBuild source compilation</text>
+  <text x="660" y="294" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• ~350 MB idle RAM footprint</text>
+  <rect x="660" y="312" width="210" height="24" rx="6" fill="#10B981" fill-opacity="0.15"/>
+  <text x="765" y="328" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">High-Density &amp; Budget Fleet</text>
+</svg>

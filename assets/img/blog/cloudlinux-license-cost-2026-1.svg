@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">CloudLinux OS 2026 Edition Comparison</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Solo vs Shared vs Shared Pro Architecture &amp; Pricing</text>
+
+  <rect x="70" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="195" y="180" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="16" font-weight="700">CloudLinux OS Solo</text>
+  <text x="195" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">1 User / Small Business Server</text>
+  <text x="90" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• PHP X-Ray deep tracing</text>
+  <text x="90" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Slow site performance alerts</text>
+  <text x="90" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Hardened PHP versions</text>
+  <rect x="90" y="310" width="210" height="24" rx="6" fill="#3B82F6" fill-opacity="0.15"/>
+  <text x="195" y="326" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Single Agency / High-Traffic VPS</text>
+
+  <rect x="355" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="480" y="180" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="700">CloudLinux Shared</text>
+  <text x="480" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Multi-Tenant Shared Hosting</text>
+  <text x="375" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• CageFS virtual file system</text>
+  <text x="375" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• LVE CPU, RAM &amp; IO limits</text>
+  <text x="375" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• MySQL Governor throttling</text>
+  <rect x="375" y="310" width="210" height="24" rx="6" fill="#0284C7" fill-opacity="0.15"/>
+  <text x="480" y="326" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Core Shared Hosting Fleets</text>
+
+  <rect x="640" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="765" y="180" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="700">CloudLinux Shared Pro</text>
+  <text x="765" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Flagship Enterprise Stack</text>
+  <text x="660" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• All Shared features + CageFS</text>
+  <text x="660" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Centralized PHP X-Ray APM</text>
+  <text x="660" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Smart Advice automated tuning</text>
+  <rect x="660" y="310" width="210" height="24" rx="6" fill="#10B981" fill-opacity="0.15"/>
+  <text x="765" y="326" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Maximum Reliability &amp; Control</text>
+</svg>

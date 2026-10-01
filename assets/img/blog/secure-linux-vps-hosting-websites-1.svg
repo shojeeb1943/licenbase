@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Linux VPS Hardening &amp; Production Security Stack</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Multi-Layer Defense Architecture Before Deploying Web Applications</text>
+
+  <rect x="70" y="145" width="180" height="200" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="160" y="180" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="15" font-weight="700">1. SSH Hardening</text>
+  <text x="90" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Disable Root Password</text>
+  <text x="90" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Ed25519 SSH Keys</text>
+  <text x="90" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Custom SSH Port</text>
+  <text x="90" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Sudo User Privilege</text>
+
+  <rect x="285" y="145" width="180" height="200" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="375" y="180" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="700">2. Firewall &amp; Net</text>
+  <text x="305" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• UFW / CSF Configured</text>
+  <text x="305" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Drop Unused Ports</text>
+  <text x="305" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Fail2ban Intrusion</text>
+  <text x="305" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• SYN Flood Protection</text>
+
+  <rect x="500" y="145" width="180" height="200" rx="10" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="590" y="180" text-anchor="middle" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="15" font-weight="700">3. Kernel &amp; Isolation</text>
+  <text x="520" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Automatic Security Patches</text>
+  <text x="520" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• CloudLinux CageFS</text>
+  <text x="520" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Shared Memory /tmp noexec</text>
+  <text x="520" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Symlink Protection</text>
+
+  <rect x="715" y="145" width="180" height="200" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="805" y="180" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="700">4. WAF &amp; Defense</text>
+  <text x="735" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Imunify360 AI WAF</text>
+  <text x="735" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Real-Time Malware Scan</text>
+  <text x="735" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• ModSecurity OWASP</text>
+  <text x="735" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• JetBackup Incremental</text>
+</svg>

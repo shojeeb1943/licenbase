@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+  <rect x="40" y="40" width="880" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="480" y="85" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Reseller Hosting Architecture Matrix</text>
+  <text x="480" y="112" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">cPanel &amp; WHM vs Plesk Web Host vs DirectAdmin Reseller Tier</text>
+
+  <rect x="70" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#FF6C2C" stroke-width="1.5"/>
+  <text x="195" y="180" text-anchor="middle" fill="#FF6C2C" font-family="system-ui, sans-serif" font-size="16" font-weight="700">cPanel / WHM Reseller</text>
+  <text x="90" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Client familiarity standard</text>
+  <text x="90" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• WHMReseller (Master &amp; Alpha)</text>
+  <text x="90" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Automated WHMCS provisioning</text>
+  <text x="90" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Higher per-account licensing</text>
+  <rect x="90" y="310" width="210" height="24" rx="6" fill="#FF6C2C" fill-opacity="0.15"/>
+  <text x="195" y="326" text-anchor="middle" fill="#FF8A50" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Easiest to Sell to Retail Clients</text>
+
+  <rect x="355" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="480" y="180" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Plesk Web Host</text>
+  <text x="375" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Reseller &amp; Customer roles</text>
+  <text x="375" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• WordPress Toolkit management</text>
+  <text x="375" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Docker &amp; Git developer tools</text>
+  <text x="375" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Granular subscription limits</text>
+  <rect x="375" y="310" width="210" height="24" rx="6" fill="#0284C7" fill-opacity="0.15"/>
+  <text x="480" y="326" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Best for WordPress &amp; Dev Agencies</text>
+
+  <rect x="640" y="145" width="250" height="205" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="765" y="180" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="700">DirectAdmin Reseller</text>
+  <text x="660" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Admin / Reseller / User modes</text>
+  <text x="660" y="240" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Flat fee / unlimited accounts</text>
+  <text x="660" y="265" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Full white-labeling &amp; skins</text>
+  <text x="660" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">• Low server resource overhead</text>
+  <rect x="660" y="310" width="210" height="24" rx="6" fill="#10B981" fill-opacity="0.15"/>
+  <text x="765" y="326" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Highest Profit Margins</text>
+</svg>
