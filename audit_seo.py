@@ -400,6 +400,16 @@ if os.path.exists('sitemap.xml'):
     print(f'Total URLs in sitemap: {len(urls)}')
     sitemap_set = set(urls)
     canonicals_set = set(p['canonical'] for p in page_audits if p['canonical'])
+    for tf in glob.glob('tools/**/*.html', recursive=True):
+        if any(x in tf for x in ('projects', 'auth', '404')):
+            continue
+        try:
+            thtml = open(tf, 'r', encoding='utf-8').read()
+            m = re.search(r'<link rel="canonical" href="([^"]+)"', thtml)
+            if m:
+                canonicals_set.add(m.group(1))
+        except Exception:
+            pass
     
     missing_in_sitemap = canonicals_set - sitemap_set
     if missing_in_sitemap:

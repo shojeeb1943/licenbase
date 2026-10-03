@@ -129,14 +129,67 @@
   </main>
 
   <!-- Simple Footer -->
-  <footer class="w-full border-t border-slate-800/80 bg-[#0a0f1d] px-6 py-6 text-center text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>&copy; 2026 LicenBase. All rights reserved. Instant automated license provisioning.</p>
-      <div class="flex items-center gap-4">
-        <a href="/license-policy" class="hover:text-slate-400 transition">License Policy</a>
-        <a href="/refund-policy" class="hover:text-slate-400 transition">Refund Policy</a>
-        <a href="/privacy-policy" class="hover:text-slate-400 transition">Privacy Policy</a>
-        <a href="/terms-of-service" class="hover:text-slate-400 transition">Terms</a>
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
       </div>
     </div>
   </footer>
