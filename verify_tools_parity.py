@@ -49,6 +49,9 @@ def main():
     for p in sorted(old_pages & new_pages):
         a, b = identity(os.path.join(golden, p)), identity(os.path.join(new, p))
         for k in sorted(set(a) | set(b)):
+            if k in ('jsonld', 'headings') and isinstance(a.get(k), list) and isinstance(b.get(k), list):
+                if all(x in b[k] for x in a[k]):  # additions are allowed (per-tool JSON-LD, 'About this tool'); removals are not
+                    continue
             if a.get(k) != b.get(k):
                 bad += 1
                 print(f'DIFF {p} [{k}]\n   old: {str(a.get(k))[:200]}\n   new: {str(b.get(k))[:200]}')

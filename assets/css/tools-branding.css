@@ -19,8 +19,32 @@ body {
 }
 
 /* Topbar & Shell overrides */
+#lb-tools-header {
+  position: relative;
+  z-index: 9999 !important;
+}
+
 #lb-tools-header .lb-topbar {
+  position: relative;
+  z-index: 9999 !important;
   border-bottom: 1px solid #e5e7eb;
+}
+
+#lb-tools-header .lb-drop-panel {
+  z-index: 10000 !important;
+}
+
+#lb-tools-header .lb-mega-tile {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+}
+
+#lb-tools-header .lb-mega-tile img {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  flex-shrink: 0 !important;
+  object-fit: contain !important;
 }
 
 /* Inner App Header Bar */
