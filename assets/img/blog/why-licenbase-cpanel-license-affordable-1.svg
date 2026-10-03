@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Why LicenBase cPanel Licenses Are So Affordable</title>
+  <desc id="d">Diagram illustrating how LicenBase wholesale aggregation and automated IP infrastructure cut cPanel licensing costs.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Step 1: Bulk Aggregation -->
+  <rect x="40" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="6" rx="3" fill="#2563EB"/>
+  <circle cx="170" cy="110" r="30" fill="#EFF6FF"/>
+  <path d="M158 110h24M170 98v24" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <text x="170" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Bulk Wholesale Tier</text>
+  <text x="170" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Aggregating thousands</text>
+  <text x="170" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">of server licenses to</text>
+  <text x="170" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">unlock max volume tiers.</text>
+  <rect x="65" y="280" width="210" height="60" rx="10" fill="#F1F5F9"/>
+  <text x="170" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">Massive Volume Savings</text>
+
+  <!-- Step 2: Automated Gateway -->
+  <rect x="350" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="6" rx="3" fill="#10B981"/>
+  <circle cx="480" cy="110" r="30" fill="#ECFDF5"/>
+  <path d="M468 110l8 8 16-16" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Zero-Human Ops</text>
+  <text x="480" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Instant IP assignment API</text>
+  <text x="480" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">with zero manual overhead</text>
+  <text x="480" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">or billing friction.</text>
+  <rect x="375" y="280" width="210" height="60" rx="10" fill="#F1F5F9"/>
+  <text x="480" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#10B981" text-anchor="middle">Fully Automated IP Auth</text>
+
+  <!-- Step 3: End User Advantage -->
+  <rect x="660" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="6" rx="3" fill="#6366F1"/>
+  <circle cx="790" cy="110" r="30" fill="#EEF2FF"/>
+  <path d="M780 118V102l14 8-14 8z" fill="#6366F1"/>
+  <text x="790" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Wholesale Rates</text>
+  <text x="790" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Pass up to 70% direct</text>
+  <text x="790" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">savings to hosting firms</text>
+  <text x="790" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">with official binaries.</text>
+  <rect x="685" y="280" width="210" height="60" rx="10" fill="#F1F5F9"/>
+  <text x="790" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#6366F1" text-anchor="middle">Official Repo Compatibility</text>
+</svg>

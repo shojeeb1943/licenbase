@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">DirectAdmin Licensing Advantages for Web Hosting Providers</title>
+  <desc id="d">Why hosts choose DirectAdmin licenses via LicenBase: ultra-light memory footprint, source compiler flexibility, and low licensing fees.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="40" y="40" width="260" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="260" height="8" rx="4" fill="#6366F1"/>
+  <circle cx="170" cy="100" r="26" fill="#EEF2FF"/>
+  <text x="170" y="108" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#6366F1" text-anchor="middle">~400MB</text>
+  <text x="170" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Ultra-Low RAM</text>
+  <text x="170" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Runs lean daemons with</text>
+  <text x="170" y="205" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">minimal memory footprint,</text>
+  <text x="170" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">leaving RAM for websites.</text>
+  <rect x="65" y="275" width="210" height="50" rx="10" fill="#F1F5F9"/>
+  <text x="170" y="306" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#6366F1" text-anchor="middle">Max Resource Density</text>
+
+  <rect x="350" y="40" width="260" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="40" width="260" height="8" rx="4" fill="#0EA5E9"/>
+  <circle cx="480" cy="100" r="26" fill="#E0F2FE"/>
+  <path d="M472 100l6 6 12-12" stroke="#0EA5E9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="480" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">CustomBuild 2.0</text>
+  <text x="480" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Full compilation control</text>
+  <text x="480" y="205" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">for Nginx, OpenLiteSpeed,</text>
+  <text x="480" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Apache &amp; PHP versions.</text>
+  <rect x="375" y="275" width="210" height="50" rx="10" fill="#F1F5F9"/>
+  <text x="480" y="306" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0EA5E9" text-anchor="middle">Tailored Web Stack</text>
+
+  <rect x="660" y="40" width="260" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="40" width="260" height="8" rx="4" fill="#10B981"/>
+  <circle cx="790" cy="100" r="26" fill="#ECFDF5"/>
+  <text x="790" y="108" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#10B981" text-anchor="middle">$$$</text>
+  <text x="790" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">LicenBase Pricing</text>
+  <text x="790" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">Predictable monthly rates</text>
+  <text x="790" y="205" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">with zero sudden price</text>
+  <text x="790" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">hikes on account tiers.</text>
+  <rect x="685" y="275" width="210" height="50" rx="10" fill="#F1F5F9"/>
+  <text x="790" y="306" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#10B981" text-anchor="middle">Maximum Margin</text>
+</svg>

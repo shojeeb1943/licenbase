@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">CloudLinux Architecture and LicenBase Savings</title>
+  <desc id="d">CloudLinux OS server isolation showing CageFS and LVE Manager resource control paired with LicenBase wholesale pricing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Left: CloudLinux Isolation Pillars -->
+  <rect x="50" y="40" width="410" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="50" y="40" width="410" height="8" rx="4" fill="#0284C7"/>
+  <text x="75" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">CloudLinux Multi-Tenant Defense</text>
+  
+  <rect x="75" y="115" width="360" height="70" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+  <text x="95" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0369A1">CageFS File System Isolation</text>
+  <text x="95" y="168" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Traps each user in a private virtualized jail</text>
+
+  <rect x="75" y="200" width="360" height="70" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+  <text x="95" y="230" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0369A1">LVE Manager Resource Limits</text>
+  <text x="95" y="253" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Enforces CPU, IO, IOPS, and RAM throttles</text>
+
+  <rect x="75" y="285" width="360" height="70" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+  <text x="95" y="315" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0369A1">PHP Selector &amp; Hardened PHP</text>
+  <text x="95" y="338" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Allows per-user PHP versions securely</text>
+
+  <!-- Right: LicenBase Value Addition -->
+  <rect x="500" y="40" width="410" height="340" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="500" y="40" width="410" height="8" rx="4" fill="#10B981"/>
+  <text x="525" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">LicenBase Cost Optimization</text>
+
+  <circle cx="545" cy="135" r="12" fill="#ECFDF5"/>
+  <path d="M540 135l3 3 7-7" stroke="#10B981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="570" y="141" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#1E293B">Wholesale CloudLinux Rates</text>
+
+  <circle cx="545" cy="190" r="12" fill="#ECFDF5"/>
+  <path d="M540 190l3 3 7-7" stroke="#10B981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="570" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#1E293B">Zero Reboot Activation &amp; Conversion</text>
+
+  <circle cx="545" cy="245" r="12" fill="#ECFDF5"/>
+  <path d="M540 245l3 3 7-7" stroke="#10B981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="570" y="251" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#1E293B">Official Upstream RPM Mirror Updates</text>
+
+  <circle cx="545" cy="300" r="12" fill="#ECFDF5"/>
+  <path d="M540 300l3 3 7-7" stroke="#10B981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="570" y="306" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#1E293B">Huge Savings on Fleet Server Deployments</text>
+</svg>

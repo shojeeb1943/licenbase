@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LicenBase Complete Hosting License Suite Pricing Breakdown</title>
+  <desc id="d">Overview of LicenBase wholesale pricing across cPanel, WHMCS, Plesk, LiteSpeed, CloudLinux, and Softaculous.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Row 1: Left Card -->
+  <rect x="50" y="40" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="50" y="40" width="260" height="6" rx="3" fill="#2563EB"/>
+  <text x="75" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel &amp; WHM</text>
+  <text x="75" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Solo, Admin, Pro &amp; Premier</text>
+  <text x="75" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Instant IP Auto-Activation</text>
+  <rect x="75" y="145" width="210" height="30" rx="6" fill="#EFF6FF"/>
+  <text x="180" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#2563EB" text-anchor="middle">Wholesale Discount</text>
+
+  <!-- Row 1: Middle Card -->
+  <rect x="350" y="40" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="40" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="375" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">WHMCS Billing</text>
+  <text x="375" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Full Automation &amp; Addons</text>
+  <text x="375" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Unlimited Client Modules</text>
+  <rect x="375" y="145" width="210" height="30" rx="6" fill="#ECFDF5"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">Wholesale Discount</text>
+
+  <!-- Row 1: Right Card -->
+  <rect x="650" y="40" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="650" y="40" width="260" height="6" rx="3" fill="#6366F1"/>
+  <text x="675" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Plesk Panel</text>
+  <text x="675" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Web Admin, Pro &amp; Host</text>
+  <text x="675" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Linux &amp; Windows Support</text>
+  <rect x="675" y="145" width="210" height="30" rx="6" fill="#EEF2FF"/>
+  <text x="780" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#6366F1" text-anchor="middle">Wholesale Discount</text>
+
+  <!-- Row 2: Left Card -->
+  <rect x="50" y="220" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="50" y="220" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="75" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">LiteSpeed Web Server</text>
+  <text x="75" y="280" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">1-Worker to 8-Worker Enterprise</text>
+  <text x="75" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">LSCache WordPress Turbo</text>
+  <rect x="75" y="325" width="210" height="30" rx="6" fill="#FEF3C7"/>
+  <text x="180" y="345" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#B45309" text-anchor="middle">Wholesale Discount</text>
+
+  <!-- Row 2: Middle Card -->
+  <rect x="350" y="220" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="220" width="260" height="6" rx="3" fill="#0284C7"/>
+  <text x="375" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">CloudLinux OS</text>
+  <text x="375" y="280" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Shared &amp; Shared Pro Editions</text>
+  <text x="375" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">CageFS Kernel Isolation</text>
+  <rect x="375" y="325" width="210" height="30" rx="6" fill="#E0F2FE"/>
+  <text x="480" y="345" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#0369A1" text-anchor="middle">Wholesale Discount</text>
+
+  <!-- Row 2: Right Card -->
+  <rect x="650" y="220" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="650" y="220" width="260" height="6" rx="3" fill="#8B5CF6"/>
+  <text x="675" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Security &amp; Backups</text>
+  <text x="675" y="280" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Imunify360 &amp; JetBackup 5</text>
+  <text x="675" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Softaculous 1-Click Installer</text>
+  <rect x="675" y="325" width="210" height="30" rx="6" fill="#F3E8FF"/>
+  <text x="780" y="345" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#6D28D9" text-anchor="middle">Wholesale Discount</text>
+</svg>
