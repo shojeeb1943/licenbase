@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://licenbase.com/sitemap.xml
+Sitemap: https://licenbase.com/tools/sitemap.xml

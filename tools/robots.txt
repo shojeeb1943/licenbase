@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /projects/
+Disallow: /auth/
+
+Host: https://licenbase.com/tools/
+Sitemap: https://licenbase.com/tools/sitemap.xml
