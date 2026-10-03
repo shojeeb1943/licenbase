@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8623],{58623:(a,c,l)=>{l.r(c),l.d(c,{DomainCostCalculator:()=>t});var s=l(63852);let t=(0,l(8927).i)("domain-cost-calculator",s.A)}}]);

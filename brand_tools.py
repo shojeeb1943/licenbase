@@ -112,7 +112,7 @@ def patch_html_file(file_path):
         }
     }
     html = re.sub(
-        r'<script type="application/ld\+json">.*?</script>',
+        r'<script type="application/ld\+json">(?:(?!</script>).)*?"@type":"WebApplication"(?:(?!</script>).)*?</script>',
         f'<script type="application/ld+json">{json.dumps(schema_clean, separators=(",", ":"))}</script>',
         html,
         flags=re.S

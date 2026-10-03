@@ -667,6 +667,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/apache-virtualhost-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/backup-retention-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -693,6 +698,16 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/cable-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/chmod-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/chown-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -727,12 +742,47 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/csv-to-json/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/data-unit-converter/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://licenbase.com/tools/dns-tools/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/domain-age-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/domain-availability-checker/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/domain-cost-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/domain-expiry-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/domain-name-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/domain-transfer-checklist/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -763,6 +813,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/hosting-profit-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/htaccess-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -807,6 +862,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/json-to-csv/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/json-to-typescript/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/json-to-yaml/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/jwt-decoder/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -823,6 +893,16 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/mac-formatter/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/meta-description-checker/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/meta-title-checker/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -847,7 +927,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/nginx-config-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/open-graph-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/oui-lookup/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/password-entropy-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -897,12 +992,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/robots-txt-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/routing-tools/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/rsync-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/schema-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/scp-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/security-headers/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/serp-preview/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -917,7 +1037,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/sitemap-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/softaculous-license-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/sql-formatter/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/sri-hash-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -942,6 +1077,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/umask-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/uptime-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -953,6 +1093,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/user-agent-parser/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/utm-builder/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -993,6 +1138,21 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/wireless-tools/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/xml-formatter/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/yaml-formatter/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/yaml-to-json/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>

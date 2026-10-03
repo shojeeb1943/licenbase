@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2105],{72105:(e,r,t)=>{t.r(r),t.d(r,{SqlFormatter:()=>a});var s=t(3613);let a=(0,t(26055).D)("sql-formatter",s.A)}}]);
