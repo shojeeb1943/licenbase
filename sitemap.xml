@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://licenbase.com/about</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.5</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/about.png</image:loc>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/best-control-panel-reseller-hosting</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-best-control-panel-reseller-hosting.png</image:loc>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/best-server-management-tools</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-best-server-management-tools.png</image:loc>
@@ -53,7 +53,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/buy-cpanel-license-vps</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-buy-cpanel-license-vps.png</image:loc>
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-licenses-explained</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-licenses-explained.png</image:loc>
@@ -103,7 +103,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-whmcs-license-guide</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-guide.png</image:loc>
@@ -123,7 +123,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/choose-right-cpanel-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-choose-right-cpanel-license.png</image:loc>
@@ -133,7 +133,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-cost-2026</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-cost-2026.png</image:loc>
@@ -163,7 +163,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-vs-almalinux</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-vs-almalinux.png</image:loc>
@@ -193,7 +193,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vs-directadmin</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-directadmin.png</image:loc>
@@ -203,7 +203,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vs-plesk-vs-directadmin</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-plesk-vs-directadmin.png</image:loc>
@@ -213,7 +213,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vs-plesk</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-plesk.png</image:loc>
@@ -233,7 +233,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/directadmin-license-pricing</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-directadmin-license-pricing.png</image:loc>
@@ -243,7 +243,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-cpanel-license-errors</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-cpanel-license-errors.png</image:loc>
@@ -253,7 +253,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-whmcs-cron-job-errors</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-whmcs-cron-job-errors.png</image:loc>
@@ -283,7 +283,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog.png</image:loc>
@@ -293,7 +293,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-cloudlinux-cpanel</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-cloudlinux-cpanel.png</image:loc>
@@ -303,7 +303,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-cpanel-license-linux</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-cpanel-license-linux.png</image:loc>
@@ -323,7 +323,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-directadmin-almalinux-9</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-directadmin-almalinux-9.png</image:loc>
@@ -333,7 +333,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-litespeed-on-cpanel</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-litespeed-on-cpanel.png</image:loc>
@@ -343,7 +343,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/is-directadmin-cheaper-than-cpanel</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-is-directadmin-cheaper-than-cpanel.png</image:loc>
@@ -373,7 +373,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/litespeed-vs-apache</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-apache.png</image:loc>
@@ -393,7 +393,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/secure-linux-vps-hosting-websites</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-secure-linux-vps-hosting-websites.png</image:loc>
@@ -413,7 +413,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-types-explained</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-types-explained.png</image:loc>
@@ -453,7 +453,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/cloudlinux-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/cloudlinux.png</image:loc>
@@ -463,7 +463,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/contact</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.5</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/contact.png</image:loc>
@@ -473,7 +473,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/cpanel-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/cpanel.png</image:loc>
@@ -483,7 +483,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/deals</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/deals.png</image:loc>
@@ -493,7 +493,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/imunify360-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/imunify360.png</image:loc>
@@ -503,7 +503,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/home.png</image:loc>
@@ -513,7 +513,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/jetbackup-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/jetbackup.png</image:loc>
@@ -523,7 +523,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/license-policy</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -533,7 +533,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/litespeed-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/litespeed.png</image:loc>
@@ -543,7 +543,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/plesk-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/plesk.png</image:loc>
@@ -553,7 +553,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/privacy-policy</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -563,7 +563,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/products</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/products.png</image:loc>
@@ -573,7 +573,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/refund-policy</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -583,7 +583,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/sitepad-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/sitepad.png</image:loc>
@@ -593,7 +593,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/softaculous-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/softaculous.png</image:loc>
@@ -603,7 +603,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/terms-of-service</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -613,7 +613,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/virtualizor-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/virtualizor.png</image:loc>
@@ -623,7 +623,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/webuzo-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/webuzo.png</image:loc>
@@ -633,7 +633,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/whmcs-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/whmcs.png</image:loc>
@@ -643,7 +643,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/whmreseller-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/whmreseller.png</image:loc>
@@ -653,7 +653,257 @@
   </url>
   <url>
     <loc>https://licenbase.com/wp-squared-license</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/about/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/acl-generator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/bandwidth-calculator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/base64-encoder/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/cable-calculator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/cidr-reference/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/color-converter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/conflict-checker/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/cron-parser/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/data-unit-converter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/dns-tools/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/email-diagnostics/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/hash-generator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/http-headers/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ip-converter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ip-enumerator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ipv6-reference/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ipv6-tools/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/json-formatter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/jwt-decoder/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/lorem-generator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/mac-formatter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/mtu-calculator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/network-calculator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/network-tester/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/oui-lookup/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/password-generator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ping-traceroute/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/port-reference/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/port-scanner/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/protocol-reference/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/random-generator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/redirect-checker/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/reference-hub/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/regex-tester/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/routing-tools/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/security-headers/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ssl-checker/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/subnet-calculator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/subnet-mask-converter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/timestamp-converter/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/uptime-calculator/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/url-encoder/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/user-agent-parser/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/vlan-manager/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/vlsm-planner/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/whois-lookup/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/wifi-qr/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/wireless-tools/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>

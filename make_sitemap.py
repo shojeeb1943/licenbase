@@ -88,6 +88,19 @@ for f in sorted(p.replace("\\", "/") for p in glob.glob("*.html") + glob.glob("b
         f"  </url>"
     )
 
+# NetDash tools (static build in tools/): canonical URLs end in a slash; /projects and /auth are sign-in only, 404 is an error page
+for f in sorted(p.replace("\\", "/") for p in glob.glob("tools/index.html") + glob.glob("tools/*/index.html")):
+    slug = f[len("tools/"):-len("index.html")]
+    if slug.startswith(("projects", "auth", "404")):
+        continue
+    urls.append(
+        f"  <url>\n"
+        f"    <loc>{BASE}/tools/{slug}</loc>\n"
+        f"    <lastmod>{lastmod(f)}</lastmod>\n"
+        f"    <priority>{'0.8' if not slug else '0.6'}</priority>\n"
+        f"  </url>"
+    )
+
 sitemap_content = (
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
