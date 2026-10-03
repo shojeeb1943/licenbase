@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7265],{7265:(c,e,l)=>{l.r(e),l.d(e,{SoftaculousLicenseCalculator:()=>u});var s=l(12446);let u=(0,l(8927).i)("softaculous-license-calculator",s.A)}}]);

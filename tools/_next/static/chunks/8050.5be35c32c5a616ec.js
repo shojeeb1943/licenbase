@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8050],{8050:(e,l,a)=>{a.r(l),a.d(l,{CpanelLicenseCalculator:()=>s});var c=a(12446);let s=(0,a(8927).i)("cpanel-license-calculator",c.A)}}]);

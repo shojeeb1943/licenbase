@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4424],{74424:(a,t,c)=>{c.r(t),c.d(t,{BandwidthCostCalculator:()=>s});var l=c(15176);let s=(0,c(8927).i)("bandwidth-cost-calculator",l.A)}}]);

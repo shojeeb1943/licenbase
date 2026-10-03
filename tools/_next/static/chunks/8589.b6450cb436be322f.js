@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8589],{88589:(a,c,e)=>{e.r(c),e.d(c,{HostingPackagePricingCalculator:()=>l});var i=e(13716);let l=(0,e(8927).i)("hosting-package-pricing-calculator",i.A)}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9338],{69338:(e,a,l)=>{l.r(a),l.d(a,{HostingBreakEvenCalculator:()=>s});var r=l(93054);let s=(0,l(8927).i)("hosting-break-even-calculator",r.A)}}]);

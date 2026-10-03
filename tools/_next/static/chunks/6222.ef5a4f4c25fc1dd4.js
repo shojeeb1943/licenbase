@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6222],{16222:(t,a,l)=>{l.r(a),l.d(a,{HostingProfitCalculator:()=>s});var r=l(63387);let s=(0,l(8927).i)("hosting-profit-calculator",r.A)}}]);

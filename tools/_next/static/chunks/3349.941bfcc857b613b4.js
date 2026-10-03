@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3349],{53349:(s,t,a)=>{a.r(t),a.d(t,{HostingCostCalculator:()=>l});var c=a(64575);let l=(0,a(8927).i)("hosting-cost-calculator",c.A)}}]);
