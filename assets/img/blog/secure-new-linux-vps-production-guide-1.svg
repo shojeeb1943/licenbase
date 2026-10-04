@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Production Linux VPS Hardening Blueprint</title>
+  <desc id="d">Multi-tier security architecture for production Linux virtual private servers.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Column 1 -->
+  <rect x="40" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="6" rx="3" fill="#2563EB"/>
+  <circle cx="170" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="170" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A" text-anchor="middle">Core System Layer</text>
+  <text x="170" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">OS Lockdown</text>
+  <text x="170" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Disable root password login</text>
+  <text x="170" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Automate security updates</text>
+  <text x="170" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Deploy sudo non-root user</text>
+  <rect x="65" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="170" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB" text-anchor="middle">Base Hardening</text>
+
+  <!-- Column 2 -->
+  <rect x="350" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <circle cx="480" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A" text-anchor="middle">Network Filter Layer</text>
+  <text x="480" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Firewall & Rate Limit</text>
+  <text x="480" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">UFW/CSF restrictive policy</text>
+  <text x="480" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Fail2ban brute-force jails</text>
+  <text x="480" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Block unauthorized ports</text>
+  <rect x="375" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="480" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F59E0B" text-anchor="middle">Active Defense</text>
+
+  <!-- Column 3 -->
+  <rect x="660" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="6" rx="3" fill="#10B981"/>
+  <circle cx="790" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="790" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A" text-anchor="middle">Application Layer</text>
+  <text x="790" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">WAF & Isolation</text>
+  <text x="790" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">CloudLinux CageFS</text>
+  <text x="790" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Imunify360 malware scanner</text>
+  <text x="790" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Offsite encrypted backups</text>
+  <rect x="685" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="790" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981" text-anchor="middle">App Protection</text>
+</svg>

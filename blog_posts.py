@@ -4224,5 +4224,715 @@ reboot</code></div>
   <p>Software licensing should empower your hosting business, not strangle your growth. By implementing these five optimization strategies, you can immediately reduce your monthly overhead and protect your operating margins. Browse our <a href="/cpanel-license" {LINK}>cPanel licenses</a>, <a href="/whmcs-license" {LINK}>WHMCS licenses</a>, and <a href="/cloudlinux-license" {LINK}>CloudLinux licenses</a>, check our <a href="/about" {LINK}>about page</a>, or contact our 24/7 technical team on the <a href="/contact" {LINK}>contact desk</a> to start saving today.</p>
 </section>
 """,
+    },
+    {
+        "slug": 'vps-server-setup-licenses-guide',
+        "title": 'VPS Server Setup Guide: Essential Licenses for a New VPS',
+        "seo_title": 'VPS Server Setup Guide: Essential Licenses',
+        "description": 'Comprehensive guide to choosing control panel, web server, and security software licenses when deploying and provisioning a new Linux virtual private server.',
+        "excerpt": 'Discover which control panel, web server, and security software licenses you need before launching a new Linux VPS hosting server.',
+        "category": 'Guide',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Architectural diagram of core VPS software licenses and server stack layers',
+        "faq": [
+            ('What is the bare minimum license required to run a web hosting VPS?', 'If you are hosting websites for clients or running complex web applications, a web hosting control panel license such as cPanel, Plesk, or DirectAdmin is the bare minimum requirement. If you run a single custom application, you can manage the server via SSH without a commercial control panel.'),
+            ('Do I need both CloudLinux OS and a control panel license?', 'While not strictly required for a personal server, combining CloudLinux OS with a control panel is essential for multi-tenant or commercial hosting. CloudLinux isolates user accounts into lightweight virtual environments (LVE), preventing single tenant resource hogging.'),
+            ('How does LiteSpeed Web Server improve VPS performance compared to Apache?', 'LiteSpeed Web Server operates on an event-driven architecture that handles thousands of concurrent connections with minimal RAM and CPU overhead. It provides built-in HTTP/3 and server-level LSCache acceleration that dramatically cuts page load times.'),
+            ('Can I add security licenses like Imunify360 after launching my server?', 'Yes. Security licenses like Imunify360 and backup software like JetBackup can be installed and activated at any time. However, configuring them during initial server provisioning ensures zero vulnerability windows before client sites go live.'),
+            ('Can I acquire all essential VPS licenses in a single discounted bundle?', 'Yes. LicenBase provides wholesale automated IP licenses for cPanel, CloudLinux, LiteSpeed, Plesk, WHMCS, and Imunify360, allowing hosting providers and agencies to save up to 70% compared to retail vendor pricing.'),
+        ],
+        "og": {'headline': 'VPS Setup License Guide', 'subtitle': 'Essential licenses for your new server', 'icon': 'server'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('litespeed-license', 'LiteSpeed Web Server'), ('cloudlinux-license', 'CloudLinux OS license')],
+        "body": f"""
+<p class="text-lg text-gray-600">Provisioning a new Linux Virtual Private Server (VPS) is the first step toward launching a scalable hosting environment. However, an unconfigured operating system cannot deliver modern web hosting services out of the box. To deliver high-speed web delivery, multi-tenant isolation, automated client billing, and bulletproof security, you must select the right commercial software licenses. This guide outlines the essential licensing layers required to build a world-class production VPS hosting infrastructure.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">The Core VPS Software Licensing Stack</h2>
+  <p>A production web hosting VPS relies on four foundational software tiers. Each tier addresses a distinct operational requirement, ranging from basic server management to active cyber defense and tenant resource governance.</p>
+  <figure class="my-2"><img src="/assets/img/blog/vps-server-setup-licenses-guide-1.svg" alt="Architectural diagram of core VPS software licenses and server stack layers" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Core architectural layers and software licenses for a production Linux VPS.</figcaption></figure>
+  <p>Understanding how these licensing tiers interact ensures that you do not overspend on redundant tools while ensuring your server remains performant, secure, and easy to maintain over long production lifecycles.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Tier 1: Web Hosting Control Panel Licenses</h2>
+  <p>The control panel is the administrative engine of your VPS. It automates domain DNS routing, virtual host configuration, database management, SSL certificate provisioning, and email inbox management. Choosing the right panel determines your ongoing operational overhead:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>cPanel &amp; WHM:</strong> The global standard for commercial web hosting. A <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a> provides an intuitive end-user interface and robust WHM server administration tools. For VPS environments, cPanel offers Cloud Solo (1 account), Admin (5 accounts), Pro (30 accounts), and Premier tiers.</li>
+    <li><strong>Plesk Obsidian:</strong> An exceptional alternative for agencies, developers, and Windows or Linux hybrid environments. A <a href="/plesk-license" class="font-semibold text-brand hover:underline">Plesk license</a> features built-in Docker management, Git integration, and the popular WordPress Toolkit.</li>
+    <li><strong>DirectAdmin &amp; Webuzo:</strong> Lightweight control panels ideal for smaller VPS instances with 1 GB to 2 GB of RAM where minimizing background memory usage is paramount.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Tier 2: High-Performance Web Server Licenses</h2>
+  <p>Default web servers like Apache prefork can struggle under heavy traffic spikes or concurrent PHP execution. Replacing Apache with an enterprise web server drastically increases concurrent request handling without requiring expensive hardware upgrades:</p>
+  <p>Deploying a <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed license</a> replaces Apache seamlessly while reading existing <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">.htaccess</code> rewrite rules. LiteSpeed utilizes an event-driven architecture, delivers native HTTP/3 and QUIC support, and includes enterprise LSCache plugins that accelerate WordPress, WooCommerce, and Magento stores by up to 300%.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Tier 3: Multi-Tenant Operating System &amp; Isolation</h2>
+  <p>When hosting multiple client websites or applications on a single VPS, one poorly optimized script or runaway database query can exhaust CPU cores and crash the entire machine. A standard Linux distribution lacks account-level resource throttling.</p>
+  <p>Upgrading your base OS with a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> solves this vulnerability through Lightweight Virtual Environments (LVE). CloudLinux enforces strict per-user CPU, memory, I/O, and concurrent process limits. Additionally, CageFS encapsulates each user into an isolated virtual file system, preventing malicious scripts from inspecting neighboring accounts or reading server configuration files.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Tier 4: Security, Automated Backups, and Billing Automation</h2>
+  <p>To operate a commercial hosting business or manage agency client infrastructure reliably, you must add automation and defensive software layers:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Active Security Suite:</strong> An <a href="/imunify360-license" class="font-semibold text-brand hover:underline">Imunify360 license</a> provides a multi-layer security suite featuring automated malware scanning, real-time Web Application Firewall (WAF) rule sets, proactive PHP defense, and distributed brute-force protection.</li>
+    <li><strong>Enterprise Backup Engine:</strong> A <a href="/jetbackup-license" class="font-semibold text-brand hover:underline">JetBackup license</a> enables automated, incremental, and encrypted offsite backups to AWS S3, Wasabi, or remote SSH destinations with self-service client restoration.</li>
+    <li><strong>Billing &amp; Automation:</strong> A <a href="/whmcs-license" class="font-semibold text-brand hover:underline">WHMCS license</a> automates client onboarding, payment gateway processing, automated cPanel account creation, domain registrations, and ticketing support.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Recommended VPS Licensing Stacks by Server Use Case</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Server Use Case</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Control Panel</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Web Server</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">OS & Security</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Estimated Monthly Cost</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Freelancer / Single Agency VPS</td><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Admin (5 Accounts)</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed WebADC / 1-Worker</td><td class="border-b border-gray-100 px-4 py-3 align-top">Standard Linux + Free Firewall</td><td class="border-b border-gray-100 px-4 py-3 align-top">Cost-effective entry</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">High-Traffic WordPress VPS</td><td class="border-b border-gray-100 px-4 py-3 align-top">Plesk Web Pro / cPanel</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed Enterprise + LSCache</td><td class="border-b border-gray-100 px-4 py-3 align-top">CloudLinux + Imunify360</td><td class="border-b border-gray-100 px-4 py-3 align-top">Maximum speed & uptime</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Commercial Reseller Node</td><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Premier VPS</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed Web Server</td><td class="border-b border-gray-100 px-4 py-3 align-top">CloudLinux OS + Imunify360</td><td class="border-b border-gray-100 px-4 py-3 align-top">Enterprise tenant isolation</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Lean Budget VPS (1-2 GB RAM)</td><td class="border-b border-gray-100 px-4 py-3 align-top">Webuzo / DirectAdmin</td><td class="border-b border-gray-100 px-4 py-3 align-top">OpenLiteSpeed / Nginx</td><td class="border-b border-gray-100 px-4 py-3 align-top">Standard AlmaLinux + CSF</td><td class="border-b border-gray-100 px-4 py-3 align-top">Ultra-low memory footprint</td></tr></tbody></table></div>
+  <p>By sourcing your software through <a href="/deals" class="font-semibold text-brand hover:underline">LicenBase bundle stacks</a>, you can activate official, unmodified software licenses instantly via our automated IP licensing network. Explore our <a href="/about" class="font-semibold text-brand hover:underline">about page</a> and review our transparent <a href="/license-policy" class="font-semibold text-brand hover:underline">license policy</a> to learn how we help businesses worldwide scale their server infrastructure sustainably.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'best-control-panel-vps-2026',
+        "title": 'Best Control Panel for VPS in 2026: cPanel vs DirectAdmin vs Plesk',
+        "seo_title": 'Best Control Panel for VPS in 2026',
+        "description": 'Compare cPanel, DirectAdmin, and Plesk on resource footprint, licensing costs, feature sets, and ease of management for Linux virtual private servers in 2026.',
+        "excerpt": 'Compare cPanel, DirectAdmin, and Plesk to choose the ideal hosting control panel for your VPS resources and budget.',
+        "category": 'Comparison',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Comparison matrix of cPanel, DirectAdmin, and Plesk control panels for VPS hosting',
+        "faq": [
+            ('Which control panel consumes the least RAM on a VPS?', 'DirectAdmin has the lowest idle memory footprint, typically idling at around 150 MB to 300 MB of RAM. In contrast, cPanel & WHM requires at least 1 GB to 2 GB of RAM to run comfortably with its full suite of background daemons and analytics tools.'),
+            ('Can I run Docker containers natively in cPanel or Plesk?', 'Plesk offers the best native Docker container management with a full graphical UI for pulling images, configuring port bindings, and managing environment variables. cPanel supports Docker on select Linux distributions via command-line utilities and third-party plugins.'),
+            ('Is Plesk better suited for web development agencies than cPanel?', 'Plesk is often preferred by web agencies and developers because of its visual WordPress Toolkit, Git integration, node.js/Ruby support, and clean single-pane dashboard. cPanel remains the unmatched leader for traditional shared hosting customer onboarding.'),
+            ('Can I migrate cPanel accounts directly to Plesk or DirectAdmin?', 'Yes. Both Plesk and DirectAdmin provide automated cPanel migration wizards that convert cPanel full backup archives (.tar.gz), restoring domains, databases, email accounts, and SSL certificates automatically.'),
+        ],
+        "og": {'headline': 'Best VPS Control Panel', 'subtitle': 'cPanel vs DirectAdmin vs Plesk 2026', 'icon': 'layout-grid'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('plesk-license', 'Plesk license'), ('cloudlinux-license', 'CloudLinux OS license')],
+        "body": f"""
+<p class="text-lg text-gray-600">Selecting the ideal hosting control panel for your Virtual Private Server (VPS) directly impacts server performance, operational efficiency, and monthly recurring licensing costs. With virtualization environments demanding optimal CPU and memory usage, choosing between industry giants like cPanel &amp; WHM, Plesk Obsidian, and DirectAdmin requires a thorough evaluation of architecture, features, and pricing models in 2026.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Executive Comparison Matrix for VPS Environments</h2>
+  <p>Each control panel brings specific strengths tailored to different administration workflows. The matrix below outlines how the three major control panels compare across key operational criteria on a virtual private server.</p>
+  <figure class="my-2"><img src="/assets/img/blog/best-control-panel-vps-2026-1.svg" alt="Comparison matrix of cPanel, DirectAdmin, and Plesk control panels for VPS hosting" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Feature, performance, and licensing comparison between cPanel, DirectAdmin, and Plesk in 2026.</figcaption></figure>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">cPanel &amp; WHM: The Industry Gold Standard</h2>
+  <p>cPanel remains the most recognizable and widely adopted control panel in the web hosting industry. Its dual-interface architecture provides WebHost Manager (WHM) for root server administration and the client-facing cPanel dashboard for domain management.</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Strengths:</strong> Massive third-party plugin ecosystem, comprehensive automated email deliverability tools, native AutoSSL integration, and universal customer familiarity.</li>
+    <li><strong>Resource Overhead:</strong> Requires a minimum of 2 GB of RAM and 20 GB of storage for smooth operation.</li>
+    <li><strong>Licensing Model:</strong> Account-tiered licensing via Cloud Solo, Admin, Pro, and Premier tiers. Getting a <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a> through LicenBase gives you access to full official updates at wholesale rates.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Plesk Obsidian: The Developer and Agency Favorite</h2>
+  <p>Plesk Obsidian has evolved into the premier control panel for web development agencies, digital studios, and multi-framework application hosting. Unlike cPanel, Plesk is cross-platform, supporting both Linux and Windows Server environments.</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Strengths:</strong> Market-leading WordPress Toolkit with automated staging, cloning, and security hardening. Native support for Node.js, Python, Ruby, Git webhooks, and Docker container orchestration.</li>
+    <li><strong>Resource Overhead:</strong> Moderate RAM usage (typically idling around 500 MB to 1 GB of RAM).</li>
+    <li><strong>Licensing:</strong> Available in Web Admin (10 domains), Web Pro (30 domains), and Web Host (unlimited domains) tiers. Sourcing a <a href="/plesk-license" class="font-semibold text-brand hover:underline">Plesk license</a> provides flexible domain limits tailored for agency client rosters.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">DirectAdmin: The High-Speed Lightweight Contender</h2>
+  <p>For system administrators prioritizing raw speed, lightweight footprint, and predictable flat-rate costs, DirectAdmin has become a formidable competitor to cPanel.</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Strengths:</strong> CustomBuild compilation engine allows administrators to compile custom Apache, Nginx, LiteSpeed, or OpenLiteSpeed web stacks with custom PHP modules. Extremely fast page loading and low idle RAM consumption.</li>
+    <li><strong>Resource Overhead:</strong> Operates efficiently on lightweight VPS instances with as little as 1 GB of RAM.</li>
+    <li><strong>Compatibility:</strong> Integrates smoothly with <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS</a> and security suites, making it an excellent cost-effective base for shared hosting nodes.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Feature Comparison Table</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Feature Criteria</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">cPanel & WHM</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Plesk Obsidian</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">DirectAdmin</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Minimum Recommended RAM</td><td class="border-b border-gray-100 px-4 py-3 align-top">2 GB - 4 GB</td><td class="border-b border-gray-100 px-4 py-3 align-top">1 GB - 2 GB</td><td class="border-b border-gray-100 px-4 py-3 align-top">1 GB</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Operating System Support</td><td class="border-b border-gray-100 px-4 py-3 align-top">AlmaLinux, Rocky, Ubuntu</td><td class="border-b border-gray-100 px-4 py-3 align-top">AlmaLinux, Ubuntu, Debian, Windows</td><td class="border-b border-gray-100 px-4 py-3 align-top">AlmaLinux, Rocky, Debian, Ubuntu</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">WordPress Management</td><td class="border-b border-gray-100 px-4 py-3 align-top">WP Toolkit (cPanel plugin)</td><td class="border-b border-gray-100 px-4 py-3 align-top">Native WP Toolkit (Full Suite)</td><td class="border-b border-gray-100 px-4 py-3 align-top">Softaculous / WP-CLI</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Docker & Git Integration</td><td class="border-b border-gray-100 px-4 py-3 align-top">CLI / Limited Plugin</td><td class="border-b border-gray-100 px-4 py-3 align-top">Full Graphical UI & Webhooks</td><td class="border-b border-gray-100 px-4 py-3 align-top">CLI / Git plugin</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Primary Target Audience</td><td class="border-b border-gray-100 px-4 py-3 align-top">Shared Hosting & Resellers</td><td class="border-b border-gray-100 px-4 py-3 align-top">Agencies, Developers, WP Sites</td><td class="border-b border-gray-100 px-4 py-3 align-top">Lean VPS & Budget Hosting</td></tr></tbody></table></div>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Final Verdict: Which Panel Should You Deploy?</h2>
+  <p>If you run a commercial hosting company or cater to non-technical end users who expect a standard cPanel interface, deploy cPanel on your VPS. If you run a digital agency building bespoke WordPress, Node.js, or multi-domain client projects, Plesk Obsidian offers unmatched developer productivity. If your VPS has modest hardware resources or you want to eliminate per-account licensing bloat, DirectAdmin is a premier choice.</p>
+  <p>To reduce your monthly control panel operational expenses, review our <a href="/deals" class="font-semibold text-brand hover:underline">discounted license stacks</a> or check our <a href="/about" class="font-semibold text-brand hover:underline">company mission</a> to see how LicenBase delivers high-speed automated IP licensing.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'vps-security-checklist-after-deployment',
+        "title": 'VPS Server Security Checklist: 15 Configurations After Deployment',
+        "seo_title": 'VPS Server Security Checklist: 15 Steps',
+        "description": 'Follow this 15-step post-deployment Linux VPS security checklist to harden SSH, configure firewalls, install anti-malware, and isolate server tenants.',
+        "excerpt": 'A comprehensive 15-point checklist to secure and harden a newly deployed Linux virtual private server before hosting websites.',
+        "category": 'Security & Licensing',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": '15-point post-deployment security hardening checklist for Linux VPS instances',
+        "faq": [
+            ('Why should I change the default SSH port 22 on my VPS?', 'Automated bots constantly scan public IPv4 addresses on port 22 looking for weak passwords. Moving SSH to a non-standard port (e.g. port 2222 or 52222) reduces automated brute-force connection noise in your auth logs by over 95%.'),
+            ('Is a software firewall like UFW or CSF enough to protect a web hosting server?', 'A firewall controls incoming network ports, but it cannot inspect application-level web traffic for SQL injections or WordPress vulnerabilities. You need a dedicated Web Application Firewall (WAF) such as Imunify360 or ModSecurity to inspect HTTP payloads.'),
+            ('What is the advantage of using SSH keys over complex root passwords?', 'SSH cryptographic keys (such as ED25519 or RSA 4096-bit) are virtually impossible to brute-force, eliminate password dictionary attacks, and prevent credential interception via network sniffing.'),
+            ('How does CloudLinux CageFS improve VPS security for multi-tenant servers?', "CageFS encapsulates each user account inside a private virtualized file system. Users cannot see other tenants' files, processes, database credentials, or system configuration details, completely stopping cross-account symlink attacks."),
+        ],
+        "og": {'headline': 'VPS Security Checklist', 'subtitle': '15 essential steps after deployment', 'icon': 'shield-check'},
+        "related": [('cloudlinux-license', 'CloudLinux OS license'), ('cpanel-license', 'cPanel & WHM license'), ('imunify360-license', 'Imunify360 license')],
+        "body": f"""
+<p class="text-lg text-gray-600">Within minutes of provisioning a fresh Linux Virtual Private Server (VPS), automated bots and malicious scanners begin probing its public IP address for open ports, default passwords, and outdated software packages. Leaving a new VPS unhardened puts your client data, server reputation, and hosting uptime at severe risk. Follow this comprehensive 15-point security checklist immediately after OS deployment to build an impenetrable server perimeter.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Three Pillars of VPS Server Hardening</h2>
+  <p>Securing a Linux server requires a defense-in-depth approach spanning SSH access control, network firewall policies, and application runtime isolation.</p>
+  <figure class="my-2"><img src="/assets/img/blog/vps-security-checklist-after-deployment-1.svg" alt="15-point post-deployment security hardening checklist for Linux VPS instances" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Multi-stage security checklist for newly provisioned Linux VPS nodes.</figcaption></figure>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Pillar 1: System and SSH Access Hardening (Steps 1 to 5)</h2>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>1. Apply Immediate OS Kernel and Security Updates:</strong> Run <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">dnf update -y</code> (RHEL/AlmaLinux) or <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">apt update &amp;&amp; apt upgrade -y</code> (Ubuntu/Debian) to patch known CVE vulnerabilities.</li>
+    <li><strong>2. Create a Dedicated Non-Root User with Sudo Privileges:</strong> Avoid logging in as root directly. Create an administrative user and grant password-protected sudo access.</li>
+    <li><strong>3. Enforce SSH Key Authentication (ED25519):</strong> Generate an ED25519 key pair on your local machine and copy the public key to <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">~/.ssh/authorized_keys</code>.</li>
+    <li><strong>4. Disable Root Login and Password Authentication:</strong> Edit <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">/etc/ssh/sshd_config</code> and set <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">PermitRootLogin no</code> and <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">PasswordAuthentication no</code>.</li>
+    <li><strong>5. Change the Default SSH Port:</strong> Relocate the listening port from 22 to a high non-standard port (such as 2244) to eliminate automated scanning bots.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Pillar 2: Network Perimeter and Firewall Defense (Steps 6 to 10)</h2>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>6. Deploy a Restrictive State Firewall:</strong> Install ConfigServer Security &amp; Firewall (CSF) or UFW. Block all incoming ports except 80 (HTTP), 443 (HTTPS), DNS, mail, and your custom SSH port.</li>
+    <li><strong>7. Configure Fail2ban / Login Monitoring:</strong> Implement intrusion prevention software that automatically bans IP addresses exhibiting repetitive failed login attempts.</li>
+    <li><strong>8. Disable Unused Network Services and Daemons:</strong> Audit listening ports with <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">ss -tulpn</code> and disable unneeded services like Telnet, RPC, or outdated FTP daemons.</li>
+    <li><strong>9. Enable SYN Flood and Port Scan Protection:</strong> Configure kernel sysctl parameters in <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">/etc/sysctl.conf</code> to enable TCP SYN cookies (<code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">net.ipv4.tcp_syncookies = 1</code>) and ignore ICMP ping broadcasts.</li>
+    <li><strong>10. Deploy Real-Time Anti-Malware Defense:</strong> Install an <a href="/imunify360-license" class="font-semibold text-brand hover:underline">Imunify360 license</a> or ClamAV daemon to actively scan uploaded files, quarantine malicious web shells, and block zero-day exploits.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Pillar 3: Application, Tenant Isolation &amp; Backups (Steps 11 to 15)</h2>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>11. Enforce Multi-Tenant Account Isolation:</strong> If running a hosting control panel like <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel &amp; WHM</a>, pair it with a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> to isolate tenants into virtualized CageFS sandboxes.</li>
+    <li><strong>12. Secure Shared Memory (/dev/shm):</strong> Mount the shared memory partition with <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">noexec,nosuid,nodev</code> options in <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">/etc/fstab</code> to prevent execution of unauthorized binary payloads.</li>
+    <li><strong>13. Configure Automated Security Patching:</strong> Enable automatic minor security updates via <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">dnf-automatic</code> or <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">unattended-upgrades</code> to patch zero-day kernel and library flaws.</li>
+    <li><strong>14. Enforce PHP Execution Restrictions:</strong> Disable dangerous PHP functions such as <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">exec, shell_exec, system, passthru, proc_open</code> across user php.ini templates.</li>
+    <li><strong>15. Establish Automated Encrypted Offsite Backups:</strong> Configure an automated backup utility like <a href="/jetbackup-license" class="font-semibold text-brand hover:underline">JetBackup</a> to push daily encrypted incremental snapshots to remote cloud storage.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Post-Hardening Verification and Audit</h2>
+  <p>Once you have configured these 15 settings, test your server perimeter from an external client machine. Confirm that root password logins are rejected, unauthorized ports drop incoming packets, and web applications operate within restricted user privileges.</p>
+  <p>To acquire genuine automated security and OS licenses at wholesale rates, visit our <a href="/deals" class="font-semibold text-brand hover:underline">license bundle catalogue</a> or review our <a href="/license-policy" class="font-semibold text-brand hover:underline">licensing policies</a>.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'how-to-install-cpanel-on-vps',
+        "title": 'How to Install cPanel on a VPS: Requirements, License & Setup Guide',
+        "seo_title": 'How to Install cPanel on a VPS Guide',
+        "description": 'Step-by-step tutorial on installing cPanel and WHM on a fresh Linux VPS, including OS prerequisites, networking setup, license activation, and initial config.',
+        "excerpt": 'Learn the exact requirements and step-by-step installation commands to deploy cPanel & WHM on a Linux virtual private server.',
+        "category": 'How-to',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Step-by-step pipeline for installing cPanel and WHM on a Linux VPS server',
+        "faq": [
+            ('Can I install cPanel on an existing server that already hosts websites?', 'No. cPanel & WHM must be installed on a fresh, clean minimal operating system install. Installing cPanel on a machine with existing Apache, PHP, or MySQL installations will cause package conflicts and fail the installation script.'),
+            ('Which operating systems are officially supported for cPanel installation in 2026?', 'cPanel officially supports enterprise Linux distributions including AlmaLinux 8/9, Rocky Linux 8/9, CloudLinux 8/9, and Ubuntu 20.04/22.04 LTS.'),
+            ('How long does the automated cPanel VPS installation take?', 'Depending on your VPS CPU core speed and network download bandwidth, the installation script typically takes between 15 and 45 minutes to compile and configure all system packages.'),
+            ('How do I activate my cPanel license after installation finishes?', 'If you ordered an automated IP license from LicenBase, simply run our one-line activation command in SSH. To verify status with official servers, execute /usr/local/cpanel/cpkeyclt.'),
+        ],
+        "og": {'headline': 'Install cPanel on VPS', 'subtitle': 'Prerequisites, license & setup guide', 'icon': 'server'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('cloudlinux-license', 'CloudLinux OS license'), ('litespeed-license', 'LiteSpeed Web Server')],
+        "body": f"""
+<p class="text-lg text-gray-600">Deploying cPanel &amp; WHM on a Virtual Private Server transforms a raw Linux virtual machine into a fully automated web hosting platform. However, because cPanel installs customized Apache, MySQL, PHP, and mail servers at the root system level, strict adherence to prerequisites and installation procedures is required. This step-by-step tutorial walks you through prerequisites, automated script execution, license activation, and post-installation tuning.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">cPanel VPS Installation Pipeline Overview</h2>
+  <p>The installation workflow consists of three primary phases: preparing the base operating system, executing the automated cPanel installer, and verifying software licenses and initial WHM configurations.</p>
+  <figure class="my-2"><img src="/assets/img/blog/how-to-install-cpanel-on-vps-1.svg" alt="Step-by-step pipeline for installing cPanel and WHM on a Linux VPS server" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">End-to-end installation pipeline for cPanel & WHM on a Linux virtual machine.</figcaption></figure>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Step 1: Verify Hardware &amp; OS Prerequisites</h2>
+  <p>Before launching the installer, confirm that your VPS satisfies the official cPanel minimum hardware requirements:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>CPU &amp; Memory:</strong> Minimum 1 vCPU and 2 GB RAM (4 GB RAM recommended for multi-site hosting).</li>
+    <li><strong>Disk Space:</strong> Minimum 20 GB of free storage (40 GB+ NVMe SSD recommended).</li>
+    <li><strong>Operating System:</strong> Clean, minimal install of AlmaLinux 8 or 9, Rocky Linux 8 or 9, or Ubuntu 22.04 LTS.</li>
+    <li><strong>Static Public IP:</strong> A dedicated, publicly reachable IPv4 address with valid reverse DNS (PTR).</li>
+    <li><strong>Fully Qualified Domain Name (FQDN):</strong> Set a valid hostname such as <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">server1.yourdomain.com</code>.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Step 2: Prepare the Base Operating System</h2>
+  <p>Log in to your VPS via SSH as the root user and execute the following preparatory commands to disable OS firewalls during setup, update packages, and set your server hostname:</p>
+  <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code># 1. Update system packages
+dnf update -y
+
+# 2. Set the Fully Qualified Domain Name (FQDN) hostname
+hostnamectl set-hostname server1.yourdomain.com
+
+# 3. Disable OS default firewalld to prevent port blocks during setup
+systemctl stop firewalld
+systemctl disable firewalld
+
+# 4. Install screen or tmux to prevent SSH session disconnects
+dnf install screen perl curl wget -y</code></pre></div>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Step 3: Run the Official cPanel &amp; WHM Installer</h2>
+  <p>Launch a screen session and execute the official cPanel installation script. Screen ensures that if your SSH connection drops, the installation continues unhindered in the background:</p>
+  <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code># Start a persistent screen session
+screen -S cpanel-install
+
+# Download and run the automated installation script
+cd /home &amp;&amp; curl -o latest -L https://securedownloads.cpanel.net/latest &amp;&amp; sh latest</code></pre></div>
+  <p>The installer will automatically download, compile, and configure the cPanel core binaries, Perl dependencies, Apache web server, and database daemons. This process usually completes within 20 to 45 minutes.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Step 4: Activate Your cPanel License &amp; Complete WHM Setup</h2>
+  <p>Once installation finishes, the terminal will display your direct WHM login URL (e.g., <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">https://YOUR-SERVER-IP:2087</code>). To activate your <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a>, run the official license synchronization command:</p>
+  <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code>/usr/local/cpanel/cpkeyclt</code></pre></div>
+  <p>If you are utilizing an automated wholesale IP license from LicenBase, execute your one-step licensing script provided in your client dashboard to bind your server IP instantly.</p>
+  <p>Next, open your browser and navigate to <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">https://YOUR-SERVER-IP:2087</code>. Log in with your root credentials, accept the End User License Agreement (EULA), configure your nameservers (e.g. <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">ns1.yourdomain.com</code> and <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">ns2.yourdomain.com</code>), and enter your contact email address.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Step 5: Post-Installation Server Stack Upgrades</h2>
+  <p>After your base cPanel &amp; WHM setup is running, upgrade your VPS stack for high performance and tenant security:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Deploy LiteSpeed Web Server:</strong> Install a <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed license</a> to replace standard Apache for high-speed HTTP/3 delivery and WordPress caching.</li>
+    <li><strong>Convert to CloudLinux:</strong> Run <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">cldeploy -k YOUR_KEY</code> with a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> to convert your OS seamlessly without reinstalling cPanel.</li>
+    <li><strong>Configure Automated Backups:</strong> Deploy <a href="/jetbackup-license" class="font-semibold text-brand hover:underline">JetBackup</a> for scheduled offsite backups.</li>
+  </ul>
+  <p>Explore our <a href="/deals" class="font-semibold text-brand hover:underline">discounted software stacks</a> and review our <a href="/license-policy" class="font-semibold text-brand hover:underline">transparent licensing policies</a> to power your cPanel VPS servers reliably.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'vps-license-cost-explained',
+        "title": 'VPS License Cost Explained: cPanel, CloudLinux, WHMCS & Addons',
+        "seo_title": 'VPS License Cost Explained: Full Guide',
+        "description": 'Detailed breakdown of software licensing costs for Linux VPS servers, covering control panels, OS isolation, billing automation, and security suites in 2026.',
+        "excerpt": 'A complete breakdown of monthly software licensing costs for control panels, web servers, billing systems, and security on a VPS.',
+        "category": 'Guide',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Monthly software licensing cost breakdown and budget distribution for a Linux VPS',
+        "faq": [
+            ('Why do software licenses often cost more than the raw VPS hardware?', 'Raw VPS compute (CPU, RAM, NVMe disk) is heavily commoditized, while enterprise software like cPanel, CloudLinux, and LiteSpeed requires continuous specialized engineering, security updates, and vendor support.'),
+            ('Can I run a commercial web hosting business on free open-source software alone?', 'Yes, you can run open-source stacks like Ubuntu, Nginx, and free panels like CyberPanel. However, commercial stacks provide automated user isolation, seamless billing integration with WHMCS, and enterprise support that reduces sysadmin labor costs.'),
+            ('How much can I save by using LicenBase automated IP licensing?', 'LicenBase provides genuine automated IP licensing at up to 50% to 70% below official retail prices, allowing small hosting providers and digital agencies to scale without crippling software overhead.'),
+            ('Are there hidden fees when scaling cPanel account tiers?', 'Official retail cPanel licenses charge per-account overage fees once you exceed 100 accounts on Premier. LicenBase offers predictable wholesale tiers that keep per-account licensing overhead flat and transparent.'),
+            ('How do multi-tenant software stacks protect business margins?', 'Software stacks like CloudLinux and LiteSpeed increase server density, allowing you to safely host three to five times more client accounts on a single VPS without hardware degradation, lowering hardware footprint.'),
+        ],
+        "og": {'headline': 'VPS License Costs', 'subtitle': 'cPanel, CloudLinux, WHMCS & Addons', 'icon': 'credit-card'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('whmcs-license', 'WHMCS billing license'), ('cloudlinux-license', 'CloudLinux OS license')],
+        "body": f"""
+<p class="text-lg text-gray-600">When budgeting for a new Virtual Private Server (VPS), many system administrators and hosting entrepreneurs focus exclusively on raw compute costs (CPU cores, RAM, and NVMe SSD storage). However, for commercial web hosting or high-traffic production workloads, software licensing often represents the majority of monthly infrastructure expenditure. This guide provides a comprehensive breakdown of VPS software licensing costs and actionable strategies to minimize overhead in 2026.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Where Does Your VPS Software Budget Go?</h2>
+  <p>A full-featured commercial hosting stack incorporates multiple software layers. The diagram below illustrates how monthly software licensing expenses are typically distributed across a production VPS.</p>
+  <figure class="my-2"><img src="/assets/img/blog/vps-license-cost-explained-1.svg" alt="Monthly software licensing cost breakdown and budget distribution for a Linux VPS" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Software licensing cost distribution across core VPS infrastructure layers.</figcaption></figure>
+  <p>Understanding the exact cost breakdown allows infrastructure managers to optimize licensing expenditures while maintaining enterprise software stability.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">1. Control Panel Licensing Costs</h2>
+  <p>The control panel represents the core administrative expense for any multi-tenant VPS:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>cPanel &amp; WHM:</strong> Official retail pricing starts at approximately $17.49/mo for Solo (1 account), $27.99/mo for Admin (5 accounts), $39.99/mo for Pro (30 accounts), and $59.99+/mo for Premier. Sourcing a <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a> through wholesale automated IP providers reduces this expense substantially.</li>
+    <li><strong>Plesk Obsidian:</strong> Official retail pricing ranges from $15.50/mo for Web Admin to $45.00/mo for Web Host. A wholesale <a href="/plesk-license" class="font-semibold text-brand hover:underline">Plesk license</a> provides significant savings for agency rosters.</li>
+    <li><strong>DirectAdmin &amp; Webuzo:</strong> Range from $5.00/mo to $29.00/mo, making them budget-friendly options for low-margin hosting nodes.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">2. High-Performance Web Server &amp; Acceleration</h2>
+  <p>To serve concurrent web requests without CPU bottlenecks, enterprise web servers offer immense value:</p>
+  <p>An official <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed license</a> costs between $10.00/mo (Starter 1-Worker / 2 GB RAM limit) and $46.00/mo (Web Host 2-Worker or Ultra). While LiteSpeed represents an additional monthly line item, it frequently allows a single VPS to handle three to five times more website traffic, saving money on underlying hardware compute upgrades.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">3. Multi-Tenant Operating System &amp; Security Licensing</h2>
+  <p>Protecting server stability and client isolation requires specialized operating system extensions and security software:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>CloudLinux OS Shared:</strong> Retail pricing averages $16.00 to $18.00 per server monthly. A <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> pays for itself by preventing runaway scripts from causing server-wide outages.</li>
+    <li><strong>Imunify360:</strong> Automated security suite pricing ranges from $12.00/mo (single user) to $30.00+/mo (unlimited users) for comprehensive malware scanning and real-time WAF protection.</li>
+    <li><strong>JetBackup:</strong> Enterprise backup automation typically costs $5.95 to $7.95 per month per server.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">4. Client Billing &amp; Automation Licensing</h2>
+  <p>Automating customer signup, invoicing, automated cPanel provisioning, and support ticketing requires billing software:</p>
+  <p>Official <a href="/whmcs-license" class="font-semibold text-brand hover:underline">WHMCS license</a> pricing starts at $15.95/mo for Starter (up to 250 active clients) and escalates to $34.95/mo (Plus) and $44.95/mo (Professional). Sourcing WHMCS via wholesale automated licensing provides access to essential business automation at a fraction of retail overhead.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Total Cost Comparison: Retail vs LicenBase Wholesale</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Software Component</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Typical Retail Price</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">LicenBase Wholesale Price</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Monthly Savings</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Admin VPS (5 Accounts)</td><td class="border-b border-gray-100 px-4 py-3 align-top">$27.99 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">$13.50 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">Over 50% Savings</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">CloudLinux OS Shared</td><td class="border-b border-gray-100 px-4 py-3 align-top">$18.00 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">$9.00 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">50% Savings</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed Web Server (2-Worker)</td><td class="border-b border-gray-100 px-4 py-3 align-top">$36.00 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">$16.50 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">Over 54% Savings</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">WHMCS Billing Automation</td><td class="border-b border-gray-100 px-4 py-3 align-top">$24.95 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">$11.00 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">Over 55% Savings</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Complete Stack Total</td><td class="border-b border-gray-100 px-4 py-3 align-top">$106.94 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">$50.00 / mo</td><td class="border-b border-gray-100 px-4 py-3 align-top">Save $56.94 every month</td></tr></tbody></table></div>
+  <p>By purchasing through <a href="/deals" class="font-semibold text-brand hover:underline">LicenBase combo stacks</a>, hosting businesses can cut licensing bills in half while running 100% official, unmodified software binaries. Review our <a href="/about" class="font-semibold text-brand hover:underline">company background</a> and read our <a href="/refund-policy" class="font-semibold text-brand hover:underline">guarantees</a> to get started.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'choose-cpanel-license-vps-vs-dedicated',
+        "title": 'How to Choose a cPanel License: VPS vs Dedicated Server Plans',
+        "seo_title": 'Choose cPanel License: VPS vs Dedicated',
+        "description": 'Understand the architectural and pricing differences between cPanel VPS Cloud and Dedicated Metal licenses to pick the most cost-effective tier for your server.',
+        "excerpt": 'Learn the differences between cPanel VPS Cloud and Dedicated Metal tiers to choose the right license and avoid overpaying.',
+        "category": 'Guide',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Comparison diagram between cPanel VPS Cloud and Dedicated Metal licensing models',
+        "faq": [
+            ('Can I use a cPanel VPS (Cloud) license on a bare-metal dedicated server?', 'No. cPanel license validation systems automatically detect whether the server is running on a hypervisor (such as KVM, Xen, Proxmox, or VMware). If no virtualization hypervisor is detected, cPanel requires a Dedicated Metal license.'),
+            ('Can I run a Dedicated cPanel license on a VPS?', 'While a Dedicated license will physically validate on a virtual machine, doing so is financially inefficient because Dedicated licenses cost significantly more than VPS Cloud licenses.'),
+            ('How does cPanel count accounts for tier limits on a VPS?', 'cPanel counts every unique user account listed in /var/cpanel/users, including active, suspended, and reseller sub-accounts. Parked or addon domains inside an existing account do not count toward your tier quota.'),
+            ('Can I upgrade my VPS license tier instantly when adding new client accounts?', 'Yes. Upgrades between Solo, Admin, Pro, and Premier take effect instantly via automated license synchronization without requiring software reinstallation or server reboots.'),
+            ('Does cPanel charge for suspended accounts?', 'Yes. cPanel counts all configured accounts regardless of their active or suspended status. To reduce your account tally, you must take a full backup and terminate the unused account.'),
+        ],
+        "og": {'headline': 'cPanel VPS vs Dedicated', 'subtitle': 'Choosing the right server plan', 'icon': 'layers'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('plesk-license', 'Plesk license'), ('cloudlinux-license', 'CloudLinux OS license')],
+        "body": f"""
+<p class="text-lg text-gray-600">Selecting the right cPanel &amp; WHM license is one of the most critical decisions when provisioning server infrastructure. Since cPanel introduced per-account tier licensing, choosing between a VPS (Cloud) license and a Dedicated (Metal) license requires understanding your hypervisor environment, planned account density, and scaling roadmap. This guide clarifies the structural differences to help you avoid overspending.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">cPanel Licensing Architecture: Cloud vs Metal</h2>
+  <p>cPanel licenses are bifurcated based on whether the underlying operating system runs inside a virtualized hypervisor or directly on bare-metal physical hardware.</p>
+  <figure class="my-2"><img src="/assets/img/blog/choose-cpanel-license-vps-vs-dedicated-1.svg" alt="Comparison diagram between cPanel VPS Cloud and Dedicated Metal licensing models" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Structural differences and account tiering between cPanel VPS and Dedicated plans.</figcaption></figure>
+  <p>Understanding this fundamental division ensures that you license your server hardware correctly from day one without paying for unnecessary enterprise tier structures.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">cPanel VPS (Cloud) License Tiers</h2>
+  <p>cPanel VPS licenses are engineered specifically for virtual machines running on hypervisors like KVM, Proxmox, VMware ESXi, OpenVZ, or cloud providers (AWS EC2, Google Cloud, DigitalOcean, Linode). They are available in four account tiers:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>cPanel Solo (1 Account):</strong> Ideal for personal portfolio servers, standalone ecommerce stores, or single web applications requiring WHM system tools.</li>
+    <li><strong>cPanel Admin (Up to 5 Accounts):</strong> Perfect for small freelance web agencies managing up to five distinct client domains in isolated cPanel accounts.</li>
+    <li><strong>cPanel Pro (Up to 30 Accounts):</strong> Designed for growing digital agencies and small shared hosting nodes hosting up to 30 isolated accounts.</li>
+    <li><strong>cPanel Premier VPS (100 Accounts Included):</strong> The standard tier for commercial web hosting nodes on virtualized cloud instances. Additional accounts above 100 are billed in tiered bulk blocks.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">cPanel Dedicated (Metal) License Tiers</h2>
+  <p>Dedicated licenses are mandated whenever cPanel is deployed on bare-metal physical iron with no virtualization layer between the Linux operating system and the hardware:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>cPanel Premier Metal (100 Accounts Included):</strong> Dedicated servers can only license the Premier tier. There are no Solo, Admin, or Pro entry tiers for bare metal servers.</li>
+    <li><strong>Hardware Detection:</strong> cPanel automatically queries DMI system tables and kernel parameters. If it detects physical hardware, Cloud license validation keys will fail.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Tier Comparison: VPS vs Dedicated</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Plan Tier</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Environment</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Account Limit</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Best For</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Solo Cloud</td><td class="border-b border-gray-100 px-4 py-3 align-top">Virtual Machine (VPS)</td><td class="border-b border-gray-100 px-4 py-3 align-top">1 Account</td><td class="border-b border-gray-100 px-4 py-3 align-top">Single website or developer testbed</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Admin Cloud</td><td class="border-b border-gray-100 px-4 py-3 align-top">Virtual Machine (VPS)</td><td class="border-b border-gray-100 px-4 py-3 align-top">5 Accounts</td><td class="border-b border-gray-100 px-4 py-3 align-top">Boutique agency or small multi-site setup</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Pro Cloud</td><td class="border-b border-gray-100 px-4 py-3 align-top">Virtual Machine (VPS)</td><td class="border-b border-gray-100 px-4 py-3 align-top">30 Accounts</td><td class="border-b border-gray-100 px-4 py-3 align-top">Growing digital agency or multi-client server</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Premier Cloud</td><td class="border-b border-gray-100 px-4 py-3 align-top">Virtual Machine (VPS)</td><td class="border-b border-gray-100 px-4 py-3 align-top">100+ Accounts</td><td class="border-b border-gray-100 px-4 py-3 align-top">Commercial VPS hosting clusters</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Premier Metal</td><td class="border-b border-gray-100 px-4 py-3 align-top">Bare Metal Dedicated</td><td class="border-b border-gray-100 px-4 py-3 align-top">100+ Accounts</td><td class="border-b border-gray-100 px-4 py-3 align-top">High-density enterprise bare-metal servers</td></tr></tbody></table></div>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Optimizing Your cPanel Licensing Budget</h2>
+  <p>To keep monthly licensing overhead low:</p>
+  <ol class="list-disc space-y-2 pl-6">
+    <li><strong>Audit Inactive Accounts:</strong> Regularly terminate suspended or abandoned accounts to remain within lower tier thresholds (e.g. staying under 30 accounts for cPanel Pro).</li>
+    <li><strong>Use Addon Domains Responsibly:</strong> Multiple development domains for the same client can be hosted as Addon Domains inside a single cPanel user account rather than creating separate WHM accounts.</li>
+    <li><strong>Leverage Wholesale Automated Licensing:</strong> Sourcing your <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a> or <a href="/plesk-license" class="font-semibold text-brand hover:underline">Plesk license</a> through LicenBase gives you access to official software binaries with significant monthly savings.</li>
+  </ol>
+  <p>Check our <a href="/deals" class="font-semibold text-brand hover:underline">license bundle deals</a> or read our <a href="/license-policy" class="font-semibold text-brand hover:underline">license policy</a> for more information on scaling your server infrastructure.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'vps-ssh-connection-problems-troubleshooting',
+        "title": 'VPS Server Not Connecting? Common SSH Issues and Solutions',
+        "seo_title": 'VPS SSH Connection Troubleshooting',
+        "description": 'Diagnose and fix SSH connection errors on your Linux VPS, including port timeouts, permission denied publickey issues, firewall blocks, and host key changes.',
+        "excerpt": 'Troubleshoot and fix the most common SSH connection failures, timeout errors, and authentication problems on Linux VPS instances.',
+        "category": 'How-to',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Diagnostic troubleshooting flowchart for resolving SSH connection failures on a Linux VPS',
+        "faq": [
+            ('What causes Connection Timed Out errors when attempting to SSH into a VPS?', 'Connection timeouts usually indicate that network packets cannot reach the SSH daemon. Common causes include an unconfigured cloud provider firewall (e.g. AWS Security Group), an aggressive CSF/UFW rule, or attempting to connect on default port 22 after changing it to a custom port.'),
+            ('How do I fix Permission denied (publickey) errors?', 'This error occurs when the SSH server rejects your private key. Check that your local client is loading the correct key (ssh -i /path/to/key), that ~/.ssh/authorized_keys on the server contains the matching public key, and that directory permissions are set strictly to 700 for ~/.ssh and 600 for authorized_keys.'),
+            ('What should I do if WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED appears?', "This warning occurs when the server's public host key does not match the key cached in your local ~/.ssh/known_hosts (often following an OS reinstallation). Remove the stale entry using ssh-keygen -R your_vps_ip."),
+            ('How can I access my VPS if SSH is completely locked out?', 'Every reputable cloud and VPS provider offers an out-of-band Web Console or VNC viewer in their management portal. You can log in via this graphical terminal to review /var/log/secure, restart sshd, and fix firewall rules.'),
+            ('Why does SSH disconnect with Broken Pipe or Connection Reset by Peer?', 'Broken pipe errors occur when intermediate stateful firewalls drop idle TCP sessions. You can prevent drops by adding ServerAliveInterval 60 in your local ~/.ssh/config file.'),
+        ],
+        "og": {'headline': 'Fix VPS SSH Issues', 'subtitle': 'Common connection errors & solutions', 'icon': 'zap'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('cloudlinux-license', 'CloudLinux OS license'), ('litespeed-license', 'LiteSpeed Web Server')],
+        "body": f"""
+<p class="text-lg text-gray-600">Being locked out of your Linux Virtual Private Server due to an SSH connection failure can halt web hosting operations and disrupt client deployments. Whether caused by firewall blocks, corrupted file permissions, wrong port configurations, or SSH daemon crashes, troubleshooting SSH errors systematically restores access quickly. This guide breaks down the most frequent SSH connection issues and their exact technical solutions.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">SSH Diagnostic Troubleshooting Decision Flow</h2>
+  <p>When an SSH connection fails, diagnosing the problem follows a three-stage hierarchy: network connectivity, daemon service state, and cryptographic authentication.</p>
+  <figure class="my-2"><img src="/assets/img/blog/vps-ssh-connection-problems-troubleshooting-1.svg" alt="Diagnostic troubleshooting flowchart for resolving SSH connection failures on a Linux VPS" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Step-by-step diagnostic workflow for diagnosing and fixing Linux VPS SSH issues.</figcaption></figure>
+  <p>Isolating whether the fault lies in packet transport, firewall filtering, or credential validation allows you to restore administrative connectivity within minutes.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Issue 1: Connection Timed Out (Port Inaccessible)</h2>
+  <p>A timeout error indicates that TCP packets sent from your client machine are not receiving a response (SYN-ACK) from the server. Common root causes include:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Cloud Provider Security Groups:</strong> Cloud platforms like AWS, Google Cloud, and Oracle Cloud enforce external network firewalls. Ensure incoming TCP traffic on your SSH port is allowed from your IP address.</li>
+    <li><strong>Local Software Firewall Block:</strong> If you installed CSF or UFW on your VPS and changed the SSH port without updating the firewall configuration, incoming connections will be dropped.</li>
+    <li><strong>ISP Port Filtering:</strong> Some public or corporate Wi-Fi networks block outbound traffic on non-standard ports.</li>
+  </ul>
+  <p>To diagnose verbose connection attempts, run SSH with the verbose flag:</p>
+  <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code>ssh -vvv -p 2244 user@YOUR_SERVER_IP</code></pre></div>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Issue 2: Permission Denied (publickey, gssapi-keyex, password)</h2>
+  <p>This error occurs when the SSH server rejects the credentials provided by your SSH client. To resolve authentication failures:</p>
+  <ol class="list-disc space-y-2 pl-6">
+    <li><strong>Specify the Exact Key Path:</strong> Ensure your SSH command points to your private key: <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">ssh -i ~/.ssh/id_ed25519 user@YOUR_SERVER_IP</code>.</li>
+    <li><strong>Fix Server-Side Permissions:</strong> OpenSSH strictly enforces file permission security. If directory permissions are too open, sshd ignores the authorized_keys file:
+      <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code>chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+chown -R user:user ~/.ssh</code></pre></div>
+    </li>
+    <li><strong>Verify Password Authentication Config:</strong> If attempting to log in via password, verify that <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">PasswordAuthentication yes</code> is set in <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">/etc/ssh/sshd_config</code>.</li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Issue 3: Remote Host Identification Has Changed</h2>
+  <p>When you reinstall your VPS operating system or reassign an existing IP address, the server generates a new host key. Your local client detects this mismatch and blocks the connection to protect against man-in-the-middle attacks.</p>
+  <p>To clear the stale host key from your local machine, execute:</p>
+  <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code>ssh-keygen -R YOUR_SERVER_IP</code></pre></div>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Issue 4: Emergency Access via Out-of-Band Web Console</h2>
+  <p>If SSH remains unreachable due to a fatal configuration syntax error or firewall lockout, access your VPS using your hosting provider's web-based VNC/Serial Console:</p>
+  <ol class="list-disc space-y-2 pl-6">
+    <li>Log into your VPS hosting provider management portal and launch the <strong>Emergency Web Console</strong>.</li>
+    <li>Log in using your root username and password.</li>
+    <li>Inspect the authentication log file for specific error messages:
+      <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code># On RHEL, AlmaLinux, Rocky Linux
+tail -f /var/log/secure
+
+# On Ubuntu, Debian
+tail -f /var/log/auth.log</code></pre></div>
+    </li>
+    <li>Restart the SSH daemon to apply configuration corrections:
+      <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code>systemctl restart sshd</code></pre></div>
+    </li>
+  </ol>
+  <p>For high-reliability VPS hosting infrastructure with automated software updates and licensing, explore our <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a> options, <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS</a>, and <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed stacks</a> at LicenBase.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'secure-new-linux-vps-production-guide',
+        "title": 'How to Secure a New Linux VPS Before Hosting Production Websites',
+        "seo_title": 'Secure a New Linux VPS for Production',
+        "description": 'Essential baseline hardening guide for new Linux VPS instances: root lockdown, SSH keys, automated security patches, and intrusion prevention.',
+        "excerpt": 'Master the essential security hardening steps every sysadmin must apply to a fresh Linux VPS before launching production web applications.',
+        "category": 'Security & Licensing',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Production Linux VPS multi-layer security hardening architecture and protocols',
+        "faq": [
+            ('Why should I never host websites directly under the root user account?', 'Running web servers or CMS scripts under the root user means that any PHP vulnerability or remote code execution exploit immediately compromises the entire operating system, giving attackers full control over kernel, networking, and all server data.'),
+            ('What is the difference between an intrusion detection system and a firewall?', 'A firewall controls network packet filtering based on IP addresses and port numbers. An Intrusion Detection System (IDS/IPS) inspects application traffic, log patterns, and system calls to identify and block malicious activities such as brute-force attacks and SQL injections.'),
+            ('Can CloudLinux OS prevent cross-site contamination on a shared VPS?', "Yes. CloudLinux utilizes CageFS to encapsulate each hosting account into an isolated virtual file system. Even if an attacker compromises a vulnerable WordPress installation, they cannot navigate the server file tree or read other tenants' files."),
+            ('How frequently should I audit listening ports on my VPS?', 'You should audit listening ports immediately after deploying new applications and routinely once a month using netstat or ss commands to ensure unauthorized services are not exposed to the internet.'),
+            ('How does Imunify360 protect WordPress websites hosted on a VPS?', 'Imunify360 incorporates real-time Web Application Firewall (WAF) rule sets, automated malware quarantine, and proactive PHP exploit blockers that neutralize known and zero-day vulnerabilities.'),
+            ('What is the best way to secure SSH key pairs on client machines?', 'Always encrypt your private SSH key with a strong passphrase using ED25519 cryptography, and never share or commit private keys to version control repositories.'),
+        ],
+        "og": {'headline': 'Secure New Linux VPS', 'subtitle': 'Hardening steps before hosting sites', 'icon': 'lock'},
+        "related": [('cloudlinux-license', 'CloudLinux OS license'), ('cpanel-license', 'cPanel & WHM license'), ('imunify360-license', 'Imunify360 license')],
+        "body": f"""
+<p class="text-lg text-gray-600">Deploying a new Linux Virtual Private Server is fast and accessible, but taking a raw VPS into production without hardening invites automated attacks, crypto-mining malware, and data breaches. Every public IPv4 address is subjected to thousands of malicious probes daily. Applying rigorous security hardening across system access, network filtering, and application runtime layers guarantees that your production web applications remain safe and operational.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Production Multi-Layer Security Architecture</h2>
+  <p>Effective Linux security requires a defense-in-depth model that guards against vulnerabilities at the operating system, network, and application layers.</p>
+  <figure class="my-2"><img src="/assets/img/blog/secure-new-linux-vps-production-guide-1.svg" alt="Production Linux VPS multi-layer security hardening architecture and protocols" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Defense-in-depth architecture for production Linux virtual private servers.</figcaption></figure>
+  <p>Building multiple overlapping security perimeters ensures that if a single layer is breached, secondary defensive mechanisms prevent root system takeover, credential harvesting, or data exfiltration across client boundaries.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Phase 1: Operating System &amp; Identity Hardening</h2>
+  <p>Start by restricting administrative access to authenticated individuals using cryptographic credentials:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Lock Down Direct Root SSH Access:</strong> Create an unprivileged user, add them to the wheel/sudo group, and disable direct root login in <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">/etc/ssh/sshd_config</code>.</li>
+    <li><strong>Mandate SSH Key Pairs:</strong> Use modern ED25519 keys and completely disable password-based authentication to eliminate brute-force attack vectors.</li>
+    <li><strong>Relocate Default SSH Port:</strong> Change your SSH listening port from 22 to a non-standard high port (such as 2288) to filter out automated scanning bots.</li>
+    <li><strong>Automate Security Patches:</strong> Configure automated security package updates using <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">dnf-automatic</code> or <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">unattended-upgrades</code> to patch kernel and library vulnerabilities automatically.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Phase 2: Network Perimeter and Firewall Hardening</h2>
+  <p>Filter all inbound and outbound traffic to expose only strictly necessary web and mail ports:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Default-Deny Firewall Policy:</strong> Use CSF, firewalld, or UFW to close all ports by default. Open only port 80 (HTTP), 443 (HTTPS), your custom SSH port, and mail ports if hosting email.</li>
+    <li><strong>Deploy Fail2ban / Login Jails:</strong> Protect SSH, FTP, and control panel login endpoints from automated credential stuffing by automatically banning offending IP addresses after three failed attempts.</li>
+    <li><strong>Harden TCP/IP Stack Parameters:</strong> Edit <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">/etc/sysctl.conf</code> to protect against SYN flood attacks and disable ICMP redirect acceptance:
+      <div class="overflow-x-auto rounded-xl bg-navy p-4 text-sm leading-relaxed text-gray-100"><pre><code>net.ipv4.tcp_syncookies = 1
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.icmp_echo_ignore_broadcasts = 1</code></pre></div>
+    </li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Phase 3: Web Server &amp; Tenant Isolation</h2>
+  <p>When hosting multiple client websites or CMS platforms (like WordPress, Joomla, or Magento), application-level isolation is vital:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Deploy Multi-Tenant User Isolation:</strong> Running <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel &amp; WHM</a> alongside a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> encapsulates each hosting account into an isolated CageFS sandbox, preventing unauthorized cross-account traversal.</li>
+    <li><strong>Install Real-Time WAF and Malware Defense:</strong> Deploy an <a href="/imunify360-license" class="font-semibold text-brand hover:underline">Imunify360 license</a> to inspect live HTTP traffic for SQL injections, malicious script uploads, and cross-site scripting exploits.</li>
+    <li><strong>Disable Dangerous PHP Functions:</strong> Restrict functions such as <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">exec, shell_exec, system, passthru, proc_open, popen</code> in the main PHP configuration.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Phase 4: Backup Integrity and Disaster Recovery</h2>
+  <p>Even the most hardened server requires an offsite disaster recovery plan. Configure <a href="/jetbackup-license" class="font-semibold text-brand hover:underline">JetBackup</a> to export encrypted incremental snapshots daily to cloud storage destinations such as AWS S3 or Wasabi. Offsite backups guarantee instant business continuity in the event of hardware failures, datacenter outages, or ransomware extortion attempts.</p>
+  <p>To license your production web hosting stack affordably, browse our <a href="/deals" class="font-semibold text-brand hover:underline">discounted license stacks</a>, review our <a href="/about" class="font-semibold text-brand hover:underline">company background</a>, and read our <a href="/license-policy" class="font-semibold text-brand hover:underline">license policies</a>.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'vps-running-slow-causes-and-fixes',
+        "title": 'VPS Server Running Slow? 10 Common Causes and Performance Fixes',
+        "seo_title": 'VPS Server Running Slow: 10 Fixes',
+        "description": 'Identify and resolve Linux VPS performance bottlenecks: CPU throttling, RAM exhaustion, disk I/O wait, database lockups, and unoptimized web server workers.',
+        "excerpt": 'Learn how to diagnose and fix the 10 most common causes of slow VPS performance, high CPU loads, and out-of-memory crashes.',
+        "category": 'How-to',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Diagnostic diagram for identifying and fixing slow VPS performance and CPU bottlenecks',
+        "faq": [
+            ('How do I know if my slow VPS is suffering from CPU throttling or RAM exhaustion?', 'Run htop or top in SSH. If CPU usage shows 100% or high iowait (wa percentage in top), your disk or CPU is saturated. If free memory is near zero and swap usage is actively climbing, your server is swapping memory to disk, causing severe lag.'),
+            ('Why does replacing Apache with LiteSpeed Web Server dramatically speed up a VPS?', 'Apache spawns heavy worker processes per connection, consuming large amounts of RAM and CPU under traffic spikes. LiteSpeed uses an asynchronous event-driven architecture that handles thousands of concurrent requests with minimal RAM, delivering built-in server-level caching.'),
+            ('What is disk iowait and how do I fix high iowait on a VPS?', 'High iowait indicates that CPU cores are idling while waiting for slow disk read/write operations to complete. Common causes include unindexed MySQL queries, heavy unbuffered logging, or noisy neighbors on shared storage. Fix it by enabling query caching, upgrading to NVMe storage, or tuning MySQL buffers.'),
+            ('How does CloudLinux prevent a single website from slowing down an entire VPS?', 'CloudLinux enforces Lightweight Virtual Environments (LVE) that place hard caps on CPU, RAM, IOPS, and concurrent processes per user. If one client site experiences a traffic surge or runaway script, only that specific account is throttled while neighboring sites remain fast.'),
+        ],
+        "og": {'headline': 'Fix Slow VPS Server', 'subtitle': '10 common causes and performance fixes', 'icon': 'cpu'},
+        "related": [('litespeed-license', 'LiteSpeed Web Server'), ('cloudlinux-license', 'CloudLinux OS license'), ('cpanel-license', 'cPanel & WHM license')],
+        "body": f"""
+<p class="text-lg text-gray-600">A slow or unresponsive Virtual Private Server directly damages user experience, increases bounce rates, and lowers search engine rankings. Because virtualized environments share host resources or operate under strict memory and vCPU allocations, performance bottlenecks can stem from hardware constraints, unoptimized web servers, slow database queries, or noisy neighbor interference. This guide analyzes the 10 most common causes of VPS sluggishness and provides actionable technical fixes.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">10 Common VPS Performance Bottlenecks</h2>
+  <p>Diagnosing server slowdowns requires identifying whether the bottleneck originates in CPU exhaustion, memory swapping, storage I/O wait, or application concurrency limits.</p>
+  <figure class="my-2"><img src="/assets/img/blog/vps-running-slow-causes-and-fixes-1.svg" alt="Diagnostic diagram for identifying and fixing slow VPS performance and CPU bottlenecks" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Common performance bottlenecks and acceleration strategies for Linux virtual servers.</figcaption></figure>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Top 10 Causes and Performance Fixes</h2>
+  <ol class="list-disc space-y-2 pl-6">
+    <li><strong>1. Memory Exhaustion and Aggressive Swapping:</strong> When RAM is exhausted, the Linux kernel swaps memory pages to disk, slowing performance to a crawl. Check memory status with <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">free -m</code>. Adjust swappiness via <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">sysctl vm.swappiness=10</code> and add physical RAM or optimize PHP memory limits.</li>
+    <li><strong>2. Outdated Web Server Architecture (Apache Prefork Overhead):</strong> Traditional Apache prefork MPM creates a separate heavy process for each HTTP connection. Upgrading to a high-speed <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed license</a> replaces Apache seamlessly, drastically cutting CPU and RAM utilization while accelerating dynamic PHP delivery.</li>
+    <li><strong>3. Unindexed or Slow MySQL / MariaDB Queries:</strong> Run <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">mysqltuner.pl</code> to identify slow queries and adjust <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">innodb_buffer_pool_size</code> to allocate 60-70% of available RAM on dedicated database nodes.</li>
+    <li><strong>4. High Disk I/O Wait (iowait):</strong> Inspect disk latency using <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">iostat -xz 1</code>. If <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">%util</code> is consistently above 85%, move intensive logging to RAM disks or migrate to NVMe SSD storage.</li>
+    <li><strong>5. Uncontrolled Single Tenant Resource Hogging:</strong> On multi-tenant servers, one compromised WordPress site running runaway cron jobs can freeze the VPS. Deploying a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> enforces strict per-user CPU, RAM, and IOPS throttling via LVE Manager.</li>
+    <li><strong>6. Missing PHP Opcode Caching (OPcache):</strong> Ensure Zend OPcache is enabled in <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">php.ini</code> with sufficient memory (<code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">opcache.memory_consumption=128</code>) to store precompiled script bytecode in RAM.</li>
+    <li><strong>7. Brute-Force Bot Traffic and XML-RPC Attacks:</strong> Thousands of bot attacks hammering <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">xmlrpc.php</code> or <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">wp-login.php</code> exhaust web server worker pools. Deploy <a href="/imunify360-license" class="font-semibold text-brand hover:underline">Imunify360</a> or Cloudflare edge rules to drop bot traffic.</li>
+    <li><strong>8. PHP-FPM Process Pool Misconfiguration:</strong> Over-allocating <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">pm.max_children</code> can crash memory, while under-allocating creates request queues. Tune your pool to match available RAM divided by average PHP process size.</li>
+    <li><strong>9. Unoptimized Object Caching:</strong> Dynamic database-heavy sites like WooCommerce repeatedly query the database. Deploy Redis or Memcached object caching to serve repeat queries instantly from memory.</li>
+    <li><strong>10. Host-Level CPU Throttling (Noisy Neighbors):</strong> If your VPS provider oversells CPU cores, check <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">top</code> for high steal time (<code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">%st</code>). If steal time exceeds 5-10%, request a host node migration.</li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Summary Performance Diagnostic Table</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Symptom</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Primary Metric</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Probable Root Cause</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Immediate Remediation</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">High Server Load, Low CPU</td><td class="border-b border-gray-100 px-4 py-3 align-top">%wa in top (>15%)</td><td class="border-b border-gray-100 px-4 py-3 align-top">Slow disk I/O or database locks</td><td class="border-b border-gray-100 px-4 py-3 align-top">Tune MySQL buffer pool, inspect disk queues</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">High Server Load, High CPU</td><td class="border-b border-gray-100 px-4 py-3 align-top">%us in top (>80%)</td><td class="border-b border-gray-100 px-4 py-3 align-top">PHP loop or traffic spike</td><td class="border-b border-gray-100 px-4 py-3 align-top">Deploy LiteSpeed, enable OPcache / Redis</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Server Freezes, OOM Kills</td><td class="border-b border-gray-100 px-4 py-3 align-top">High swap in free -m</td><td class="border-b border-gray-100 px-4 py-3 align-top">RAM exhausted by PHP/Apache</td><td class="border-b border-gray-100 px-4 py-3 align-top">Tune PHP-FPM max_children, upgrade RAM</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">High Steal Time</td><td class="border-b border-gray-100 px-4 py-3 align-top">%st in top (>5%)</td><td class="border-b border-gray-100 px-4 py-3 align-top">Host node oversubscription</td><td class="border-b border-gray-100 px-4 py-3 align-top">Migrate VPS to dedicated CPU instance</td></tr></tbody></table></div>
+  <p>To optimize your web hosting servers with commercial software licenses at wholesale rates, explore our <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel licenses</a>, <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed licenses</a>, and <a href="/deals" class="font-semibold text-brand hover:underline">bundle discounts</a> at LicenBase.</p>
+</section>
+"""
+    },
+    {
+        "slug": 'complete-vps-hosting-setup-guide',
+        "title": 'Complete VPS Hosting Setup: Server, Panel, Security & Licenses',
+        "seo_title": 'Complete VPS Hosting Setup Guide',
+        "description": 'End-to-end blueprint for building a production VPS hosting stack from bare Linux OS to control panel, web server acceleration, security suite, and licensing.',
+        "excerpt": 'An end-to-end architect guide to building, configuring, and licensing a production-ready Linux VPS hosting server stack.',
+        "category": 'Guide',
+        "date": '2026-10-04',
+        "updated": '2026-10-04',
+        "image_alt": 'Complete architecture blueprint for building and licensing a production Linux VPS hosting stack',
+        "faq": [
+            ('What is the optimal Linux distribution for a production web hosting VPS in 2026?', 'AlmaLinux 9 and Rocky Linux 9 are the premier enterprise choices for hosting control panels like cPanel and DirectAdmin due to their 1:1 binary compatibility with RHEL, 10-year support lifecycles, and rock-solid stability.'),
+            ('Can I set up a complete hosting business on a single VPS?', 'Yes. A modern high-spec VPS (e.g. 4 to 8 vCPU cores, 16 GB RAM, NVMe storage) running cPanel, LiteSpeed, CloudLinux, and WHMCS can easily host hundreds of fast, secure client websites with automated billing.'),
+            ('How does LicenBase automate licensing for complete server stacks?', 'LicenBase provides an automated IP licensing platform where you bind your server IP to our wholesale licensing network. Activation requires running a simple one-line bash command, giving you official unmodified binaries with direct vendor updates.'),
+            ('What is the recommended backup strategy for a production hosting VPS?', 'Deploy JetBackup to perform daily incremental offsite backups to S3-compatible cloud storage. This ensures rapid disaster recovery without taxing server disk I/O during business hours.'),
+            ('How does combining LiteSpeed with CloudLinux improve server profitability?', 'LiteSpeed accelerates request delivery while CloudLinux isolates tenants, allowing you to pack three to five times more accounts onto the same hardware node without stability issues.'),
+        ],
+        "og": {'headline': 'Complete VPS Hosting Setup', 'subtitle': 'Server, panel, security & licensing', 'icon': 'server'},
+        "related": [('cpanel-license', 'cPanel & WHM license'), ('litespeed-license', 'LiteSpeed Web Server'), ('whmcs-license', 'WHMCS billing license')],
+        "body": f"""
+<p class="text-lg text-gray-600">Building a commercial-grade web hosting server requires more than simply installing an operating system. To deliver rapid page load speeds, rock-solid security, tenant isolation, and automated client billing, system administrators must assemble a cohesive multi-tiered software stack. This architectural blueprint guides you through configuring a complete production VPS hosting environment from bare Linux OS to enterprise licensing.</p>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Complete Production VPS Architecture Blueprint</h2>
+  <p>A production web hosting infrastructure comprises five tightly integrated layers: base virtualization OS, web server engine, management control panel, active security defense, and automated operations billing.</p>
+  <figure class="my-2"><img src="/assets/img/blog/complete-vps-hosting-setup-guide-1.svg" alt="Complete architecture blueprint for building and licensing a production Linux VPS hosting stack" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Comprehensive production web hosting software architecture on a Linux VPS.</figcaption></figure>
+  <p>Aligning these five functional tiers guarantees that your server infrastructure delivers high availability, rapid response times, and automated business operations.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Layer 1: Enterprise Base OS Selection &amp; Hardening</h2>
+  <p>Start with a clean installation of an enterprise Linux distribution such as AlmaLinux 9 or Rocky Linux 9. Execute initial system updates and access hardening:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li>Set a valid Fully Qualified Domain Name (FQDN) hostname (<code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">hostnamectl set-hostname server1.yourdomain.com</code>).</li>
+    <li>Enforce ED25519 SSH key authentication and disable root password logins.</li>
+    <li>Configure system swap space (2 GB to 4 GB) on NVMe storage to safeguard against out-of-memory kernel panics.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Layer 2: Management Control Panel Deployment</h2>
+  <p>Deploy a web hosting control panel to automate virtual hosts, DNS zones, database provisioning, and SSL certificates:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li>Install <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel &amp; WHM</a> for global hosting compatibility and user-friendly client self-service.</li>
+    <li>Alternatively, deploy a <a href="/plesk-license" class="font-semibold text-brand hover:underline">Plesk license</a> if your agency specializes in WordPress development, Git workflows, and Docker microservices.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Layer 3: High-Performance Engine &amp; Tenant Isolation</h2>
+  <p>Elevate your server performance and tenant security beyond default Linux capabilities:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Deploy LiteSpeed Web Server:</strong> Replace standard Apache with an official <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed license</a> to handle thousands of concurrent HTTP/3 connections and enable native LSCache WordPress acceleration.</li>
+    <li><strong>Convert to CloudLinux OS:</strong> Upgrade your kernel with a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> to isolate tenants in CageFS virtual sandboxes and enforce per-account CPU and RAM caps.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Layer 4: Active Cyber Defense &amp; Backup Automation</h2>
+  <p>Protect your clients from malware, brute-force attacks, and disaster events:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Deploy Imunify360:</strong> An <a href="/imunify360-license" class="font-semibold text-brand hover:underline">Imunify360 license</a> delivers real-time Web Application Firewall (WAF) filtering, automated malware cleanup, and proactive PHP exploit defense.</li>
+    <li><strong>Automate Offsite Backups:</strong> Install <a href="/jetbackup-license" class="font-semibold text-brand hover:underline">JetBackup</a> to schedule automated daily incremental backups to AWS S3 or Wasabi cloud repositories.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Layer 5: Client Billing &amp; Automated Provisioning</h2>
+  <p>Connect your infrastructure to a business automation platform:</p>
+  <p>Deploy an official <a href="/whmcs-license" class="font-semibold text-brand hover:underline">WHMCS license</a> to automate client onboarding, recurring payment processing, domain name registration, and automated cPanel account creation.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Summary Blueprint &amp; Wholesale Licensing</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Stack Layer</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Recommended Software</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Key Capability</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Licensing Strategy</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Operating System</td><td class="border-b border-gray-100 px-4 py-3 align-top">AlmaLinux 9 + CloudLinux</td><td class="border-b border-gray-100 px-4 py-3 align-top">Tenant isolation & stability</td><td class="border-b border-gray-100 px-4 py-3 align-top">LicenBase CloudLinux wholesale</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Control Panel</td><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel & WHM / Plesk</td><td class="border-b border-gray-100 px-4 py-3 align-top">Complete client UI & DNS</td><td class="border-b border-gray-100 px-4 py-3 align-top">LicenBase cPanel Cloud license</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Web Server Engine</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed Enterprise</td><td class="border-b border-gray-100 px-4 py-3 align-top">HTTP/3 & LSCache acceleration</td><td class="border-b border-gray-100 px-4 py-3 align-top">LicenBase LiteSpeed wholesale</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Cyber Defense</td><td class="border-b border-gray-100 px-4 py-3 align-top">Imunify360 + CSF</td><td class="border-b border-gray-100 px-4 py-3 align-top">WAF & automated malware cleanup</td><td class="border-b border-gray-100 px-4 py-3 align-top">LicenBase Imunify360 wholesale</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Billing & Backups</td><td class="border-b border-gray-100 px-4 py-3 align-top">WHMCS + JetBackup</td><td class="border-b border-gray-100 px-4 py-3 align-top">Recurring billing & offsite snaps</td><td class="border-b border-gray-100 px-4 py-3 align-top">LicenBase WHMCS & JetBackup wholesale</td></tr></tbody></table></div>
+  <p>By leveraging <a href="/deals" class="font-semibold text-brand hover:underline">LicenBase combo stacks</a>, you can activate genuine unmodified software licenses for your entire VPS infrastructure at up to 70% off retail pricing. Review our <a href="/about" class="font-semibold text-brand hover:underline">company mission</a> and read our <a href="/license-policy" class="font-semibold text-brand hover:underline">license policies</a> to scale your hosting business with confidence.</p>
+</section>
+"""
     }
 ]

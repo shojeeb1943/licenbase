@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPS Server Setup Guide: Essential Licenses | LicenBase</title>
+  <meta name="description" content="Comprehensive guide to choosing control panel, web server, and security software licenses when deploying and provisioning a new Linux virtual private server." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/vps-server-setup-licenses-guide" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="VPS Server Setup Guide: Essential Licenses" />
+  <meta property="og:description" content="Comprehensive guide to choosing control panel, web server, and security software licenses when deploying and provisioning a new Linux virtual private server." />
+  <meta property="og:url" content="https://licenbase.com/blog/vps-server-setup-licenses-guide" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-vps-server-setup-licenses-guide.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Architectural diagram of core VPS software licenses and server stack layers" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-04" />
+  <meta property="article:modified_time" content="2026-10-04" />
+  <meta property="article:section" content="Guide" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-vps-server-setup-licenses-guide.png" />
+  <meta name="twitter:image:alt" content="Architectural diagram of core VPS software licenses and server stack layers" />
+  <meta name="twitter:title" content="VPS Server Setup Guide: Essential Licenses" />
+  <meta name="twitter:description" content="Comprehensive guide to choosing control panel, web server, and security software licenses when deploying and provisioning a new Linux virtual private server." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "VPS Server Setup Guide: Essential Licenses for a New VPS", "item": "https://licenbase.com/blog/vps-server-setup-licenses-guide"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "VPS Server Setup Guide: Essential Licenses for a New VPS", "description": "Comprehensive guide to choosing control panel, web server, and security software licenses when deploying and provisioning a new Linux virtual private server.", "image": ["https://licenbase.com/assets/img/og/blog-vps-server-setup-licenses-guide.png"], "datePublished": "2026-10-04", "dateModified": "2026-10-04", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/vps-server-setup-licenses-guide"}, "articleSection": "Guide", "inLanguage": "en", "wordCount": 946}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the bare minimum license required to run a web hosting VPS?", "acceptedAnswer": {"@type": "Answer", "text": "If you are hosting websites for clients or running complex web applications, a web hosting control panel license such as cPanel, Plesk, or DirectAdmin is the bare minimum requirement. If you run a single custom application, you can manage the server via SSH without a commercial control panel."}}, {"@type": "Question", "name": "Do I need both CloudLinux OS and a control panel license?", "acceptedAnswer": {"@type": "Answer", "text": "While not strictly required for a personal server, combining CloudLinux OS with a control panel is essential for multi-tenant or commercial hosting. CloudLinux isolates user accounts into lightweight virtual environments (LVE), preventing single tenant resource hogging."}}, {"@type": "Question", "name": "How does LiteSpeed Web Server improve VPS performance compared to Apache?", "acceptedAnswer": {"@type": "Answer", "text": "LiteSpeed Web Server operates on an event-driven architecture that handles thousands of concurrent connections with minimal RAM and CPU overhead. It provides built-in HTTP/3 and server-level LSCache acceleration that dramatically cuts page load times."}}, {"@type": "Question", "name": "Can I add security licenses like Imunify360 after launching my server?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Security licenses like Imunify360 and backup software like JetBackup can be installed and activated at any time. However, configuring them during initial server provisioning ensures zero vulnerability windows before client sites go live."}}, {"@type": "Question", "name": "Can I acquire all essential VPS licenses in a single discounted bundle?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LicenBase provides wholesale automated IP licenses for cPanel, CloudLinux, LiteSpeed, Plesk, WHMCS, and Imunify360, allowing hosting providers and agencies to save up to 70% compared to retail vendor pricing."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">Guide</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Guide</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">VPS Server Setup Guide: Essential Licenses for a New VPS</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-04">October 4, 2026</time></span>
+          
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/vps-server-setup-licenses-guide-feature.webp" alt="Architectural diagram of core VPS software licenses and server stack layers" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+
+<p class="text-lg text-gray-600">Provisioning a new Linux Virtual Private Server (VPS) is the first step toward launching a scalable hosting environment. However, an unconfigured operating system cannot deliver modern web hosting services out of the box. To deliver high-speed web delivery, multi-tenant isolation, automated client billing, and bulletproof security, you must select the right commercial software licenses. This guide outlines the essential licensing layers required to build a world-class production VPS hosting infrastructure.</p>
+
+<section class="space-y-4">
+  <h2 id="the-core-vps-software-licensing-stack" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">The Core VPS Software Licensing Stack</h2>
+  <p>A production web hosting VPS relies on four foundational software tiers. Each tier addresses a distinct operational requirement, ranging from basic server management to active cyber defense and tenant resource governance.</p>
+  <figure class="my-2"><img src="/assets/img/blog/vps-server-setup-licenses-guide-1.svg" alt="Architectural diagram of core VPS software licenses and server stack layers" width="960" height="420" loading="lazy" decoding="async" class="w-full rounded-2xl border border-gray-200" /><figcaption class="mt-2 text-center text-xs text-gray-500">Core architectural layers and software licenses for a production Linux VPS.</figcaption></figure>
+  <p>Understanding how these licensing tiers interact ensures that you do not overspend on redundant tools while ensuring your server remains performant, secure, and easy to maintain over long production lifecycles.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="tier-1-web-hosting-control-panel-licenses" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Tier 1: Web Hosting Control Panel Licenses</h2>
+  <p>The control panel is the administrative engine of your VPS. It automates domain DNS routing, virtual host configuration, database management, SSL certificate provisioning, and email inbox management. Choosing the right panel determines your ongoing operational overhead:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>cPanel &amp; WHM:</strong> The global standard for commercial web hosting. A <a href="/cpanel-license" class="font-semibold text-brand hover:underline">cPanel license</a> provides an intuitive end-user interface and robust WHM server administration tools. For VPS environments, cPanel offers Cloud Solo (1 account), Admin (5 accounts), Pro (30 accounts), and Premier tiers.</li>
+    <li><strong>Plesk Obsidian:</strong> An exceptional alternative for agencies, developers, and Windows or Linux hybrid environments. A <a href="/plesk-license" class="font-semibold text-brand hover:underline">Plesk license</a> features built-in Docker management, Git integration, and the popular WordPress Toolkit.</li>
+    <li><strong>DirectAdmin &amp; Webuzo:</strong> Lightweight control panels ideal for smaller VPS instances with 1 GB to 2 GB of RAM where minimizing background memory usage is paramount.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="tier-2-high-performance-web-server-licenses" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Tier 2: High-Performance Web Server Licenses</h2>
+  <p>Default web servers like Apache prefork can struggle under heavy traffic spikes or concurrent PHP execution. Replacing Apache with an enterprise web server drastically increases concurrent request handling without requiring expensive hardware upgrades:</p>
+  <p>Deploying a <a href="/litespeed-license" class="font-semibold text-brand hover:underline">LiteSpeed license</a> replaces Apache seamlessly while reading existing <code class="rounded bg-mist px-1.5 py-0.5 text-[0.85em] text-navy">.htaccess</code> rewrite rules. LiteSpeed utilizes an event-driven architecture, delivers native HTTP/3 and QUIC support, and includes enterprise LSCache plugins that accelerate WordPress, WooCommerce, and Magento stores by up to 300%.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="tier-3-multi-tenant-operating-system-isolation" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Tier 3: Multi-Tenant Operating System &amp; Isolation</h2>
+  <p>When hosting multiple client websites or applications on a single VPS, one poorly optimized script or runaway database query can exhaust CPU cores and crash the entire machine. A standard Linux distribution lacks account-level resource throttling.</p>
+  <p>Upgrading your base OS with a <a href="/cloudlinux-license" class="font-semibold text-brand hover:underline">CloudLinux OS license</a> solves this vulnerability through Lightweight Virtual Environments (LVE). CloudLinux enforces strict per-user CPU, memory, I/O, and concurrent process limits. Additionally, CageFS encapsulates each user into an isolated virtual file system, preventing malicious scripts from inspecting neighboring accounts or reading server configuration files.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="tier-4-security-automated-backups-and-billing-automation" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Tier 4: Security, Automated Backups, and Billing Automation</h2>
+  <p>To operate a commercial hosting business or manage agency client infrastructure reliably, you must add automation and defensive software layers:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Active Security Suite:</strong> An <a href="/imunify360-license" class="font-semibold text-brand hover:underline">Imunify360 license</a> provides a multi-layer security suite featuring automated malware scanning, real-time Web Application Firewall (WAF) rule sets, proactive PHP defense, and distributed brute-force protection.</li>
+    <li><strong>Enterprise Backup Engine:</strong> A <a href="/jetbackup-license" class="font-semibold text-brand hover:underline">JetBackup license</a> enables automated, incremental, and encrypted offsite backups to AWS S3, Wasabi, or remote SSH destinations with self-service client restoration.</li>
+    <li><strong>Billing &amp; Automation:</strong> A <a href="/whmcs-license" class="font-semibold text-brand hover:underline">WHMCS license</a> automates client onboarding, payment gateway processing, automated cPanel account creation, domain registrations, and ticketing support.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="recommended-vps-licensing-stacks-by-server-use-case" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Recommended VPS Licensing Stacks by Server Use Case</h2>
+  <div class="overflow-x-auto rounded-xl border border-gray-200"><table class="w-full min-w-[34rem] text-sm"><thead><tr><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Server Use Case</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Control Panel</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Web Server</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">OS & Security</th><th class="border-b border-gray-200 bg-mist px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-600">Estimated Monthly Cost</th></tr></thead><tbody><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Freelancer / Single Agency VPS</td><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Admin (5 Accounts)</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed WebADC / 1-Worker</td><td class="border-b border-gray-100 px-4 py-3 align-top">Standard Linux + Free Firewall</td><td class="border-b border-gray-100 px-4 py-3 align-top">Cost-effective entry</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">High-Traffic WordPress VPS</td><td class="border-b border-gray-100 px-4 py-3 align-top">Plesk Web Pro / cPanel</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed Enterprise + LSCache</td><td class="border-b border-gray-100 px-4 py-3 align-top">CloudLinux + Imunify360</td><td class="border-b border-gray-100 px-4 py-3 align-top">Maximum speed & uptime</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Commercial Reseller Node</td><td class="border-b border-gray-100 px-4 py-3 align-top">cPanel Premier VPS</td><td class="border-b border-gray-100 px-4 py-3 align-top">LiteSpeed Web Server</td><td class="border-b border-gray-100 px-4 py-3 align-top">CloudLinux OS + Imunify360</td><td class="border-b border-gray-100 px-4 py-3 align-top">Enterprise tenant isolation</td></tr><tr><td class="border-b border-gray-100 px-4 py-3 align-top">Lean Budget VPS (1-2 GB RAM)</td><td class="border-b border-gray-100 px-4 py-3 align-top">Webuzo / DirectAdmin</td><td class="border-b border-gray-100 px-4 py-3 align-top">OpenLiteSpeed / Nginx</td><td class="border-b border-gray-100 px-4 py-3 align-top">Standard AlmaLinux + CSF</td><td class="border-b border-gray-100 px-4 py-3 align-top">Ultra-low memory footprint</td></tr></tbody></table></div>
+  <p>By sourcing your software through <a href="/deals" class="font-semibold text-brand hover:underline">LicenBase bundle stacks</a>, you can activate official, unmodified software licenses instantly via our automated IP licensing network. Explore our <a href="/about" class="font-semibold text-brand hover:underline">about page</a> and review our transparent <a href="/license-policy" class="font-semibold text-brand hover:underline">license policy</a> to learn how we help businesses worldwide scale their server infrastructure sustainably.</p>
+</section>
+
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is the bare minimum license required to run a web hosting VPS?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">If you are hosting websites for clients or running complex web applications, a web hosting control panel license such as cPanel, Plesk, or DirectAdmin is the bare minimum requirement. If you run a single custom application, you can manage the server via SSH without a commercial control panel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Do I need both CloudLinux OS and a control panel license?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">While not strictly required for a personal server, combining CloudLinux OS with a control panel is essential for multi-tenant or commercial hosting. CloudLinux isolates user accounts into lightweight virtual environments (LVE), preventing single tenant resource hogging.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How does LiteSpeed Web Server improve VPS performance compared to Apache?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">LiteSpeed Web Server operates on an event-driven architecture that handles thousands of concurrent connections with minimal RAM and CPU overhead. It provides built-in HTTP/3 and server-level LSCache acceleration that dramatically cuts page load times.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Can I add security licenses like Imunify360 after launching my server?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. Security licenses like Imunify360 and backup software like JetBackup can be installed and activated at any time. However, configuring them during initial server provisioning ensures zero vulnerability windows before client sites go live.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Can I acquire all essential VPS licenses in a single discounted bundle?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. LicenBase provides wholesale automated IP licenses for cPanel, CloudLinux, LiteSpeed, Plesk, WHMCS, and Imunify360, allowing hosting providers and agencies to save up to 70% compared to retail vendor pricing.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fvps-server-setup-licenses-guide&amp;text=VPS%20Server%20Setup%20Guide%3A%20Essential%20Licenses%20for%20a%20New%20VPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fvps-server-setup-licenses-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fvps-server-setup-licenses-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=VPS%20Server%20Setup%20Guide%3A%20Essential%20Licenses%20for%20a%20New%20VPS&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fvps-server-setup-licenses-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#the-core-vps-software-licensing-stack" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Core VPS Software Licensing Stack</a><a href="#tier-1-web-hosting-control-panel-licenses" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Tier 1: Web Hosting Control Panel Licenses</a><a href="#tier-2-high-performance-web-server-licenses" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Tier 2: High-Performance Web Server Licenses</a><a href="#tier-3-multi-tenant-operating-system-isolation" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Tier 3: Multi-Tenant Operating System &amp; Isolation</a><a href="#tier-4-security-automated-backups-and-billing-automation" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Tier 4: Security, Automated Backups, and Billing Automation</a><a href="#recommended-vps-licensing-stacks-by-server-use-case" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Recommended VPS Licensing Stacks by Server Use Case</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/litespeed-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">LiteSpeed Web Server<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux OS license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/where-to-buy-cheap-cpanel-license-vps-2026" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/where-to-buy-cheap-cpanel-license-vps-2026-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">5 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Where to Buy a Cheap cPanel License for Your VPS in 2026</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A complete 2026 buyer guide on finding cheap, reliable, and authentic cPanel licenses for Linux VPS and virtual private servers.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cpanel-cost-per-month-license-pricing-explained" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-cost-per-month-license-pricing-explained-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How Much Does cPanel Cost Per Month? License Pricing Explained</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A transparent monthly pricing breakdown of cPanel tiers including Solo, Admin, Pro, and Premier for VPS and dedicated servers.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/how-to-reduce-cpanel-license-renewal-cost-2026" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/how-to-reduce-cpanel-license-renewal-cost-2026-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Reduce cPanel License Renewal Costs and Annual Expenses</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Actionable strategies to audit server accounts, right-size licenses, and lower your annual cPanel renewal expenditures.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/affordable-whmcs-license-options-small-business-2026" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/affordable-whmcs-license-options-small-business-2026-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Affordable WHMCS License Options for Small Businesses in 2026</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Find affordable WHMCS billing licenses for web hosting startups and small agencies without restrictive client ceilings.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/5-ways-hosting-companies-reduce-licensing-costs-2026" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/5-ways-hosting-companies-reduce-licensing-costs-2026-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">5 Ways Hosting Companies Can Reduce Software Licensing Costs</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A master guide for hosting companies to audit infrastructure, eliminate software waste, and reduce licensing expenses by up to 70%.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/vps-license-cost-explained" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/vps-license-cost-explained-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">VPS License Cost Explained: cPanel, CloudLinux, WHMCS &amp; Addons</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A complete breakdown of monthly software licensing costs for control panels, web servers, billing systems, and security on a VPS.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>

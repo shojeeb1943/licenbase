@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">15-Point Linux VPS Security Checklist Stages</title>
+  <desc id="d">Structured stages for hardening a newly deployed Linux virtual private server.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Column 1 -->
+  <rect x="40" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="6" rx="3" fill="#2563EB"/>
+  <circle cx="170" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="170" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A" text-anchor="middle">1. Access Hardening</text>
+  <text x="170" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">SSH & Identity</text>
+  <text x="170" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Disable root SSH login</text>
+  <text x="170" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Enforce ED25519 keys</text>
+  <text x="170" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Change default SSH port</text>
+  <rect x="65" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="170" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB" text-anchor="middle">Perimeter Defense</text>
+
+  <!-- Column 2 -->
+  <rect x="350" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <circle cx="480" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A" text-anchor="middle">2. Firewall & WAF</text>
+  <text x="480" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Network Filters</text>
+  <text x="480" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Configure UFW or CSF</text>
+  <text x="480" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Deploy Fail2ban bans</text>
+  <text x="480" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Enable Imunify360 rules</text>
+  <rect x="375" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="480" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F59E0B" text-anchor="middle">Traffic Filter</text>
+
+  <!-- Column 3 -->
+  <rect x="660" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="6" rx="3" fill="#10B981"/>
+  <circle cx="790" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="790" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A" text-anchor="middle">3. Isolation & Audits</text>
+  <text x="790" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Runtime Security</text>
+  <text x="790" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">CloudLinux CageFS cage</text>
+  <text x="790" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Automated CVE patching</text>
+  <text x="790" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">JetBackup offsite sync</text>
+  <rect x="685" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="790" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981" text-anchor="middle">Tenant Isolation</text>
+</svg>
