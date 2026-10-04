@@ -252,6 +252,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cpanel-license-not-working-fix-guide</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-not-working-fix-guide.png</image:loc>
+      <image:title>cPanel License Not Working? How to Fix</image:title>
+      <image:caption>Troubleshoot cPanel license validation failures, cannot determine license status errors, IP mismatch, and clock drift with cpkeyclt and automated IP resets.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cpanel-license-price-2026-save-licenbase</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.7</priority>
@@ -269,6 +279,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-price-comparison-licenbase-vs-official.png</image:loc>
       <image:title>cPanel Price Comparison: LicenBase vs Official</image:title>
       <image:caption>Compare cPanel license pricing between LicenBase and official retail rates across Solo, Admin, Pro, and Premier tiers to maximize monthly server savings.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-vps-setup-installation-licensing-optimization</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vps-setup-installation-licensing-optimization.png</image:loc>
+      <image:title>cPanel VPS Setup &amp; Optimization Guide</image:title>
+      <image:caption>Complete guide to setting up a production cPanel VPS: automated installation, wholesale IP licensing, firewall hardening, LiteSpeed engine, and CloudLinux.</image:caption>
     </image:image>
   </url>
   <url>
@@ -339,6 +359,26 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-cpanel-license-errors.png</image:loc>
       <image:title>How to Fix cPanel License Errors</image:title>
       <image:caption>Resolve common cPanel license activation errors, invalid license warnings, NAT IP mismatches, firewall blocks, and cpkeyclt command failures quickly.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/fix-high-cpu-usage-vps-guide</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-fix-high-cpu-usage-vps-guide.png</image:loc>
+      <image:title>How to Fix High CPU Usage on a VPS</image:title>
+      <image:caption>Diagnose and resolve high CPU load on your Linux VPS using top, htop, and iotop. Troubleshoot runaway PHP processes, MySQL spikes, and bot traffic.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/fix-ssh-connection-refused-vps</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-fix-ssh-connection-refused-vps.png</image:loc>
+      <image:title>Fix SSH Connection Refused on VPS</image:title>
+      <image:caption>Step-by-step guide to solving SSH Connection Refused errors on Linux VPS: restarting sshd, fixing port mismatch, unblocking firewall IP bans, and config audits.</image:caption>
     </image:image>
   </url>
   <url>
@@ -492,6 +532,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/linux-vps-security-15-hardening-tricks</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-linux-vps-security-15-hardening-tricks.png</image:loc>
+      <image:title>Linux VPS Security: 15 Hardening Tricks</image:title>
+      <image:caption>Advanced Linux VPS hardening techniques for sysadmins: sysctl kernel protection, CageFS user isolation, restricted SSH, fail2ban jails, and binary lockdowns.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/litespeed-vs-apache</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.7</priority>
@@ -542,6 +592,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/secure-new-vps-20-security-tips-beginners</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-secure-new-vps-20-security-tips-beginners.png</image:loc>
+      <image:title>How to Secure a New VPS: 20 Tips</image:title>
+      <image:caption>Beginner-friendly 20-step checklist to secure a new Linux VPS: SSH keys, non-root users, firewall rules, automated updates, WAF protection, and offsite backups.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/vps-disk-space-full-cleanup-guide</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-vps-disk-space-full-cleanup-guide.png</image:loc>
+      <image:title>VPS Disk Space Full: 12 Cleanup Fixes</image:title>
+      <image:caption>Reclaim gigabytes of storage on full Linux VPS servers: purge journal logs, clean package caches, remove abandoned backups, truncate MySQL logs, and find bloat.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/vps-license-cost-explained</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.7</priority>
@@ -549,6 +619,26 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-license-cost-explained.png</image:loc>
       <image:title>VPS License Cost Explained: Full Guide</image:title>
       <image:caption>Detailed breakdown of software licensing costs for Linux VPS servers, covering control panels, OS isolation, billing automation, and security suites in 2026.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/vps-out-of-memory-oom-fixes</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-vps-out-of-memory-oom-fixes.png</image:loc>
+      <image:title>VPS Server Out of Memory: 10 RAM Fixes</image:title>
+      <image:caption>Prevent Linux kernel OOM killer crashes and fix VPS memory exhaustion: tune PHP-FPM workers, configure swap space, optimize MySQL buffers, and cache objects.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/vps-running-slow-15-proven-fixes</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-vps-running-slow-15-proven-fixes.png</image:loc>
+      <image:title>VPS Server Running Slow: 15 Proven Fixes</image:title>
+      <image:caption>Master 15 proven performance optimizations for Linux VPS hosting: database caching, LiteSpeed web server, OPcache, disk I/O tuning, and process limits.</image:caption>
     </image:image>
   </url>
   <url>
@@ -569,6 +659,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-security-checklist-after-deployment.png</image:loc>
       <image:title>VPS Server Security Checklist: 15 Steps</image:title>
       <image:caption>Follow this 15-step post-deployment Linux VPS security checklist to harden SSH, configure firewalls, install anti-malware, and isolate server tenants.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/vps-server-optimization-20-tips-faster-reliable</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-vps-server-optimization-20-tips-faster-reliable.png</image:loc>
+      <image:title>VPS Server Optimization: 20 Fast Tips</image:title>
+      <image:caption>Comprehensive 20-point playbook for optimizing Linux VPS servers: web server tuning, MySQL query cache, kernel sysctl, OPcache, Redis, and resource limits.</image:caption>
     </image:image>
   </url>
   <url>

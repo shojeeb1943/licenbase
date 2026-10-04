@@ -198,15 +198,15 @@ header.bg-card {
 }
 
 /* Primary buttons & active tabs */
-button[class*="bg-primary"],
-a[class*="bg-primary"],
+button[class*="bg-primary"]:not([class*="bg-primary/"]),
+a[class*="bg-primary"]:not([class*="bg-primary/"]),
 .bg-primary {
   background-color: #1e40af !important;
   color: #ffffff !important;
 }
 
-button[class*="bg-primary"]:hover,
-a[class*="bg-primary"]:hover {
+button[class*="bg-primary"]:not([class*="bg-primary/"]):hover,
+a[class*="bg-primary"]:not([class*="bg-primary/"]):hover {
   background-color: #1e3a8a !important;
 }
 
