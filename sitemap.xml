@@ -777,6 +777,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/asn-lookup/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/awk-command-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -813,6 +818,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/base64-encoder/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/bgp-prefix-lookup/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1257,12 +1267,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/ip-abuse-contact-finder/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/ip-converter/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://licenbase.com/tools/ip-enumerator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/ip-geolocation/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1403,6 +1423,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/mtu-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/my-ip-address/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1863,6 +1888,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/web-manifest-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/website-hosting-checker/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
