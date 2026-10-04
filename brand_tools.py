@@ -166,8 +166,13 @@ def patch_html_file(file_path):
 
 def patch_all_html_files():
     print("[2/4] Patching all tools HTML and txt files...")
-    all_files = [x for x in (glob.glob(os.path.join(TOOLS_DIR, '**', '*.html'), recursive=True) + \
-                glob.glob(os.path.join(TOOLS_DIR, '**', '*.txt'), recursive=True)) if os.path.isfile(x)]
+    all_files = []
+    for root, dirs, files in os.walk(TOOLS_DIR):
+        if '_next' in dirs:
+            dirs.remove('_next')
+        for file in files:
+            if file.endswith('.html') or file.endswith('.txt'):
+                all_files.append(os.path.join(root, file))
     count = 0
     for f in all_files:
         if f.endswith('.html'):
