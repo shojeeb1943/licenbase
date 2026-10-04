@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2932],{32932:(e,l,s)=>{s.r(l),s.d(l,{ResellerHostingCostCalculator:()=>r});var t=s(6124);let r=(0,s(8927).i)("reseller-hosting-cost-calculator",t.A)}}]);

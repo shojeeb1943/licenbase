@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1546],{61546:(e,a,c)=>{c.r(a),c.d(a,{DedicatedServerCostCalculator:()=>t});var r=c(40854);let t=(0,c(8927).i)("dedicated-server-cost-calculator",r.A)}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[280],{70280:(e,l,r)=>{r.r(l),r.d(l,{ResellerPricingCalculator:()=>a});var c=r(91301);let a=(0,r(8927).i)("reseller-pricing-calculator",c.A)}}]);

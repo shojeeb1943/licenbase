@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9101],{99101:(a,l,r)=>{r.r(l),r.d(l,{VpsProfitCalculator:()=>t});var s=r(63387);let t=(0,r(8927).i)("vps-profit-calculator",s.A)}}]);

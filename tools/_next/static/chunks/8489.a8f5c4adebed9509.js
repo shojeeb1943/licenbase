@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8489],{28489:(r,a,l)=>{l.r(a),l.d(a,{HostingMrrCalculator:()=>t});var s=l(24491);let t=(0,l(8927).i)("hosting-mrr-calculator",s.A)}}]);

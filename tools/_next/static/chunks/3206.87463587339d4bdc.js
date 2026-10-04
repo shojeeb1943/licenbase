@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3206],{33206:(c,a,t)=>{t.r(a),t.d(a,{HostingOccupancyRateCalculator:()=>u});var e=t(61099);let u=(0,t(8927).i)("hosting-occupancy-rate-calculator",e.A)}}]);

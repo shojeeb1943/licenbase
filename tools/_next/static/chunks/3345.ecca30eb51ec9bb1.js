@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3345],{73345:(l,a,n)=>{n.r(a),n.d(a,{MonthlyToAnnualHostingCalculator:()=>o});var t=n(19700);let o=(0,n(8927).i)("monthly-to-annual-hosting-calculator",t.A)}}]);
