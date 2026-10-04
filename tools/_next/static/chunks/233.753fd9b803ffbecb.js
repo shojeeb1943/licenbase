@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[233],{40233:(e,c,p)=>{p.r(c),p.d(c,{PhpEolChecker:()=>i});var r=p(88595),s=p(35921);let i=(0,r.f)({slug:"php-eol-checker",product:"php",icon:s.A,productName:"PHP",defaultVersion:"8.3",hint:"PHP 8.1 is end-of-life; 8.2 receives security fixes only; 8.3 and 8.4 are actively supported."})}}]);

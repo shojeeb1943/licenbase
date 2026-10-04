@@ -111,12 +111,11 @@ def patch_html_file(file_path):
             "url": "https://licenbase.com"
         }
     }
-    html = re.sub(
-        r'<script type="application/ld\+json">(?:(?!</script>).)*?"@type":"WebApplication"(?:(?!</script>).)*?</script>',
-        f'<script type="application/ld+json">{json.dumps(schema_clean, separators=(",", ":"))}</script>',
-        html,
-        flags=re.S
-    )
+    if '"@type":"WebApplication"' in html:
+        for match in re.finditer(r'<script type="application/ld\+json">([\s\S]*?)</script>', html):
+            if '"@type":"WebApplication"' in match.group(1):
+                html = html.replace(match.group(0), f'<script type="application/ld+json">{json.dumps(schema_clean, separators=(",", ":"))}</script>')
+                break
     
     # 4. Inject tools-branding.css into head
     if '/assets/css/tools-branding.css' not in html:
@@ -200,12 +199,12 @@ def overhaul_about_page():
     html = open(about_html_path, 'r', encoding='utf-8').read()
     
     # Overhaul the "Who built it" card
-    old_who = re.search(r'<div data-slot="card"[^>]*>.*?Who built it.*?</div></div></div>', html, re.S)
-    if old_who:
-        new_who = '''<div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6"><div data-slot="card-title" class="font-semibold text-lg">Provided by LicenBase</div><div data-slot="card-description" class="text-muted-foreground text-sm">Empowering sysadmins, DevOps teams, and web hosting providers</div></div><div data-slot="card-content" class="px-6 space-y-4"><p class="text-muted-foreground text-sm leading-relaxed">LicenBase is the leading software licensing platform for hosting providers, agencies, and cloud engineers. We build and maintain these 48 high-performance networking tools to give the sysadmin and developer community completely free, privacy-first, and browser-local utilities.</p><div class="flex flex-wrap gap-2"><a href="/products" class="lb-tools-btn-primary"><span>Explore Licenses</span></a><a href="/deals" class="lb-tools-btn-secondary">Hosting Deals</a><a href="/contact" class="lb-tools-btn-secondary">Contact Support</a><a href="/" class="lb-tools-btn-secondary">LicenBase Home</a></div></div></div>'''
-        html = html.replace(old_who.group(0), new_who)
-        
-    open(about_html_path, 'w', encoding='utf-8', newline='').write(html)
+    if "Who built it" in html:
+        old_who = re.search(r'<div data-slot="card"[^>]*>.*?Who built it.*?</div></div></div>', html, re.S)
+        if old_who:
+            new_who = '''<div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6"><div data-slot="card-title" class="font-semibold text-lg">Provided by LicenBase</div><div data-slot="card-description" class="text-muted-foreground text-sm">Empowering sysadmins, DevOps teams, and web hosting providers</div></div><div data-slot="card-content" class="px-6 space-y-4"><p class="text-muted-foreground text-sm leading-relaxed">LicenBase is the leading software licensing platform for hosting providers, agencies, and cloud engineers. We build and maintain these 48 high-performance networking tools to give the sysadmin and developer community completely free, privacy-first, and browser-local utilities.</p><div class="flex flex-wrap gap-2"><a href="/products" class="lb-tools-btn-primary"><span>Explore Licenses</span></a><a href="/deals" class="lb-tools-btn-secondary">Hosting Deals</a><a href="/contact" class="lb-tools-btn-secondary">Contact Support</a><a href="/" class="lb-tools-btn-secondary">LicenBase Home</a></div></div></div>'''
+            html = html.replace(old_who.group(0), new_who)
+            open(about_html_path, 'w', encoding='utf-8', newline='').write(html)
     print("About page successfully overhauled.")
 
 

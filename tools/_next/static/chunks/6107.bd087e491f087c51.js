@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6107],{66107:(e,c,l)=>{l.r(c),l.d(c,{MysqlEolChecker:()=>t});var r=l(88595),s=l(3613);let t=(0,r.f)({slug:"mysql-eol-checker",product:"mysql",icon:s.A,productName:"MySQL",defaultVersion:"8.0",hint:"MySQL 5.7 reached end-of-life in October 2023. MySQL 8.0 and 8.4 LTS are actively supported."})}}]);

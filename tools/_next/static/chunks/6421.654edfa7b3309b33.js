@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6421],{86421:(a,e,r)=>{r.r(e),r.d(e,{MariadbEolChecker:()=>c});var s=r(88595),i=r(3613);let c=(0,s.f)({slug:"mariadb-eol-checker",product:"mariadb",icon:i.A,productName:"MariaDB",defaultVersion:"10.11",hint:"MariaDB maintains 5-year LTS releases (such as 10.6 and 10.11) and 1-year short-term releases."})}}]);

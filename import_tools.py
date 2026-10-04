@@ -34,7 +34,7 @@ if not os.path.isfile(os.path.join(out, 'index.html')):
     sys.exit(f'no build at {out}')
 
 shutil.rmtree('tools', ignore_errors=True)
-shutil.copytree(out, 'tools')
+shutil.copytree(out, 'tools', dirs_exist_ok=True)
 run('python brand_tools.py')
 run('python fix_tools_titles.py')
 run('python make_sitemap.py')

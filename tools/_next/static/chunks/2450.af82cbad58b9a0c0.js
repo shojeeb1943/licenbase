@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2450],{2450:(e,a,r)=>{r.r(a),r.d(a,{DebianEolChecker:()=>c});var s=r(88595),i=r(64010);let c=(0,s.f)({slug:"debian-eol-checker",product:"debian",icon:i.A,productName:"Debian",defaultVersion:"12",hint:"Debian releases receive approximately 3 years of security team support plus 2 years of Debian LTS."})}}]);
