@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">DirectAdmin vs cPanel License Cost Comparison for Hosting Providers</title>
+  <desc id="d">Comparing DirectAdmin and cPanel licensing overhead, server footprints, and migrations.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Column 1 -->
+  <rect x="40" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="6" rx="3" fill="#0284C7"/>
+  <circle cx="170" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="170" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">DirectAdmin</text>
+  <text x="170" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Lightweight & Flat</text>
+  <text x="170" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Low RAM footprint</text>
+  <text x="170" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Flat monthly tiers</text>
+  <text x="170" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Learning curve for users</text>
+  <rect x="65" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="170" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0284C7" text-anchor="middle">Lean Resource</text>
+
+  <!-- Column 2 -->
+  <rect x="350" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="6" rx="3" fill="#F97316"/>
+  <circle cx="480" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">cPanel & WHM</text>
+  <text x="480" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Premium Client Demand</text>
+  <text x="480" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Highest customer retention</text>
+  <text x="480" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Universal cPanel familiarity</text>
+  <text x="480" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Higher retail pricing</text>
+  <rect x="375" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="480" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F97316" text-anchor="middle">Market Leader</text>
+
+  <!-- Column 3 -->
+  <rect x="660" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="6" rx="3" fill="#10B981"/>
+  <circle cx="790" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="790" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">The LicenBase Bridge</text>
+  <text x="790" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Wholesale cPanel Parity</text>
+  <text x="790" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Get cPanel at DA prices</text>
+  <text x="790" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">No migration headache</text>
+  <text x="790" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Keep premium cPanel UI</text>
+  <rect x="685" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="790" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981" text-anchor="middle">Best of Both</text>
+</svg>

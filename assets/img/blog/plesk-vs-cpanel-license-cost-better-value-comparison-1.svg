@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Plesk vs cPanel License Cost and Value Comparison in 2026</title>
+  <desc id="d">Detailed comparison of Plesk Web Host vs cPanel Premier pricing, extensions, and OS support.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Column 1 -->
+  <rect x="40" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="6" rx="3" fill="#2563EB"/>
+  <circle cx="170" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="170" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">cPanel & WHM</text>
+  <text x="170" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Linux Hosting Dominance</text>
+  <text x="170" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Industry standard UI</text>
+  <text x="170" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Rich third-party ecosystem</text>
+  <text x="170" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Per-account billing model</text>
+  <rect x="65" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="170" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB" text-anchor="middle">Linux Standard</text>
+
+  <!-- Column 2 -->
+  <rect x="350" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="6" rx="3" fill="#8B5CF6"/>
+  <circle cx="480" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Plesk Obsidian</text>
+  <text x="480" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Cross-Platform Power</text>
+  <text x="480" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Linux + Windows Server</text>
+  <text x="480" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">WordPress Toolkit core</text>
+  <text x="480" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Extension pack fees</text>
+  <rect x="375" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="480" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#8B5CF6" text-anchor="middle">Multi-OS Power</text>
+
+  <!-- Column 3 -->
+  <rect x="660" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="6" rx="3" fill="#10B981"/>
+  <circle cx="790" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="790" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">LicenBase Advantage</text>
+  <text x="790" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Wholesale Both Panels</text>
+  <text x="790" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Wholesale on both panels</text>
+  <text x="790" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Choose based on tech stack</text>
+  <text x="790" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Consolidated single bill</text>
+  <rect x="685" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="790" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981" text-anchor="middle">True Freedom</text>
+</svg>

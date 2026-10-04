@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">5 Proven Ways Hosting Providers Can Reduce Software Licensing Costs</title>
+  <desc id="d">Master strategy guide to trimming hosting software overhead through auditing, bundling, and wholesale.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <!-- Column 1 -->
+  <rect x="40" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="50" width="260" height="6" rx="3" fill="#2563EB"/>
+  <circle cx="170" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="170" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">1. Audit Accounts</text>
+  <text x="170" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Eliminate Ghost Users</text>
+  <text x="170" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Purge dormant accounts</text>
+  <text x="170" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Right-size tier limits</text>
+  <text x="170" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Instant quota relief</text>
+  <rect x="65" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="170" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB" text-anchor="middle">Hygiene Step</text>
+
+  <!-- Column 2 -->
+  <rect x="350" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="50" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <circle cx="480" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="480" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">2. Stack Bundles</text>
+  <text x="480" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">Package Synergies</text>
+  <text x="480" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Control panel + web server</text>
+  <text x="480" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Security + OS bundles</text>
+  <text x="480" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Compound discounts</text>
+  <rect x="375" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="480" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F59E0B" text-anchor="middle">Smart Stacking</text>
+
+  <!-- Column 3 -->
+  <rect x="660" y="50" width="260" height="320" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="50" width="260" height="6" rx="3" fill="#10B981"/>
+  <circle cx="790" cy="110" r="30" fill="#F1F5F9"/>
+  <text x="790" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">3. Wholesale Gateway</text>
+  <text x="790" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">LicenBase Centralization</text>
+  <text x="790" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Cut 50-70% off retail</text>
+  <text x="790" y="245" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Consolidated invoicing</text>
+  <text x="790" y="265" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Reinvest in business growth</text>
+  <rect x="685" y="295" width="210" height="50" rx="10" fill="#F8FAFC"/>
+  <text x="790" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981" text-anchor="middle">Core Strategy</text>
+</svg>
