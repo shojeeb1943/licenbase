@@ -822,6 +822,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/cache-control-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/canonical-url-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -862,12 +867,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/content-type-builder/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/cors-header-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/cpanel-license-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://licenbase.com/tools/cron-parser/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/csp-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/css-minifier/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1117,6 +1142,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/hsts-header-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/htaccess-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1127,12 +1157,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/html-formatter/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/html-minifier/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/html-sitemap-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://licenbase.com/tools/http-headers/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/http-status-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/http-status-reference/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1242,6 +1292,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/markdown-preview/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/markdown-table-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/meta-description-checker/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1262,6 +1322,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/mime-type-checker/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/mime-type-lookup/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/monthly-to-annual-hosting-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1273,6 +1343,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/mysql-ram-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/nanoid-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1362,6 +1437,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/random-string-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/reading-time-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1423,6 +1503,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/scp-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/security-header-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1503,6 +1588,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/sql-formatter/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/sql-minifier/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1597,6 +1687,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/user-agent-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/user-agent-parser/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1608,6 +1703,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/utm-campaign-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/uuid-bulk-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
