@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1724],{51724:(a,l,o)=>{o.r(l),o.d(l,{DomainPortfolioValueCalculator:()=>u});var e=o(20876);let u=(0,o(8927).i)("domain-portfolio-value-calculator",e.A)}}]);

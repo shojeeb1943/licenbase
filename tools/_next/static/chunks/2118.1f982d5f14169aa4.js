@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2118],{12118:(e,l,s)=>{s.r(l),s.d(l,{PleskLicenseCalculator:()=>a});var c=s(12446);let a=(0,s(8927).i)("plesk-license-calculator",c.A)}}]);

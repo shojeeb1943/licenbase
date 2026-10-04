@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3924],{3924:(a,e,l)=>{l.r(e),l.d(e,{DomainRenewalCostCalculator:()=>s});var c=l(34351);let s=(0,l(8927).i)("domain-renewal-cost-calculator",c.A)}}]);

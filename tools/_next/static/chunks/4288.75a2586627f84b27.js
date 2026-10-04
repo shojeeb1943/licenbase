@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4288],{54288:(a,l,r)=>{r.r(l),r.d(l,{DomainProfitCalculator:()=>c});var t=r(37078);let c=(0,r(8927).i)("domain-profit-calculator",t.A)}}]);
