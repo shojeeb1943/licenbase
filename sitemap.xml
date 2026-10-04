@@ -772,6 +772,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/api-key-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/awk-command-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -888,6 +893,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/csp-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/csp-hash-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1068,6 +1078,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/heading-structure-analyzer/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/hmac-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1262,6 +1277,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/jwt-expiry-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/jwt-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/keyword-density-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1378,6 +1403,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/oui-lookup/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/passphrase-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1503,6 +1533,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/scp-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/secret-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1642,6 +1677,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/token-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/twitter-card-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1708,6 +1748,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/uuid-bulk-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/uuid-validator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
