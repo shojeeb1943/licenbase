@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[53],{60053:(u,a,c)=>{c.r(a),c.d(a,{VpsCpuCalculator:()=>p});var l=c(92210);let p=(0,c(8927).i)("vps-cpu-calculator",l.A)}}]);

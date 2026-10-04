@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3214],{23214:(a,e,l)=>{l.r(e),l.d(e,{SwapSizeCalculator:()=>c});var s=l(76692);let c=(0,l(8927).i)("swap-size-calculator",s.A)}}]);

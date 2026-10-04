@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5078],{55078:(a,l,e)=>{e.r(l),e.d(l,{ServerRamAllocationCalculator:()=>c});var r=e(94849);let c=(0,e(8927).i)("server-ram-allocation-calculator",r.A)}}]);

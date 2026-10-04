@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5710],{95710:(a,l,s)=>{s.r(l),s.d(l,{VpsBandwidthCalculator:()=>c});var t=s(53878);let c=(0,s(8927).i)("vps-bandwidth-calculator",t.A)}}]);

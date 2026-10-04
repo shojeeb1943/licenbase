@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3994],{63994:(a,l,s)=>{s.r(l),s.d(l,{MysqlRamCalculator:()=>e});var c=s(8391);let e=(0,s(8927).i)("mysql-ram-calculator",c.A)}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9136],{39136:(r,e,a)=>{a.r(e),a.d(e,{PhpWorkerCalculator:()=>c});var l=a(801);let c=(0,a(8927).i)("php-worker-calculator",l.A)}}]);

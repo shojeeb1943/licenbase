@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[550],{10550:(a,e,s)=>{s.r(e),s.d(e,{VpsStorageCalculator:()=>r});var l=s(40854);let r=(0,s(8927).i)("vps-storage-calculator",l.A)}}]);

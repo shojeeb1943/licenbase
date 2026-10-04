@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8766],{98766:(e,r,a)=>{a.r(r),a.d(r,{ServerStorageCalculator:()=>s});var l=a(3613);let s=(0,a(8927).i)("server-storage-calculator",l.A)}}]);

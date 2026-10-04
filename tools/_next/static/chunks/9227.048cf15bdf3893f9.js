@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9227],{39227:(a,l,s)=>{s.r(l),s.d(l,{VpsRamCalculator:()=>e});var c=s(6048);let e=(0,s(8927).i)("vps-ram-calculator",c.A)}}]);
