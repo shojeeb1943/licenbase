@@ -396,3 +396,10 @@ textarea[data-slot="textarea"]:focus {
   background: #334155;
   color: #ffffff !important;
 }
+
+/* lb:tools-shell - one scrollbar (the app shell fills the space under the site header) and no duplicate NetDash bar on desktop */
+body:has(#lb-tools-header) { overflow: hidden; }
+div.bg-background.flex[class*="dvh"] { height: calc(100dvh - var(--lb-hdr, 7rem)) !important; }
+@media (min-width: 1024px) {
+  div.bg-background.flex[class*="dvh"] > div > header.sticky { display: none; }
+}

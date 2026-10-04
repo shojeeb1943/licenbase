@@ -78,7 +78,7 @@ h, n = re.subn(r'<button id="menu-open".*?</button>', menu, h, flags=re.S)
 assert n == 1
 h = re.sub(r'>\s+<', '><', h)
 h = re.sub(r'\s{2,}', ' ', h)
-h += '<link rel="stylesheet" href="/assets/css/tools-header.css?v=1"/><script src="/assets/js/tools-header.js?v=1" defer></script>'
+h += '<link rel="stylesheet" href="/assets/css/tools-header.css?v=2"/><script src="/assets/js/tools-header.js?v=2" defer></script>'
 
 # --- swap into the Next export: static HTML, inline flight payload in html, and RSC .txt ---
 OLD_HTML = re.compile(r'<header class="relative z-30 h-16.*?</header>', re.S)
@@ -155,7 +155,7 @@ CHUNK = glob.glob('tools/_next/static/chunks/app/(shell)/layout-*.js')[0]
 c = open(CHUNK, encoding='utf-8').read()
 c = re.sub(r'function R\(\)\{return.*?\}(?=function W\(e\))', lambda m: 'function R(){return(0,n.jsx)("div",{id:"lb-tools-footer",dangerouslySetInnerHTML:{__html:' + json.dumps(FOOT_HTML).replace('<', chr(92) + 'u003c') + '}})}', c, count=1, flags=re.S)
 open(CHUNK, 'w', encoding='utf-8').write(c)
-RAWEND = re.compile(r'(tools-header\.js\?v=1(?:\\)+" defer>)</script>')
+RAWEND = re.compile(r'(tools-header\.js\?v=\d(?:\\)+" defer>)</script>')
 LABEL = re.compile(r'(lb-header-signin(?:\\)*">)Get Started<')
 
 done = 0

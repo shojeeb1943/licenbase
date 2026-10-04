@@ -18,7 +18,7 @@ CTA_BANNER_HTML = '''<div class="lb-tools-commercial-card"><div class="lb-tools-
 
 BRAND_HEADER_LINK = '<a class="text-foreground focus-visible:ring-ring focus-visible:ring-offset-card truncate rounded text-base font-semibold hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none sm:text-lg inline-flex items-center gap-2" href="/tools/"><span class="font-bold text-gray-900 dark:text-white">LicenBase Tools</span><span class="lb-tools-brand-badge hidden sm:inline-flex">Free Suite</span></a>'
 
-BRAND_CSS_LINK = '<link rel="stylesheet" href="/assets/css/tools-branding.css?v=1"/>'
+BRAND_CSS_LINK = '<link rel="stylesheet" href="/assets/css/tools-branding.css?v=2"/>'
 
 
 def patch_js_chunks():
