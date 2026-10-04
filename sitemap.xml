@@ -977,7 +977,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/dns-resolver-comparison/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/dns-tools/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/dnssec-checker/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1462,6 +1472,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/nameserver-delegation-checker/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/nanoid-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1738,6 +1753,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/ssl-checker/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/subdomain-finder/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
