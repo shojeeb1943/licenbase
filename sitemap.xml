@@ -772,6 +772,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/awk-command-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/backup-bandwidth-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -868,6 +873,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/csv-to-json/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/curl-command-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1013,6 +1023,16 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/email-username-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/find-command-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/grep-command-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1197,6 +1217,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/linux-path-analyzer/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/linux-path-normalizer/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/litespeed-license-calculator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1283,6 +1313,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/password-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/php-fpm-config-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1402,6 +1437,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://licenbase.com/tools/sed-command-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://licenbase.com/tools/serp-preview/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
@@ -1488,6 +1528,21 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/swap-size-calculator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/systemd-service-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/systemd-timer-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/tar-command-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1608,6 +1663,11 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/web-manifest-generator/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://licenbase.com/tools/wget-command-generator/</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.6</priority>
   </url>
