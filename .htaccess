@@ -99,7 +99,7 @@ RewriteRule ^blog/([^/]+)$ blog/$1.html [L]
 <FilesMatch "(\.(py|pyc|bak|db|db-shm|db-wal|txt|md|log|zip|json|sh|ps1)$|^\.)">
   Require all denied
 </FilesMatch>
-<FilesMatch "^(robots\.txt|site\.webmanifest)$">
+<FilesMatch "^(robots\.txt|site\.webmanifest|56c8d133edd9b7368cf5c5080801fd32\.txt)$">
   Require all granted
 </FilesMatch>
 RedirectMatch 404 ^/(\.git|\.freebuff|\.playwright|\.playwright-mcp|docs|__pycache__)(/|$)
