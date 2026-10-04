@@ -1,6 +1,6 @@
 """Give /tools pages the real site header (static HTML in the prebuilt Next export). Idempotent.
 Generates assets/css/tools-header.css + assets/js/tools-header.js, then swaps the old header in tools/**/*.html and *.txt."""
-import glob, json, os, re, sys
+import base64, glob, json, os, re, sys
 
 PRE = ('.lb-shell', '.lb-btn', '.lb-topbar', '.lb-header', '.lb-logo', '.lb-nav', '.lb-drop', '.lb-mega', '.lb-icon-btn', '.lb-menu-toggle')
 
@@ -139,6 +139,14 @@ if '--emit-ts' in sys.argv:
              'export const LB_CTA_HTML = ' + json.dumps(CTA_BANNER_HTML) + ';', '']
     open(dest, 'w', encoding='utf-8', newline='\n').write('\n'.join(lines))
     print('wrote', dest)
+    # the tab icon is derived from the site's own logo file, never hand-copied into the fork: it can then not
+    # drift, be forgotten in a commit, or fall back to the NetDash glyph. an SVG used as an icon cannot load
+    # external images, so the png is embedded
+    png = base64.b64encode(open('assets/img/favicon-192x192.png', 'rb').read()).decode()
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title>LicenBase</title><image href="data:image/png;base64,{png}" width="64" height="64"/></svg>'
+    for rel in ('app/icon.svg', 'public/favicon.svg'):
+        open(os.path.join(os.path.dirname(os.path.dirname(dest)), rel), 'w', encoding='utf-8', newline='').write(svg)
+    print('wrote icon from assets/img/favicon-192x192.png')
     sys.exit(0)
 FOOT_NEW = '<div id="lb-tools-footer">' + FOOT_HTML + '</div>'
 FOOT_OLD = re.compile(r'<div id="lb-tools-footer">(?:<link[^>]*/>)?<footer.*?</footer></div>(?:<link rel="stylesheet" href="/assets/css/tools-footer\.css[^>]*/>)?|<footer class="border-border bg-background border-t">.*?</footer>', re.S)
