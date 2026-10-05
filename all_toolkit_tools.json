@@ -1,0 +1,1508 @@
+[
+  {
+    "slug": "subnet-calculator",
+    "title": "Subnet Calculator",
+    "description": "Calculate network addresses, broadcast addresses, and host ranges for IPv4 and IPv6",
+    "category": "calculators"
+  },
+  {
+    "slug": "vlsm-planner",
+    "title": "VLSM Planner",
+    "description": "Plan Variable Length Subnet Masking with optimal allocation and minimal waste",
+    "category": "calculators"
+  },
+  {
+    "slug": "mtu-calculator",
+    "title": "MTU Calculator",
+    "description": "Calculate MTU and header overhead for various network stacks",
+    "category": "calculators"
+  },
+  {
+    "slug": "bandwidth-calculator",
+    "title": "Bandwidth Calculator",
+    "description": "Calculate transfer times, throughput, and bandwidth requirements",
+    "category": "calculators"
+  },
+  {
+    "slug": "cable-calculator",
+    "title": "Cable Calculator",
+    "description": "Calculate signal loss for fiber optic and copper cables with TIA standards compliance",
+    "category": "calculators"
+  },
+  {
+    "slug": "ip-converter",
+    "title": "IP Address Converter",
+    "description": "Convert IPv4 addresses between binary, decimal, hexadecimal, and dotted-decimal formats",
+    "category": "ip-tools"
+  },
+  {
+    "slug": "ip-enumerator",
+    "title": "IP Range Enumerator",
+    "description": "List all IP addresses within a CIDR block with network details",
+    "category": "ip-tools"
+  },
+  {
+    "slug": "ipv6-tools",
+    "title": "IPv6 Tools",
+    "description": "IPv6 address manipulation, compression, and EUI-64 generation",
+    "category": "ip-tools"
+  },
+  {
+    "slug": "conflict-checker",
+    "title": "IP Conflict Checker",
+    "description": "Detect IP and MAC conflicts from ARP tables, DHCP leases, and inventories",
+    "category": "ip-tools"
+  },
+  {
+    "slug": "vlan-manager",
+    "title": "VLAN Manager",
+    "description": "Design and manage VLANs with switch configuration templates",
+    "category": "network"
+  },
+  {
+    "slug": "routing-tools",
+    "title": "Routing Tools",
+    "description": "Configure OSPF, EIGRP, static routes, and administrative distances",
+    "category": "network"
+  },
+  {
+    "slug": "acl-generator",
+    "title": "ACL Generator",
+    "description": "Generate standard and extended access control lists with validation",
+    "category": "network"
+  },
+  {
+    "slug": "wireless-tools",
+    "title": "Wireless Tools",
+    "description": "Channel planning, interference analysis, and WiFi configuration",
+    "category": "network"
+  },
+  {
+    "slug": "network-tester",
+    "title": "Network Tester",
+    "description": "Test RTT, throughput, and connectivity to user-defined endpoints",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "dns-tools",
+    "title": "DNS Tools",
+    "description": "DNS over HTTPS client with multiple provider support and caching",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "ping-traceroute",
+    "title": "Ping & Traceroute",
+    "description": "Test network connectivity and trace packet paths to destinations",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "port-scanner",
+    "title": "Port Scanner",
+    "description": "Scan network hosts for open ports and running services",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "ssl-checker",
+    "title": "SSL/TLS Checker",
+    "description": "Analyze SSL certificates, expiry dates, and TLS configuration",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "whois-lookup",
+    "title": "WHOIS Lookup",
+    "description": "Look up domain registration and IP block ownership information",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "email-diagnostics",
+    "title": "Email Diagnostics",
+    "description": "Check MX records, SPF, DKIM, and DMARC configurations",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "random-generator",
+    "title": "Random Generator",
+    "description": "Generate random IP addresses, MAC addresses, and network values",
+    "category": "generators"
+  },
+  {
+    "slug": "wifi-qr",
+    "title": "WiFi QR Generator",
+    "description": "Generate QR codes for instant WiFi connection on smartphones",
+    "category": "generators"
+  },
+  {
+    "slug": "reference-hub",
+    "title": "Reference Hub",
+    "description": "Comprehensive networking reference including ports, protocols, and standards",
+    "category": "reference"
+  },
+  {
+    "slug": "oui-lookup",
+    "title": "OUI Lookup",
+    "description": "Look up MAC address vendor information using IEEE OUI database",
+    "category": "reference"
+  },
+  {
+    "slug": "http-headers",
+    "title": "HTTP Headers Analyzer",
+    "description": "Analyze HTTP response headers and security configuration",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "security-headers",
+    "title": "Security Headers Checker",
+    "description": "Analyze HTTP security headers and get recommendations",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "redirect-checker",
+    "title": "Redirect Checker",
+    "description": "Trace HTTP redirect chains and analyze URL redirections",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "user-agent-parser",
+    "title": "User Agent Parser",
+    "description": "Parse and analyze browser user agent strings",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "hash-generator",
+    "title": "Hash Generator",
+    "description": "Generate and verify cryptographic hashes (SHA-256, SHA-384, SHA-512, SHA-1)",
+    "category": "devtools"
+  },
+  {
+    "slug": "password-generator",
+    "title": "Password Generator",
+    "description": "Generate cryptographically secure random passwords",
+    "category": "devtools"
+  },
+  {
+    "slug": "base64-encoder",
+    "title": "Base64 Encoder/Decoder",
+    "description": "Encode and decode Base64 text and files, in both RFC 4648 alphabets",
+    "category": "devtools"
+  },
+  {
+    "slug": "url-encoder",
+    "title": "URL Encoder/Decoder",
+    "description": "Encode, decode, and build URLs with query parameters",
+    "category": "devtools"
+  },
+  {
+    "slug": "json-formatter",
+    "title": "JSON Formatter",
+    "description": "Format, validate, and minify JSON data",
+    "category": "devtools"
+  },
+  {
+    "slug": "jwt-decoder",
+    "title": "JWT Decoder",
+    "description": "Decode and inspect JSON Web Tokens",
+    "category": "devtools"
+  },
+  {
+    "slug": "timestamp-converter",
+    "title": "Unix Timestamp Converter",
+    "description": "Convert between Unix timestamps and human-readable dates",
+    "category": "devtools"
+  },
+  {
+    "slug": "cron-parser",
+    "title": "Cron Expression Parser",
+    "description": "Parse and understand cron expressions",
+    "category": "devtools"
+  },
+  {
+    "slug": "regex-tester",
+    "title": "Regex Tester",
+    "description": "Test and debug regular expressions with live highlighting",
+    "category": "devtools"
+  },
+  {
+    "slug": "color-converter",
+    "title": "Color Converter",
+    "description": "Convert colors between HEX, RGB, HSL, and CMYK formats",
+    "category": "devtools"
+  },
+  {
+    "slug": "lorem-generator",
+    "title": "Lorem Ipsum Generator",
+    "description": "Generate placeholder text for designs and mockups",
+    "category": "devtools"
+  },
+  {
+    "slug": "data-unit-converter",
+    "title": "Data Unit Converter",
+    "description": "Convert between bits, bytes, and all data size units (SI and IEC)",
+    "category": "calculators"
+  },
+  {
+    "slug": "uptime-calculator",
+    "title": "Uptime/SLA Calculator",
+    "description": "Calculate allowed downtime based on SLA uptime percentage",
+    "category": "calculators"
+  },
+  {
+    "slug": "network-calculator",
+    "title": "Network Calculator",
+    "description": "Calculate latency, throughput (BDP), and perform IP math operations",
+    "category": "calculators"
+  },
+  {
+    "slug": "mac-formatter",
+    "title": "MAC Address Formatter",
+    "description": "Convert MAC addresses between formats and analyze properties",
+    "category": "ip-tools"
+  },
+  {
+    "slug": "subnet-mask-converter",
+    "title": "Subnet Mask Converter",
+    "description": "Convert between CIDR notation, dotted decimal, and wildcard masks",
+    "category": "ip-tools"
+  },
+  {
+    "slug": "port-reference",
+    "title": "Port Reference",
+    "description": "Quick reference for common network ports and services",
+    "category": "reference"
+  },
+  {
+    "slug": "cidr-reference",
+    "title": "CIDR Reference",
+    "description": "Complete CIDR notation cheat sheet with subnet masks and host counts",
+    "category": "reference"
+  },
+  {
+    "slug": "protocol-reference",
+    "title": "Protocol Reference",
+    "description": "IP protocol numbers and ICMP types reference",
+    "category": "reference"
+  },
+  {
+    "slug": "ipv6-reference",
+    "title": "IPv6 Reference",
+    "description": "IPv6 address types, prefixes, and format reference",
+    "category": "reference"
+  },
+  {
+    "slug": "hosting-cost-calculator",
+    "title": "Hosting Cost Calculator",
+    "description": "Total monthly and annual cost of running hosting, per server and per account",
+    "category": "hosting"
+  },
+  {
+    "slug": "vps-cost-calculator",
+    "title": "VPS Cost Calculator",
+    "description": "Price a VPS from cores, RAM, storage and bandwidth, monthly, hourly and yearly",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-profit-calculator",
+    "title": "Hosting Profit Calculator",
+    "description": "Monthly and annual profit and margin for a hosting business",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-break-even-calculator",
+    "title": "Hosting Break-Even Calculator",
+    "description": "How many customers you need to cover fixed costs",
+    "category": "hosting"
+  },
+  {
+    "slug": "server-capacity-calculator",
+    "title": "Server Capacity Calculator",
+    "description": "How many hosting accounts a server holds by RAM, storage and CPU",
+    "category": "hosting"
+  },
+  {
+    "slug": "backup-storage-calculator",
+    "title": "Backup Storage Calculator",
+    "description": "Storage needed for full and incremental backups with compression",
+    "category": "hosting"
+  },
+  {
+    "slug": "backup-retention-calculator",
+    "title": "Backup Retention Calculator",
+    "description": "Storage and cost of a daily, weekly and monthly retention policy",
+    "category": "hosting"
+  },
+  {
+    "slug": "migration-time-calculator",
+    "title": "Migration Time Calculator",
+    "description": "Estimate the window for moving hosting accounts between servers",
+    "category": "hosting"
+  },
+  {
+    "slug": "bandwidth-cost-calculator",
+    "title": "Bandwidth Cost Calculator",
+    "description": "Monthly transfer cost with included allowance and overage",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-package-pricing-calculator",
+    "title": "Hosting Package Pricing Calculator",
+    "description": "Set a hosting plan price from cost per account and target margin",
+    "category": "hosting"
+  },
+  {
+    "slug": "cpanel-license-calculator",
+    "title": "cPanel License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of cPanel licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "cloudlinux-license-calculator",
+    "title": "CloudLinux License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of CloudLinux licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "litespeed-license-calculator",
+    "title": "LiteSpeed License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of LiteSpeed licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "whmcs-license-calculator",
+    "title": "WHMCS License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of WHMCS licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "jetbackup-license-calculator",
+    "title": "JetBackup License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of JetBackup licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "softaculous-license-calculator",
+    "title": "Softaculous License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of Softaculous licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "virtualizor-license-calculator",
+    "title": "Virtualizor License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of Virtualizor licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "server-license-stack-calculator",
+    "title": "Server License Stack Calculator",
+    "description": "Total software cost of cPanel, CloudLinux, LiteSpeed, JetBackup, Softaculous, Imunify360 and WHMCS together",
+    "category": "licensing"
+  },
+  {
+    "slug": "domain-availability-checker",
+    "title": "Domain Availability Checker",
+    "description": "Check one name across 12 extensions using public RDAP records",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-age-calculator",
+    "title": "Domain Age Calculator",
+    "description": "Work out how old a domain is from its registration date",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-expiry-calculator",
+    "title": "Domain Expiry Calculator",
+    "description": "Count the days left before a domain expires and when to renew",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-name-generator",
+    "title": "Domain Name Generator",
+    "description": "Generate brandable domain name ideas from a keyword, prefixes and suffixes",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-cost-calculator",
+    "title": "Domain Cost Calculator",
+    "description": "Total cost of owning a domain over several years with renewals and privacy",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-transfer-checklist",
+    "title": "Domain Transfer Checklist",
+    "description": "A step by step checklist for moving a domain to a new registrar safely",
+    "category": "domains"
+  },
+  {
+    "slug": "chmod-calculator",
+    "title": "Chmod Calculator",
+    "description": "Convert Linux file permissions between checkboxes, octal and symbolic form",
+    "category": "linux"
+  },
+  {
+    "slug": "chown-generator",
+    "title": "Chown Command Generator",
+    "description": "Build a safe chown command with user, group and recursive options",
+    "category": "linux"
+  },
+  {
+    "slug": "umask-calculator",
+    "title": "Umask Calculator",
+    "description": "See the default file and directory permissions a umask value produces",
+    "category": "linux"
+  },
+  {
+    "slug": "scp-generator",
+    "title": "SCP Command Generator",
+    "description": "Generate an scp upload or download command with port, key and options",
+    "category": "linux"
+  },
+  {
+    "slug": "rsync-generator",
+    "title": "Rsync Command Generator",
+    "description": "Build an rsync command with dry run, excludes and SSH port",
+    "category": "linux"
+  },
+  {
+    "slug": "nginx-config-generator",
+    "title": "Nginx Config Generator",
+    "description": "Generate an nginx server block with HTTPS, PHP-FPM, gzip and caching",
+    "category": "linux"
+  },
+  {
+    "slug": "apache-virtualhost-generator",
+    "title": "Apache VirtualHost Generator",
+    "description": "Generate an Apache VirtualHost with HTTPS redirect, PHP-FPM and logs",
+    "category": "linux"
+  },
+  {
+    "slug": "htaccess-generator",
+    "title": "htaccess Generator",
+    "description": "Generate .htaccess rules for HTTPS, www, caching, compression and security",
+    "category": "linux"
+  },
+  {
+    "slug": "utm-builder",
+    "title": "UTM Builder",
+    "description": "Add UTM campaign parameters to any URL for clean analytics tracking",
+    "category": "seo"
+  },
+  {
+    "slug": "meta-title-checker",
+    "title": "Meta Title Checker",
+    "description": "Check if a page title fits Google by characters and pixel width",
+    "category": "seo"
+  },
+  {
+    "slug": "meta-description-checker",
+    "title": "Meta Description Checker",
+    "description": "Check if a meta description fits Google by characters and pixel width",
+    "category": "seo"
+  },
+  {
+    "slug": "serp-preview",
+    "title": "SERP Preview Tool",
+    "description": "Preview how a title, URL and description look in a Google result",
+    "category": "seo"
+  },
+  {
+    "slug": "robots-txt-generator",
+    "title": "Robots.txt Generator",
+    "description": "Generate a robots.txt with allow and disallow rules and a sitemap line",
+    "category": "seo"
+  },
+  {
+    "slug": "sitemap-generator",
+    "title": "XML Sitemap Generator",
+    "description": "Turn a list of URLs into a valid XML sitemap ready to upload",
+    "category": "seo"
+  },
+  {
+    "slug": "schema-generator",
+    "title": "Schema Markup Generator",
+    "description": "Create JSON-LD for FAQ, article, product, organization and local business",
+    "category": "seo"
+  },
+  {
+    "slug": "open-graph-generator",
+    "title": "Open Graph Generator",
+    "description": "Generate Open Graph and Twitter card meta tags for social sharing",
+    "category": "seo"
+  },
+  {
+    "slug": "yaml-formatter",
+    "title": "YAML Formatter",
+    "description": "Validate and reformat YAML with consistent indentation in your browser",
+    "category": "devtools"
+  },
+  {
+    "slug": "xml-formatter",
+    "title": "XML Formatter",
+    "description": "Validate and pretty print XML with clear indentation in your browser",
+    "category": "devtools"
+  },
+  {
+    "slug": "sql-formatter",
+    "title": "SQL Formatter",
+    "description": "Format SQL queries for MySQL, PostgreSQL, SQLite and SQL Server",
+    "category": "devtools"
+  },
+  {
+    "slug": "json-to-yaml",
+    "title": "JSON to YAML Converter",
+    "description": "Convert JSON into clean YAML with the indentation you choose",
+    "category": "devtools"
+  },
+  {
+    "slug": "yaml-to-json",
+    "title": "YAML to JSON Converter",
+    "description": "Convert YAML into formatted JSON and catch syntax errors",
+    "category": "devtools"
+  },
+  {
+    "slug": "json-to-typescript",
+    "title": "JSON to TypeScript Converter",
+    "description": "Generate TypeScript interfaces or types from a JSON sample",
+    "category": "devtools"
+  },
+  {
+    "slug": "csv-to-json",
+    "title": "CSV to JSON Converter",
+    "description": "Convert CSV with quoted fields into JSON objects or arrays",
+    "category": "devtools"
+  },
+  {
+    "slug": "json-to-csv",
+    "title": "JSON to CSV Converter",
+    "description": "Flatten a JSON array of objects into CSV safe to open in a spreadsheet",
+    "category": "devtools"
+  },
+  {
+    "slug": "password-entropy-calculator",
+    "title": "Password Entropy Calculator",
+    "description": "Estimate a password's strength in bits and how long brute force would take",
+    "category": "devtools"
+  },
+  {
+    "slug": "sri-hash-generator",
+    "title": "SRI Hash Generator",
+    "description": "Create a Subresource Integrity hash and a ready script or link tag",
+    "category": "devtools"
+  },
+  {
+    "slug": "dedicated-server-cost-calculator",
+    "title": "Dedicated Server Cost Calculator",
+    "description": "Add rent, IPs, licences, backup and setup to see the real monthly and contract cost of a dedicated server",
+    "category": "hosting"
+  },
+  {
+    "slug": "reseller-hosting-cost-calculator",
+    "title": "Reseller Hosting Cost Calculator",
+    "description": "Work out cost per account, monthly profit and break-even accounts for a reseller hosting plan",
+    "category": "hosting"
+  },
+  {
+    "slug": "vps-profit-calculator",
+    "title": "VPS Profit Calculator",
+    "description": "Estimate profit per node for a VPS business from node cost, plans sold, price and support cost",
+    "category": "hosting"
+  },
+  {
+    "slug": "server-break-even-calculator",
+    "title": "Server Break-Even Calculator",
+    "description": "Find how many accounts a server needs to cover its monthly cost and whether that fits its capacity",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-discount-calculator",
+    "title": "Hosting Discount Calculator",
+    "description": "See the real cost of a hosting promotion, including the price after the discount period ends",
+    "category": "hosting"
+  },
+  {
+    "slug": "monthly-to-annual-hosting-calculator",
+    "title": "Monthly to Annual Hosting Calculator",
+    "description": "Convert a monthly hosting price into a yearly plan price and see the saving from months-free offers",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-revenue-calculator",
+    "title": "Hosting Revenue Calculator",
+    "description": "Add up monthly and annual revenue from three plan tiers plus add-ons, with average revenue per customer",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-mrr-calculator",
+    "title": "Hosting MRR Calculator",
+    "description": "Track monthly recurring revenue for a hosting business from new, upgrade, downgrade and cancelled revenue",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-arr-calculator",
+    "title": "Hosting ARR Calculator",
+    "description": "Turn monthly and yearly hosting plans into annual recurring revenue and an equivalent MRR",
+    "category": "hosting"
+  },
+  {
+    "slug": "customer-churn-calculator",
+    "title": "Customer Churn Calculator",
+    "description": "Calculate churn and retention rates, average customer lifetime and yearly churn for a hosting business",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-ltv-calculator",
+    "title": "Hosting LTV Calculator",
+    "description": "Estimate customer lifetime value for a hosting plan from revenue per customer, margin and churn",
+    "category": "hosting"
+  },
+  {
+    "slug": "cac-calculator",
+    "title": "Customer Acquisition Cost Calculator",
+    "description": "Calculate customer acquisition cost and the months it takes to earn it back for a hosting business",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-ltv-cac-calculator",
+    "title": "Hosting LTV to CAC Ratio Calculator",
+    "description": "Compare customer lifetime value with acquisition cost to judge if your hosting growth is profitable",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-markup-calculator",
+    "title": "Hosting Markup Calculator",
+    "description": "Turn a cost and a markup percentage into a selling price, profit and margin for hosting products",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-profit-margin-calculator",
+    "title": "Hosting Profit Margin Calculator",
+    "description": "Find gross and net profit margin for a hosting business from revenue, direct costs and expenses",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-business-roi-calculator",
+    "title": "Hosting Business ROI Calculator",
+    "description": "Calculate return on investment and payback time for starting or expanding a hosting business",
+    "category": "hosting"
+  },
+  {
+    "slug": "server-roi-calculator",
+    "title": "Server ROI Calculator",
+    "description": "Check whether buying and colocating your own server pays off, including resale value at the end",
+    "category": "hosting"
+  },
+  {
+    "slug": "server-utilization-calculator",
+    "title": "Server Utilization Calculator",
+    "description": "Compare CPU, RAM and disk use against capacity to see headroom and which resource is the limit",
+    "category": "hosting"
+  },
+  {
+    "slug": "hosting-occupancy-rate-calculator",
+    "title": "Hosting Occupancy Rate Calculator",
+    "description": "Measure how full your servers are and how much revenue empty capacity leaves on the table",
+    "category": "hosting"
+  },
+  {
+    "slug": "reseller-pricing-calculator",
+    "title": "Reseller Pricing Calculator",
+    "description": "Set a retail price for reseller hosting accounts from wholesale cost, support, payment fees and target margin",
+    "category": "hosting"
+  },
+  {
+    "slug": "vps-pricing-calculator",
+    "title": "VPS Pricing Calculator",
+    "description": "Price a VPS plan from node cost, how many fit on a node, overhead and the margin you want",
+    "category": "hosting"
+  },
+  {
+    "slug": "dedicated-server-pricing-calculator",
+    "title": "Dedicated Server Pricing Calculator",
+    "description": "Price a dedicated server plan from your server cost, licences, bandwidth, support and target margin",
+    "category": "hosting"
+  },
+  {
+    "slug": "vps-ram-calculator",
+    "title": "VPS RAM Calculator",
+    "description": "Estimate how much RAM a VPS needs for your sites, database, cache and operating system with headroom",
+    "category": "server-planning"
+  },
+  {
+    "slug": "vps-cpu-calculator",
+    "title": "VPS CPU Calculator",
+    "description": "Work out how many vCPU cores you need from peak visitors, requests per minute and CPU time per request",
+    "category": "server-planning"
+  },
+  {
+    "slug": "vps-storage-calculator",
+    "title": "VPS Storage Calculator",
+    "description": "Plan VPS disk size from sites, databases, mail, local backups and yearly growth with free space included",
+    "category": "server-planning"
+  },
+  {
+    "slug": "vps-bandwidth-calculator",
+    "title": "VPS Bandwidth Calculator",
+    "description": "Estimate monthly transfer and peak hour speed from visitors, pages per visit and average page weight",
+    "category": "server-planning"
+  },
+  {
+    "slug": "server-storage-calculator",
+    "title": "Server Storage Planner",
+    "description": "Predict when a server disk will hit its alarm level or fill up based on current use and monthly growth",
+    "category": "server-planning"
+  },
+  {
+    "slug": "raid-capacity-calculator",
+    "title": "RAID Capacity Calculator",
+    "description": "Calculate usable capacity, efficiency and failure tolerance for RAID 0, 1, 5, 6 and 10 arrays",
+    "category": "server-planning"
+  },
+  {
+    "slug": "swap-size-calculator",
+    "title": "Swap Size Calculator",
+    "description": "Get a recommended Linux swap size for your RAM, including the larger size needed for hibernation",
+    "category": "server-planning"
+  },
+  {
+    "slug": "php-worker-calculator",
+    "title": "PHP-FPM Worker Calculator",
+    "description": "Calculate a safe pm.max_children for PHP-FPM from RAM, memory per worker, CPU cores and peak traffic",
+    "category": "server-planning"
+  },
+  {
+    "slug": "mysql-ram-calculator",
+    "title": "MySQL RAM Calculator",
+    "description": "Estimate MySQL or MariaDB memory use from the buffer pool, global buffers and per-connection buffers",
+    "category": "server-planning"
+  },
+  {
+    "slug": "redis-ram-calculator",
+    "title": "Redis RAM Calculator",
+    "description": "Estimate Redis memory from key count, key and value size, overhead, replicas and fragmentation",
+    "category": "server-planning"
+  },
+  {
+    "slug": "server-ram-allocation-calculator",
+    "title": "Server RAM Allocation Calculator",
+    "description": "Split server RAM between the operating system, database, PHP and cache and see what is left over",
+    "category": "server-planning"
+  },
+  {
+    "slug": "disk-usage-calculator",
+    "title": "Disk Usage Calculator",
+    "description": "Break down what is using a server disk across sites, mail, databases, logs and backups",
+    "category": "server-planning"
+  },
+  {
+    "slug": "inode-usage-calculator",
+    "title": "Inode Usage Calculator",
+    "description": "Estimate inode capacity and usage for a hosting filesystem and set a fair per-account inode limit",
+    "category": "server-planning"
+  },
+  {
+    "slug": "backup-rotation-calculator",
+    "title": "Backup Rotation Calculator",
+    "description": "Plan a daily, weekly, monthly and yearly backup rotation and the storage it needs with compression",
+    "category": "server-planning"
+  },
+  {
+    "slug": "backup-bandwidth-calculator",
+    "title": "Backup Bandwidth Calculator",
+    "description": "Check if a full or incremental backup fits your window and link speed, and the Mbps it needs",
+    "category": "server-planning"
+  },
+  {
+    "slug": "plesk-license-calculator",
+    "title": "Plesk License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of Plesk licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "imunify360-license-calculator",
+    "title": "Imunify360 License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of Imunify360 licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "sitepad-license-calculator",
+    "title": "SitePad License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of SitePad licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "whmreseller-license-calculator",
+    "title": "WHMReseller License Cost Calculator",
+    "description": "Monthly, annual and per-account cost of WHMReseller licenses at your price",
+    "category": "licensing"
+  },
+  {
+    "slug": "domain-renewal-cost-calculator",
+    "title": "Domain Renewal Cost Calculator",
+    "description": "Project total renewal cost for one or many domains over several years, with a yearly price rise",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-profit-calculator",
+    "title": "Domain Flipping Profit Calculator",
+    "description": "Work out profit and return from buying, holding and selling a domain after renewals and marketplace fees",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-portfolio-value-calculator",
+    "title": "Domain Portfolio Value Calculator",
+    "description": "Model holding cost and expected yearly income of a domain portfolio from sell-through rate and sale price",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-length-checker",
+    "title": "Domain Name Length Checker",
+    "description": "Check the length of a domain name, DNS limits and readability problems like hyphens and digits",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-combinations-generator",
+    "title": "Domain Name Combinations Generator",
+    "description": "Combine word lists into every domain name pair or triple across the extensions you choose",
+    "category": "domains"
+  },
+  {
+    "slug": "domain-extension-explorer",
+    "title": "Domain Extension Explorer",
+    "description": "Browse common domain extensions by type and use, from .com and .org to country codes and new generics",
+    "category": "domains"
+  },
+  {
+    "slug": "word-counter",
+    "title": "Word Counter",
+    "description": "Count words, characters, sentences and paragraphs and get reading and speaking time for any text",
+    "category": "seo"
+  },
+  {
+    "slug": "character-counter",
+    "title": "Character Counter",
+    "description": "Count characters with and without spaces, UTF-8 bytes and lines, and see how far you are from common limits",
+    "category": "seo"
+  },
+  {
+    "slug": "reading-time-calculator",
+    "title": "Reading Time Calculator",
+    "description": "Estimate how long an article takes to read from its word count, your reading speed and the images in it",
+    "category": "seo"
+  },
+  {
+    "slug": "keyword-density-calculator",
+    "title": "Keyword Density Calculator",
+    "description": "Find the most used words and phrases in a page of text with counts and percentage density",
+    "category": "seo"
+  },
+  {
+    "slug": "heading-structure-analyzer",
+    "title": "Heading Structure Analyzer",
+    "description": "Paste page HTML to see the h1 to h6 outline and find missing h1s, skipped levels and empty headings",
+    "category": "seo"
+  },
+  {
+    "slug": "internal-link-calculator",
+    "title": "Internal Link Calculator",
+    "description": "Count internal, external and nofollow links in page HTML and see which internal anchor texts you use most",
+    "category": "seo"
+  },
+  {
+    "slug": "image-alt-text-generator",
+    "title": "Image Alt Text Generator",
+    "description": "Turn image file names into draft alt text and flag generic names like IMG_1234 that need a description",
+    "category": "seo"
+  },
+  {
+    "slug": "url-parser",
+    "title": "URL Parser",
+    "description": "Break a URL into protocol, host, port, path, query parameters and fragment in your browser",
+    "category": "seo"
+  },
+  {
+    "slug": "url-builder",
+    "title": "URL and Query String Builder",
+    "description": "Build a URL with correctly encoded query parameters from a base address and a list of key and value pairs",
+    "category": "seo"
+  },
+  {
+    "slug": "url-slug-generator",
+    "title": "URL Slug Generator",
+    "description": "Turn titles into clean lowercase URL slugs with accents removed, optional stop word removal and a length limit",
+    "category": "seo"
+  },
+  {
+    "slug": "url-length-checker",
+    "title": "URL Length Checker",
+    "description": "Check a URL's length, path depth and parameters against practical limits for browsers and search results",
+    "category": "seo"
+  },
+  {
+    "slug": "canonical-url-generator",
+    "title": "Canonical URL Generator",
+    "description": "Clean a page URL into its canonical form by removing tracking, fragments and index files, with a ready link tag",
+    "category": "seo"
+  },
+  {
+    "slug": "redirect-url-builder",
+    "title": "Redirect URL Builder",
+    "description": "Generate Apache, nginx, Netlify and PHP redirect rules from an old address, a new address and a status code",
+    "category": "seo"
+  },
+  {
+    "slug": "utm-campaign-generator",
+    "title": "UTM Campaign Link Generator",
+    "description": "Create a set of UTM tagged links for one campaign across several channels in a single step",
+    "category": "seo"
+  },
+  {
+    "slug": "twitter-card-generator",
+    "title": "Twitter Card Meta Tag Generator",
+    "description": "Generate Twitter and X card meta tags with site handle, title, description and image",
+    "category": "seo"
+  },
+  {
+    "slug": "open-graph-preview",
+    "title": "Open Graph Preview",
+    "description": "Preview a shared link's title and description and check their length against Open Graph guidance",
+    "category": "seo"
+  },
+  {
+    "slug": "twitter-card-preview",
+    "title": "Twitter Card Preview",
+    "description": "Preview a Twitter or X link card's title and description and check their length against current guidance",
+    "category": "seo"
+  },
+  {
+    "slug": "meta-tag-generator",
+    "title": "Meta Tag Generator",
+    "description": "Build the head tags for a page: title, description, robots, canonical, viewport and theme colour",
+    "category": "seo"
+  },
+  {
+    "slug": "html-sitemap-generator",
+    "title": "HTML Sitemap Generator",
+    "description": "Create a human readable HTML sitemap list from your page addresses and titles, optionally grouped by folder",
+    "category": "seo"
+  },
+  {
+    "slug": "web-manifest-generator",
+    "title": "Web App Manifest Generator",
+    "description": "Create a manifest.webmanifest file so a website can be installed as an app with icons and colours",
+    "category": "seo"
+  },
+  {
+    "slug": "security-txt-generator",
+    "title": "security.txt Generator",
+    "description": "Generate a security.txt file that tells researchers how to report vulnerabilities, following RFC 9116",
+    "category": "seo"
+  },
+  {
+    "slug": "email-subject-line-analyzer",
+    "title": "Email Subject Line Analyzer",
+    "description": "Check a subject line for length, spam trigger words, shouting and punctuation, with a phone preview",
+    "category": "email"
+  },
+  {
+    "slug": "email-address-validator",
+    "title": "Email Address Validator",
+    "description": "Check a list of email addresses for format problems and common domain typos like gmial.com",
+    "category": "email"
+  },
+  {
+    "slug": "email-address-normalizer",
+    "title": "Email Address Normalizer",
+    "description": "Clean an email list: lowercase, strip mailto and angle brackets, apply Gmail rules, dedupe and sort",
+    "category": "email"
+  },
+  {
+    "slug": "email-domain-extractor",
+    "title": "Email Domain Extractor",
+    "description": "Pull every email address out of any text and list the unique domains with how often each appears",
+    "category": "email"
+  },
+  {
+    "slug": "email-username-generator",
+    "title": "Email Username Generator",
+    "description": "Generate common email username patterns from a first and last name, with an optional domain",
+    "category": "email"
+  },
+  {
+    "slug": "email-signature-generator",
+    "title": "Plain Text Email Signature Generator",
+    "description": "Create a clean plain text email signature with name, role, company, phone, email and website",
+    "category": "email"
+  },
+  {
+    "slug": "html-email-signature-generator",
+    "title": "HTML Email Signature Generator",
+    "description": "Build a table based HTML email signature with an accent colour and optional logo that works in major clients",
+    "category": "email"
+  },
+  {
+    "slug": "email-header-date-converter",
+    "title": "Email Header Date Converter",
+    "description": "Convert an email Date header, ISO date or Unix timestamp into the other formats and a chosen offset",
+    "category": "email"
+  },
+  {
+    "slug": "email-attachment-size-calculator",
+    "title": "Email Attachment Size Calculator",
+    "description": "Find out if your attachments will fit a mailbox limit once the message is encoded for sending",
+    "category": "email"
+  },
+  {
+    "slug": "email-size-calculator",
+    "title": "Email Size Calculator",
+    "description": "Estimate the total size of an HTML email from its body, inline images and attachments, and spot clipping risks",
+    "category": "email"
+  },
+  {
+    "slug": "smtp-port-reference",
+    "title": "SMTP and Mail Port Reference",
+    "description": "Look up SMTP, submission, IMAP and POP3 ports, including 25, 465, 587 and 2525, and when each applies",
+    "category": "email"
+  },
+  {
+    "slug": "email-mime-type-reference",
+    "title": "Email MIME Type Reference",
+    "description": "Find the MIME type for common email attachments such as PDF, Office files, images, archives and calendars",
+    "category": "email"
+  },
+  {
+    "slug": "tar-command-generator",
+    "title": "Tar Command Generator",
+    "description": "Build a tar command to create, extract or list archives with gzip, bzip2, xz or zstd compression",
+    "category": "linux"
+  },
+  {
+    "slug": "find-command-generator",
+    "title": "Find Command Generator",
+    "description": "Build a find command to search by name, type, size, age, permissions or owner and then print or act on the results",
+    "category": "linux"
+  },
+  {
+    "slug": "grep-command-generator",
+    "title": "Grep Command Generator",
+    "description": "Build a grep command with regex mode, case, line numbers, context, include filters and folder skips",
+    "category": "linux"
+  },
+  {
+    "slug": "sed-command-generator",
+    "title": "Sed Command Generator",
+    "description": "Build a sed command to replace text, delete or print lines, with automatic escaping and safe in place editing",
+    "category": "linux"
+  },
+  {
+    "slug": "awk-command-generator",
+    "title": "Awk Command Generator",
+    "description": "Build an awk command to print columns, add up a column, count values or count matching lines",
+    "category": "linux"
+  },
+  {
+    "slug": "curl-command-generator",
+    "title": "Curl Command Generator",
+    "description": "Build a curl command with method, headers, JSON body, authentication, timeout and output options",
+    "category": "linux"
+  },
+  {
+    "slug": "wget-command-generator",
+    "title": "Wget Command Generator",
+    "description": "Build a wget command to download files, resume transfers, limit speed or mirror a site for offline use",
+    "category": "linux"
+  },
+  {
+    "slug": "systemd-service-generator",
+    "title": "systemd Service File Generator",
+    "description": "Create a systemd service unit with user, working folder, environment, restart policy and hardening options",
+    "category": "linux"
+  },
+  {
+    "slug": "systemd-timer-generator",
+    "title": "systemd Timer Generator",
+    "description": "Create a systemd timer and matching service as a cron alternative, with calendar or interval schedules",
+    "category": "linux"
+  },
+  {
+    "slug": "php-fpm-config-generator",
+    "title": "PHP-FPM Pool Config Generator",
+    "description": "Generate a PHP-FPM pool file with process manager limits, memory, upload size and security settings",
+    "category": "linux"
+  },
+  {
+    "slug": "linux-path-analyzer",
+    "title": "Linux Path Analyzer",
+    "description": "Break a Linux path into parts, normalise it and flag spaces, shell characters, dot segments and length limits",
+    "category": "linux"
+  },
+  {
+    "slug": "linux-path-normalizer",
+    "title": "Linux Path Normalizer",
+    "description": "Resolve dot segments and double slashes in paths and see when a path tries to climb above the root",
+    "category": "linux"
+  },
+  {
+    "slug": "html-formatter",
+    "title": "HTML Formatter",
+    "description": "Indent and tidy HTML so tags line up, keeping script, style and pre blocks exactly as written",
+    "category": "devtools"
+  },
+  {
+    "slug": "html-minifier",
+    "title": "HTML Minifier",
+    "description": "Shrink HTML by removing comments and extra whitespace while protecting pre, textarea, script and style",
+    "category": "devtools"
+  },
+  {
+    "slug": "css-minifier",
+    "title": "CSS Minifier",
+    "description": "Minify CSS by removing comments, whitespace and the last semicolon in each rule, keeping strings and urls safe",
+    "category": "devtools"
+  },
+  {
+    "slug": "sql-minifier",
+    "title": "SQL Minifier",
+    "description": "Remove comments and extra whitespace from SQL while leaving quoted strings and identifiers untouched",
+    "category": "devtools"
+  },
+  {
+    "slug": "markdown-preview",
+    "title": "Markdown Preview",
+    "description": "Write Markdown and see headings, lists, tables, code and links rendered live without anything leaving your browser",
+    "category": "devtools"
+  },
+  {
+    "slug": "markdown-table-generator",
+    "title": "Markdown Table Generator",
+    "description": "Turn pasted rows from a spreadsheet or CSV into an aligned Markdown table with per-column alignment",
+    "category": "devtools"
+  },
+  {
+    "slug": "uuid-bulk-generator",
+    "title": "UUID Bulk Generator",
+    "description": "Generate up to 1000 UUIDs at once, version 4 random or version 7 time ordered, in the format you need",
+    "category": "devtools"
+  },
+  {
+    "slug": "nanoid-generator",
+    "title": "NanoID Generator",
+    "description": "Generate compact random IDs in the NanoID style with a URL safe, hex or custom alphabet and a set length",
+    "category": "devtools"
+  },
+  {
+    "slug": "random-string-generator",
+    "title": "Random String Generator",
+    "description": "Create random strings of any length from letters, digits and symbols for tokens, test data or passwords",
+    "category": "devtools"
+  },
+  {
+    "slug": "user-agent-generator",
+    "title": "User-Agent String Generator",
+    "description": "Build realistic user agent strings for Chrome, Firefox, Safari, Edge, mobile browsers and common bots",
+    "category": "http"
+  },
+  {
+    "slug": "http-status-reference",
+    "title": "HTTP Status Code Reference",
+    "description": "Look up HTTP status codes by number, name or meaning, from 200 and 301 to 404, 429 and 503",
+    "category": "http"
+  },
+  {
+    "slug": "http-status-generator",
+    "title": "HTTP Status Response Generator",
+    "description": "Generate an example HTTP response and nginx, Apache, PHP and Express code for any status code",
+    "category": "http"
+  },
+  {
+    "slug": "mime-type-lookup",
+    "title": "MIME Type Lookup",
+    "description": "Find the correct MIME type for a file extension such as webp, woff2, json or pdf, or search by type",
+    "category": "http"
+  },
+  {
+    "slug": "mime-type-checker",
+    "title": "MIME Type Checker",
+    "description": "Check whether the Content-Type your server sends matches the file extension, and what to fix if it does not",
+    "category": "http"
+  },
+  {
+    "slug": "content-type-builder",
+    "title": "Content-Type Header Builder",
+    "description": "Build a valid Content-Type header with charset or multipart boundary and ready nginx, Apache and PHP lines",
+    "category": "http"
+  },
+  {
+    "slug": "cache-control-generator",
+    "title": "Cache-Control Header Generator",
+    "description": "Build a Cache-Control header for static files, pages or APIs with max-age, immutable and stale options",
+    "category": "http"
+  },
+  {
+    "slug": "cors-header-generator",
+    "title": "CORS Header Generator",
+    "description": "Generate Access-Control headers for cross-origin requests with nginx, Apache and PHP code and safety checks",
+    "category": "http"
+  },
+  {
+    "slug": "csp-generator",
+    "title": "Content Security Policy Generator",
+    "description": "Build a Content-Security-Policy header with source checks, report-only mode and warnings about risky settings",
+    "category": "http"
+  },
+  {
+    "slug": "hsts-header-generator",
+    "title": "HSTS Header Generator",
+    "description": "Generate a Strict-Transport-Security header with max-age, includeSubDomains and preload checks",
+    "category": "http"
+  },
+  {
+    "slug": "security-header-generator",
+    "title": "Security Header Generator",
+    "description": "Generate a set of security headers for nginx, Apache or PHP, including nosniff, frame, referrer and HSTS",
+    "category": "http"
+  },
+  {
+    "slug": "passphrase-generator",
+    "title": "Passphrase Generator",
+    "description": "Generate memorable random passphrases from a word list using your browser's secure random generator",
+    "category": "security"
+  },
+  {
+    "slug": "api-key-generator",
+    "title": "API Key Generator",
+    "description": "Generate random API keys with an optional readable prefix such as sk_live and a chosen length and alphabet",
+    "category": "security"
+  },
+  {
+    "slug": "secret-generator",
+    "title": "Secret Key Generator",
+    "description": "Generate random secret keys in hex or base64 for sessions, signing and encryption with the equivalent openssl command",
+    "category": "security"
+  },
+  {
+    "slug": "token-generator",
+    "title": "Random Token Generator",
+    "description": "Generate random tokens in hex, letters and numbers or a no look-alike set, with optional grouping",
+    "category": "security"
+  },
+  {
+    "slug": "hmac-generator",
+    "title": "HMAC Generator",
+    "description": "Calculate an HMAC of a message with a secret key using SHA-1, SHA-256, SHA-384 or SHA-512 in your browser",
+    "category": "security"
+  },
+  {
+    "slug": "jwt-generator",
+    "title": "JWT Generator",
+    "description": "Create a signed JSON Web Token with an HS256, HS384 or HS512 secret, a custom payload and an expiry",
+    "category": "security"
+  },
+  {
+    "slug": "jwt-expiry-calculator",
+    "title": "JWT Expiry Calculator",
+    "description": "Paste a JWT to see when it was issued, when it expires and whether it is still valid, with time remaining",
+    "category": "security"
+  },
+  {
+    "slug": "uuid-validator",
+    "title": "UUID Validator",
+    "description": "Check UUIDs for correct format and identify their version and variant, including nil and max UUIDs",
+    "category": "security"
+  },
+  {
+    "slug": "csp-hash-generator",
+    "title": "CSP Hash Generator",
+    "description": "Create the SHA hash source for an inline script or style so a Content-Security-Policy can allow just that block",
+    "category": "security"
+  },
+  {
+    "slug": "text-case-converter",
+    "title": "Text Case Converter",
+    "description": "Convert text to upper, lower, title or sentence case and to camelCase, snake_case, kebab-case and more",
+    "category": "devtools"
+  },
+  {
+    "slug": "line-sorter",
+    "title": "Line Sorter",
+    "description": "Sort lines of text alphabetically, by number or by length, reverse them or shuffle them",
+    "category": "devtools"
+  },
+  {
+    "slug": "duplicate-line-remover",
+    "title": "Duplicate Line Remover",
+    "description": "Remove repeated lines, or show only the duplicates or only the unique lines, with optional counts",
+    "category": "devtools"
+  },
+  {
+    "slug": "whitespace-cleaner",
+    "title": "Whitespace Cleaner",
+    "description": "Clean messy text: trim lines, collapse spaces, fix blank lines and remove invisible zero-width characters",
+    "category": "devtools"
+  },
+  {
+    "slug": "tsv-to-csv",
+    "title": "TSV to CSV Converter",
+    "description": "Convert tab separated text, such as cells copied from a spreadsheet, into correctly quoted CSV",
+    "category": "devtools"
+  },
+  {
+    "slug": "text-diff",
+    "title": "Text Diff Checker",
+    "description": "Compare two pieces of text line by line and see exactly which lines were added, removed or kept",
+    "category": "devtools"
+  },
+  {
+    "slug": "json-diff",
+    "title": "JSON Diff and Compare",
+    "description": "Compare two JSON documents and list every added, removed and changed value by its path",
+    "category": "devtools"
+  },
+  {
+    "slug": "csv-viewer",
+    "title": "CSV Viewer",
+    "description": "Open a CSV or TSV file or paste one, then search, sort and read it as a table without uploading it",
+    "category": "files"
+  },
+  {
+    "slug": "image-metadata-viewer",
+    "title": "Image Metadata Viewer",
+    "description": "See an image's size, dimensions and camera EXIF data, and whether it hides GPS location, all in your browser",
+    "category": "files"
+  },
+  {
+    "slug": "image-to-base64",
+    "title": "Image to Base64 Converter",
+    "description": "Turn an image into a Base64 data URI with ready HTML and CSS snippets, without uploading it anywhere",
+    "category": "files"
+  },
+  {
+    "slug": "data-uri-to-file",
+    "title": "Data URI to File Converter",
+    "description": "Decode a data URI back into a downloadable file and see its type and size, entirely in your browser",
+    "category": "files"
+  },
+  {
+    "slug": "favicon-generator",
+    "title": "Favicon Generator",
+    "description": "Make a simple letter or emoji favicon in every size browsers and phones need, then download the PNG files",
+    "category": "files"
+  },
+  {
+    "slug": "website-hosting-checker",
+    "title": "Website Hosting Checker",
+    "description": "Inspect website hosting provider, IP addresses, nameservers, and ASN details",
+    "category": "hosting"
+  },
+  {
+    "slug": "asn-lookup",
+    "title": "ASN Lookup",
+    "description": "Lookup Autonomous System Number holder details and announced BGP routing prefixes",
+    "category": "hosting"
+  },
+  {
+    "slug": "ip-abuse-contact-finder",
+    "title": "IP Abuse Contact Finder",
+    "description": "Find verified network abuse reporting email addresses and regional internet registries",
+    "category": "hosting"
+  },
+  {
+    "slug": "bgp-prefix-lookup",
+    "title": "BGP Prefix Lookup",
+    "description": "Identify covering BGP prefix, origin Autonomous System, and holder for any IP address",
+    "category": "hosting"
+  },
+  {
+    "slug": "ip-geolocation",
+    "title": "IP Geolocation Lookup",
+    "description": "Look up approximate country, region, city, ISP, ASN, and timezone for any IP address",
+    "category": "hosting"
+  },
+  {
+    "slug": "my-ip-address",
+    "title": "My Public IP Address",
+    "description": "View your current public IPv4 or IPv6 address, estimated location, ISP, and ASN details",
+    "category": "hosting"
+  },
+  {
+    "slug": "php-eol-checker",
+    "title": "PHP End of Life & Version Support Checker",
+    "description": "Check PHP version lifecycle status, active support windows, and end-of-life dates",
+    "category": "devtools"
+  },
+  {
+    "slug": "mysql-eol-checker",
+    "title": "MySQL End of Life & Support Lifecycle Checker",
+    "description": "Check MySQL database release status, premier support windows, and end-of-life dates",
+    "category": "devtools"
+  },
+  {
+    "slug": "mariadb-eol-checker",
+    "title": "MariaDB End of Life & Release Lifecycle Checker",
+    "description": "Check MariaDB server version maintenance status, support lifespans, and EOL dates",
+    "category": "devtools"
+  },
+  {
+    "slug": "almalinux-eol-checker",
+    "title": "AlmaLinux OS End of Life & Support Checker",
+    "description": "Check AlmaLinux enterprise Linux version support status, active windows, and EOL dates",
+    "category": "linux"
+  },
+  {
+    "slug": "ubuntu-eol-checker",
+    "title": "Ubuntu Server & Desktop EOL Lifecycle Checker",
+    "description": "Check Ubuntu release lifecycle status, standard support windows, and ESM end-of-life dates",
+    "category": "linux"
+  },
+  {
+    "slug": "debian-eol-checker",
+    "title": "Debian GNU/Linux End of Life & LTS Checker",
+    "description": "Check Debian release codenames, security support status, and Long Term Support (LTS) dates",
+    "category": "linux"
+  },
+  {
+    "slug": "cve-search",
+    "title": "NIST NVD Common Vulnerabilities & Exposures Search",
+    "description": "Search NIST National Vulnerability Database for CVEs, CVSS severity scores, and security advisories",
+    "category": "security"
+  },
+  {
+    "slug": "pwned-password-checker",
+    "title": "Have I Been Pwned Password Breach Checker",
+    "description": "Check if a password has appeared in known data breaches using k-anonymity SHA-1 hash lookup",
+    "category": "security"
+  },
+  {
+    "slug": "dnssec-checker",
+    "title": "DNSSEC Status & DS/DNSKEY Validation Checker",
+    "description": "Check DNSSEC validation status, Authenticated Data flags, and parent DS and DNSKEY records",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "nameserver-delegation-checker",
+    "title": "Nameserver Delegation & Parity Checker",
+    "description": "Compare parent registry RDAP nameservers with live zone apex NS records to detect mismatches",
+    "category": "domains"
+  },
+  {
+    "slug": "subdomain-finder",
+    "title": "Certificate Transparency Subdomain Finder",
+    "description": "Discover active and historical subdomains for any domain from public Certificate Transparency logs",
+    "category": "domains"
+  },
+  {
+    "slug": "dns-resolver-comparison",
+    "title": "Google DNS vs Cloudflare DNS Resolver Comparison",
+    "description": "Compare DNS responses, records, and TTLs side by side across Google DNS and Cloudflare DNS",
+    "category": "diagnostics"
+  },
+  {
+    "slug": "hosting-price-currency-converter",
+    "title": "Hosting Price Currency Converter",
+    "description": "Convert web hosting, VPS, and cloud infrastructure prices between USD, BDT, EUR, GBP, INR, and global currencies with live exchange rates.",
+    "category": "hosting"
+  },
+  {
+    "slug": "license-price-currency-converter",
+    "title": "License Price Currency Converter",
+    "description": "Convert software license prices for cPanel, Plesk, LiteSpeed, WHMCS, and CloudLinux into BDT, INR, EUR, GBP, and other local currencies.",
+    "category": "licensing"
+  }
+]

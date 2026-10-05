@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Linux VPS 100% CPU Troubleshooting and Fixes Workflow</title>
+  <desc id="d">Four-stage process to isolate runaway processes, optimize PHP-FPM and MySQL, mitigate bots, and enforce CPU isolation.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+    <!-- Box 1: 1. Live Triage -->
+    <rect x="35" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <rect x="35" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="35" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="51" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">1. Live Triage</text>
+    <rect x="51" y="105" width="175" height="26" rx="6" fill="#EFF6FF"/>
+    <text x="61" y="122" fill="#2563EB" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">PROCESS PROFILING</text>
+    <text x="51" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• top / htop by CPU</text><text x="51" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• pidstat -u 1 5</text><text x="51" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• ps -eo pcpu,pmem,args</text><text x="51" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Detect runaway loops</text>
+        
+    <!-- Box 2: 2. Web & PHP Tuning -->
+    <rect x="262" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1.5"/>
+    <rect x="262" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="262" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="278" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">2. Web & PHP Tuning</text>
+    <rect x="278" y="105" width="175" height="26" rx="6" fill="#F0FDF4"/>
+    <text x="288" y="122" fill="#16A34A" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">RUNTIME SCALING</text>
+    <text x="278" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• PHP-FPM ondemand mode</text><text x="278" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Tune pm.max_children</text><text x="278" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Enable OPcache JIT</text><text x="278" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• LiteSpeed acceleration</text>
+        
+    <!-- Box 3: 3. Database Optimization -->
+    <rect x="489" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="1.5"/>
+    <rect x="489" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="489" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="505" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">3. Database Optimization</text>
+    <rect x="505" y="105" width="175" height="26" rx="6" fill="#FAF5FF"/>
+    <text x="515" y="122" fill="#9333EA" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">SLOW QUERY REPAIR</text>
+    <text x="505" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Enable slow_query_log</text><text x="505" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• InnoDB buffer sizing</text><text x="505" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Kill locking threads</text><text x="505" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Index missing keys</text>
+        
+    <!-- Box 4: 4. Tenant Isolation -->
+    <rect x="716" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#FED7AA" stroke-width="1.5"/>
+    <rect x="716" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="716" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="732" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">4. Tenant Isolation</text>
+    <rect x="732" y="105" width="175" height="26" rx="6" fill="#FFF7ED"/>
+    <text x="742" y="122" fill="#EA580C" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">CPU THROTTLING</text>
+    <text x="732" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• CloudLinux LVE limits</text><text x="732" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Imunify360 bot defense</text><text x="732" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• ModSecurity WAF</text><text x="732" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Eliminate neighbor noise</text>
+        
+</svg>

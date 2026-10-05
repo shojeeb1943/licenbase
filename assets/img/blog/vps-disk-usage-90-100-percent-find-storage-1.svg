@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Linux VPS Full Storage Detection and Space Recovery Process</title>
+  <desc id="d">Locating hidden files, truncating bloated logs, purging caches, and offloading backups.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+    <!-- Box 1: 1. Rapid Audit -->
+    <rect x="35" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <rect x="35" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="35" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="51" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">1. Rapid Audit</text>
+    <rect x="51" y="105" width="175" height="26" rx="6" fill="#EFF6FF"/>
+    <text x="61" y="122" fill="#2563EB" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">STORAGE TRIAGE</text>
+    <text x="51" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• df -h mount analysis</text><text x="51" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• ncdu / interactive scan</text><text x="51" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• du -ahx / | sort -rh | head</text><text x="51" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Find files > 500MB</text>
+        
+    <!-- Box 2: 2. Log Truncation -->
+    <rect x="262" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1.5"/>
+    <rect x="262" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="262" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="278" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">2. Log Truncation</text>
+    <rect x="278" y="105" width="175" height="26" rx="6" fill="#F0FDF4"/>
+    <text x="288" y="122" fill="#16A34A" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">JOURNAL & LOGS</text>
+    <text x="278" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• journalctl --vacuum-size</text><text x="278" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Truncate /var/log/nginx</text><text x="278" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Configure logrotate</text><text x="278" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Clear MySQL binlogs</text>
+        
+    <!-- Box 3: 3. Container & Cache -->
+    <rect x="489" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="1.5"/>
+    <rect x="489" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="489" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="505" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">3. Container & Cache</text>
+    <rect x="505" y="105" width="175" height="26" rx="6" fill="#FAF5FF"/>
+    <text x="515" y="122" fill="#9333EA" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">DOCKER & PACKAGES</text>
+    <text x="505" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• docker system prune -a</text><text x="505" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Clean package manager cache</text><text x="505" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Purge old kernel versions</text><text x="505" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Clear crash dump files</text>
+        
+    <!-- Box 4: 4. Offload Storage -->
+    <rect x="716" y="40" width="207" height="340" rx="14" fill="#FFFFFF" stroke="#FED7AA" stroke-width="1.5"/>
+    <rect x="716" y="40" width="207" height="54" rx="14" fill="#F1F5F9"/>
+    <rect x="716" y="80" width="207" height="14" fill="#F1F5F9"/>
+    <text x="732" y="74" fill="#0F172A" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700">4. Offload Storage</text>
+    <rect x="732" y="105" width="175" height="26" rx="6" fill="#FFF7ED"/>
+    <text x="742" y="122" fill="#EA580C" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">REMOTE BACKUPS</text>
+    <text x="732" y="150" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Move dumps off local VPS</text><text x="732" y="182" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Deploy JetBackup S3 sync</text><text x="732" y="214" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Mount remote block volume</text><text x="732" y="246" fill="#334155" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">• Maintain 20% free margin</text>
+        
+</svg>
