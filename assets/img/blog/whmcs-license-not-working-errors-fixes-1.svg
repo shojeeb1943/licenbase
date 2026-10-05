@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%">
+  <rect width="960" height="500" rx="16" fill="#0f172a" />
+  <rect x="2" y="2" width="956" height="496" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f8fafc">WHMCS Licensing Error Diagnostic Tree</text>
+  <text x="480" y="85" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#94a3b8">Immediate Solutions for Invalid License, Domain Mismatch, and cURL Port 443 Timeouts</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(60, 130)">
+    <rect width="250" height="140" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" />
+    <text x="125" y="35" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#f87171">Invalid License Key</text>
+    <line x1="20" y1="50" x2="230" y2="50" stroke="#334155" />
+    <text x="25" y="75" font-family="sans-serif" font-size="12" fill="#cbd5e1">&#x2022; Key typo in configuration.php</text>
+    <text x="25" y="98" font-family="sans-serif" font-size="12" fill="#cbd5e1">&#x2022; License suspended or expired</text>
+    <text x="25" y="120" font-family="sans-serif" font-size="11" font-weight="600" fill="#34d399">&rarr; Fix: Re-verify key in portal</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(355, 130)">
+    <rect width="250" height="140" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="125" y="35" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#fbbf24">Domain / IP Mismatch</text>
+    <line x1="20" y1="50" x2="230" y2="50" stroke="#334155" />
+    <text x="25" y="75" font-family="sans-serif" font-size="12" fill="#cbd5e1">&#x2022; Server IP changed after VPS move</text>
+    <text x="25" y="98" font-family="sans-serif" font-size="12" fill="#cbd5e1">&#x2022; WHMCS installation dir moved</text>
+    <text x="25" y="120" font-family="sans-serif" font-size="11" font-weight="600" fill="#34d399">&rarr; Fix: Click Re-issue in portal</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(650, 130)">
+    <rect width="250" height="140" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+    <text x="125" y="35" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c084fc">cURL Timeout / Port 443</text>
+    <line x1="20" y1="50" x2="230" y2="50" stroke="#334155" />
+    <text x="25" y="75" font-family="sans-serif" font-size="12" fill="#cbd5e1">&#x2022; CSF firewall blocking TCP_OUT</text>
+    <text x="25" y="98" font-family="sans-serif" font-size="12" fill="#cbd5e1">&#x2022; Outbound DNS resolving failure</text>
+    <text x="25" y="120" font-family="sans-serif" font-size="11" font-weight="600" fill="#34d399">&rarr; Fix: Allow port 443 in CSF</text>
+  </g>
+
+  <!-- Bottom Command Fix -->
+  <g transform="translate(60, 300)">
+    <rect width="840" height="150" rx="10" fill="#020617" stroke="#10b981" stroke-width="2" />
+    <text x="420" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#34d399">Instant LicenBase Diagnostic &amp; Re-Sync Protocol</text>
+    <text x="40" y="70" font-family="monospace" font-size="13" fill="#38bdf8"># 1. Test outbound license server connectivity:</text>
+    <text x="40" y="90" font-family="monospace" font-size="13" fill="#f8fafc">curl -v https://licenbase.com</text>
+    <text x="40" y="115" font-family="monospace" font-size="13" fill="#38bdf8"># 2. Force license local cache reload:</text>
+    <text x="40" y="135" font-family="monospace" font-size="13" fill="#f8fafc">licenbase-whmcs --update &amp;&amp; rm -rf /your-whmcs/templates_c/*</text>
+  </g>
+</svg>

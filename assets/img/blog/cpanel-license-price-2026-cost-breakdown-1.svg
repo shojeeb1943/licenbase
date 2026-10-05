@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel License Price Breakdown 2026</title>
+  <desc id="d">Visual comparison of cPanel Solo, Admin, Pro, and Premier monthly license costs.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  
+  <rect x="40" y="40" width="200" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="200" height="6" rx="3" fill="#3B82F6"/>
+  <text x="55" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Solo Tier</text>
+  <text x="55" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#2563EB">1 Account</text>
+  <text x="55" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Official Retail:</text>
+  <text x="55" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$17.49<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M55 185 h170" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="55" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="55" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="55" y="295" width="170" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="140" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Save Over 75%</text>
+
+  <rect x="265" y="40" width="200" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="265" y="40" width="200" height="6" rx="3" fill="#2563EB"/>
+  <text x="280" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Admin Tier</text>
+  <text x="280" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#2563EB">Up to 5 Accounts</text>
+  <text x="280" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Official Retail:</text>
+  <text x="280" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$27.99<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M280 185 h170" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="280" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="280" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="280" y="295" width="170" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="365" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Save Over 85%</text>
+
+  <rect x="490" y="40" width="200" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="490" y="40" width="200" height="6" rx="3" fill="#1D4ED8"/>
+  <text x="505" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Pro Tier</text>
+  <text x="505" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#2563EB">Up to 30 Accounts</text>
+  <text x="505" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Official Retail:</text>
+  <text x="505" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$42.99<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M505 185 h170" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="505" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="505" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="505" y="295" width="170" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="590" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Save Over 90%</text>
+
+  <rect x="715" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2"/>
+  <rect x="715" y="40" width="205" height="6" rx="3" fill="#10B981"/>
+  <text x="730" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Premier</text>
+  <text x="730" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#059669">100+ Accounts</text>
+  <text x="730" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Official Retail:</text>
+  <text x="730" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$60.99+<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M730 185 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="730" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="730" y="240" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$8.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="730" y="295" width="175" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="817" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Unlimited Accounts</text>
+</svg>

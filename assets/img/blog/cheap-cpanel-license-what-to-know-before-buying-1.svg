@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Cheap cPanel License Buyer Checklist</title>
+  <desc id="d">Key technical and security factors to verify before purchasing an affordable cPanel license.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="50" y="45" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="85" cy="80" r="18" fill="#EFF6FF"/>
+  <text x="85" y="86" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#2563EB" text-anchor="middle">1</text>
+  <text x="120" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Official Vendor Repositories</text>
+  <text x="120" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Ensure updates arrive directly via upcp without</text>
+  <text x="120" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">unauthorized binary tampering or nulled wrappers.</text>
+
+  <rect x="500" y="45" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="535" cy="80" r="18" fill="#EFF6FF"/>
+  <text x="535" y="86" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#2563EB" text-anchor="middle">2</text>
+  <text x="570" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">IP-Bound Authentication</text>
+  <text x="570" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Requires only public IPv4 validation with no intrusive</text>
+  <text x="570" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">background daemons consuming server RAM.</text>
+
+  <rect x="50" y="225" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="85" cy="260" r="18" fill="#EFF6FF"/>
+  <text x="85" y="266" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#2563EB" text-anchor="middle">3</text>
+  <text x="120" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Free Instant Re-IP Migration</text>
+  <text x="120" y="285" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Flexibility to migrate server IP addresses anytime</text>
+  <text x="120" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">without paying transfer penalties or hidden fees.</text>
+
+  <rect x="500" y="225" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="535" cy="260" r="18" fill="#EFF6FF"/>
+  <text x="535" y="266" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#2563EB" text-anchor="middle">4</text>
+  <text x="570" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">FleetSSL Free Certificate Engine</text>
+  <text x="570" y="285" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Automatic Let's Encrypt / AutoSSL provisioning</text>
+  <text x="570" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">for all hosted domains and subdomains.</text>
+</svg>

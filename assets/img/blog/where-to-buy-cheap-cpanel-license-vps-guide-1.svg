@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Where to Buy Cheap cPanel Licenses for VPS</title>
+  <desc id="d">Comparison of license acquisition channels: Retail, Web Host Addons, and LicenBase Wholesale.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="40" y="45" width="270" height="330" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Direct Retail</text>
+  <text x="60" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Vendor Storefront</text>
+  <path d="M60 130 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• $17.49 - $60.99+/mo</text>
+  <text x="60" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Strict account caps</text>
+  <text x="60" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• High annual cost</text>
+  <text x="60" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Rigid tier boundaries</text>
+  <rect x="60" y="300" width="230" height="40" rx="8" fill="#FEE2E2"/>
+  <text x="175" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DC2626" text-anchor="middle">Highest Cost Option</text>
+
+  <rect x="345" y="45" width="270" height="330" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="365" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Host Bundle Addons</text>
+  <text x="365" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">VPS Provider Marketplace</text>
+  <path d="M365 130 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="365" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• $15.00 - $35.00/mo</text>
+  <text x="365" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Locked to one host</text>
+  <text x="365" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Cannot transfer IP</text>
+  <text x="365" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Per-account surcharges</text>
+  <rect x="365" y="300" width="230" height="40" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#D97706" text-anchor="middle">Host-Locked Pricing</text>
+
+  <rect x="650" y="45" width="270" height="330" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="670" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LicenBase Wholesale</text>
+  <text x="670" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#10B981">Automated IP Licensing</text>
+  <path d="M670 130 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="670" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• From $4.00/mo flat</text>
+  <text x="670" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Unlimited accounts</text>
+  <text x="670" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Free instant IP change</text>
+  <text x="670" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Multi-cloud portable</text>
+  <rect x="670" y="300" width="230" height="40" rx="8" fill="#ECFDF5"/>
+  <text x="785" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Best Value &amp; Freedom</text>
+</svg>

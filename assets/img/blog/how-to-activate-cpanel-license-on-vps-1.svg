@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">How to Activate a cPanel License on VPS</title>
+  <desc id="d">3-step automated activation flow for VPS servers.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="50" y="55" width="260" height="300" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="85" cy="95" r="18" fill="#EFF6FF"/>
+  <text x="85" y="101" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#2563EB" text-anchor="middle">1</text>
+  <text x="120" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Order &amp; Bind IP</text>
+  <path d="M70 130 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Submit your VPS public IPv4</text>
+  <text x="70" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">address during checkout</text>
+  <text x="70" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">on LicenBase portal.</text>
+
+  <rect x="350" y="55" width="260" height="300" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="385" cy="95" r="18" fill="#EFF6FF"/>
+  <text x="385" y="101" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#2563EB" text-anchor="middle">2</text>
+  <text x="420" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Run Single Command</text>
+  <path d="M370 130 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Execute the 1-line curl</text>
+  <text x="370" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">script as root in your</text>
+  <text x="370" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Linux SSH terminal.</text>
+
+  <rect x="650" y="55" width="260" height="300" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <circle cx="685" cy="95" r="18" fill="#ECFDF5"/>
+  <text x="685" y="101" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#059669" text-anchor="middle">3</text>
+  <text x="720" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Instant Active</text>
+  <path d="M670 130 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="670" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Your cPanel &amp; WHM</text>
+  <text x="670" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">authenticates within 60s</text>
+  <text x="670" y="215" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">with zero downtime.</text>
+</svg>

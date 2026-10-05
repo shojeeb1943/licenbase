@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Strategies to Reduce cPanel Hosting Costs</title>
+  <desc id="d">4 actionable tactics to optimize server infrastructure and software licensing costs.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="50" y="45" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="80" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. Switch to Flat-Rate IP Licensing</text>
+  <text x="80" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Eliminate unpredictable per-account expansion fees</text>
+  <text x="80" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">by using wholesale IP-bound licensing at $4.00/mo.</text>
+  <rect x="80" y="145" width="130" height="26" rx="6" fill="#EFF6FF"/>
+  <text x="145" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">75-85% Savings</text>
+
+  <rect x="500" y="45" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="530" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. Deploy LiteSpeed for Density</text>
+  <text x="530" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Double the number of WordPress clients on a single</text>
+  <text x="530" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">VPS without upgrading RAM or CPU hardware.</text>
+  <rect x="530" y="145" width="130" height="26" rx="6" fill="#EFF6FF"/>
+  <text x="595" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">2x Server Density</text>
+
+  <rect x="50" y="225" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="80" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. Clean Inactive / Suspended Users</text>
+  <text x="80" y="285" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">cPanel counts suspended users toward tier limits.</text>
+  <text x="80" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Archive stale accounts to S3 storage.</text>
+  <rect x="80" y="325" width="130" height="26" rx="6" fill="#EFF6FF"/>
+  <text x="145" y="342" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Quota Optimization</text>
+
+  <rect x="500" y="225" width="410" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="530" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">4. Multi-Software Combo Deals</text>
+  <text x="530" y="285" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Stack cPanel, CloudLinux, LiteSpeed and Imunify360</text>
+  <text x="530" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">under unified wholesale billing.</text>
+  <rect x="530" y="325" width="130" height="26" rx="6" fill="#ECFDF5"/>
+  <text x="595" y="342" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">Stack Discounts</text>
+</svg>

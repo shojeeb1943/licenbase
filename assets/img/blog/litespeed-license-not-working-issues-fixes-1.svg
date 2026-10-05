@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LiteSpeed License Troubleshooting Matrix</title>
+  <desc id="d">Common LiteSpeed license error codes and step-by-step terminal fixes.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="40" y="40" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">1. License Key Expired or Not Found</text>
+  <text x="60" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Local trial key expired; license not synchronized.</text>
+  <rect x="60" y="110" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="75" y="131" font-family="Courier, monospace" font-size="11" fill="#34D399"># /usr/local/lsws/bin/lshttpd -r</text>
+
+  <rect x="495" y="40" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="515" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">2. CPU Core Count Exceeded</text>
+  <text x="515" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Server has 4 cores but 2-Core license installed.</text>
+  <rect x="515" y="110" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="530" y="131" font-family="Courier, monospace" font-size="11" fill="#34D399"># licenbase_litespeed</text>
+
+  <rect x="40" y="220" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">3. Serial Number Corrupted</text>
+  <text x="60" y="275" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Corrupted trial.key or serial.no file in conf dir.</text>
+  <rect x="60" y="290" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="75" y="311" font-family="Courier, monospace" font-size="11" fill="#34D399"># curl -fsSL verify.licenbase.com/install/litespeed | bash</text>
+
+  <rect x="495" y="220" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="515" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">4. Web Server Failed to Switch</text>
+  <text x="515" y="275" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Port 80 conflict between Apache and LiteSpeed.</text>
+  <rect x="515" y="290" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="530" y="311" font-family="Courier, monospace" font-size="11" fill="#34D399"># /usr/local/lsws/admin/misc/cp_switch_ws.sh lsws</text>
+</svg>

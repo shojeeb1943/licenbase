@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%">
+  <rect width="960" height="500" rx="16" fill="#0f172a" />
+  <rect x="2" y="2" width="956" height="496" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Complete First-Year WHMCS Hosting Budget</text>
+  <text x="480" y="85" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#94a3b8">Full Infrastructure Breakdown for Launching an Independent Web Hosting Provider in 2026</text>
+
+  <!-- Table header -->
+  <g transform="translate(60, 120)">
+    <rect width="840" height="45" rx="8" fill="#1e293b" />
+    <text x="40" y="28" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Component</text>
+    <text x="340" y="28" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Retail Monthly</text>
+    <text x="560" y="28" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">LicenBase Optimized</text>
+    <text x="760" y="28" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Savings</text>
+  </g>
+
+  <!-- Row 1 -->
+  <g transform="translate(60, 175)">
+    <rect width="840" height="40" rx="6" fill="#0f172a" />
+    <text x="40" y="25" font-family="sans-serif" font-size="13" fill="#cbd5e1">WHMCS Automation &amp; Billing</text>
+    <text x="340" y="25" font-family="sans-serif" font-size="13" fill="#f87171">$19.95 / mo</text>
+    <text x="560" y="25" font-family="sans-serif" font-size="13" font-weight="600" fill="#34d399">$5.00 / mo</text>
+    <text x="760" y="25" font-family="sans-serif" font-size="13" font-weight="600" fill="#34d399">75% OFF</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(60, 225)">
+    <rect width="840" height="40" rx="6" fill="#1e293b" />
+    <text x="40" y="25" font-family="sans-serif" font-size="13" fill="#cbd5e1">cPanel &amp; WHM Control Panel</text>
+    <text x="340" y="25" font-family="sans-serif" font-size="13" fill="#f87171">$27.99 / mo</text>
+    <text x="560" y="25" font-family="sans-serif" font-size="13" font-weight="600" fill="#34d399">$4.00 / mo</text>
+    <text x="760" y="25" font-family="sans-serif" font-size="13" font-weight="600" fill="#34d399">85% OFF</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(60, 275)">
+    <rect width="840" height="40" rx="6" fill="#0f172a" />
+    <text x="40" y="25" font-family="sans-serif" font-size="13" fill="#cbd5e1">LiteSpeed Web Server Acceleration</text>
+    <text x="340" y="25" font-family="sans-serif" font-size="13" fill="#f87171">$26.00 / mo</text>
+    <text x="560" y="25" font-family="sans-serif" font-size="13" font-weight="600" fill="#34d399">$5.00 / mo</text>
+    <text x="760" y="25" font-family="sans-serif" font-size="13" font-weight="600" fill="#34d399">80% OFF</text>
+  </g>
+
+  <!-- Row 4 -->
+  <g transform="translate(60, 325)">
+    <rect width="840" height="40" rx="6" fill="#1e293b" />
+    <text x="40" y="25" font-family="sans-serif" font-size="13" fill="#cbd5e1">Cloud VPS Hardware (4 vCPU, 8GB RAM)</text>
+    <text x="340" y="25" font-family="sans-serif" font-size="13" fill="#cbd5e1">$20.00 / mo</text>
+    <text x="560" y="25" font-family="sans-serif" font-size="13" fill="#cbd5e1">$20.00 / mo</text>
+    <text x="760" y="25" font-family="sans-serif" font-size="13" fill="#94a3b8">Baseline</text>
+  </g>
+
+  <!-- Summary Row -->
+  <g transform="translate(60, 385)">
+    <rect width="840" height="55" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2" />
+    <text x="40" y="34" font-family="sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Total Monthly Operational Spend</text>
+    <text x="340" y="34" font-family="sans-serif" font-size="15" font-weight="700" fill="#f87171">$93.94 / mo</text>
+    <text x="560" y="34" font-family="sans-serif" font-size="18" font-weight="700" fill="#34d399">$34.00 / mo</text>
+    <text x="760" y="34" font-family="sans-serif" font-size="16" font-weight="700" fill="#34d399">Save $719/yr</text>
+  </g>
+</svg>

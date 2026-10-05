@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel License Error Troubleshooting Workflow</title>
+  <desc id="d">Step by step triage flowchart for diagnosing and resolving cPanel license errors.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="60" y="160" width="160" height="90" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="140" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">Step 1: Check IP</text>
+  <text x="140" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Verify public IPv4</text>
+
+  <path d="M220 205 L270 205" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="280" y="160" width="160" height="90" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="360" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">Step 2: DNS &amp; Time</text>
+  <text x="360" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">NTP clock sync</text>
+
+  <path d="M440 205 L490 205" stroke="#94A3B8" stroke-width="2"/>
+
+  <rect x="500" y="160" width="160" height="90" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="580" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">Step 3: cpkeyclt</text>
+  <text x="580" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Refresh key client</text>
+
+  <path d="M660 205 L710 205" stroke="#94A3B8" stroke-width="2"/>
+
+  <rect x="720" y="160" width="180" height="90" rx="12" fill="#10B981" stroke="#059669" stroke-width="2"/>
+  <text x="810" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Step 4: Active ✓</text>
+  <text x="810" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#ECFDF5" text-anchor="middle">WHM fully unlocked</text>
+</svg>

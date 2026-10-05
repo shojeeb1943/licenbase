@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LiteSpeed Pricing Model for Web Hosts</title>
+  <desc id="d">ROI calculation showing hardware savings achieved by deploying LiteSpeed Web Server.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="60" y="50" width="380" height="320" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="85" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Without LiteSpeed (Apache)</text>
+  <path d="M85 110 h330" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="85" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Server Capacity (16GB RAM Node):</text>
+  <text x="85" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#DC2626">~35 WordPress Sites</text>
+  <text x="85" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Infrastructure Cost for 100 Sites:</text>
+  <text x="85" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#DC2626">3 Servers × $45 = $135/mo</text>
+  <rect x="85" y="280" width="330" height="60" rx="8" fill="#FEE2E2"/>
+  <text x="250" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#991B1B" text-anchor="middle">Annual Hardware Outlay:</text>
+  <text x="250" y="328" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#DC2626" text-anchor="middle">$1,620 / year</text>
+
+  <rect x="520" y="50" width="380" height="320" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="545" y="90" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">With LiteSpeed ($4.00/mo)</text>
+  <path d="M545 110 h330" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="545" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Server Capacity (16GB RAM Node):</text>
+  <text x="545" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#10B981">~100+ WordPress Sites</text>
+  <text x="545" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Infrastructure Cost for 100 Sites:</text>
+  <text x="545" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#10B981">1 Server ($45) + License ($4) = $49/mo</text>
+  <rect x="545" y="280" width="330" height="60" rx="8" fill="#ECFDF5"/>
+  <text x="710" y="305" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#065F46" text-anchor="middle">Annual Total Expense:</text>
+  <text x="710" y="328" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#10B981" text-anchor="middle">$588 / year (Save $1,032)</text>
+</svg>

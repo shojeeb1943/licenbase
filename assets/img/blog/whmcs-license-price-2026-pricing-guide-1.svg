@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="whmcs_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="card_grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="500" rx="16" fill="url(#whmcs_bg)" />
+  <rect x="2" y="2" width="956" height="496" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+  <text x="480" y="55" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="700" fill="#f8fafc">WHMCS 2026 License Tiers &amp; Client Quotas</text>
+  <text x="480" y="85" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#94a3b8">Comparing Official WebPros Retail vs LicenBase Wholesale Billing Tiers</text>
+  
+  <!-- Tier 1: Starter -->
+  <g transform="translate(40, 120)">
+    <rect width="200" height="330" rx="12" fill="url(#card_grad)" stroke="#3b82f6" stroke-width="2" />
+    <text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#60a5fa">Starter</text>
+    <text x="100" y="70" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">Up to 250 Clients</text>
+    <line x1="20" y1="90" x2="180" y2="90" stroke="#334155" stroke-width="1" />
+    <text x="100" y="130" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">Official Retail</text>
+    <text x="100" y="160" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f87171">$19.95/mo</text>
+    <line x1="20" y1="190" x2="180" y2="190" stroke="#334155" stroke-width="1" />
+    <text x="100" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">LicenBase Flat</text>
+    <text x="100" y="265" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#34d399">$5.00/mo</text>
+    <text x="100" y="300" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#10b981">Unlimited Clients</text>
+  </g>
+
+  <!-- Tier 2: Plus -->
+  <g transform="translate(265, 120)">
+    <rect width="200" height="330" rx="12" fill="url(#card_grad)" stroke="#38bdf8" stroke-width="2" />
+    <text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#38bdf8">Plus</text>
+    <text x="100" y="70" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">Up to 1,000 Clients</text>
+    <line x1="20" y1="90" x2="180" y2="90" stroke="#334155" stroke-width="1" />
+    <text x="100" y="130" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">Official Retail</text>
+    <text x="100" y="160" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f87171">$29.95/mo</text>
+    <line x1="20" y1="190" x2="180" y2="190" stroke="#334155" stroke-width="1" />
+    <text x="100" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">LicenBase Flat</text>
+    <text x="100" y="265" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#34d399">$5.00/mo</text>
+    <text x="100" y="300" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#10b981">Save $299/yr</text>
+  </g>
+
+  <!-- Tier 3: Professional -->
+  <g transform="translate(490, 120)">
+    <rect width="200" height="330" rx="12" fill="url(#card_grad)" stroke="#818cf8" stroke-width="2" />
+    <text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#818cf8">Professional</text>
+    <text x="100" y="70" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">Up to 2,500 Clients</text>
+    <line x1="20" y1="90" x2="180" y2="90" stroke="#334155" stroke-width="1" />
+    <text x="100" y="130" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">Official Retail</text>
+    <text x="100" y="160" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f87171">$39.95/mo</text>
+    <line x1="20" y1="190" x2="180" y2="190" stroke="#334155" stroke-width="1" />
+    <text x="100" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">LicenBase Flat</text>
+    <text x="100" y="265" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#34d399">$5.00/mo</text>
+    <text x="100" y="300" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#10b981">Save $419/yr</text>
+  </g>
+
+  <!-- Tier 4: Business -->
+  <g transform="translate(715, 120)">
+    <rect width="200" height="330" rx="12" fill="url(#card_grad)" stroke="#a855f7" stroke-width="2" />
+    <text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#c084fc">Business</text>
+    <text x="100" y="70" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">Unlimited Clients</text>
+    <line x1="20" y1="90" x2="180" y2="90" stroke="#334155" stroke-width="1" />
+    <text x="100" y="130" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">Official Retail</text>
+    <text x="100" y="160" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f87171">$49.95/mo</text>
+    <line x1="20" y1="190" x2="180" y2="190" stroke="#334155" stroke-width="1" />
+    <text x="100" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">LicenBase Flat</text>
+    <text x="100" y="265" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#34d399">$5.00/mo</text>
+    <text x="100" y="300" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#10b981">Save $539/yr</text>
+  </g>
+</svg>

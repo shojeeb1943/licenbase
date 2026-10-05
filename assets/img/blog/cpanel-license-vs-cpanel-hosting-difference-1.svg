@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel License vs cPanel Hosting Comparison</title>
+  <desc id="d">Differences between owning a cPanel software license versus buying shared cPanel hosting.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="60" y="45" width="390" height="330" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="60" y="45" width="390" height="6" rx="3" fill="#3B82F6"/>
+  <text x="85" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">cPanel Software License</text>
+  <text x="85" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">For VPS &amp; Dedicated Server Owners</text>
+  <path d="M85 130 h340" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="85" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Full Root WHM administrative control</text>
+  <text x="85" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Create &amp; sell unlimited hosting accounts</text>
+  <text x="85" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Install custom PHP modules, LiteSpeed, NGINX</text>
+  <text x="85" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• You manage server OS &amp; security patches</text>
+  <rect x="85" y="295" width="340" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="255" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Ideal for Sysadmins, Hosts &amp; Agencies</text>
+
+  <rect x="510" y="45" width="390" height="330" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="45" width="390" height="6" rx="3" fill="#10B981"/>
+  <text x="535" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">cPanel Web Hosting Plan</text>
+  <text x="535" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">For Website Owners &amp; Bloggers</text>
+  <path d="M535 130 h340" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="535" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• End-user cPanel access only (No WHM)</text>
+  <text x="535" y="190" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Host 1 to multiple personal websites</text>
+  <text x="535" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Fixed disk space &amp; CPU/RAM limits</text>
+  <text x="535" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Hosting provider manages server maintenance</text>
+  <rect x="535" y="295" width="340" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="705" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Ideal for Bloggers &amp; E-Commerce Stores</text>
+</svg>

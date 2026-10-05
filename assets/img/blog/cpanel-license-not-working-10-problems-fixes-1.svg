@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel License Troubleshooting Matrix</title>
+  <desc id="d">10 common license errors and immediate resolution steps.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <rect x="40" y="40" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">1. Cannot Read License Key Error</text>
+  <text x="60" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Corrupted local license cache or key file.</text>
+  <rect x="60" y="110" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="75" y="131" font-family="Courier, monospace" font-size="11" fill="#34D399"># /usr/local/cpanel/cpkeyclt</text>
+
+  <rect x="495" y="40" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="515" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">2. IP Address Mismatch</text>
+  <text x="515" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: License bound to old public IP or NAT IP.</text>
+  <rect x="515" y="110" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="530" y="131" font-family="Courier, monospace" font-size="11" fill="#34D399"># curl -4 icanhazip.com &amp;&amp; licenbase_cpanel</text>
+
+  <rect x="40" y="220" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">3. Port 80 / 443 Outbound Blocked</text>
+  <text x="60" y="275" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Firewall (CSF / iptables) blocking auth cluster.</text>
+  <rect x="60" y="290" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="75" y="311" font-family="Courier, monospace" font-size="11" fill="#34D399"># csf -a 198.51.100.0/24 &amp;&amp; csf -r</text>
+
+  <rect x="495" y="220" width="425" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="515" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#DC2626">4. Expired Trial Lockout</text>
+  <text x="515" y="275" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Cause: Trial expired; WHM locks UI login until sync.</text>
+  <rect x="515" y="290" width="385" height="32" rx="6" fill="#0F172A"/>
+  <text x="530" y="311" font-family="Courier, monospace" font-size="11" fill="#34D399"># curl -fsSL verify.licenbase.com/install/cpanel | bash</text>
+</svg>

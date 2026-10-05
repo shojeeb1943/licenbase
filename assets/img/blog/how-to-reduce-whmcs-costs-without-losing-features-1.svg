@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%">
+  <rect width="960" height="500" rx="16" fill="#0f172a" />
+  <rect x="2" y="2" width="956" height="496" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#f8fafc">4 Strategies to Reduce WHMCS Operating Overhead</text>
+  <text x="480" y="85" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#94a3b8">Retain Full Automation, Multi-Gateway Invoicing, and Auto-Provisioning While Slashing Costs</text>
+
+  <!-- Strategy 1 -->
+  <g transform="translate(60, 130)">
+    <rect width="400" height="145" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="30" y="35" font-family="sans-serif" font-size="16" font-weight="700" fill="#60a5fa">1. Flat-Rate IP Licensing</text>
+    <text x="30" y="65" font-family="sans-serif" font-size="13" fill="#cbd5e1">Replace tiered billing with LicenBase $5/mo</text>
+    <text x="30" y="88" font-family="sans-serif" font-size="13" fill="#cbd5e1">unlimited client licenses to prevent penalties.</text>
+    <text x="30" y="118" font-family="sans-serif" font-size="12" font-weight="600" fill="#34d399">&#x2714; Saves up to $539/year per server</text>
+  </g>
+
+  <!-- Strategy 2 -->
+  <g transform="translate(500, 130)">
+    <rect width="400" height="145" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <text x="30" y="35" font-family="sans-serif" font-size="16" font-weight="700" fill="#34d399">2. Inactive Client Database Pruning</text>
+    <text x="30" y="65" font-family="sans-serif" font-size="13" fill="#cbd5e1">Archive cancelled and fraud accounts</text>
+    <text x="30" y="88" font-family="sans-serif" font-size="13" fill="#cbd5e1">to reduce database bloat and query latency.</text>
+    <text x="30" y="118" font-family="sans-serif" font-size="12" font-weight="600" fill="#34d399">&#x2714; Improves cron execution speed by 3x</text>
+  </g>
+
+  <!-- Strategy 3 -->
+  <g transform="translate(60, 300)">
+    <rect width="400" height="145" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="30" y="35" font-family="sans-serif" font-size="16" font-weight="700" fill="#fbbf24">3. Direct Gateway Integration</text>
+    <text x="30" y="65" font-family="sans-serif" font-size="13" fill="#cbd5e1">Use free native Stripe, PayPal, and Crypto</text>
+    <text x="30" y="88" font-family="sans-serif" font-size="13" fill="#cbd5e1">modules instead of high-commission merchant addons.</text>
+    <text x="30" y="118" font-family="sans-serif" font-size="12" font-weight="600" fill="#34d399">&#x2714; Eliminate intermediary transaction fees</text>
+  </g>
+
+  <!-- Strategy 4 -->
+  <g transform="translate(500, 300)">
+    <rect width="400" height="145" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+    <text x="30" y="35" font-family="sans-serif" font-size="16" font-weight="700" fill="#c084fc">4. Multi-Software Bundle Deals</text>
+    <text x="30" y="65" font-family="sans-serif" font-size="13" fill="#cbd5e1">Combine WHMCS with cPanel, LiteSpeed, and</text>
+    <text x="30" y="88" font-family="sans-serif" font-size="13" fill="#cbd5e1">CloudLinux under a single consolidated invoice.</text>
+    <text x="30" y="118" font-family="sans-serif" font-size="12" font-weight="600" fill="#34d399">&#x2714; Streamline billing &amp; unlock bundle pricing</text>
+  </g>
+</svg>
