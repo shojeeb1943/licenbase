@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHMCS License vs WHMCS Hosting: Differences | LicenBase</title>
+  <meta name="description" content="Understand the difference between buying a standalone WHMCS license and signing up for WHMCS reseller hosting to choose the best option for your business." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/whmcs-license-vs-whmcs-hosting-difference" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="WHMCS License vs WHMCS Hosting: Differences" />
+  <meta property="og:description" content="Understand the difference between buying a standalone WHMCS license and signing up for WHMCS reseller hosting to choose the best option for your business." />
+  <meta property="og:url" content="https://licenbase.com/blog/whmcs-license-vs-whmcs-hosting-difference" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-whmcs-license-vs-whmcs-hosting-difference.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Comparison between standalone WHMCS license and bundled WHMCS hosting" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-04" />
+  <meta property="article:modified_time" content="2026-10-04" />
+  <meta property="article:section" content="Comparison" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-whmcs-license-vs-whmcs-hosting-difference.png" />
+  <meta name="twitter:image:alt" content="Comparison between standalone WHMCS license and bundled WHMCS hosting" />
+  <meta name="twitter:title" content="WHMCS License vs WHMCS Hosting: Differences" />
+  <meta name="twitter:description" content="Understand the difference between buying a standalone WHMCS license and signing up for WHMCS reseller hosting to choose the best option for your business." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "WHMCS License vs WHMCS Hosting: What Is the Difference?", "item": "https://licenbase.com/blog/whmcs-license-vs-whmcs-hosting-difference"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "WHMCS License vs WHMCS Hosting: What Is the Difference?", "description": "Understand the difference between buying a standalone WHMCS license and signing up for WHMCS reseller hosting to choose the best option for your business.", "image": ["https://licenbase.com/assets/img/og/blog-whmcs-license-vs-whmcs-hosting-difference.png"], "datePublished": "2026-10-04", "dateModified": "2026-10-04", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/whmcs-license-vs-whmcs-hosting-difference"}, "articleSection": "Comparison", "inLanguage": "en", "wordCount": 722}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is WHMCS Hosting?", "acceptedAnswer": {"@type": "Answer", "text": "WHMCS Hosting is a bundled hosting package where a hosting provider gives you a shared or reseller hosting account that includes a pre-installed WHMCS license as part of the monthly fee."}}, {"@type": "Question", "name": "What is the downside of bundled WHMCS Hosting?", "acceptedAnswer": {"@type": "Answer", "text": "The bundled license is locked to that specific hosting company's servers. If you migrate your hosting to a faster VPS or dedicated server, the license is terminated and you must buy a standalone license."}}, {"@type": "Question", "name": "Why is a standalone WHMCS license better for growing businesses?", "acceptedAnswer": {"@type": "Answer", "text": "A standalone license gives you complete server independence. You can host WHMCS on any cloud provider (AWS, OVH, Hetzner, Vultr) and maintain total control over backups, database security, and cron execution."}}, {"@type": "Question", "name": "Can I migrate from WHMCS Hosting to a standalone license without losing data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You simply export your MySQL database, move the files to your new VPS, update configuration.php with your new LicenBase license key, and resume operations seamlessly."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">Comparison</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Comparison</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">WHMCS License vs WHMCS Hosting: What Is the Difference?</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-04">October 4, 2026</time></span>
+          
+          <span>4 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/whmcs-license-vs-whmcs-hosting-difference-feature.webp" alt="Comparison between standalone WHMCS license and bundled WHMCS hosting" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600 leading-relaxed mb-6">When shopping for web hosting automation solutions, beginners often encounter two similar-sounding options: purchasing a standalone <strong>WHMCS License</strong> versus subscribing to a <strong>WHMCS Hosting Plan</strong>. While they seem interchangeable at first glance, they represent fundamentally different infrastructure models with significant implications for your business autonomy, scaling freedom, and long-term costs.</p>
+
+<figure class="my-8">
+  <img src="/assets/img/blog/whmcs-license-vs-whmcs-hosting-difference-1.svg" alt="Standalone WHMCS License vs Bundled WHMCS Hosting" width="800" height="450" class="w-full rounded-2xl border border-gray-200 shadow-sm bg-white" loading="lazy">
+  <figcaption class="text-center text-sm text-gray-500 mt-2">Infrastructure independence vs vendor lock-in comparison.</figcaption>
+</figure>
+
+<section class="space-y-4">
+  <h2 id="direct-comparison-standalone-license-vs-bundled-hosting" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-4 tracking-tight">Direct Comparison: Standalone License vs Bundled Hosting</h2>
+  <p class="text-gray-700 leading-relaxed">Here is how the two approaches compare across critical operational criteria:</p>
+  <div class="overflow-x-auto my-6 rounded-xl border border-gray-200 shadow-sm">
+    <table class="w-full text-left text-sm border-collapse">
+      <thead class="bg-gray-100 text-gray-900 border-b border-gray-200">
+        <tr>
+          <th class="p-3 font-semibold">Evaluation Criteria</th>
+          <th class="p-3 font-semibold">Standalone WHMCS License</th>
+          <th class="p-3 font-semibold">Bundled WHMCS Hosting</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200 text-gray-700">
+        <tr>
+          <td class="p-3 font-medium text-gray-900">Server Freedom</td>
+          <td class="p-3 text-emerald-700 font-semibold">100% Independent (Host on any cloud/VPS)</td>
+          <td class="p-3 text-rose-700">Locked to host's proprietary servers</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-gray-900">Root Access & Hardening</td>
+          <td class="p-3 text-emerald-700 font-semibold">Full root access for custom firewalls & crons</td>
+          <td class="p-3 text-amber-700">Limited shared cPanel access</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-gray-900">Migration Flexibility</td>
+          <td class="p-3 text-emerald-700 font-semibold">1-Click IP re-issuance in LicenBase portal</td>
+          <td class="p-3 text-rose-700">License revoked upon leaving provider</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium text-gray-900">Scalability</td>
+          <td class="p-3 text-emerald-700 font-semibold">Easily handles thousands of clients on dedicated nodes</td>
+          <td class="p-3 text-rose-700">Throttled by shared server resource limits</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="space-y-4">
+  <h2 id="the-hidden-risk-of-bundled-reseller-hosting" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-4 tracking-tight">The Hidden Risk of Bundled Reseller Hosting</h2>
+  <p class="text-gray-700 leading-relaxed">Bundled WHMCS hosting plans are often used by hosting providers as a 'customer lock-in' mechanism. When your hosting company experiences downtime, poor customer support, or sudden price hikes, migrating your business elsewhere is painful because your billing system license is tied to their servers.</p>
+  <p class="text-gray-700 leading-relaxed">By owning a standalone <a href="/whmcs-license" class="text-brand-600 hover:text-brand-700 underline font-medium">WHMCS license</a> through LicenBase, you maintain complete sovereignty over your billing platform and can switch server providers whenever you find better hardware or pricing.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="take-control-of-your-hosting-infrastructure" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-4 tracking-tight">Take Control of Your Hosting Infrastructure</h2>
+  <p class="text-gray-700 leading-relaxed">Build a resilient, future-proof hosting business by separating your software licensing from server hardware. Explore our <a href="/cpanel-license" class="text-brand-600 hover:text-brand-700 underline font-medium">cPanel licenses</a> and <a href="/deals" class="text-brand-600 hover:text-brand-700 underline font-medium">combo discount deals</a> to secure your standalone licenses today.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="why-enterprise-hosting-providers-always-choose-standalone-licensing" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-4 tracking-tight">Why Enterprise Hosting Providers Always Choose Standalone Licensing</h2>
+  <p class="text-gray-700 leading-relaxed">As a hosting company grows beyond its first 50 clients, relying on a shared reseller hosting plan with bundled WHMCS becomes a major operational bottleneck. Shared hosting environments impose strict CPU execution limits, memory caps, and process timeouts. When your WHMCS daily cron runs to generate hundreds of invoices and process recurring billing batches, shared server resource limits can cause cron timeouts and incomplete billing cycles.</p>
+  <p class="text-gray-700 leading-relaxed">Deploying a standalone WHMCS installation on a dedicated or isolated cloud VPS eliminates these bottlenecks. You have dedicated RAM, unconstrained MySQL query execution, and the ability to configure custom firewall rules, Redis caching, and automated offsite database backups.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="step-by-step-migration-from-reseller-hosting-to-a-standalone-vps" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-4 tracking-tight">Step-by-Step Migration from Reseller Hosting to a Standalone VPS</h2>
+  <p class="text-gray-700 leading-relaxed">If you currently use bundled reseller hosting and want to move to an independent VPS with LicenBase, the migration process is straightforward:</p>
+  <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+    <li><strong>Export MySQL Database:</strong> Use <code class="bg-gray-100 px-2 py-0.5 rounded text-sm text-gray-800">mysqldump</code> or phpMyAdmin to export your entire WHMCS database.</li>
+    <li><strong>Transfer Web Files:</strong> Copy your WHMCS files, attachments, and configuration files to your new VPS.</li>
+    <li><strong>Import Database on New Server:</strong> Import the SQL dump into your new MariaDB/MySQL database.</li>
+    <li><strong>Update License Key:</strong> Purchase a standalone <a href="/whmcs-license" class="text-brand-600 hover:text-brand-700 underline font-medium">WHMCS license</a> from LicenBase, update your key in <code class="bg-gray-100 px-2 py-0.5 rounded text-sm text-gray-800">configuration.php</code>, and update your domain DNS records.</li>
+  </ol>
+  <p class="text-gray-700 leading-relaxed">Gain total infrastructure freedom today with LicenBase <a href="/deals" class="text-brand-600 hover:text-brand-700 underline font-medium">software bundles</a>.</p>
+</section>
+
+
+<section class="space-y-4">
+  <h2 id="summary-why-standalone-licensing-protects-your-business-value" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-4 tracking-tight">Summary: Why Standalone Licensing Protects Your Business Value</h2>
+  <p class="text-gray-700 leading-relaxed">When building a web hosting company or managed agency, your billing system is your most valuable digital asset. It houses your customer contracts, recurring payment tokens, invoice history, and server credentials. Tying this critical infrastructure to a bundled reseller host introduces severe operational vulnerability.</p>
+  <p class="text-gray-700 leading-relaxed">Investing in a standalone <a href="/whmcs-license" class="text-brand-600 hover:text-brand-700 underline font-medium">WHMCS license</a> gives you total ownership and portability. You can migrate servers, upgrade hardware, and scale your business with complete autonomy. Pair it with our <a href="/cpanel-license" class="text-brand-600 hover:text-brand-700 underline font-medium">cPanel license</a> and <a href="/deals" class="text-brand-600 hover:text-brand-700 underline font-medium">bundle discounts</a> to build a resilient hosting platform.</p>
+</section>
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is WHMCS Hosting?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">WHMCS Hosting is a bundled hosting package where a hosting provider gives you a shared or reseller hosting account that includes a pre-installed WHMCS license as part of the monthly fee.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is the downside of bundled WHMCS Hosting?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">The bundled license is locked to that specific hosting company&#x27;s servers. If you migrate your hosting to a faster VPS or dedicated server, the license is terminated and you must buy a standalone license.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Why is a standalone WHMCS license better for growing businesses?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">A standalone license gives you complete server independence. You can host WHMCS on any cloud provider (AWS, OVH, Hetzner, Vultr) and maintain total control over backups, database security, and cron execution.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Can I migrate from WHMCS Hosting to a standalone license without losing data?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. You simply export your MySQL database, move the files to your new VPS, update configuration.php with your new LicenBase license key, and resume operations seamlessly.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fwhmcs-license-vs-whmcs-hosting-difference&amp;text=WHMCS%20License%20vs%20WHMCS%20Hosting%3A%20What%20Is%20the%20Difference%3F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fwhmcs-license-vs-whmcs-hosting-difference" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fwhmcs-license-vs-whmcs-hosting-difference" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=WHMCS%20License%20vs%20WHMCS%20Hosting%3A%20What%20Is%20the%20Difference%3F&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fwhmcs-license-vs-whmcs-hosting-difference" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#direct-comparison-standalone-license-vs-bundled-hosting" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Direct Comparison: Standalone License vs Bundled Hosting</a><a href="#the-hidden-risk-of-bundled-reseller-hosting" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Hidden Risk of Bundled Reseller Hosting</a><a href="#take-control-of-your-hosting-infrastructure" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Take Control of Your Hosting Infrastructure</a><a href="#why-enterprise-hosting-providers-always-choose-standalone-licensing" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Why Enterprise Hosting Providers Always Choose Standalone Licensing</a><a href="#step-by-step-migration-from-reseller-hosting-to-a-standalone-vps" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Step-by-Step Migration from Reseller Hosting to a Standalone VPS</a><a href="#summary-why-standalone-licensing-protects-your-business-value" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Summary: Why Standalone Licensing Protects Your Business Value</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/whmcs-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">WHMCS License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/cpanel-license-vs-cpanel-hosting-difference" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-license-vs-cpanel-hosting-difference-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Comparison</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel License vs cPanel Hosting: What Is the Difference?</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A clear comparison between buying a cPanel software license for a server vs purchasing shared cPanel web hosting for a website.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 5, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cloudlinux-license-web-hosting-worth-the-cost" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cloudlinux-license-web-hosting-worth-the-cost-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Comparison</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">CloudLinux License for Web Hosting: Is the Extra Cost Worth It?</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A technical and financial breakdown of why CloudLinux OS is a vital investment for stable, high-density shared web hosting.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/plesk-vs-cpanel-license-cost-better-value-comparison" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/plesk-vs-cpanel-license-cost-better-value-comparison-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Comparison</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Plesk vs cPanel License Cost: Which Gives You Better Value?</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A detailed 2026 cost and value comparison between Plesk Obsidian and cPanel & WHM for hosting providers and agencies.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/directadmin-vs-cpanel-affordable-hosting-license" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/directadmin-vs-cpanel-affordable-hosting-license-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Comparison</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">DirectAdmin vs cPanel: Which License Is More Affordable for Hosts?</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A realistic comparison of DirectAdmin and cPanel licensing expenses, server resource usage, and customer retention for hosting providers.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/best-control-panel-vps-2026" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/best-control-panel-vps-2026-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Comparison</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Best Control Panel for VPS in 2026: cPanel vs DirectAdmin vs Plesk</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Compare cPanel, DirectAdmin, and Plesk to choose the ideal hosting control panel for your VPS resources and budget.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/litespeed-license-vs-free-web-server" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/litespeed-license-vs-free-web-server-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Comparison</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">LiteSpeed License vs Free Web Server: Is It Worth Paying For in 2026?</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A realistic performance, compatibility, and administrative comparison between paid LiteSpeed Enterprise and free web servers.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 4, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>

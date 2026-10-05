@@ -53,7 +53,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/best-control-panel-reseller-hosting</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-best-control-panel-reseller-hosting.png</image:loc>
@@ -63,7 +63,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/best-control-panel-vps-2026</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-best-control-panel-vps-2026.png</image:loc>
@@ -112,6 +112,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/buy-whmcs-license-self-hosted-explained</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-buy-whmcs-license-self-hosted-explained.png</image:loc>
+      <image:title>Buy WHMCS License: Self-Hosted Explained</image:title>
+      <image:caption>Everything you need to know before buying a self-hosted WHMCS license: server requirements, database security, IonCube setup, and automation.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-license-2026-licenbase</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -133,7 +143,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-license-vs-official-difference</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-license-vs-official-difference.png</image:loc>
@@ -172,6 +182,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cheap-litespeed-license-choose-right-plan</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-litespeed-license-choose-right-plan.png</image:loc>
+      <image:title>Cheap LiteSpeed License: How to Choose Plan</image:title>
+      <image:caption>Learn how to select the right affordable LiteSpeed Web Server plan for your VPS or dedicated server based on RAM, CPU cores, and website traffic.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cheap-whmcs-license-guide</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -179,6 +199,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-guide.png</image:loc>
       <image:title>Cheap WHMCS License: 2026 Buying Guide</image:title>
       <image:caption>Discover what to check when buying a cheap WHMCS license, including IP authentication, addon support, upgrade paths, and security verification.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cheap-whmcs-license-what-to-check-before-buying</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-what-to-check-before-buying.png</image:loc>
+      <image:title>Cheap WHMCS License: What to Check Before Buying</image:title>
+      <image:caption>Essential checklist before buying an affordable WHMCS license: security integrity, module compatibility, automated updates, and IP activation.</image:caption>
     </image:image>
   </url>
   <url>
@@ -243,7 +273,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-web-hosting-worth-the-cost</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-web-hosting-worth-the-cost.png</image:loc>
@@ -253,7 +283,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-vs-almalinux</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-vs-almalinux.png</image:loc>
@@ -333,7 +363,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-license-price-comparison-licenbase-vs-official</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-price-comparison-licenbase-vs-official.png</image:loc>
@@ -373,7 +403,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vs-directadmin</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-directadmin.png</image:loc>
@@ -383,7 +413,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vs-plesk-vs-directadmin</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-plesk-vs-directadmin.png</image:loc>
@@ -393,7 +423,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vs-plesk</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-plesk.png</image:loc>
@@ -423,7 +453,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/directadmin-vs-cpanel-affordable-hosting-license</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-directadmin-vs-cpanel-affordable-hosting-license.png</image:loc>
@@ -523,12 +553,22 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/hosting-control-panel-license-cost-2026-guide</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-hosting-control-panel-license-cost-2026-guide.png</image:loc>
       <image:title>Hosting Control Panel License Cost: 2026 Guide</image:title>
       <image:caption>Compare 2026 hosting control panel license costs across cPanel, Plesk, DirectAdmin, and Webuzo. Find the most cost-effective solution for your servers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/how-much-does-whmcs-cost-new-hosting-business</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-much-does-whmcs-cost-new-hosting-business.png</image:loc>
+      <image:title>How Much Does WHMCS Cost for New Hosts 2026</image:title>
+      <image:caption>Complete total cost of ownership (TCO) breakdown for launching a new hosting business with WHMCS: license costs, servers, payment gateways, and addons.</image:caption>
     </image:image>
   </url>
   <url>
@@ -552,6 +592,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/how-to-install-litespeed-on-cpanel-vps-guide</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-to-install-litespeed-on-cpanel-vps-guide.png</image:loc>
+      <image:title>Install LiteSpeed on cPanel VPS: Step-by-Step</image:title>
+      <image:caption>Complete tutorial on installing LiteSpeed Web Server on a cPanel &amp; WHM VPS, configuring PHP extensions, and switching traffic with zero downtime.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/how-to-reduce-cpanel-hosting-costs-2026</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -569,6 +619,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-reduce-cpanel-license-renewal-cost-2026.png</image:loc>
       <image:title>Reduce cPanel Renewal Cost: Annual Expenses</image:title>
       <image:caption>Learn how to reduce cPanel license renewal costs and cut annual hosting expenses with account hygiene, fleet rightsizing, and wholesale IP licensing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/how-to-reduce-whmcs-costs-without-losing-features</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-to-reduce-whmcs-costs-without-losing-features.png</image:loc>
+      <image:title>Reduce WHMCS Costs Without Losing Features 2026</image:title>
+      <image:caption>Smart strategies to lower your WHMCS billing and licensing expenses while keeping all critical automation, payment gateways, and modules intact.</image:caption>
     </image:image>
   </url>
   <url>
@@ -643,7 +703,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/is-directadmin-cheaper-than-cpanel</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-is-directadmin-cheaper-than-cpanel.png</image:loc>
@@ -663,7 +723,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/licenbase-vs-official-licensing-cost-breakdown</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-licenbase-vs-official-licensing-cost-breakdown.png</image:loc>
@@ -692,13 +752,73 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/litespeed-license-not-working-issues-fixes</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-not-working-issues-fixes.png</image:loc>
+      <image:title>LiteSpeed License Not Working: 7 Common Fixes</image:title>
+      <image:caption>Step-by-step troubleshooting guide for common LiteSpeed license validation errors, expired keys, IP mismatches, and firewall blockages.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-license-price-2026-pricing-guide</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-price-2026-pricing-guide.png</image:loc>
+      <image:title>LiteSpeed License Price 2026: Complete Guide</image:title>
+      <image:caption>Comprehensive breakdown of LiteSpeed Web Server pricing in 2026 across Starter, Site Owner, Web Host, and Elite tiers with server optimization tips.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-license-vs-free-web-server</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-vs-free-web-server.png</image:loc>
+      <image:title>LiteSpeed vs Free Web Servers: Worth Paying?</image:title>
+      <image:caption>Compare commercial LiteSpeed Web Server with free alternatives like Apache, Nginx, and OpenLiteSpeed to decide if a paid license is worth the investment.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-pricing-explained-hosting-businesses</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-pricing-explained-hosting-businesses.png</image:loc>
+      <image:title>LiteSpeed Pricing Explained for Hosts 2026</image:title>
+      <image:caption>A comprehensive financial and operational guide to LiteSpeed Web Server licensing costs, density improvements, and ROI for hosting providers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-vs-apache-better-for-vps</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-apache-better-for-vps.png</image:loc>
+      <image:title>LiteSpeed vs Apache: Which Is Better for VPS?</image:title>
+      <image:caption>Deep comparison of LiteSpeed and Apache web servers covering memory footprint, TTFB, concurrency limits, and total infrastructure costs.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/litespeed-vs-apache</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-apache.png</image:loc>
       <image:title>LiteSpeed vs Apache for Hosting Providers</image:title>
       <image:caption>How LiteSpeed Web Server compares with Apache on architecture, caching, HTTP/3, compatibility and cost, and when switching makes sense for hosts.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-vs-nginx-performance-features-cost</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-nginx-performance-features-cost.png</image:loc>
+      <image:title>LiteSpeed vs Nginx: Performance &amp; Cost 2026</image:title>
+      <image:caption>Compare LiteSpeed and Nginx on raw speed, dynamic caching capabilities, .htaccess support, multi-tenant hosting, and licensing costs.</image:caption>
     </image:image>
   </url>
   <url>
@@ -713,12 +833,22 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/plesk-vs-cpanel-license-cost-better-value-comparison</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-plesk-vs-cpanel-license-cost-better-value-comparison.png</image:loc>
       <image:title>Plesk vs cPanel License Cost: Value Comparison</image:title>
       <image:caption>Plesk vs cPanel license cost comparison in 2026. Compare pricing, WordPress management, Windows support, and overall value for servers and agencies.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/reduce-web-server-costs-affordable-litespeed-license</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-reduce-web-server-costs-affordable-litespeed-license.png</image:loc>
+      <image:title>Reduce Web Server Costs With LiteSpeed 2026</image:title>
+      <image:caption>Proven strategies to slash web server infrastructure and licensing bills by deploying affordable LiteSpeed Web Server licenses on your servers.</image:caption>
     </image:image>
   </url>
   <url>
@@ -902,6 +1032,46 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/where-to-buy-cheap-litespeed-license</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-where-to-buy-cheap-litespeed-license.png</image:loc>
+      <image:title>Where to Buy Cheap LiteSpeed License: 2026 Guide</image:title>
+      <image:caption>Discover the best places to buy cheap LiteSpeed licenses with instant automated activation, full feature support, and predictable monthly billing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/where-to-buy-cheap-whmcs-license</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-where-to-buy-cheap-whmcs-license.png</image:loc>
+      <image:title>Where to Buy Cheap WHMCS License: 2026 Guide</image:title>
+      <image:caption>Find the best places to buy cheap WHMCS licenses with instant IP activation, clean official files, auto-updates, and reliable billing support.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/whmcs-license-activation-step-by-step-guide</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-activation-step-by-step-guide.png</image:loc>
+      <image:title>WHMCS License Activation: Step-by-Step Guide</image:title>
+      <image:caption>Step-by-step tutorial for activating and configuring a WHMCS license on your server, setting up cron jobs, and securing payment gateways.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/whmcs-license-not-working-errors-fixes</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-not-working-errors-fixes.png</image:loc>
+      <image:title>WHMCS License Not Working: Common Fixes</image:title>
+      <image:caption>Troubleshoot and fix common WHMCS licensing errors including Invalid License, IP mismatch, curl 28 timeouts, and IonCube decode errors.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/whmcs-license-price-2026-affordable-guide</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -912,6 +1082,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/whmcs-license-price-2026-pricing-guide</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-price-2026-pricing-guide.png</image:loc>
+      <image:title>WHMCS License Price 2026: Complete Guide</image:title>
+      <image:caption>Complete guide to WHMCS pricing in 2026 across Starter, Plus, Professional, and Business tiers with client limits and cost reduction strategies.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/whmcs-license-types-explained</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -919,6 +1099,26 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-types-explained.png</image:loc>
       <image:title>WHMCS License Types &amp; Pricing Explained</image:title>
       <image:caption>Explore WHMCS license types including Starter, Plus, Professional, Business, and Lifetime Owned licenses. Choose the best billing automation plan.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/whmcs-license-vs-whmcs-hosting-difference</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-vs-whmcs-hosting-difference.png</image:loc>
+      <image:title>WHMCS License vs WHMCS Hosting: Differences</image:title>
+      <image:caption>Understand the difference between buying a standalone WHMCS license and signing up for WHMCS reseller hosting to choose the best option for your business.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/whmcs-pricing-for-small-hosting-businesses</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-pricing-for-small-hosting-businesses.png</image:loc>
+      <image:title>WHMCS Pricing for Small Hosts: Stay Profitable</image:title>
+      <image:caption>How boutique and small web hosting companies can manage WHMCS licensing expenses, optimize active client counts, and maximize profit margins.</image:caption>
     </image:image>
   </url>
   <url>
