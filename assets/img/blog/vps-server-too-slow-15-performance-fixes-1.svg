@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">15 Linux VPS Performance Fixes Matrix</title>
+  <desc id="d">Actionable fixes for resolving CPU spikes, RAM exhaustion, slow disk IOPS, and network latency on Linux VPS.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Quadrant 1: CPU -->
+  <rect x="35" y="40" width="210" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="35" y="40" width="210" height="6" rx="3" fill="#EF4444"/>
+  <text x="50" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. CPU &amp; Load Fixes</text>
+  <text x="50" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#EF4444">High CPU &amp; Runaway Tasks</text>
+  <path d="M50 115 h180" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="50" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">1. Pinpoint runaway php-fpm</text>
+  <text x="50" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">2. Stagger cron job schedules</text>
+  <text x="50" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">3. Deploy OPcache JIT engine</text>
+  <text x="50" y="230" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">4. Throttle abusive bots via WAF</text>
+  <rect x="50" y="295" width="180" height="45" rx="8" fill="#FEF2F2"/>
+  <text x="140" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B91C1C" text-anchor="middle">Cut CPU Usage by 60%</text>
+
+  <!-- Quadrant 2: RAM -->
+  <rect x="260" y="40" width="210" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="260" y="40" width="210" height="6" rx="3" fill="#F59E0B"/>
+  <text x="275" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. RAM &amp; Memory</text>
+  <text x="275" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#D97706">OOM Prevention &amp; Swap</text>
+  <path d="M275 115 h180" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="275" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">5. Set swappiness to 10</text>
+  <text x="275" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">6. Cap pm.max_children pool</text>
+  <text x="275" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">7. Configure Redis object cache</text>
+  <text x="275" y="230" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">8. Prune unused OS daemons</text>
+  <rect x="275" y="295" width="180" height="45" rx="8" fill="#FFFBEB"/>
+  <text x="365" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Prevent OOM Crashes</text>
+
+  <!-- Quadrant 3: Disk & DB -->
+  <rect x="485" y="40" width="210" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="485" y="40" width="210" height="6" rx="3" fill="#3B82F6"/>
+  <text x="500" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. Disk &amp; MySQL</text>
+  <text x="500" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#2563EB">I/O Bottlenecks</text>
+  <path d="M500 115 h180" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="500" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">9. Tune innodb_buffer_pool</text>
+  <text x="500" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">10. Rotate &amp; truncate log files</text>
+  <text x="500" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">11. Convert MyISAM to InnoDB</text>
+  <text x="500" y="230" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">12. Enable slow query logging</text>
+  <rect x="500" y="295" width="180" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="590" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Accelerate Database I/O</text>
+
+  <!-- Quadrant 4: Web & Network -->
+  <rect x="710" y="40" width="215" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <rect x="710" y="40" width="215" height="6" rx="3" fill="#10B981"/>
+  <text x="725" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">4. Web Server</text>
+  <text x="725" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#059669">LiteSpeed &amp; TCP BBR</text>
+  <path d="M725 115 h185" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="725" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">13. Switch Apache to LiteSpeed</text>
+  <text x="725" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">14. Enable TCP BBR algorithm</text>
+  <text x="725" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">15. Enable HTTP/3 QUIC &amp; Gzip</text>
+  <text x="725" y="230" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">⚡ Sub-50ms TTFB Response</text>
+  <rect x="725" y="295" width="185" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="817" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">Max Web Acceleration</text>
+</svg>

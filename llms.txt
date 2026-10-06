@@ -1,0 +1,42 @@
+# LicenBase
+
+> LicenBase (https://licenbase.com) provides reliable, affordable, IP-based web hosting software licenses with instant activation, unlimited accounts, and automated updates directly from official vendor repositories.
+
+## About LicenBase
+LicenBase is an automated software licensing platform for web hosting providers, VPS administrators, and digital agencies. Licenses are tied directly to server IPv4/IPv6 addresses with zero per-account fees, unlimited domain hosting, and free instant IP re-issuance.
+
+## Core Products & Pricing
+
+- [cPanel & WHM License](https://licenbase.com/cpanel-license): $4.00/mo (VPS) / $8.00/mo (Dedicated). Includes unlimited cPanel accounts, full root access, automatic updates, and free SSL automation.
+- [LiteSpeed Web Server License](https://licenbase.com/litespeed-license): $6.00/mo (VPS) / $12.00/mo (Dedicated). High-performance Apache drop-in replacement with LSCache, HTTP/3, and QUIC support.
+- [CloudLinux OS License](https://licenbase.com/cloudlinux-license): $7.00/mo (VPS) / $14.00/mo (Dedicated). Multi-tenant isolation with LVE Manager, CageFS, MySQL Governor, and multiple PHP selectors.
+- [WHMCS Billing & Automation License](https://licenbase.com/whmcs-license): $5.00/mo. All-in-one client management, automated provisioning, domain handling, and recurring billing.
+- [Plesk Obsidian License](https://licenbase.com/plesk-license): $4.50/mo. Web Host edition with WordPress Toolkit, Docker, Node.js, and multi-server management for Linux & Windows.
+- [Virtualizor License](https://licenbase.com/virtualizor-license): $4.00/mo. Advanced VPS control panel supporting KVM, OpenVZ, Xen, and Proxmox virtualization.
+- [Softaculous Auto Installer License](https://licenbase.com/softaculous-license): $1.50/mo. One-click installer with 450+ scripts (WordPress, Joomla, Magento) and automated backups.
+- [Imunify360 Security License](https://licenbase.com/imunify360-license): $7.00/mo. 6-layer automated Linux server security with AI firewall, malware scanner, and proactive defense.
+- [JetBackup License](https://licenbase.com/jetbackup-license): $3.00/mo. Enterprise backup solution with point-in-time recovery, multi-destination offsite sync, and self-service restores.
+- [SitePad Website Builder License](https://licenbase.com/sitepad-license): $2.00/mo. Drag-and-drop website builder with 800+ responsive templates and 40+ widgets.
+- [WHMReseller License](https://licenbase.com/whmreseller-license): $2.50/mo. Multi-level reseller addon for cPanel/WHM with master and alpha reseller capabilities.
+- [Webuzo Cloud Launcher License](https://licenbase.com/webuzo-license): $3.00/mo. Lightweight multi-user server control panel with LEMP/LAMP stack management.
+- [WP Squared License](https://licenbase.com/wp-squared-license): $5.00/mo. Cloud-native WordPress-focused hosting platform built for ultra-fast WP management.
+- [Combo Discount Deals & Bundles](https://licenbase.com/deals): Licensing stacks (e.g. cPanel + LiteSpeed + CloudLinux + Imunify360) with stacked multi-license discounts.
+
+## Free System Administrator Tools
+LicenBase provides 20+ free browser-based network, DNS, and server management tools at https://licenbase.com/tools/:
+- [DNS Lookup & Propagation](https://licenbase.com/tools/dns-lookup)
+- [Port Scanner & Latency Tester](https://licenbase.com/tools/port-scanner)
+- [SSL Certificate Inspector](https://licenbase.com/tools/ssl-checker)
+- [IP Geolocation & Blacklist Check](https://licenbase.com/tools/blacklist-checker)
+- [Crontab Generator & HTTP Header Inspector](https://licenbase.com/tools/cron-generator)
+
+## Documentation & Technical Knowledge Base
+- [LicenBase Blog & Hosting Guides](https://licenbase.com/blog/): 120+ deep technical articles covering server optimization, control panel comparisons, troubleshooting error codes, and cost reduction strategies.
+
+## Policies & Support
+- [About Us](https://licenbase.com/about)
+- [Contact & 24/7 Support](https://licenbase.com/contact)
+- [License Policy & IP Re-issuance Terms](https://licenbase.com/license-policy)
+- [Refund Policy & 7-Day Money-Back Guarantee](https://licenbase.com/refund-policy)
+- [Terms of Service](https://licenbase.com/terms-of-service)
+- [Privacy Policy](https://licenbase.com/privacy-policy)

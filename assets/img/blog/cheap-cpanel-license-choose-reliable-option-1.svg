@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Choosing a Reliable Cheap cPanel License</title>
+  <desc id="d">Key evaluation criteria for choosing a secure and stable cheap cPanel license provider.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Col 1: Dangerous Nulled Scripts -->
+  <rect x="40" y="40" width="420" height="340" rx="14" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+  <rect x="40" y="40" width="420" height="6" rx="3" fill="#E11D48"/>
+  <text x="65" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#9F1239">Avoid: Nulled / Cracked Licenses</text>
+  <text x="65" y="102" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E11D48">High Risk, Severe Security Vulnerabilities</text>
+  <path d="M65 120 h370" stroke="#FFE4E6" stroke-width="1"/>
+  
+  <text x="65" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✕ Modifies core cPanel binaries with binary patches</text>
+  <text x="65" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✕ Disables official cPanel security and CVE updates</text>
+  <text x="65" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✕ Backdoor malware risk and credential leakage</text>
+  <text x="65" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✕ Server crashes on unexpected kernel updates</text>
+  
+  <rect x="65" y="295" width="370" height="45" rx="8" fill="#FFF1F2"/>
+  <text x="250" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#BE123C" text-anchor="middle">Critical Production Risk</text>
+
+  <!-- Col 2: Reliable Automated IP Licensing -->
+  <rect x="500" y="40" width="420" height="340" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+  <rect x="500" y="40" width="420" height="6" rx="3" fill="#059669"/>
+  <text x="525" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#065F46">Choose: Automated IP Licensing</text>
+  <text x="525" y="102" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">LicenBase Wholesale Architecture</text>
+  <path d="M525 120 h370" stroke="#D1FAE5" stroke-width="1"/>
+  
+  <text x="525" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✓ 100% unmodified official cPanel &amp; WHM binaries</text>
+  <text x="525" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✓ Direct upstream security patches and version updates</text>
+  <text x="525" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✓ Verified with official cpkeyclt licensing utility</text>
+  <text x="525" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">✓ Instant IP change and automated reissue portal</text>
+  
+  <rect x="525" y="295" width="370" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="710" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="middle">Safe, Stable &amp; Affordable</text>
+</svg>

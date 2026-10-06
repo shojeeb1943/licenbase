@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LiteSpeed License Troubleshooting Workflow</title>
+  <desc id="d">Step-by-step diagnostic workflow for identifying and fixing LiteSpeed Web Server licensing errors.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Step 1 -->
+  <rect x="40" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="260" height="6" rx="3" fill="#3B82F6"/>
+  <text x="60" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Step 1: Inspect Status</text>
+  <text x="60" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">CLI Diagnostics</text>
+  <path d="M60 118 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">Check license file &amp; error log:</text>
+  <rect x="60" y="160" width="220" height="50" rx="6" fill="#0F172A"/>
+  <text x="70" y="182" font-family="Consolas, monospace" font-size="11" fill="#38BDF8">/usr/local/lsws/bin/</text>
+  <text x="70" y="198" font-family="Consolas, monospace" font-size="11" fill="#F8FAFC">lshttpd -V</text>
+  <text x="60" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Read error log tail:</text>
+  <text x="60" y="255" font-family="Consolas, monospace" font-size="10" fill="#EF4444">tail -n 20 /usr/local/lsws/</text>
+  <text x="60" y="270" font-family="Consolas, monospace" font-size="10" fill="#EF4444">logs/error.log</text>
+  <rect x="60" y="295" width="220" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="170" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Identify Error Code</text>
+
+  <!-- Step 2 -->
+  <rect x="350" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="40" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Step 2: Check Port 443</text>
+  <text x="370" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#D97706">Firewall &amp; Gateway</text>
+  <path d="M370 118 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">Verify outbound TCP port 443:</text>
+  <rect x="370" y="160" width="220" height="50" rx="6" fill="#0F172A"/>
+  <text x="380" y="182" font-family="Consolas, monospace" font-size="11" fill="#38BDF8">curl -Iv https://</text>
+  <text x="380" y="198" font-family="Consolas, monospace" font-size="11" fill="#F8FAFC">license.litespeedtech.com</text>
+  <text x="370" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Ensure CSF / firewalld allows</text>
+  <text x="370" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">outbound HTTPS requests.</text>
+  <rect x="370" y="295" width="220" height="45" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">Verify Network Path</text>
+
+  <!-- Step 3 -->
+  <rect x="660" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <rect x="660" y="40" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Step 3: Refresh Key</text>
+  <text x="680" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Instant Re-verification</text>
+  <path d="M680 118 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">Run license refresh utility:</text>
+  <rect x="680" y="160" width="220" height="50" rx="6" fill="#0F172A"/>
+  <text x="690" y="182" font-family="Consolas, monospace" font-size="11" fill="#38BDF8">/usr/local/lsws/bin/</text>
+  <text x="690" y="198" font-family="Consolas, monospace" font-size="11" fill="#34D399">lshttpd -r</text>
+  <text x="680" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Restart daemon gracefully:</text>
+  <text x="680" y="255" font-family="Consolas, monospace" font-size="11" fill="#0F172A">systemctl restart lsws</text>
+  <rect x="680" y="295" width="220" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="790" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Server Restored 100%</text>
+</svg>

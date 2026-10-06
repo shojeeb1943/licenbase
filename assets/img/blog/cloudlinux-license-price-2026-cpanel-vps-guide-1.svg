@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">CloudLinux OS VPS License Price and Isolation Architecture</title>
+  <desc id="d">CloudLinux OS Shared vs Shared Pro pricing and multi-tenant resource isolation on cPanel VPS.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Col 1: LVE Isolation Stack -->
+  <rect x="40" y="40" width="420" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="420" height="6" rx="3" fill="#3B82F6"/>
+  <text x="65" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">CloudLinux Multi-Tenant Defense</text>
+  <text x="65" y="102" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Eliminates the "Bad Neighbor" Effect</text>
+  <path d="M65 120 h370" stroke="#F1F5F9" stroke-width="1"/>
+  
+  <text x="65" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">🔒 <tspan font-weight="700">CageFS Virtual Jails:</tspan> Complete user file isolation</text>
+  <text x="65" y="185" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">⚙️ <tspan font-weight="700">LVE Manager:</tspan> Per-tenant CPU, RAM, IOPS, and EP limits</text>
+  <text x="65" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">⚡ <tspan font-weight="700">MySQL Governor:</tspan> Pinpoints and throttles abusive queries</text>
+  <text x="65" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">🛡️ <tspan font-weight="700">HardenedPHP:</tspan> Backported security patches for legacy PHP</text>
+  
+  <rect x="65" y="295" width="370" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="250" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle">Rock-Solid Shared Hosting Stability</text>
+
+  <!-- Col 2: License Pricing Matrix -->
+  <rect x="500" y="40" width="420" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <rect x="500" y="40" width="420" height="6" rx="3" fill="#10B981"/>
+  <text x="525" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">CloudLinux VPS Pricing 2026</text>
+  <text x="525" y="102" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Retail vs LicenBase Wholesale IP Rate</text>
+  <path d="M525 120 h370" stroke="#F1F5F9" stroke-width="1"/>
+  
+  <text x="525" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Official Vendor Retail Rate:</text>
+  <text x="525" y="175" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$14.00 – $18.00<tspan font-size="12" fill="#64748B">/month</tspan></text>
+  
+  <text x="525" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Wholesale IP Rate:</text>
+  <text x="525" y="238" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800" fill="#10B981">$4.00<tspan font-size="13" fill="#64748B">/month</tspan></text>
+  
+  <rect x="525" y="295" width="370" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="710" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Save Over 70% Monthly</text>
+</svg>

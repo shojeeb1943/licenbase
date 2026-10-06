@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Softaculous License Pricing and Features 2026</title>
+  <desc id="d">Overview of Softaculous auto-installer tiers, WordPress manager features, and license pricing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Card 1: 400+ Auto Scripts -->
+  <rect x="40" y="40" width="270" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="270" height="6" rx="3" fill="#3B82F6"/>
+  <text x="60" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">400+ 1-Click Scripts</text>
+  <text x="60" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Application Library</text>
+  <path d="M60 118 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• WordPress, Joomla, Drupal</text>
+  <text x="60" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Laravel, PrestaShop, phpBB</text>
+  <text x="60" y="199" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Automated MySQL creation</text>
+  <text x="60" y="226" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Instant SSL certificate binding</text>
+  <text x="60" y="253" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Auto backup on updates</text>
+  <rect x="60" y="295" width="230" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="175" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Full Script Suite</text>
+
+  <!-- Card 2: WordPress Manager -->
+  <rect x="345" y="40" width="270" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="345" y="40" width="270" height="6" rx="3" fill="#10B981"/>
+  <text x="365" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">WordPress Manager</text>
+  <text x="365" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Staging &amp; Cloning</text>
+  <path d="M365 118 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="365" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• 1-click staging sandbox</text>
+  <text x="365" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Push staging to live instantly</text>
+  <text x="365" y="199" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Automated plugin updates</text>
+  <text x="365" y="226" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Security hardening switches</text>
+  <text x="365" y="253" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Password reset without email</text>
+  <rect x="365" y="295" width="230" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="480" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Complete WP Toolkit</text>
+
+  <!-- Card 3: VPS License Cost -->
+  <rect x="650" y="40" width="270" height="340" rx="14" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2"/>
+  <rect x="650" y="40" width="270" height="6" rx="3" fill="#7C3AED"/>
+  <text x="670" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Softaculous VPS License</text>
+  <text x="670" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#7C3AED">LicenBase Wholesale</text>
+  <path d="M670 118 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="670" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Retail Direct Price:</text>
+  <text x="670" y="168" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">$2.50 – $3.50/mo</text>
+  <text x="670" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">LicenBase Wholesale Rate:</text>
+  <text x="670" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$1.50<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <text x="670" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Unlimited users &amp; domains</text>
+  <rect x="670" y="295" width="230" height="45" rx="8" fill="#F5F3FF"/>
+  <text x="785" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#6D28D9" text-anchor="middle">Wholesale IP License</text>
+</svg>

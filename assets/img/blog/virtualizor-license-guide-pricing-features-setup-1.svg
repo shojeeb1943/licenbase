@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Virtualizor Hypervisor Architecture and Pricing</title>
+  <desc id="d">Virtualizor VPS management features, hypervisor virtualization support, and WHMCS integration.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Col 1: Supported Hypervisors -->
+  <rect x="40" y="40" width="270" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="270" height="6" rx="3" fill="#3B82F6"/>
+  <text x="60" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Virtualization Engines</text>
+  <text x="60" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Multi-Hypervisor Support</text>
+  <path d="M60 118 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• KVM (Kernel-based VM)</text>
+  <text x="60" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• LXC &amp; OpenVZ Containers</text>
+  <text x="60" y="199" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• XenServer &amp; Xen PV/HVM</text>
+  <text x="60" y="226" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Proxmox integration</text>
+  <text x="60" y="253" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Automated IP pool allocation</text>
+  <rect x="60" y="295" width="230" height="45" rx="8" fill="#EFF6FF"/>
+  <text x="175" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Full Hypervisor Fleet</text>
+
+  <!-- Col 2: WHMCS Automation -->
+  <rect x="345" y="40" width="270" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="345" y="40" width="270" height="6" rx="3" fill="#10B981"/>
+  <text x="365" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">WHMCS Automation</text>
+  <text x="365" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Turnkey Cloud Selling</text>
+  <path d="M365 118 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="365" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• 5-second VPS provisioning</text>
+  <text x="365" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Automated OS re-installation</text>
+  <text x="365" y="199" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Client VNC console access</text>
+  <text x="365" y="226" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Bandwidth graphs &amp; reboot</text>
+  <text x="365" y="253" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Automated IP assignment</text>
+  <rect x="365" y="295" width="230" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="480" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Self-Service Client Portal</text>
+
+  <!-- Col 3: License Pricing -->
+  <rect x="650" y="40" width="270" height="340" rx="14" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2"/>
+  <rect x="650" y="40" width="270" height="6" rx="3" fill="#7C3AED"/>
+  <text x="670" y="78" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Virtualizor License</text>
+  <text x="670" y="100" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#7C3AED">LicenBase Wholesale</text>
+  <path d="M670 118 h230" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="670" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Retail Direct Rate:</text>
+  <text x="670" y="168" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">$9.00 – $12.00/mo</text>
+  <text x="670" y="200" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">LicenBase Wholesale Rate:</text>
+  <text x="670" y="225" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$3.50<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <text x="670" y="255" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">• Unlimited VPS containers</text>
+  <rect x="670" y="295" width="230" height="45" rx="8" fill="#F5F3FF"/>
+  <text x="785" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#6D28D9" text-anchor="middle">Wholesale Bare-Metal Node</text>
+</svg>

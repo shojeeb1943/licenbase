@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LiteSpeed Web Server VPS License Pricing 2026</title>
+  <desc id="d">Comparison of LiteSpeed Web Server tiers for VPS servers with LicenBase wholesale pricing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Site Owner -->
+  <rect x="35" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="35" y="40" width="205" height="6" rx="3" fill="#3B82F6"/>
+  <text x="50" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Site Owner</text>
+  <text x="50" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">1 Worker / Up to 5 Dom</text>
+  <text x="50" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Retail Direct:</text>
+  <text x="50" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$12.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M50 180 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="50" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="50" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="50" y="295" width="175" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="137" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Starter VPS</text>
+
+  <!-- Web Host Essential -->
+  <rect x="260" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="260" y="40" width="205" height="6" rx="3" fill="#2563EB"/>
+  <text x="275" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Web Host Ess.</text>
+  <text x="275" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">1 Worker / Unlimited</text>
+  <text x="275" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Retail Direct:</text>
+  <text x="275" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$26.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M275 180 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="275" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="275" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="275" y="295" width="175" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="362" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Save 84% / Month</text>
+
+  <!-- Web Host Professional -->
+  <rect x="485" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="485" y="40" width="205" height="6" rx="3" fill="#1D4ED8"/>
+  <text x="500" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Web Host Pro</text>
+  <text x="500" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">2 Workers / Unlimited</text>
+  <text x="500" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Retail Direct:</text>
+  <text x="500" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$38.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M500 180 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="500" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="500" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$6.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="500" y="295" width="175" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="587" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Save 84% / Month</text>
+
+  <!-- Web Host Enterprise -->
+  <rect x="710" y="40" width="215" height="340" rx="14" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2"/>
+  <rect x="710" y="40" width="215" height="6" rx="3" fill="#10B981"/>
+  <text x="725" y="75" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#0F172A">Enterprise Tier</text>
+  <text x="725" y="98" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">4–8 Workers / High RAM</text>
+  <text x="725" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">Retail Direct:</text>
+  <text x="725" y="160" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">$50.00+<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <path d="M725 180 h185" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="725" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#64748B">LicenBase Rate:</text>
+  <text x="725" y="235" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$8.00<tspan font-size="12" fill="#64748B">/mo</tspan></text>
+  <rect x="725" y="295" width="185" height="45" rx="8" fill="#ECFDF5"/>
+  <text x="817" y="323" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Heavy Multi-Core VPS</text>
+</svg>
