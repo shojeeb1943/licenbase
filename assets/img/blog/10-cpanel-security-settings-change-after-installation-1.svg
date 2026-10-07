@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg2)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">10 Critical cPanel/WHM Post-Install Security Settings</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Baseline Hardening Steps for Linux Web Hosting Servers</text>
+
+  <rect x="50" y="95" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="80" cy="121" r="16" fill="#ef4444"/>
+  <text x="80" y="126" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1</text>
+  <text x="110" y="117" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Disable Root Password SSH</text>
+  <text x="110" y="135" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Enforce Ed25519 / RSA SSH Key Auth</text>
+
+  <rect x="50" y="155" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="80" cy="181" r="16" fill="#ef4444"/>
+  <text x="80" y="186" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2</text>
+  <text x="110" y="177" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Enable cPHulk Brute Force</text>
+  <text x="110" y="195" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Lockout malicious IPs on failed logins</text>
+
+  <rect x="50" y="215" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="80" cy="241" r="16" fill="#ef4444"/>
+  <text x="80" y="246" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3</text>
+  <text x="110" y="237" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Enable ModSecurity OWASP CRS</text>
+  <text x="110" y="255" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Block SQLi, XSS, and exploit probes</text>
+
+  <rect x="50" y="275" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="80" cy="301" r="16" fill="#ef4444"/>
+  <text x="80" y="306" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">4</text>
+  <text x="110" y="297" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Disable Compilers for Users</text>
+  <text x="110" y="315" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Prevent non-root gcc/g++ binary runs</text>
+
+  <rect x="50" y="335" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="80" cy="361" r="16" fill="#ef4444"/>
+  <text x="80" y="366" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">5</text>
+  <text x="110" y="357" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Enable Two-Factor Auth (2FA)</text>
+  <text x="110" y="375" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Mandatory TOTP for WHM Root logins</text>
+
+  <!-- Right Column -->
+  <rect x="415" y="95" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="445" cy="121" r="16" fill="#f97316"/>
+  <text x="445" y="126" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">6</text>
+  <text x="475" y="117" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Install CSF / Imunify360</text>
+  <text x="475" y="135" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Stateful firewall &amp; AI WAF filtering</text>
+
+  <rect x="415" y="155" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="445" cy="181" r="16" fill="#f97316"/>
+  <text x="445" y="186" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">7</text>
+  <text x="475" y="177" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Disable Insecure TLS Ciphers</text>
+  <text x="475" y="195" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Enforce TLS 1.2 &amp; 1.3 only across Apache</text>
+
+  <rect x="415" y="215" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="445" cy="241" r="16" fill="#f97316"/>
+  <text x="445" y="246" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">8</text>
+  <text x="475" y="237" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Enable Symlink Protection</text>
+  <text x="475" y="255" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Block cross-account symlink traversing</text>
+
+  <rect x="415" y="275" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="445" cy="301" r="16" fill="#f97316"/>
+  <text x="445" y="306" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">9</text>
+  <text x="475" y="297" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Isolate Accounts with CageFS</text>
+  <text x="475" y="315" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">CloudLinux virtualized per-user filesystem</text>
+
+  <rect x="415" y="335" width="335" height="52" fill="#1e293b" stroke="#334155" rx="6"/>
+  <circle cx="445" cy="361" r="16" fill="#f97316"/>
+  <text x="445" y="366" fill="#fff" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">10</text>
+  <text x="475" y="357" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Limit Max Outbound Hourly Emails</text>
+  <text x="475" y="375" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Prevent IP blacklisting from hacked scripts</text>
+</svg>

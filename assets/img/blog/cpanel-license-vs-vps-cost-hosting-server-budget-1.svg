@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg4)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">cPanel VPS Server Monthly Budget Breakdown</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Retail Pricing vs. LicenBase Optimized Licensing Stack</text>
+
+  <!-- Retail Stack Box -->
+  <rect x="50" y="95" width="330" height="290" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <rect x="50" y="95" width="330" height="42" fill="#ef4444" rx="8"/>
+  <text x="215" y="122" fill="#ffffff" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Standard Retail Stack (Monthly)</text>
+  
+  <text x="75" y="165" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">KVM VPS (4 vCPU / 8GB RAM):</text>
+  <text x="330" y="165" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$20.00</text>
+  
+  <text x="75" y="195" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">cPanel Premier Retail (100 Acc):</text>
+  <text x="330" y="195" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$60.99</text>
+  
+  <text x="75" y="225" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">LiteSpeed 2-Core Retail:</text>
+  <text x="330" y="225" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$26.00</text>
+
+  <text x="75" y="255" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">CloudLinux Shared Retail:</text>
+  <text x="330" y="255" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$16.00</text>
+
+  <line x1="70" y1="280" x2="350" y2="280" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="315" fill="#f87171" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Total Monthly Expense:</text>
+  <text x="330" y="315" fill="#f87171" font-size="18" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$122.99/mo</text>
+  <text x="215" y="355" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Annual Cost: $1,475.88 / yr</text>
+
+  <!-- LicenBase Optimized Box -->
+  <rect x="420" y="95" width="330" height="290" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <rect x="420" y="95" width="330" height="42" fill="#10b981" rx="8"/>
+  <text x="585" y="122" fill="#ffffff" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase Stack (Monthly)</text>
+  
+  <text x="445" y="165" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">KVM VPS (4 vCPU / 8GB RAM):</text>
+  <text x="700" y="165" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$20.00</text>
+  
+  <text x="445" y="195" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">cPanel VPS (Unlimited Acc):</text>
+  <text x="700" y="195" fill="#34d399" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$4.00</text>
+  
+  <text x="445" y="225" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">LiteSpeed Web Server:</text>
+  <text x="700" y="225" fill="#34d399" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$6.00</text>
+
+  <text x="445" y="255" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">CloudLinux OS License:</text>
+  <text x="700" y="255" fill="#34d399" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$7.00</text>
+
+  <line x1="440" y1="280" x2="720" y2="280" stroke="#334155" stroke-width="1"/>
+  <text x="445" y="315" fill="#34d399" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Total Monthly Expense:</text>
+  <text x="700" y="315" fill="#34d399" font-size="18" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$37.00/mo</text>
+  <text x="585" y="355" fill="#10b981" font-weight="bold" font-size="12" font-family="system-ui, sans-serif" text-anchor="middle">Save Over $1,031 / Year (70% Margins)</text>
+</svg>

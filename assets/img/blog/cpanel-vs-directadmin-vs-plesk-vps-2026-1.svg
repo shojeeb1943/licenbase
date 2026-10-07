@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="pnl1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="pnl2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="pnl3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg1)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">cPanel vs DirectAdmin vs Plesk: 2026 Comparison</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Architecture, Resource Footprint, Licensing Cost, and Ecosystem</text>
+
+  <!-- Panel 1: cPanel -->
+  <rect x="40" y="95" width="220" height="290" fill="#1e293b" stroke="#334155" stroke-width="1.5" rx="8"/>
+  <rect x="40" y="95" width="220" height="45" fill="url(#pnl1)" rx="8"/>
+  <text x="150" y="124" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">cPanel &amp; WHM</text>
+  <text x="60" y="170" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Market Leader &amp; Standard</text>
+  <text x="60" y="200" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• RAM Usage: ~1.2 - 2 GB</text>
+  <text x="60" y="230" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Best WHMCS Integration</text>
+  <text x="60" y="260" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Tiered Account Pricing</text>
+  <text x="60" y="290" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Massive Plugin Ecosystem</text>
+  <rect x="55" y="330" width="190" height="36" fill="#0f172a" stroke="#f97316" stroke-width="1" rx="6"/>
+  <text x="150" y="353" fill="#f97316" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase: $4.00/mo</text>
+
+  <!-- Panel 2: DirectAdmin -->
+  <rect x="290" y="95" width="220" height="290" fill="#1e293b" stroke="#334155" stroke-width="1.5" rx="8"/>
+  <rect x="290" y="95" width="220" height="45" fill="url(#pnl2)" rx="8"/>
+  <text x="400" y="124" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">DirectAdmin</text>
+  <text x="310" y="170" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Ultra-Lightweight Core</text>
+  <text x="310" y="200" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• RAM Usage: ~250 - 500 MB</text>
+  <text x="310" y="230" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• CustomBuild CLI Engine</text>
+  <text x="310" y="260" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Budget VPS Friendly</text>
+  <text x="310" y="290" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Simpler UI Hierarchy</text>
+  <rect x="305" y="330" width="190" height="36" fill="#0f172a" stroke="#3b82f6" stroke-width="1" rx="6"/>
+  <text x="400" y="353" fill="#60a5fa" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Low Footprint Host</text>
+
+  <!-- Panel 3: Plesk -->
+  <rect x="540" y="95" width="220" height="290" fill="#1e293b" stroke="#334155" stroke-width="1.5" rx="8"/>
+  <rect x="540" y="95" width="220" height="45" fill="url(#pnl3)" rx="8"/>
+  <text x="650" y="124" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Plesk Obsidian</text>
+  <text x="560" y="170" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Linux &amp; Windows Support</text>
+  <text x="560" y="200" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• RAM Usage: ~1.0 - 1.5 GB</text>
+  <text x="560" y="230" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• WordPress Toolkit Pro</text>
+  <text x="560" y="260" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Docker &amp; Node.js Native</text>
+  <text x="560" y="290" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Web Agency Standard</text>
+  <rect x="555" y="330" width="190" height="36" fill="#0f172a" stroke="#10b981" stroke-width="1" rx="6"/>
+  <text x="650" y="353" fill="#34d399" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase: $4.50/mo</text>
+</svg>

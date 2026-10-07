@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg3)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Linux VPS CPU Diagnostic Workflow</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Essential CLI Commands to Identify &amp; Resolve High Load Average</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="100" width="210" height="130" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+  <text x="155" y="130" fill="#60a5fa" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. High-Level Load</text>
+  <rect x="65" y="145" width="180" height="30" fill="#0f172a" rx="4"/>
+  <text x="75" y="165" fill="#22c55e" font-size="12" font-family="monospace">uptime &amp;&amp; htop</text>
+  <text x="155" y="195" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Check 1, 5, 15m load average</text>
+  <text x="155" y="212" fill="#94a3b8" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Compare against CPU core count</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 265 165 L 290 165" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 2 -->
+  <rect x="295" y="100" width="210" height="130" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" rx="8"/>
+  <text x="400" y="130" fill="#fbbf24" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. Process Breakdown</text>
+  <rect x="310" y="145" width="180" height="30" fill="#0f172a" rx="4"/>
+  <text x="320" y="165" fill="#22c55e" font-size="12" font-family="monospace">ps aux --sort=-%cpu</text>
+  <text x="400" y="195" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Identify top CPU consumers</text>
+  <text x="400" y="212" fill="#94a3b8" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">(PHP-FPM, MySQL, mysqld, gzip)</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 510 165 L 535 165" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Step 3 -->
+  <rect x="540" y="100" width="210" height="130" fill="#1e293b" stroke="#ec4899" stroke-width="1.5" rx="8"/>
+  <text x="645" y="130" fill="#f472b6" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. Disk I/O Bottleneck</text>
+  <rect x="555" y="145" width="180" height="30" fill="#0f172a" rx="4"/>
+  <text x="565" y="165" fill="#22c55e" font-size="12" font-family="monospace">iotop -oPa</text>
+  <text x="645" y="195" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Inspect WA (iowait) % state</text>
+  <text x="645" y="212" fill="#94a3b8" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Find thrashing disk processes</text>
+
+  <!-- Bottom Details Box -->
+  <rect x="50" y="255" width="700" height="135" fill="#1e293b" stroke="#334155" rx="8"/>
+  <text x="75" y="285" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Database &amp; Web Server Deep-Dive Commands:</text>
+  <text x="75" y="315" fill="#38bdf8" font-size="12" font-family="monospace">mysqladmin proc stat</text>
+  <text x="255" y="315" fill="#94a3b8" font-size="12" font-family="system-ui, sans-serif">— Identify unindexed slow queries locking MySQL tables</text>
+  <text x="75" y="345" fill="#38bdf8" font-size="12" font-family="monospace">perf top -a</text>
+  <text x="255" y="345" fill="#94a3b8" font-size="12" font-family="system-ui, sans-serif">— Real-time Linux kernel symbol profile &amp; context switch spikes</text>
+  <text x="75" y="375" fill="#38bdf8" font-size="12" font-family="monospace">mpstat -P ALL 2 5</text>
+  <text x="255" y="375" fill="#94a3b8" font-size="12" font-family="system-ui, sans-serif">— Individual core CPU saturation &amp; hardware interrupt stats</text>
+</svg>

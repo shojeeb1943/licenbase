@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg9)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3-2-1 Enterprise Hosting Backup Architecture</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">JetBackup 5 Engine, Deduplicated Storage, and Point-in-Time Restores</text>
+
+  <!-- VPS Production Server -->
+  <rect x="50" y="100" width="200" height="150" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" rx="8"/>
+  <text x="150" y="130" fill="#60a5fa" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Production Server</text>
+  <text x="70" y="160" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• cPanel / DirectAdmin</text>
+  <text x="70" y="185" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• MySQL Databases</text>
+  <text x="70" y="210" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• User /home data</text>
+  <text x="70" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• SSL / DNS configs</text>
+
+  <!-- Engine Center -->
+  <rect x="300" y="100" width="200" height="150" fill="#1e293b" stroke="#f97316" stroke-width="1.5" rx="8"/>
+  <text x="400" y="130" fill="#fb923c" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">JetBackup 5 Engine</text>
+  <text x="320" y="160" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Incremental Backup</text>
+  <text x="320" y="185" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Block-Level Deduplication</text>
+  <text x="320" y="210" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• GPG Encryption</text>
+  <text x="320" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Multi-Threaded Sync</text>
+
+  <!-- Remote Destinations -->
+  <rect x="550" y="100" width="200" height="150" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="650" y="130" fill="#34d399" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Offsite Destinations</text>
+  <text x="570" y="160" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Wasabi / AWS S3</text>
+  <text x="570" y="185" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Backblaze B2</text>
+  <text x="570" y="210" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Remote SFTP Server</text>
+  <text x="570" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Local Secondary NVMe</text>
+
+  <!-- Connectors -->
+  <path d="M 250 175 L 300 175" stroke="#64748b" stroke-width="2"/>
+  <path d="M 500 175 L 550 175" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Bottom Retention Specs -->
+  <rect x="50" y="270" width="700" height="120" fill="#1e293b" stroke="#334155" rx="8"/>
+  <text x="75" y="300" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Recommended Retention &amp; Recovery Strategy:</text>
+  <text x="75" y="328" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• <tspan fill="#38bdf8" font-weight="bold">Hourly / Daily Snapshots:</tspan> Keep 7 daily backups for instant rollbacks of corrupted WordPress plugins.</text>
+  <text x="75" y="353" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• <tspan fill="#38bdf8" font-weight="bold">Weekly &amp; Monthly Archives:</tspan> Keep 4 weekly and 3 monthly snapshots in immutable cold storage.</text>
+  <text x="75" y="378" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• <tspan fill="#38bdf8" font-weight="bold">Self-Service Client Restores:</tspan> Empower cPanel clients to restore single files, tables, or mailboxes without support tickets.</text>
+</svg>

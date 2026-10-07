@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg10)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Building a High-Performance Low-Cost Hosting Stack</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Budget VPS Foundation + Enterprise Software Licensing Architecture</text>
+
+  <!-- Layer 1: Hardware -->
+  <rect x="60" y="100" width="680" height="50" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" rx="6"/>
+  <text x="80" y="130" fill="#60a5fa" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Hardware Layer:</text>
+  <text x="210" y="130" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">KVM VPS (Hetzner, OVH, Netcup, Vultr) — 4 vCPU / 8GB RAM / NVMe (~$15 - $22/mo)</text>
+
+  <!-- Layer 2: OS & Kernel -->
+  <rect x="60" y="160" width="680" height="50" fill="#1e293b" stroke="#0284c7" stroke-width="1.5" rx="6"/>
+  <text x="80" y="190" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">OS Isolation:</text>
+  <text x="210" y="190" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">CloudLinux OS ($7/mo) — CageFS jails, LVE CPU caps, MySQL Governor</text>
+
+  <!-- Layer 3: Control Panel -->
+  <rect x="60" y="220" width="680" height="50" fill="#1e293b" stroke="#f97316" stroke-width="1.5" rx="6"/>
+  <text x="80" y="250" fill="#fb923c" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Control Panel:</text>
+  <text x="210" y="250" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">cPanel &amp; WHM ($4/mo) — Unlimited accounts, automated SSL, complete WHMCS sync</text>
+
+  <!-- Layer 4: Web Engine & Addons -->
+  <rect x="60" y="280" width="680" height="50" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="6"/>
+  <text x="80" y="310" fill="#34d399" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Web &amp; Scripts:</text>
+  <text x="210" y="310" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">LiteSpeed ($6/mo) + Softaculous ($1.50/mo) + JetBackup ($3/mo) = Total Speed &amp; Security</text>
+
+  <!-- Total Summary Bar -->
+  <rect x="60" y="345" width="680" height="45" fill="#0f172a" stroke="#22c55e" stroke-width="1.5" rx="6"/>
+  <text x="80" y="373" fill="#22c55e" font-size="15" font-weight="bold" font-family="system-ui, sans-serif">Enterprise Stack Total: ~$36.50/mo</text>
+  <text x="720" y="373" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="end">Hosts 80-120 Production Client Websites with 99.99% Uptime</text>
+</svg>

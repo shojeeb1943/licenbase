@@ -12,8 +12,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/10-cpanel-security-settings-change-after-installation</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-10-cpanel-security-settings-change-after-installation.png</image:loc>
+      <image:title>10 Essential cPanel Security Settings Guide</image:title>
+      <image:caption>Essential cPanel and WHM security checklist for 2026. Secure SSH ports, configure cPHulk brute force protection, ModSecurity, and disable compiler access.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/10-vps-optimization-tricks-server-performance-stability</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-10-vps-optimization-tricks-server-performance-stability.png</image:loc>
@@ -23,7 +33,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/5-ways-hosting-companies-reduce-licensing-costs-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-5-ways-hosting-companies-reduce-licensing-costs-2026.png</image:loc>
@@ -33,7 +43,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/affordable-directadmin-licenses-hosting-providers</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-affordable-directadmin-licenses-hosting-providers.png</image:loc>
@@ -43,7 +53,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/affordable-whmcs-license-options-small-business-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-affordable-whmcs-license-options-small-business-2026.png</image:loc>
@@ -73,7 +83,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/best-place-cheap-cpanel-whmcs-cloudlinux-licenses-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-best-place-cheap-cpanel-whmcs-cloudlinux-licenses-2026.png</image:loc>
@@ -83,7 +93,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/best-server-management-tools</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-best-server-management-tools.png</image:loc>
@@ -93,7 +103,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/buy-cpanel-license-guide-vps-dedicated</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-buy-cpanel-license-guide-vps-dedicated.png</image:loc>
@@ -103,7 +113,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/buy-cpanel-license-vps</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-buy-cpanel-license-vps.png</image:loc>
@@ -123,7 +133,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/buy-whmcs-license-self-hosted-explained</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-buy-whmcs-license-self-hosted-explained.png</image:loc>
@@ -133,7 +143,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-license-2026-licenbase</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-license-2026-licenbase.png</image:loc>
@@ -173,7 +183,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-license-what-to-know-before-buying</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-license-what-to-know-before-buying.png</image:loc>
@@ -203,7 +213,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-litespeed-license-choose-right-plan</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-litespeed-license-choose-right-plan.png</image:loc>
@@ -222,8 +232,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cheap-vps-affordable-licenses-low-cost-hosting-server</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-vps-affordable-licenses-low-cost-hosting-server.png</image:loc>
+      <image:title>Cheap VPS &amp; Low-Cost Server Setup Guide</image:title>
+      <image:caption>How to build a high-performance web hosting server using a cheap VPS paired with affordable cPanel, LiteSpeed, and CloudLinux licenses in 2026.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cheap-whmcs-license-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-guide.png</image:loc>
@@ -233,7 +253,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-whmcs-license-what-to-check-before-buying</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-what-to-check-before-buying.png</image:loc>
@@ -243,7 +263,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-whmcs-license-why-licenbase-costs-less</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-whmcs-license-why-licenbase-costs-less.png</image:loc>
@@ -253,7 +273,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/choose-cpanel-license-vps-vs-dedicated</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-choose-cpanel-license-vps-vs-dedicated.png</image:loc>
@@ -263,7 +283,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/choose-right-cpanel-license</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-choose-right-cpanel-license.png</image:loc>
@@ -273,7 +293,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-cost-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-cost-2026.png</image:loc>
@@ -293,7 +313,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-price-2026-value-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-price-2026-value-guide.png</image:loc>
@@ -303,7 +323,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-price-save-server-costs</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-price-save-server-costs.png</image:loc>
@@ -322,6 +342,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cloudlinux-vs-almalinux-shared-hosting-2026-guide</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-vs-almalinux-shared-hosting-2026-guide.png</image:loc>
+      <image:title>CloudLinux vs AlmaLinux: Shared OS Guide</image:title>
+      <image:caption>Compare CloudLinux OS and AlmaLinux for shared hosting servers. Discover how LVE Manager, CageFS, and MySQL Governor prevent server crashes.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cloudlinux-vs-almalinux</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -333,7 +363,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/complete-vps-hosting-setup-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-complete-vps-hosting-setup-guide.png</image:loc>
@@ -343,7 +373,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-cost-per-month-license-pricing-explained</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-cost-per-month-license-pricing-explained.png</image:loc>
@@ -353,7 +383,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-license-error-causes-solutions-troubleshooting</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-error-causes-solutions-troubleshooting.png</image:loc>
@@ -363,7 +393,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-license-not-working-10-problems-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-not-working-10-problems-fixes.png</image:loc>
@@ -373,7 +403,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-license-not-working-fix-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-not-working-fix-guide.png</image:loc>
@@ -393,7 +423,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-license-price-2026-cost-breakdown</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-price-2026-cost-breakdown.png</image:loc>
@@ -403,7 +433,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-license-price-2026-save-licenbase</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-price-2026-save-licenbase.png</image:loc>
@@ -432,8 +462,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cpanel-license-vs-vps-cost-hosting-server-budget</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-vs-vps-cost-hosting-server-budget.png</image:loc>
+      <image:title>cPanel License vs VPS Budget Guide 2026</image:title>
+      <image:caption>Complete budget breakdown of cPanel licensing versus VPS cloud infrastructure costs in 2026. Calculate server overhead, profit margins, and savings strategies.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cpanel-vps-pricing-server-cost-license-cost</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vps-pricing-server-cost-license-cost.png</image:loc>
@@ -443,12 +483,22 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-vps-setup-installation-licensing-optimization</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vps-setup-installation-licensing-optimization.png</image:loc>
       <image:title>cPanel VPS Setup &amp; Optimization Guide</image:title>
       <image:caption>Complete guide to setting up a production cPanel VPS: automated installation, wholesale IP licensing, firewall hardening, LiteSpeed engine, and CloudLinux.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-vs-directadmin-vs-plesk-vps-2026</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-directadmin-vs-plesk-vps-2026.png</image:loc>
+      <image:title>cPanel vs DirectAdmin vs Plesk VPS Guide</image:title>
+      <image:caption>Compare cPanel, DirectAdmin, and Plesk for VPS servers in 2026. Detailed analysis of features, resource overhead, pricing, security, and OS support.</image:caption>
     </image:image>
   </url>
   <url>
@@ -483,7 +533,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/directadmin-license-price-2026-cheaper-options</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-directadmin-license-price-2026-cheaper-options.png</image:loc>
@@ -493,7 +543,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/directadmin-license-pricing</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-directadmin-license-pricing.png</image:loc>
@@ -523,7 +573,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-cpanel-license-errors</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-cpanel-license-errors.png</image:loc>
@@ -533,7 +583,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-high-cpu-usage-vps-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-high-cpu-usage-vps-guide.png</image:loc>
@@ -543,7 +593,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-no-space-left-on-device-linux-vps</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-no-space-left-on-device-linux-vps.png</image:loc>
@@ -553,7 +603,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-slow-wordpress-vps-server-optimization</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-slow-wordpress-vps-server-optimization.png</image:loc>
@@ -563,7 +613,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-ssh-connection-refused-vps</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-ssh-connection-refused-vps.png</image:loc>
@@ -573,7 +623,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-ssh-timeout-connection-problems-vps</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-ssh-timeout-connection-problems-vps.png</image:loc>
@@ -583,7 +633,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/fix-whmcs-cron-job-errors</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-whmcs-cron-job-errors.png</image:loc>
@@ -612,8 +662,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/hosting-server-backup-strategy-jetbackup-storage-recovery</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-hosting-server-backup-strategy-jetbackup-storage-recovery.png</image:loc>
+      <image:title>Hosting Backup Strategy: JetBackup Guide</image:title>
+      <image:caption>Design a bulletproof 3-2-1 hosting backup strategy using JetBackup 5, cloud object storage (S3/B2), retention policies, and fast disaster recovery.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/how-much-does-whmcs-cost-new-hosting-business</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-much-does-whmcs-cost-new-hosting-business.png</image:loc>
@@ -623,7 +683,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-activate-cpanel-license-on-vps</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-activate-cpanel-license-on-vps.png</image:loc>
@@ -632,8 +692,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/how-to-check-cpu-usage-linux-vps-commands-tips</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-to-check-cpu-usage-linux-vps-commands-tips.png</image:loc>
+      <image:title>Check Linux VPS CPU Usage: Commands &amp; Tips</image:title>
+      <image:caption>Learn how to check CPU usage on a Linux VPS using top, htop, vmstat, mpstat, and pidstat. Identify CPU-heavy processes, runaway scripts, and load bottlenecks.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/how-to-install-cpanel-on-vps</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-install-cpanel-on-vps.png</image:loc>
@@ -643,7 +713,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-install-litespeed-on-cpanel-vps-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-install-litespeed-on-cpanel-vps-guide.png</image:loc>
@@ -652,8 +722,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/how-to-install-softaculous-on-cpanel-setup-guide</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-to-install-softaculous-on-cpanel-setup-guide.png</image:loc>
+      <image:title>Install Softaculous on cPanel Guide</image:title>
+      <image:caption>Complete step-by-step tutorial to install Softaculous on cPanel/WHM. Configure IonCube loaders, activate licenses, and fix common install errors.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/how-to-reduce-cpanel-hosting-costs-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-reduce-cpanel-hosting-costs-2026.png</image:loc>
@@ -663,7 +743,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-reduce-cpanel-license-renewal-cost-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-reduce-cpanel-license-renewal-cost-2026.png</image:loc>
@@ -673,7 +753,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-reduce-whmcs-costs-without-losing-features</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-reduce-whmcs-costs-without-losing-features.png</image:loc>
@@ -683,7 +763,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-save-money-on-whmcs-licensing-essential-features</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-save-money-on-whmcs-licensing-essential-features.png</image:loc>
@@ -693,7 +773,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog.png</image:loc>
@@ -703,7 +783,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-cloudlinux-cpanel</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-cloudlinux-cpanel.png</image:loc>
@@ -713,7 +793,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-cpanel-license-linux</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-cpanel-license-linux.png</image:loc>
@@ -733,7 +813,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-directadmin-almalinux-9</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-directadmin-almalinux-9.png</image:loc>
@@ -743,7 +823,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-litespeed-on-cpanel</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-litespeed-on-cpanel.png</image:loc>
@@ -763,7 +843,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/licenbase-license-pricing-explained-cpanel-whmcs-plesk</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-licenbase-license-pricing-explained-cpanel-whmcs-plesk.png</image:loc>
@@ -793,7 +873,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/linux-vps-too-much-ram-reduce-memory-usage</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-linux-vps-too-much-ram-reduce-memory-usage.png</image:loc>
@@ -813,7 +893,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/litespeed-license-not-working-issues-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-not-working-issues-fixes.png</image:loc>
@@ -823,7 +903,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/litespeed-license-price-2026-pricing-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-price-2026-pricing-guide.png</image:loc>
@@ -853,7 +933,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/litespeed-pricing-explained-hosting-businesses</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-pricing-explained-hosting-businesses.png</image:loc>
@@ -882,6 +962,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/litespeed-vs-nginx-for-wordpress-performance-cost</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-nginx-for-wordpress-performance-cost.png</image:loc>
+      <image:title>LiteSpeed vs Nginx for WordPress 2026</image:title>
+      <image:caption>LiteSpeed vs Nginx for WordPress hosting in 2026. Benchmark HTTP/3 speeds, LSCache vs FastCGI cache, .htaccess rewrite rules, and VPS hardware requirements.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/litespeed-vs-nginx-performance-features-cost</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.7</priority>
@@ -893,7 +983,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/plesk-license-price-2026-affordable-vps-options</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-plesk-license-price-2026-affordable-vps-options.png</image:loc>
@@ -913,7 +1003,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/reduce-web-server-costs-affordable-litespeed-license</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-reduce-web-server-costs-affordable-litespeed-license.png</image:loc>
@@ -973,7 +1063,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-cpu-100-percent-15-ways-find-fix</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-cpu-100-percent-15-ways-find-fix.png</image:loc>
@@ -983,7 +1073,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-disk-space-full-cleanup-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-disk-space-full-cleanup-guide.png</image:loc>
@@ -993,7 +1083,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-disk-usage-90-100-percent-find-storage</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-disk-usage-90-100-percent-find-storage.png</image:loc>
@@ -1003,7 +1093,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-license-cost-explained</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-license-cost-explained.png</image:loc>
@@ -1013,7 +1103,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-out-of-memory-oom-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-out-of-memory-oom-fixes.png</image:loc>
@@ -1023,7 +1113,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-running-slow-15-proven-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-running-slow-15-proven-fixes.png</image:loc>
@@ -1033,7 +1123,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-running-slow-causes-and-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-running-slow-causes-and-fixes.png</image:loc>
@@ -1053,7 +1143,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-server-keeps-crashing-causes-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-server-keeps-crashing-causes-fixes.png</image:loc>
@@ -1063,7 +1153,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-server-optimization-20-tips-faster-reliable</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-server-optimization-20-tips-faster-reliable.png</image:loc>
@@ -1073,7 +1163,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-server-security-checklist-20-things-linux</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-server-security-checklist-20-things-linux.png</image:loc>
@@ -1083,7 +1173,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-server-setup-licenses-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-server-setup-licenses-guide.png</image:loc>
@@ -1103,7 +1193,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/vps-ssh-connection-problems-troubleshooting</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-ssh-connection-problems-troubleshooting.png</image:loc>
@@ -1113,7 +1203,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/where-to-buy-cheap-cpanel-license-vps-2026</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-where-to-buy-cheap-cpanel-license-vps-2026.png</image:loc>
@@ -1123,7 +1213,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/where-to-buy-cheap-cpanel-license-vps-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-where-to-buy-cheap-cpanel-license-vps-guide.png</image:loc>
@@ -1133,7 +1223,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/where-to-buy-cheap-litespeed-license</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-where-to-buy-cheap-litespeed-license.png</image:loc>
@@ -1143,7 +1233,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/where-to-buy-cheap-whmcs-license</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-where-to-buy-cheap-whmcs-license.png</image:loc>
@@ -1153,7 +1243,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-activation-step-by-step-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-activation-step-by-step-guide.png</image:loc>
@@ -1163,7 +1253,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-not-working-errors-fixes</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-not-working-errors-fixes.png</image:loc>
@@ -1173,7 +1263,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-price-2026-affordable-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-price-2026-affordable-guide.png</image:loc>
@@ -1183,7 +1273,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-price-2026-pricing-guide</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-price-2026-pricing-guide.png</image:loc>
@@ -1193,7 +1283,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-types-explained</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-types-explained.png</image:loc>
@@ -1213,7 +1303,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-pricing-for-small-hosting-businesses</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-pricing-for-small-hosting-businesses.png</image:loc>
@@ -1223,7 +1313,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/why-are-licenbase-cpanel-licenses-affordable</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-why-are-licenbase-cpanel-licenses-affordable.png</image:loc>
@@ -1233,7 +1323,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/why-choose-licenbase-cpanel-price-activation-support</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-why-choose-licenbase-cpanel-price-activation-support.png</image:loc>
@@ -1242,8 +1332,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/why-is-my-vps-using-so-much-ram-causes-fixes</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-why-is-my-vps-using-so-much-ram-causes-fixes.png</image:loc>
+      <image:title>Why Is VPS Using So Much RAM? 12 Fixes</image:title>
+      <image:caption>Discover 12 hidden causes of high RAM usage on Linux VPS servers. Fix buff/cache confusion, MySQL buffer pool, PHP-FPM leaks, and cron jobs.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/why-licenbase-cpanel-license-affordable</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-why-licenbase-cpanel-license-affordable.png</image:loc>
@@ -1383,7 +1483,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/sitepad-license</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/sitepad.png</image:loc>

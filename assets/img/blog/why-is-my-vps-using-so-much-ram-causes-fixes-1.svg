@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg5)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Understanding Linux VPS RAM Consumption</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Active Process Memory vs. Linux Buffers &amp; Page Cache</text>
+
+  <!-- RAM Bar Visual -->
+  <rect x="60" y="100" width="680" height="50" fill="#1e293b" stroke="#475569" rx="6"/>
+  <rect x="60" y="100" width="220" height="50" fill="#ef4444" rx="6"/>
+  <rect x="280" y="100" width="180" height="50" fill="#f59e0b"/>
+  <rect x="460" y="100" width="200" height="50" fill="#3b82f6"/>
+  <rect x="660" y="100" width="80" height="50" fill="#10b981" rx="6"/>
+
+  <text x="170" y="130" fill="#fff" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">App (PHP/MySQL) 32%</text>
+  <text x="370" y="130" fill="#fff" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Services &amp; OS 26%</text>
+  <text x="560" y="130" fill="#fff" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Buffers / Cache 30%</text>
+  <text x="700" y="130" fill="#fff" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Free 12%</text>
+
+  <!-- 3 Diagnosis Pillars -->
+  <rect x="60" y="175" width="210" height="205" fill="#1e293b" stroke="#334155" rx="8"/>
+  <text x="165" y="205" fill="#f87171" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. PHP-FPM Workers</text>
+  <text x="75" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• pm.max_children set too high</text>
+  <text x="75" y="260" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Unbounded memory_limit</text>
+  <text x="75" y="285" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Leaking WP plugins</text>
+  <text x="75" y="315" fill="#38bdf8" font-size="11" font-family="monospace">pm = ondemand</text>
+  <text x="75" y="335" fill="#38bdf8" font-size="11" font-family="monospace">pm.process_idle_timeout = 10s</text>
+
+  <rect x="295" y="175" width="210" height="205" fill="#1e293b" stroke="#334155" rx="8"/>
+  <text x="400" y="205" fill="#fbbf24" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. MySQL Buffer Pool</text>
+  <text x="310" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• innodb_buffer_pool_size</text>
+  <text x="310" y="260" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Over-allocated thread buffers</text>
+  <text x="310" y="285" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• max_connections > 300</text>
+  <text x="310" y="315" fill="#38bdf8" font-size="11" font-family="monospace">innodb_buffer_pool = 50%</text>
+  <text x="310" y="335" fill="#38bdf8" font-size="11" font-family="monospace">table_open_cache = 2000</text>
+
+  <rect x="530" y="175" width="210" height="205" fill="#1e293b" stroke="#334155" rx="8"/>
+  <text x="635" y="205" fill="#34d399" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. Cache is Reclaimable</text>
+  <text x="545" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Linux holds files in RAM</text>
+  <text x="545" y="260" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Auto-freed when apps ask</text>
+  <text x="545" y="285" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Check "available" column</text>
+  <text x="545" y="315" fill="#38bdf8" font-size="11" font-family="monospace">free -h</text>
+  <text x="545" y="335" fill="#38bdf8" font-size="11" font-family="monospace">vm.swappiness = 10</text>
+</svg>
