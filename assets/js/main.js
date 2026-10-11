@@ -554,4 +554,196 @@
       openLiveChat(e);
     }
   });
+
+  /* ---------- 3-Day Free Trial Floating Card ---------- */
+  (function initFreeTrialCard() {
+    var STORAGE_KEY = "lb_trial_dismissed";
+    var TWELVE_HOURS = 12 * 60 * 60 * 1000;
+
+    function isDismissed() {
+      try {
+        var val = localStorage.getItem(STORAGE_KEY);
+        if (!val) return false;
+        var time = parseInt(val, 10);
+        if (isNaN(time)) return false;
+        return Date.now() - time < TWELVE_HOURS;
+      } catch (err) {
+        return false;
+      }
+    }
+
+    function markDismissed() {
+      try {
+        localStorage.setItem(STORAGE_KEY, Date.now().toString());
+      } catch (err) {}
+    }
+
+    if (isDismissed()) return;
+
+    var cardEl = null;
+    var isShown = false;
+    var timerId = null;
+
+    function createCard(isExitIntent) {
+      if (cardEl) return cardEl;
+
+      var card = document.createElement("div");
+      card.className = "lb-trial-card";
+      card.setAttribute("role", "dialog");
+      card.setAttribute("aria-live", "polite");
+      card.setAttribute("aria-label", "3-Day Free Trial Offer");
+
+      var titleText = isExitIntent
+        ? "Before You Go: Test Free for 3 Days"
+        : "Test on Your Server — 100% Free";
+
+      var descText = isExitIntent
+        ? "Get a full 3-day trial activated on your server with zero commitment before you leave."
+        : "Want to test LicenBase before purchasing? Our 24/7 team activates 3-day trials instantly.";
+
+      card.innerHTML =
+        '<div class="lb-trial-header">' +
+          '<div class="lb-trial-badge">' +
+            '<span class="lb-trial-pulse-dot"><span></span><span></span></span>' +
+            '<span>3-Day Free Trial</span>' +
+          '</div>' +
+          '<button type="button" class="lb-trial-close" id="lb-trial-close-btn" aria-label="Close trial offer">' +
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>' +
+          '</button>' +
+        '</div>' +
+        '<div class="lb-trial-title" id="lb-trial-title-text">' + titleText + '</div>' +
+        '<p class="lb-trial-desc" id="lb-trial-desc-text">' + descText + '</p>' +
+        '<ul class="lb-trial-perks">' +
+          '<li class="lb-trial-perk">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
+            '<span>Full features &amp; official vendor updates</span>' +
+          '</li>' +
+          '<li class="lb-trial-perk">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
+            '<span>Instant IP activation · No credit card required</span>' +
+          '</li>' +
+        '</ul>' +
+        '<div class="lb-trial-actions">' +
+          '<button type="button" class="lb-trial-btn-cta" id="lb-trial-cta-btn">' +
+            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>' +
+            '<span>Claim Trial in Live Chat</span>' +
+          '</button>' +
+          '<button type="button" class="lb-trial-btn-dismiss" id="lb-trial-dismiss-link">No thanks, maybe later</button>' +
+        '</div>';
+
+      document.body.appendChild(card);
+
+      var closeBtn = card.querySelector("#lb-trial-close-btn");
+      var dismissLink = card.querySelector("#lb-trial-dismiss-link");
+      var ctaBtn = card.querySelector("#lb-trial-cta-btn");
+
+      function dismiss() {
+        markDismissed();
+        card.classList.remove("lb-trial-visible");
+        setTimeout(function () {
+          if (card.parentNode) card.parentNode.removeChild(card);
+        }, 400);
+      }
+
+      if (closeBtn) closeBtn.addEventListener("click", dismiss);
+      if (dismissLink) dismissLink.addEventListener("click", dismiss);
+
+      if (ctaBtn) {
+        ctaBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          markDismissed();
+          try {
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: "free_trial_chat_click",
+                trigger_source: isExitIntent ? "exit_intent" : "auto_prompt"
+              });
+            }
+            if (window.Tawk_API && typeof window.Tawk_API.addTags === "function") {
+              window.Tawk_API.addTags(["3-day-trial-lead"]);
+            }
+          } catch (err) {}
+
+          card.classList.remove("lb-trial-visible");
+          setTimeout(function () {
+            if (card.parentNode) card.parentNode.removeChild(card);
+          }, 400);
+
+          openLiveChat(e);
+        });
+      }
+
+      cardEl = card;
+      return card;
+    }
+
+    function showCard(source) {
+      if (isShown || isDismissed()) return;
+      isShown = true;
+
+      cleanupListeners();
+
+      var isExit = source === "exit_intent";
+      var card = createCard(isExit);
+
+      if (isExit) {
+        var tEl = card.querySelector("#lb-trial-title-text");
+        var dEl = card.querySelector("#lb-trial-desc-text");
+        if (tEl) tEl.textContent = "Before You Go: Test Free for 3 Days";
+        if (dEl) dEl.textContent = "Get a full 3-day trial activated on your server with zero commitment before you leave.";
+        card.classList.add("lb-trial-nudge");
+      }
+
+      requestAnimationFrame(function () {
+        setTimeout(function () {
+          card.classList.add("lb-trial-visible");
+        }, 50);
+      });
+    }
+
+    function onScroll() {
+      var scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollTotal > 300) {
+        var scrolled = (window.scrollY || window.pageYOffset) / scrollTotal;
+        if (scrolled >= 0.35) {
+          showCard("scroll");
+        }
+      }
+    }
+
+    var hasMouseMoved = false;
+    function onMouseMove(e) {
+      hasMouseMoved = true;
+      if (window.innerWidth >= 1024 && e.clientY <= 12 && hasMouseMoved) {
+        showCard("exit_intent");
+      }
+    }
+
+    function onMouseLeave(e) {
+      if (window.innerWidth >= 1024 && e.clientY <= 20 && hasMouseMoved) {
+        showCard("exit_intent");
+      }
+    }
+
+    function cleanupListeners() {
+      if (timerId) clearTimeout(timerId);
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("mousemove", onMouseMove);
+      document.documentElement.removeEventListener("mouseleave", onMouseLeave);
+    }
+
+    // Timed trigger after 8.5s
+    timerId = setTimeout(function () {
+      showCard("timer");
+    }, 8500);
+
+    // Scroll trigger (passive)
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Desktop exit-intent trigger
+    if (window.innerWidth >= 1024 && !("ontouchstart" in window)) {
+      document.addEventListener("mousemove", onMouseMove, { passive: true });
+      document.documentElement.addEventListener("mouseleave", onMouseLeave, { passive: true });
+    }
+  })();
 })();

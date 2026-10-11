@@ -1768,3 +1768,217 @@ footer[id] {
 
 /* Grid items must be allowed to shrink or wide content clips on mobile */
 .grid > * { min-width: 0; }
+
+/* ---------- 3-Day Free Trial Floating Card ---------- */
+.lb-trial-card {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px -12px rgba(2, 6, 23, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  padding: 1.25rem;
+  z-index: 9980;
+  transform: translateY(24px) scale(0.97);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.35s ease;
+  font-family: inherit;
+}
+
+.lb-trial-card.lb-trial-visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.lb-trial-card.lb-trial-nudge {
+  animation: lb-trial-bounce 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes lb-trial-bounce {
+  0% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-8px) scale(1.02); }
+  60% { transform: translateY(2px) scale(0.99); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.lb-trial-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.lb-trial-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.lb-trial-pulse-dot {
+  position: relative;
+  display: flex;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.lb-trial-pulse-dot span:first-child {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #34d399;
+  opacity: 0.75;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.lb-trial-pulse-dot span:last-child {
+  position: relative;
+  display: inline-flex;
+  border-radius: 9999px;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #10b981;
+}
+
+.lb-trial-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.lb-trial-close:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lb-trial-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.lb-trial-desc {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+  margin-bottom: 0.75rem;
+}
+
+.lb-trial-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.lb-trial-perk {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+}
+
+.lb-trial-perk svg {
+  flex-shrink: 0;
+  color: #10b981;
+}
+
+.lb-trial-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.lb-trial-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.lb-trial-btn-cta:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.lb-trial-btn-dismiss {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.2rem 0;
+  transition: color 0.15s ease;
+}
+
+.lb-trial-btn-dismiss:hover {
+  color: #cbd5e1;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .lb-trial-card {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+    max-width: none;
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-trial-card {
+    transition: none !important;
+  }
+  .lb-trial-card.lb-trial-nudge {
+    animation: none !important;
+  }
+}
+
