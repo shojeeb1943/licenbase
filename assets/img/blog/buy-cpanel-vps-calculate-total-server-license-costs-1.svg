@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Total Hosting Server Cost Calculator (Monthly)</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Complete Stack Breakdown for 50-80 Client Websites</text>
+  <rect x="60" y="100" width="320" height="60" fill="#1e293b" stroke="#334155" rx="6"/>
+  <text x="80" y="135" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">KVM VPS (4 vCPU, 8 GB RAM, NVMe)</text>
+  <text x="350" y="135" fill="#38bdf8" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$16.00/mo</text>
+  <rect x="60" y="170" width="320" height="60" fill="#1e293b" stroke="#334155" rx="6"/>
+  <text x="80" y="205" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">cPanel &amp; WHM (Wholesale IP)</text>
+  <text x="350" y="205" fill="#10b981" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$4.00/mo</text>
+  <rect x="60" y="240" width="320" height="60" fill="#1e293b" stroke="#334155" rx="6"/>
+  <text x="80" y="275" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">LiteSpeed Web Server Enterprise</text>
+  <text x="350" y="275" fill="#10b981" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$6.00/mo</text>
+  <rect x="60" y="310" width="320" height="60" fill="#1e293b" stroke="#334155" rx="6"/>
+  <text x="80" y="345" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">CloudLinux + Softaculous</text>
+  <text x="350" y="345" fill="#10b981" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="end">$8.50/mo</text>
+  <rect x="420" y="100" width="320" height="270" fill="#1e293b" stroke="#10b981" stroke-width="2" rx="8"/>
+  <text x="580" y="145" fill="#10b981" font-size="18" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Monthly Financial Summary</text>
+  <text x="450" y="195" fill="#cbd5e1" font-size="14" font-family="system-ui, sans-serif">• Total Operating Cost: <tspan fill="#f8fafc" font-weight="bold">$34.50/mo</tspan></text>
+  <text x="450" y="235" fill="#cbd5e1" font-size="14" font-family="system-ui, sans-serif">• 50 Clients @ $10/mo: <tspan fill="#10b981" font-weight="bold">$500.00/mo</tspan></text>
+  <text x="450" y="275" fill="#cbd5e1" font-size="14" font-family="system-ui, sans-serif">• Net Monthly Profit: <tspan fill="#38bdf8" font-weight="bold">$465.50/mo</tspan></text>
+  <rect x="445" y="305" width="270" height="45" fill="#0f172a" rx="6"/>
+  <text x="580" y="333" fill="#10b981" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Net Margin: 93.1%</text>
+</svg>

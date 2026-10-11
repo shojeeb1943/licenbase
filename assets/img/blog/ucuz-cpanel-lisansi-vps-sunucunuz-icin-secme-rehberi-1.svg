@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Ucuz cPanel Lisansı VPS Rehberi 2026</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Resmi Güncellemeler, IP Tabanlı Otomasyon ve Maliyet Tasarrufu</text>
+  <rect x="50" y="100" width="330" height="270" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <text x="215" y="135" fill="#ef4444" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Standart Perakende Fiyatı</text>
+  <text x="80" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• cPanel Admin (5 Hesap): $29.99/ay</text>
+  <text x="80" y="205" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• cPanel Pro (30 Hesap): $44.99/ay</text>
+  <text x="80" y="235" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Yıllık Maliyet: $359 - $539</text>
+  <text x="80" y="265" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Hesap başına ek ücretlendirme</text>
+  <text x="215" y="340" fill="#ef4444" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Yüksek Aylık Gider</text>
+
+  <rect x="420" y="100" width="330" height="270" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="585" y="135" fill="#10b981" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase Toptan IP Lisansı</text>
+  <text x="450" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Sabit Fiyat: $4.00/ay (Yıllık ~$48)</text>
+  <text x="450" y="205" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Sınırsız Hesap Açma İmkanı</text>
+  <text x="450" y="235" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• %100 Orijinal Otomatik Güncellemeler</text>
+  <text x="450" y="265" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Ücretsiz &amp; Anında IP Değişimi</text>
+  <text x="585" y="340" fill="#10b981" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">%87 Maliyet Tasarrufu Sağlayın</text>
+</svg>

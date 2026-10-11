@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Virtualizor vs SolusVM: VPS Hypervisor Control</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Comparing KVM, LXC, OpenVZ, WHMCS Integration, and Setup Complexity</text>
+  <rect x="50" y="100" width="330" height="270" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" rx="8"/>
+  <text x="215" y="135" fill="#38bdf8" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Virtualizor (Softaculous)</text>
+  <text x="80" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• KVM, LXC, Xen, OpenVZ 7 Support</text>
+  <text x="80" y="205" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• 1-Click OS Templates &amp; ISO Mounts</text>
+  <text x="80" y="235" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Native High Availability &amp; Clustering</text>
+  <text x="80" y="265" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Seamless WHMCS Auto-provisioning</text>
+  <text x="80" y="295" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Active Monthly Feature Updates</text>
+  <text x="215" y="340" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase: $4.00/mo</text>
+
+  <rect x="420" y="100" width="330" height="270" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5" rx="8"/>
+  <text x="585" y="135" fill="#94a3b8" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">SolusVM (Legacy / SolusIO)</text>
+  <text x="450" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• SolusVM 1 in Maintenance Phase</text>
+  <text x="450" y="205" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• SolusIO transition has high learning curve</text>
+  <text x="450" y="235" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Slower feature iteration cadence</text>
+  <text x="450" y="265" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Complex slave master architecture</text>
+  <text x="450" y="295" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Retail Pricing: $10.00 - $20.00/mo</text>
+  <text x="585" y="340" fill="#94a3b8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Higher Overhead &amp; Complex Setup</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">CloudLinux OS Deployment on Live cPanel VPS</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Non-Destructive In-Place Upgrade Flow via cldeploy</text>
+  <rect x="50" y="100" width="215" height="260" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" rx="8"/>
+  <text x="157" y="135" fill="#38bdf8" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. Download</text>
+  <text x="70" y="175" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Connect SSH as root</text>
+  <text x="70" y="205" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• wget cldeploy script</text>
+  <text x="70" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Bind IP on LicenBase</text>
+  <text x="70" y="265" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Zero data loss</text>
+  <text x="157" y="325" fill="#38bdf8" font-size="11" font-family="monospace" text-anchor="middle">sh cldeploy -k IP</text>
+
+  <rect x="290" y="100" width="215" height="260" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="397" y="135" fill="#10b981" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. Kernel Swap</text>
+  <text x="310" y="175" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Replaces kernel live</text>
+  <text x="310" y="205" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Installs LVE modules</text>
+  <text x="310" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Takes ~10-15 mins</text>
+  <text x="310" y="265" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Reboot server instance</text>
+  <text x="397" y="325" fill="#10b981" font-size="11" font-family="monospace" text-anchor="middle">reboot</text>
+
+  <rect x="530" y="100" width="215" height="260" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" rx="8"/>
+  <text x="637" y="135" fill="#f59e0b" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. CageFS Init</text>
+  <text x="550" y="175" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Initialize CageFS jail</text>
+  <text x="550" y="205" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Enable MySQL Governor</text>
+  <text x="550" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Set WHM LVE defaults</text>
+  <text x="550" y="265" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• 100% active isolation</text>
+  <text x="637" y="325" fill="#f59e0b" font-size="11" font-family="monospace" text-anchor="middle">cagefsctl --init</text>
+</svg>

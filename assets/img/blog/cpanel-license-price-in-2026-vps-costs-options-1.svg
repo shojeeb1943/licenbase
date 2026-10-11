@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f97316"/><stop offset="100%" stop-color="#ea580c"/></linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#047857"/></linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">cPanel VPS License Cost vs Hardware Allocation 2026</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Retail Single Unit vs Wholesale IP Pricing Comparison</text>
+  <rect x="50" y="95" width="330" height="290" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <text x="215" y="130" fill="#ef4444" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Standard Retail Licensing</text>
+  <text x="80" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• cPanel Admin (5 accts): $29.99/mo</text>
+  <text x="80" y="210" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• cPanel Pro (30 accts): $44.99/mo</text>
+  <text x="80" y="245" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Per-account overage charges apply</text>
+  <text x="80" y="280" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Annual price escalations (8-12%)</text>
+  <rect x="75" y="320" width="280" height="42" fill="#0f172a" stroke="#ef4444" stroke-width="1" rx="6"/>
+  <text x="215" y="347" fill="#ef4444" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Retail: $359 - $539 / year</text>
+  <rect x="420" y="95" width="330" height="290" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="585" y="130" fill="#10b981" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase Wholesale IP</text>
+  <text x="450" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Flat Wholesale Rate: $4.00/mo</text>
+  <text x="450" y="210" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Unlimited Account Management</text>
+  <text x="450" y="245" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• 100% Genuine Official Updates</text>
+  <text x="450" y="280" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Zero Per-Account Penalties</text>
+  <rect x="445" y="320" width="280" height="42" fill="#0f172a" stroke="#10b981" stroke-width="1" rx="6"/>
+  <text x="585" y="347" fill="#10b981" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase: $48.00 / year (Save 87%)</text>
+</svg>

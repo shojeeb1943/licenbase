@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">7 Essential Checks Before Buying a Cheap cPanel License</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Verify Security, Update Integrity, and IP Automation</text>
+  <g fill="#1e293b" stroke="#334155" stroke-width="1.5">
+    <rect x="40" y="95" width="220" height="85" rx="6"/><rect x="290" y="95" width="220" height="85" rx="6"/><rect x="540" y="95" width="220" height="85" rx="6"/>
+    <rect x="40" y="195" width="220" height="85" rx="6"/><rect x="290" y="195" width="220" height="85" rx="6"/><rect x="540" y="195" width="220" height="85" rx="6"/>
+    <rect x="290" y="295" width="220" height="85" rx="6"/>
+  </g>
+  <text x="150" y="125" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. Official Mirrors</text><text x="150" y="150" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Unmodified cPanel binaries</text>
+  <text x="400" y="125" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. Automated IP Re-issue</text><text x="400" y="150" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Free instant IP changes</text>
+  <text x="650" y="125" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. Zero Nulling / Cracks</text><text x="650" y="150" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Zero malware or backdoors</text>
+  <text x="150" y="225" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">4. Automated Cron Updates</text><text x="150" y="250" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">No manual monthly patching</text>
+  <text x="400" y="225" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">5. 99.99% License Uptime</text><text x="400" y="250" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">High availability mirrors</text>
+  <text x="650" y="225" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">6. Plugin Ecosystem</text><text x="650" y="250" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">LiteSpeed &amp; CloudLinux work</text>
+  <text x="400" y="325" fill="#10b981" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">7. Fast Support &amp; SLA</text><text x="400" y="350" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Verified provider reputation</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LiteSpeed vs Nginx: High Concurrency Comparison</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">LSCache Dynamic WooCommerce ESI vs FastCGI Microcaching</text>
+  <rect x="50" y="100" width="330" height="270" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" rx="8"/>
+  <text x="215" y="135" fill="#38bdf8" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LiteSpeed Enterprise (LSCache)</text>
+  <text x="75" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Native .htaccess dynamic rewrite parsing</text>
+  <text x="75" y="205" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Edge Side Includes (ESI) for shopping carts</text>
+  <text x="75" y="235" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• HTTP/3 QUIC connection multiplexing</text>
+  <text x="75" y="265" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Automated WebP image optimization</text>
+  <text x="75" y="295" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• 1-Click integration in cPanel &amp; WHM</text>
+  <text x="215" y="340" fill="#38bdf8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">LicenBase: $6.00/mo (Plug &amp; Play)</text>
+
+  <rect x="420" y="100" width="330" height="270" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5" rx="8"/>
+  <text x="585" y="135" fill="#94a3b8" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Nginx FastCGI Cache</text>
+  <text x="445" y="175" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• No native .htaccess; requires manual reloads</text>
+  <text x="445" y="205" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Bypasses cache entirely for logged-in users</text>
+  <text x="445" y="235" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Complex manual Lua / Redis configuration</text>
+  <text x="445" y="265" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• High DevOps engineering time required</text>
+  <text x="445" y="295" fill="#cbd5e1" font-size="13" font-family="system-ui, sans-serif">• Free open source software license</text>
+  <text x="585" y="340" fill="#94a3b8" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">High Engineering Maintenance</text>
+</svg>

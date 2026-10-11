@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">WHMCS License Activation Error Diagnostics</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Resolve Invalid License Key, IP Mismatch, and Firewall SSL Timeouts</text>
+  <rect x="50" y="100" width="330" height="125" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <text x="70" y="130" fill="#ef4444" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">1. IP / Directory Path Lock</text>
+  <text x="70" y="160" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">WHMCS locks to exact IP and installation path</text>
+  <text x="70" y="195" fill="#38bdf8" font-size="11" font-family="monospace">Update IP in LicenBase Dashboard</text>
+
+  <rect x="420" y="100" width="330" height="125" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <text x="440" y="130" fill="#ef4444" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">2. Outbound cURL / Port 443</text>
+  <text x="440" y="160" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">Firewall blocks outbound connection to auth server</text>
+  <text x="440" y="195" fill="#38bdf8" font-size="11" font-family="monospace">curl -I https://licensing.whmcs.com</text>
+
+  <rect x="50" y="245" width="330" height="125" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="70" y="275" fill="#10b981" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">3. Clear Local License Cache</text>
+  <text x="70" y="305" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">Flush stale key data from tblconfiguration table</text>
+  <text x="70" y="340" fill="#38bdf8" font-size="11" font-family="monospace">DELETE FROM tblconfiguration WHERE ...</text>
+
+  <rect x="420" y="245" width="330" height="125" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="440" y="275" fill="#10b981" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">4. IonCube Loader Compatibility</text>
+  <text x="440" y="305" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">Verify PHP version matches supported IonCube</text>
+  <text x="440" y="340" fill="#38bdf8" font-size="11" font-family="monospace">php -v | grep -i ioncube</text>
+</svg>

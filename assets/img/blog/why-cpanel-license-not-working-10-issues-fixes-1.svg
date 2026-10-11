@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">10 Reasons Why cPanel License Fails &amp; How to Fix</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Diagnostic Decision Flow for Linux VPS System Administrators</text>
+  <g fill="#1e293b" stroke="#334155" stroke-width="1.5">
+    <rect x="50" y="100" width="215" height="75" rx="6"/><rect x="290" y="100" width="215" height="75" rx="6"/><rect x="530" y="100" width="215" height="75" rx="6"/>
+    <rect x="50" y="190" width="215" height="75" rx="6"/><rect x="290" y="190" width="215" height="75" rx="6"/><rect x="530" y="190" width="215" height="75" rx="6"/>
+    <rect x="50" y="280" width="215" height="75" rx="6"/><rect x="290" y="280" width="215" height="75" rx="6"/><rect x="530" y="280" width="215" height="75" rx="6"/>
+  </g>
+  <text x="157" y="130" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. Firewall TCP Block</text><text x="157" y="152" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Open port 80/443 outbound</text>
+  <text x="397" y="130" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. NAT IP Inconsistency</text><text x="397" y="152" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Licensed IP != egress IP</text>
+  <text x="637" y="130" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. NTP System Drift</text><text x="637" y="152" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Sync clock with chronyd</text>
+  <text x="157" y="220" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">4. Corrupt License File</text><text x="157" y="242" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Run /usr/local/cpanel/cpkeyclt</text>
+  <text x="397" y="220" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">5. DNS Resolver Failure</text><text x="397" y="242" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Add 8.8.8.8 &amp; 1.1.1.1</text>
+  <text x="637" y="220" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">6. Expired Invoice</text><text x="637" y="242" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Check renewal automation</text>
+  <text x="157" y="310" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">7. Missing Hostname FQDN</text><text x="157" y="332" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Set valid domain hostname</text>
+  <text x="397" y="310" fill="#ef4444" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">8. Stale Local Cache</text><text x="397" y="332" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Flush /usr/local/cpanel/etc</text>
+  <text x="637" y="310" fill="#10b981" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">9 &amp; 10. IP Re-issue</text><text x="637" y="332" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Instant IP swap via LicenBase</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+  <text x="400" y="45" fill="#f8fafc" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">AI-Powered VPS Anomaly Detection Architecture</text>
+  <text x="400" y="70" fill="#94a3b8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Proactive Log Streaming, Vector Embeddings &amp; Automated Alerting</text>
+  <rect x="50" y="100" width="215" height="260" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" rx="8"/>
+  <text x="157" y="135" fill="#38bdf8" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. Telemetry Ingest</text>
+  <text x="70" y="175" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• System metrics (iostat, top)</text>
+  <text x="70" y="205" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Web access &amp; error logs</text>
+  <text x="70" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• MySQL slow query logs</text>
+  <text x="70" y="265" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Netdata / Prometheus agent</text>
+  <text x="157" y="325" fill="#38bdf8" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Continuous Metric Stream</text>
+
+  <rect x="290" y="100" width="215" height="260" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" rx="8"/>
+  <text x="397" y="135" fill="#a855f7" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. LLM Analysis</text>
+  <text x="310" y="175" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Anomaly pattern scoring</text>
+  <text x="310" y="205" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Detects slow memory leaks</text>
+  <text x="310" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Identifies bad bot scraping</text>
+  <text x="310" y="265" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Root-cause diagnosis</text>
+  <text x="397" y="325" fill="#a855f7" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Predicts Failures Early</text>
+
+  <rect x="530" y="100" width="215" height="260" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="8"/>
+  <text x="637" y="135" fill="#10b981" font-size="15" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. Auto Action</text>
+  <text x="550" y="175" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Restart stuck PHP pools</text>
+  <text x="550" y="205" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Ban abusive IPs in CSF</text>
+  <text x="550" y="235" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Alert sysadmin via Slack</text>
+  <text x="550" y="265" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif">• Trigger JetBackup snapshot</text>
+  <text x="637" y="325" fill="#10b981" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Zero Downtime Recovery</text>
+</svg>
