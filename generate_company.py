@@ -105,6 +105,12 @@ def contact_main():
             <a href="{href}" class="lb-btn lb-btn--secondary mt-5 w-full text-center">{label}</a>
           </div>"""
     cards = "".join([
+        f"""<div {CARD}>
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-brandSoft text-brand"><i data-lucide="message-square" class="h-5 w-5"></i></span>
+            <h2 class="mt-4 font-display text-lg font-bold text-navy">Live chat</h2>
+            <p class="mt-2 text-sm leading-relaxed text-gray-600">Fastest response for pre-sales questions, trial activations, and instant licensing verification with our 24/7 team.</p>
+            <button type="button" class="lb-btn lb-btn--primary open-chat-btn mt-5 w-full text-center cursor-pointer" data-open-chat>Start live chat</button>
+          </div>""",
         ch("life-buoy", "Support ticket", "Best for existing orders: license activation, IP changes and technical problems. A ticket keeps your order details and our replies in one place.", TICKET, "Open a ticket"),
         ch("mail", "Email", f"For pre-sales questions, billing and anything else. Write to {EMAIL}.", f"mailto:{EMAIL}", "Send an email"),
         ch("layout-dashboard", "Client area", "Sign in to view your orders and licenses, and to manage your account.", CLIENT_AREA, "Go to dashboard"),
@@ -113,7 +119,7 @@ def contact_main():
                 "Pre-sales questions, order help or a license problem? Pick the channel that fits and we will get back to you.") + f"""
   <section class="py-12 lg:py-16">
     <div class="lb-shell">
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {cards}
       </div>
 
