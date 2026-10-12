@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">cPanel License Price in India Comparison</title>
+  <desc id="d1">Comparison of official retail cPanel license pricing in INR versus LicenBase wholesale pricing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#EF4444"/>
+  <text x="70" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Official US Retail / Indian Resellers</text>
+  <text x="70" y="100" font-family="Inter, sans-serif" font-size="13" fill="#DC2626">High Markup &amp; Additional Taxes</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Solo: ~₹1,750/mo ($17.49 + 18% GST)</text>
+  <text x="70" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Admin (5 accts): ~₹2,950/mo</text>
+  <text x="70" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Pro (30 accts): ~₹4,450/mo</text>
+  <text x="70" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Bank Forex Markup: 3.5% + GST on foreign cards</text>
+  <text x="70" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Total Annual Cost: ₹25,000 to ₹50,000+ per VPS</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="245" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#991B1B" text-anchor="middle">Heavy Monthly Burden for Agencies</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LicenBase Wholesale IP Licensing</text>
+  <text x="540" y="100" font-family="Inter, sans-serif" font-size="13" fill="#059669">Authentic cPanel at Wholesale Rates</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel VPS License: $4.00/mo (~₹330/mo)</text>
+  <text x="540" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• 100% Genuine Software from Official Mirrors</text>
+  <text x="540" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Automated Instant IP Activation (60 seconds)</text>
+  <text x="540" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Works on AWS Mumbai, DigitalOcean Bangalore</text>
+  <text x="540" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Saves over 75% on Annual Infrastructure Budget</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">Save ₹15,000+ Every Year per Server</text>
+</svg>

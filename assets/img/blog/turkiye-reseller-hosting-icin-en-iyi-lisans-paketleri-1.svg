@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t7 d7">
+  <title id="t7">Türkiye Reseller Hosting Lisanslama Yığını</title>
+  <desc id="d7">Türkiye'de profesyonel bayi hosting altyapısı kurarken gereken lisanslar ve kombine tasarruf rehberi.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="205" height="350" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="205" height="6" rx="3" fill="#3B82F6"/>
+  <text x="55" y="70" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A">1. Kontrol Paneli</text>
+  <text x="55" y="92" font-family="Inter, sans-serif" font-size="12" fill="#2563EB">cPanel &amp; WHM</text>
+  <path d="M55 110 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="55" y="140" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Müşteri alışkanlığı</text>
+  <text x="55" y="170" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Tek tıkla hesap açma</text>
+  <text x="55" y="200" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Otomatik AutoSSL</text>
+  <text x="55" y="230" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Kolay DNS ve e-posta</text>
+  <rect x="55" y="315" width="175" height="36" rx="6" fill="#EFF6FF"/>
+  <text x="142" y="337" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">$4.00/ay</text>
+
+  <rect x="270" y="35" width="205" height="350" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="270" y="35" width="205" height="6" rx="3" fill="#10B981"/>
+  <text x="285" y="70" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A">2. Web Hızlandırma</text>
+  <text x="285" y="92" font-family="Inter, sans-serif" font-size="12" fill="#059669">LiteSpeed Server</text>
+  <path d="M285 110 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="285" y="140" font-family="Inter, sans-serif" font-size="12" fill="#475569">• 10 kat hızlı WP</text>
+  <text x="285" y="170" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LSCache desteği</text>
+  <text x="285" y="200" font-family="Inter, sans-serif" font-size="12" fill="#475569">• .htaccess %100 uyum</text>
+  <text x="285" y="230" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Düşük CPU kullanımı</text>
+  <rect x="285" y="315" width="175" height="36" rx="6" fill="#D1FAE5"/>
+  <text x="372" y="337" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">$4.00/ay</text>
+
+  <rect x="500" y="35" width="205" height="350" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="500" y="35" width="205" height="6" rx="3" fill="#8B5CF6"/>
+  <text x="515" y="70" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A">3. Hesap İzolasyonu</text>
+  <text x="515" y="92" font-family="Inter, sans-serif" font-size="12" fill="#7C3AED">CloudLinux OS</text>
+  <path d="M515 110 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="515" y="140" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LVE CPU/RAM sınırı</text>
+  <text x="515" y="170" font-family="Inter, sans-serif" font-size="12" fill="#475569">• CageFS güvenlik kafesi</text>
+  <text x="515" y="200" font-family="Inter, sans-serif" font-size="12" fill="#475569">• PHP Selector modülü</text>
+  <text x="515" y="230" font-family="Inter, sans-serif" font-size="12" fill="#475569">• MySQL Governor</text>
+  <rect x="515" y="315" width="175" height="36" rx="6" fill="#F5F3FF"/>
+  <text x="602" y="337" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#6D28D9" text-anchor="middle">$4.00/ay</text>
+
+  <rect x="730" y="35" width="190" height="350" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="730" y="35" width="190" height="6" rx="3" fill="#F59E0B"/>
+  <text x="745" y="70" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A">4. Otomasyon</text>
+  <text x="745" y="92" font-family="Inter, sans-serif" font-size="12" fill="#D97706">WHMCS Faturalama</text>
+  <path d="M745 110 h160" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="745" y="140" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Otomatik hesap açma</text>
+  <text x="745" y="170" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Destek bilet sistemi</text>
+  <text x="745" y="200" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Domain kayıt modülü</text>
+  <text x="745" y="230" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Sınırsız müşteri</text>
+  <rect x="745" y="315" width="160" height="36" rx="6" fill="#FEF3C7"/>
+  <text x="825" y="337" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">$4/ay veya $20 ömürlük</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Guia de Escolha de Licença cPanel VPS no Brasil</title>
+  <desc id="d5">Comparativo de custos em Reais entre varejo tradicional e LicenBase atacado.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#EF4444"/>
+  <text x="70" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Varejo Oficial / Revendas Locais</text>
+  <text x="70" y="100" font-family="Inter, sans-serif" font-size="13" fill="#DC2626">Câmbio Flutuante + IOF Bancário</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Solo: ~R$ 95/mês (US$ 17.49)</text>
+  <text x="70" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Admin (5 contas): ~R$ 165/mês</text>
+  <text x="70" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Pro (30 contas): ~R$ 250/mês</text>
+  <text x="70" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Premier (100 contas): ~R$ 350/mês</text>
+  <text x="70" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Custo anual pesado para agências digitais</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="245" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#991B1B" text-anchor="middle">Alto Custo em Dólar</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LicenBase Atacado por IP</text>
+  <text x="540" y="100" font-family="Inter, sans-serif" font-size="13" fill="#059669">Software 100% Original e Atualizado</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Licença cPanel VPS: apenas US$ 4/mês (~R$ 22)</text>
+  <text x="540" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Atualizações oficiais diretas da cPanel</text>
+  <text x="540" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Ativação instantânea no IPv4 do servidor</text>
+  <text x="540" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Suporte técnico especializado 24/7</text>
+  <text x="540" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Economia real de até 80% todo mês</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">Economize mais de R$ 1.500/ano</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t12 d12">
+  <title id="t12">LiteSpeed বনাম Nginx ওয়ার্ডপ্রেস তুলনা</title>
+  <desc id="d12">ওয়ার্ডপ্রেস পারফরম্যান্স, ক্যাশিং ও ফিচারের তুলনামূলক চার্ট।</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#94A3B8"/>
+  <text x="70" y="75" font-family="Inter, 'Nirmala UI', sans-serif" font-size="18" font-weight="700" fill="#0F172A">Nginx ওয়েব সার্ভার (ওপেন সোর্স)</text>
+  <text x="70" y="100" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#64748B">দ্রুতগতির তবে জটিল কনফিগারেশন</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• .htaccess সাপোর্ট করে না (ম্যানুয়াল রিরাইট)</text>
+  <text x="70" y="190" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• প্রতিটি পরিবর্তনের পর সার্ভার রিলোড লাগে</text>
+  <text x="70" y="225" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• উকমার্সের জন্য ESI ক্যাশ সেটআপ জটিল</text>
+  <text x="70" y="260" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel এর সাথে প্লাগ-অ্যান্ড-প্লে নয়</text>
+  <text x="70" y="295" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• নন-টেকনিক্যাল ইউজারদের জন্য কঠিন</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#F1F5F9"/>
+  <text x="245" y="349" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" font-weight="700" fill="#475569" text-anchor="middle">ম্যানুয়াল ও জটিল ব্যবস্থাপনা</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, 'Nirmala UI', sans-serif" font-size="18" font-weight="700" fill="#0F172A">LiteSpeed Enterprise + LSCache</text>
+  <text x="540" y="100" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#059669">ওয়ার্ডপ্রেসের জন্য চূড়ান্ত গতি</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• ১০০% নেটিভ .htaccess সাপোর্ট (রিস্টার্ট লাগে না)</text>
+  <text x="540" y="190" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• অফিসিয়াল LSCache প্লাগইনে সর্বোচ্চ স্পিড</text>
+  <text x="540" y="225" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• উকমার্সের কার্ট ও ডায়নামিক পেজ ক্যাশ</text>
+  <text x="540" y="260" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel WHM এ ১-ক্লিকে ইনস্টল ও পরিচালনা</text>
+  <text x="540" y="295" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• LicenBase এ মাত্র ৪ ডলার/মাস থেকে শুরু</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">ওয়ার্ডপ্রেসের জন্য সেরা পছন্দ</text>
+</svg>

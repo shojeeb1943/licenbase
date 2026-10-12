@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t6 d6">
+  <title id="t6">LiteSpeed Web Server Hız ve Lisans Maliyet Analizi</title>
+  <desc id="d6">WordPress ve WooCommerce için LiteSpeed Enterprise hız performansı ve donanım tasarrufu karşılaştırması.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#3B82F6"/>
+  <text x="70" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Standart Apache Web Server</text>
+  <text x="70" y="100" font-family="Inter, sans-serif" font-size="13" fill="#2563EB">Yüksek Donanım Tüketimi</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Eşzamanlı İstek: 300 - 500 RPS kapasitesi</text>
+  <text x="70" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Yanıt Süresi (TTFB): 400ms - 900ms arası</text>
+  <text x="70" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• CPU Tüketimi: E-ticaret trafiğinde %100 yük</text>
+  <text x="70" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Çözüm Yolu: Daha pahalı VPS işlemcisi kiralamak</text>
+  <text x="70" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Ek Bulut Donanım Maliyeti: +500 TL ila 1.500 TL/ay</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#EFF6FF"/>
+  <text x="245" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle">Trafik Anında Sunucu Kilitlenmesi</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LiteSpeed Enterprise + LSCache</text>
+  <text x="540" y="100" font-family="Inter, sans-serif" font-size="13" fill="#059669">Sunucu Düzeyinde Hız ve Tasarruf</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Eşzamanlı İstek: 5.000+ RPS yüksek kapasite</text>
+  <text x="540" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Yanıt Süresi (TTFB): 30ms - 80ms yıldırım hız</text>
+  <text x="540" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• WooCommerce ESI: Dinamik sepet önbellekleme</text>
+  <text x="540" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• CPU Yükü: İşlemci kullanımını %70 azaltır</text>
+  <text x="540" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• LicenBase Fiyatı: Ayda sadece $4.00 (~140 TL)</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">Aynı VPS ile 5 Kat Fazla Ziyaretçi Barındırın</text>
+</svg>

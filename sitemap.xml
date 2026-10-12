@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://licenbase.com/about</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.5</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/about.png</image:loc>
@@ -172,6 +172,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cara-mengatasi-cpu-vps-100-persen-linux</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cara-mengatasi-cpu-vps-100-persen-linux.png</image:loc>
+      <image:title>Mengatasi CPU VPS 100%: Tips Linux Admin</image:title>
+      <image:caption>Langkah mudah mengatasi CPU VPS menyentuh 100% pada server Linux. Gunakan perintah top, htop, kill, serta optimalkan MySQL dan PHP-FPM dengan aman.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cara-mengatasi-error-lisensi-cpanel-vps</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cara-mengatasi-error-lisensi-cpanel-vps.png</image:loc>
+      <image:title>Mengatasi Error Lisensi cPanel VPS</image:title>
+      <image:caption>Panduan praktis mengatasi error lisensi cPanel pada VPS Linux: perbaiki masalah IP publik, port 873 firewall, perintah cpkeyclt, dan update otomatis.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-license-2026-licenbase</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -199,6 +219,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-license-choose-reliable-option.png</image:loc>
       <image:title>Cheap cPanel License: How to Choose Wisely</image:title>
       <image:caption>Learn how to choose a cheap cPanel license safely without risking server stability, IP blacklisting, or malware from unauthorized providers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cheap-cpanel-license-choose-reliable-vps-guide</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-license-choose-reliable-vps-guide.png</image:loc>
+      <image:title>Cheap cPanel License: Reliable VPS Guide</image:title>
+      <image:caption>Find out how to choose a cheap cPanel license for your VPS without compromising server security, IP activation speed, or direct official cPanel updates.</image:caption>
     </image:image>
   </url>
   <url>
@@ -352,6 +382,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cloudlinux-license-guide-pricing-install-errors</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-guide-pricing-install-errors.png</image:loc>
+      <image:title>CloudLinux License Guide: Pricing &amp; Install</image:title>
+      <image:caption>Complete guide to CloudLinux OS licensing: shared server pricing, cDeploy conversion commands, LVE manager configuration, and licensing error fixes.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-price-2026-cpanel-vps-guide</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -422,6 +462,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/como-corrigir-erros-licenca-cpanel-solucoes</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-como-corrigir-erros-licenca-cpanel-solucoes.png</image:loc>
+      <image:title>Corrigir Erros de Licença cPanel: Guia</image:title>
+      <image:caption>Guia completo para resolver erros de licença do cPanel e WHM: comando cpkeyclt, liberação de portas de firewall, problemas de IP e renovação rápida.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/como-resolver-alto-uso-cpu-ram-vps-linux</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-como-resolver-alto-uso-cpu-ram-vps-linux.png</image:loc>
+      <image:title>Resolver Alto Uso CPU e RAM VPS Linux</image:title>
+      <image:caption>Aprenda como identificar e resolver gargalos de alto uso de CPU e memória RAM em servidores VPS Linux. Otimize MySQL, PHP-FPM, Apache e processos zumbis.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/complete-vps-hosting-setup-guide</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -452,6 +512,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cpanel-license-dam-koto-bangladesh-vps</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-dam-koto-bangladesh-vps.png</image:loc>
+      <image:title>cPanel লাইসেন্সের দাম কত? VPS গাইড</image:title>
+      <image:caption>২০২৬ সালে বাংলাদেশে cPanel VPS লাইসেন্সের দাম, রিনিউয়াল খরচ এবং LicenBase এর মাধ্যমে সাশ্রয়ী মূল্যে অরিজিনাল লাইসেন্স কেনার সম্পূর্ণ গাইড।</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cpanel-license-error-causes-solutions-troubleshooting</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -459,6 +529,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-error-causes-solutions-troubleshooting.png</image:loc>
       <image:title>cPanel License Error: Troubleshooting Guide</image:title>
       <image:caption>Comprehensive troubleshooting guide for cPanel license errors. Learn root causes, diagnostic flows, and rapid terminal fixes for Linux servers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-license-kaj-korche-na-somadhan</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-kaj-korche-na-somadhan.png</image:loc>
+      <image:title>cPanel License কাজ করছে না? সমাধান গাইড</image:title>
+      <image:caption>cPanel লাইসেন্স এরর এবং অ্যাক্টিভেশন সমস্যা সমাধানের কার্যকর উপায়। cpkeyclt কমান্ড, সার্ভার আইপি ভেরিফিকেশন এবং ফায়ারওয়াল ফিক্সিং গাইড।</image:caption>
     </image:image>
   </url>
   <url>
@@ -479,6 +559,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-not-working-fix-guide.png</image:loc>
       <image:title>cPanel License Not Working? How to Fix</image:title>
       <image:caption>Troubleshoot cPanel license validation failures, cannot determine license status errors, IP mismatch, and clock drift with cpkeyclt and automated IP resets.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-license-not-working-server-admin-fixes</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-not-working-server-admin-fixes.png</image:loc>
+      <image:title>cPanel License Not Working? Admin Fixes</image:title>
+      <image:caption>Troubleshoot cPanel license errors fast: fix IP mismatch, port 873 firewall blocks, cpkeyclt command failures, and licensing server connectivity issues.</image:caption>
     </image:image>
   </url>
   <url>
@@ -532,6 +622,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cpanel-license-price-india-vps-guide</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-license-price-india-vps-guide.png</image:loc>
+      <image:title>cPanel License Price India: VPS Licensing Guide</image:title>
+      <image:caption>Explore cPanel license prices in India for VPS servers in 2026. Compare INR pricing, payment options, GST savings, and LicenBase wholesale license rates.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cpanel-license-vs-cpanel-hosting-difference</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -562,6 +662,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cpanel-lisansi-fiyat-artisi-turkiye-hosting-rehberi</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-lisansi-fiyat-artisi-turkiye-hosting-rehberi.png</image:loc>
+      <image:title>cPanel Fiyat Artışı: Türkiye Lisans Rehberi</image:title>
+      <image:caption>2026 cPanel lisans fiyat artışının Türkiye web hosting sektörüne etkileri: dolar kuru baskısı, hesap başı maliyetler ve LicenBase toptan lisanslama çözümü.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cpanel-login-not-working-10-common-problems-fixes</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -569,6 +679,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-login-not-working-10-common-problems-fixes.png</image:loc>
       <image:title>cPanel Login Not Working: 10 Problems &amp; Fixes</image:title>
       <image:caption>Troubleshoot cPanel login failures including port blocks, IP blacklists, cphulkd lockouts, SSL errors, password resets, and session timeout bugs.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-price-hike-2026-alternatives-cost-calculator</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-price-hike-2026-alternatives-cost-calculator.png</image:loc>
+      <image:title>cPanel Price Hike 2026: Costs &amp; Alternatives</image:title>
+      <image:caption>Analyze the 2026 cPanel price hike: WebPros per-account cost calculator, cloud VPS license options, and how to save 75% on cPanel without risky migrations.</image:caption>
     </image:image>
   </url>
   <url>
@@ -599,6 +719,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vps-setup-installation-licensing-optimization.png</image:loc>
       <image:title>cPanel VPS Setup &amp; Optimization Guide</image:title>
       <image:caption>Complete guide to setting up a production cPanel VPS: automated installation, wholesale IP licensing, firewall hardening, LiteSpeed engine, and CloudLinux.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-vs-directadmin-pricing-features-vps-comparison</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-vs-directadmin-pricing-features-vps-comparison.png</image:loc>
+      <image:title>cPanel vs DirectAdmin: Pricing &amp; Features 2026</image:title>
+      <image:caption>Compare cPanel vs DirectAdmin in 2026: memory footprints, CustomBuild web stacks, WHMCS billing integration, migration workflows, and licensing cost analysis.</image:caption>
     </image:image>
   </url>
   <url>
@@ -802,6 +932,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/harga-lisensi-cpanel-panduan-murah-vps</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-harga-lisensi-cpanel-panduan-murah-vps.png</image:loc>
+      <image:title>Harga Lisensi cPanel: Panduan Murah VPS</image:title>
+      <image:caption>Panduan lengkap harga lisensi cPanel VPS di Indonesia tahun 2026. Bandingkan paket Solo, Admin, Pro, dan cara hemat biaya lisensi resmi bersama LicenBase.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/hosting-control-panel-license-cost-2026-guide</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -899,6 +1039,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-fix-high-cpu-ram-usage-linux-vps-ai-troubleshooting.png</image:loc>
       <image:title>Fix High CPU &amp; RAM on Linux VPS: Guide</image:title>
       <image:caption>Step-by-step terminal commands and AI-assisted troubleshooting techniques to diagnose and fix 100% CPU spikes and memory exhaustion on Linux VPS.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/how-to-fix-high-cpu-usage-linux-vps-tricks</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-to-fix-high-cpu-usage-linux-vps-tricks.png</image:loc>
+      <image:title>Fix High CPU Usage on Linux VPS: Tips</image:title>
+      <image:caption>Learn how to diagnose and fix high CPU usage on a Linux VPS using top, htop, iotop, and kill commands. Optimize Apache, MySQL, PHP-FPM, and cron jobs.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1043,7 +1193,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/install-cpanel-license-vps</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-install-cpanel-license-vps.png</image:loc>
@@ -1112,6 +1262,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/licenca-cpanel-barata-escolher-servidor-vps</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-licenca-cpanel-barata-escolher-servidor-vps.png</image:loc>
+      <image:title>Licença cPanel Barata: Guia para VPS</image:title>
+      <image:caption>Descubra como escolher uma licença cPanel barata e confiável para seu servidor VPS no Brasil. Evite versões piratas e economize com a LicenBase.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/licencia-cpanel-barata-elegir-licencia-servidor-vps</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -1152,6 +1312,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/linux-vps-slow-cpu-ram-disk-komanor-upay</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-linux-vps-slow-cpu-ram-disk-komanor-upay.png</image:loc>
+      <image:title>Linux VPS Slow? CPU, RAM কমানোর উপায়</image:title>
+      <image:caption>আপনার Linux VPS সার্ভার ধীরগতির হয়ে গেছে? CPU, RAM ও ডিস্ক স্পেস ব্যবহার কমিয়ে সার্ভারকে সুপারফাস্ট করার ১০টি প্রমাণিত ট্রিকস জেনে নিন।</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/linux-vps-too-much-ram-reduce-memory-usage</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -1159,6 +1329,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-linux-vps-too-much-ram-reduce-memory-usage.png</image:loc>
       <image:title>Linux VPS High RAM: 10 Ways to Reduce It</image:title>
       <image:caption>Learn why your Linux VPS is using high RAM and discover 10 practical ways to cut memory across MySQL, PHP-FPM, Apache, systemd, and background services.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-bonam-nginx-wordpress-konti-bhalo</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-bonam-nginx-wordpress-konti-bhalo.png</image:loc>
+      <image:title>LiteSpeed বনাম Nginx: WordPress সেরা কোনটি?</image:title>
+      <image:caption>WordPress ওয়েবসাইটের জন্য LiteSpeed বনাম Nginx ওয়েব সার্ভারের তুলনামূলক বিশ্লেষণ। স্পিড টেস্ট, রিসোর্স খরচ, ক্যাশিং এবং লাইসেন্সিং গাইড।</image:caption>
     </image:image>
   </url>
   <url>
@@ -1202,6 +1382,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/litespeed-license-pricing-costs-vps-requirements</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-pricing-costs-vps-requirements.png</image:loc>
+      <image:title>LiteSpeed License Pricing: Costs &amp; VPS Guide</image:title>
+      <image:caption>Detailed breakdown of LiteSpeed Web Server license pricing in 2026: Free Starter, Site Owner, Web Host, CPU core tiers, RAM limits, and VPS requirements.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/litespeed-license-pricing-explained-vps-plan-guide</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -1232,6 +1422,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/litespeed-lisansi-fiyatlari-wordpress-hizlandirma-rehberi</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-lisansi-fiyatlari-wordpress-hizlandirma-rehberi.png</image:loc>
+      <image:title>LiteSpeed Lisans Fiyatları: Hız &amp; Maliyet</image:title>
+      <image:caption>LiteSpeed Web Server lisans fiyatları ve WordPress hızlandırma rehberi: LSCache eklentisi, WooCommerce optimizasyonu ve donanım maliyeti tasarrufu analizi.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/litespeed-pricing-explained-hosting-businesses</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -1249,6 +1449,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-apache-better-for-vps.png</image:loc>
       <image:title>LiteSpeed vs Apache: Which Is Better for VPS?</image:title>
       <image:caption>Deep comparison of LiteSpeed and Apache web servers covering memory footprint, TTFB, concurrency limits, and total infrastructure costs.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/litespeed-vs-apache-wordpress-performance-cost-guide</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-vs-apache-wordpress-performance-cost-guide.png</image:loc>
+      <image:title>LiteSpeed vs Apache: WordPress Benchmarks &amp; Cost</image:title>
+      <image:caption>Real-world WordPress speed benchmarks comparing LiteSpeed Web Server and Apache: TTFB tests, concurrent requests, LSCache ROI, and VPS licensing costs.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1309,6 +1519,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-plesk-vs-cpanel-license-cost-better-value-comparison.png</image:loc>
       <image:title>Plesk vs cPanel License Cost: Value Comparison</image:title>
       <image:caption>Plesk vs cPanel license cost comparison in 2026. Compare pricing, WordPress management, Windows support, and overall value for servers and agencies.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/preco-licenca-litespeed-vale-a-pena-wordpress</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-preco-licenca-litespeed-vale-a-pena-wordpress.png</image:loc>
+      <image:title>Preço Licença LiteSpeed para WordPress?</image:title>
+      <image:caption>Analise de preços da licença LiteSpeed Web Server para WordPress. Compare velocidade, cache LSCache, consumo de memória RAM e retorno sobre investimento.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1379,6 +1599,36 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-softaculous-license-price-premium-worth-it-for-hosting.png</image:loc>
       <image:title>Softaculous License Price: Is Premium Worth It?</image:title>
       <image:caption>Evaluate Softaculous license pricing, free vs premium features, 450+ 1-click script installers, auto-updates, and wholesale licensing value for hosts.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/softaculous-license-vs-free-alternatives-costs</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-softaculous-license-vs-free-alternatives-costs.png</image:loc>
+      <image:title>Softaculous vs Free Alternatives: Cost Guide</image:title>
+      <image:caption>Compare Softaculous Premium against free script installers like Installatron and WP-CLI. Discover feature limitations, security updates, and pricing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/turkiye-reseller-hosting-icin-en-iyi-lisans-paketleri</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-turkiye-reseller-hosting-icin-en-iyi-lisans-paketleri.png</image:loc>
+      <image:title>Reseller Hosting İçin En İyi Lisans Paketleri</image:title>
+      <image:caption>Türkiye&#x27;de reseller hosting altyapısı kurarken gereken lisanslar: cPanel, LiteSpeed, CloudLinux, WHMCS paket indirimleri ve sabit gider tasarrufu rehberi.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/ucuz-cpanel-lisansi-vps-fiyatlar-secim-rehberi</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-ucuz-cpanel-lisansi-vps-fiyatlar-secim-rehberi.png</image:loc>
+      <image:title>Ucuz cPanel Lisansı: VPS Fiyatları &amp; Seçim</image:title>
+      <image:caption>VPS sunucunuz için ucuz cPanel lisansı nasıl seçilir? Türkiye hosting sektörü için hesap limitleri, toptan IP lisanslama ve maliyet tasarrufu rehberi.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1602,6 +1852,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/whmcs-license-activation-failed-fixes-guide</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-activation-failed-fixes-guide.png</image:loc>
+      <image:title>WHMCS License Activation Failed? Fixes Guide</image:title>
+      <image:caption>Troubleshoot WHMCS license activation failed errors: fix Invalid License Key, IP change verification, curl SSL connection timeouts, and DNS resolution.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/whmcs-license-activation-failed-troubleshooting-tips</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -1702,6 +1962,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/whmcs-pricing-tiers-explained-how-to-avoid-costly-upgrades</loc>
+    <lastmod>2026-10-12</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-pricing-tiers-explained-how-to-avoid-costly-upgrades.png</image:loc>
+      <image:title>WHMCS Pricing Tiers: Avoid Costly Upgrades</image:title>
+      <image:caption>Demystifying WHMCS pricing tiers: active client calculations, hidden upgrade penalties, and how wholesale automated licensing saves hosts over 70% per year.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/why-are-licenbase-cpanel-licenses-affordable</loc>
     <lastmod>2026-10-12</lastmod>
     <priority>0.7</priority>
@@ -1763,7 +2033,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/contact</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.5</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/contact.png</image:loc>
@@ -1823,7 +2093,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/license-policy</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -1853,7 +2123,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/privacy-policy</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -1873,7 +2143,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/refund-policy</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>
@@ -1903,7 +2173,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/terms-of-service</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <priority>0.3</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/policies.png</image:loc>

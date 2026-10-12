@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t19 d19">
+  <title id="t19">WHMCS License Activation Failed Diagnostic Flowchart</title>
+  <desc id="d19">Troubleshooting steps to resolve WHMCS licensing failures and verification timeouts.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="60" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="180" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">1. Trigger Reissue</text>
+  <text x="180" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Reset IP / Domain / Directory</text>
+
+  <line x1="300" y1="95" x2="360" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="360,95 352,90 352,100" fill="#94A3B8"/>
+
+  <rect x="360" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <text x="480" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">2. Test Port 443 cURL</text>
+  <text x="480" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">curl -Iv licensing endpoint</text>
+
+  <line x1="600" y1="95" x2="660" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="660,95 652,90 652,100" fill="#94A3B8"/>
+
+  <rect x="660" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="780" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">3. Check configuration.php</text>
+  <text x="780" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Verify license key string</text>
+
+  <rect x="60" y="210" width="840" height="160" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="90" y="245" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Essential WHMCS Diagnostics</text>
+  <text x="90" y="275" font-family="Inter, sans-serif" font-size="13" fill="#475569">✔ License Reissue: Click Reissue in client portal when server IP or directory changes</text>
+  <text x="90" y="305" font-family="Inter, sans-serif" font-size="13" fill="#475569">✔ Outbound HTTPS: Ensure firewall allows outgoing cURL requests on TCP port 443</text>
+  <text x="90" y="335" font-family="Inter, sans-serif" font-size="13" fill="#475569">✔ LicenBase Rates: Authentic WHMCS licenses starting at $4/mo or $20 lifetime owned</text>
+</svg>

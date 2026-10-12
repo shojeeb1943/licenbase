@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Türkiye cPanel Fiyat Artışı ve Tasarruf Rehberi</title>
+  <desc id="d5">Türkiye hosting firmaları ve web ajansları için cPanel fiyat artışı analizi ve LicenBase toptan lisanslama modeli.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#EF4444"/>
+  <text x="70" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Resmi Perakende / Bayi Fiyatları</text>
+  <text x="70" y="100" font-family="Inter, sans-serif" font-size="13" fill="#DC2626">Döviz Kuru ve Hesap Başı Ücretler</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Solo (1 Hesap): $17.49/ay (~610 TL)</text>
+  <text x="70" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Admin (5 Hesap): $29.99/ay (~1.050 TL)</text>
+  <text x="70" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Pro (30 Hesap): $44.99/ay (~1.575 TL)</text>
+  <text x="70" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel Premier (100 Hesap): $63.99/ay (~2.240 TL)</text>
+  <text x="70" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Yıllık Toplam: 12.000 TL - 26.000 TL / sunucu</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="245" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#991B1B" text-anchor="middle">Ajans ve Reseller Kâr Marjını Eritiyor</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LicenBase Toptan IP Lisanslama</text>
+  <text x="540" y="100" font-family="Inter, sans-serif" font-size="13" fill="#059669">Sabit Maliyetli Orijinal Çözüm</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• cPanel VPS Lisansı: Sadece $4.00/ay (~140 TL)</text>
+  <text x="540" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Orijinal cPanel Dosyaları ve Resmi Güncellemeler</text>
+  <text x="540" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Crack veya Nulled Değil, 100% Güvenli Altyapı</text>
+  <text x="540" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Türkiye Veri Merkezleri ve Bulut VPS ile Uyumlu</text>
+  <text x="540" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Sunucu Başına Yılda 20.000 TL Net Tasarruf</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">Yıllık %75'in Üzerinde Maliyet Avantajı</text>
+</svg>

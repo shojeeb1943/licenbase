@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t10 d10">
+  <title id="t10">cPanel লাইসেন্স এরর সমাধানের ধাপসমূহ</title>
+  <desc id="d10">টার্মিনালে cPanel লাইসেন্স সক্রিয় ও যাচাই করার ধারাবাহিক নির্দেশিকা।</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="60" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="180" y="85" font-family="Inter, 'Nirmala UI', sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">১. cpkeyclt কমান্ড দিন</text>
+  <text x="180" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">/usr/local/cpanel/cpkeyclt</text>
+
+  <line x1="300" y1="95" x2="360" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="360,95 352,90 352,100" fill="#94A3B8"/>
+
+  <rect x="360" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <text x="480" y="85" font-family="Inter, 'Nirmala UI', sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">২. ফায়ারওয়াল পোর্ট ৮৭৩</text>
+  <text x="480" y="110" font-family="Inter, 'Nirmala UI', sans-serif" font-size="11" fill="#64748B" text-anchor="middle">rSync আউটবাউন্ড চেক</text>
+
+  <line x1="600" y1="95" x2="660" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="660,95 652,90 652,100" fill="#94A3B8"/>
+
+  <rect x="660" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="780" y="85" font-family="Inter, 'Nirmala UI', sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">৩. আইপি ও ঘড়ি চেক</text>
+  <text x="780" y="110" font-family="Inter, 'Nirmala UI', sans-serif" font-size="11" fill="#64748B" text-anchor="middle">পাবলিক IPv4 ও NTP সময়</text>
+
+  <rect x="60" y="210" width="840" height="160" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="90" y="245" font-family="Inter, 'Nirmala UI', sans-serif" font-size="15" font-weight="700" fill="#0F172A">দ্রুত লাইসেন্স সচল করার চেকলিস্ট</text>
+  <text x="90" y="275" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">✔ CSF ফায়ারওয়ালে 873 পোর্ট যুক্ত করুন এবং csf -r চালান</text>
+  <text x="90" y="305" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">✔ chronyc makestep দিয়ে সার্ভার সময় সিঙ্ক করুন</text>
+  <text x="90" y="335" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">✔ LicenBase ড্যাশবোর্ডে সার্ভারের সঠিক পাবলিক আইপি মিলিয়ে নিন</text>
+</svg>

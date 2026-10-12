@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t2 d2">
+  <title id="t2">cPanel vs DirectAdmin 2026 Comparison</title>
+  <desc id="d2">Detailed technical and financial comparison between cPanel and DirectAdmin control panels.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#3B82F6"/>
+  <text x="70" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">cPanel &amp; WHM</text>
+  <text x="70" y="100" font-family="Inter, sans-serif" font-size="13" fill="#2563EB">The Global Industry Standard</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Client UX: Universal market familiarity</text>
+  <text x="70" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Ecosystem: LiteSpeed, CloudLinux, Imunify</text>
+  <text x="70" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Automation: Native AutoSSL &amp; Exim routing</text>
+  <text x="70" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• RAM Footprint: ~1.2 GB base memory</text>
+  <text x="70" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• LicenBase Rate: From $4.00/month</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#EFF6FF"/>
+  <text x="245" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle">Best for Commercial Customer Hosting</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#8B5CF6"/>
+  <text x="540" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">DirectAdmin</text>
+  <text x="540" y="100" font-family="Inter, sans-serif" font-size="13" fill="#7C3AED">Lightweight C++ Alternative</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Client UX: Evolution skin, clean interface</text>
+  <text x="540" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Flexibility: CustomBuild web server stacks</text>
+  <text x="540" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Automation: WHMCS billing module supported</text>
+  <text x="540" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• RAM Footprint: ~450 MB lightweight footprint</text>
+  <text x="540" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• LicenBase Rate: From $4.00/month</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#F5F3FF"/>
+  <text x="715" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#6D28D9" text-anchor="middle">Best for Resource-Constrained Small VPS</text>
+</svg>

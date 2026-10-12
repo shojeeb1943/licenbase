@@ -118,7 +118,7 @@ def _card_html(*, headline: str, subtitle: str, pill: str,
   *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
   html, body {{ width: 1200px; height: 630px; overflow: hidden; }}
   body {{
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Nirmala UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #1e40af 100%);
     position: relative;
     display: flex;

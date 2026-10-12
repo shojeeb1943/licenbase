@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t4 d4">
+  <title id="t4">Linux VPS High CPU Troubleshooting Pipeline</title>
+  <desc id="d4">Pipeline for diagnosing, isolating, and solving high CPU usage on Linux VPS.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="260" height="6" rx="3" fill="#EF4444"/>
+  <text x="60" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. Identification</text>
+  <text x="60" y="95" font-family="Inter, sans-serif" font-size="12" fill="#DC2626">Locate Heavy Processes</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• htop (interactive inspection)</text>
+  <text x="60" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• ps aux --sort=-%cpu</text>
+  <text x="60" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• iotop (check disk wait iowait)</text>
+  <text x="60" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• vmstat 1 5 (system health)</text>
+  <rect x="60" y="310" width="220" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="170" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#991B1B" text-anchor="middle">Find Runaway PIDs</text>
+
+  <rect x="350" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="35" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. Service Tuning</text>
+  <text x="370" y="95" font-family="Inter, sans-serif" font-size="12" fill="#D97706">Tune PHP &amp; MySQL</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Optimize pm.max_children</text>
+  <text x="370" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Block xmlrpc.php floods</text>
+  <text x="370" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Enable slow_query_log</text>
+  <text x="370" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Kill hanging MySQL queries</text>
+  <rect x="370" y="310" width="220" height="38" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">Resolve Root Causes</text>
+
+  <rect x="660" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="35" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. Acceleration</text>
+  <text x="680" y="95" font-family="Inter, sans-serif" font-size="12" fill="#059669">Upgrade Architecture</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LiteSpeed Web Server (LSCache)</text>
+  <text x="680" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Slashes CPU load by 50-70%</text>
+  <text x="680" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• CloudLinux LVE tenant limits</text>
+  <text x="680" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Protects server from spikes</text>
+  <rect x="660" y="310" width="260" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="790" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">Permanent Stability</text>
+</svg>

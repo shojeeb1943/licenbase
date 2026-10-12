@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t11 d11">
+  <title id="t11">Linux VPS পারফরম্যান্স অপ্টিমাইজেশন ট্রিকস</title>
+  <desc id="d11">সিপিইউ, মেমরি ও ডিস্কের সমস্যা চিহ্নিতকরণ এবং কার্যকর অপ্টিমাইজেশন।</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="260" height="6" rx="3" fill="#3B82F6"/>
+  <text x="60" y="70" font-family="Inter, 'Nirmala UI', sans-serif" font-size="16" font-weight="700" fill="#0F172A">১. সিপিইউ ট্রাবলশুটিং</text>
+  <text x="60" y="95" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#2563EB">প্রসেস ও থ্রেড বিশ্লেষণ</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="150" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• htop চালিয়ে টপ প্রসেস খুঁজুন</text>
+  <text x="60" y="185" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• ps aux --sort=-%cpu</text>
+  <text x="60" y="220" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• xmlrpc.php বট ট্রাফিক ব্লক</text>
+  <text x="60" y="255" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• হ্যাং প্রসেস বন্ধে kill -9</text>
+  <rect x="60" y="310" width="220" height="38" rx="8" fill="#EFF6FF"/>
+  <text x="170" y="334" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">সিপিইউ লোড কমান</text>
+
+  <rect x="350" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="35" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="70" font-family="Inter, 'Nirmala UI', sans-serif" font-size="16" font-weight="700" fill="#0F172A">২. মেমরি ও সোয়াপ</text>
+  <text x="370" y="95" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#D97706">র‍্যাম অপ্টিমাইজেশন</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="150" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• free -h দিয়ে র‍্যাম পর্যবেক্ষণ</text>
+  <text x="370" y="185" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• pm.max_children সঠিক মান</text>
+  <text x="370" y="220" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• MariaDB বাফার পুল টিউনিং</text>
+  <text x="370" y="255" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• swappiness মান ১০ এ সেট করুন</text>
+  <rect x="370" y="310" width="220" height="38" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="334" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">মেমরি লিক বন্ধ করুন</text>
+
+  <rect x="660" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="35" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="70" font-family="Inter, 'Nirmala UI', sans-serif" font-size="16" font-weight="700" fill="#0F172A">৩. ডিস্ক ও সফটওয়্যার</text>
+  <text x="680" y="95" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#059669">LiteSpeed স্পিড বুস্ট</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="150" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• journalctl লগ ফাইল পরিষ্কার</text>
+  <text x="680" y="185" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• dnf clean / apt autoremove</text>
+  <text x="680" y="220" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• LiteSpeed LSCache ব্যবহার</text>
+  <text x="680" y="255" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" fill="#475569">• CloudLinux দিয়ে রিসোর্স ভাগ</text>
+  <rect x="660" y="310" width="260" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="790" y="334" font-family="Inter, 'Nirmala UI', sans-serif" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">সর্বোচ্চ সার্ভার স্পিড</text>
+</svg>

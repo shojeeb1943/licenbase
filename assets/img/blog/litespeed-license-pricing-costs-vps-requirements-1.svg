@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t16 d16">
+  <title id="t16">LiteSpeed Web Server Licensing Tiers &amp; Requirements</title>
+  <desc id="d16">Overview of LiteSpeed Enterprise licensing tiers, worker processes, and hardware caps.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="260" height="6" rx="3" fill="#3B82F6"/>
+  <text x="60" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Site Owner / Lite</text>
+  <text x="60" y="95" font-family="Inter, sans-serif" font-size="12" fill="#2563EB">1 Worker Process</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• 1 to 14 Domains</text>
+  <text x="60" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Unlimited Server RAM</text>
+  <text x="60" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Full LSCache Acceleration</text>
+  <text x="60" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LicenBase rate: $4.00/mo</text>
+  <rect x="60" y="310" width="220" height="38" rx="8" fill="#EFF6FF"/>
+  <text x="170" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Small VPS / Agencies</text>
+
+  <rect x="350" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="35" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="370" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Web Host Essential</text>
+  <text x="370" y="95" font-family="Inter, sans-serif" font-size="12" fill="#059669">1 Worker / Unlimited Sites</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Unlimited Domains</text>
+  <text x="370" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Unlimited Server RAM</text>
+  <text x="370" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Handles 10k-20k daily visitors</text>
+  <text x="370" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LicenBase rate: $4.00/mo</text>
+  <rect x="370" y="310" width="220" height="38" rx="8" fill="#ECFDF5"/>
+  <text x="480" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">Most Popular Hosting Tier</text>
+
+  <rect x="660" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="35" width="260" height="6" rx="3" fill="#8B5CF6"/>
+  <text x="680" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Professional &amp; Ent</text>
+  <text x="680" y="95" font-family="Inter, sans-serif" font-size="12" fill="#7C3AED">2 to 4+ Worker Processes</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• High-Core Dedicated Nodes</text>
+  <text x="680" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Massive WooCommerce load</text>
+  <text x="680" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Peak concurrency handling</text>
+  <text x="680" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Wholesale savings up to 75%</text>
+  <rect x="660" y="310" width="260" height="38" rx="8" fill="#F5F3FF"/>
+  <text x="790" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#6D28D9" text-anchor="middle">Enterprise High Concurrency</text>
+</svg>

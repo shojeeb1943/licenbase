@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t15 d15">
+  <title id="t15">Alur Mengatasi Penggunaan CPU VPS 100% di Linux</title>
+  <desc id="d15">Langkah identifikasi dan isolasi proses berat prosesor pada server VPS.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="260" height="6" rx="3" fill="#EF4444"/>
+  <text x="60" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. Identifikasi</text>
+  <text x="60" y="95" font-family="Inter, sans-serif" font-size="12" fill="#DC2626">Cari Proses Macet</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• htop (monitoring visual)</text>
+  <text x="60" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• ps aux --sort=-%cpu</text>
+  <text x="60" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• iotop (cek disk wait)</text>
+  <text x="60" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Temukan PID mencurigakan</text>
+  <rect x="60" y="310" width="220" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="170" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#991B1B" text-anchor="middle">Tangkap Sumber CPU</text>
+
+  <rect x="350" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="35" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. Optimasi PHP &amp; BD</text>
+  <text x="370" y="95" font-family="Inter, sans-serif" font-size="12" fill="#D97706">Tuning Konfigurasi</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Batasi pm.max_children</text>
+  <text x="370" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Blokir serangan xmlrpc.php</text>
+  <text x="370" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Hentikan query MySQL lambat</text>
+  <text x="370" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Bunuh proses dengan kill -9</text>
+  <rect x="370" y="310" width="220" height="38" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">Turunkan Beban Server</text>
+
+  <rect x="660" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="35" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. Solusi Modern</text>
+  <text x="680" y="95" font-family="Inter, sans-serif" font-size="12" fill="#059669">LiteSpeed &amp; CloudLinux</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="150" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LiteSpeed LSCache hemat CPU</text>
+  <text x="680" y="185" font-family="Inter, sans-serif" font-size="12" fill="#475569">• CloudLinux isolasi akun di LVE</text>
+  <text x="680" y="220" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Server tetap aman &amp; stabil</text>
+  <text x="680" y="255" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Lisensi murah LicenBase $4/bln</text>
+  <rect x="660" y="310" width="260" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="790" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">Server Cepat &amp; Tangguh</text>
+</svg>

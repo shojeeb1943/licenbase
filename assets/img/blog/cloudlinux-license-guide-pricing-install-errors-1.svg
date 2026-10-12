@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t18 d18">
+  <title id="t18">CloudLinux OS Architecture and Conversion Workflow</title>
+  <desc id="d18">Overview of LVE tenant isolation and in-place cldeploy conversion.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="60" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="180" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">1. Download cldeploy</text>
+  <text x="180" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">wget cldeploy script</text>
+
+  <line x1="300" y1="95" x2="360" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="360,95 352,90 352,100" fill="#94A3B8"/>
+
+  <rect x="360" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <text x="480" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">2. Run In-Place Conversion</text>
+  <text x="480" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">sh cldeploy -i &amp;&amp; reboot</text>
+
+  <line x1="600" y1="95" x2="660" y2="95" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="660,95 652,90 652,100" fill="#94A3B8"/>
+
+  <rect x="660" y="50" width="240" height="90" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="780" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">3. CageFS &amp; LVE Governor</text>
+  <text x="780" y="110" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Isolate each cPanel tenant</text>
+
+  <rect x="60" y="210" width="840" height="160" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="90" y="245" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A">CloudLinux Server Hardening Capabilities</text>
+  <text x="90" y="275" font-family="Inter, sans-serif" font-size="13" fill="#475569">✔ LVE Limits: Strict CPU (%), RAM (GB), IOPS, and entry process caps per user</text>
+  <text x="90" y="305" font-family="Inter, sans-serif" font-size="13" fill="#475569">✔ CageFS: Virtual filesystem preventing users from viewing other accounts</text>
+  <text x="90" y="335" font-family="Inter, sans-serif" font-size="13" fill="#475569">✔ HardenedPHP: Automated security patches for legacy PHP versions</text>
+</svg>

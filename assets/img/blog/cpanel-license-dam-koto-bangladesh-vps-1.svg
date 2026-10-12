@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t9 d9">
+  <title id="t9">বাংলাদেশে cPanel লাইসেন্সের দামের তুলনা</title>
+  <desc id="d9">অফিসিয়াল রিটেইল মূল্য বনাম LicenBase পাইকারি লাইসেন্সের খরচ তুলনা।</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#EF4444"/>
+  <text x="70" y="75" font-family="Inter, 'Nirmala UI', sans-serif" font-size="18" font-weight="700" fill="#0F172A">অফিসিয়াল রিটেইল / দেশীয় রিসেলার</text>
+  <text x="70" y="100" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#DC2626">ডলার রেট ও ব্যাংকিং চার্জ</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel Solo: প্রায় ২,১০০ টাকা/মাস ($17.49)</text>
+  <text x="70" y="190" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel Admin (৫ অ্যাকাউন্ট): প্রায় ৩,৬০০ টাকা/মাস</text>
+  <text x="70" y="225" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel Pro (৩০ অ্যাকাউন্ট): প্রায় ৫,৪০০ টাকা/মাস</text>
+  <text x="70" y="260" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel Premier: প্রায় ৭,৭০০ টাকা/মাস</text>
+  <text x="70" y="295" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• বার্ষিক লাইসেন্স খরচ ৩০,০০০ - ৬০,০০০+ টাকা</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="245" y="349" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" font-weight="700" fill="#991B1B" text-anchor="middle">অতিরিক্ত ডলার খরচ ও বাজেট সংকট</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, 'Nirmala UI', sans-serif" font-size="18" font-weight="700" fill="#0F172A">LicenBase পাইকারি রেট</text>
+  <text x="540" y="100" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#059669">১০০% আসল ও ইনস্ট্যান্ট অ্যাক্টিভেশন</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel VPS লাইসেন্স: মাত্র ৪ ডলার/মাস (~৪৮০ টাকা)</text>
+  <text x="540" y="190" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• cPanel অফিশিয়াল মিরর থেকে অটো আপডেট</text>
+  <text x="540" y="225" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• ৬০ সেকেন্ডে আইপি দিয়ে লাইসেন্স সক্রিয়</text>
+  <text x="540" y="260" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• ২৪/৭ নিরবচ্ছিন্ন লাইসেন্স সাপোর্ট</text>
+  <text x="540" y="295" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" fill="#475569">• বছরে ২০,০০০ থেকে ৫০,০০০ টাকা সাশ্রয়</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, 'Nirmala UI', sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">৭৫% এর বেশি খরচ বাঁচান</text>
+</svg>

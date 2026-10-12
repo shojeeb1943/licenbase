@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t3 d3">
+  <title id="t3">LiteSpeed vs Apache Speed and ROI Comparison</title>
+  <desc id="d3">Performance benchmarks and hardware cost savings of LiteSpeed Enterprise versus standard Apache.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="410" height="6" rx="3" fill="#EF4444"/>
+  <text x="70" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Apache + PHP-FPM</text>
+  <text x="70" y="100" font-family="Inter, sans-serif" font-size="13" fill="#DC2626">Process-Bound Web Architecture</text>
+  <path d="M70 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="70" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Concurrency: 300 to 500 requests/second</text>
+  <text x="70" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• TTFB: 350ms to 800ms under load</text>
+  <text x="70" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• WooCommerce ESI: Complex third-party caching</text>
+  <text x="70" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Server RAM: High memory consumption spikes</text>
+  <text x="70" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Hardware Cost: Requires upgrading VPS tiers</text>
+  <rect x="70" y="325" width="350" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="245" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#991B1B" text-anchor="middle">Bottlenecks Under Traffic Spikes</text>
+
+  <rect x="510" y="35" width="410" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="510" y="35" width="410" height="6" rx="3" fill="#10B981"/>
+  <text x="540" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LiteSpeed Enterprise + LSCache</text>
+  <text x="540" y="100" font-family="Inter, sans-serif" font-size="13" fill="#059669">Asynchronous Event-Driven Engine</text>
+  <path d="M540 120 h350" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="540" y="155" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Concurrency: 5,000+ requests/second</text>
+  <text x="540" y="190" font-family="Inter, sans-serif" font-size="13" fill="#475569">• TTFB: 40ms to 90ms instant response</text>
+  <text x="540" y="225" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Native ESI: Cached store with dynamic carts</text>
+  <text x="540" y="260" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Server RAM: Predictable, lightweight usage</text>
+  <text x="540" y="295" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Hardware ROI: Postpones costly VPS upgrades</text>
+  <rect x="540" y="325" width="350" height="38" rx="8" fill="#D1FAE5"/>
+  <text x="715" y="349" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">Up to 10x Throughput at $4/mo License</text>
+</svg>
