@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t13 d13">
+  <title id="t13">Linux VPS Disk Cleanup and Storage Recovery Workflow</title>
+  <desc id="d13">Step-by-step commands to locate massive files, truncate systemd journal logs, and clear package cache.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. Locate Disk Hogs</text>
+  <text x="60" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">du -ahx / | sort -rh</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• ncdu interactive file tree</text>
+  <text x="60" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• find / -type f -size +500M</text>
+  <text x="60" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Scan /var/log &amp; /backup</text>
+  <text x="60" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Check deleted open files (lsof)</text>
+  <rect x="60" y="310" width="220" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="170" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Find Largest Files</text>
+
+  <rect x="350" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="370" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. Truncate Logs</text>
+  <text x="370" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">journalctl --vacuum-time=3d</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Reclaim gigabytes in systemd</text>
+  <text x="370" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Truncate: &gt; /var/log/messages</text>
+  <text x="370" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Purge old Apache error_logs</text>
+  <text x="370" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Clear MySQL binary logs</text>
+  <rect x="370" y="310" width="220" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="480" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Free 5GB to 20GB</text>
+
+  <rect x="660" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="680" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. Clean Caches &amp; Tmp</text>
+  <text x="680" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#059669">dnf clean all / apt clean</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Purge downloaded RPM / deb</text>
+  <text x="680" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Empty abandoned sessions /tmp</text>
+  <text x="680" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Offload JetBackup to S3 storage</text>
+  <text x="680" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Setup automated logrotate</text>
+  <rect x="660" y="310" width="260" height="36" rx="8" fill="#ECFDF5"/>
+  <text x="790" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">Storage Healthy (&lt;60%)</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">cPanel Price Increase in 2026 Cost Reduction Architecture</title>
+  <desc id="d1">Strategies to mitigate cPanel price hikes including account pruning, tier optimization, and LicenBase licensing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="260" height="6" rx="3" fill="#EF4444"/>
+  <text x="60" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Official Vendor Escalation</text>
+  <text x="60" y="95" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Annual compounding fee increases</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Per-account metered billing</text>
+  <text x="60" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Inactive users incur monthly charges</text>
+  <text x="60" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Solo &amp; Admin tier hikes</text>
+  <text x="60" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Metal tier surcharge rates</text>
+  <rect x="60" y="310" width="220" height="38" rx="8" fill="#FEE2E2"/>
+  <text x="170" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#991B1B" text-anchor="middle">Inflated Retail Pricing</text>
+
+  <rect x="350" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="35" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Infrastructure Pruning</text>
+  <text x="370" y="95" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Server quota optimization</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Consolidate dormant cPanel users</text>
+  <text x="370" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Merge add-on domain structures</text>
+  <text x="370" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Migrate dev sites off production</text>
+  <text x="370" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Drop unneeded Premier buckets</text>
+  <rect x="370" y="310" width="220" height="38" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">Capacity Optimization</text>
+
+  <rect x="660" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <rect x="660" y="35" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">LicenBase Wholesale Stack</text>
+  <text x="680" y="95" font-family="Inter, sans-serif" font-size="12" fill="#059669">Automated IP licensing system</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Unmodified official cPanel binaries</text>
+  <text x="680" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Wholesale pricing from $4/mo</text>
+  <text x="680" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Instant automated keyless activation</text>
+  <text x="680" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Multi-license bundle discounts</text>
+  <rect x="680" y="310" width="220" height="38" rx="8" fill="#DCFCE7"/>
+  <text x="790" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#166534" text-anchor="middle">Up to 70% Cost Reduction</text>
+</svg>

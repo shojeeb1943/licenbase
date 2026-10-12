@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t8 d8">
+  <title id="t8">cPanel Email Deliverability Protocol Verification Pipeline</title>
+  <desc id="d8">Step-by-step verification pipeline for SPF, DKIM, DMARC, Reverse DNS, and Exim queue debugging.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="35" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="50" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. SPF Record</text>
+  <text x="50" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">IP Sender Authorization</text>
+  <path d="M50 115 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="50" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• DNS TXT record</text>
+  <text x="50" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• v=spf1 +a +mx ~all</text>
+  <text x="50" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Authorizes server IP</text>
+  <text x="50" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Prevents sender spoofing</text>
+  <rect x="50" y="315" width="175" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="137" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Valid DNS TXT</text>
+
+  <rect x="260" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="275" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. DKIM Signing</text>
+  <text x="275" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Cryptographic Proof</text>
+  <path d="M275 115 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="275" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• 2048-bit RSA key</text>
+  <text x="275" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• default._domainkey</text>
+  <text x="275" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Signs message headers</text>
+  <text x="275" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Confirms message integrity</text>
+  <rect x="275" y="315" width="175" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="362" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Header Signature</text>
+
+  <rect x="485" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="500" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. DMARC Policy</text>
+  <text x="500" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Enforcement Rule</text>
+  <path d="M500 115 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="500" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• _dmarc.yourdomain.com</text>
+  <text x="500" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• p=quarantine / p=reject</text>
+  <text x="500" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Failure report telemetry</text>
+  <text x="500" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Required by Gmail &amp; Yahoo</text>
+  <rect x="500" y="315" width="175" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="587" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Inbox Compliance</text>
+
+  <rect x="710" y="40" width="215" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="725" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">4. PTR &amp; Exim Queue</text>
+  <text x="725" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#059669">Server Verification</text>
+  <path d="M725 115 h185" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="725" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Reverse DNS matches FQDN</text>
+  <text x="725" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Unblock outbound port 25</text>
+  <text x="725" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Flush: exim -qff</text>
+  <text x="725" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Log check: exim_mainlog</text>
+  <rect x="725" y="315" width="185" height="36" rx="8" fill="#ECFDF5"/>
+  <text x="817" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">100% Delivery Rate</text>
+</svg>

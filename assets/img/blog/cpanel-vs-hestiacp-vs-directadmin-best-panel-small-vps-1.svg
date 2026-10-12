@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t18 d18">
+  <title id="t18">Small VPS Control Panel Comparison: cPanel vs DirectAdmin vs HestiaCP</title>
+  <desc id="d18">Memory overhead, license cost, and features benchmarked on small 1GB to 2GB RAM VPS servers.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="35" width="260" height="6" rx="3" fill="#2563EB"/>
+  <text x="60" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel &amp; WHM</text>
+  <text x="60" y="95" font-family="Inter, sans-serif" font-size="12" fill="#2563EB">Best Ecosystem &amp; Support</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• RAM Footprint: ~1.2 GB base</text>
+  <text x="60" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Ideal VPS: 2 GB to 4 GB RAM</text>
+  <text x="60" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Industry standard interface</text>
+  <text x="60" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• 1-click LiteSpeed &amp; CloudLinux</text>
+  <text x="60" y="265" font-family="Inter, sans-serif" font-size="12" fill="#475569">• LicenBase rate: from $4/mo</text>
+  <rect x="60" y="310" width="220" height="38" rx="8" fill="#EFF6FF"/>
+  <text x="170" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Hosting Industry Standard</text>
+
+  <rect x="350" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="35" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">DirectAdmin</text>
+  <text x="370" y="95" font-family="Inter, sans-serif" font-size="12" fill="#D97706">Lightweight Commercial</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• RAM Footprint: ~450 MB base</text>
+  <text x="370" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Ideal VPS: 1 GB to 2 GB RAM</text>
+  <text x="370" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• CustomBuild compiler control</text>
+  <text x="370" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Low resource consumption</text>
+  <text x="370" y="265" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Good cPanel backup restoration</text>
+  <rect x="370" y="310" width="220" height="38" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">Efficient Commercial</text>
+
+  <rect x="660" y="35" width="260" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="660" y="35" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">HestiaCP</text>
+  <text x="680" y="95" font-family="Inter, sans-serif" font-size="12" fill="#059669">Free Open-Source</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• RAM Footprint: ~250 MB base</text>
+  <text x="680" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Ideal VPS: 512 MB to 1 GB RAM</text>
+  <text x="680" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Zero license fee</text>
+  <text x="680" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Nginx caching built-in</text>
+  <text x="680" y="265" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Self-support community only</text>
+  <rect x="660" y="310" width="260" height="38" rx="8" fill="#DCFCE7"/>
+  <text x="790" y="334" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#166534" text-anchor="middle">Budget DIY Projects</text>
+</svg>

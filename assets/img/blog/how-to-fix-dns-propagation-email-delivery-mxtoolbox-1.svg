@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t12 d12">
+  <title id="t12">MXToolbox Diagnostics and Email Health Troubleshooting</title>
+  <desc id="d12">Diagnostic flow using MXToolbox to audit MX records, SPF/DKIM integrity, and blacklist status.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="60" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">MX Record Health</text>
+  <text x="60" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Lookup &amp; Priority</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Primary MX points to FQDN</text>
+  <text x="60" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Correct priority weights</text>
+  <text x="60" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• TTL propagation verification</text>
+  <text x="60" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• SMTP reverse connect test</text>
+  <rect x="60" y="310" width="220" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="170" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">MX Validated</text>
+
+  <rect x="350" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="370" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">SPF &amp; DKIM Audit</text>
+  <text x="370" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Authentication Check</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• SPF syntax error validator</text>
+  <text x="370" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Max 10 DNS lookup limit check</text>
+  <text x="370" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• DKIM selector key match</text>
+  <text x="370" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• DMARC record alignment</text>
+  <rect x="370" y="310" width="220" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="480" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Auth Aligned</text>
+
+  <rect x="660" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="680" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Blacklist &amp; Reverse DNS</text>
+  <text x="680" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#059669">Reputation Protection</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• 100+ RBL blacklist scans</text>
+  <text x="680" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Spamhaus, Barracuda, SORBS</text>
+  <text x="680" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• PTR record matches mail server</text>
+  <text x="680" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Open relay vulnerability audit</text>
+  <rect x="680" y="310" width="220" height="36" rx="8" fill="#ECFDF5"/>
+  <text x="790" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">Clean Reputation</text>
+</svg>

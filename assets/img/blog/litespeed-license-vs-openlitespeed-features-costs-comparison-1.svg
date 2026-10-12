@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t4 d4">
+  <title id="t4">LiteSpeed Enterprise vs OpenLiteSpeed Comparison</title>
+  <desc id="d4">Feature and architectural differences between commercial LiteSpeed Enterprise and open-source OpenLiteSpeed.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="50" y="40" width="410" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="50" y="40" width="410" height="6" rx="3" fill="#64748B"/>
+  <text x="75" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">OpenLiteSpeed (OLS)</text>
+  <text x="75" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#64748B">Free Open Source</text>
+  <path d="M75 120 h360" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="75" y="150" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Requires server restart for .htaccess changes</text>
+  <text x="75" y="185" font-family="Inter, sans-serif" font-size="13" fill="#475569">• No native cPanel or WHM drop-in support</text>
+  <text x="75" y="220" font-family="Inter, sans-serif" font-size="13" fill="#475569">• CyberPanel &amp; custom config interfaces</text>
+  <text x="75" y="255" font-family="Inter, sans-serif" font-size="13" fill="#475569">• LSCache plugin supported for WordPress</text>
+  <text x="75" y="290" font-family="Inter, sans-serif" font-size="13" fill="#475569">• Best for single site bespoke VPS deployments</text>
+  <rect x="75" y="320" width="360" height="36" rx="8" fill="#F1F5F9"/>
+  <text x="255" y="343" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">Standalone VPS / Single Tenant</text>
+
+  <rect x="500" y="40" width="410" height="340" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <rect x="500" y="40" width="410" height="6" rx="3" fill="#2563EB"/>
+  <text x="525" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">LiteSpeed Web Server (Enterprise)</text>
+  <text x="525" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Commercial Production Standard</text>
+  <path d="M525 120 h360" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="525" y="150" font-family="Inter, sans-serif" font-size="13" fill="#1E293B">• 100% Apache drop-in replacement with instant .htaccess</text>
+  <text x="525" y="185" font-family="Inter, sans-serif" font-size="13" fill="#1E293B">• Full cPanel, Plesk, DirectAdmin &amp; CyberPanel plugins</text>
+  <text x="525" y="220" font-family="Inter, sans-serif" font-size="13" fill="#1E293B">• Native CloudLinux LVE isolation &amp; CageFS support</text>
+  <text x="525" y="255" font-family="Inter, sans-serif" font-size="13" fill="#1E293B">• Advanced anti-DDoS connection limits &amp; reCAPTCHA</text>
+  <text x="525" y="290" font-family="Inter, sans-serif" font-size="13" fill="#1E293B">• Enterprise ESI caching &amp; WooCommerce acceleration</text>
+  <rect x="525" y="320" width="360" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="705" y="343" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Multi-Tenant Hosting / Agencies</text>
+</svg>

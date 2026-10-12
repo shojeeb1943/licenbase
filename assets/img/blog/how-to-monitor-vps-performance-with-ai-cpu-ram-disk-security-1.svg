@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t15 d15">
+  <title id="t15">AI-Powered VPS Monitoring and Anomaly Detection Model</title>
+  <desc id="d15">Data collection, machine learning anomaly detection, predictive alerting, and automated healing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="35" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="50" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. Metric Ingestion</text>
+  <text x="50" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">High-Frequency Data</text>
+  <path d="M50 115 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="50" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• CPU load &amp; core usage</text>
+  <text x="50" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• RAM cache &amp; swap rate</text>
+  <text x="50" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Disk I/O &amp; read/write ops</text>
+  <text x="50" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Ingress / egress bandwidth</text>
+  <rect x="50" y="315" width="175" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="137" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Agent Telemetry</text>
+
+  <rect x="260" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="275" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. AI Baseline Engine</text>
+  <text x="275" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Machine Learning</text>
+  <path d="M275 115 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="275" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Dynamic diurnal patterns</text>
+  <text x="275" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Distinguishes spikes from leaks</text>
+  <text x="275" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Noise suppression filters</text>
+  <text x="275" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Continuous model retraining</text>
+  <rect x="275" y="315" width="175" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="362" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Anomaly Detection</text>
+
+  <rect x="485" y="40" width="205" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="500" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. Security Analytics</text>
+  <text x="500" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Threat Identification</text>
+  <path d="M500 115 h175" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="500" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Brute force credential scans</text>
+  <text x="500" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Web shell process detection</text>
+  <text x="500" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Outbound botnet traffic alerts</text>
+  <text x="500" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Zero-day exploit indicators</text>
+  <rect x="485" y="315" width="205" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="587" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Imunify360 + AI</text>
+
+  <rect x="710" y="40" width="215" height="340" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="725" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">4. Proactive Healing</text>
+  <text x="725" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#059669">Automated Action</text>
+  <path d="M725 115 h185" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="725" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Auto-restart stuck workers</text>
+  <text x="725" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Throttle abusive tenants</text>
+  <text x="725" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Instant Telegram/Slack alerts</text>
+  <text x="725" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Zero downtime prevention</text>
+  <rect x="725" y="315" width="185" height="36" rx="8" fill="#ECFDF5"/>
+  <text x="817" y="338" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">Predictive Uptime</text>
+</svg>

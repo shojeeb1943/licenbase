@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t6 d6">
+  <title id="t6">cPanel Login Troubleshooting Diagnostic Flow</title>
+  <desc id="d6">Diagnostic decision tree for resolving port 2083 blocking, cPHulk lockouts, and authentication failures in cPanel.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="40" y="40" width="260" height="6" rx="3" fill="#EF4444"/>
+  <text x="60" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. Network &amp; Port Blocks</text>
+  <text x="60" y="98" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Firewall connection issues</text>
+  <path d="M60 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="60" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• ISP blocking port 2083</text>
+  <text x="60" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Use proxy: cpanel.domain.com</text>
+  <text x="60" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Corporate VPN/Firewall filter</text>
+  <text x="60" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Test via mobile network hotspot</text>
+  <rect x="60" y="310" width="220" height="36" rx="8" fill="#FEE2E2"/>
+  <text x="170" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#991B1B" text-anchor="middle">Port 2083 / 2087 Check</text>
+
+  <rect x="350" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="350" y="40" width="260" height="6" rx="3" fill="#F59E0B"/>
+  <text x="370" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. cPHulk Brute Protection</text>
+  <text x="370" y="98" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Temporary IP blacklisting</text>
+  <path d="M370 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="370" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Multiple failed login attempts</text>
+  <text x="370" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• SSH flush: cphulkd --flush</text>
+  <text x="370" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Whitelist client IP in WHM</text>
+  <text x="370" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Check CSF / LFD temporary bans</text>
+  <rect x="370" y="310" width="220" height="36" rx="8" fill="#FEF3C7"/>
+  <text x="480" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">IP Ban Cleared via SSH</text>
+
+  <rect x="660" y="40" width="260" height="340" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="660" y="40" width="260" height="6" rx="3" fill="#10B981"/>
+  <text x="680" y="75" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. SSL &amp; Service Daemons</text>
+  <text x="680" y="98" font-family="Inter, sans-serif" font-size="12" fill="#64748B">cpanel service status</text>
+  <path d="M680 115 h220" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="680" y="145" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Restart: /scripts/restartsrv_cpsrvd</text>
+  <text x="680" y="175" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Check self-signed SSL warnings</text>
+  <text x="680" y="205" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Clear browser cache &amp; cookies</text>
+  <text x="680" y="235" font-family="Inter, sans-serif" font-size="12" fill="#475569">• Check disk space exhaustion</text>
+  <rect x="680" y="310" width="220" height="36" rx="8" fill="#DCFCE7"/>
+  <text x="790" y="333" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#166534" text-anchor="middle">Service Restored</text>
+</svg>

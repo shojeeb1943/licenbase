@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t3 d3">
+  <title id="t3">cPanel VPS License Specifications and Hardware Requirements</title>
+  <desc id="d3">System requirements and setup workflow for running affordable cPanel licenses on a Linux VPS.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+  <rect x="50" y="40" width="410" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="75" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">VPS Minimum Specifications</text>
+  <text x="75" y="100" font-family="Inter, sans-serif" font-size="13" fill="#64748B">Standard baseline for cPanel &amp; WHM</text>
+  <path d="M75 120 h360" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="75" y="150" font-family="Inter, sans-serif" font-size="13" fill="#1E293B"><strong>CPU:</strong> 1 CPU Core (2+ Cores recommended for production)</text>
+  <text x="75" y="185" font-family="Inter, sans-serif" font-size="13" fill="#1E293B"><strong>RAM:</strong> 1.5 GB Minimum (2 GB to 4 GB recommended)</text>
+  <text x="75" y="220" font-family="Inter, sans-serif" font-size="13" fill="#1E293B"><strong>Storage:</strong> 20 GB Disk Space (40 GB+ NVMe SSD ideal)</text>
+  <text x="75" y="255" font-family="Inter, sans-serif" font-size="13" fill="#1E293B"><strong>OS:</strong> AlmaLinux 8/9, Rocky Linux 8/9, Ubuntu 22.04 LTS</text>
+  <text x="75" y="290" font-family="Inter, sans-serif" font-size="13" fill="#1E293B"><strong>Network:</strong> 1 Dedicated Public IPv4 Address</text>
+  <rect x="75" y="320" width="360" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="255" y="343" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1D4ED8" text-anchor="middle">Ready for KVM / VMware / Proxmox</text>
+
+  <rect x="500" y="40" width="410" height="340" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="525" y="75" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Instant IP License Activation</text>
+  <text x="525" y="100" font-family="Inter, sans-serif" font-size="13" fill="#64748B">Keyless automated workflow with LicenBase</text>
+  <path d="M525 120 h360" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="525" y="155" font-family="Inter, sans-serif" font-size="13" fill="#334155">1. Order VPS license with server public IP address</text>
+  <text x="525" y="190" font-family="Inter, sans-serif" font-size="13" fill="#334155">2. Run automated one-line terminal installer command</text>
+  <text x="525" y="225" font-family="Inter, sans-serif" font-size="13" fill="#334155">3. Unmodified cPanel binary checks licensing IP node</text>
+  <text x="525" y="260" font-family="Inter, sans-serif" font-size="13" fill="#334155">4. Instant active status in WHM &amp; automatic renewals</text>
+  <rect x="525" y="320" width="360" height="36" rx="8" fill="#ECFDF5"/>
+  <text x="705" y="343" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#047857" text-anchor="middle">Zero Server Downtime Guarantee</text>
+</svg>

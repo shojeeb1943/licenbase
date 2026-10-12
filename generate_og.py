@@ -455,12 +455,15 @@ def main(only_slug: str | None = None, force: bool = False) -> None:
             sys.exit(1)
 
     if not force:
-        script_mtime = Path(__file__).stat().st_mtime
         pending = []
         for s in all_specs:
             out: Path = s["out_file"]
-            if out.exists() and out.stat().st_mtime > script_mtime:
-                print(f"  -  skip  {out}  (up to date)")
+            slug = s["slug"][5:] if s["slug"].startswith("blog-") else None
+            feat = Path(f"assets/img/blog/{slug}-feature.webp") if slug else None
+            thumb = Path(f"assets/img/blog/{slug}-thumb.webp") if slug else None
+            has_webps = (not slug) or (feat.exists() and thumb.exists())
+            if out.exists() and has_webps:
+                pass
             else:
                 pending.append(s)
         all_specs = pending
@@ -489,4 +492,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.blog:
         BLOG_ONLY = True
-    main(only_slug=args.slug, force=args.force or args.blog)
+    main(only_slug=args.slug, force=args.force)

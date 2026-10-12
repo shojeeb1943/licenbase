@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Access cPanel Webmail: URLs & Ports | LicenBase</title>
+  <meta name="description" content="Learn all direct login URLs, SSL ports (2096, 2095), webmail clients (Roundcube), DNS records, and quick connection fixes for cPanel webmail." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/how-to-access-cpanel-webmail-login-urls-and-ports" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="How to Access cPanel Webmail: URLs & Ports" />
+  <meta property="og:description" content="Learn all direct login URLs, SSL ports (2096, 2095), webmail clients (Roundcube), DNS records, and quick connection fixes for cPanel webmail." />
+  <meta property="og:url" content="https://licenbase.com/blog/how-to-access-cpanel-webmail-login-urls-and-ports" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-how-to-access-cpanel-webmail-login-urls-and-ports.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="cPanel webmail login URLs SSL ports 2096 and Roundcube configuration" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-12" />
+  <meta property="article:modified_time" content="2026-10-12" />
+  <meta property="article:section" content="How-to" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-how-to-access-cpanel-webmail-login-urls-and-ports.png" />
+  <meta name="twitter:image:alt" content="cPanel webmail login URLs SSL ports 2096 and Roundcube configuration" />
+  <meta name="twitter:title" content="How to Access cPanel Webmail: URLs & Ports" />
+  <meta name="twitter:description" content="Learn all direct login URLs, SSL ports (2096, 2095), webmail clients (Roundcube), DNS records, and quick connection fixes for cPanel webmail." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Access cPanel Webmail: Login URLs, Ports & Troubleshooting", "item": "https://licenbase.com/blog/how-to-access-cpanel-webmail-login-urls-and-ports"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Access cPanel Webmail: Login URLs, Ports & Troubleshooting", "description": "Learn all direct login URLs, SSL ports (2096, 2095), webmail clients (Roundcube), DNS records, and quick connection fixes for cPanel webmail.", "image": ["https://licenbase.com/assets/img/og/blog-how-to-access-cpanel-webmail-login-urls-and-ports.png"], "datePublished": "2026-10-12", "dateModified": "2026-10-12", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/how-to-access-cpanel-webmail-login-urls-and-ports"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 941}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the exact URL to access cPanel Webmail directly?", "acceptedAnswer": {"@type": "Answer", "text": "The standard direct SSL URL is `https://yourdomain.com:2096` or `https://webmail.yourdomain.com`. You can also enter `https://yourdomain.com/webmail`, which automatically redirects to port 2096."}}, {"@type": "Question", "name": "What is the difference between port 2095 and port 2096?", "acceptedAnswer": {"@type": "Answer", "text": "Port 2096 is the secure, TLS-encrypted SSL port for cPanel Webmail. Port 2095 is the unencrypted HTTP port. For data privacy and password protection, always use port 2096."}}, {"@type": "Question", "name": "What username should I use when logging into cPanel Webmail?", "acceptedAnswer": {"@type": "Answer", "text": "Always use your full email address (e.g., `user@yourdomain.com`) as the login username. Using just the prefix (`user`) will fail because cPanel requires the domain suffix to route to the correct mailbox directory."}}, {"@type": "Question", "name": "Why is my webmail showing a 'Server Certificate Invalid' warning?", "acceptedAnswer": {"@type": "Answer", "text": "This warning appears if your domain does not yet have an active SSL certificate issued via AutoSSL, or if you are accessing webmail via the server's raw IP address instead of your fully qualified domain name."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">How-to</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">How-to</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">How to Access cPanel Webmail: Login URLs, Ports &amp; Troubleshooting</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-12">October 12, 2026</time></span>
+          
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/how-to-access-cpanel-webmail-login-urls-and-ports-feature.webp" alt="cPanel webmail login URLs SSL ports 2096 and Roundcube configuration" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600">Webmail provides essential browser-based access to your email inboxes from any computer, tablet, or smartphone without configuring local desktop clients like Outlook, Apple Mail, or Thunderbird. Inside cPanel &amp; WHM servers, Webmail is powered primarily by the robust Roundcube interface, offering full address book management, rich-text message composition, server-side filtering, and automated out-of-office replies. However, many users struggle with login URLs, forgotten port numbers, or SSL connection errors. This guide outlines every method to access cPanel Webmail, explains port architectures, and provides quick solutions for common connection problems.</p>
+
+<section class="space-y-4">
+  <h2 id="primary-urls-to-access-cpanel-webmail" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Primary URLs to Access cPanel Webmail</h2>
+  <p>cPanel provides four distinct routing schemes to reach the webmail authentication screen. Replace <code>yourdomain.com</code> with your actual registered domain name:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Direct SSL Port (Recommended):</strong> <code>https://yourdomain.com:2096</code> — Establishes a direct, TLS-encrypted connection to cPanel's internal mail proxy.</li>
+    <li><strong>Subdomain Proxy:</strong> <code>https://webmail.yourdomain.com</code> — Routes through standard port 443, making it ideal for users behind strict firewalls that block port 2096.</li>
+    <li><strong>Path Directory Alias:</strong> <code>https://yourdomain.com/webmail</code> — Automatically redirects incoming visitors to the secure port 2096 login prompt.</li>
+    <li><strong>Server Hostname URL:</strong> <code>https://server.hostname.com:2096</code> — Ideal when a new domain's DNS records are still propagating across global nameservers.</li>
+  </ul>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+  <img src="/assets/img/blog/how-to-access-cpanel-webmail-login-urls-and-ports-1.svg" alt="cPanel Webmail URL routing paths and SSL port architecture" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+  <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Comparison of direct port 2096 access versus webmail subdomain proxies and server hostnames.</figcaption>
+</figure>
+  <p>Whichever URL scheme you choose, your browser connects to the same underlying Dovecot IMAP storage engine, ensuring all mail folders, read statuses, and sent items remain synchronized across every device.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="understanding-webmail-ports-2095-vs-2096" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Understanding Webmail Ports: 2095 vs. 2096</h2>
+  <p>cPanel reserves two dedicated TCP ports for browser-based webmail interactions:</p>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full text-left text-sm text-gray-600">
+      <thead class="bg-gray-50 text-xs font-bold uppercase text-gray-700">
+        <tr>
+          <th class="p-3">Port</th>
+          <th class="p-3">Protocol</th>
+          <th class="p-3">Encryption Status</th>
+          <th class="p-3">Recommended Use</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">2095</td>
+          <td class="p-3">HTTP</td>
+          <td class="p-3 text-red-600 font-semibold">Unencrypted (Plain Text)</td>
+          <td class="p-3">Legacy fallback only (Discouraged)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">2096</td>
+          <td class="p-3">HTTPS</td>
+          <td class="p-3 text-emerald-600 font-semibold">TLS 1.2 / TLS 1.3 Encrypted</td>
+          <td class="p-3">Standard production webmail access</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Always enforce port 2096 or the <code>https://webmail.yourdomain.com</code> proxy. Unencrypted communication over port 2095 exposes email content and passwords to packet sniffing over public Wi-Fi networks.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="the-golden-rule-username-authentication-format" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">The Golden Rule: Username Authentication Format</h2>
+  <p>The single most frequent reason for webmail login failures is entering an incomplete username. When logging into your main cPanel dashboard, your username is typically a short handle (e.g., <code>john</code>). However, for Webmail, your username <strong>MUST ALWAYS BE YOUR FULL EMAIL ADDRESS</strong>:</p>
+  <div class="rounded-xl bg-gray-50 p-4 border border-gray-200">
+    <p class="text-sm text-gray-700"><strong>Incorrect Username:</strong> <code>sales</code></p>
+    <p class="text-sm font-semibold text-emerald-700 mt-1"><strong>Correct Username:</strong> <code>sales@yourdomain.com</code></p>
+  </div>
+  <p>Because a single server can host hundreds of independent domains, cPanel requires the full domain suffix to identify which virtual mailbox directory in <code>/home/user/mail/yourdomain.com/sales</code> to authenticate against Dovecot.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="managing-mailbox-storage-and-quota-limits" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Managing Mailbox Storage and Quota Limits</h2>
+  <p>When an email account reaches 100% of its disk quota, incoming messages bounce back to senders with "Mailbox is full" errors, and Roundcube may fail to render the inbox. Inside cPanel:</p>
+  <ol class="list-decimal space-y-2 pl-6">
+    <li>Log into cPanel and navigate to <strong>Email Accounts</strong>.</li>
+    <li>Click <strong>Manage</strong> next to the affected email address.</li>
+    <li>Under <em>Current Storage</em>, increase the quota allocation or set it to <em>Unlimited</em>.</li>
+    <li>Use the <strong>Email Disk Usage</strong> tool to quickly search for and purge large attachments or old trash folders.</li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 id="troubleshooting-common-webmail-login-errors" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Troubleshooting Common Webmail Login Errors</h2>
+  <p>If you cannot reach or log into your webmail account, run through this quick diagnostic checklist:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Port 2096 Blocked by Local Network:</strong> Switch immediately to <code>https://webmail.yourdomain.com</code>. This subdomain proxy uses standard HTTPS port 443, bypassing corporate firewall filters.</li>
+    <li><strong>DNS 'webmail' Record Missing:</strong> Verify that an 'A' or 'CNAME' record for <code>webmail</code> exists in your DNS zone file pointing to your server's public IP address.</li>
+    <li><strong>Mailbox Quota Full:</strong> If your mailbox has reached 100% of its disk allocation, Roundcube may display a white screen or session error. Log into cPanel, navigate to <em>Email Accounts</em>, and increase the storage quota.</li>
+    <li><strong>Password Synchronization Issues:</strong> If you suspect the password was mistyped, reset it inside cPanel under <em>Email Accounts &gt; Manage</em> without needing the previous password.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="connecting-webmail-to-desktop-and-mobile-clients" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Connecting Webmail to Desktop and Mobile Clients</h2>
+  <p>While Webmail provides convenient browser access from anywhere, many business users prefer managing their email via dedicated email clients like Microsoft Outlook, Apple Mail, or Mozilla Thunderbird. Inside cPanel Webmail, you can retrieve exact SSL connection credentials under <strong>Configure Mail Client</strong>:</p>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full text-left text-sm text-gray-600">
+      <thead class="bg-gray-50 text-xs font-bold uppercase text-gray-700">
+        <tr>
+          <th class="p-3">Protocol</th>
+          <th class="p-3">Server Hostname</th>
+          <th class="p-3">Port</th>
+          <th class="p-3">Encryption Type</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">Incoming Mail (IMAP)</td>
+          <td class="p-3"><code>mail.yourdomain.com</code></td>
+          <td class="p-3 font-semibold text-emerald-600">993</td>
+          <td class="p-3">SSL / TLS</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">Incoming Mail (POP3)</td>
+          <td class="p-3"><code>mail.yourdomain.com</code></td>
+          <td class="p-3">995</td>
+          <td class="p-3">SSL / TLS</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">Outgoing Mail (SMTP)</td>
+          <td class="p-3"><code>mail.yourdomain.com</code></td>
+          <td class="p-3 font-semibold text-emerald-600">465</td>
+          <td class="p-3">SSL / TLS</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Always enable <em>Require Authentication</em> for outgoing SMTP servers and specify your full email address as both the IMAP and SMTP username. This synchronizes your mail across desktop, mobile, and browser simultaneously.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="delivering-reliable-webmail-for-your-hosting-clients" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Delivering Reliable Webmail for Your Hosting Clients</h2>
+  <p>Providing seamless, rapid webmail access builds client confidence in your hosting service. By combining a genuine <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a> with multi-tenant isolation via a <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux license</a>, you ensure individual noisy mailboxes never exhaust server RAM or compromise overall mail server responsiveness.</p>
+  <p>LicenBase provides automated wholesale licensing for cPanel and hosting server tools starting at just $4/month, allowing you to deliver premium mail hosting with official software updates at unbeatable rates.</p>
+</section>
+
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is the exact URL to access cPanel Webmail directly?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">The standard direct SSL URL is `https://yourdomain.com:2096` or `https://webmail.yourdomain.com`. You can also enter `https://yourdomain.com/webmail`, which automatically redirects to port 2096.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is the difference between port 2095 and port 2096?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Port 2096 is the secure, TLS-encrypted SSL port for cPanel Webmail. Port 2095 is the unencrypted HTTP port. For data privacy and password protection, always use port 2096.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What username should I use when logging into cPanel Webmail?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Always use your full email address (e.g., `user@yourdomain.com`) as the login username. Using just the prefix (`user`) will fail because cPanel requires the domain suffix to route to the correct mailbox directory.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Why is my webmail showing a &#x27;Server Certificate Invalid&#x27; warning?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">This warning appears if your domain does not yet have an active SSL certificate issued via AutoSSL, or if you are accessing webmail via the server&#x27;s raw IP address instead of your fully qualified domain name.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fhow-to-access-cpanel-webmail-login-urls-and-ports&amp;text=How%20to%20Access%20cPanel%20Webmail%3A%20Login%20URLs%2C%20Ports%20%26%20Troubleshooting" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fhow-to-access-cpanel-webmail-login-urls-and-ports" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fhow-to-access-cpanel-webmail-login-urls-and-ports" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=How%20to%20Access%20cPanel%20Webmail%3A%20Login%20URLs%2C%20Ports%20%26%20Troubleshooting&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fhow-to-access-cpanel-webmail-login-urls-and-ports" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#primary-urls-to-access-cpanel-webmail" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Primary URLs to Access cPanel Webmail</a><a href="#understanding-webmail-ports-2095-vs-2096" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Understanding Webmail Ports: 2095 vs. 2096</a><a href="#the-golden-rule-username-authentication-format" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Golden Rule: Username Authentication Format</a><a href="#managing-mailbox-storage-and-quota-limits" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Managing Mailbox Storage and Quota Limits</a><a href="#troubleshooting-common-webmail-login-errors" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Troubleshooting Common Webmail Login Errors</a><a href="#connecting-webmail-to-desktop-and-mobile-clients" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Connecting Webmail to Desktop and Mobile Clients</a><a href="#delivering-reliable-webmail-for-your-hosting-clients" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Delivering Reliable Webmail for Your Hosting Clients</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux OS License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/deals" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">License Discount Stacks<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/cpanel-login-not-working-10-common-problems-fixes" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-login-not-working-10-common-problems-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Login Not Working? 10 Common Problems and How to Fix Them</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step troubleshooting guide for cPanel and WHM login errors, port 2083 blocks, cPHulk lockouts, and browser cache issues.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cpanel-email-not-sending-or-receiving-dns-smtp-fixes" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-email-not-sending-or-receiving-dns-smtp-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Email Not Sending or Receiving? DNS, SMTP &amp; Mail Fixes</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Troubleshoot cPanel and Exim mail deliverability with proper SPF/DKIM records, reverse DNS lookup, and SMTP queue flush commands.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/how-to-check-cpanel-changelog-troubleshoot-updates" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/how-to-check-cpanel-changelog-troubleshoot-updates-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Check cPanel Changelogs and Fix Issues After Updates</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Guide to reading cPanel release notes, reviewing /var/cpanel/updatelogs, fixing broken Apache/PHP builds, and handling post-update errors.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/vps-cpu-usage-100-percent-linux-commands-find-fix-process" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/vps-cpu-usage-100-percent-linux-commands-find-fix-process-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">VPS CPU Usage at 100%? Linux Commands to Find and Fix the Process</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Practical terminal commands and step-by-step methods to trace CPU hogs, terminate rogue scripts, and optimize server workload.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/how-to-fix-dns-propagation-email-delivery-mxtoolbox" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/how-to-fix-dns-propagation-email-delivery-mxtoolbox-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix DNS Propagation and Email Issues Using MXToolbox</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Diagnose email delivery failures and DNS propagation lags step-by-step using MXToolbox health checks and blacklist monitors.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/linux-vps-disk-full-find-large-files-clear-logs" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/linux-vps-disk-full-find-large-files-clear-logs-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Linux VPS Disk Full? Find Large Files, Clear Logs &amp; Recover Space</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide using du, ncdu, journalctl, and logrotate to pinpoint disk hogs and recover storage on production Linux VPS machines.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>
