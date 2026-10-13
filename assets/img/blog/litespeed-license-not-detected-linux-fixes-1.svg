@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t7 d7">
+  <title id="t7">LiteSpeed License Not Detected Troubleshooting Decision Tree</title>
+  <desc id="d7">How to diagnose and fix LiteSpeed Web Server license verification errors on Linux.</desc>
+  <rect width="960" height="420" rx="16" fill="#0B132B"/>
+  <rect x="20" y="20" width="920" height="380" rx="12" fill="#1C2541" stroke="#3A506B"/>
+  <text x="480" y="55" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#6FFFE9" text-anchor="middle">LiteSpeed License Not Detected: Diagnostic Tree</text>
+
+  <!-- Step 1: Error Symptom -->
+  <rect x="40" y="85" width="260" height="115" rx="8" fill="#450A0A" stroke="#DC2626"/>
+  <text x="170" y="115" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#FCA5A5" text-anchor="middle">Error Detected</text>
+  <text x="170" y="140" font-family="Inter, sans-serif" font-size="12" fill="#FECACA" text-anchor="middle">"Trial license expired"</text>
+  <text x="170" y="160" font-family="Inter, sans-serif" font-size="12" fill="#FECACA" text-anchor="middle">or "License check failed"</text>
+  <text x="170" y="180" font-family="Inter, sans-serif" font-size="11" fill="#F87171" text-anchor="middle">Web server falls back to Apache</text>
+
+  <!-- Arrow -->
+  <path d="M300 142 L335 142" stroke="#6FFFE9" stroke-width="2"/>
+
+  <!-- Step 2: Verify Network / Port 443 -->
+  <rect x="340" y="85" width="270" height="115" rx="8" fill="#0B132B" stroke="#3A506B"/>
+  <text x="475" y="115" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">1. Firewall &amp; Outbound 443</text>
+  <text x="475" y="140" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1" text-anchor="middle">Check curl to licensing hub:</text>
+  <text x="475" y="162" font-family="Courier New, monospace" font-size="11" fill="#6FFFE9" text-anchor="middle">curl -I https://license.litespeedtech.com</text>
+  <text x="475" y="185" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Must return HTTP 200/403 (reachable)</text>
+
+  <!-- Arrow -->
+  <path d="M610 142 L645 142" stroke="#6FFFE9" stroke-width="2"/>
+
+  <!-- Step 3: Run Refresh -->
+  <rect x="650" y="85" width="270" height="115" rx="8" fill="#064E3B" stroke="#10B981"/>
+  <text x="785" y="115" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#6EE7B7" text-anchor="middle">2. Re-Check License</text>
+  <text x="785" y="140" font-family="Inter, sans-serif" font-size="12" fill="#A7F3D0" text-anchor="middle">Execute license verification script:</text>
+  <text x="785" y="162" font-family="Courier New, monospace" font-size="11" fill="#6FFFE9" text-anchor="middle">/usr/local/lsws/bin/lshttpd -v</text>
+  <text x="785" y="185" font-family="Inter, sans-serif" font-size="11" fill="#34D399" text-anchor="middle">Status verified instantly</text>
+
+  <!-- Bottom Command Card -->
+  <rect x="40" y="225" width="880" height="150" rx="8" fill="#0B0F19" stroke="#334155"/>
+  <text x="60" y="250" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#E2E8F0">Resolution Sequence via SSH (Root Terminal):</text>
+  
+  <text x="60" y="278" font-family="Courier New, monospace" font-size="12" fill="#38BDF8"># Remove stale trial or locked license key</text>
+  <text x="60" y="296" font-family="Courier New, monospace" font-size="12" fill="#4ADE80">rm -f /usr/local/lsws/conf/trial.key</text>
+
+  <text x="60" y="324" font-family="Courier New, monospace" font-size="12" fill="#38BDF8"># Re-fetch license key from LicenBase automated gateway and restart</text>
+  <text x="60" y="342" font-family="Courier New, monospace" font-size="12" fill="#4ADE80">/usr/local/lsws/bin/lswsctrl restart</text>
+
+  <text x="60" y="362" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Verify active workers in WHM under &gt; Plugins &gt; LiteSpeed Web Server Plugin</text>
+</svg>

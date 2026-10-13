@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t9 d9">
+  <title id="t9">Hosting Cost Optimization via License Stacking and Server Consolidation</title>
+  <desc id="d9">How combining cPanel, LiteSpeed, and CloudLinux licenses lowers overall server hardware and software overhead.</desc>
+  <rect width="960" height="420" rx="16" fill="#0B132B"/>
+  <rect x="20" y="20" width="920" height="380" rx="12" fill="#1C2541" stroke="#3A506B"/>
+  <text x="480" y="55" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#6FFFE9" text-anchor="middle">Web Hosting TCO Reduction: The 3-Pillar Licensing Stack</text>
+
+  <!-- Pillar 1: cPanel -->
+  <rect x="45" y="85" width="265" height="280" rx="10" fill="#0B132B" stroke="#3A506B"/>
+  <rect x="45" y="85" width="265" height="6" rx="3" fill="#F59E0B"/>
+  <text x="177" y="125" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#F59E0B" text-anchor="middle">Pillar 1: cPanel &amp; WHM</text>
+  <text x="70" y="160" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Management Automation</text>
+  <text x="70" y="188" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Eliminates manual sysadmin work</text>
+  <text x="70" y="214" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; 1-click customer onboarding</text>
+  <text x="70" y="240" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Automated AutoSSL &amp; backups</text>
+  <rect x="65" y="280" width="225" height="60" rx="6" fill="#1C2541"/>
+  <text x="177" y="305" font-family="Inter, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Retail: $29.99/mo</text>
+  <text x="177" y="325" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#6FFFE9" text-anchor="middle">LicenBase: $4.00/mo</text>
+
+  <!-- Pillar 2: LiteSpeed -->
+  <rect x="345" y="85" width="265" height="280" rx="10" fill="#0B132B" stroke="#6FFFE9"/>
+  <rect x="345" y="85" width="265" height="6" rx="3" fill="#6FFFE9"/>
+  <text x="477" y="125" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#6FFFE9" text-anchor="middle">Pillar 2: LiteSpeed Web Server</text>
+  <text x="370" y="160" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">3x Hardware Density</text>
+  <text x="370" y="188" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Cuts CPU/RAM usage by 60%</text>
+  <text x="370" y="214" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Built-in WordPress LSCache</text>
+  <text x="370" y="240" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Avoids buying extra VPS servers</text>
+  <rect x="365" y="280" width="225" height="60" rx="6" fill="#1C2541"/>
+  <text x="477" y="305" font-family="Inter, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Retail: $26.00/mo</text>
+  <text x="477" y="325" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#6FFFE9" text-anchor="middle">LicenBase: $5.00/mo</text>
+
+  <!-- Pillar 3: CloudLinux -->
+  <rect x="645" y="85" width="265" height="280" rx="10" fill="#0B132B" stroke="#3A506B"/>
+  <rect x="645" y="85" width="265" height="6" rx="3" fill="#3B82F6"/>
+  <text x="777" y="125" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#3B82F6" text-anchor="middle">Pillar 3: CloudLinux OS</text>
+  <text x="670" y="160" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Multi-Tenant Stability</text>
+  <text x="670" y="188" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Stops rogue tenant downtime</text>
+  <text x="670" y="214" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Enforces strict CPU/RAM caps</text>
+  <text x="670" y="240" font-family="Inter, sans-serif" font-size="12" fill="#CBD5E1">&bull; Cuts support tickets by 80%</text>
+  <rect x="665" y="280" width="225" height="60" rx="6" fill="#1C2541"/>
+  <text x="777" y="305" font-family="Inter, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Retail: $20.00/mo</text>
+  <text x="777" y="325" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#6FFFE9" text-anchor="middle">LicenBase: $7.00/mo</text>
+</svg>

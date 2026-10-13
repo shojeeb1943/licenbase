@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">LiteSpeed Web Server Licensing Tiers and Worker Limits Matrix</title>
+  <desc id="d1">Comparison of Free Starter, Site Owner, Web Host, and Enterprise tiers for LiteSpeed licenses in 2026.</desc>
+  <rect width="960" height="420" rx="16" fill="#0B132B"/>
+  <rect x="24" y="24" width="912" height="372" rx="12" fill="#1C2541" stroke="#3A506B" stroke-width="1.5"/>
+  <text x="480" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#6FFFE9" text-anchor="middle">LiteSpeed License Tiers: Worker Limits &amp; Target Workloads</text>
+  
+  <!-- Tier 1 -->
+  <rect x="44" y="95" width="200" height="275" rx="10" fill="#0B132B" stroke="#3A506B"/>
+  <rect x="44" y="95" width="200" height="6" rx="3" fill="#48CAE4"/>
+  <text x="144" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Free Starter</text>
+  <text x="144" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#6FFFE9" text-anchor="middle">$0/mo</text>
+  <line x1="60" y1="172" x2="228" y2="172" stroke="#3A506B" stroke-width="1"/>
+  <text x="64" y="200" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">1 Domain limit</text>
+  <text x="64" y="230" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">1 Worker process</text>
+  <text x="64" y="260" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">&lt;2 GB RAM host</text>
+  <text x="64" y="290" font-family="Inter, sans-serif" font-size="13" fill="#94A3B8">Personal testing</text>
+  <rect x="60" y="325" width="168" height="28" rx="6" fill="#1C2541"/>
+  <text x="144" y="344" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#48CAE4" text-anchor="middle">Staging Only</text>
+
+  <!-- Tier 2 -->
+  <rect x="264" y="95" width="200" height="275" rx="10" fill="#0B132B" stroke="#3A506B"/>
+  <rect x="264" y="95" width="200" height="6" rx="3" fill="#00B4D8"/>
+  <text x="364" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Site Owner</text>
+  <text x="364" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#6FFFE9" text-anchor="middle">$5/mo</text>
+  <line x1="280" y1="172" x2="448" y2="172" stroke="#3A506B" stroke-width="1"/>
+  <text x="284" y="200" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">5 Domains max</text>
+  <text x="284" y="230" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">1 Worker process</text>
+  <text x="284" y="260" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">Up to 8 GB RAM</text>
+  <text x="284" y="290" font-family="Inter, sans-serif" font-size="13" fill="#94A3B8">LSCache WordPress</text>
+  <rect x="280" y="325" width="168" height="28" rx="6" fill="#1C2541"/>
+  <text x="364" y="344" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#00B4D8" text-anchor="middle">Agencies / E-Commerce</text>
+
+  <!-- Tier 3: Web Host (Featured) -->
+  <rect x="484" y="85" width="212" height="295" rx="10" fill="#0F172A" stroke="#6FFFE9" stroke-width="2"/>
+  <rect x="484" y="85" width="212" height="6" rx="3" fill="#6FFFE9"/>
+  <text x="590" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web Host Essential</text>
+  <text x="590" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#6FFFE9" text-anchor="middle">$5-$7/mo</text>
+  <line x1="500" y1="168" x2="680" y2="168" stroke="#3A506B" stroke-width="1"/>
+  <text x="504" y="196" font-family="Inter, sans-serif" font-size="13" fill="#FFFFFF">Unlimited Domains</text>
+  <text x="504" y="226" font-family="Inter, sans-serif" font-size="13" fill="#FFFFFF">1 Worker (multi-tenant)</text>
+  <text x="504" y="256" font-family="Inter, sans-serif" font-size="13" fill="#FFFFFF">Up to 8 GB RAM</text>
+  <text x="504" y="286" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">Apache Drop-in</text>
+  <rect x="500" y="325" width="180" height="32" rx="6" fill="#6FFFE9"/>
+  <text x="590" y="346" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0B132B" text-anchor="middle">Most Popular for VPS</text>
+
+  <!-- Tier 4: Enterprise Web Host -->
+  <rect x="716" y="95" width="200" height="275" rx="10" fill="#0B132B" stroke="#3A506B"/>
+  <rect x="716" y="95" width="200" height="6" rx="3" fill="#7209B7"/>
+  <text x="816" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web Host Elite</text>
+  <text x="816" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#6FFFE9" text-anchor="middle">Multi-Worker</text>
+  <line x1="732" y1="172" x2="900" y2="172" stroke="#3A506B" stroke-width="1"/>
+  <text x="736" y="200" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">Unlimited Domains</text>
+  <text x="736" y="230" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">2, 4, 8+ Workers</text>
+  <text x="736" y="260" font-family="Inter, sans-serif" font-size="13" fill="#CBD5E1">Unlimited RAM</text>
+  <text x="736" y="290" font-family="Inter, sans-serif" font-size="13" fill="#94A3B8">Massive concurrency</text>
+  <rect x="732" y="325" width="168" height="28" rx="6" fill="#1C2541"/>
+  <text x="816" y="344" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" text-anchor="middle">High-Traffic Clusters</text>
+</svg>

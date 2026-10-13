@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t11 d11">
+  <title id="t11">Comparativa de Licencias cPanel Baratas para Servidor VPS</title>
+  <desc id="d11">Planes de licencias cPanel Solo, Admin y Pro para servidores VPS en Espana y Latinoamerica.</desc>
+  <rect width="960" height="420" rx="16" fill="#F8FAFC"/>
+  <rect x="20" y="20" width="920" height="380" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="480" y="55" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#0F172A" text-anchor="middle">Licencia cPanel Barata: Opciones para tu Servidor VPS</text>
+
+  <!-- Plan Solo -->
+  <rect x="45" y="85" width="265" height="280" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="45" y="85" width="265" height="6" rx="3" fill="#3B82F6"/>
+  <text x="177" y="125" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1E40AF" text-anchor="middle">cPanel Solo</text>
+  <text x="177" y="155" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#1E293B" text-anchor="middle">1 Cuenta</text>
+  <line x1="65" y1="175" x2="290" y2="175" stroke="#E2E8F0"/>
+  <text x="65" y="205" font-family="Inter, sans-serif" font-size="13" fill="#475569">&bull; Para 1 dominio principal</text>
+  <text x="65" y="235" font-family="Inter, sans-serif" font-size="13" fill="#475569">&bull; Ideal para e-commerce</text>
+  <text x="65" y="265" font-family="Inter, sans-serif" font-size="13" fill="#475569">&bull; Servidor VPS Cloud</text>
+  <rect x="65" y="305" width="225" height="40" rx="6" fill="#EFF6FF"/>
+  <text x="177" y="330" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle">LicenBase: $4.00/mes</text>
+
+  <!-- Plan Admin -->
+  <rect x="345" y="85" width="265" height="280" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+  <rect x="345" y="85" width="265" height="6" rx="3" fill="#10B981"/>
+  <text x="477" y="125" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#065F46" text-anchor="middle">cPanel Admin (Recomendado)</text>
+  <text x="477" y="155" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#047857" text-anchor="middle">Hasta 5 Cuentas</text>
+  <line x1="365" y1="175" x2="590" y2="175" stroke="#BBF7D0"/>
+  <text x="365" y="205" font-family="Inter, sans-serif" font-size="13" fill="#166534">&bull; Agencias y desarrolladores</text>
+  <text x="365" y="235" font-family="Inter, sans-serif" font-size="13" fill="#166534">&bull; Acceso WHM completo</text>
+  <text x="365" y="265" font-family="Inter, sans-serif" font-size="13" fill="#166534">&bull; AutoSSL y soporte PHP</text>
+  <rect x="365" y="305" width="225" height="40" rx="6" fill="#10B981"/>
+  <text x="477" y="330" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">LicenBase: $4.00/mes</text>
+
+  <!-- Plan Pro -->
+  <rect x="645" y="85" width="265" height="280" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="645" y="85" width="265" height="6" rx="3" fill="#6366F1"/>
+  <text x="777" y="125" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#3730A3" text-anchor="middle">cPanel Pro</text>
+  <text x="777" y="155" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#1E293B" text-anchor="middle">Hasta 30 Cuentas</text>
+  <line x1="665" y1="175" x2="890" y2="175" stroke="#E2E8F0"/>
+  <text x="665" y="205" font-family="Inter, sans-serif" font-size="13" fill="#475569">&bull; Pequenas empresas hosting</text>
+  <text x="665" y="235" font-family="Inter, sans-serif" font-size="13" fill="#475569">&bull; Servidores revendedores</text>
+  <text x="665" y="265" font-family="Inter, sans-serif" font-size="13" fill="#475569">&bull; Activacion por IP directa</text>
+  <rect x="665" y="305" width="225" height="40" rx="6" fill="#EEF2FF"/>
+  <text x="777" y="330" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle">LicenBase: $4.00/mes</text>
+</svg>

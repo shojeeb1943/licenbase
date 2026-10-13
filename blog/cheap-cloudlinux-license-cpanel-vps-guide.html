@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheap CloudLinux License: cPanel VPS Guide | LicenBase</title>
+  <meta name="description" content="Find the right cheap CloudLinux license for your cPanel VPS. Compare Shared, Shared Pro, and Solo editions, LVE limits, CageFS, and kernel protection." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/cheap-cloudlinux-license-cpanel-vps-guide" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="Cheap CloudLinux License: cPanel VPS Guide" />
+  <meta property="og:description" content="Find the right cheap CloudLinux license for your cPanel VPS. Compare Shared, Shared Pro, and Solo editions, LVE limits, CageFS, and kernel protection." />
+  <meta property="og:url" content="https://licenbase.com/blog/cheap-cloudlinux-license-cpanel-vps-guide" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-cheap-cloudlinux-license-cpanel-vps-guide.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="CloudLinux OS licensing tiers, LVE resource limits, and CageFS architecture comparison" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-13" />
+  <meta property="article:modified_time" content="2026-10-13" />
+  <meta property="article:section" content="Guide" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-cheap-cloudlinux-license-cpanel-vps-guide.png" />
+  <meta name="twitter:image:alt" content="CloudLinux OS licensing tiers, LVE resource limits, and CageFS architecture comparison" />
+  <meta name="twitter:title" content="Cheap CloudLinux License: cPanel VPS Guide" />
+  <meta name="twitter:description" content="Find the right cheap CloudLinux license for your cPanel VPS. Compare Shared, Shared Pro, and Solo editions, LVE limits, CageFS, and kernel protection." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Cheap CloudLinux License: Guide for Your cPanel VPS", "item": "https://licenbase.com/blog/cheap-cloudlinux-license-cpanel-vps-guide"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cheap CloudLinux License: Guide for Your cPanel VPS", "description": "Find the right cheap CloudLinux license for your cPanel VPS. Compare Shared, Shared Pro, and Solo editions, LVE limits, CageFS, and kernel protection.", "image": ["https://licenbase.com/assets/img/og/blog-cheap-cloudlinux-license-cpanel-vps-guide.png"], "datePublished": "2026-10-13", "dateModified": "2026-10-13", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/cheap-cloudlinux-license-cpanel-vps-guide"}, "articleSection": "Guide", "inLanguage": "en", "wordCount": 819}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the primary difference between CloudLinux Shared and CloudLinux Solo?", "acceptedAnswer": {"@type": "Answer", "text": "CloudLinux Shared is engineered for multi-tenant web hosting servers hosting dozens of untrusted client accounts, providing CageFS isolation and LVE throttling. CloudLinux Solo is designed for single-user or small agency VPS instances with up to 1-3 accounts, focusing on database optimization and bottleneck detection."}}, {"@type": "Question", "name": "Can I convert an existing AlmaLinux or Rocky Linux server to CloudLinux without data loss?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CloudLinux provides an automated conversion script (cldeploy). It converts your existing kernel, updates package repositories, and installs LVE modules without altering website files, databases, or user credentials."}}, {"@type": "Question", "name": "How does CageFS protect cPanel accounts from cross-site malware infections?", "acceptedAnswer": {"@type": "Answer", "text": "CageFS is a virtualized per-user file system that encapsulates each account in its own private jail. Tenants cannot view system configuration files, other users' home directories, or server processes, effectively preventing symlink attacks and malware escalation."}}, {"@type": "Question", "name": "Does CloudLinux include PHP version management for end users?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CloudLinux PHP Selector lets cPanel users choose between hardened PHP versions (from legacy PHP 5.6 through PHP 8.3+) with customizable extensions directly inside their individual cPanel dashboards."}}, {"@type": "Question", "name": "Is a LicenBase CloudLinux license 100% genuine and safe for production?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LicenBase provisions genuine automated IP licensing. Your server accesses official CloudLinux network mirrors (CLN) directly, receiving unmodified kernel updates and security patches with zero system hacks."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">Guide</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Guide</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">Cheap CloudLinux License: Guide for Your cPanel VPS</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-13">October 13, 2026</time></span>
+          
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/cheap-cloudlinux-license-cpanel-vps-guide-feature.webp" alt="CloudLinux OS licensing tiers, LVE resource limits, and CageFS architecture comparison" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600">Managing a multi-tenant shared hosting environment on standard Linux distributions like AlmaLinux or Ubuntu is like balancing on a tightrope. A single client website experiencing an unexpected traffic spike, running a buggy MySQL query, or suffering a malicious DDoS attack can consume 100% of your server's CPU and memory, dragging down neighboring websites in a "bad neighbor" outage. Converting your system to <strong>CloudLinux OS</strong> solves this problem at the kernel level by placing each tenant inside an isolated Lightweight Virtual Environment (LVE). In this guide, we break down how to choose a cheap CloudLinux license for your cPanel VPS without overpaying.</p>
+
+<section class="space-y-4">
+  <h2 id="the-core-technology-how-cloudlinux-stabilizes-cpanel-servers" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">The Core Technology: How CloudLinux Stabilizes cPanel Servers</h2>
+  <p>Standard Linux treats all system processes equally. When a WordPress site triggers hundreds of PHP-FPM processes simultaneously, the Linux scheduler allocates compute cycles until the entire CPU load spikes to dangerous levels, eventually crashing Apache or MySQL.</p>
+  <p>CloudLinux replaces the standard Linux kernel with a modified kernel featuring <strong>Lightweight Virtual Environment (LVE)</strong> technology. System administrators set strict resource caps per user account:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>CPU Limits (SPEED):</strong> Restricts tenants to a specific percentage of a single core or multiple cores.</li>
+    <li><strong>Memory Limits (PMEM):</strong> Prevents memory leaks from triggering system-wide Out-Of-Memory (OOM) kernel panics.</li>
+    <li><strong>I/O and IOPS Limits:</strong> Protects NVMe disk storage arrays from being saturated by runaway database imports.</li>
+    <li><strong>MySQL Governor:</strong> Automatically throttles queries that consume excessive database resources in real time.</li>
+  </ul>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+  <img src="/assets/img/blog/cheap-cloudlinux-license-cpanel-vps-guide-1.svg" alt="CloudLinux OS licensing tiers, LVE resource limits, and CageFS architecture comparison" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+  <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Visual breakdown of CloudLinux LVE tenant isolation and CageFS jail security.</figcaption>
+</figure>
+</section>
+
+<section class="space-y-4">
+  <h2 id="comparing-cloudlinux-license-editions-in-2026" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Comparing CloudLinux License Editions in 2026</h2>
+  <p>CloudLinux offers three primary licensing editions suited for different infrastructure workloads:</p>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full text-left text-sm text-gray-600">
+      <thead class="bg-gray-50 text-xs font-bold uppercase text-gray-700">
+        <tr>
+          <th class="p-3">Edition</th>
+          <th class="p-3">Max Accounts</th>
+          <th class="p-3">Key Features</th>
+          <th class="p-3">Ideal Use Case</th>
+          <th class="p-3">LicenBase Price</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">CloudLinux Solo</td>
+          <td class="p-3">1 Account</td>
+          <td class="p-3">PHP X-Ray, Slow Site Analyzer</td>
+          <td class="p-3">High-value WooCommerce, SaaS VPS</td>
+          <td class="p-3 text-emerald-600 font-semibold">$5.00/mo</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">CloudLinux Shared</td>
+          <td class="p-3">Unlimited</td>
+          <td class="p-3">LVE Manager, CageFS, PHP Selector</td>
+          <td class="p-3">Standard Reseller &amp; Shared Hosting</td>
+          <td class="p-3 text-emerald-600 font-semibold">$7.00/mo</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">CloudLinux Shared Pro</td>
+          <td class="p-3">Unlimited</td>
+          <td class="p-3">All Shared features + PHP X-Ray + Centralized Monitoring</td>
+          <td class="p-3">Enterprise Web Hosting Clusters</td>
+          <td class="p-3 text-emerald-600 font-semibold">Wholesale Tier</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>For 95% of web hosting providers operating a <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel VPS</a>, <strong>CloudLinux Shared</strong> provides everything necessary to maintain rock-solid uptime and eliminate multi-tenant resource friction.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="hardening-security-with-cagefs-and-securelinks" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Hardening Security with CageFS and SecureLinks</h2>
+  <p>In addition to performance management, an authentic <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux license</a> transforms shared server security. On an unhardened server, if a hacker exploits an outdated WordPress plugin on Account A, they can browse the local file system, inspect <code>/etc/passwd</code>, and read database passwords in neighboring directories via symlink attacks.</p>
+  <p><strong>CageFS</strong> encapsulates every tenant in their own individualized virtual jail. Each user can only see their own files and a clean virtualized operating system directory. Combined with <strong>SecureLinks</strong> technology that prevents kernel-level symbolic link traversal, CloudLinux virtually eliminates lateral malware infection between websites.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="how-to-convert-your-linux-vps-to-cloudlinux-in-15-minutes" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">How to Convert Your Linux VPS to CloudLinux in 15 Minutes</h2>
+  <p>Converting an existing AlmaLinux 8/9 or Rocky Linux 8/9 VPS to CloudLinux is completely non-destructive:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Download official CloudLinux deployment script
+wget https://repo.cloudlinux.com/cloudlinux/sources/cln/cldeploy
+
+# 2. Run automated conversion (automatically detects LicenBase IP license)
+sh cldeploy -k IP
+
+# 3. Reboot into the hardened CloudLinux kernel
+reboot
+
+# 4. Initialize CageFS user virtualization
+cagefsctl --init
+cagefsctl --enable-all</code></pre>
+  <p>Once the server reboots, the LVE Manager interface appears directly inside WHM, ready for immediate configuration.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="the-ultimate-server-stack-cpanel-cloudlinux-imunify360" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">The Ultimate Server Stack: cPanel, CloudLinux &amp; Imunify360</h2>
+  <p>To build an enterprise-class hosting environment without spending hundreds of dollars each month, pair CloudLinux with an <a href="/imunify360-license" class="text-blue-600 font-semibold hover:underline">Imunify360 license</a>. While CloudLinux controls compute resources and isolates file systems, Imunify360 provides AI-driven malware detection and real-time Web Application Firewall (WAF) filtering.</p>
+  <p>LicenBase provides automated IP licensing for the entire stack. Check our <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo discount deals</a> to secure your server software at unbeatable wholesale pricing with guaranteed instant IP activation.</p>
+</section>
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is the primary difference between CloudLinux Shared and CloudLinux Solo?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">CloudLinux Shared is engineered for multi-tenant web hosting servers hosting dozens of untrusted client accounts, providing CageFS isolation and LVE throttling. CloudLinux Solo is designed for single-user or small agency VPS instances with up to 1-3 accounts, focusing on database optimization and bottleneck detection.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Can I convert an existing AlmaLinux or Rocky Linux server to CloudLinux without data loss?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. CloudLinux provides an automated conversion script (cldeploy). It converts your existing kernel, updates package repositories, and installs LVE modules without altering website files, databases, or user credentials.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How does CageFS protect cPanel accounts from cross-site malware infections?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">CageFS is a virtualized per-user file system that encapsulates each account in its own private jail. Tenants cannot view system configuration files, other users&#x27; home directories, or server processes, effectively preventing symlink attacks and malware escalation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Does CloudLinux include PHP version management for end users?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. CloudLinux PHP Selector lets cPanel users choose between hardened PHP versions (from legacy PHP 5.6 through PHP 8.3+) with customizable extensions directly inside their individual cPanel dashboards.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Is a LicenBase CloudLinux license 100% genuine and safe for production?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. LicenBase provisions genuine automated IP licensing. Your server accesses official CloudLinux network mirrors (CLN) directly, receiving unmodified kernel updates and security patches with zero system hacks.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fcheap-cloudlinux-license-cpanel-vps-guide&amp;text=Cheap%20CloudLinux%20License%3A%20Guide%20for%20Your%20cPanel%20VPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fcheap-cloudlinux-license-cpanel-vps-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fcheap-cloudlinux-license-cpanel-vps-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=Cheap%20CloudLinux%20License%3A%20Guide%20for%20Your%20cPanel%20VPS&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fcheap-cloudlinux-license-cpanel-vps-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#the-core-technology-how-cloudlinux-stabilizes-cpanel-servers" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Core Technology: How CloudLinux Stabilizes cPanel Servers</a><a href="#comparing-cloudlinux-license-editions-in-2026" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Comparing CloudLinux License Editions in 2026</a><a href="#hardening-security-with-cagefs-and-securelinks" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Hardening Security with CageFS and SecureLinks</a><a href="#how-to-convert-your-linux-vps-to-cloudlinux-in-15-minutes" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">How to Convert Your Linux VPS to CloudLinux in 15 Minutes</a><a href="#the-ultimate-server-stack-cpanel-cloudlinux-imunify360" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Ultimate Server Stack: cPanel, CloudLinux &amp; Imunify360</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux OS License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/imunify360-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Imunify360 Security License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/cheap-litespeed-license-2026-pricing-features" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cheap-litespeed-license-2026-pricing-features-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Cheap LiteSpeed License in 2026: Pricing, Features &amp; Guide</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A 2026 buyer guide to cheap LiteSpeed licenses: worker limits, RAM rules, LSCache performance, and how to spot legitimate IP licensing.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cpanel-cost-breakdown-license-fees-vps-hosting" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-cost-breakdown-license-fees-vps-hosting-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Cost Breakdown: License Fees, VPS &amp; Hidden Expenses</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Calculate the true total cost of ownership for cPanel hosting: license tiers, cloud VPS pricing, backup storage, and wholesale licensing savings.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cheap-cpanel-vps-hosting-server-buyer-guide" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cheap-cpanel-vps-hosting-server-buyer-guide-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Cheap cPanel VPS Hosting: Choose Servers Without Overspending</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">How to choose cheap cPanel VPS hosting: hardware specs, hypervisor types, cloud providers, and decoupling server hardware from software licenses.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/how-to-reduce-hosting-costs-cpanel-litespeed-cloudlinux" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/how-to-reduce-hosting-costs-cpanel-litespeed-cloudlinux-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Reduce Hosting Costs: cPanel, LiteSpeed &amp; CloudLinux</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Proven strategies to lower hosting operating expenses: licensing bundles, tenant density optimization, and wholesale automated IP license providers.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/whmcs-automation-hosting-billing-provisioning-licenses" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/whmcs-automation-hosting-billing-provisioning-licenses-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">WHMCS Automation: Hosting Billing, Provisioning &amp; Licenses</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Automate your hosting company with WHMCS: payment gateways, instant cPanel account setup, Virtualizor VPS deployments, and automated license management.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/licencia-cpanel-barata-servidor-vps-guia-completa" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/licencia-cpanel-barata-servidor-vps-guia-completa-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Licencia cPanel barata: Cómo elegir la mejor para tu VPS</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Aprende a elegir una licencia cPanel barata para tu servidor VPS: comparativa de versiones Solo, Admin y Pro, y consejos de seguridad sin sobrecostes.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    window.loadTawk = loadTawk;
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
+  </script>
+
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>
