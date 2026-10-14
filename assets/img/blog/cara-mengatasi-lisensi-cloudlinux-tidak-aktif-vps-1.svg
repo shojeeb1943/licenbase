@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Cara Mengatasi Lisensi CloudLinux Tidak Aktif di VPS</title>
+  <desc id="d">Panduan langkah demi langkah memperbaiki lisensi CloudLinux yang tidak aktif atau gagal verifikasi pada server VPS Linux.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Alur Mengatasi Lisensi CloudLinux Tidak Aktif di VPS</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Panduan Sysadmin</text>
+
+  <!-- 4 Step Columns -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#EFF6FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle">01</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Cek cl-rhn-check</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Uji Koneksi Lisensi:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, monospace" font-size="11" fill="#64748B">cl-rhn-check</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Hubungkan ke server CLN</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Cek error status pendaftaran</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Pastikan respon sukses</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#EFF6FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Validasi Server CLN</text>
+  </g>
+
+  <g transform="translate(263, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#ECFDF5"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">02</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Port Outbound 443</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Cek Akses Firewall:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, monospace" font-size="10" fill="#64748B">curl -Iv cln.cloudlinux.com</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Cek aturan CSF TCP_OUT</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Buka blokir port 443</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Pastikan DNS nameserver aktif</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#ECFDF5"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Buka Akses Jaringan</text>
+  </g>
+
+  <g transform="translate(491, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#FEF3C7"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#D97706" text-anchor="middle">03</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Sinkronisasi IP</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Cek Alamat IPv4:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, monospace" font-size="10" fill="#64748B">curl -4 ifconfig.me</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Samakan IP publik server</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Reissue di panel LicenBase</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Eksekusi script aktivasi</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#FEF3C7"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Update IP Otomatis</text>
+  </g>
+
+  <g transform="translate(719, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#F3E8FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="middle">04</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Verifikasi LVE</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Uji Fitur Isolasi:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, monospace" font-size="11" fill="#64748B">lveps -u</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Cek CageFS: cagefsctl -e</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Pastikan kernel .lve aktif</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Server siap produksi</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#F3E8FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">100% Berfungsi Normal</text>
+  </g>
+</svg>

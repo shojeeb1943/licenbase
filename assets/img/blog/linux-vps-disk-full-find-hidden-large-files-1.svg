@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Linux VPS Storage Recovery and Large File Discovery Protocol</title>
+  <desc id="d">Actionable workflow to identify large files, vacuum systemd journal logs, find hidden open deleted files, and reclaim storage on full Linux VPS servers.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Linux VPS Storage Cleanup &amp; File Discovery Protocol</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Reclaim Gigabytes</text>
+
+  <!-- 4 Step Columns -->
+  <!-- Col 1: Scan with du & find -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">1. File Discovery</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#2563EB">du -ahx / | sort -rh</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Top 20 biggest folders</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#2563EB">find / -size +500M</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Locate massive blobs</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#2563EB">ncdu -x /</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Interactive TUI disk scanner</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Isolate Large Directories</text>
+  </g>
+
+  <!-- Col 2: Journal & Logs -->
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">2. Vacuum Logs</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#059669">journalctl --vacuum-size</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Cap systemd logs to 200MB</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#059669">rm /var/log/*.gz</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Delete rotated archives</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#059669">&gt; /var/log/nginx/error.log</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Truncate runaway text logs</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Prune Bloated Logs</text>
+  </g>
+
+  <!-- Col 3: Deleted Open Files -->
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">3. Deleted File Locks</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#D97706">lsof +L1</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Find unlinked open files</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#D97706">systemctl restart daemon</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Release open file handles</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#D97706">fuser -v /var/log/...</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Identify locking PID</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Reclaim Phantom Space</text>
+  </g>
+
+  <!-- Col 4: Package & Dumps -->
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">4. Cache &amp; Backups</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#7C3AED">dnf clean all</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Clear package manager cache</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#7C3AED">rm /var/cpanel/backup/*</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Purge stale local tar.gz</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="11" font-weight="700" fill="#7C3AED">rm -rf /tmp/core.*</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Remove crashed core dumps</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Purge Temp Caches</text>
+  </g>
+</svg>

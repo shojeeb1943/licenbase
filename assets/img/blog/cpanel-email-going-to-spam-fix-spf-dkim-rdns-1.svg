@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel Email Deliverability Authentication Flow</title>
+  <desc id="d">The four required DNS authentication records to prevent cPanel emails from landing in spam folders: SPF, DKIM, DMARC, and Reverse DNS PTR.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel Email Authentication &amp; Anti-Spam Protocol</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">100% Inbox Delivery</text>
+
+  <!-- 4 Pillars -->
+  <!-- Pillar 1: SPF -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">1. SPF Record</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">Authorized Senders</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• DNS TXT record</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Specifies valid server IPs</text>
+    <text x="20" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Blocks email spoofing</text>
+    <text x="20" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Example syntax:</text>
+    <text x="20" y="185" font-family="Inter, Segoe UI, monospace" font-size="10" fill="#1E293B">v=spf1 ip4:IP ~all</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Valid Sender IP</text>
+  </g>
+
+  <!-- Pillar 2: DKIM -->
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">2. DKIM Key</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Cryptographic Sign</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 2048-bit RSA key pair</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Exim signs email headers</text>
+    <text x="20" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Receiver verifies public key</text>
+    <text x="20" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Proves tamper-free transit</text>
+    <text x="20" y="185" font-family="Inter, Segoe UI, monospace" font-size="10" fill="#1E293B">default._domainkey</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Tamper Prevention</text>
+  </g>
+
+  <!-- Pillar 3: DMARC -->
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">3. DMARC Policy</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#D97706">Policy Enforcement</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Aligns SPF &amp; DKIM identity</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Dictates fail handling</text>
+    <text x="20" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Options: none, quarantine, reject</text>
+    <text x="20" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Gmail 2026 requirement</text>
+    <text x="20" y="185" font-family="Inter, Segoe UI, monospace" font-size="10" fill="#1E293B">_dmarc.domain.com</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Enforce Strict Policy</text>
+  </g>
+
+  <!-- Pillar 4: rDNS (PTR) -->
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">4. Reverse DNS</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#7C3AED">PTR Record Handshake</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Set in hosting/cloud console</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Maps IPv4 to hostname</text>
+    <text x="20" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Forward &amp; reverse FCrDNS</text>
+    <text x="20" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Matches Exim EHLO banner</text>
+    <text x="20" y="185" font-family="Inter, Segoe UI, monospace" font-size="10" fill="#1E293B">server.domain.com</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Verified Mail Host</text>
+  </g>
+</svg>

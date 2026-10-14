@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">AI-Powered Linux Server Log Analysis and Triage Workflow</title>
+  <desc id="d">End-to-end framework for system administrators using artificial intelligence and LLMs to ingest raw Linux logs, diagnose root causes, and generate remediation commands.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">AI-Assisted Linux Server Log Analysis &amp; Triage Workflow</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Sysadmin AI Toolkit</text>
+
+  <!-- 4 Step Columns -->
+  <!-- Stage 1 -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#EFF6FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle">01</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Log Extraction</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Capture Target Lines:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• journalctl -xeu service</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• /var/log/messages &amp; secure</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Exim rejectlog &amp; mail log</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Nginx/Apache error.log</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#EFF6FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Extract Stack Traces</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(263, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#ECFDF5"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">02</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Data Sanitization</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Strip Sensitive Data:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Mask public IPv4/IPv6</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Redact DB passwords &amp; keys</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Anonymize user emails</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Clean with sed / awk</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#ECFDF5"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Sanitize Input Data</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(491, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#FEF3C7"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#D97706" text-anchor="middle">03</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">LLM Synthesis</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">AI Reasoning Prompt:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Pattern anomaly detection</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• OOM killer correlation</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Explains obscure error codes</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Maps root cause failure</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#FEF3C7"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Identify Root Cause</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(719, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#F3E8FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="middle">04</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Remediation Run</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Actionable Resolution:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Generates exact Bash fixes</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Confirms conf syntax test</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Graceful service reload</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Verifies restoration status</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#F3E8FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Restore Production</text>
+  </g>
+</svg>

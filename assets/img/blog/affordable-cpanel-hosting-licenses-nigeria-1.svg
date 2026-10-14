@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Affordable cPanel Hosting and Licensing Architecture in Nigeria</title>
+  <desc id="d">Blueprint for small hosting companies in Nigeria to mitigate FX volatility by pairing low-cost cloud compute with LicenBase wholesale licensing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel Hosting Business Architecture for Nigeria (2026)</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Beat FX Fluctuations</text>
+
+  <!-- 4 Columns -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">FX Challenge</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#DC2626">Dollar Retail Problem</text>
+    <text x="20" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• CBN card FX spend limits</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Naira exchange volatility</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• $30/mo retail = ₦45,000+</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Threatens startup margins</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Traditional Retail Risk</text>
+  </g>
+
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Cloud Hardware</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Unmanaged Cloud</text>
+    <text x="20" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Deploy Hetzner / OVH</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 4 vCPU / 8 GB RAM node</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Fast NVMe solid state disk</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Dedicated public IPv4</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Low Compute Cost</text>
+  </g>
+
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Wholesale License</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#D97706">LicenBase $4 / mo</text>
+    <text x="20" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• cPanel &amp; WHM full access</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Automated IP licensing</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Multi-gateway payments</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Save ~75% every month</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Predictable Naira Outlay</text>
+  </g>
+
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Billing &amp; Launch</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#7C3AED">WHMCS Automation</text>
+    <text x="20" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Integrate Paystack/Flutterwave</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Auto-provisioning API</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Collect payments in Naira</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• High profit margins</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Turnkey Hosting Agency</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel License Price in India 2026 VPS Guide</title>
+  <desc id="d">Price comparison and tier guide for cPanel VPS licenses in India, showing official retail cost versus LicenBase wholesale pricing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel VPS License Pricing Matrix in India (2026)</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Save ₹2,000+ / mo</text>
+
+  <!-- 4 Columns -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel Solo</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#2563EB">1 User Account</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Official: ~$17.49/mo</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#EF4444" font-weight="600">• Retail: ~₹1,500/mo</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• LicenBase: $4.00/mo</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#059669" font-weight="700">• LicenBase: ~₹330/mo</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Freelancers &amp; E-com</text>
+  </g>
+
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel Admin</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#059669">Up to 5 Accounts</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Official: ~$29.99/mo</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#EF4444" font-weight="600">• Retail: ~₹2,500/mo</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• LicenBase: $4.00/mo</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#059669" font-weight="700">• LicenBase: ~₹330/mo</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Digital Agencies</text>
+  </g>
+
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel Pro</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#D97706">Up to 30 Accounts</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Official: ~$44.99/mo</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#EF4444" font-weight="600">• Retail: ~₹3,800/mo</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• LicenBase: $4.00/mo</text>
+    <text x="20" y="170" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#059669" font-weight="700">• LicenBase: ~₹330/mo</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Reseller Hosts</text>
+  </g>
+
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Activation</text>
+    <text x="20" y="65" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#7C3AED">Instant IP Sync</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• No Forex card issues</text>
+    <text x="20" y="125" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Official vendor RPMs</text>
+    <text x="20" y="145" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Instant cpkeyclt test</text>
+    <text x="20" y="165" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Free IP re-issue</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">100% Genuine Updates</text>
+  </g>
+</svg>

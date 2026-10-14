@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">12 Linux Commands to Diagnose Sudden VPS Slowdowns</title>
+  <desc id="d">Diagnostic command tree covering CPU, memory, disk I/O, and network bottlenecks on a slow Linux virtual private server.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Linux VPS Slowdown Diagnostic Command Map</text>
+  <text x="745" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">12 Core Commands</text>
+
+  <!-- 4 Categories -->
+  <!-- Col 1: CPU -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">CPU &amp; Load</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#2563EB">1. uptime</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">1/5/15 min load avg</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#2563EB">2. htop</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Live CPU per process</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#2563EB">3. mpstat -P ALL 1</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Per-core CPU wait %</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Isolate CPU Spikes</text>
+  </g>
+
+  <!-- Col 2: Memory -->
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Memory &amp; Swap</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#059669">4. free -h</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">RAM vs Buffers/Cache</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#059669">5. vmstat 1 5</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Swap-in &amp; Swap-out</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#059669">6. ps aux --sort=-%mem</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Top RAM hogs</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Prevent OOM Freezes</text>
+  </g>
+
+  <!-- Col 3: Disk I/O -->
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Disk &amp; I/O Wait</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#D97706">7. iostat -xz 1</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">%util and iowait delay</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#D97706">8. iotop -oPa</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Real-time disk I/O write</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#D97706">9. df -h &amp; df -i</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Partition and inode limits</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Detect Storage Thrash</text>
+  </g>
+
+  <!-- Col 4: Network -->
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Network &amp; Traffic</text>
+    <path d="M20 60 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="88" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#7C3AED">10. ss -tulpn</text>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Listening server sockets</text>
+    <text x="20" y="132" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#7C3AED">11. iftop / nload</text>
+    <text x="20" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Live bandwidth flood</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, monospace" font-size="12" font-weight="700" fill="#7C3AED">12. dmesg -T</text>
+    <text x="20" y="194" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">Kernel hardware warnings</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Stop DDoS &amp; Floods</text>
+  </g>
+</svg>

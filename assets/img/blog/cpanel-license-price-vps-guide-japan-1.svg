@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">cPanel License Pricing and Plan Selection Guide for VPS Japan</title>
+  <desc id="d">Complete tier comparison and cost reduction roadmap for cPanel VPS licenses in Japan, highlighting Solo, Admin, and wholesale automated licensing.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">VPS向けcPanelライセンス料金体系＆プラン比較（2026年最新）</text>
+  <text x="735" y="62" font-family="'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif" font-size="13" font-weight="600" fill="#38BDF8">最大75%コスト削減</text>
+
+  <!-- 4 Columns -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel Solo</text>
+    <text x="20" y="65" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="600" fill="#2563EB">1アカウント上限</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• 公式定価: 約$17.49/月</text>
+    <text x="20" y="125" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#DC2626" font-weight="600">• 国内代理店: 約2,800円</text>
+    <text x="20" y="150" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• LicenBase: $4.00/月</text>
+    <text x="20" y="170" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#059669" font-weight="700">• LicenBase: 約600円/月</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">個人開発・単一ECサイト</text>
+  </g>
+
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel Admin</text>
+    <text x="20" y="65" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="600" fill="#059669">最大5アカウント</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• 公式定価: 約$29.99/月</text>
+    <text x="20" y="125" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#DC2626" font-weight="600">• 国内代理店: 約4,800円</text>
+    <text x="20" y="150" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• LicenBase: $4.00/月</text>
+    <text x="20" y="170" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#059669" font-weight="700">• LicenBase: 約600円/月</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">中小Web制作会社・法人</text>
+  </g>
+
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F172A">cPanel Pro</text>
+    <text x="20" y="65" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="600" fill="#D97706">最大30アカウント</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• 公式定価: 約$44.99/月</text>
+    <text x="20" y="125" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#DC2626" font-weight="600">• 国内代理店: 約7,200円</text>
+    <text x="20" y="150" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• LicenBase: $4.00/月</text>
+    <text x="20" y="170" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#059669" font-weight="700">• LicenBase: 約600円/月</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">リセラー・中規模ホスティング</text>
+  </g>
+
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="'Noto Sans JP', sans-serif" font-size="15" font-weight="700" fill="#0F172A">IP自動認証</text>
+    <text x="20" y="65" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="600" fill="#7C3AED">安心の公式機能</text>
+    <path d="M20 80 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="105" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• 危険な改変スクリプトなし</text>
+    <text x="20" y="125" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• 公式RPMリポジトリ接続</text>
+    <text x="20" y="145" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• IP変更・再発行が無料</text>
+    <text x="20" y="165" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#64748B">• 24時間365日サポート</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">公式アップデート完全対応</text>
+  </g>
+</svg>
