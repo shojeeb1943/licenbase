@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">JetBackup License and Backup Error Resolution Workflow</title>
+  <desc id="d">Comprehensive troubleshooting map for diagnosing JetBackup 5 license verification failures, destination errors, and snapshot execution stalls.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">JetBackup 5 Diagnostics &amp; Disaster Recovery Matrix</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Sysadmin Protocol</text>
+
+  <!-- 4 Diagnostic Stages -->
+  <!-- Stage 1 -->
+  <g transform="translate(35, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#EFF6FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle">01</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">License Status</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">CLI Verification:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• jetbackup5 -license</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check IP authorization</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Validate billing active</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Reissue IP in portal</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#EFF6FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Verify Active IP</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(263, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#ECFDF5"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">02</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Destination Auth</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Storage Testing:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• S3 API keys &amp; endpoint</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• SSH / SFTP private keys</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Test write permissions</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Reindex destination</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#ECFDF5"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Test Remote Handshake</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(491, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#FEF3C7"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#D97706" text-anchor="middle">03</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Rsync &amp; Stale Locks</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Clean Process Locks:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check /usr/local/jetapps</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Clear orphan lock files</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Kill hung rsync tasks</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Restart jetbackup5d</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#FEF3C7"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Clear Hung Tasks</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(719, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#F3E8FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="middle">04</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Queue &amp; Snapshots</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Worker Optimization:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Adjust worker concurrency</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Set IO nice limits</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Enable point-in-time test</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Execute test restore</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#F3E8FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Disaster Recovery Ready</text>
+  </g>
+</svg>

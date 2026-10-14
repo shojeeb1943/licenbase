@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Virtualizor VPS Startup and Boot Failure Troubleshooting</title>
+  <desc id="d">Diagnostic flow for troubleshooting Virtualizor KVM VPS startup failures, storage locking, network bridging, and RAM exhaustion.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Virtualizor VPS Boot Diagnostic Matrix</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">KVM Recovery Guide</text>
+
+  <!-- 4 Step Columns -->
+  <!-- Step 1 -->
+  <g transform="translate(35, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#EFF6FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle">01</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Storage &amp; Disk Lock</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Check QCOW2 / LVM:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check qemu-img check</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Inspect storage pool space</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Remove stale lock files</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Verify thin pool metadata</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#EFF6FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Verify Disk Health</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(263, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#ECFDF5"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">02</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">RAM &amp; CPU Limits</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Check Node Allocation:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Host OOM killer events</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Memory overcommit limits</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• vCPU pinning conflicts</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• HugePages configuration</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#ECFDF5"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Free Host Memory</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(491, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#FEF3C7"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#D97706" text-anchor="middle">03</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Network Bridge</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Bridge &amp; TAP Status:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check viifbr0 bridge</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• IP MAC conflict detection</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• ebtables rule blockage</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Restart network bridge</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#FEF3C7"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Validate TAP Bridge</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(719, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#F3E8FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="middle">04</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">VNC Console &amp; Logs</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Direct Inspection:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Open HTML5 VNC console</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• virsh console vpsid</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Grub boot menu rescue</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Inspect /var/log/virtualizor</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#F3E8FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Boot Rescue Kernel</text>
+  </g>
+</svg>

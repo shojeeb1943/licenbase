@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Hosting Business Software Stack Startup Budget 2026</title>
+  <desc id="d">Complete startup expense breakdown for launching an automated web hosting business using WHMCS, cPanel, and cloud infrastructure.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Web Hosting Business Software Budget in 2026</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Launch for Under $30/mo</text>
+
+  <!-- 4 Component Columns -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Billing &amp; CRM</text>
+    <text x="20" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#2563EB">$4.00 <tspan font-size="12" font-weight="400" fill="#64748B">/ mo</tspan></text>
+    <path d="M20 85 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="112" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">WHMCS Platform</text>
+    <text x="20" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Automated client billing</text>
+    <text x="20" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Stripe &amp; PayPal gateway</text>
+    <text x="20" y="175" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Support ticket desk</text>
+    <text x="20" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Domain registrar hook</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Retail Price: $29.95/mo</text>
+  </g>
+
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Control Panel</text>
+    <text x="20" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#059669">$4.00 <tspan font-size="12" font-weight="400" fill="#64748B">/ mo</tspan></text>
+    <path d="M20 85 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="112" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">cPanel &amp; WHM</text>
+    <text x="20" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 1-click WHMCS auto-setup</text>
+    <text x="20" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Free AutoSSL issuance</text>
+    <text x="20" y="175" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Client self-management</text>
+    <text x="20" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Professional email suite</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Retail Price: $29.99/mo</text>
+  </g>
+
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Cloud VPS Node</text>
+    <text x="20" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#D97706">$10.00 <tspan font-size="12" font-weight="400" fill="#64748B">/ mo</tspan></text>
+    <path d="M20 85 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="112" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Unmanaged Compute</text>
+    <text x="20" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 4 vCPU / 8 GB RAM node</text>
+    <text x="20" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Fast NVMe storage array</text>
+    <text x="20" y="175" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Dedicated public IPv4</text>
+    <text x="20" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 1 Gbps uplink bandwidth</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Hetzner / OVH / Vultr</text>
+  </g>
+
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <text x="20" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Speed &amp; Security</text>
+    <text x="20" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#7C3AED">$9.00 <tspan font-size="12" font-weight="400" fill="#64748B">/ mo</tspan></text>
+    <path d="M20 85 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="112" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">LiteSpeed + Softaculous</text>
+    <text x="20" y="135" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• LiteSpeed LSCache ($5/mo)</text>
+    <text x="20" y="155" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Softaculous 1-click ($2/mo)</text>
+    <text x="20" y="175" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Multi-tenant isolation</text>
+    <text x="20" y="195" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 3x higher account density</text>
+    <rect x="20" y="225" width="170" height="36" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Wholesale Stack</text>
+  </g>
+</svg>

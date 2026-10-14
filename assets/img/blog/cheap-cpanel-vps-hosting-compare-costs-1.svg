@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Managed cPanel VPS vs Unmanaged BYOL Architecture</title>
+  <desc id="d">Cost comparison between expensive traditional managed cPanel hosting and the cost-effective unmanaged VPS plus LicenBase wholesale license approach.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel VPS Cost &amp; Architecture Comparison</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Save Up To 75%</text>
+
+  <!-- Side-by-side comparison -->
+  <!-- Option A: Traditional Managed VPS -->
+  <g transform="translate(50, 105)">
+    <rect width="410" height="280" rx="14" fill="#FFFFFF" stroke="#EF4444" stroke-width="1.5"/>
+    <rect width="410" height="8" rx="4" fill="#EF4444"/>
+    <text x="30" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Traditional "Managed" cPanel VPS</text>
+    <text x="30" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800" fill="#DC2626">$65 – $120 <tspan font-size="13" font-weight="400" fill="#64748B">/ month</tspan></text>
+    <path d="M30 90 h350" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="30" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Bundled cloud compute with 300% retail markup</text>
+    <text x="30" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Retail cPanel license fees billed at standard tier rates</text>
+    <text x="30" y="180" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Inflexible vendor lock-in for compute upgrades</text>
+    <text x="30" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Slow ticketing triage for routine server tasks</text>
+
+    <rect x="30" y="235" width="350" height="34" rx="8" fill="#FEF2F2"/>
+    <text x="205" y="257" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#B91C1C" text-anchor="middle">Annual Cost: $780 – $1,440</text>
+  </g>
+
+  <!-- Option B: Unmanaged Cloud VPS + LicenBase BYOL -->
+  <g transform="translate(500, 105)">
+    <rect width="410" height="280" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <rect width="410" height="8" rx="4" fill="#10B981"/>
+    <text x="30" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Cloud VPS + LicenBase BYOL</text>
+    <text x="30" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800" fill="#059669">$14 – $22 <tspan font-size="13" font-weight="400" fill="#64748B">/ month</tspan></text>
+    <path d="M30 90 h350" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="30" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• High-spec KVM NVMe VPS (Hetzner, OVH, Vultr): ~$10/mo</text>
+    <text x="30" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Genuine automated cPanel license via LicenBase: $4/mo</text>
+    <text x="30" y="180" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• 100% full root control with independent IP assignment</text>
+    <text x="30" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Add LiteSpeed + CloudLinux combo stack affordably</text>
+
+    <rect x="30" y="235" width="350" height="34" rx="8" fill="#ECFDF5"/>
+    <text x="205" y="257" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">Annual Cost: $168 – $264 (Save ~$900/yr)</text>
+  </g>
+</svg>

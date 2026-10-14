@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">CloudLinux License Pre-Purchase Verification Checklist</title>
+  <desc id="d">Essential technical and licensing checks hosting providers must verify before purchasing a cheap CloudLinux OS license.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">CloudLinux License Buyer Verification Matrix</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">4 Essential Checks</text>
+
+  <!-- 4 Verification Columns -->
+  <!-- Col 1 -->
+  <g transform="translate(35, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#2563EB"/>
+    <circle cx="35" cy="42" r="16" fill="#EFF6FF"/>
+    <text x="35" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">1</text>
+    <text x="62" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Kernel &amp; CageFS</text>
+    <path d="M20 70 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+    
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Check Compatibility:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• AlmaLinux / RHEL 8 &amp; 9</text>
+    <text x="20" y="138" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• LVE kernel modules load</text>
+    <text x="20" y="158" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• CageFS filesystem isolation</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Native symlink protection</text>
+
+    <rect x="20" y="220" width="170" height="42" rx="8" fill="#EFF6FF"/>
+    <text x="105" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Full Kernel Protection</text>
+  </g>
+
+  <!-- Col 2 -->
+  <g transform="translate(262, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#059669"/>
+    <circle cx="35" cy="42" r="16" fill="#ECFDF5"/>
+    <text x="35" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">2</text>
+    <text x="62" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Official YUM Repos</text>
+    <path d="M20 70 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Check Mirror Integrity:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Direct cl-rhn-check</text>
+    <text x="20" y="138" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Unmodified official RPMs</text>
+    <text x="20" y="158" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• No patched binary hacks</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Up-to-date security errata</text>
+
+    <rect x="20" y="220" width="170" height="42" rx="8" fill="#ECFDF5"/>
+    <text x="105" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Official Updates</text>
+  </g>
+
+  <!-- Col 3 -->
+  <g transform="translate(489, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#D97706"/>
+    <circle cx="35" cy="42" r="16" fill="#FEF3C7"/>
+    <text x="35" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#D97706" text-anchor="middle">3</text>
+    <text x="62" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">IP-Based Licensing</text>
+    <path d="M20 70 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Check Automation:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Instant IP activation</text>
+    <text x="20" y="138" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Free IP re-issuance tool</text>
+    <text x="20" y="158" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• No vendor account locks</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• 24/7 automated sync</text>
+
+    <rect x="20" y="220" width="170" height="42" rx="8" fill="#FEF3C7"/>
+    <text x="105" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Instant IP Transfer</text>
+  </g>
+
+  <!-- Col 4 -->
+  <g transform="translate(715, 105)">
+    <rect width="210" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="210" height="8" rx="4" fill="#7C3AED"/>
+    <circle cx="35" cy="42" r="16" fill="#F3E8FF"/>
+    <text x="35" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#7C3AED" text-anchor="middle">4</text>
+    <text x="62" y="47" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0F172A">PHP &amp; Hardened Stack</text>
+    <path d="M20 70 h170" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Check Suite Features:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• HardenedPHP for EOL PHP</text>
+    <text x="20" y="138" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• MySQL Governor limits</text>
+    <text x="20" y="158" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Mod_lsapi acceleration</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• cPanel / DirectAdmin hook</text>
+
+    <rect x="20" y="220" width="170" height="42" rx="8" fill="#F3E8FF"/>
+    <text x="105" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Full Stack Suite</text>
+  </g>
+</svg>

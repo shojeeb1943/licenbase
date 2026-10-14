@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Softaculous vs Manual WordPress Installation on VPS</title>
+  <desc id="d">Feature and workflow comparison between Softaculous automated WordPress deployment and manual terminal / FTP installation on VPS servers.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Top Title -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Softaculous vs Manual WordPress on VPS Hosting</text>
+  <text x="735" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Workflow Comparison</text>
+
+  <!-- Side-by-side comparison -->
+  <!-- Left: Manual Installation -->
+  <g transform="translate(50, 105)">
+    <rect width="410" height="280" rx="14" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <rect width="410" height="8" rx="4" fill="#64748B"/>
+    <text x="30" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Manual WordPress Setup</text>
+    <text x="30" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#64748B">CLI / FTP / phpMyAdmin</text>
+    <path d="M30 90 h350" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="30" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Download zip archive, extract files via FTP/SSH</text>
+    <text x="30" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Manually create MySQL database, user &amp; grant privileges</text>
+    <text x="30" y="180" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• No automated 1-click staging or cloning environment</text>
+    <text x="30" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Time to deploy: 10 – 15 minutes per website</text>
+
+    <rect x="30" y="235" width="350" height="34" rx="8" fill="#F1F5F9"/>
+    <text x="205" y="257" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">High Administrative Friction for Clients</text>
+  </g>
+
+  <!-- Right: Softaculous Automated Setup -->
+  <g transform="translate(500, 105)">
+    <rect width="410" height="280" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="410" height="8" rx="4" fill="#2563EB"/>
+    <text x="30" y="42" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Softaculous 1-Click Auto-Installer</text>
+    <text x="30" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#2563EB">Instant Full Automation</text>
+    <path d="M30 90 h350" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <text x="30" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• 60-second automated install with pre-configured DB</text>
+    <text x="30" y="150" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• 1-click Staging environment with live-push synchronization</text>
+    <text x="30" y="180" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Automated scheduled backups to Google Drive, S3, or SFTP</text>
+    <text x="30" y="210" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#475569">• Automated core, plugin &amp; theme security patch updates</text>
+
+    <rect x="30" y="235" width="350" height="34" rx="8" fill="#EFF6FF"/>
+    <text x="205" y="257" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">Effortless Client Experience ($1.50/mo)</text>
+  </g>
+</svg>

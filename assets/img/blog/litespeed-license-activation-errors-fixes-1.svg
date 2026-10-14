@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LiteSpeed License Activation Error Diagnostic Workflow</title>
+  <desc id="d">Step-by-step troubleshooting path for resolving LiteSpeed Web Server license key errors, serial mismatches, and network verification failures.</desc>
+  <rect width="960" height="420" rx="20" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect x="35" y="25" width="890" height="60" rx="12" fill="#0F172A"/>
+  <text x="55" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">LiteSpeed License Activation Diagnostic Flow</text>
+  <text x="730" y="62" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">9 Fixes Workflow</text>
+
+  <!-- Flow Steps -->
+  <!-- Step 1 -->
+  <g transform="translate(35, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#EFF6FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle">01</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Serial &amp; Key File</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Inspect File Path:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• /usr/local/lsws/conf/</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check license.key file</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Verify serial.no syntax</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Remove trailing spaces</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#EFF6FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Validate Key Syntax</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(263, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#ECFDF5"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">02</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Network &amp; Port 443</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Outbound Verification:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• curl https://licenbase.com</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Firewall CSF outbound</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Main server IP binding</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check NAT interface IP</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#ECFDF5"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">Unblock Outbound</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(491, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#FEF3C7"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#D97706" text-anchor="middle">03</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">chklic &amp; Re-sync</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">CLI Resync Command:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Run ./lshttpd -v</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Execute chklic script</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Clear expired trial locks</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Reissue IP in portal</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#FEF3C7"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">Refresh Local Cache</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(719, 105)">
+    <rect width="205" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="35" cy="40" r="16" fill="#F3E8FF"/>
+    <text x="35" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="middle">04</text>
+    <text x="60" y="45" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Restart &amp; Verify</text>
+    <path d="M20 70 h165" stroke="#F1F5F9" stroke-width="1.5"/>
+    <text x="20" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Production Check:</text>
+    <text x="20" y="118" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• systemctl restart lsws</text>
+    <text x="20" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Verify WebAdmin port 7080</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Check LSCache response</text>
+    <text x="20" y="172" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#64748B">• Confirm active tier mode</text>
+    <rect x="20" y="220" width="165" height="42" rx="8" fill="#F3E8FF"/>
+    <text x="102" y="246" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#6D28D9" text-anchor="middle">Enterprise Active</text>
+  </g>
+</svg>
