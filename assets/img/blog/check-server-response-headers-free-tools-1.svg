@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg16)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">HTTP Server Response Header Lifecycle</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Inspecting Status Codes, Cache-Control, Compression, and Server Signatures</text>
+
+  <rect x="50" y="105" width="210" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="155" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Status &amp; Routing</text>
+  <text x="155" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Protocol Handshake</text>
+  <line x1="70" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="70" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• HTTP/2 &amp; HTTP/3 (QUIC)</text>
+  <text x="70" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• 200 OK / 301 Redirect</text>
+  <text x="70" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Location: header targets</text>
+  <text x="70" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Canonical link headers</text>
+  <rect x="70" y="325" width="170" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="155" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Status Integrity</text>
+
+  <rect x="295" y="105" width="210" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="140" fill="#f59e0b" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Caching &amp; Speed</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Performance Headers</text>
+  <line x1="315" y1="180" x2="485" y2="180" stroke="#334155"/>
+  <text x="315" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Cache-Control: max-age</text>
+  <text x="315" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Content-Encoding: br, gzip</text>
+  <text x="315" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• X-LiteSpeed-Cache: hit</text>
+  <text x="315" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• ETag &amp; Last-Modified</text>
+  <rect x="315" y="325" width="170" height="32" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#fbbf24" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Delivery Speed</text>
+
+  <rect x="540" y="105" width="210" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="645" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Information Leak</text>
+  <text x="645" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Hardening Server Headers</text>
+  <line x1="560" y1="180" x2="730" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Suppress Server: Apache/X.X</text>
+  <text x="560" y="235" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Remove X-Powered-By: PHP</text>
+  <text x="560" y="260" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Prevent version fingerprinting</text>
+  <text x="560" y="285" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Free LicenBase Header Tool</text>
+  <rect x="560" y="325" width="170" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="645" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Fingerprint Hidden</text>
+</svg>

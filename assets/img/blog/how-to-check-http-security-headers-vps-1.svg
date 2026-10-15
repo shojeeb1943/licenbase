@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg9)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Essential HTTP Security Headers Defense Stack</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Hardening Web Applications Against XSS, Clickjacking, and MIME Sniffing</text>
+
+  <rect x="50" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="215" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Core Security Headers</text>
+  <text x="215" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Key Browser Directives</text>
+  <line x1="70" y1="180" x2="360" y2="180" stroke="#334155"/>
+  <text x="70" y="210" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Strict-Transport-Security (HSTS)</text>
+  <text x="70" y="238" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Content-Security-Policy (CSP)</text>
+  <text x="70" y="266" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ X-Frame-Options: SAMEORIGIN</text>
+  <text x="70" y="294" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ X-Content-Type-Options: nosniff</text>
+  <text x="70" y="322" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Referrer-Policy: strict-origin-when-cross-origin</text>
+
+  <rect x="420" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="585" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Attacks Mitigated</text>
+  <text x="585" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Real-World Threat Protection</text>
+  <line x1="440" y1="180" x2="730" y2="180" stroke="#334155"/>
+  <text x="440" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Prevents SSL Stripping &amp; MITM attacks</text>
+  <text x="440" y="238" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Blocks Cross-Site Scripting (XSS) execution</text>
+  <text x="440" y="266" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Stops iFrame Clickjacking &amp; UI redressing</text>
+  <text x="440" y="294" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Stops executable MIME-type spoofing</text>
+  <text x="440" y="322" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Prevents internal path &amp; token leakage</text>
+</svg>

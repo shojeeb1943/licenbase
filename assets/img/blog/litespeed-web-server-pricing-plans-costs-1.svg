@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg3)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">LiteSpeed Web Server Tier Comparison &amp; Requirements</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">RAM, Worker Process Limits, and LSCache Acceleration</text>
+
+  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">LSWS Starter / Mini</text>
+  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Small VPS &amp; Personal Sites</text>
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• 1 Worker Process</text>
+  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Up to 2GB - 8GB RAM</text>
+  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• 1-5 Domain Limit</text>
+  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Built-in LSCache</text>
+  <rect x="60" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="150" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Single-Site Workloads</text>
+
+  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="400" y="140" fill="#0ea5e9" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">LSWS Web Host 1-CPU</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Agencies &amp; Resellers</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
+  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• 1 Worker Process</text>
+  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Unlimited RAM</text>
+  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Unlimited Domains</text>
+  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• cPanel / Plesk Integration</text>
+  <rect x="310" y="325" width="180" height="32" rx="6" fill="#0ea5e9" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Most Popular VPS Plan</text>
+
+  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="650" y="140" fill="#a855f7" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">LSWS Multi-CPU (2–8)</text>
+  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">High-Traffic eCommerce</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• 2 to 8 Worker Processes</text>
+  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Unlimited RAM</text>
+  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Unlimited Domains</text>
+  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Massive Concurrent I/O</text>
+  <rect x="560" y="325" width="180" height="32" rx="6" fill="#a855f7" fill-opacity="0.2"/>
+  <text x="650" y="346" fill="#c084fc" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Dedicated / High Core VPS</text>
+</svg>

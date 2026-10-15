@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg4)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Softaculous Premium vs Free Auto-Installers</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Comparison of Features, Maintenance, Security, and Pricing</text>
+
+  <rect x="50" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="215" y="140" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Free / Manual Alternatives</text>
+  <text x="215" y="165" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">WP-CLI, Manual Zip, Basic Installers</text>
+  <line x1="70" y1="180" x2="360" y2="180" stroke="#334155"/>
+  <text x="70" y="210" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ 59 script limit in free version</text>
+  <text x="70" y="238" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ No automated staging &amp; push-to-live</text>
+  <text x="70" y="266" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ Manual database &amp; wp-config configuration</text>
+  <text x="70" y="294" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ No automated backup to Google Drive / S3</text>
+  <text x="70" y="322" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ High technical support burden for users</text>
+
+  <rect x="420" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+  <text x="585" y="140" fill="#60a5fa" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Softaculous Premium (LicenBase)</text>
+  <text x="585" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Enterprise 1-Click Automation</text>
+  <line x1="440" y1="180" x2="730" y2="180" stroke="#334155"/>
+  <text x="440" y="210" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ 430+ 1-click install scripts</text>
+  <text x="440" y="238" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ 1-click WordPress staging &amp; cloning</text>
+  <text x="440" y="266" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Automatic core, theme &amp; plugin security updates</text>
+  <text x="440" y="294" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Automated backups to Dropbox, GDrive, Nextcloud</text>
+  <text x="440" y="322" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Integrated into cPanel, Plesk, DirectAdmin</text>
+</svg>

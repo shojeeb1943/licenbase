@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6b35" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg)"/>
+  <text x="400" y="48" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">2026 cPanel VPS License Activation Workflow</text>
+  <text x="400" y="75" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">Retail vs LicenBase Wholesale IP Licensing</text>
+  
+  <rect x="50" y="110" width="210" height="250" rx="12" fill="url(#card1)" stroke="#334155" stroke-width="2"/>
+  <circle cx="155" cy="155" r="28" fill="#ff6b35" fill-opacity="0.2"/>
+  <text x="155" y="162" fill="#ff6b35" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="bold" text-anchor="middle">1</text>
+  <text x="155" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" text-anchor="middle">Step 1: IP Assignment</text>
+  <text x="155" y="240" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Deploy Linux VPS</text>
+  <text x="155" y="260" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Provide Dedicated IPv4</text>
+  <text x="155" y="280" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Select Tier: Solo/Admin/Pro</text>
+  <rect x="75" y="310" width="160" height="30" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
+  <text x="155" y="330" fill="#60a5fa" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" text-anchor="middle">Instant IP Verification</text>
+
+  <rect x="295" y="110" width="210" height="250" rx="12" fill="url(#card1)" stroke="#334155" stroke-width="2"/>
+  <circle cx="400" cy="155" r="28" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="400" y="162" fill="#f59e0b" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="bold" text-anchor="middle">2</text>
+  <text x="400" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" text-anchor="middle">Step 2: Script Execution</text>
+  <text x="400" y="240" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Run 1-Line Command</text>
+  <text x="400" y="260" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Connects Official Mirrors</text>
+  <text x="400" y="280" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">30-Second Automation</text>
+  <rect x="320" y="310" width="160" height="30" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="400" y="330" fill="#fbbf24" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" text-anchor="middle">100% Genuine Binaries</text>
+
+  <rect x="540" y="110" width="210" height="250" rx="12" fill="url(#card1)" stroke="#334155" stroke-width="2"/>
+  <circle cx="645" cy="155" r="28" fill="#10b981" fill-opacity="0.2"/>
+  <text x="645" y="162" fill="#10b981" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="bold" text-anchor="middle">3</text>
+  <text x="645" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" text-anchor="middle">Step 3: cpkeyclt Valid</text>
+  <text x="645" y="240" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Key Status: Active</text>
+  <text x="645" y="260" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">WHM Root Access Unlocked</text>
+  <text x="645" y="280" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Automated Renewal</text>
+  <rect x="565" y="310" width="160" height="30" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="645" y="330" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" text-anchor="middle">75% Lower Overhead</text>
+  
+  <path d="M 265 235 L 290 235" stroke="#ff6b35" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M 510 235 L 535 235" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+</svg>

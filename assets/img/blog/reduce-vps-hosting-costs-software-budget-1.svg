@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg12)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">VPS Hosting Monthly Budget: Traditional vs LicenBase</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Cost Comparison of Complete Production Server Software Stack</text>
+
+  <rect x="50" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+  <text x="215" y="140" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Traditional Retail Stack</text>
+  <text x="215" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">$145+ / Month ($1,740/year)</text>
+  <line x1="70" y1="180" x2="360" y2="180" stroke="#334155"/>
+  <text x="70" y="210" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Managed VPS Markup: $50.00/mo</text>
+  <text x="70" y="238" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Retail cPanel Pro (30 accts): $44.99/mo</text>
+  <text x="70" y="266" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Retail LiteSpeed 1-CPU: $26.00/mo</text>
+  <text x="70" y="294" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Retail CloudLinux: $16.00/mo</text>
+  <text x="70" y="322" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Retail Softaculous: $2.00/mo</text>
+
+  <rect x="420" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="585" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">LicenBase Optimized Stack</text>
+  <text x="585" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">$27.50 / Month ($330/year)</text>
+  <line x1="440" y1="180" x2="730" y2="180" stroke="#334155"/>
+  <text x="440" y="210" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Raw Cloud KVM (Hetzner/Vultr): $12.00/mo</text>
+  <text x="440" y="238" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ LicenBase cPanel License: $4.00/mo</text>
+  <text x="440" y="266" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ LicenBase LiteSpeed License: $5.00/mo</text>
+  <text x="440" y="294" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ LicenBase CloudLinux License: $5.00/mo</text>
+  <text x="440" y="322" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ LicenBase Softaculous: $1.50/mo</text>
+</svg>

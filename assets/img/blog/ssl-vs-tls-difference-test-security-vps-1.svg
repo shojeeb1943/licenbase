@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg10)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">SSL vs TLS Evolution &amp; Handshake Cryptography</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Comparing Deprecated Protocols (SSL 3.0 / TLS 1.0) with Modern TLS 1.3</text>
+
+  <rect x="50" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+  <text x="215" y="140" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Deprecated (Insecure)</text>
+  <text x="215" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">SSL 2.0, SSL 3.0, TLS 1.0, TLS 1.1</text>
+  <line x1="70" y1="180" x2="360" y2="180" stroke="#334155"/>
+  <text x="70" y="210" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ Vulnerable to POODLE, BEAST, DROWN</text>
+  <text x="70" y="238" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ Weak legacy ciphers (RC4, 3DES, MD5)</text>
+  <text x="70" y="266" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ 2-RTT roundtrip handshake latency</text>
+  <text x="70" y="294" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ Deprecated by major web browsers (Chrome/Safari)</text>
+  <text x="70" y="322" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="12">✗ Fails PCI-DSS compliance audits</text>
+
+  <rect x="420" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="585" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Modern Standards</text>
+  <text x="585" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">TLS 1.2 &amp; TLS 1.3</text>
+  <line x1="440" y1="180" x2="730" y2="180" stroke="#334155"/>
+  <text x="440" y="210" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Forward Secrecy (ECDHE) mandatory</text>
+  <text x="440" y="238" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Modern AEAD ciphers (AES-GCM, ChaCha20)</text>
+  <text x="440" y="266" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ 1-RTT handshake &amp; 0-RTT early data resumption</text>
+  <text x="440" y="294" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Fully compliant with PCI-DSS 4.0 &amp; HIPAA</text>
+  <text x="440" y="322" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Native support in cPanel &amp; LiteSpeed</text>
+</svg>

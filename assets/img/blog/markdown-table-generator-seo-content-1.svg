@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg15)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Markdown Table Generation &amp; SEO Impact</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">How Structured HTML/Markdown Tables Win Google Featured Snippets</text>
+
+  <rect x="50" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="215" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Markdown Source</text>
+  <text x="215" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Fast, Clean Documentation</text>
+  <line x1="70" y1="180" x2="360" y2="180" stroke="#334155"/>
+  <text x="70" y="210" fill="#f8fafc" font-family="mono" font-size="11">| Plan | Workers | Price |</text>
+  <text x="70" y="235" fill="#f8fafc" font-family="mono" font-size="11">|------|---------|-------|</text>
+  <text x="70" y="260" fill="#f8fafc" font-family="mono" font-size="11">| Mini | 1 CPU   | $5/mo |</text>
+  <text x="70" y="285" fill="#f8fafc" font-family="mono" font-size="11">| Host | 2 CPU   | $5/mo |</text>
+  <text x="70" y="325" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Visual generator prevents syntax errors</text>
+  <text x="70" y="348" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Export to Markdown, HTML, CSV</text>
+
+  <rect x="420" y="105" width="330" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="585" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Search Engine Advantage</text>
+  <text x="585" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Rankings &amp; User Engagement</text>
+  <line x1="440" y1="180" x2="730" y2="180" stroke="#334155"/>
+  <text x="440" y="210" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Google Position 0 Table Snippets</text>
+  <text x="440" y="238" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Higher dwell time &amp; user scannability</text>
+  <text x="440" y="266" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Clear comparative intent matching</text>
+  <text x="440" y="294" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Mobile-responsive overflow wrappers</text>
+  <text x="440" y="322" fill="#86efac" font-family="system-ui,-apple-system,sans-serif" font-size="12">✓ Used across all 230+ LicenBase guides</text>
+</svg>

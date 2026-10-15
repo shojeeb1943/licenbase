@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bg2)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Buying a Cheap cPanel License: 4 Costly Traps vs LicenBase</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Comparing Risky Methods With Enterprise Shared IP Licensing</text>
+
+  <rect x="40" y="105" width="340" height="280" rx="12" fill="#1e1b24" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="210" y="135" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Common Traps &amp; Risks</text>
+  <text x="70" y="175" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">1. Nulled &amp; Cracked Scripts</text>
+  <text x="70" y="195" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">Root backdoors, cryptominers, data theft</text>
+  
+  <text x="70" y="230" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">2. High Retail Markup Resellers</text>
+  <text x="70" y="250" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">Paying $30-$45/mo for tiny 5-account VPS</text>
+  
+  <text x="70" y="285" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">3. DC Blacklist &amp; Suspension</text>
+  <text x="70" y="305" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">Hetzner / OVH terminates servers running pirated keys</text>
+
+  <text x="70" y="340" fill="#fca5a5" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">4. Broken Upgrades</text>
+  <text x="70" y="360" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">cPanel updates fail, leaving unpatched zero-days</text>
+
+  <rect x="420" y="105" width="340" height="280" rx="12" fill="#0f241d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="590" y="135" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">The LicenBase Smart Solution</text>
+  <text x="450" y="175" fill="#6ee7b7" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">1. 100% Original Official Code</text>
+  <text x="450" y="195" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">Direct access to cPanel update mirrors without hacks</text>
+  
+  <text x="450" y="230" fill="#6ee7b7" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">2. Flat Wholesale Pricing ($4.00/mo)</text>
+  <text x="450" y="250" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">Save 75% without artificial account penalty tiers</text>
+  
+  <text x="450" y="285" fill="#6ee7b7" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">3. Instant IP Reissue Guarantee</text>
+  <text x="450" y="305" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">Migrate servers anytime with zero re-licensing fees</text>
+
+  <text x="450" y="340" fill="#6ee7b7" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600">4. Seamless Automation</text>
+  <text x="450" y="360" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12">1-line activation, cpkeyclt verified in 30 seconds</text>
+</svg>
