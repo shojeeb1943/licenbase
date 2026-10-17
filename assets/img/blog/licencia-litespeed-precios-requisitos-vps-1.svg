@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bglsesp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bglsesp)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Licencia LiteSpeed: Precios y Requisitos para VPS en Español</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Planes Site Owner y Web Host, Aceleración WordPress y LicenBase</text>
+
+  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Planes LiteSpeed</text>
+  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Capacidad de Workers</text>
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Site Owner: 5 dominios / 8GB</text>
+  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Web Host 1-CPU: ilimitado</text>
+  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Web Host 2-CPU+: eCommerce</text>
+  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Soporte HTTP/3 QUIC nativo</text>
+  <rect x="60" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="150" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Alto Rendimiento</text>
+
+  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
+  <text x="400" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Precios Minoristas</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Tarifas Oficiales en USD</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
+  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Site Owner: $10.00 / mes</text>
+  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Web Host 1-CPU: $26.00 / mes</text>
+  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Web Host 2-CPU: $38.00 / mes</text>
+  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Web Host 4-CPU: $52.00 / mes</text>
+  <rect x="310" y="325" width="180" height="32" rx="6" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Precios Elevados</text>
+
+  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="650" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Tarifa LicenBase</text>
+  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Licencia IP Mayorista</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Tarifa plana de $5.00 / mes</text>
+  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Ahorro de hasta un 75%</text>
+  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Validación directa cpkeyclt</text>
+  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Cambios de IP gratuitos</text>
+  <rect x="560" y="325" width="180" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="650" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Ahorra en tu VPS</text>
+</svg>

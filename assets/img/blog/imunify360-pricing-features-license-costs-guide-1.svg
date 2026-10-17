@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgimun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bgimun)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Imunify360 Security Architecture & License Pricing</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">6-Layer Automated Web Protection vs Retail Licensing Overhead</text>
+
+  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">6-Layer Defense</text>
+  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Automated Server Shield</text>
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• WAF & Herd Immunity</text>
+  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Proactive PHP Defense</text>
+  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Real-time malware cleanup</text>
+  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Hardened PAM & SSH jail</text>
+  <rect x="60" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="150" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Comprehensive</text>
+
+  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
+  <text x="400" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Retail Pricing</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Account-Based Tiers</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
+  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Single User: $12.00 / mo</text>
+  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Up to 30 users: $25.00 / mo</text>
+  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Unlimited: $45.00 / mo</text>
+  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Price increases each year</text>
+  <rect x="310" y="325" width="180" height="32" rx="6" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Cost Heavy</text>
+
+  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="650" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">LicenBase Rate</text>
+  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Direct Wholesale IP</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Flat $5.00 / mo rate</text>
+  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Full unlimited users allowed</text>
+  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Direct official signatures</text>
+  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Seamless cPanel integration</text>
+  <rect x="560" y="325" width="180" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="650" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Save Up To 80%</text>
+</svg>

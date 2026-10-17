@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgclnotdet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bgclnotdet)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Fixing CloudLinux License Not Detected in cPanel WHM</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">RHN Trust Certificates, Network Time Sync, and LVE Kernel Binding</text>
+
+  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Root Causes</text>
+  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Why WHM Shows Unlicensed</text>
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• System time drift (SSL fail)</text>
+  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Outbound port 443 blocked</text>
+  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Missing public IPv4 binding</text>
+  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Corrupt /etc/sysconfig/rhn</text>
+  <rect x="60" y="325" width="180" height="32" rx="6" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="150" y="346" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Diagnostic Triggers</text>
+
+  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
+  <text x="400" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Triage Sequence</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Terminal Commands</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
+  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• chronyc -a makestep</text>
+  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• cldiag --check-license</text>
+  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• cl-rhn-check verification</text>
+  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• yum clean all cache flush</text>
+  <rect x="310" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Command Pipeline</text>
+
+  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="650" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">LicenBase Reissue</text>
+  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Instant Re-activation</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Verify IPv4 in dashboard</text>
+  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Run automated setup script</text>
+  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• cagefsctl --remount-all</text>
+  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• LVE Manager fully active</text>
+  <rect x="560" y="325" width="180" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="650" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">100% Operational</text>
+</svg>

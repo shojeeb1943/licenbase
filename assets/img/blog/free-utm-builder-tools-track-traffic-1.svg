@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgutmtool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bgutmtool)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">UTM Campaign Tracking Architecture & Builder Workflow</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Standardizing Parameters, Avoiding Data Fragmentation, and Free Tools</text>
+
+  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Core Parameters</text>
+  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">The 5 Essential Tags</text>
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• utm_source (Google, Twitter)</text>
+  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• utm_medium (email, cpc, social)</text>
+  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• utm_campaign (promo, launch)</text>
+  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• utm_term & utm_content</text>
+  <rect x="60" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="150" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Standard Tags</text>
+
+  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
+  <text x="400" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Common Pitfalls</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Tracking Mistakes</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
+  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Mixed casing (Email vs email)</text>
+  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Using UTMs on internal links</text>
+  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Overwriting referrer data</text>
+  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Unencoded spaces in URL</text>
+  <rect x="310" y="325" width="180" height="32" rx="6" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Data Corruption</text>
+
+  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="650" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">LicenBase Tool</text>
+  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Free Online Generator</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• /tools/utm-builder instant link</text>
+  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Auto URL encoding & copy</text>
+  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Preset naming conventions</text>
+  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• 100% private, no tracking</text>
+  <rect x="560" y="325" width="180" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="650" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Free & Fast</text>
+</svg>

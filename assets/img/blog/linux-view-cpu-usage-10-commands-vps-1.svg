@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgcpucmd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="16" fill="url(#bgcpucmd)"/>
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Linux View CPU Usage: 10 Diagnostic Commands for VPS</text>
+  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Interactive Monitors, Process Trackers, and Historical Kernel Metrics</text>
+
+  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Interactive TUI</text>
+  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Live Process Overview</text>
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
+  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• top: default native monitor</text>
+  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• htop: colorful process tree</text>
+  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• atop: resource saturation</text>
+  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• glances: cross-platform overview</text>
+  <rect x="60" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="150" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Real-Time TUI</text>
+
+  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
+  <text x="400" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Targeted Metrics</text>
+  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Process & Thread Drilldown</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
+  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• ps aux --sort=-%cpu</text>
+  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• pidstat 1 -u for thread spikes</text>
+  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• mpstat -P ALL per-core loads</text>
+  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• vmstat 1 system buffer metrics</text>
+  <rect x="310" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <text x="400" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Detailed Inspection</text>
+
+  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="650" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Historical Logs</text>
+  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Catching Past Spikes</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
+  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• sar -u historical CPU stats</text>
+  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• dstat combined performance</text>
+  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Identify CPU steal time</text>
+  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Find rogue cron scripts</text>
+  <rect x="560" y="325" width="180" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="650" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Incident Triage</text>
+</svg>
