@@ -203,8 +203,9 @@ def thumb(p):
             f'class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />')
 
 
-def card(p):
-    return f"""        <a href="/blog/{p['slug']}" class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+def card(p, idx=0):
+    hidden_class = " hidden" if idx >= 18 else ""
+    return f"""        <a href="/blog/{p['slug']}" data-card-index="{idx}" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg{hidden_class}">
           {thumb(p)}
           <div class="flex flex-1 flex-col justify-between p-6">
             <div>
@@ -244,6 +245,8 @@ def build_index(tpl):
     title = "Hosting Guides &amp; License Comparisons | LicenBase Blog"
     desc = "Guides and comparisons on cPanel, Plesk, LiteSpeed and other hosting licenses: setup how-tos, buying advice and tips for hosting providers."
     posts = sorted(POSTS, key=lambda p: p["date"], reverse=True)
+    total_posts = len(posts)
+    initial_end = min(18, total_posts)
     ld = [
         crumbs([("Home", "/"), ("Blog", "/blog/")]),
         {
@@ -259,6 +262,7 @@ def build_index(tpl):
     head = meta_block(title=title, desc=desc, path="/blog/", image=og_url("blog"),
                       image_alt="LicenBase blog: hosting license guides and comparisons",
                       og_type="website", og_title="Hosting Guides &amp; License Comparisons", ld=ld)
+    cards_html = "".join(card(p, idx) for idx, p in enumerate(posts))
     main = f"""
 
   <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
@@ -277,8 +281,120 @@ def build_index(tpl):
 
   <section class="py-12 lg:py-16">
     <div class="lb-shell">
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-{"".join(card(p) for p in posts)}      </div>
+      <div id="blog-articles-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+{cards_html}      </div>
+
+      <!-- Infinite Scroll Status & Controls -->
+      <div id="blog-scroll-status" class="mt-10 flex items-center justify-between border-t border-gray-200 pt-6 text-sm text-gray-500">
+        <p>Showing <span class="font-bold text-navy" id="showing-count">{initial_end}</span> of <span class="font-bold text-navy">{total_posts}</span> articles</p>
+        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+          <i data-lucide="sparkles" class="h-3.5 w-3.5 text-brand"></i> Auto-loading on scroll
+        </span>
+      </div>
+
+      <!-- Scroll Sentinel & Loading Indicator -->
+      <div id="scroll-sentinel" class="h-8 w-full" aria-hidden="true"></div>
+
+      <div id="scroll-loading" class="mt-4 flex items-center justify-center gap-2.5 py-4 text-sm font-semibold text-gray-500" style="display: none;">
+        <svg class="h-5 w-5 animate-spin text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10"></path>
+        </svg>
+        <span>Loading more articles...</span>
+      </div>
+
+      <div id="scroll-end" class="mt-8 hidden border-t border-gray-200 pt-8 text-center">
+        <div class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-semibold text-gray-500 shadow-sm">
+          <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>All {total_posts} articles loaded</span>
+        </div>
+      </div>
+
+      <!-- Manual fallback button if browser stops scrolling or prefers click -->
+      <div id="load-more-container" class="mt-6 text-center" style="display: none;">
+        <button id="load-more-btn" type="button" class="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm transition hover:border-brand/40 hover:bg-gray-50 hover:text-brand">
+          <span>Load more articles</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+
+      <noscript>
+        <style>
+          .lb-blog-card.hidden {{ display: flex !important; }}
+          #scroll-sentinel, #scroll-loading, #scroll-end, #load-more-container, #blog-scroll-status {{ display: none !important; }}
+        </style>
+      </noscript>
+
+      <script>
+        (function() {{
+          const BATCH_SIZE = 18;
+          const grid = document.getElementById('blog-articles-grid');
+          const cards = grid ? Array.from(grid.querySelectorAll('.lb-blog-card')) : [];
+          const totalArticles = cards.length;
+          const countEl = document.getElementById('showing-count');
+          const sentinel = document.getElementById('scroll-sentinel');
+          const loadingEl = document.getElementById('scroll-loading');
+          const endEl = document.getElementById('scroll-end');
+          const loadMoreBtn = document.getElementById('load-more-btn');
+          const loadMoreContainer = document.getElementById('load-more-container');
+
+          if (!grid || totalArticles <= BATCH_SIZE) {{
+            if (sentinel) sentinel.style.display = 'none';
+            return;
+          }}
+
+          let currentVisible = Math.min(BATCH_SIZE, totalArticles);
+          let isLoading = false;
+
+          function loadNextBatch() {{
+            if (isLoading || currentVisible >= totalArticles) return;
+            isLoading = true;
+            if (loadingEl) loadingEl.style.display = 'flex';
+
+            requestAnimationFrame(() => {{
+              const nextVisible = Math.min(currentVisible + BATCH_SIZE, totalArticles);
+              for (let i = currentVisible; i < nextVisible; i++) {{
+                if (cards[i]) cards[i].classList.remove('hidden');
+              }}
+              currentVisible = nextVisible;
+              if (countEl) countEl.textContent = currentVisible;
+              if (loadingEl) loadingEl.style.display = 'none';
+              isLoading = false;
+
+              if (currentVisible >= totalArticles) {{
+                if (observer && sentinel) observer.unobserve(sentinel);
+                if (sentinel) sentinel.style.display = 'none';
+                if (loadMoreContainer) loadMoreContainer.style.display = 'none';
+                if (endEl) endEl.classList.remove('hidden');
+              }}
+            }});
+          }}
+
+          if (loadMoreBtn) {{
+            loadMoreBtn.addEventListener('click', loadNextBatch);
+          }}
+
+          let observer;
+          if ('IntersectionObserver' in window && sentinel) {{
+            observer = new IntersectionObserver((entries) => {{
+              entries.forEach(entry => {{
+                if (entry.isIntersecting) {{
+                  loadNextBatch();
+                }}
+              }});
+            }}, {{
+              root: null,
+              rootMargin: '400px 0px',
+              threshold: 0
+            }});
+            observer.observe(sentinel);
+          }} else if (loadMoreContainer) {{
+            loadMoreContainer.style.display = 'block';
+          }}
+        }})();
+      </script>
     </div>
   </section>
 
