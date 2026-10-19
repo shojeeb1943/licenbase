@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">WHM LOGIN TROUBLESHOOTING WORKFLOW</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Resolving WHM Root &amp; Reseller Authentication Failures</text>
+  
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="url(#box)" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="65" cy="140" r="12" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="65" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">1</text>
+  <text x="88" y="145" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Identify Root Cause</text>
+  <text x="55" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• cPHulk Brute-Force Block</text>
+  <text x="55" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Expired Root Password</text>
+  <text x="55" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Corrupt Session Cache</text>
+  <text x="55" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• iptables / CSF Drop Rule</text>
+
+  <path d="M 260 190 L 290 190" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="url(#box)" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="315" cy="140" r="12" fill="#38bdf8" fill-opacity="0.2"/>
+  <text x="315" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2</text>
+  <text x="338" y="145" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Execute CLI Fixes</text>
+  <text x="305" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-family="monospace">whmapi1 flush_cphulk_logs</text>
+  <text x="305" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-family="monospace">passwd root</text>
+  <text x="305" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-family="monospace">csf -a YOUR_PUBLIC_IP</text>
+  <text x="305" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-family="monospace">/scripts/restartsrv_cpsrvd</text>
+
+  <path d="M 510 190 L 540 190" stroke="#22c55e" stroke-width="2"/>
+
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="url(#box)" stroke="#22c55e" stroke-width="1.5"/>
+  <circle cx="565" cy="140" r="12" fill="#22c55e" fill-opacity="0.2"/>
+  <text x="565" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3</text>
+  <text x="588" y="145" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Verify &amp; Whitelist</text>
+  <text x="555" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Port 2087 SSL Handshake</text>
+  <text x="555" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• cPHulk Whitelist Static IP</text>
+  <text x="555" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• 2FA / Session Recovery</text>
+  <text x="555" y="235" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✓ Access Restored</text>
+
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Pro-Tip for Emergency Terminal WHM Access:</text>
+  <text x="60" y="340" fill="#94a3b8" font-family="monospace" font-size="12">whmapi1 create_user_session user=root service=whostmgrd</text>
+  <text x="60" y="360" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">Generates a one-time single sign-on bypass link bypassing brute-force lockouts instantly.</text>
+</svg>

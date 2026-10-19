@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">WHM রুট লগইন সমস্যা সমাধান গাইড</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">cPanel ও WHM প্যানেলে প্রবেশ না করতে পারার সমাধান</text>
+
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="60" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="14" font-weight="700">প্রধান কারণসমূহ</text>
+  <text x="60" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• cPHulk ব্রুটফোর্স ব্লকিং</text>
+  <text x="60" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• CSF / ফায়ারওয়ালে আইপি ড্রপ</text>
+  <text x="60" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• ভুল রুট পাসওয়ার্ড বা মেয়াদোত্তীর্ণ</text>
+  <text x="60" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• cpsrvd সার্ভিস ক্র্যাশ</text>
+
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="310" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">টার্মিনাল থেকে ফিক্স</text>
+  <text x="310" y="175" fill="#94a3b8" font-family="monospace" font-size="11">whmapi1 flush_cphulk_logs</text>
+  <text x="310" y="195" fill="#94a3b8" font-family="monospace" font-size="11">csf -a APNAR_IP</text>
+  <text x="310" y="215" fill="#94a3b8" font-family="monospace" font-size="11">/scripts/restartsrv_cpsrvd</text>
+  <text x="310" y="235" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11">লকআউট সাথে সাথে রিমুভ হয়</text>
+
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="560" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="700">ভেরিফিকেশন ও প্রবেশ</text>
+  <text x="560" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• https://SERVER_IP:2087</text>
+  <text x="560" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• রুট আইপি হোয়াইটলিস্ট কনফিগার</text>
+  <text x="560" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• 2FA সিকিউরিটি সেটআপ</text>
+  <text x="560" y="235" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✓ ড্যাশবোর্ড এক্সেস সচল</text>
+
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">জরুরি ওয়ান-টাইম সেশন লিংক তৈরির কমান্ড:</text>
+  <text x="60" y="340" fill="#38bdf8" font-family="monospace" font-size="12">whmapi1 create_user_session user=root service=whostmgrd</text>
+  <text x="60" y="360" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">পাসওয়ার্ড ছাড়া ব্রাউজারে রুট এক্সেস পেতে টার্মিনাল থেকে এক ক্লিকে ব্যবহার করুন।</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#ef4444" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">cPHULK SECURITY ALERT REMEDIATION</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Mitigating "Unusually High Failed Login Attempts" in WHM</text>
+
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="60" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Attack Vector</text>
+  <text x="60" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Distributed botnet brute force</text>
+  <text x="60" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Targeting port 2087 &amp; 2083</text>
+  <text x="60" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Mail daemon SASL flood</text>
+  <text x="60" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• SSH port 22 dictionary scan</text>
+
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="310" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Inspection Commands</text>
+  <text x="310" y="175" fill="#94a3b8" font-family="monospace" font-size="11">tail -50 /var/log/cpanel/login_log</text>
+  <text x="310" y="195" fill="#94a3b8" font-family="monospace" font-size="11">whmapi1 cphulk_status</text>
+  <text x="310" y="215" fill="#94a3b8" font-family="monospace" font-size="11">whmapi1 flush_cphulk_logs</text>
+  <text x="310" y="235" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11">Isolates attacker IPs &amp; targeted users</text>
+
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="560" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Permanent Defenses</text>
+  <text x="560" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Whitelist Admin IP in cPHulk</text>
+  <text x="560" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Enable Two-Factor Auth (2FA)</text>
+  <text x="560" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Change default SSH Port 22</text>
+  <text x="560" y="235" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✓ Server Shielded</text>
+
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Temporary Unblock via Terminal:</text>
+  <text x="60" y="340" fill="#38bdf8" font-family="monospace" font-size="12">whmapi1 cphulk_whitelist_user_ip ip=YOUR_IP &amp;&amp; csf -tr YOUR_IP</text>
+  <text x="60" y="360" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">Restores immediate root WHM access when your home or office IP is blocked accidentally.</text>
+</svg>

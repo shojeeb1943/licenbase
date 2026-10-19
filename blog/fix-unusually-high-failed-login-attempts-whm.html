@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix High Failed Login Attempts WHM | LicenBase</title>
+  <meta name="description" content="Fix the 'Unusually high number of failed login attempts' alert in WHM. Learn how to configure cPHulk, unblock admin IPs, and stop brute-force attacks." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/fix-unusually-high-failed-login-attempts-whm" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="Fix High Failed Login Attempts WHM" />
+  <meta property="og:description" content="Fix the 'Unusually high number of failed login attempts' alert in WHM. Learn how to configure cPHulk, unblock admin IPs, and stop brute-force attacks." />
+  <meta property="og:url" content="https://licenbase.com/blog/fix-unusually-high-failed-login-attempts-whm" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-fix-unusually-high-failed-login-attempts-whm.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="cPHulk brute force security alert remediation and login attempt log analysis flowchart" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-19" />
+  <meta property="article:modified_time" content="2026-10-19" />
+  <meta property="article:section" content="Security & Licensing" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-fix-unusually-high-failed-login-attempts-whm.png" />
+  <meta name="twitter:image:alt" content="cPHulk brute force security alert remediation and login attempt log analysis flowchart" />
+  <meta name="twitter:title" content="Fix High Failed Login Attempts WHM" />
+  <meta name="twitter:description" content="Fix the 'Unusually high number of failed login attempts' alert in WHM. Learn how to configure cPHulk, unblock admin IPs, and stop brute-force attacks." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Fix Unusually High Failed Login Attempts in WHM", "item": "https://licenbase.com/blog/fix-unusually-high-failed-login-attempts-whm"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Fix Unusually High Failed Login Attempts in WHM", "description": "Fix the 'Unusually high number of failed login attempts' alert in WHM. Learn how to configure cPHulk, unblock admin IPs, and stop brute-force attacks.", "image": ["https://licenbase.com/assets/img/og/blog-fix-unusually-high-failed-login-attempts-whm.png"], "datePublished": "2026-10-19", "dateModified": "2026-10-19", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/fix-unusually-high-failed-login-attempts-whm"}, "articleSection": "Security & Licensing", "inLanguage": "en", "wordCount": 813}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What triggers the 'Unusually high number of failed login attempts' notification in WHM?", "acceptedAnswer": {"@type": "Answer", "text": "WHM generates this security email whenever cPHulk records an influx of repeated, unauthorized authentication requests within a short timeframe. This usually indicates an external botnet attempting dictionary attacks against root, reseller accounts, or mail services."}}, {"@type": "Question", "name": "How do I view which IP addresses are attacking my WHM server?", "acceptedAnswer": {"@type": "Answer", "text": "Run `tail -100 /var/log/cpanel/login_log | grep 'FAILED LOGIN'` via SSH. You can also query cPHulk directly with `whmapi1 cphulk_status` to view active IP blocks and targeted usernames."}}, {"@type": "Question", "name": "How can I permanently whitelist my office IP in cPHulk?", "acceptedAnswer": {"@type": "Answer", "text": "In WHM, navigate to Security Center > cPHulk Brute Force Protection > Whitelist Management. Enter your static public IPv4 or CIDR subnet. Alternatively, run `whmapi1 cphulk_whitelist_user_ip ip=YOUR_IP` via terminal."}}, {"@type": "Question", "name": "Does cPHulk protect against SSH brute-force attacks as well?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When 'Block IP addresses at the firewall level' is enabled, cPHulk creates iptables / ipset drop rules that prevent attackers from accessing SSH port 22, FTP, and cPanel services entirely."}}, {"@type": "Question", "name": "How does Imunify360 improve upon native cPHulk protection?", "acceptedAnswer": {"@type": "Answer", "text": "While cPHulk evaluates local login failures, Imunify360 utilizes global herd immunity to proactively block known attack botnets before they make their first connection attempt."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">Security &amp; Licensing</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Security & Licensing</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">How to Fix Unusually High Failed Login Attempts in WHM</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-19">October 19, 2026</time></span>
+          
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/fix-unusually-high-failed-login-attempts-whm-feature.webp" alt="cPHulk brute force security alert remediation and login attempt log analysis flowchart" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600">Receiving an automated emergency alert from WHM stating <strong>"The system has detected an unusually high number of failed login attempts"</strong> is an immediate call to action for server operators. In modern hosting environments, automated botnets constantly scan IPv4 ranges, hammering ports 2087 (WHM), 2083 (cPanel), 2096 (Webmail), and 22 (SSH) with credential-stuffing dictionaries. If left unchecked, these distributed attacks can exhaust CPU resources, lock out legitimate users, and degrade server responsiveness. In this security tutorial, we demonstrate <strong>how to investigate failed login spikes, unblock legitimate administrators, and harden cPHulk to stop brute-force floods permanently</strong>.</p>
+
+<section class="space-y-4">
+  <h2 id="1-interpreting-the-whm-security-alert" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">1. Interpreting the WHM Security Alert</h2>
+  <p>The standard notification email from cPanel contains critical investigative clues:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>Subject: The system has detected an unusually high number of failed login attempts.
+Service: cpdavd / whostmgrd
+IP Address: 198.51.100.24 (Multiple IPs)
+Target Account: root, admin, test
+Timestamp: 2026-10-19 02:44:11 UTC</code></pre>
+  <p>This alert indicates that cPanel's <strong>cPHulk daemon</strong> observed authentication failure rates exceeding your configured threshold. The attack is either targeted at administrative credentials or represents a spray attack across thousands of common usernames.</p>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+    <img src="/assets/img/blog/fix-unusually-high-failed-login-attempts-whm-1.svg" alt="cPHulk brute force security alert remediation and login attempt log analysis flowchart" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+    <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">cPHulk security pipeline: inspecting login_log, flushing lockouts, and deploying iptables firewall drops.</figcaption>
+  </figure>
+</section>
+
+<section class="space-y-4">
+  <h2 id="2-inspecting-attack-logs-via-ssh" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">2. Inspecting Attack Logs via SSH</h2>
+  <p>To identify the offending IP addresses, geographic origins, and targeted services, connect via SSH and analyze <code>/var/log/cpanel/login_log</code>:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>grep "FAILED LOGIN" /var/log/cpanel/login_log | awk '{print $6}' | sort | uniq -c | sort -nr | head -15</code></pre>
+  <p>This command tallies the top 15 attacking IP addresses. If you see thousands of failed attempts originating from a single IP or <code>/24</code> subnet, that address is actively executing a dictionary brute force against your server.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="3-immediate-remediation-flushing-and-whitelisting" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">3. Immediate Remediation: Flushing and Whitelisting</h2>
+  <p>If the brute force flood inadvertently caused your own office IP to be locked out, execute these emergency terminal commands:</p>
+  <p><strong>Step 1: Flush all active cPHulk bans</strong></p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>whmapi1 flush_cphulk_logs</code></pre>
+  <p><strong>Step 2: Add your IP to the permanent whitelist</strong></p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>whmapi1 cphulk_whitelist_user_ip ip=YOUR_PUBLIC_IP</code></pre>
+  <p><strong>Step 3: Drop the top attacker IP immediately via CSF</strong></p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>csf -d 198.51.100.24 "Aggressive WHM Brute Force"</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="4-hardening-cphulk-configuration-in-whm" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">4. Hardening cPHulk Configuration in WHM</h2>
+  <p>Navigate to <strong>WHM &gt; Security Center &gt; cPHulk Brute Force Protection</strong> and configure these defensive settings:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>IP Based Brute Force Protection:</strong> Set maximum failures per IP to <code>5</code> within a 5-minute window. Set block duration to at least <code>360 minutes</code>.</li>
+    <li><strong>Block IP at Firewall Level:</strong> Check this box. This instructs cPHulk to inject kernel-level <code>ipset</code> / <code>iptables</code> drop rules, rejecting packets before they can consume CPU cycles in userspace daemons.</li>
+    <li><strong>Two-Factor Authentication:</strong> Enforce 2FA for root and all reseller accounts under <strong>Security Center &gt; Two-Factor Authentication</strong>. Even if a bot guesses the root password, login is blocked without the dynamic time-based token.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="5-changing-default-ports-disabling-password-auth-for-ssh" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">5. Changing Default Ports &amp; Disabling Password Auth for SSH</h2>
+  <p>Because bots predominantly target standard ports, altering your server's surface area stops 95% of automated scans:</p>
+  <ol class="list-decimal space-y-2 pl-6">
+    <li>Edit <code>/etc/ssh/sshd_config</code> and change <code>Port 22</code> to a custom high port (e.g., <code>Port 22822</code>).</li>
+    <li>Set <code>PasswordAuthentication no</code> and rely strictly on 4096-bit RSA or Ed25519 SSH keys.</li>
+    <li>Open the new port in your firewall (<code>csf.conf</code>) and restart SSH: <code>systemctl restart sshd</code>.</li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 id="6-advanced-threat-protection-with-licenbase" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">6. Advanced Threat Protection with LicenBase</h2>
+  <p>Upgrade your hosting security architecture with authentic, wholesale server licensing from LicenBase:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li>Deploy authentic <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel &amp; WHM licenses</a> for VPS starting at $4.00/mo.</li>
+    <li>Harden web applications against zero-day exploits using an authentic <a href="/imunify360-license" class="text-blue-600 font-semibold hover:underline">Imunify360 license</a>.</li>
+    <li>Isolate compromised user accounts into virtual jail cells with <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux CageFS</a>.</li>
+    <li>Accelerate your server response times using <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed Web Server</a>.</li>
+    <li>Check out bundled discount packages on our <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo packages page</a>.</li>
+  </ul>
+  <p>Learn more about our platform on our <a href="/about" class="text-blue-600 font-semibold hover:underline">about us page</a>, review our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">license policy</a>, or connect with our support specialists on our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
+</section>
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What triggers the &#x27;Unusually high number of failed login attempts&#x27; notification in WHM?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">WHM generates this security email whenever cPHulk records an influx of repeated, unauthorized authentication requests within a short timeframe. This usually indicates an external botnet attempting dictionary attacks against root, reseller accounts, or mail services.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How do I view which IP addresses are attacking my WHM server?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Run `tail -100 /var/log/cpanel/login_log | grep &#x27;FAILED LOGIN&#x27;` via SSH. You can also query cPHulk directly with `whmapi1 cphulk_status` to view active IP blocks and targeted usernames.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How can I permanently whitelist my office IP in cPHulk?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">In WHM, navigate to Security Center &gt; cPHulk Brute Force Protection &gt; Whitelist Management. Enter your static public IPv4 or CIDR subnet. Alternatively, run `whmapi1 cphulk_whitelist_user_ip ip=YOUR_IP` via terminal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Does cPHulk protect against SSH brute-force attacks as well?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Yes. When &#x27;Block IP addresses at the firewall level&#x27; is enabled, cPHulk creates iptables / ipset drop rules that prevent attackers from accessing SSH port 22, FTP, and cPanel services entirely.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How does Imunify360 improve upon native cPHulk protection?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">While cPHulk evaluates local login failures, Imunify360 utilizes global herd immunity to proactively block known attack botnets before they make their first connection attempt.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-unusually-high-failed-login-attempts-whm&amp;text=How%20to%20Fix%20Unusually%20High%20Failed%20Login%20Attempts%20in%20WHM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-unusually-high-failed-login-attempts-whm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-unusually-high-failed-login-attempts-whm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=How%20to%20Fix%20Unusually%20High%20Failed%20Login%20Attempts%20in%20WHM&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-unusually-high-failed-login-attempts-whm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#1-interpreting-the-whm-security-alert" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">1. Interpreting the WHM Security Alert</a><a href="#2-inspecting-attack-logs-via-ssh" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">2. Inspecting Attack Logs via SSH</a><a href="#3-immediate-remediation-flushing-and-whitelisting" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">3. Immediate Remediation: Flushing and Whitelisting</a><a href="#4-hardening-cphulk-configuration-in-whm" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">4. Hardening cPHulk Configuration in WHM</a><a href="#5-changing-default-ports-disabling-password-auth-for-ssh" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">5. Changing Default Ports &amp; Disabling Password Auth for SSH</a><a href="#6-advanced-threat-protection-with-licenbase" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">6. Advanced Threat Protection with LicenBase</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/imunify360-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Imunify360 License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/cloudlinux-license-not-working-8-errors-fixes" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cloudlinux-license-not-working-8-errors-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">CloudLinux License Not Working? 8 Common Errors and How to Fix Them</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Diagnose and fix 8 common CloudLinux license errors: rhn_register failures, IP mismatches, token expiration, and LVE manager connection drops.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 18, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/vps-under-attack-detect-traffic-ip-abuse" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/vps-under-attack-detect-traffic-ip-abuse-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">VPS Server Under Attack? Detect Suspicious Traffic &amp; Abuse</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Practical guide to triage VPS traffic attacks, inspect open sockets, detect outbound spam scripts, and configure CSF and Imunify360 defenses.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 15, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/detect-suspicious-processes-linux-vps-guide" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/detect-suspicious-processes-linux-vps-guide-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Detect Suspicious Processes on Linux VPS Before Server Downtime</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">How to detect malware, rogue crypto miners, and suspicious processes on Linux VPS using netstat, lsof, crontab, and process tree tools.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 14, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/ip-abuse-complaints-spam-malware-vps-blacklisting" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/ip-abuse-complaints-spam-malware-vps-blacklisting-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">IP Abuse Complaints Explained: Spam, Malware &amp; Blacklists</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide to investigating VPS IP abuse reports: identifying compromised scripts, analyzing Exim queues, delisting IPs, and prevention.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/how-to-secure-whm-cpanel-against-brute-force-attacks" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/how-to-secure-whm-cpanel-against-brute-force-attacks-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Secure WHM and cPanel Against Brute-Force Attacks</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Comprehensive hardening guide for cPanel and WHM: configure cPHulk protection, enforce 2FA, customize ports, and implement IP blacklists.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/10-cpanel-security-settings-change-after-installation" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/10-cpanel-security-settings-change-after-installation-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">10 cPanel Security Settings to Change Immediately After Install</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A complete 10-step hardening checklist for fresh cPanel & WHM servers to block brute force, exploit attempts, and unauthorized access.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 7, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    window.loadTawk = loadTawk;
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
+  </script>
+
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>

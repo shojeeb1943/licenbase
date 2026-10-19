@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">cPANEL AUTOSSL &amp; DCV DIAGNOSTICS</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Fixing Let's Encrypt / Sectigo Domain Control Validation</text>
+
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="60" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Failure Points</text>
+  <text x="60" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• .htaccess Redirect Loop</text>
+  <text x="60" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Cloudflare Proxy Blocking DCV</text>
+  <text x="60" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• DNS A Record Points Elsewhere</text>
+  <text x="60" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• CAA Record Restricts CA</text>
+
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="310" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">DCV Bypass Rule</text>
+  <text x="310" y="170" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Add to start of .htaccess:</text>
+  <text x="310" y="190" fill="#38bdf8" font-family="monospace" font-size="10">RewriteCond %{REQUEST_URI} !^/.well-known/pki-validation/</text>
+  <text x="310" y="205" fill="#38bdf8" font-family="monospace" font-size="10">RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge/</text>
+  <text x="310" y="225" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Prevents forced HTTPS redirects from breaking HTTP-01 challenge</text>
+
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="560" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Trigger AutoSSL</text>
+  <text x="560" y="175" fill="#94a3b8" font-family="monospace" font-size="11">/usr/local/cpanel/bin/autossl_check --user=USER</text>
+  <text x="560" y="205" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Performs immediate DCV check</text>
+  <text x="560" y="225" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✓ Certificate Issued</text>
+
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">WHM Provider Switch:</text>
+  <text x="60" y="340" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">If cPanel (powered by Sectigo) encounters rate limits, switch provider in WHM &gt; Manage AutoSSL to <strong>Let's Encrypt</strong> with wildcard support.</text>
+</svg>

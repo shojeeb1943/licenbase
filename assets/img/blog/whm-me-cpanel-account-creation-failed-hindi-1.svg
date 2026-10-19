@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">WHM अकाउंट क्रिएशन ट्रबलशूटिंग गाइड</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">WHM में cPanel अकाउंट न बनने के मुख्य कारण और समाधान</text>
+
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="60" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="14" font-weight="700">समस्या के कारण</text>
+  <text x="60" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• License Account Quota Limit</text>
+  <text x="60" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• पुराना DNS Zone सर्वर पर मौजूद</text>
+  <text x="60" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• यूजरनेम पहले से रिज़र्व होना</text>
+  <text x="60" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• डिस्क पार्टीशन 100% फुल होना</text>
+
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="310" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">टर्मिनल डायग्नोस्टिक्स</text>
+  <text x="310" y="175" fill="#94a3b8" font-family="monospace" font-size="11">tail -f /var/log/cpanel/cpanel.log</text>
+  <text x="310" y="195" fill="#94a3b8" font-family="monospace" font-size="11">grep DOMAIN /etc/userdomains</text>
+  <text x="310" y="215" fill="#94a3b8" font-family="monospace" font-size="11">/usr/local/cpanel/cpkeyclt</text>
+  <text x="310" y="235" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11">सटीक एरर कोड तुरंत देखें</text>
+
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="560" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="700">सरल समाधान</text>
+  <text x="560" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• /scripts/killdns से जोन हटाएं</text>
+  <text x="560" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• LicenBase से टियर अपग्रेड करें</text>
+  <text x="560" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• /scripts/updateuserdomains</text>
+  <text x="560" y="235" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✓ अकाउंट सफलतापूर्वक तैयार</text>
+
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">DNS Zone साफ़ करने की कमांड:</text>
+  <text x="60" y="340" fill="#38bdf8" font-family="monospace" font-size="12">/scripts/killdns domain.com &amp;&amp; /scripts/rebuilddnsconfig</text>
+  <text x="60" y="360" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">पुराने कॉन्फ़्लिक्टिंग रिकॉर्ड हटाकर नए अकाउंट के लिए रास्ता साफ़ करता है।</text>
+</svg>
