@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">WORDPRESS CONTENT &amp; TRAFFIC SANITIZATION</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Triage: WordPress Redirecting to Spam Websites</text>
+
+  <!-- Step 1: Detect Redirect Vector -->
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="60" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="14" font-weight="700">1. Detect Redirection</text>
+  <text x="60" y="175" fill="#38bdf8" font-family="monospace" font-size="9">curl -I -A "Mozilla" -e "google.com"</text>
+  <text x="60" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Test conditional search referrers</text>
+  <text x="60" y="215" fill="#38bdf8" font-family="monospace" font-size="10">cat public_html/.htaccess</text>
+  <text x="60" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Inspect RewriteRule spam hooks</text>
+
+  <!-- Step 2: Database & JS -->
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="310" y="145" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="14" font-weight="700">2. Database &amp; JS Audit</text>
+  <text x="310" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Inspect wp_options table:</text>
+  <text x="310" y="195" fill="#38bdf8" font-family="monospace" font-size="9">SELECT * FROM wp_options WHERE ...</text>
+  <text x="310" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Find obfuscated scripts in posts:</text>
+  <text x="310" y="235" fill="#38bdf8" font-family="monospace" font-size="9">wp db query "SELECT ID FROM wp_posts ..."</text>
+
+  <!-- Step 3: Clean & Restore -->
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="560" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="700">3. Safe Remediation</text>
+  <text x="560" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Reset clean default .htaccess</text>
+  <text x="560" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Purge theme functions.php injections</text>
+  <text x="560" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Flush LiteSpeed cache &amp; CDN:</text>
+  <text x="560" y="235" fill="#38bdf8" font-family="monospace" font-size="10">wp litespeed-purge all</text>
+
+  <!-- Step 4: Defense In Depth -->
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">4. Web Application Firewall &amp; Real-Time Malware Scrubbing:</text>
+  <text x="60" y="340" fill="#22c55e" font-family="monospace" font-size="12">imunify360-agent malware database cleanup wpdb &amp;&amp; imunify360-agent rules check</text>
+  <text x="60" y="360" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">Deploy Imunify360 automated database malware scrubbing and LiteSpeed Web Server to prevent injection of malicious script payloads.</text>
+</svg>

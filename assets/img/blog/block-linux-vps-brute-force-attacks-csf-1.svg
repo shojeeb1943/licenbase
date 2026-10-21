@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="760" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="55" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">NETWORK DEFENSE &amp; ACCESS SECURITY</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Mitigating Linux VPS Brute-Force Attacks with CSF &amp; LFD</text>
+
+  <!-- Step 1: Detect Attack -->
+  <rect x="40" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="60" y="145" fill="#ef4444" font-family="system-ui, sans-serif" font-size="14" font-weight="700">1. Detect Attack Flood</text>
+  <text x="60" y="175" fill="#38bdf8" font-family="monospace" font-size="10">tail -f /var/log/secure</text>
+  <text x="60" y="195" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Inspect Failed password for root</text>
+  <text x="60" y="215" fill="#38bdf8" font-family="monospace" font-size="10">ss -tn state syn-recv</text>
+  <text x="60" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Identify attacker IP clusters</text>
+
+  <!-- Step 2: CSF & LFD Config -->
+  <rect x="290" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="310" y="145" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="14" font-weight="700">2. Configure CSF &amp; LFD</text>
+  <text x="310" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Set SSH trigger threshold:</text>
+  <text x="310" y="195" fill="#38bdf8" font-family="monospace" font-size="10">SSHD_LOG = 5</text>
+  <text x="310" y="215" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Auto-ban offending IP subnet:</text>
+  <text x="310" y="235" fill="#38bdf8" font-family="monospace" font-size="10">LF_TRIGGER_PERM = 3600</text>
+
+  <!-- Step 3: Hardening -->
+  <rect x="540" y="115" width="220" height="150" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="560" y="145" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="700">3. SSH Hardening</text>
+  <text x="560" y="175" fill="#94a3b8" font-family="monospace" font-size="10">Port 2222</text>
+  <text x="560" y="195" fill="#94a3b8" font-family="monospace" font-size="10">PermitRootLogin prohibit-password</text>
+  <text x="560" y="215" fill="#94a3b8" font-family="monospace" font-size="10">PasswordAuthentication no</text>
+  <text x="560" y="235" fill="#38bdf8" font-family="monospace" font-size="10">csf -d &lt;OFFENDER_IP&gt;</text>
+
+  <!-- Step 4: Enterprise Defense -->
+  <rect x="40" y="285" width="720" height="90" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="315" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">4. Integrated Multi-Vector Brute-Force Blocking with cPHulk &amp; Imunify360:</text>
+  <text x="60" y="340" fill="#22c55e" font-family="monospace" font-size="12">whmapi1 enable_cphulk &amp;&amp; imunify360-agent pam enable &amp;&amp; csf -r</text>
+  <text x="60" y="360" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">Combine cPHulk PAM blocking, CSF kernel packet drops, and Imunify360 CAPTCHA challenges to eliminate dictionary attacks.</text>
+</svg>

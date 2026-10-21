@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">cPanel Incoming Email Diagnostic and Troubleshooting Pipeline</title>
+  <desc id="d1">Diagnostic pipeline for cPanel incoming email issues: DNS MX records, mail routing, Exim logs, and mailbox quota verification.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="420" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Top Header Banner -->
+  <rect x="30" y="24" width="900" height="46" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <circle cx="52" cy="47" r="6" fill="#3B82F6"/>
+  <text x="68" y="52" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">cPanel Inbound Email Troubleshooting Pipeline</text>
+  <rect x="750" y="34" width="160" height="26" rx="6" fill="#2563EB"/>
+  <text x="830" y="51" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">Exim &amp; DNS Verification</text>
+
+  <!-- Step 1: DNS & MX Records -->
+  <g transform="translate(35, 90)" filter="url(#shadow)">
+    <rect width="205" height="300" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#2563EB" fill-opacity="0.2"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#60A5FA" text-anchor="middle">1</text>
+    <text x="52" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">DNS &amp; MX Records</text>
+    <path d="M14 56 h177" stroke="#334155" stroke-width="1"/>
+    
+    <text x="14" y="80" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#94A3B8">PUBLIC RESOLUTION</text>
+    <text x="14" y="105" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Query: dig MX domain.com</text>
+    <text x="14" y="130" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Priority 0: mail.domain.com</text>
+    <text x="14" y="155" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Points to Server IP (A rec)</text>
+    <text x="14" y="180" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Avoid CNAME for MX</text>
+    <text x="14" y="205" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Check TTL propagation</text>
+
+    <rect x="14" y="240" width="177" height="42" rx="8" fill="#0F172A" stroke="#3B82F6" stroke-width="1"/>
+    <text x="102" y="258" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#93C5FD" text-anchor="middle">COMMON ROOT CAUSE</text>
+    <text x="102" y="273" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#38BDF8" text-anchor="middle">Missing / Stale MX Target</text>
+  </g>
+
+  <!-- Step 2: cPanel Mail Routing -->
+  <g transform="translate(260, 90)" filter="url(#shadow)">
+    <rect width="205" height="300" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#3B82F6" fill-opacity="0.2"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#60A5FA" text-anchor="middle">2</text>
+    <text x="52" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Mail Routing</text>
+    <path d="M14 56 h177" stroke="#334155" stroke-width="1"/>
+    
+    <text x="14" y="80" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#94A3B8">CPANEL ROUTING MODE</text>
+    <text x="14" y="105" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Local Mail Exchanger</text>
+    <text x="14" y="130" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Check /etc/localdomains</text>
+    <text x="14" y="155" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Avoid /etc/remotedomains</text>
+    <text x="14" y="180" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Fix Auto-Detect bugs</text>
+    <text x="14" y="205" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Retain local delivery</text>
+
+    <rect x="14" y="240" width="177" height="42" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
+    <text x="102" y="258" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FCD34D" text-anchor="middle">CRITICAL CHECK</text>
+    <text x="102" y="273" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FBBF24" text-anchor="middle">Must Be "Local Exchanger"</text>
+  </g>
+
+  <!-- Step 3: Exim Logs & Port 25 -->
+  <g transform="translate(485, 90)" filter="url(#shadow)">
+    <rect width="205" height="300" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#10B981" fill-opacity="0.2"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#34D399" text-anchor="middle">3</text>
+    <text x="52" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Exim Log &amp; Port 25</text>
+    <path d="M14 56 h177" stroke="#334155" stroke-width="1"/>
+    
+    <text x="14" y="80" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#94A3B8">LOG &amp; PORT INSPECTION</text>
+    <text x="14" y="105" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Inbound Port 25 unblocked</text>
+    <text x="14" y="130" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• /var/log/exim_mainlog</text>
+    <text x="14" y="155" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• 550 No Such User Here</text>
+    <text x="14" y="180" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• exigrep sender@domain</text>
+    <text x="14" y="205" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Check RBL reject filters</text>
+
+    <rect x="14" y="240" width="177" height="42" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+    <text x="102" y="258" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#6EE7B7" text-anchor="middle">REAL-TIME TELEMETRY</text>
+    <text x="102" y="273" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#34D399" text-anchor="middle">tail -f exim_mainlog</text>
+  </g>
+
+  <!-- Step 4: Mailbox & Disk Quota -->
+  <g transform="translate(710, 90)" filter="url(#shadow)">
+    <rect width="215" height="300" rx="12" fill="#1E293B" stroke="#6366F1" stroke-width="2"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#6366F1" fill-opacity="0.2"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#A5B4FC" text-anchor="middle">4</text>
+    <text x="52" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Quota &amp; Storage</text>
+    <path d="M14 56 h187" stroke="#334155" stroke-width="1"/>
+    
+    <text x="14" y="80" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#94A3B8">STORAGE &amp; DELIVERY</text>
+    <text x="14" y="105" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Maildir storage /home/mail</text>
+    <text x="14" y="130" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• 552 Quota exceeded error</text>
+    <text x="14" y="155" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Check disk space: df -h</text>
+    <text x="14" y="180" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Check inodes: df -i</text>
+    <text x="14" y="205" font-family="Inter, sans-serif" font-size="12" fill="#E2E8F0">• Fix maildirsize cache</text>
+
+    <rect x="14" y="240" width="187" height="42" rx="8" fill="#312E81" stroke="#818CF8" stroke-width="1"/>
+    <text x="107" y="258" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#C7D2FE" text-anchor="middle">SUCCESSFUL INBOX</text>
+    <text x="107" y="273" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">100% Inbound Delivery</text>
+  </g>
+</svg>

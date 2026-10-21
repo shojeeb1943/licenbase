@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detect & Remove a Crypto Miner on Linux VPS | LicenBase</title>
+  <meta name="description" content="Learn how to detect hidden crypto miners on a Linux VPS. Uncover rootkit preload hooks, terminate rogue mining pools, and eliminate persistent cron backdoors." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/detect-crypto-miner-linux-vps-remove-safely" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="Detect & Remove a Crypto Miner on Linux VPS" />
+  <meta property="og:description" content="Learn how to detect hidden crypto miners on a Linux VPS. Uncover rootkit preload hooks, terminate rogue mining pools, and eliminate persistent cron backdoors." />
+  <meta property="og:url" content="https://licenbase.com/blog/detect-crypto-miner-linux-vps-remove-safely" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-detect-crypto-miner-linux-vps-remove-safely.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Technical workflow diagram showing how to unmask, isolate, and remove cryptocurrency miners on Linux VPS" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-20" />
+  <meta property="article:modified_time" content="2026-10-20" />
+  <meta property="article:section" content="How-to" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-detect-crypto-miner-linux-vps-remove-safely.png" />
+  <meta name="twitter:image:alt" content="Technical workflow diagram showing how to unmask, isolate, and remove cryptocurrency miners on Linux VPS" />
+  <meta name="twitter:title" content="Detect & Remove a Crypto Miner on Linux VPS" />
+  <meta name="twitter:description" content="Learn how to detect hidden crypto miners on a Linux VPS. Uncover rootkit preload hooks, terminate rogue mining pools, and eliminate persistent cron backdoors." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Detect a Crypto Miner on Your VPS and Remove It Safely", "item": "https://licenbase.com/blog/detect-crypto-miner-linux-vps-remove-safely"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Detect a Crypto Miner on Your VPS and Remove It Safely", "description": "Learn how to detect hidden crypto miners on a Linux VPS. Uncover rootkit preload hooks, terminate rogue mining pools, and eliminate persistent cron backdoors.", "image": ["https://licenbase.com/assets/img/og/blog-detect-crypto-miner-linux-vps-remove-safely.png"], "datePublished": "2026-10-20", "dateModified": "2026-10-20", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/detect-crypto-miner-linux-vps-remove-safely"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 1376}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does htop or top show normal CPU usage when my VPS provider alerts me of 100% CPU load?", "acceptedAnswer": {"@type": "Answer", "text": "Sophisticated crypto miners utilize shared library preloading via /etc/ld.so.preload or manipulate the /proc filesystem to hook system calls. When monitoring tools like top, ps, or htop query process information, the rootkit intercepts the call and hides the miner PID and CPU consumption from display."}}, {"@type": "Question", "name": "Why does the mining process immediately restart after I kill it with kill -9?", "acceptedAnswer": {"@type": "Answer", "text": "Miners rarely run as isolated binaries. They deploy redundant watchdog processes, infected systemd service units, and crontabs that check process status every 60 seconds. Killing the miner directly causes the watchdog to respawn it under a new PID. You must freeze the process first using `kill -STOP` while you remove the persistence mechanisms."}}, {"@type": "Question", "name": "What ports and protocols do cryptocurrency miners typically connect to?", "acceptedAnswer": {"@type": "Answer", "text": "Miners communicate with Stratum mining pools over TCP ports such as 3333, 4444, 5555, 7777, 8080, and 9000, or use TLS/SSL encapsulation on port 443 to disguise mining hashes as normal HTTPS web traffic."}}, {"@type": "Question", "name": "Can a crypto miner infection spread between cPanel user accounts?", "acceptedAnswer": {"@type": "Answer", "text": "Without operating system level isolation, a miner running as an unprivileged cPanel user can scan the filesystem for world-writable directories in neighboring accounts or exploit local kernel privilege escalation vulnerabilities to gain root."}}, {"@type": "Question", "name": "How does CloudLinux OS protect a server from crypto mining spikes?", "acceptedAnswer": {"@type": "Answer", "text": "CloudLinux OS uses Lightweight Virtual Environments (LVE) to enforce strict CPU and thread quotas on each user. Even if an account executes an XMRig binary, it is throttled to its allocated CPU percentage (e.g., 25% of 1 core), preventing server-wide degradation."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">How-to</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">How-to</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">How to Detect a Crypto Miner on Your VPS and Remove It Safely</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-20">October 20, 2026</time></span>
+          
+          <span>7 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/detect-crypto-miner-linux-vps-remove-safely-feature.webp" alt="Technical workflow diagram showing how to unmask, isolate, and remove cryptocurrency miners on Linux VPS" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600">Cryptocurrency hijacking—commonly referred to as cryptojacking—is one of the most pervasive server threats facing Linux VPS administrators today. Unlike destructive ransomware that immediately encrypts files, crypto miners (frequently variants of XMRig or custom Monero miners) are designed to remain stealthy, quietly monetizing your server's computational horsepower around the clock. When a miner takes hold, CPU load spikes to 100%, server response times crater, database queries time out, and cloud providers may suspend your instance for acceptable use policy violations. This tutorial explains how to unmask hidden mining processes, bypass user-space rootkits, safely eradicate miner persistence, and immunize your Linux VPS.</p>
+
+<section class="space-y-4">
+  <h2 id="1-common-signs-your-vps-has-been-compromised-by-a-crypto-miner" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">1. Common Signs Your VPS Has Been Compromised by a Crypto Miner</h2>
+  <p>Attackers gain initial access by exploiting unpatched web applications (such as WordPress plugins, Log4j, or outdated Drupal modules), brute-forcing weak SSH credentials, or abusing unsecured Redis/Docker API sockets. Once inside, the symptoms manifest distinctly:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Sustained 100% CPU Utilization:</strong> Your hypervisor dashboard shows all virtual CPU cores pinned at maximum capacity, yet traditional terminal commands like <code>top</code> show normal activity.</li>
+    <li><strong>Sluggish SSH Interactivity:</strong> Logging into the shell takes multiple seconds, and running simple commands incurs noticeable lag due to CPU resource starvation.</li>
+    <li><strong>Hypervisor Throttling or Suspension:</strong> VPS providers issue automated warnings regarding abnormal continuous resource consumption.</li>
+    <li><strong>High Outbound Network Connections to Mining Pools:</strong> Persistent outbound sockets communicating with known mining pool infrastructure across unusual ports (e.g., 3333, 5555, 14444).</li>
+  </ul>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+    <img src="/assets/img/blog/detect-crypto-miner-linux-vps-remove-safely-1.svg" alt="Technical workflow diagram showing how to unmask, isolate, and remove cryptocurrency miners on Linux VPS" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+    <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Four-stage protocol for detecting, freezing, sanitizing, and hardening a Linux VPS against crypto miners.</figcaption>
+  </figure>
+</section>
+
+<section class="space-y-4">
+  <h2 id="2-how-modern-monero-miners-conceal-themselves-from-system-monitors" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">2. How Modern Monero Miners Conceal Themselves from System Monitors</h2>
+  <p>The primary reason sysadmins struggle to detect miners is process stealth. Advanced miner strains deploy several concealment mechanisms:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Shared Library Preloading:</strong> The miner modifies <code>/etc/ld.so.preload</code> to inject a malicious shared object library (e.g., <code>/usr/local/lib/libprocesshider.so</code>). This library hooks <code>readdir()</code> system calls, filtering out any directory in <code>/proc</code> that matches the miner's process ID. Consequently, <code>top</code>, <code>ps</code>, and <code>htop</code> simply do not see the process.</li>
+    <li><strong>Binary Renaming &amp; Masquerading:</strong> The executable is disguised with names resembling legitimate system daemons, such as <code>[kworker/0:1H]</code>, <code>systemd-journal</code>, <code>cron.d</code>, or <code>dbus-daemon</code>.</li>
+    <li><strong>Self-Throttling on Inspection:</strong> Some miner variants monitor whether an interactive terminal session opens (detecting <code>tty</code> allocation) and automatically sleep or kill their mining workers while the administrator is logged in, resuming as soon as the session disconnects.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="3-identifying-the-malicious-process-looking-past-process-hiding-and-renaming" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">3. Identifying the Malicious Process: Looking Past Process Hiding and Renaming</h2>
+  <p>To defeat library preloading, inspect the dynamic linker configuration directly using absolute paths:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code># Inspect the preload file for injected rootkit libraries
+cat /etc/ld.so.preload
+
+# If unauthorized libraries are present, neutralize immediately
+&gt; /etc/ld.so.preload</code></pre>
+  <p>Next, use network socket analysis to track down processes communicating with external mining pools. Miners must exchange hashes with mining servers, which cannot be hidden by basic user-space rootkits:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code># Scan for established outbound connections with PID mapping
+ss -tupn | grep ESTAB
+
+# Look for typical Stratum pool ports
+ss -tupn | grep -E "3333|4444|5555|7777|9000|14444"</code></pre>
+  <p>Sample output identifying the rogue process:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>tcp   ESTAB  0  0  192.0.2.15:48922  198.51.100.44:3333  users:(("kworkerds",pid=14298,fd=3))</code></pre>
+  <p>Here, the process <code>kworkerds</code> with PID <code>14298</code> is connected to port 3333 on an external IP. To find the physical executable location on the disk, inspect the process link in <code>/proc</code>:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>ls -la /proc/14298/exe
+cat /proc/14298/cmdline | tr '\0' ' ' ; echo ""</code></pre>
+  <p>This reveals the real path to the malicious binary (often located in <code>/tmp</code>, <code>/var/tmp</code>, or <code>/dev/shm</code>) along with the wallet address and mining pool parameters.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="4-freezing-and-terminating-the-miner-without-triggering-watchdog-scripts" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">4. Freezing and Terminating the Miner Without Triggering Watchdog Scripts</h2>
+  <p>Never issue a simple <code>kill -9</code> as your initial action. If a watchdog process is active, it will detect the miner's death and instantly spawn a new instance under a different PID or download a fresh binary. Instead, send the <code>SIGSTOP</code> signal to freeze execution:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code># Freeze the process immediately (stops CPU consumption without exiting)
+kill -STOP 14298</code></pre>
+  <p>Freezing the process stops CPU exhaustion instantly while keeping the process state intact in memory, allowing you to trace its parent process tree:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code># Inspect parent PID (PPID)
+ps -o ppid= -p 14298
+
+# Trace process tree using pstree
+pstree -p -s 14298</code></pre>
+  <p>If the PPID belongs to a watchdog daemon, freeze the parent process as well before terminating both:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>kill -STOP &lt;PARENT_PID&gt;
+kill -9 14298 &lt;PARENT_PID&gt;</code></pre>
+  <p>Delete the binary from disk immediately and clear any immutable file attributes that the attacker may have configured:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>chattr -i -a /tmp/kworkerds 2&gt;/dev/null
+rm -f /tmp/kworkerds</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="5-auditing-persistence-hidden-crons-systemd-services-and-ssh-keys" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">5. Auditing Persistence: Hidden Crons, Systemd Services, and SSH Keys</h2>
+  <p>A miner will re-infect the machine within hours unless all persistence footholds are identified and purged:</p>
+  <ol class="list-decimal space-y-2 pl-6">
+    <li><strong>System and User Crontabs:</strong> Inspect both global and user-specific cron spools:
+      <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>cat /etc/crontab
+ls -la /etc/cron.*
+cat /var/spool/cron/* 2&gt;/dev/null</code></pre>
+      Look for base64 strings or pipe commands like <code>curl -s http://... | bash</code> and remove them.
+    </li>
+    <li><strong>Rogue Systemd Services and Timers:</strong> Attackers frequently drop custom service units into <code>/etc/systemd/system/</code>:
+      <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>systemctl list-unit-files --state=enabled | grep -E "miner|update|system"
+ls -lt /etc/systemd/system/ | head -n 15</code></pre>
+      Inspect recently modified service files, disable them using <code>systemctl disable --now &lt;service&gt;</code>, and delete the unit files.
+    </li>
+    <li><strong>SSH Authorized Keys:</strong> Check root and all system accounts for unauthorized public keys:
+      <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>cat /root/.ssh/authorized_keys
+cat /home/*/.ssh/authorized_keys 2&gt;/dev/null</code></pre>
+      Wipe unknown keys and rotate the root password immediately.
+    </li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 id="6-hardening-file-systems-and-mounting-tmp-with-noexec" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">6. Hardening File Systems and Mounting /tmp with Noexec</h2>
+  <p>Over 90% of crypto miners execute out of world-writable directories such as <code>/tmp</code>, <code>/var/tmp</code>, and <code>/dev/shm</code>. Disallowing binary execution in these partitions prevents automated drops from executing:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code># Remount /tmp and /dev/shm with noexec,nosuid,nodev
+mount -o remount,noexec,nosuid,nodev /tmp
+mount -o remount,noexec,nosuid,nodev /dev/shm</code></pre>
+  <p>To make these protections permanent across reboots, update <code>/etc/fstab</code>:</p>
+  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>/tmp /var/tmp none bind 0 0
+tmpfs /dev/shm tmpfs defaults,nodev,nosuid,noexec 0 0</code></pre>
+  <p>Additionally, block outbound connections to known mining pool ports across your CSF or iptables firewall configuration.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="7-isolating-workloads-and-preventing-mining-outbreaks-with-licenbase" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">7. Isolating Workloads and Preventing Mining Outbreaks with LicenBase</h2>
+  <p>Even with careful system administration, zero-day vulnerabilities in CMS applications can re-expose your server. Implementing enterprise workload virtualization and security daemons prevents mining binaries from capturing host resources:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Resource Caps with CloudLinux OS:</strong> A <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux license</a> enforces hard CPU, memory, and IO limits per tenant. Even if an account executes an XMRig script, it is throttled to its small slice, keeping the rest of the server responsive.</li>
+    <li><strong>Automated AI Threat Defense:</strong> Deploying an <a href="/imunify360-license" class="text-blue-600 font-semibold hover:underline">Imunify360 license</a> gives you automated PAM brute-force blocking, signature-based miner termination, and continuous kernel security.</li>
+    <li><strong>Control Panel Management:</strong> Manage hosting domains cleanly with an authentic <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel &amp; WHM license</a> backed by direct vendor updates.</li>
+  </ul>
+  <p>Check out our affordable <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo discount stacks</a> to maximize infrastructure security. Learn more <a href="/about" class="text-blue-600 font-semibold hover:underline">about LicenBase</a>, review our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">licensing policies</a>, or speak with our engineering staff on the <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
+</section>
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Why does htop or top show normal CPU usage when my VPS provider alerts me of 100% CPU load?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Sophisticated crypto miners utilize shared library preloading via /etc/ld.so.preload or manipulate the /proc filesystem to hook system calls. When monitoring tools like top, ps, or htop query process information, the rootkit intercepts the call and hides the miner PID and CPU consumption from display.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Why does the mining process immediately restart after I kill it with kill -9?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Miners rarely run as isolated binaries. They deploy redundant watchdog processes, infected systemd service units, and crontabs that check process status every 60 seconds. Killing the miner directly causes the watchdog to respawn it under a new PID. You must freeze the process first using `kill -STOP` while you remove the persistence mechanisms.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What ports and protocols do cryptocurrency miners typically connect to?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Miners communicate with Stratum mining pools over TCP ports such as 3333, 4444, 5555, 7777, 8080, and 9000, or use TLS/SSL encapsulation on port 443 to disguise mining hashes as normal HTTPS web traffic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Can a crypto miner infection spread between cPanel user accounts?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Without operating system level isolation, a miner running as an unprivileged cPanel user can scan the filesystem for world-writable directories in neighboring accounts or exploit local kernel privilege escalation vulnerabilities to gain root.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How does CloudLinux OS protect a server from crypto mining spikes?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">CloudLinux OS uses Lightweight Virtual Environments (LVE) to enforce strict CPU and thread quotas on each user. Even if an account executes an XMRig binary, it is throttled to its allocated CPU percentage (e.g., 25% of 1 core), preventing server-wide degradation.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fdetect-crypto-miner-linux-vps-remove-safely&amp;text=How%20to%20Detect%20a%20Crypto%20Miner%20on%20Your%20VPS%20and%20Remove%20It%20Safely" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fdetect-crypto-miner-linux-vps-remove-safely" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fdetect-crypto-miner-linux-vps-remove-safely" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=How%20to%20Detect%20a%20Crypto%20Miner%20on%20Your%20VPS%20and%20Remove%20It%20Safely&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fdetect-crypto-miner-linux-vps-remove-safely" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#1-common-signs-your-vps-has-been-compromised-by-a-crypto-miner" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">1. Common Signs Your VPS Has Been Compromised by a Crypto Miner</a><a href="#2-how-modern-monero-miners-conceal-themselves-from-system-monitors" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">2. How Modern Monero Miners Conceal Themselves from System Monitors</a><a href="#3-identifying-the-malicious-process-looking-past-process-hiding-and-renaming" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">3. Identifying the Malicious Process: Looking Past Process Hiding and Renaming</a><a href="#4-freezing-and-terminating-the-miner-without-triggering-watchdog-scripts" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">4. Freezing and Terminating the Miner Without Triggering Watchdog Scripts</a><a href="#5-auditing-persistence-hidden-crons-systemd-services-and-ssh-keys" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">5. Auditing Persistence: Hidden Crons, Systemd Services, and SSH Keys</a><a href="#6-hardening-file-systems-and-mounting-tmp-with-noexec" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">6. Hardening File Systems and Mounting /tmp with Noexec</a><a href="#7-isolating-workloads-and-preventing-mining-outbreaks-with-licenbase" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">7. Isolating Workloads and Preventing Mining Outbreaks with LicenBase</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux OS License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/imunify360-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Imunify360 License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/cpanel-email-not-receiving-messages" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-email-not-receiving-messages-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">9 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix cPanel Email Not Receiving: Exim, DNS &amp; Mail Logs</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step troubleshooting for cPanel email not receiving: fix MX routing, Exim log errors, mailbox quotas, and port blocks.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 21, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/remove-malware-wordpress-hacked-cpanel" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/remove-malware-wordpress-hacked-cpanel-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">WordPress Website Hacked on cPanel? How to Find &amp; Remove Malware</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide to detecting and removing malware from a hacked WordPress website on cPanel, eliminating backdoors, and hardening files.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/linux-server-sending-spam-find-source-fix" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/linux-server-sending-spam-find-source-fix-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Linux Server Sending Spam Emails? Find the Source &amp; Stop Abuse</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Learn how to diagnose outbound spam floods on a Linux VPS, track down compromised mailboxes or scripts in Exim, and stop email abuse.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/imunify360-malware-scanner-not-working-fixes" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/imunify360-malware-scanner-not-working-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Imunify360 Malware Scanner Not Working? Common Errors &amp; Fixes</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Learn how to diagnose and fix common Imunify360 malware scanner errors, resolve inotify watcher exhaustion, repair SQLite DBs, and restore scans.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/fix-high-cpu-usage-malware-linux-server" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-high-cpu-usage-malware-linux-server-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">5 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix High CPU Usage Caused by Malware on a Linux Server</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide to fixing high CPU load caused by malware on a Linux server, unmasking hidden processes, and recovering stability.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cpanel-account-keeps-getting-hacked-fixes" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-account-keeps-getting-hacked-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">5 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Account Keeps Getting Hacked? Check SSH, Crons &amp; PHP Files</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Stop recurring cPanel account hacks: audit hidden SSH keys, rogue crontabs, stealth PHP backdoors, and database triggers to seal persistence.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    window.loadTawk = loadTawk;
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
+  </script>
+
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>
