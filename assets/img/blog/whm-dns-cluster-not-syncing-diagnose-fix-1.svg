@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="boxBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="boxGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="boxAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="480" y="44" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">WHM DNS Cluster Synchronization &amp; Troubleshooting Architecture</text>
+  <text x="480" y="70" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Zone updates, WHM API tokens, port 2087 connectivity, and cPanel DNSOnly slave nodes</text>
+
+  <!-- Master Node -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    <rect width="250" height="310" rx="14" fill="url(#boxBlue)" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="250" height="40" rx="14" fill="#0284c7" fill-opacity="0.25"/>
+    <circle cx="28" cy="20" r="7" fill="#38bdf8"/>
+    <text x="44" y="25" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8">Primary cPanel/WHM Server</text>
+
+    <!-- Master details -->
+    <rect x="18" y="55" width="214" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="76" font-family="monospace" font-size="12" fill="#7dd3fc" font-weight="bold">Master Role: Synchronize</text>
+    <text x="30" y="96" font-family="sans-serif" font-size="11" fill="#94a3b8">Initiates zone adds/edits/deletes</text>
+
+    <rect x="18" y="125" width="214" height="75" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="145" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Key Components:</text>
+    <text x="30" y="165" font-family="monospace" font-size="11" fill="#cbd5e1">• /var/cpanel/cluster/</text>
+    <text x="30" y="185" font-family="monospace" font-size="11" fill="#cbd5e1">• /scripts/dnscluster sync</text>
+
+    <rect x="18" y="210" width="214" height="80" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="230" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Security Credentials:</text>
+    <text x="30" y="250" font-family="sans-serif" font-size="11" fill="#94a3b8">Remote WHM API Token</text>
+    <text x="30" y="270" font-family="sans-serif" font-size="11" fill="#f59e0b">Requires Port 2087 Outbound</text>
+  </g>
+
+  <!-- Synchronization Stream in Middle -->
+  <g transform="translate(340, 160)">
+    <!-- Path to Node 1 -->
+    <path d="M 0,50 L 140,0" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,4" fill="none"/>
+    <polygon points="145,0 133,-5 137,4" fill="#38bdf8"/>
+
+    <!-- Path to Node 2 -->
+    <path d="M 0,140 L 140,190" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,4" fill="none"/>
+    <polygon points="145,190 137,185 133,195" fill="#38bdf8"/>
+
+    <!-- Diagnostic Hub in Center -->
+    <rect x="20" y="55" width="180" height="80" rx="10" fill="url(#boxAmber)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="110" y="80" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fde68a" text-anchor="middle">Sync Checkpoints</text>
+    <text x="110" y="100" font-family="sans-serif" font-size="11" fill="#fed7aa" text-anchor="middle">1. Token ACL Permissions</text>
+    <text x="110" y="118" font-family="sans-serif" font-size="11" fill="#fed7aa" text-anchor="middle">2. Port 2087 &amp; SSL Certs</text>
+  </g>
+
+  <!-- DNSOnly Node 1 -->
+  <g transform="translate(640, 110)" filter="url(#shadow)">
+    <rect width="260" height="145" rx="14" fill="url(#boxGreen)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="260" height="35" rx="14" fill="#059669" fill-opacity="0.3"/>
+    <circle cx="24" cy="18" r="6" fill="#34d399"/>
+    <text x="38" y="22" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399">Nameserver 1 (cPanel DNSOnly)</text>
+
+    <text x="18" y="60" font-family="sans-serif" font-size="11" fill="#cbd5e1">Role: <tspan font-family="monospace" fill="#6ee7b7" font-weight="bold">Write-Only / Standalone</tspan></text>
+    <text x="18" y="80" font-family="sans-serif" font-size="11" fill="#cbd5e1">Service: <tspan font-family="monospace" fill="#f8fafc">BIND / PowerDNS (/etc/named.conf)</tspan></text>
+    <text x="18" y="100" font-family="sans-serif" font-size="11" fill="#cbd5e1">Verification: <tspan font-family="monospace" fill="#f8fafc">rndc reload | named-checkconf</tspan></text>
+    <rect x="18" y="115" width="224" height="20" rx="4" fill="#064e3b"/>
+    <text x="130" y="129" font-family="sans-serif" font-size="10" fill="#a7f3d0" text-anchor="middle">Authoritative NS1 (ns1.example.com)</text>
+  </g>
+
+  <!-- DNSOnly Node 2 -->
+  <g transform="translate(640, 275)" filter="url(#shadow)">
+    <rect width="260" height="145" rx="14" fill="url(#boxGreen)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="260" height="35" rx="14" fill="#059669" fill-opacity="0.3"/>
+    <circle cx="24" cy="18" r="6" fill="#34d399"/>
+    <text x="38" y="22" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399">Nameserver 2 (cPanel DNSOnly)</text>
+
+    <text x="18" y="60" font-family="sans-serif" font-size="11" fill="#cbd5e1">Role: <tspan font-family="monospace" fill="#6ee7b7" font-weight="bold">Write-Only / Standalone</tspan></text>
+    <text x="18" y="80" font-family="sans-serif" font-size="11" fill="#cbd5e1">Service: <tspan font-family="monospace" fill="#f8fafc">BIND / PowerDNS (/var/named/)</tspan></text>
+    <text x="18" y="100" font-family="sans-serif" font-size="11" fill="#cbd5e1">Verification: <tspan font-family="monospace" fill="#f8fafc">named-checkzone domain.com zonefile</tspan></text>
+    <rect x="18" y="115" width="224" height="20" rx="4" fill="#064e3b"/>
+    <text x="130" y="129" font-family="sans-serif" font-size="10" fill="#a7f3d0" text-anchor="middle">Authoritative NS2 (ns2.example.com)</text>
+  </g>
+
+  <!-- Bottom Troubleshooting Bar -->
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="75" y="455" font-family="monospace" font-size="11" fill="#f87171" font-weight="bold">Fast CLI Sync:</text>
+  <text x="175" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">/scripts/dnscluster syncall</text>
+  <text x="370" y="455" font-family="monospace" font-size="11" fill="#38bdf8">|</text>
+  <text x="385" y="455" font-family="monospace" font-size="11" fill="#f87171" font-weight="bold">Rebuild Config:</text>
+  <text x="500" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">/scripts/rebuilddnsconfig</text>
+  <text x="690" y="455" font-family="monospace" font-size="11" fill="#38bdf8">|</text>
+  <text x="705" y="455" font-family="sans-serif" font-size="11" fill="#a7f3d0">LicenBase Engineering</text>
+</svg>

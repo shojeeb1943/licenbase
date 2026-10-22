@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgShell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="redCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#4c0519"/>
+    </linearGradient>
+    <filter id="sh1" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bgShell)"/>
+
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Linux VPS Hidden Web Shell Detection &amp; Analysis Playbook</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Hunting obfuscated PHP payloads, anomalous mtime stamps, and suspicious web processes</text>
+
+  <!-- Left: Shell Characteristics -->
+  <g transform="translate(60, 105)" filter="url(#sh1)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#334155"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Common Web Shell Patterns</text>
+
+    <rect x="15" y="52" width="220" height="75" rx="8" fill="url(#redCard)" stroke="#f43f5e"/>
+    <text x="25" y="73" font-family="monospace" font-size="11" fill="#fecdd3" font-weight="bold">Obfuscation Signatures</text>
+    <text x="25" y="93" font-family="monospace" font-size="10" fill="#ffe4e6">• eval(base64_decode(...))</text>
+    <text x="25" y="110" font-family="monospace" font-size="10" fill="#ffe4e6">• preg_replace with /e modifier</text>
+
+    <rect x="15" y="137" width="220" height="75" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="158" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">Stealth Masquerading</text>
+    <text x="25" y="178" font-family="sans-serif" font-size="11" fill="#cbd5e1">• Hidden in /wp-content/uploads/</text>
+    <text x="25" y="196" font-family="sans-serif" font-size="11" fill="#cbd5e1">• Mimicking core files (.php.jpg)</text>
+
+    <rect x="15" y="222" width="220" height="75" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="243" font-family="sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Timestamp Tampering</text>
+    <text x="25" y="263" font-family="sans-serif" font-size="11" fill="#cbd5e1">• Timestomping mtime stamps</text>
+    <text x="25" y="281" font-family="sans-serif" font-size="11" fill="#cbd5e1">• Exposed via ctime comparison</text>
+  </g>
+
+  <!-- Middle Arrow -->
+  <g transform="translate(330, 240)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#f43f5e" stroke-width="4"/>
+    <polygon points="55,0 42,-6 42,6" fill="#f43f5e"/>
+    <text x="25" y="-12" font-family="monospace" font-size="11" fill="#fca5a5" text-anchor="middle">Scan</text>
+  </g>
+
+  <!-- Right: Command Playbook -->
+  <g transform="translate(400, 105)" filter="url(#sh1)">
+    <rect width="500" height="315" rx="14" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+    <rect width="500" height="38" rx="14" fill="#881337" fill-opacity="0.3"/>
+    <text x="250" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#fca5a5" text-anchor="middle">High-Accuracy Terminal Detection Commands</text>
+
+    <!-- Scan for functions -->
+    <rect x="20" y="52" width="460" height="75" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="32" y="73" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">1. Search Dangerous Execution Functions:</text>
+    <text x="32" y="93" font-family="monospace" font-size="11" fill="#f1f5f9">grep -rP "(passthru|shell_exec|system|base64_decode)" \</text>
+    <text x="45" y="113" font-family="monospace" font-size="11" fill="#fcd34d">/home/*/public_html/wp-content/uploads/ --include="*.php"</text>
+
+    <!-- Scan modified files -->
+    <rect x="20" y="135" width="460" height="75" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="32" y="156" font-family="sans-serif" font-size="12" font-weight="bold" fill="#34d399">2. Find PHP Files Modified in the Last 48 Hours:</text>
+    <text x="32" y="176" font-family="monospace" font-size="11" fill="#f1f5f9">find /home/*/public_html -type f -name "*.php" -mtime -2 \</text>
+    <text x="45" y="196" font-family="monospace" font-size="11" fill="#6ee7b7">! -path "*/wp-content/cache/*" -ls</text>
+
+    <!-- Automated AI Scanner -->
+    <rect x="20" y="218" width="460" height="85" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="32" y="239" font-family="sans-serif" font-size="12" font-weight="bold" fill="#7dd3fc">3. Automated Deep Heuristic Quarantine:</text>
+    <text x="32" y="259" font-family="monospace" font-size="11" fill="#38bdf8">imunify360-agent malware user scan &lt;username&gt;</text>
+    <text x="32" y="279" font-family="sans-serif" font-size="11" fill="#94a3b8">Proactive real-time defense detects zero-day shells instantly.</text>
+  </g>
+
+  <!-- Bottom Tip -->
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="80" y="455" font-family="monospace" font-size="11" fill="#38bdf8" font-weight="bold">Check Listening Network Sockets:</text>
+  <text x="315" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">ss -tulpn | grep -v ':(80|443|22|2083|2087)'</text>
+  <text x="690" y="455" font-family="monospace" font-size="11" fill="#34d399">|</text>
+  <text x="705" y="455" font-family="sans-serif" font-size="11" fill="#a7f3d0">LicenBase Security Guide</text>
+</svg>

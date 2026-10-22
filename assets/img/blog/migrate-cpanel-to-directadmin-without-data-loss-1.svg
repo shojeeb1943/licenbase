@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0b172a"/><stop offset="100%" stop-color="#020617"/></linearGradient>
+    <filter id="shDA" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+  <rect width="960" height="480" fill="url(#bgDA)"/>
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">cPanel to DirectAdmin Migration Pipeline</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Automated backup conversion, user-data mapping, and zero-downtime DNS cutover</text>
+
+  <!-- Step 1: Backup on cPanel -->
+  <g transform="translate(50, 105)" filter="url(#shDA)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#0369a1" fill-opacity="0.3"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">1. cPanel Source Extraction</text>
+    <text x="18" y="65" font-family="monospace" font-size="11" fill="#7dd3fc" font-weight="bold">/scripts/pkgacct username</text>
+    <text x="18" y="90" font-family="sans-serif" font-size="11" fill="#cbd5e1">Creates full uncompressed or gzip cpmove-username.tar.gz archive.</text>
+    <rect x="15" y="125" width="220" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="148" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Extracted Data:</text>
+    <text x="25" y="168" font-family="sans-serif" font-size="10" fill="#94a3b8">• MySQL/MariaDB databases</text>
+    <text x="25" y="184" font-family="sans-serif" font-size="10" fill="#94a3b8">• Dovecot/Maildir email accounts</text>
+    <rect x="15" y="210" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="232" font-family="monospace" font-size="10" fill="#38bdf8">rsync -avz /backup/cpmove-* \</text>
+    <text x="25" y="252" font-family="monospace" font-size="10" fill="#38bdf8">root@da-server:/home/admin/</text>
+  </g>
+
+  <!-- Step 2: Conversion in DA -->
+  <g transform="translate(355, 105)" filter="url(#shDA)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#7e22ce" fill-opacity="0.3"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#c084fc" text-anchor="middle">2. DirectAdmin Converter</text>
+    <text x="18" y="65" font-family="monospace" font-size="11" fill="#d8b4fe" font-weight="bold">da-cpanel-migration tool</text>
+    <text x="18" y="90" font-family="sans-serif" font-size="11" fill="#cbd5e1">Translates cPanel directory hierarchy into DirectAdmin user structure.</text>
+    <rect x="15" y="125" width="220" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="148" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Structural Conversion:</text>
+    <text x="25" y="168" font-family="sans-serif" font-size="10" fill="#94a3b8">• public_html -> domains/domain/public_html</text>
+    <text x="25" y="184" font-family="sans-serif" font-size="10" fill="#94a3b8">• cPanel cronjobs -> DA crontab</text>
+    <rect x="15" y="210" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="232" font-family="monospace" font-size="10" fill="#c084fc">/usr/local/directadmin/scripts/</text>
+    <text x="25" y="252" font-family="monospace" font-size="10" fill="#c084fc">cpanel_to_da/cpanel_to_da.sh</text>
+  </g>
+
+  <!-- Step 3: Restore & Cutover -->
+  <g transform="translate(660, 105)" filter="url(#shDA)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#059669" fill-opacity="0.3"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">3. Restore &amp; DNS Cutover</text>
+    <text x="18" y="65" font-family="monospace" font-size="11" fill="#6ee7b7" font-weight="bold">Admin Backup/Restore in DA</text>
+    <text x="18" y="90" font-family="sans-serif" font-size="11" fill="#cbd5e1">Provisions users, maps SSL certificates, and starts services.</text>
+    <rect x="15" y="125" width="220" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="148" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Zero-Downtime Actions:</text>
+    <text x="25" y="168" font-family="sans-serif" font-size="10" fill="#94a3b8">• Reduce TTL to 300s 24h prior</text>
+    <text x="25" y="184" font-family="sans-serif" font-size="10" fill="#94a3b8">• Final delta rsync of mailboxes</text>
+    <rect x="15" y="210" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="232" font-family="sans-serif" font-size="11" font-weight="bold" fill="#34d399">Total Cost Advantage:</text>
+    <text x="25" y="252" font-family="sans-serif" font-size="10" fill="#cbd5e1">Save 60-70% on monthly licensing with DirectAdmin VPS.</text>
+  </g>
+
+  <rect x="50" y="435" width="860" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="70" y="455" font-family="sans-serif" font-size="11" fill="#f8fafc" font-weight="bold">DirectAdmin Licensing:</text>
+  <text x="220" y="455" font-family="sans-serif" font-size="11" fill="#94a3b8">Get instant automated DirectAdmin licenses for VPS &amp; Bare-Metal at LicenBase.</text>
+</svg>

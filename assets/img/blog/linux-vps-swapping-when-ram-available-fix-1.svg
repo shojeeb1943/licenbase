@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgSwap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071527"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="sh5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bgSwap)"/>
+
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Linux Kernel Page Cache &amp; Swappiness Dynamics</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Why Linux VPS swaps pages even when 'free -m' shows plenty of available memory</text>
+
+  <!-- RAM Breakdown -->
+  <g transform="translate(60, 105)" filter="url(#sh5)">
+    <rect width="400" height="315" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="400" height="40" rx="14" fill="#0284c7" fill-opacity="0.25"/>
+    <text x="200" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8" text-anchor="middle">Physical RAM (free -m Breakdown)</text>
+
+    <rect x="20" y="55" width="360" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="32" y="76" font-family="sans-serif" font-size="12" font-weight="bold" fill="#34d399">Anonymous Memory (Processes)</text>
+    <text x="32" y="95" font-family="sans-serif" font-size="11" fill="#cbd5e1">Active PHP-FPM, MySQL, and Nginx heap/stack.</text>
+    <text x="32" y="112" font-family="sans-serif" font-size="10" fill="#94a3b8">Cannot be dropped without swapping to disk.</text>
+
+    <rect x="20" y="135" width="360" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="32" y="156" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">Page Cache &amp; Buffers (buff/cache)</text>
+    <text x="32" y="175" font-family="sans-serif" font-size="11" fill="#cbd5e1">Disk caching for fast file reading.</text>
+    <text x="32" y="192" font-family="sans-serif" font-size="10" fill="#94a3b8">The kernel prefers caching fast disk pages over idle sleep processes!</text>
+
+    <rect x="20" y="215" width="360" height="85" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="32" y="235" font-family="sans-serif" font-size="12" font-weight="bold" fill="#7dd3fc">The vm.swappiness Dial (Default = 60)</text>
+    <text x="32" y="254" font-family="sans-serif" font-size="11" fill="#cbd5e1">A balance ratio between reclaiming page cache vs paging anonymous memory to swap.</text>
+    <text x="32" y="274" font-family="sans-serif" font-size="10" fill="#fed7aa">Setting to 10 or 1 stops premature swapping on hosting VPS.</text>
+  </g>
+
+  <!-- Swap & Remediation -->
+  <g transform="translate(500, 105)" filter="url(#sh5)">
+    <rect width="400" height="315" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="400" height="40" rx="14" fill="#059669" fill-opacity="0.25"/>
+    <text x="200" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399" text-anchor="middle">Diagnosis &amp; Swappiness Optimization</text>
+
+    <rect x="20" y="55" width="360" height="75" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="32" y="76" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">1. Check Current Swappiness Value:</text>
+    <text x="32" y="96" font-family="monospace" font-size="11" fill="#f1f5f9">cat /proc/sys/vm/swappiness</text>
+    <text x="32" y="116" font-family="monospace" font-size="11" fill="#94a3b8"># Default on Ubuntu &amp; AlmaLinux is 60</text>
+
+    <rect x="20" y="140" width="360" height="75" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="32" y="161" font-family="sans-serif" font-size="12" font-weight="bold" fill="#34d399">2. Reduce Swappiness to 10 Instantly:</text>
+    <text x="32" y="181" font-family="monospace" font-size="11" fill="#f1f5f9">sysctl vm.swappiness=10</text>
+    <text x="32" y="201" font-family="sans-serif" font-size="10" fill="#94a3b8">Persist in /etc/sysctl.conf: vm.swappiness = 10</text>
+
+    <rect x="20" y="225" width="360" height="75" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="32" y="246" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">3. Safely Flush Stale Swap Back into RAM:</text>
+    <text x="32" y="266" font-family="monospace" font-size="11" fill="#f1f5f9">swapoff -a &amp;&amp; swapon -a</text>
+    <text x="32" y="286" font-family="sans-serif" font-size="10" fill="#94a3b8">Requires sufficient free RAM to hold swapped data.</text>
+  </g>
+
+  <!-- Bottom Tip -->
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="80" y="455" font-family="monospace" font-size="11" fill="#fbbf24" font-weight="bold">Inspect Processes Using Swap:</text>
+  <text x="290" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">for f in /proc/*/status; do awk '/VmSwap/{print $2, $3}' $f; done</text>
+</svg>

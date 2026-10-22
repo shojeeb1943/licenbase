@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBW" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0b172a"/><stop offset="100%" stop-color="#020617"/></linearGradient>
+    <filter id="shBW" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+  <rect width="960" height="480" fill="url(#bgBW)"/>
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Linux VPS Real-Time Bandwidth Monitoring Toolkit</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Comparing iftop, vnStat, nload, and bmon for live network packet inspection</text>
+
+  <!-- 3 Tools -->
+  <g transform="translate(60, 105)" filter="url(#shBW)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#0284c7" fill-opacity="0.25"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">iftop (Socket Level)</text>
+    <text x="18" y="65" font-family="monospace" font-size="11" fill="#7dd3fc" font-weight="bold">Command: iftop -i eth0</text>
+    <text x="18" y="90" font-family="sans-serif" font-size="11" fill="#cbd5e1">Top-like display of bandwidth per active host pair and port connections.</text>
+    <rect x="15" y="125" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="148" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Best For:</text>
+    <text x="25" y="168" font-family="sans-serif" font-size="10" fill="#94a3b8">• Identifying DDoS attack sources</text>
+    <text x="25" y="184" font-family="sans-serif" font-size="10" fill="#94a3b8">• Pinpointing rogue outbound uploads</text>
+    <rect x="15" y="220" width="220" height="80" rx="8" fill="#082f49"/>
+    <text x="25" y="245" font-family="monospace" font-size="11" fill="#38bdf8">Key Flag: iftop -P -N</text>
+    <text x="25" y="265" font-family="sans-serif" font-size="10" fill="#cbd5e1">Shows exact port numbers &amp; IPs</text>
+  </g>
+
+  <g transform="translate(355, 105)" filter="url(#shBW)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#059669" fill-opacity="0.25"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">vnStat (Historical Log)</text>
+    <text x="18" y="65" font-family="monospace" font-size="11" fill="#6ee7b7" font-weight="bold">Command: vnstat -d / -m</text>
+    <text x="18" y="90" font-family="sans-serif" font-size="11" fill="#cbd5e1">Daemon-backed network logger that tracks hourly, daily, and monthly transfer totals.</text>
+    <rect x="15" y="125" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="148" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Best For:</text>
+    <text x="25" y="168" font-family="sans-serif" font-size="10" fill="#94a3b8">• Over-quota billing verification</text>
+    <text x="25" y="184" font-family="sans-serif" font-size="10" fill="#94a3b8">• Monthly bandwidth auditing</text>
+    <rect x="15" y="220" width="220" height="80" rx="8" fill="#064e3b"/>
+    <text x="25" y="245" font-family="monospace" font-size="11" fill="#34d399">Zero CPU Overhead</text>
+    <text x="25" y="265" font-family="sans-serif" font-size="10" fill="#cbd5e1">Reads kernel interface statistics</text>
+  </g>
+
+  <g transform="translate(650, 105)" filter="url(#shBW)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#b45309" fill-opacity="0.25"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#fbbf24" text-anchor="middle">nload (Visual ASCII)</text>
+    <text x="18" y="65" font-family="monospace" font-size="11" fill="#fde68a" font-weight="bold">Command: nload eth0</text>
+    <text x="18" y="90" font-family="sans-serif" font-size="11" fill="#cbd5e1">Real-time ASCII bar graphs showing current, average, and peak inbound/outbound rates.</text>
+    <rect x="15" y="125" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="148" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Best For:</text>
+    <text x="25" y="168" font-family="sans-serif" font-size="10" fill="#94a3b8">• Live throughput verification</text>
+    <text x="25" y="184" font-family="sans-serif" font-size="10" fill="#94a3b8">• Immediate NIC saturation check</text>
+    <rect x="15" y="220" width="220" height="80" rx="8" fill="#451a03"/>
+    <text x="25" y="245" font-family="monospace" font-size="11" fill="#fbbf24">Units: MBit/s or MB/s</text>
+    <text x="25" y="265" font-family="sans-serif" font-size="10" fill="#cbd5e1">Toggle units via shortcut keys</text>
+  </g>
+
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="80" y="455" font-family="monospace" font-size="11" fill="#38bdf8" font-weight="bold">Install All via Package Manager:</text>
+  <text x="320" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">dnf install epel-release &amp;&amp; dnf install iftop vnstat nload</text>
+</svg>

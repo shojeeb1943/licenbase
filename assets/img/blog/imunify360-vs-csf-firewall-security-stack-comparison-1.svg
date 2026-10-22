@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgComp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="sh3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bgComp)"/>
+
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Imunify360 vs CSF Firewall: Technical Architecture Comparison</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Comparing Layer 3/4 network firewall rules against full Layer 7 AI proactive security</text>
+
+  <!-- Left: CSF -->
+  <g transform="translate(60, 105)" filter="url(#sh3)">
+    <rect width="390" height="315" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <rect width="390" height="40" rx="14" fill="#334155"/>
+    <text x="195" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="middle">ConfigServer Security &amp; Firewall (CSF)</text>
+
+    <text x="20" y="65" font-family="sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">Network &amp; Port Level Protection (Layer 3/4)</text>
+
+    <rect x="20" y="78" width="350" height="48" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="30" y="98" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Iptables / Nftables Packet Filtering</text>
+    <text x="30" y="115" font-family="sans-serif" font-size="10" fill="#94a3b8">Controls inbound/outbound ports, SYN floods, ping bans.</text>
+
+    <rect x="20" y="134" width="350" height="48" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="30" y="154" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Login Failure Daemon (LFD)</text>
+    <text x="30" y="171" font-family="sans-serif" font-size="10" fill="#94a3b8">Scans log files (SSH, Exim, cPanel) for failed password attempts.</text>
+
+    <rect x="20" y="190" width="350" height="60" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="30" y="210" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f87171">Key Limitations:</text>
+    <text x="30" y="228" font-family="sans-serif" font-size="10" fill="#cbd5e1">• No malware scanner or proactive PHP execution blocking</text>
+    <text x="30" y="243" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Blind to encrypted HTTPS web exploits &amp; SQL injection</text>
+
+    <rect x="20" y="260" width="350" height="45" rx="6" fill="#1e293b"/>
+    <text x="195" y="287" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Cost: Free / Open Source</text>
+  </g>
+
+  <!-- Right: Imunify360 -->
+  <g transform="translate(510, 105)" filter="url(#sh3)">
+    <rect width="390" height="315" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="390" height="40" rx="14" fill="#0284c7" fill-opacity="0.3"/>
+    <text x="195" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8" text-anchor="middle">Imunify360 Enterprise Defense Stack</text>
+
+    <text x="20" y="65" font-family="sans-serif" font-size="12" font-weight="bold" fill="#7dd3fc">Full-Stack Application &amp; Web Defense (Layer 3-7)</text>
+
+    <rect x="20" y="78" width="350" height="48" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="30" y="98" font-family="sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Proactive Defense (AI Heuristics)</text>
+    <text x="30" y="115" font-family="sans-serif" font-size="10" fill="#94a3b8">Prevents zero-day PHP execution before code runs in memory.</text>
+
+    <rect x="20" y="134" width="350" height="48" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="30" y="154" font-family="sans-serif" font-size="11" font-weight="bold" fill="#34d399">Automated Real-Time Malware Cleanup</text>
+    <text x="30" y="171" font-family="sans-serif" font-size="10" fill="#94a3b8">Background file scanner with surgical un-hacked file restores.</text>
+
+    <rect x="20" y="190" width="350" height="60" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="30" y="210" font-family="sans-serif" font-size="11" font-weight="bold" fill="#a855f7">Advanced WAF &amp; Captcha Splash Page</text>
+    <text x="30" y="228" font-family="sans-serif" font-size="10" fill="#cbd5e1">• ModSecurity integration + Global Herd Immunity IP Cloud</text>
+    <text x="30" y="243" font-family="sans-serif" font-size="10" fill="#cbd5e1">• KernelCare live patching without reboots</text>
+
+    <rect x="20" y="260" width="350" height="45" rx="6" fill="#082f49"/>
+    <text x="195" y="287" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8" text-anchor="middle">LicenBase Automated License: $6.00/mo</text>
+  </g>
+
+  <!-- Bottom Tip -->
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="80" y="455" font-family="sans-serif" font-size="11" fill="#f8fafc" font-weight="bold">Best Practice Architecture:</text>
+  <text x="240" y="455" font-family="sans-serif" font-size="11" fill="#94a3b8">Run Imunify360 for full web application defense; its native firewall replaces or integrates with CSF.</text>
+</svg>

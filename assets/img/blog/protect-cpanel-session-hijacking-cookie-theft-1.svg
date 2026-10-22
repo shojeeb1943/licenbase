@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgSess" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="sh2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bgSess)"/>
+
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">cPanel Session Hijacking &amp; Cookie Theft Defense Architecture</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Mitigating infostealer malware, enforcing IP session binding, and hardening cpsession tokens</text>
+
+  <!-- 3 Pillars -->
+  <!-- 1. The Vector -->
+  <g transform="translate(60, 105)" filter="url(#sh2)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#b91c1c" fill-opacity="0.3"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#fca5a5" text-anchor="middle">1. Threat Vector: Infostealers</text>
+
+    <text x="18" y="65" font-family="sans-serif" font-size="11" fill="#cbd5e1">Malware (RedLine, Lumma, Vidar) extracts browser sqlite databases:</text>
+    <text x="18" y="90" font-family="monospace" font-size="10" fill="#f87171">• cpsession cookies</text>
+    <text x="18" y="108" font-family="monospace" font-size="10" fill="#f87171">• WHM root auth tokens</text>
+    <text x="18" y="126" font-family="monospace" font-size="10" fill="#f87171">• Saved passwords &amp; autofill</text>
+
+    <rect x="15" y="145" width="220" height="150" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="25" y="168" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Attack Mechanism:</text>
+    <text x="25" y="190" font-family="sans-serif" font-size="11" fill="#94a3b8">Attacker imports stolen cookie into anti-detect browser, bypassing standard username/password and MFA!</text>
+  </g>
+
+  <!-- 2. WHM Tweak Settings Mitigation -->
+  <g transform="translate(355, 105)" filter="url(#sh2)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#0284c7" fill-opacity="0.3"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">2. WHM Security Hardening</text>
+
+    <rect x="15" y="52" width="220" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="73" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7dd3fc">Cookie IP Validation</text>
+    <text x="25" y="93" font-family="monospace" font-size="10" fill="#f1f5f9">Set to: "strict"</text>
+    <text x="25" y="110" font-family="sans-serif" font-size="10" fill="#94a3b8">Kills session if client IP changes.</text>
+
+    <rect x="15" y="132" width="220" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="153" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7dd3fc">Session Timeout Quota</text>
+    <text x="25" y="173" font-family="monospace" font-size="10" fill="#f1f5f9">Idle: 900s (15 mins)</text>
+    <text x="25" y="190" font-family="sans-serif" font-size="10" fill="#94a3b8">Forces re-authentication.</text>
+
+    <rect x="15" y="212" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="233" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7dd3fc">MFA Enforcement</text>
+    <text x="25" y="253" font-family="sans-serif" font-size="10" fill="#cbd5e1">Two-Factor Auth (TOTP)</text>
+    <text x="25" y="271" font-family="sans-serif" font-size="10" fill="#cbd5e1">Mandatory for all WHM users.</text>
+  </g>
+
+  <!-- 3. Infrastructure Defenses -->
+  <g transform="translate(650, 105)" filter="url(#sh2)">
+    <rect width="250" height="315" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="14" fill="#059669" fill-opacity="0.3"/>
+    <text x="125" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">3. Architectural Isolation</text>
+
+    <text x="18" y="65" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">CageFS Virtualized Filesystem:</text>
+    <text x="18" y="85" font-family="sans-serif" font-size="11" fill="#cbd5e1">Prevents compromised cPanel users from snooping on neighboring session directories in /tmp.</text>
+
+    <rect x="15" y="120" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="142" font-family="sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">cPHulk Brute Force:</text>
+    <text x="25" y="162" font-family="sans-serif" font-size="10" fill="#94a3b8">Bans IP addresses attempting credential stuffing or cookie replay.</text>
+
+    <rect x="15" y="215" width="220" height="82" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="235" font-family="sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">SSL/TLS Strict HSTS:</text>
+    <text x="25" y="255" font-family="sans-serif" font-size="10" fill="#94a3b8">Forces secure-flagged cookies on ports 2083 and 2087.</text>
+  </g>
+
+  <!-- Bottom Tip -->
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="80" y="455" font-family="monospace" font-size="11" fill="#38bdf8" font-weight="bold">CLI Session Purge:</text>
+  <text x="220" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">rm -f /var/cpanel/sessions/raw/*</text>
+  <text x="500" y="455" font-family="monospace" font-size="11" fill="#38bdf8">|</text>
+  <text x="520" y="455" font-family="monospace" font-size="11" fill="#34d399" font-weight="bold">Check Active Sessions:</text>
+  <text x="700" y="455" font-family="monospace" font-size="11" fill="#f1f5f9">whmapi1 list_sessions</text>
+</svg>

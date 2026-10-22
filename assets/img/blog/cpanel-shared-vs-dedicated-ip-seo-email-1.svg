@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgIP" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0e1726"/><stop offset="100%" stop-color="#020617"/></linearGradient>
+    <filter id="shIP" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+  <rect width="960" height="480" fill="url(#bgIP)"/>
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">cPanel Shared vs Dedicated IP Comparison Matrix</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Evaluating modern SEO, SSL/SNI requirements, and outbound email deliverability</text>
+
+  <!-- Left: Shared IP -->
+  <g transform="translate(60, 105)" filter="url(#shIP)">
+    <rect width="390" height="315" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <rect width="390" height="40" rx="14" fill="#334155"/>
+    <text x="195" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="middle">Shared IP Address (Default)</text>
+
+    <rect x="20" y="55" width="350" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="78" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">1. Web &amp; SSL (SNI Technology):</text>
+    <text x="30" y="98" font-family="sans-serif" font-size="11" fill="#cbd5e1">Server Name Indication (SNI) enables hundreds of unique SSL certs on one IP. No dedicated IP needed!</text>
+
+    <rect x="20" y="135" width="350" height="70" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="30" y="158" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">2. Search Engine Optimization (SEO):</text>
+    <text x="30" y="178" font-family="sans-serif" font-size="11" fill="#cbd5e1">Google explicitly confirms shared IPs do not harm SEO rankings. Hostname &amp; content are what rank.</text>
+
+    <rect x="20" y="215" width="350" height="85" rx="8" fill="#450a0a" stroke="#f43f5e"/>
+    <text x="30" y="238" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fecaca">3. Email Deliverability Risk:</text>
+    <text x="30" y="258" font-family="sans-serif" font-size="11" fill="#fee2e2">Neighboring compromised accounts sending spam can blacklist the shared IP on Spamhaus/Proofpoint.</text>
+  </g>
+
+  <!-- Right: Dedicated IP -->
+  <g transform="translate(510, 105)" filter="url(#shIP)">
+    <rect width="390" height="315" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+    <rect width="390" height="40" rx="14" fill="#059669" fill-opacity="0.25"/>
+    <text x="195" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399" text-anchor="middle">Dedicated IP Address</text>
+
+    <rect x="20" y="55" width="350" height="70" rx="8" fill="#1e293b" stroke="#10b981"/>
+    <text x="30" y="78" font-family="sans-serif" font-size="12" font-weight="bold" fill="#34d399">1. Total Mail Reputation Control:</text>
+    <text x="30" y="98" font-family="sans-serif" font-size="11" fill="#cbd5e1">Isolated rDNS (PTR), SPF, and DKIM. No noisy neighbor spam can burn your sender score.</text>
+
+    <rect x="20" y="135" width="350" height="70" rx="8" fill="#1e293b" stroke="#10b981"/>
+    <text x="30" y="158" font-family="sans-serif" font-size="12" font-weight="bold" fill="#34d399">2. Enterprise Security &amp; Compliance:</text>
+    <text x="30" y="178" font-family="sans-serif" font-size="11" fill="#cbd5e1">Required for custom payment gateways, financial APIs, and IP-whitelisted banking firewalls.</text>
+
+    <rect x="20" y="215" width="350" height="85" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="30" y="238" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">3. Direct WHM IP Delegation:</text>
+    <text x="30" y="258" font-family="sans-serif" font-size="11" fill="#cbd5e1">Configured in WHM "Change Site's IP Address" or assigned directly via WHMCS automated billing.</text>
+  </g>
+
+  <rect x="60" y="435" width="840" height="30" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="80" y="455" font-family="sans-serif" font-size="11" fill="#f8fafc" font-weight="bold">The Modern Consensus:</text>
+  <text x="240" y="455" font-family="sans-serif" font-size="11" fill="#94a3b8">Shared IP is fine for web traffic; dedicated IP is critical for high-volume transactional email.</text>
+</svg>
