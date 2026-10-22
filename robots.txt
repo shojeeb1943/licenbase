@@ -1,12 +1,18 @@
 User-agent: *
 Allow: /
+Disallow: /install.sh
+Disallow: /installer/
 
 # Explicit Search Engine & AI Assistant Crawlers
 User-agent: Googlebot
 Allow: /
+Disallow: /install.sh
+Disallow: /installer/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /install.sh
+Disallow: /installer/
 
 User-agent: GPTBot
 Allow: /
