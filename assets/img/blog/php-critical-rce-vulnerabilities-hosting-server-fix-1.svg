@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t-rce d-rce">
+  <title id="t-rce">Emergency Response Workflow for PHP RCE Vulnerabilities CVE-2026-109618 and CVE-2026-109619</title>
+  <desc id="d-rce">Four-stage incident response runbook for hosting servers: discovery, patching, service recycling, and runtime verification.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="redPill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="420" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Top Emergency Alert Header -->
+  <rect x="30" y="22" width="900" height="50" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <rect x="42" y="33" width="140" height="28" rx="6" fill="url(#redPill)"/>
+  <text x="112" y="52" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">CRITICAL ADVISORY</text>
+  <text x="195" y="53" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">PHP RCE (CVE-2026-109618 &amp; 109619) Incident Response Runbook</text>
+  <rect x="740" y="33" width="176" height="28" rx="6" fill="#312E81" stroke="#4F46E5" stroke-width="1"/>
+  <text x="828" y="51" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#C7D2FE" text-anchor="middle">October 2026 Patch Cycle</text>
+
+  <!-- Stage 1: Runtime Audit -->
+  <g transform="translate(35, 92)" filter="url(#cardShadow)">
+    <rect width="205" height="298" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#EF4444" fill-opacity="0.15"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#F87171" text-anchor="middle">1</text>
+    <text x="50" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Discover Runtimes</text>
+    <path d="M14 54 h177" stroke="#1F2937" stroke-width="1"/>
+    
+    <text x="14" y="78" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.5">TARGET DISCOVERY</text>
+    <text x="14" y="102" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Identify PHP-FPM pools</text>
+    <text x="14" y="126" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Check LiteSpeed LSPHP</text>
+    <text x="14" y="150" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Review MultiPHP (8.2 - 8.5)</text>
+    <text x="14" y="174" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Inspect Docker containers</text>
+    <text x="14" y="198" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Don't rely on `php -v` CLI</text>
+
+    <rect x="14" y="238" width="177" height="42" rx="8" fill="#1F2937" stroke="#EF4444" stroke-width="1"/>
+    <text x="102" y="256" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FCA5A5" text-anchor="middle">KEY REQUIREMENT</text>
+    <text x="102" y="271" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#EF4444" text-anchor="middle">Audit Per-Site Handlers</text>
+  </g>
+
+  <!-- Stage 2: Platform Patching -->
+  <g transform="translate(260, 92)" filter="url(#cardShadow)">
+    <rect width="205" height="298" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#F59E0B" fill-opacity="0.15"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#FBBF24" text-anchor="middle">2</text>
+    <text x="50" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Apply Patches</text>
+    <path d="M14 54 h177" stroke="#1F2937" stroke-width="1"/>
+    
+    <text x="14" y="78" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.5">PLATFORM REMEDIATION</text>
+    <text x="14" y="102" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• cPanel: yum update ea-php*</text>
+    <text x="14" y="126" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Plesk: plesk installer update</text>
+    <text x="14" y="150" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• DirectAdmin: ./build php*</text>
+    <text x="14" y="174" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Ubuntu: apt upgrade USN</text>
+    <text x="14" y="198" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Alma/Rocky: dnf upgrade php</text>
+
+    <rect x="14" y="238" width="177" height="42" rx="8" fill="#1F2937" stroke="#F59E0B" stroke-width="1"/>
+    <text x="102" y="256" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FDE68A" text-anchor="middle">UPSTREAM FIXED VERSIONS</text>
+    <text x="102" y="271" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#F59E0B" text-anchor="middle">8.2.35, 8.3.36, 8.4.27</text>
+  </g>
+
+  <!-- Stage 3: Service Recycling -->
+  <g transform="translate(485, 92)" filter="url(#cardShadow)">
+    <rect width="205" height="298" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#3B82F6" fill-opacity="0.15"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#60A5FA" text-anchor="middle">3</text>
+    <text x="50" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Recycle Daemons</text>
+    <path d="M14 54 h177" stroke="#1F2937" stroke-width="1"/>
+    
+    <text x="14" y="78" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.5">PROCESS RELOAD</text>
+    <text x="14" y="102" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Restart all PHP-FPM pools</text>
+    <text x="14" y="126" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Flush LiteSpeed LSPHP</text>
+    <text x="14" y="150" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Graceful Apache restart</text>
+    <text x="14" y="174" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Reload NGINX fastcgi</text>
+    <text x="14" y="198" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Recreate Docker pods</text>
+
+    <rect x="14" y="238" width="177" height="42" rx="8" fill="#1F2937" stroke="#3B82F6" stroke-width="1"/>
+    <text x="102" y="256" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#BFDBFE" text-anchor="middle">PURGE STALE RUNTIMES</text>
+    <text x="102" y="271" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#3B82F6" text-anchor="middle">Terminate Lingering Workers</text>
+  </g>
+
+  <!-- Stage 4: Runtime Verification -->
+  <g transform="translate(710, 92)" filter="url(#cardShadow)">
+    <rect width="215" height="298" rx="12" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="14" y="16" width="28" height="28" rx="6" fill="#10B981" fill-opacity="0.15"/>
+    <text x="28" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#34D399" text-anchor="middle">4</text>
+    <text x="50" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Verify &amp; Audit</text>
+    <path d="M14 54 h187" stroke="#1F2937" stroke-width="1"/>
+    
+    <text x="14" y="78" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.5">POST-PATCH AUDITING</text>
+    <text x="14" y="102" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Test per-domain phpinfo()</text>
+    <text x="14" y="126" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Verify loaded SO modules</text>
+    <text x="14" y="150" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Inspect web access logs</text>
+    <text x="14" y="174" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Audit unexpected processes</text>
+    <text x="14" y="198" font-family="Inter, sans-serif" font-size="11.5" fill="#E5E7EB">• Remove test info scripts</text>
+
+    <rect x="14" y="238" width="187" height="42" rx="8" fill="#064E3B" stroke="#059669" stroke-width="1"/>
+    <text x="107" y="256" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#A7F3D0" text-anchor="middle">ZERO EXPLOIT VULNERABILITY</text>
+    <text x="107" y="271" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#34D399" text-anchor="middle">Server Fully Hardened</text>
+  </g>
+</svg>

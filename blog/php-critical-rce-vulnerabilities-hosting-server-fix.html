@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHP Critical RCE Vulnerabilities Server Fix | LicenBase</title>
+  <meta name="description" content="Fix critical PHP RCE vulnerabilities CVE-2026-109618 and CVE-2026-109619. Step-by-step patch guide for cPanel, Plesk, DirectAdmin, LiteSpeed, and Linux servers." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/php-critical-rce-vulnerabilities-hosting-server-fix" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="PHP Critical RCE Vulnerabilities Server Fix" />
+  <meta property="og:description" content="Fix critical PHP RCE vulnerabilities CVE-2026-109618 and CVE-2026-109619. Step-by-step patch guide for cPanel, Plesk, DirectAdmin, LiteSpeed, and Linux servers." />
+  <meta property="og:url" content="https://licenbase.com/blog/php-critical-rce-vulnerabilities-hosting-server-fix" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-php-critical-rce-vulnerabilities-hosting-server-fix.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Step-by-step emergency incident response flowchart for patching PHP RCE vulnerabilities on hosting servers" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-22" />
+  <meta property="article:modified_time" content="2026-10-22" />
+  <meta property="article:section" content="Security & Licensing" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-php-critical-rce-vulnerabilities-hosting-server-fix.png" />
+  <meta name="twitter:image:alt" content="Step-by-step emergency incident response flowchart for patching PHP RCE vulnerabilities on hosting servers" />
+  <meta name="twitter:title" content="PHP Critical RCE Vulnerabilities Server Fix" />
+  <meta name="twitter:description" content="Fix critical PHP RCE vulnerabilities CVE-2026-109618 and CVE-2026-109619. Step-by-step patch guide for cPanel, Plesk, DirectAdmin, LiteSpeed, and Linux servers." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Critical PHP RCE (CVE-2026-109618): Hosting Server Fix Guide", "item": "https://licenbase.com/blog/php-critical-rce-vulnerabilities-hosting-server-fix"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Critical PHP RCE (CVE-2026-109618): Hosting Server Fix Guide", "description": "Fix critical PHP RCE vulnerabilities CVE-2026-109618 and CVE-2026-109619. Step-by-step patch guide for cPanel, Plesk, DirectAdmin, LiteSpeed, and Linux servers.", "image": ["https://licenbase.com/assets/img/og/blog-php-critical-rce-vulnerabilities-hosting-server-fix.png"], "datePublished": "2026-10-22", "dateModified": "2026-10-22", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/php-critical-rce-vulnerabilities-hosting-server-fix"}, "articleSection": "Security & Licensing", "inLanguage": "en", "wordCount": 2337}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is every website running PHP automatically vulnerable to CVE-2026-109618 and CVE-2026-109619?", "acceptedAnswer": {"@type": "Answer", "text": "Any website running an unpatched version of PHP 8.2, 8.3, 8.4, or 8.5 in an environment that handles HTTP web requests (including PHP-FPM, Apache mod_php, FastCGI, LiteSpeed LSPHP, and FrankenPHP) is exposed. The vulnerabilities reside in core memory management and request lifecycle teardown, meaning standard request processing can trigger memory corruption regardless of which CMS or framework is running."}}, {"@type": "Question", "name": "Does running \"php -v\" in the SSH terminal prove that hosted websites are patched?", "acceptedAnswer": {"@type": "Answer", "text": "No. The command \"php -v\" only queries the default Command Line Interface (CLI) binary configured in the current user's shell path. Web hosting environments - especially cPanel MultiPHP, Plesk, DirectAdmin, and LiteSpeed - frequently run isolated PHP-FPM daemons or distinct binary packages (such as ea-php82-php-fpm or lsphp83) that are completely separate from the system CLI binary. You must verify the specific binary executed by the web server handler."}}, {"@type": "Question", "name": "Is a full operating system reboot required after updating PHP packages?", "acceptedAnswer": {"@type": "Answer", "text": "A full server reboot is generally not required, but every running PHP daemon and parent web server service must be recycled. Simply updating the disk packages leaves active worker processes running in memory with the old, vulnerable binaries. Administrators must restart or reload all PHP-FPM service pools (e.g., systemctl restart \"ea-php*-php-fpm\"), graceful-restart Apache/NGINX, and kill lingering LiteSpeed worker processes (killall -9 lsphp)."}}, {"@type": "Question", "name": "Can an active Web Application Firewall (WAF) or Imunify360 replace patching?", "acceptedAnswer": {"@type": "Answer", "text": "No. While an Imunify360 license and active ModSecurity WAF rules provide vital defense-in-depth by detecting known malicious payloads and preventing unauthorized script drops, the PHP development team explicitly confirmed that there are no complete mitigations other than applying the upstream or vendor security patches. A WAF cannot guarantee detection of all polymorphic memory-corruption triggers."}}, {"@type": "Question", "name": "How should administrators handle end-of-life PHP versions like PHP 7.4, 8.0, and 8.1?", "acceptedAnswer": {"@type": "Answer", "text": "Upstream PHP does not publish patches for end-of-life (EOL) releases. However, older branches may share underlying memory management code vulnerable to similar heap corruption. If legacy client applications require EOL runtimes, host them on CloudLinux OS with HardenedPHP, which backports enterprise security fixes to retired branches, or isolate those accounts onto dedicated legacy virtual machines behind strict access controls."}}, {"@type": "Question", "name": "Does updating cPanel & WHM or Plesk automatically patch all website PHP runtimes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Updating the control panel itself (such as running /scripts/upcp or updating Plesk core) updates the panel's management interface and internal administrative PHP engine, but does not necessarily update EasyApache 4 or Plesk-managed multi-PHP website packages. Administrators must explicitly run the operating system or panel package updates (e.g., yum update \"ea-php*\" on cPanel) and restart the web worker pools."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">Security &amp; Licensing</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Security & Licensing</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">Critical PHP RCE (CVE-2026-109618): Hosting Server Fix Guide</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-22">October 22, 2026</time></span>
+          
+          <span>12 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/php-critical-rce-vulnerabilities-hosting-server-fix-feature.webp" alt="Step-by-step emergency incident response flowchart for patching PHP RCE vulnerabilities on hosting servers" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600">On October 21, 2026, the PHP development team published an emergency global security advisory announcing two critical remote code execution (RCE) vulnerabilities: <strong>CVE-2026-109618</strong> and <strong>CVE-2026-109619</strong>. Both vulnerabilities affect all standard web deployment models - including PHP-FPM, Apache mod_php, FastCGI, FrankenPHP, and LiteSpeed LSPHP. Because these memory management flaws reside inside core request lifecycle routines, unauthenticated remote attackers can craft specialized HTTP requests that trigger heap corruption and achieve arbitrary code execution with the privileges of the web server worker. This operational incident response runbook provides system administrators, hosting companies, and DevOps engineers with the necessary technical procedures to audit, patch, and verify every PHP runtime across cPanel, Plesk, DirectAdmin, LiteSpeed, standalone Linux distributions, and container clusters.</p>
+
+<section class="space-y-4">
+  <h2 id="1-emergency-incident-response-checklist" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">1. Emergency Incident Response Checklist</h2>
+  <div class="rounded-xl border border-red-200 bg-red-50/60 p-5 text-sm text-gray-800">
+    <h3 class="text-base font-bold text-red-900 mb-2">Immediate Administrator Action Items</h3>
+    <ul class="list-disc space-y-2 pl-5">
+      <li><strong>Do not rely on single CLI checks:</strong> Running <code>php -v</code> tests only the shell binary, not the web server worker pools handling live traffic.</li>
+      <li><strong>Prioritize internet-facing multi-tenant nodes:</strong> Patch public shared hosting, agency servers, and SaaS application gateways before internal staging instances.</li>
+      <li><strong>Update package managers:</strong> Execute platform-specific updates for EasyApache 4, Plesk PHP handlers, CustomBuild, or distribution repositories.</li>
+      <li><strong>Force service recycles:</strong> Restart every individual PHP-FPM pool, kill lingering <code>lsphp</code> processes, and gracefully reload Apache/NGINX.</li>
+      <li><strong>Audit runtime versions:</strong> Verify that active web requests report fixed versions (PHP 8.2.35+, 8.3.36+, 8.4.27+, or vendor security backports).</li>
+    </ul>
+  </div>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+    <img src="/assets/img/blog/php-critical-rce-vulnerabilities-hosting-server-fix-1.svg" alt="Step-by-step emergency incident response flowchart for patching PHP RCE vulnerabilities on hosting servers" width="960" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+    <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Emergency incident response runbook: four-stage discovery, patching, daemon recycling, and verification pipeline for CVE-2026-109618 and CVE-2026-109619.</figcaption>
+  </figure>
+</section>
+
+<section class="space-y-4">
+  <h2 id="2-technical-breakdown-cve-2026-109618-and-cve-2026-109619" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">2. Technical Breakdown: CVE-2026-109618 and CVE-2026-109619</h2>
+  <p>To safely evaluate the blast radius of these vulnerabilities, administrators must understand the underlying memory lifecycle failures:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>CVE-2026-109618 (Out-of-Memory Partial Initialization):</strong> During the handling of multipart request payloads or deeply nested array allocations, memory allocation exhaustion can trigger early request termination. In unpatched releases, the exception handling cleanup routines assume that internal request data structures were fully initialized. When the cleanup routine executes against partially initialized memory pointers, it attempts to release unallocated or misaligned addresses, triggering an exploitable heap corruption vulnerability.</li>
+    <li><strong>CVE-2026-109619 (Stale Request State Use-After-Free):</strong> When persistent worker processes (such as PHP-FPM or LiteSpeed worker daemons) handle sequential HTTP requests over kept-alive FastCGI sockets, request shutdown routines failed to clear reference handles for specific internal telemetry and buffer structures. Consequently, stale state pointers survived deallocation and were re-referenced during the initialization of a subsequent HTTP request, resulting in a use-after-free condition.</li>
+  </ul>
+  <p>Because both vulnerabilities can be triggered by standard HTTP request sequences without requiring administrative authentication, internet-facing servers must be patched immediately.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="3-affected-versions-and-fixed-target-releases" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">3. Affected Versions and Fixed Target Releases</h2>
+  <p>The upstream PHP project released synchronized security updates across all currently supported development branches. Compare your installed versions against the verified target releases:</p>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full text-left text-sm text-gray-600">
+      <thead class="bg-gray-50 text-xs font-bold uppercase text-gray-700">
+        <tr>
+          <th class="p-3">PHP Branch</th>
+          <th class="p-3">Upstream Status</th>
+          <th class="p-3">Vulnerable Releases</th>
+          <th class="p-3">Fixed Upstream Version</th>
+          <th class="p-3">Vendor Backport Guidance</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">PHP 8.5</td>
+          <td class="p-3 text-emerald-600 font-medium">Active Support</td>
+          <td class="p-3 font-mono">&lt; 8.5.12</td>
+          <td class="p-3 font-mono font-bold text-blue-600">8.5.12</td>
+          <td class="p-3">Official upstream binaries</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">PHP 8.4</td>
+          <td class="p-3 text-emerald-600 font-medium">Active Support</td>
+          <td class="p-3 font-mono">&lt; 8.4.27</td>
+          <td class="p-3 font-mono font-bold text-blue-600">8.4.27</td>
+          <td class="p-3">Official upstream &amp; distribution backports</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">PHP 8.3</td>
+          <td class="p-3 text-emerald-600 font-medium">Active Support</td>
+          <td class="p-3 font-mono">&lt; 8.3.36</td>
+          <td class="p-3 font-mono font-bold text-blue-600">8.3.36</td>
+          <td class="p-3">cPanel EA4, Plesk, Debian/Ubuntu USN</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">PHP 8.2</td>
+          <td class="p-3 text-amber-600 font-medium">Security Fixes Only</td>
+          <td class="p-3 font-mono">&lt; 8.2.35</td>
+          <td class="p-3 font-mono font-bold text-blue-600">8.2.35</td>
+          <td class="p-3">cPanel EA4, RHEL/Alma, Ubuntu USN-8948-1</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">PHP 8.1 &amp; Earlier</td>
+          <td class="p-3 text-red-600 font-medium">End of Life (EOL)</td>
+          <td class="p-3 font-mono">All releases</td>
+          <td class="p-3 text-gray-500 italic">No upstream patch</td>
+          <td class="p-3 font-medium text-purple-700">Requires CloudLinux HardenedPHP or upgrade</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Crucial Note on Backports:</strong> Enterprise Linux distributions (such as Ubuntu LTS, Debian, Red Hat Enterprise Linux, AlmaLinux, and Rocky Linux) backport security fixes into existing minor versions without bumping the upstream version string. On these systems, verify the package release changelog rather than relying exclusively on the upstream version number.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="4-identifying-every-active-php-runtime-on-your-server" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">4. Identifying Every Active PHP Runtime on Your Server</h2>
+  <p>Modern hosting servers rarely run a single PHP binary. To ensure complete remediation, you must identify every runtime environment handling requests on the machine:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>MultiPHP Runtimes:</strong> Control panels allow different client accounts or virtual hosts to run separate PHP versions simultaneously (e.g., domain A on PHP 8.2 and domain B on PHP 8.4).</li>
+    <li><strong>PHP-FPM Worker Pools:</strong> Each domain may utilize its own PHP-FPM pool socket located under <code>/var/run/php-fpm/</code> or <code>/opt/cpanel/ea-php*/root/usr/var/run/php-fpm/</code>.</li>
+    <li><strong>LiteSpeed External Applications:</strong> LiteSpeed Web Server and OpenLiteSpeed run separate LSPHP binaries (such as <code>/usr/local/lsws/lsphp83/bin/lsphp</code>).</li>
+    <li><strong>Containerized Runtimes:</strong> Docker or Kubernetes pods running NGINX and PHP-FPM carry their own internal base images, which are completely untouched by host operating system updates.</li>
+  </ul>
+  <p>Run the following command as root to discover all active PHP processes currently running in memory:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Identify all running PHP master and worker processes
+ps aux | grep -E "php-fpm|lsphp|php" | grep -v grep</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="5-cpanel-whm-easyapache-4-remediation-runbook" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">5. cPanel &amp; WHM: EasyApache 4 Remediation Runbook</h2>
+  <p>On cPanel &amp; WHM servers, website runtimes are managed via <strong>EasyApache 4</strong> (EA4). Note that executing a standard <code>/scripts/upcp</code> updates the cPanel core software, but website runtimes must be patched through EA4 RPM packages.</p>
+  <p>Follow these steps from the root SSH terminal:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Clean package metadata caches
+yum clean all || dnf clean all
+
+# 2. Update all installed EasyApache 4 PHP packages
+yum update "ea-php*" -y || dnf update "ea-php*" -y
+
+# 3. Restart all active cPanel PHP-FPM service daemons
+/scripts/restartsrv_apache_php_fpm
+
+# 4. Gracefully reload the Apache web server
+/scripts/restartsrv_httpd --graceful</code></pre>
+  <p>To verify the installed versions of each EA4 PHP package, query the RPM database:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Inspect installed EA4 PHP versions
+rpm -qa | grep -E "ea-php8[2-5]-php-cli"</code></pre>
+  <p>Ensure that all hosted accounts in <strong>WHM &raquo; MultiPHP Manager</strong> reflect the updated PHP versions. For administrators managing fleets of cPanel servers, an authentic <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel &amp; WHM license</a> provides direct access to official mirrors and automated security updates.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="6-plesk-hosting-servers-multi-version-handler-updates" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">6. Plesk Hosting Servers: Multi-Version Handler Updates</h2>
+  <p>Plesk manages multiple PHP runtimes independently of the operating system's base PHP package. To update all Plesk-managed PHP handlers:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Update Plesk components and all Plesk PHP handlers via CLI
+plesk installer update --recommends
+
+# 2. List all registered PHP handlers and verify their status
+plesk bin php_handler --list
+
+# 3. Restart all Plesk PHP-FPM service daemons
+systemctl restart "plesk-php*-fpm"
+
+# 4. Gracefully restart the web server
+systemctl reload nginx &amp;&amp; systemctl reload apache2 || systemctl reload httpd</code></pre>
+  <p>Verify individual handler binaries directly from the command line:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Check the version of Plesk PHP 8.3
+/opt/plesk/php/8.3/bin/php -v</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="7-directadmin-and-custombuild-environments" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">7. DirectAdmin and CustomBuild Environments</h2>
+  <p>DirectAdmin compiles or installs pre-compiled binary PHP packages using the <strong>CustomBuild 2.0</strong> utility. To update all active PHP versions:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Navigate to CustomBuild directory
+cd /usr/local/directadmin/custombuild
+
+# 2. Update build definitions
+./build update
+
+# 3. Rebuild and update all configured PHP versions
+./build php_versions
+
+# 4. Rewrite web server configurations and restart services
+./build rewrite_confs</code></pre>
+  <p>Verify that <code>/usr/local/php*/bin/php -v</code> reports the fixed versions across all configured PHP slots (e.g., <code>php1_release</code>, <code>php2_release</code>).</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="8-cyberpanel-openlitespeed-and-litespeed-enterprise" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">8. CyberPanel, OpenLiteSpeed and LiteSpeed Enterprise</h2>
+  <p>LiteSpeed Web Server Enterprise and OpenLiteSpeed communicate with PHP through the high-performance <strong>LSPHP</strong> binary interface. Upgrading the web server binary or holding a <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed license</a> does not automatically patch LSPHP packages.</p>
+  <p>Apply updates depending on your operating system:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># On RHEL / AlmaLinux / CloudLinux / Rocky Linux:
+dnf update "ls-php*" -y || yum update "ls-php*" -y
+
+# On Ubuntu / Debian:
+apt update &amp;&amp; apt --only-upgrade install "ls-php*" -y
+
+# IMPORTANT: Force LiteSpeed to terminate cached LSPHP worker processes
+killall -9 lsphp
+
+# Restart LiteSpeed Web Server
+/usr/local/lsws/bin/lswsctrl restart</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="9-standalone-ubuntu-and-debian-servers-no-control-panel" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">9. Standalone Ubuntu and Debian Servers (No Control Panel)</h2>
+  <p>For standalone virtual servers running NGINX or Apache with Ondřej Surý's PPA or official distribution mirrors, refer to Ubuntu Security Notice <strong>USN-8948-1</strong>:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Update package indices
+sudo apt update
+
+# 2. Upgrade all installed PHP packages
+sudo apt --only-upgrade install "php8.*-fpm" "php8.*-cli" "php8.*-common" "libapache2-mod-php8.*" -y
+
+# 3. Restart PHP-FPM service daemons
+sudo systemctl restart "php8.*-fpm"
+
+# 4. Reload web servers
+sudo systemctl reload nginx &amp;&amp; sudo systemctl reload apache2</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="10-almalinux-rocky-linux-cloudlinux-and-rhel-family-servers" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">10. AlmaLinux, Rocky Linux, CloudLinux and RHEL-Family Servers</h2>
+  <p>On standalone enterprise Linux machines using DNF module streams or Remi's RPM repository:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Check for available PHP security errata
+dnf check-update --security
+
+# 2. Apply security updates for PHP packages
+dnf upgrade --security "*php*" -y
+
+# 3. Restart system PHP-FPM
+systemctl restart php-fpm
+
+# 4. Reload web server
+systemctl reload httpd || systemctl reload nginx</code></pre>
+  <p><strong>CloudLinux HardenedPHP Support:</strong> For shared hosting providers running legacy workloads (such as PHP 7.4 or 8.0), a <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux license</a> provides HardenedPHP protection, which backports fixes for critical memory management vulnerabilities directly into end-of-life PHP runtimes.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="11-docker-kubernetes-and-container-deployments" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">11. Docker, Kubernetes and Container Deployments</h2>
+  <p>Updating the container host's operating system does <strong>not</strong> patch PHP runtimes executing inside containers. Container workloads must be updated via image rebuilds:</p>
+  <ol class="list-decimal space-y-2 pl-6">
+    <li><strong>Update Dockerfile Base Images:</strong> Ensure all base images point to the latest official patch release (e.g., <code>FROM php:8.3.36-fpm-alpine</code>).</li>
+    <li><strong>Rebuild Container Images:</strong> Recompile application containers with <code>docker compose build --no-cache</code>.</li>
+    <li><strong>Redeploy Workloads:</strong> Roll out updated pods across your Kubernetes cluster or container service:
+      <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Rolling restart of PHP workloads in Kubernetes
+kubectl rollout restart deployment/php-fpm-app</code></pre>
+    </li>
+    <li><strong>Purge Vulnerable Images:</strong> Remove outdated container images from local registries to prevent accidental redeployment.</li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 id="12-post-patch-verification-procedures" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">12. Post-Patch Verification Procedures</h2>
+  <p>Do not declare a server secure until you verify that live web requests execute the patched binary. Follow this non-destructive verification procedure:</p>
+  <ol class="list-decimal space-y-2 pl-6">
+    <li>Create a temporary, randomly named verification file in a test virtual host's document root:
+      <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Create a secure single-purpose version checker
+echo '&lt;?php header("Content-Type: text/plain"); echo phpversion(); ?&gt;' &gt; /home/testuser/public_html/sec_ver_check.php</code></pre>
+    </li>
+    <li>Query the endpoint locally via curl to inspect the live web runtime version:
+      <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Query the web-delivered version
+curl -k https://testdomain.com/sec_ver_check.php
+
+# Expected output: 8.3.36 (or verified distribution backport string)</code></pre>
+    </li>
+    <li><strong>Immediately remove the verification file</strong> to prevent leaking configuration details:
+      <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code>rm -f /home/testuser/public_html/sec_ver_check.php</code></pre>
+    </li>
+  </ol>
+</section>
+
+<section class="space-y-4">
+  <h2 id="13-temporary-containment-when-patching-is-delayed" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">13. Temporary Containment When Patching Is Delayed</h2>
+  <p>If legacy application dependencies prevent immediate package upgrades, implement temporary containment controls:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Restrict Network Exposure:</strong> Place administrative dashboards, internal tools, and staging environments behind IP whitelists or a private VPN.</li>
+    <li><strong>Deploy Web Application Firewalls:</strong> Deploy an <a href="/imunify360-license" class="text-blue-600 font-semibold hover:underline">Imunify360 license</a> to leverage its multi-layer ModSecurity WAF rules, real-time PHP blamer, and proactive defense system. While the PHP project notes that a WAF is not a substitute for binary patching, Imunify360 significantly reduces automated exploit scanning.</li>
+    <li><strong>Account Isolation:</strong> Enforce CageFS virtualized file system isolation through <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux OS</a> so that if a single site is compromised, the attacker cannot read neighboring virtual hosts or access the core system.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="14-investigating-a-suspected-compromise" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">14. Investigating a Suspected Compromise</h2>
+  <p>If you suspect an unpatched server was targeted prior to remediation, conduct forensic log analysis before wiping or restarting systems:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Inspect Web Access Logs:</strong> Search for abnormal POST requests, high volumes of chunked transfer-encoding requests, or out-of-memory errors in <code>/var/log/httpd/error_log</code>, <code>/var/log/nginx/error.log</code>, and per-user PHP-FPM error logs.</li>
+    <li><strong>Audit Active Connections and Processes:</strong> Check for anomalous outbound network sockets or unauthorized background worker processes using our guide on <a href="/blog/how-to-fix-high-cpu-usage-linux-vps-tricks" class="text-blue-600 font-semibold hover:underline">diagnosing high CPU and suspicious Linux VPS processes</a>.</li>
+    <li><strong>Check Persistence Mechanisms:</strong> Review crontabs (<code>/etc/crontab</code>, <code>/var/spool/cron/</code>), systemd unit files, and recently modified PHP files in web roots:
+      <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Find PHP files modified in the last 48 hours
+find /home/*/public_html -type f -name "*.php" -mtime -2</code></pre>
+    </li>
+    <li><strong>Review Authentication Logs:</strong> Inspect <code>/var/log/secure</code> or <code>/var/log/auth.log</code> to identify unauthorized root logins or privilege escalation attempts, following our guide on <a href="/blog/how-to-secure-whm-cpanel-against-brute-force-attacks" class="text-blue-600 font-semibold hover:underline">securing WHM and cPanel against brute-force attacks</a>.</li>
+  </ul>
+</section>
+
+<section class="space-y-4">
+  <h2 id="15-primary-technical-references" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">15. Primary Technical References</h2>
+  <p>All remediation steps in this advisory are verified against authoritative vendor security bulletins:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><a href="https://www.php.net/archive/2026.php" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">Official PHP Project Security Advisory (October 2026)</a> &mdash; Upstream vulnerability disclosures and fixed branch releases.</li>
+    <li><a href="https://support.cpanel.net/hc/en-us/articles/44397389677335-Critical-PHP-Security-Release-CVE-2026-109618-and-CVE-2026-109619" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">cPanel Support Security Notice</a> &mdash; EasyApache 4 RPM package release guidance.</li>
+    <li><a href="https://ubuntu.com/security/notices/USN-8948-1" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">Ubuntu Security Notice USN-8948-1</a> &mdash; Ubuntu 22.04 and 24.04 LTS package backports.</li>
+    <li><a href="https://www.enisa.europa.eu/news/joint-statement-on-critical-php-vulnerabilities" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">ENISA Joint European Cybersecurity Notice</a> &mdash; Organizational patch prioritization guidance.</li>
+  </ul>
+  <p>Discover our budget-friendly <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo discount stacks</a> to equip your servers with genuine enterprise security. Learn more <a href="/about" class="text-blue-600 font-semibold hover:underline">about LicenBase</a>, review our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">licensing policies</a>, or contact our 24/7 technical team on our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
+</section>
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Is every website running PHP automatically vulnerable to CVE-2026-109618 and CVE-2026-109619?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Any website running an unpatched version of PHP 8.2, 8.3, 8.4, or 8.5 in an environment that handles HTTP web requests (including PHP-FPM, Apache mod_php, FastCGI, LiteSpeed LSPHP, and FrankenPHP) is exposed. The vulnerabilities reside in core memory management and request lifecycle teardown, meaning standard request processing can trigger memory corruption regardless of which CMS or framework is running.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Does running &quot;php -v&quot; in the SSH terminal prove that hosted websites are patched?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">No. The command &quot;php -v&quot; only queries the default Command Line Interface (CLI) binary configured in the current user&#x27;s shell path. Web hosting environments - especially cPanel MultiPHP, Plesk, DirectAdmin, and LiteSpeed - frequently run isolated PHP-FPM daemons or distinct binary packages (such as ea-php82-php-fpm or lsphp83) that are completely separate from the system CLI binary. You must verify the specific binary executed by the web server handler.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Is a full operating system reboot required after updating PHP packages?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">A full server reboot is generally not required, but every running PHP daemon and parent web server service must be recycled. Simply updating the disk packages leaves active worker processes running in memory with the old, vulnerable binaries. Administrators must restart or reload all PHP-FPM service pools (e.g., systemctl restart &quot;ea-php*-php-fpm&quot;), graceful-restart Apache/NGINX, and kill lingering LiteSpeed worker processes (killall -9 lsphp).</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Can an active Web Application Firewall (WAF) or Imunify360 replace patching?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">No. While an Imunify360 license and active ModSecurity WAF rules provide vital defense-in-depth by detecting known malicious payloads and preventing unauthorized script drops, the PHP development team explicitly confirmed that there are no complete mitigations other than applying the upstream or vendor security patches. A WAF cannot guarantee detection of all polymorphic memory-corruption triggers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How should administrators handle end-of-life PHP versions like PHP 7.4, 8.0, and 8.1?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Upstream PHP does not publish patches for end-of-life (EOL) releases. However, older branches may share underlying memory management code vulnerable to similar heap corruption. If legacy client applications require EOL runtimes, host them on CloudLinux OS with HardenedPHP, which backports enterprise security fixes to retired branches, or isolate those accounts onto dedicated legacy virtual machines behind strict access controls.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-6" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Does updating cPanel &amp; WHM or Plesk automatically patch all website PHP runtimes?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-6" class="lb-faq-panel" role="region" aria-labelledby="faq-question-6">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">No. Updating the control panel itself (such as running /scripts/upcp or updating Plesk core) updates the panel&#x27;s management interface and internal administrative PHP engine, but does not necessarily update EasyApache 4 or Plesk-managed multi-PHP website packages. Administrators must explicitly run the operating system or panel package updates (e.g., yum update &quot;ea-php*&quot; on cPanel) and restart the web worker pools.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fphp-critical-rce-vulnerabilities-hosting-server-fix&amp;text=Critical%20PHP%20RCE%20%28CVE-2026-109618%29%3A%20Hosting%20Server%20Fix%20Guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fphp-critical-rce-vulnerabilities-hosting-server-fix" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fphp-critical-rce-vulnerabilities-hosting-server-fix" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=Critical%20PHP%20RCE%20%28CVE-2026-109618%29%3A%20Hosting%20Server%20Fix%20Guide&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fphp-critical-rce-vulnerabilities-hosting-server-fix" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#1-emergency-incident-response-checklist" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">1. Emergency Incident Response Checklist</a><a href="#2-technical-breakdown-cve-2026-109618-and-cve-2026-109619" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">2. Technical Breakdown: CVE-2026-109618 and CVE-2026-109619</a><a href="#3-affected-versions-and-fixed-target-releases" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">3. Affected Versions and Fixed Target Releases</a><a href="#4-identifying-every-active-php-runtime-on-your-server" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">4. Identifying Every Active PHP Runtime on Your Server</a><a href="#5-cpanel-whm-easyapache-4-remediation-runbook" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">5. cPanel &amp; WHM: EasyApache 4 Remediation Runbook</a><a href="#6-plesk-hosting-servers-multi-version-handler-updates" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">6. Plesk Hosting Servers: Multi-Version Handler Updates</a><a href="#7-directadmin-and-custombuild-environments" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">7. DirectAdmin and CustomBuild Environments</a><a href="#8-cyberpanel-openlitespeed-and-litespeed-enterprise" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">8. CyberPanel, OpenLiteSpeed and LiteSpeed Enterprise</a><a href="#9-standalone-ubuntu-and-debian-servers-no-control-panel" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">9. Standalone Ubuntu and Debian Servers (No Control Panel)</a><a href="#10-almalinux-rocky-linux-cloudlinux-and-rhel-family-servers" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">10. AlmaLinux, Rocky Linux, CloudLinux and RHEL-Family Servers</a><a href="#11-docker-kubernetes-and-container-deployments" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">11. Docker, Kubernetes and Container Deployments</a><a href="#12-post-patch-verification-procedures" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">12. Post-Patch Verification Procedures</a><a href="#13-temporary-containment-when-patching-is-delayed" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">13. Temporary Containment When Patching Is Delayed</a><a href="#14-investigating-a-suspected-compromise" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">14. Investigating a Suspected Compromise</a><a href="#15-primary-technical-references" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">15. Primary Technical References</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/imunify360-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Imunify360 License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/litespeed-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">LiteSpeed License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/fix-unusually-high-failed-login-attempts-whm" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-unusually-high-failed-login-attempts-whm-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix Unusually High Failed Login Attempts in WHM</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Resolve unusually high failed login alerts in WHM: flush cPHulk tables, whitelist admin IPs, and enforce two-factor authentication.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 19, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/cloudlinux-license-not-working-8-errors-fixes" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cloudlinux-license-not-working-8-errors-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">CloudLinux License Not Working? 8 Common Errors and How to Fix Them</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Diagnose and fix 8 common CloudLinux license errors: rhn_register failures, IP mismatches, token expiration, and LVE manager connection drops.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 18, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/vps-under-attack-detect-traffic-ip-abuse" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/vps-under-attack-detect-traffic-ip-abuse-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">VPS Server Under Attack? Detect Suspicious Traffic &amp; Abuse</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Practical guide to triage VPS traffic attacks, inspect open sockets, detect outbound spam scripts, and configure CSF and Imunify360 defenses.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 15, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/detect-suspicious-processes-linux-vps-guide" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/detect-suspicious-processes-linux-vps-guide-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Detect Suspicious Processes on Linux VPS Before Server Downtime</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">How to detect malware, rogue crypto miners, and suspicious processes on Linux VPS using netstat, lsof, crontab, and process tree tools.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 14, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/ip-abuse-complaints-spam-malware-vps-blacklisting" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/ip-abuse-complaints-spam-malware-vps-blacklisting-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">IP Abuse Complaints Explained: Spam, Malware &amp; Blacklists</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide to investigating VPS IP abuse reports: identifying compromised scripts, analyzing Exim queues, delisting IPs, and prevention.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 13, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/how-to-secure-whm-cpanel-against-brute-force-attacks" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/how-to-secure-whm-cpanel-against-brute-force-attacks-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Security & Licensing</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Secure WHM and cPanel Against Brute-Force Attacks</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Comprehensive hardening guide for cPanel and WHM: configure cPHulk protection, enforce 2FA, customize ports, and implement IP blacklists.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    window.loadTawk = loadTawk;
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
+  </script>
+
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>

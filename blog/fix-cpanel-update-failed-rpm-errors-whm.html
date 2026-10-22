@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix cPanel Update Failed & RPM Errors in WHM | LicenBase</title>
+  <meta name="description" content="Fix failed cPanel updates and RPM database errors in WHM. Learn how to inspect /var/cpanel/updatelogs/, resolve package conflicts, and restore server health." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/fix-cpanel-update-failed-rpm-errors-whm" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="Fix cPanel Update Failed & RPM Errors in WHM" />
+  <meta property="og:description" content="Fix failed cPanel updates and RPM database errors in WHM. Learn how to inspect /var/cpanel/updatelogs/, resolve package conflicts, and restore server health." />
+  <meta property="og:url" content="https://licenbase.com/blog/fix-cpanel-update-failed-rpm-errors-whm" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-fix-cpanel-update-failed-rpm-errors-whm.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Troubleshooting flowchart for diagnosing failed cPanel updates, RPM errors, and WHM maintenance logs" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-10-22" />
+  <meta property="article:modified_time" content="2026-10-22" />
+  <meta property="article:section" content="How-to" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-fix-cpanel-update-failed-rpm-errors-whm.png" />
+  <meta name="twitter:image:alt" content="Troubleshooting flowchart for diagnosing failed cPanel updates, RPM errors, and WHM maintenance logs" />
+  <meta name="twitter:title" content="Fix cPanel Update Failed & RPM Errors in WHM" />
+  <meta name="twitter:description" content="Fix failed cPanel updates and RPM database errors in WHM. Learn how to inspect /var/cpanel/updatelogs/, resolve package conflicts, and restore server health." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "cPanel Update Failed? How to Fix RPM Errors & Restore WHM", "item": "https://licenbase.com/blog/fix-cpanel-update-failed-rpm-errors-whm"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "cPanel Update Failed? How to Fix RPM Errors & Restore WHM", "description": "Fix failed cPanel updates and RPM database errors in WHM. Learn how to inspect /var/cpanel/updatelogs/, resolve package conflicts, and restore server health.", "image": ["https://licenbase.com/assets/img/og/blog-fix-cpanel-update-failed-rpm-errors-whm.png"], "datePublished": "2026-10-22", "dateModified": "2026-10-22", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/fix-cpanel-update-failed-rpm-errors-whm"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 1559}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the most frequent cause of a cPanel update (upcp) failure?", "acceptedAnswer": {"@type": "Answer", "text": "The three most frequent causes of failed cPanel updates are: (1) Insufficient disk space or inode exhaustion on the root (/), /var, or /usr partitions, (2) RPM database corruption or stale process locks in /var/lib/rpm/ caused by an interrupted package installation, and (3) Unreachable third-party software repositories or broken DNS resolvers that cause package download timeouts."}}, {"@type": "Question", "name": "How do I identify which component caused the cPanel update to fail?", "acceptedAnswer": {"@type": "Answer", "text": "cPanel updates execute sequentially. By opening the latest update log in `/var/cpanel/updatelogs/` and searching for \"FATAL\" or \"[upcp] E\", you can determine whether the failure occurred during the OS package update phase (YUM/DNF), the core cPanel binary download phase, or the EasyApache 4 maintenance phase."}}, {"@type": "Question", "name": "Is it safe to delete the RPM database files in /var/lib/rpm/ to fix an update freeze?", "acceptedAnswer": {"@type": "Answer", "text": "No. Never delete the entire contents of /var/lib/rpm/ as a first-line troubleshooting step. Doing so destroys the server's record of installed software, making future updates impossible. Instead, verify whether an active yum or rpm process is holding a lock, terminate stale processes safely, remove only temporary lock files (like /var/lib/rpm/.rpm.lock), and run the official repair tool `/usr/local/cpanel/scripts/find_and_fix_rpm_issues` followed by `rpm --rebuilddb`."}}, {"@type": "Question", "name": "How can I check if DNS resolvers or repository mirrors are blocking cPanel updates?", "acceptedAnswer": {"@type": "Answer", "text": "Test DNS resolution directly from the root terminal by pinging `httpupdate.cpanel.net` and querying nameservers with `dig httpupdate.cpanel.net +short`. If the query hangs or fails, review `/etc/resolv.conf` and ensure public reliable resolvers (such as 8.8.8.8 or 1.1.1.1) are configured."}}, {"@type": "Question", "name": "What should I do if WHM is completely inaccessible after a failed update?", "acceptedAnswer": {"@type": "Answer", "text": "If the cPanel daemon (cpsrvd) crashes or fails to start after an update aborts, log in via root SSH and run `/usr/local/cpanel/scripts/restartsrv_cpsrvd`. If the service still fails, run `/scripts/upcp --sync --force` to complete the missing binary synchronization and repair damaged cPanel binaries."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <a href="/" class="lb-nav-link">Home</a>
+
+            <!-- Software mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-soon">
+                  <p>New products coming soon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">How-to</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">How-to</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">cPanel Update Failed? How to Fix RPM Errors &amp; Restore WHM</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-10-22">October 22, 2026</time></span>
+          
+          <span>8 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/fix-cpanel-update-failed-rpm-errors-whm-feature.webp" alt="Troubleshooting flowchart for diagnosing failed cPanel updates, RPM errors, and WHM maintenance logs" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+<p class="text-lg text-gray-600">Few server alerts cause more immediate anxiety for hosting administrators than receiving an automated root notification: <em>"cPanel &amp; WHM update failure - upcp maintenance script failed"</em>. The nightly cPanel update routine (<code>/scripts/upcp</code>) is responsible for maintaining core server binaries, rotating log files, applying security patches, and synchronizing system packages. When this process aborts prematurely, servers can experience locked package managers, inaccessible WHM dashboards, or broken web services. In this hands-on technical tutorial, we walk you through an exact diagnostic runbook to determine whether an update failure stems from core cPanel binaries, OS package managers, or RPM database corruption, followed by safe, proven commands to restore a healthy WHM server.</p>
+
+<section class="space-y-4">
+  <h2 id="1-anatomy-of-a-cpanel-update-identifying-the-failure-stage" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">1. Anatomy of a cPanel Update: Identifying the Failure Stage</h2>
+  <p>The cPanel nightly maintenance routine does not just update control panel interfaces; it executes an orchestrated multi-phase upgrade pipeline:</p>
+  <ol class="list-decimal space-y-2 pl-6">
+    <li><strong>Pre-Sync Environment Validation:</strong> Checks disk space thresholds, verifies license validity, audits running processes, and checks network connectivity to official cPanel mirrors.</li>
+    <li><strong>Operating System &amp; Core RPM Updates:</strong> Calls the underlying Linux package manager (YUM on AlmaLinux/CloudLinux 8, DNF on AlmaLinux/CloudLinux 9) to update system security packages and core utilities.</li>
+    <li><strong>cPanel Core Synchronization:</strong> Downloads and extracts verified binary packages from <code>httpupdate.cpanel.net</code> for the target release tier (STABLE, RELEASE, or CURRENT).</li>
+    <li><strong>Post-Update Maintenance &amp; Compilations:</strong> Updates EasyApache 4 PHP packages, synchronizes Horde/Roundcube webmail databases, runs security checks, and restarts critical service daemons.</li>
+  </ol>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+    <img src="/assets/img/blog/fix-cpanel-update-failed-rpm-errors-whm-1.svg" alt="Troubleshooting flowchart for diagnosing failed cPanel updates, RPM errors, and WHM maintenance logs" width="960" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+    <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Four-stage recovery pipeline: log inspection, pre-flight resource audits, RPM database repairs, and final synchronization verification.</figcaption>
+  </figure>
+  <p>Identifying which of these four stages triggered the failure is the first step toward safe recovery.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="2-inspecting-var-cpanel-updatelogs-with-real-log-excerpts" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">2. Inspecting /var/cpanel/updatelogs/ with Real Log Excerpts</h2>
+  <p>Every execution of <code>/scripts/upcp</code> generates an exhaustive execution transcript stored inside <code>/var/cpanel/updatelogs/</code>. To begin your investigation, log into your server via SSH as root and find the most recent log file:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># List the most recent update logs sorted by timestamp
+ls -lt /var/cpanel/updatelogs/ | head -n 5
+
+# Inspect the tail of the latest update log to reveal the fatal error
+tail -n 120 /var/cpanel/updatelogs/update-$(ls -t /var/cpanel/updatelogs/ | head -n 1)</code></pre>
+  <p>Here are three authentic failure excerpts commonly found in production logs, along with their diagnostic meanings:</p>
+  
+  <div class="rounded-xl border border-gray-200 bg-gray-900/5 p-4 space-y-3">
+    <h3 class="text-sm font-bold text-gray-900">Scenario A: Insufficient Partition Disk Space</h3>
+    <pre class="overflow-x-auto rounded-lg bg-gray-900 p-3 text-xs text-gray-100 font-mono"><code>[2026-10-22 03:14:02 +0000] E Pre-Check Breakdown:
+[2026-10-22 03:14:02 +0000] E   - Free space on /usr: 142 MB
+[2026-10-22 03:14:02 +0000] E   - Required space: 1,600 MB
+[2026-10-22 03:14:02 +0000] E Testing pre-requisites failed!
+[2026-10-22 03:14:02 +0000] E The update process was aborted because disk space is insufficient.</code></pre>
+    <p class="text-xs text-gray-600"><strong>Root Cause:</strong> The root or <code>/usr</code> partition lacks enough free storage for extracting new RPM archives. The update aborts cleanly before altering system files.</p>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 bg-gray-900/5 p-4 space-y-3">
+    <h3 class="text-sm font-bold text-gray-900">Scenario B: RPM Database Lock or BDB Corruption</h3>
+    <pre class="overflow-x-auto rounded-lg bg-gray-900 p-3 text-xs text-gray-100 font-mono"><code>[2026-10-22 03:18:45 +0000]   Processing OS updates...
+[2026-10-22 03:18:50 +0000]   error: rpmdb: BDB0113 Thread/process 18492 failed: DB_RUNRECOVERY
+[2026-10-22 03:18:50 +0000]   error: db5 error(-30973) from dbenv->failchk: BDB0087 DB_RUNRECOVERY: Fatal error
+[2026-10-22 03:18:50 +0000]   error: cannot open Packages index using db5 - (-30973)
+[2026-10-22 03:18:51 +0000] E [/usr/bin/yum] The "/usr/bin/yum -y -x ... update" command (process 18492) reported error number 1</code></pre>
+    <p class="text-xs text-gray-600"><strong>Root Cause:</strong> An ungraceful server reboot or killed process corrupted the Berkeley DB index in <code>/var/lib/rpm/</code>, preventing package managers from querying installed RPMs.</p>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 bg-gray-900/5 p-4 space-y-3">
+    <h3 class="text-sm font-bold text-gray-900">Scenario C: Third-Party Repository Metadata Timeout</h3>
+    <pre class="overflow-x-auto rounded-lg bg-gray-900 p-3 text-xs text-gray-100 font-mono"><code>[2026-10-22 03:22:15 +0000]   https://mirror.example.org/epel/8/x86_64/repodata/repomd.xml: [Errno 14] HTTPS Error 404 - Not Found
+[2026-10-22 03:22:15 +0000]   Trying other mirror.
+[2026-10-22 03:22:30 +0000]   Error: Failed to download metadata for repo 'custom-epel': Cannot download repomd.xml
+[2026-10-22 03:22:31 +0000] E YUM encountered an unrecoverable repository error.</code></pre>
+    <p class="text-xs text-gray-600"><strong>Root Cause:</strong> An outdated or unmaintained third-party YUM repository is failing to respond, halting the entire maintenance pipeline.</p>
+  </div>
+
+  <p>For more detailed background on how cPanel archives update transcripts, review our companion guide on <a href="/blog/how-to-read-cpanel-update-log-failed-updates" class="text-blue-600 font-semibold hover:underline">how to read cPanel update logs</a> and explore version release histories in our tutorial on <a href="/blog/how-to-check-cpanel-changelog-troubleshoot-updates" class="text-blue-600 font-semibold hover:underline">how to check the cPanel changelog</a>.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="3-pre-flight-verification-disk-space-inodes-and-connectivity" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">3. Pre-Flight Verification: Disk Space, Inodes, and Connectivity</h2>
+  <p>Before modifying package databases or disabling repositories, verify the physical environment of your server:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Audit partition disk capacity
+df -h
+
+# 2. Check filesystem inode utilization
+df -i
+
+# 3. Test DNS resolution and mirror connectivity
+dig httpupdate.cpanel.net +short
+curl -I -m 10 http://httpupdate.cpanel.net</code></pre>
+  <p>Ensure that <code>/</code>, <code>/var</code>, and <code>/usr</code> partitions each have at least <strong>5 GB of free space</strong> and that inode usage is well below 95%. If a partition is full, purge temporary update archives from <code>/var/cache/yum/</code> or old backup snapshots before retrying.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="4-safely-resolving-rpm-database-errors-and-process-locks" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">4. Safely Resolving RPM Database Errors and Process Locks</h2>
+  <p>When package managers crash or encounter locks, administrators often search forums and find reckless advice recommending <code>rm -rf /var/lib/rpm/*</code>. <strong>Never delete your entire RPM database.</strong> Doing so completely strips the operating system of its software inventory, turning a minor update hiccup into a catastrophic full-server rebuild.</p>
+  <p>Instead, follow this safe, non-destructive remediation protocol:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Step 1: Check for hung YUM, DNF, or RPM processes holding locks
+ps aux | grep -E "yum|dnf|rpm" | grep -v grep
+
+# If an update process is hanging indefinitely, terminate it safely:
+kill -9 &lt;PID&gt;
+
+# Step 2: Remove ONLY stale lock files (do not touch package database tables)
+rm -f /var/lib/rpm/.rpm.lock
+rm -f /var/lib/rpm/__db*
+
+# Step 3: Run the official cPanel RPM repair utility
+/usr/local/cpanel/scripts/find_and_fix_rpm_issues
+
+# Step 4: Rebuild the RPM database cleanly
+rpm --rebuilddb
+
+# Step 5: Clean package metadata caches
+yum clean all || dnf clean all</code></pre>
+  <p>The cPanel tool <code>find_and_fix_rpm_issues</code> verifies package checksums against upstream repositories, reinstalls missing dependencies, and clears lingering transaction locks automatically.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="5-fixing-repository-conflicts-and-package-exclusions" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">5. Fixing Repository Conflicts and Package Exclusions</h2>
+  <p>If the update failure is caused by an unreachable or broken third-party repository, locate the problematic <code>.repo</code> configuration under <code>/etc/yum.repos.d/</code>:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Test YUM update independently of cPanel to isolate the repository error
+yum check-update
+
+# If a specific repository errors out, disable it temporarily:
+yum-config-manager --disable &lt;repository-name&gt;</code></pre>
+  <p>Additionally, check <code>/etc/yum.conf</code> for accidental duplicate package exclusion entries. cPanel automatically manages exclusions for packages it compiles from source (like Apache, PHP, and Perl); conflicting user-defined exclusions can trigger dependency conflicts during upcp updates.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="6-executing-safe-recovery-and-verifying-server-health" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">6. Executing Safe Recovery and Verifying Server Health</h2>
+  <p>Once disk space is cleared and the RPM database is cleanly rebuilt, re-run the cPanel synchronization command:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># Run full cPanel synchronization and maintenance update
+/scripts/upcp --sync</code></pre>
+  <p>Monitor the command output. A successful run will conclude with the message: <code>[upcp] Completed all tasks with exit code 0</code>.</p>
+  <p>Verify that your cPanel version and all essential services are fully operational:</p>
+  <pre class="overflow-x-auto rounded-xl bg-gray-900 p-4 text-sm text-gray-100 font-mono"><code># 1. Verify installed cPanel version
+/usr/local/cpanel/cpanel -V
+
+# 2. Restart and verify WHM web interface daemon
+/scripts/restartsrv_cpsrvd
+
+# 3. Check status of core hosting services
+/scripts/restartsrv_httpd --check
+/scripts/restartsrv_mysql --check</code></pre>
+  <p>If the update still fails with cryptic internal errors after following this runbook, escalate to cPanel official support or open an emergency ticket through your license vendor.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="7-optimizing-server-infrastructure-and-licensing-with-licenbase" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">7. Optimizing Server Infrastructure and Licensing with LicenBase</h2>
+  <p>Ensuring predictable, error-free updates requires authentic software licensing connected directly to reliable official update mirrors:</p>
+  <ul class="list-disc space-y-2 pl-6">
+    <li><strong>Direct cPanel &amp; WHM Updates:</strong> Power your VPS or bare-metal node with an authentic <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a> starting at $4/month with instant automated IP activation and direct official package updates.</li>
+    <li><strong>Operating System Stability:</strong> Protect your server against kernel panics and runaway processes with <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux OS</a>, offering hardened kernel stability and multi-tenant isolation.</li>
+    <li><strong>Web Acceleration:</strong> Boost dynamic PHP page delivery and cut CPU load during server updates using a high-performance <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed license</a>.</li>
+  </ul>
+  <p>Explore our discounted <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo packages</a> to bundle control panels, web servers, and operating systems at wholesale rates. Learn more <a href="/about" class="text-blue-600 font-semibold hover:underline">about LicenBase</a>, review our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">licensing policies</a>, or speak with our automated server specialists via our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
+</section>
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What is the most frequent cause of a cPanel update (upcp) failure?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">The three most frequent causes of failed cPanel updates are: (1) Insufficient disk space or inode exhaustion on the root (/), /var, or /usr partitions, (2) RPM database corruption or stale process locks in /var/lib/rpm/ caused by an interrupted package installation, and (3) Unreachable third-party software repositories or broken DNS resolvers that cause package download timeouts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How do I identify which component caused the cPanel update to fail?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">cPanel updates execute sequentially. By opening the latest update log in `/var/cpanel/updatelogs/` and searching for &quot;FATAL&quot; or &quot;[upcp] E&quot;, you can determine whether the failure occurred during the OS package update phase (YUM/DNF), the core cPanel binary download phase, or the EasyApache 4 maintenance phase.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Is it safe to delete the RPM database files in /var/lib/rpm/ to fix an update freeze?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">No. Never delete the entire contents of /var/lib/rpm/ as a first-line troubleshooting step. Doing so destroys the server&#x27;s record of installed software, making future updates impossible. Instead, verify whether an active yum or rpm process is holding a lock, terminate stale processes safely, remove only temporary lock files (like /var/lib/rpm/.rpm.lock), and run the official repair tool `/usr/local/cpanel/scripts/find_and_fix_rpm_issues` followed by `rpm --rebuilddb`.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How can I check if DNS resolvers or repository mirrors are blocking cPanel updates?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Test DNS resolution directly from the root terminal by pinging `httpupdate.cpanel.net` and querying nameservers with `dig httpupdate.cpanel.net +short`. If the query hangs or fails, review `/etc/resolv.conf` and ensure public reliable resolvers (such as 8.8.8.8 or 1.1.1.1) are configured.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What should I do if WHM is completely inaccessible after a failed update?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">If the cPanel daemon (cpsrvd) crashes or fails to start after an update aborts, log in via root SSH and run `/usr/local/cpanel/scripts/restartsrv_cpsrvd`. If the service still fails, run `/scripts/upcp --sync --force` to complete the missing binary synchronization and repair damaged cPanel binaries.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-cpanel-update-failed-rpm-errors-whm&amp;text=cPanel%20Update%20Failed%3F%20How%20to%20Fix%20RPM%20Errors%20%26%20Restore%20WHM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-cpanel-update-failed-rpm-errors-whm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-cpanel-update-failed-rpm-errors-whm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=cPanel%20Update%20Failed%3F%20How%20to%20Fix%20RPM%20Errors%20%26%20Restore%20WHM&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Ffix-cpanel-update-failed-rpm-errors-whm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#1-anatomy-of-a-cpanel-update-identifying-the-failure-stage" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">1. Anatomy of a cPanel Update: Identifying the Failure Stage</a><a href="#2-inspecting-var-cpanel-updatelogs-with-real-log-excerpts" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">2. Inspecting /var/cpanel/updatelogs/ with Real Log Excerpts</a><a href="#3-pre-flight-verification-disk-space-inodes-and-connectivity" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">3. Pre-Flight Verification: Disk Space, Inodes, and Connectivity</a><a href="#4-safely-resolving-rpm-database-errors-and-process-locks" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">4. Safely Resolving RPM Database Errors and Process Locks</a><a href="#5-fixing-repository-conflicts-and-package-exclusions" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">5. Fixing Repository Conflicts and Package Exclusions</a><a href="#6-executing-safe-recovery-and-verifying-server-health" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">6. Executing Safe Recovery and Verifying Server Health</a><a href="#7-optimizing-server-infrastructure-and-licensing-with-licenbase" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">7. Optimizing Server Infrastructure and Licensing with LicenBase</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/litespeed-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">LiteSpeed License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/cpanel-email-not-receiving-messages" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-email-not-receiving-messages-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">9 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix cPanel Email Not Receiving: Exim, DNS &amp; Mail Logs</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step troubleshooting for cPanel email not receiving: fix MX routing, Exim log errors, mailbox quotas, and port blocks.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 21, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/remove-malware-wordpress-hacked-cpanel" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/remove-malware-wordpress-hacked-cpanel-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">WordPress Website Hacked on cPanel? How to Find &amp; Remove Malware</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide to detecting and removing malware from a hacked WordPress website on cPanel, eliminating backdoors, and hardening files.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/linux-server-sending-spam-find-source-fix" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/linux-server-sending-spam-find-source-fix-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">5 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Linux Server Sending Spam Emails? Find the Source &amp; Stop Abuse</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Learn how to diagnose outbound spam floods on a Linux VPS, track down compromised mailboxes or scripts in Exim, and stop email abuse.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/detect-crypto-miner-linux-vps-remove-safely" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/detect-crypto-miner-linux-vps-remove-safely-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Detect a Crypto Miner on Your VPS and Remove It Safely</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step tutorial on detecting and safely removing hidden cryptocurrency miners on Linux servers, fixing 100% CPU lock, and securing cron.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/imunify360-malware-scanner-not-working-fixes" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/imunify360-malware-scanner-not-working-fixes-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Imunify360 Malware Scanner Not Working? Common Errors &amp; Fixes</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Learn how to diagnose and fix common Imunify360 malware scanner errors, resolve inotify watcher exhaustion, repair SQLite DBs, and restore scans.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/fix-high-cpu-usage-malware-linux-server" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-high-cpu-usage-malware-linux-server-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">5 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix High CPU Usage Caused by Malware on a Linux Server</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Step-by-step guide to fixing high CPU load caused by malware on a Linux server, unmasking hidden processes, and recovering stability.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 20, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    window.loadTawk = loadTawk;
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
+  </script>
+
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>
