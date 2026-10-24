@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cardEmerald" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title & Subtitle -->
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">LiteSpeed Web Server License Tier Sizing &amp; Comparison</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Worker processes, RAM limitations, and performance tiers for VPS and dedicated nodes</text>
+
+  
+  <!-- Card 1: Free & Starter -->
+  <g transform="translate(40, 100)" filter="url(#shadow)">
+    <rect width="265" height="340" rx="12" fill="url(#cardBlue)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="265" height="40" rx="12" fill="#0284c7" fill-opacity="0.25"/>
+    <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8">Site Owner / Free</text>
+    
+    <rect x="15" y="55" width="235" height="80" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="76" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Hardware Restrictions:</text>
+    <text x="25" y="96" font-family="monospace" font-size="10" fill="#38bdf8">&bull; 1 Worker Process</text>
+    <text x="25" y="114" font-family="monospace" font-size="10" fill="#38bdf8">&bull; Max RAM: 2 GB RAM limit</text>
+
+    <rect x="15" y="145" width="235" height="80" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="166" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Domain Limitation:</text>
+    <text x="25" y="186" font-family="sans-serif" font-size="10" fill="#94a3b8">&bull; Up to 5 Top-Level Domains</text>
+    <text x="25" y="204" font-family="sans-serif" font-size="10" fill="#94a3b8">&bull; Ideal for single-site staging</text>
+
+    <rect x="15" y="235" width="235" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="256" font-family="sans-serif" font-size="11" font-weight="bold" fill="#cbd5e1">Suitability:</text>
+    <text x="25" y="276" font-family="sans-serif" font-size="10" fill="#94a3b8">Strict memory caps make it</text>
+    <text x="25" y="294" font-family="sans-serif" font-size="10" fill="#94a3b8">unsuitable for commercial hosts</text>
+  </g>
+
+  <!-- Card 2: Web Host Lite / Essential -->
+  <g transform="translate(345, 100)" filter="url(#shadow)">
+    <rect width="265" height="340" rx="12" fill="url(#cardEmerald)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="265" height="40" rx="12" fill="#059669" fill-opacity="0.25"/>
+    <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399">Web Host Essential (2-Worker)</text>
+    
+    <rect x="15" y="55" width="235" height="80" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="76" font-family="sans-serif" font-size="11" font-weight="bold" fill="#a7f3d0">Hardware Capacity:</text>
+    <text x="25" y="96" font-family="monospace" font-size="10" fill="#6ee7b7">&bull; 2 Worker Processes</text>
+    <text x="25" y="114" font-family="monospace" font-size="10" fill="#6ee7b7">&bull; RAM Cap: Up to 8 GB RAM</text>
+
+    <rect x="15" y="145" width="235" height="80" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="166" font-family="sans-serif" font-size="11" font-weight="bold" fill="#a7f3d0">Domain Capacity:</text>
+    <text x="25" y="186" font-family="sans-serif" font-size="10" fill="#6ee7b7">&bull; Unlimited Domains</text>
+    <text x="25" y="204" font-family="sans-serif" font-size="10" fill="#6ee7b7">&bull; High-traffic agency sweet spot</text>
+
+    <rect x="15" y="235" width="235" height="85" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="256" font-family="sans-serif" font-size="11" font-weight="bold" fill="#34d399">LicenBase Pricing:</text>
+    <text x="25" y="276" font-family="monospace" font-size="12" font-weight="bold" fill="#a7f3d0">From $4.00 / month</text>
+    <text x="25" y="296" font-family="sans-serif" font-size="9" fill="#94a3b8">Instant IP automated licensing</text>
+  </g>
+
+  <!-- Card 3: Elite / Enterprise -->
+  <g transform="translate(650, 100)" filter="url(#shadow)">
+    <rect width="265" height="340" rx="12" fill="url(#cardPurple)" stroke="#c084fc" stroke-width="1.5"/>
+    <rect width="265" height="40" rx="12" fill="#7e22ce" fill-opacity="0.25"/>
+    <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#c084fc">Web Host Elite (Uncapped)</text>
+    
+    <rect x="15" y="55" width="235" height="80" rx="8" fill="#1e1b4b" stroke="#3b0764"/>
+    <text x="25" y="76" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Enterprise Scaling:</text>
+    <text x="25" y="96" font-family="monospace" font-size="10" fill="#c084fc">&bull; 4, 8, or Uncapped Workers</text>
+    <text x="25" y="114" font-family="monospace" font-size="10" fill="#c084fc">&bull; Unlimited Physical RAM</text>
+
+    <rect x="15" y="145" width="235" height="80" rx="8" fill="#1e1b4b" stroke="#3b0764"/>
+    <text x="25" y="166" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Performance Edge:</text>
+    <text x="25" y="186" font-family="sans-serif" font-size="10" fill="#e9d5ff">&bull; 10x Apache Throughput</text>
+    <text x="25" y="204" font-family="sans-serif" font-size="10" fill="#e9d5ff">&bull; Cuts CPU load by up to 70%</text>
+
+    <rect x="15" y="235" width="235" height="85" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="256" font-family="sans-serif" font-size="11" font-weight="bold" fill="#34d399">Full Compatibility:</text>
+    <text x="25" y="276" font-family="sans-serif" font-size="10" fill="#a7f3d0">100% .htaccess &amp; rewrite support</text>
+    <text x="25" y="294" font-family="sans-serif" font-size="10" fill="#a7f3d0">Native LSCache integration</text>
+  </g>
+
+</svg>

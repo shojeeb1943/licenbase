@@ -370,6 +370,15 @@ COMPANY_SPECS = [
         "icon_svg": FALLBACK_ICONS["globe"],
         "price":    "support@licenbase.com",
     },
+    {
+        "slug":     "free-trial",
+        "out_file": OUT_DIR / "free-trial.png",
+        "headline": "3-Day Free Trial",
+        "subtitle": "Test any hosting license on your server for free",
+        "pill":     "FREE 3-DAY TRIAL",
+        "icon_svg": FALLBACK_ICONS["zap"],
+        "price":    "Free Trial",
+    },
 ]
 
 # Legal pages map to the shared policies card

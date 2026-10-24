@@ -17,6 +17,7 @@ PAGE_IMAGES = {
     "index": ("assets/img/og/home.png", "Cheap Hosting Software Licenses – LicenBase", "Reliable and cheap hosting licenses with instant activation"),
     "products": ("assets/img/og/products.png", "All Hosting Software Licenses – LicenBase", "Browse all cPanel, LiteSpeed, Plesk, and server management licenses"),
     "deals": ("assets/img/og/deals.png", "Hosting License Bundles & Combo Deals – LicenBase", "Save more with server licensing stacks and combo discounts"),
+    "free-trial": ("assets/img/og/free-trial.png", "3-Day Free Trial – LicenBase", "Try a hosting license on your server free for 3 days"),
     "privacy-policy": ("assets/img/og/policies.png", "Privacy Policy – LicenBase", "LicenBase privacy policy and data protection terms"),
     "terms-of-service": ("assets/img/og/policies.png", "Terms of Service – LicenBase", "LicenBase general terms and conditions of service"),
     "refund-policy": ("assets/img/og/policies.png", "Refund Policy – LicenBase", "LicenBase refund policy and money-back guarantee terms"),

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cardEmerald" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title & Subtitle -->
+  <text x="480" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">PHP Security Architecture &amp; PHP-FPM Troubleshooting Blueprint</text>
+  <text x="480" y="68" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">FastCGI socket communication, dynamic pool sizing, and CloudLinux CageFS isolation</text>
+
+  
+  <!-- Layer 1: Web Server Request -->
+  <g transform="translate(60, 100)" filter="url(#shadow)">
+    <rect width="250" height="340" rx="12" fill="url(#cardBlue)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="12" fill="#0284c7" fill-opacity="0.25"/>
+    <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8">1. Inbound Request Layer</text>
+    
+    <rect x="15" y="55" width="220" height="80" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="78" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Web Server Gateway:</text>
+    <text x="25" y="98" font-family="monospace" font-size="10" fill="#38bdf8">cPanel Apache / LiteSpeed</text>
+    <text x="25" y="116" font-family="sans-serif" font-size="10" fill="#94a3b8">Dispatches to FastCGI socket</text>
+
+    <rect x="15" y="145" width="220" height="80" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="168" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">WAF &amp; Filtering:</text>
+    <text x="25" y="188" font-family="sans-serif" font-size="10" fill="#cbd5e1">Imunify360 Real-Time WAF</text>
+    <text x="25" y="206" font-family="sans-serif" font-size="10" fill="#94a3b8">Drops RCE &amp; SQL injection</text>
+
+    <rect x="15" y="235" width="220" height="85" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="258" font-family="sans-serif" font-size="11" font-weight="bold" fill="#cbd5e1">Socket Communication:</text>
+    <text x="25" y="278" font-family="monospace" font-size="9" fill="#7dd3fc">/run/php-fpm/user.sock</text>
+    <text x="25" y="296" font-family="sans-serif" font-size="9" fill="#94a3b8">Zero TCP port overhead</text>
+  </g>
+
+  <!-- Layer 2: PHP-FPM Master & Pools -->
+  <g transform="translate(355, 100)" filter="url(#shadow)">
+    <rect width="250" height="340" rx="12" fill="url(#cardEmerald)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="12" fill="#059669" fill-opacity="0.25"/>
+    <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399">2. PHP-FPM Pool Engine</text>
+    
+    <rect x="15" y="55" width="220" height="80" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="78" font-family="sans-serif" font-size="11" font-weight="bold" fill="#a7f3d0">Process Sizing Formula:</text>
+    <text x="25" y="98" font-family="monospace" font-size="10" fill="#6ee7b7">max_children = RAM / avg_size</text>
+    <text x="25" y="116" font-family="sans-serif" font-size="9" fill="#94a3b8">Prevents OOM swap crashes</text>
+
+    <rect x="15" y="145" width="220" height="80" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="168" font-family="sans-serif" font-size="11" font-weight="bold" fill="#a7f3d0">Process Management:</text>
+    <text x="25" y="188" font-family="monospace" font-size="10" fill="#6ee7b7">pm = ondemand (Shared)</text>
+    <text x="25" y="206" font-family="monospace" font-size="10" fill="#6ee7b7">pm = dynamic (Production)</text>
+
+    <rect x="15" y="235" width="220" height="85" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="258" font-family="sans-serif" font-size="11" font-weight="bold" fill="#34d399">Timeout Safeguards:</text>
+    <text x="25" y="278" font-family="monospace" font-size="9" fill="#a7f3d0">request_terminate_timeout = 60s</text>
+    <text x="25" y="296" font-family="sans-serif" font-size="9" fill="#94a3b8">Kills rogue hanging queries</text>
+  </g>
+
+  <!-- Layer 3: CloudLinux Sandbox -->
+  <g transform="translate(650, 100)" filter="url(#shadow)">
+    <rect width="250" height="340" rx="12" fill="url(#cardPurple)" stroke="#c084fc" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="12" fill="#7e22ce" fill-opacity="0.25"/>
+    <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#c084fc">3. CloudLinux Security Jail</text>
+    
+    <rect x="15" y="55" width="220" height="80" rx="8" fill="#1e1b4b" stroke="#3b0764"/>
+    <text x="25" y="78" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">CageFS Virtualized FS:</text>
+    <text x="25" y="98" font-family="sans-serif" font-size="10" fill="#e9d5ff">&bull; Isolates /etc/passwd &amp; config</text>
+    <text x="25" y="116" font-family="sans-serif" font-size="10" fill="#e9d5ff">&bull; Blocks cross-account leaks</text>
+
+    <rect x="15" y="145" width="220" height="80" rx="8" fill="#1e1b4b" stroke="#3b0764"/>
+    <text x="25" y="168" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">LVE Resource Throttling:</text>
+    <text x="25" y="188" font-family="sans-serif" font-size="10" fill="#e9d5ff">&bull; CPU / Memory quota caps</text>
+    <text x="25" y="206" font-family="sans-serif" font-size="10" fill="#e9d5ff">&bull; Prevents 508 resource limits</text>
+
+    <rect x="15" y="235" width="220" height="85" rx="8" fill="#022c22" stroke="#065f46"/>
+    <text x="25" y="258" font-family="sans-serif" font-size="11" font-weight="bold" fill="#34d399">PHP Hardening Directives:</text>
+    <text x="25" y="278" font-family="monospace" font-size="9" fill="#a7f3d0">disable_functions = exec,system</text>
+    <text x="25" y="296" font-family="sans-serif" font-size="9" fill="#94a3b8">Prevents shell backdoor execution</text>
+  </g>
+
+</svg>

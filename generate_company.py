@@ -149,6 +149,57 @@ def contact_main():
 """
 
 
+def trial_main():
+    steps = "".join(
+        f'<div {CARD}><span class="grid h-8 w-8 place-items-center rounded-full bg-brandSoft text-sm font-bold text-brand">{n}</span><h3 class="mt-3 font-bold text-navy">{t}</h3><p class="mt-1 text-sm text-gray-600">{d}</p></div>'
+        for n, (t, d) in enumerate([
+            ("Request your trial", "Tell us the product and your server's public IP through live chat or a support ticket."),
+            ("We activate it", "The license is activated on your server IP so you can install and test it."),
+            ("Test for 3 days", "Run it on your real workload. Keep it by ordering before the trial ends."),
+        ], 1))
+    tiles = "".join(
+        f'<a href="/{slug}" class="rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-navy transition hover:border-brand/30 hover:text-brand">{html.escape(name)}</a>'
+        for name, slug in PRODUCTS)
+    return hero("Free Trial", "3-Day Free Trial",
+                "Try a LicenBase license on your own server for 3 days before you buy.") + f"""
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="mx-auto max-w-3xl space-y-12 leading-relaxed text-gray-700">
+
+        <section class="space-y-4">
+          <h2 {H2}>How the trial works</h2>
+          <div class="grid gap-4 sm:grid-cols-3">{steps}</div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 {H2}>What to send us</h2>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>The product you want to try</li>
+            <li>Your server's public IP address</li>
+            <li>Your operating system</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <button type="button" class="lb-btn lb-btn--primary open-chat-btn cursor-pointer" data-open-chat>Start live chat</button>
+            <a href="{TICKET}" class="lb-btn lb-btn--secondary">Open a ticket</a>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 {H2}>Products</h2>
+          <div class="grid gap-3 sm:grid-cols-2">{tiles}</div>
+        </section>
+
+        <section class="space-y-4 rounded-2xl border border-gray-200 bg-mist p-6">
+          <h2 {H2}>Good to know</h2>
+          <p>The trial lasts 3 days from activation. Paid licenses stay covered by our <a href="/refund-policy" {LINK}>Refund Policy</a> and <a href="/license-policy" {LINK}>License Policy</a>. Questions? Email <a href="mailto:{EMAIL}" {LINK}>{EMAIL}</a>.</p>
+        </section>
+
+      </div>
+    </div>
+  </section>
+"""
+
+
 def build(tpl, *, file, path, title, og_title, desc, image, image_alt, ld, main):
     head_a, head_b, tail = tpl
     head = meta_block(title=title, desc=desc, path=path, image=f"{BASE}/assets/img/og/{image}.png",
@@ -174,3 +225,8 @@ if __name__ == "__main__":
               {"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact LicenBase", "url": BASE + "/contact",
                "mainEntity": {**org, "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": EMAIL, "url": TICKET}}}],
           main=contact_main())
+    build(tpl, file="free-trial.html", path="/free-trial", title="3-Day Free Trial | LicenBase",
+          og_title="3-Day Free Trial", desc="Try a LicenBase hosting license on your own server free for 3 days. Request a trial through live chat or a support ticket.",
+          image="free-trial", image_alt="LicenBase 3-day free trial",
+          ld=[crumbs([("Home", "/"), ("Free Trial", "/free-trial")])],
+          main=trial_main())

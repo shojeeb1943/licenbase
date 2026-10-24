@@ -13,3 +13,9 @@ __pycache__/
 *.db
 *.db-shm
 *.db-wal
+
+# Graphify
+graphify-out/
+.graphify/
+.agents/rules/graphify.md
+.agents/workflows/graphify.md
