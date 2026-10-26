@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#881337" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b0717" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title Header -->
+  <rect x="0" y="0" width="960" height="76" fill="#0b1329" fill-opacity="0.6"/>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">CloudLinux License Not Detected: Diagnostic & Recovery Pipeline</text>
+  <text x="480" y="58" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Systematic resolution path from network verification and clock synchronization to clnreg_ks re-registration</text>
+
+  
+    <!-- Step 1: Network Check -->
+    <g transform="translate(50, 150)" filter="url(#shadow)">
+      <rect width="180" height="220" rx="10" fill="url(#cardBlue)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="90" y="32" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">1. Outbound TLS</text>
+      <rect x="15" y="50" width="150" height="40" rx="6" fill="#0f172a"/>
+      <text x="90" y="74" font-family="monospace" font-size="10" fill="#93c5fd" text-anchor="middle">curl -Iv https://cln...:443</text>
+      
+      <text x="15" y="116" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Verifies TCP 443 out</text>
+      <text x="15" y="136" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Cloud firewall rules</text>
+      <text x="15" y="156" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; DNS resolution check</text>
+      <text x="15" y="176" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Unblocks port 443</text>
+    </g>
+
+    <!-- Arrow 1 to 2 -->
+    <path d="M 235 260 L 275 260" stroke="#60a5fa" stroke-width="2.5"/>
+    <text x="255" y="250" font-family="sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Pass</text>
+
+    <!-- Step 2: System Clock -->
+    <g transform="translate(280, 150)" filter="url(#shadow)">
+      <rect width="190" height="220" rx="10" fill="url(#cardPurple)" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="95" y="32" font-family="sans-serif" font-size="13" font-weight="700" fill="#c084fc" text-anchor="middle">2. NTP Clock Sync</text>
+      <rect x="15" y="50" width="160" height="52" rx="6" fill="#0f172a"/>
+      <text x="20" y="70" font-family="monospace" font-size="10" fill="#e9d5ff">chronyc tracking</text>
+      <text x="20" y="90" font-family="monospace" font-size="10" fill="#e9d5ff">chronyc makestep</text>
+
+      <text x="15" y="128" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Checks clock drift</text>
+      <text x="15" y="148" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; SSL cert validity</text>
+      <text x="15" y="168" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Fixes token rejects</text>
+      <text x="15" y="188" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Re-syncs NTP pool</text>
+    </g>
+
+    <!-- Arrow 2 to 3 -->
+    <path d="M 475 260 L 515 260" stroke="#c084fc" stroke-width="2.5"/>
+    <text x="495" y="250" font-family="sans-serif" font-size="11" fill="#d8b4fe" text-anchor="middle">Pass</text>
+
+    <!-- Step 3: Registration & Diagnostic -->
+    <g transform="translate(520, 150)" filter="url(#shadow)">
+      <rect width="190" height="220" rx="10" fill="url(#cardAmber)" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="95" y="32" font-family="sans-serif" font-size="13" font-weight="700" fill="#fbbf24" text-anchor="middle">3. CLN Registration</text>
+      <rect x="15" y="50" width="160" height="52" rx="6" fill="#0f172a"/>
+      <text x="20" y="70" font-family="monospace" font-size="10" fill="#fde68a">clnreg_ks --force</text>
+      <text x="20" y="90" font-family="monospace" font-size="10" fill="#fde68a">cldiag --check-license</text>
+
+      <text x="15" y="128" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Registers server IP</text>
+      <text x="15" y="148" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Refreshes jwt token</text>
+      <text x="15" y="168" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Validates systemid</text>
+      <text x="15" y="188" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Tests LVE module</text>
+    </g>
+
+    <!-- Arrow 3 to 4 -->
+    <path d="M 715 260 L 755 260" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="735" y="250" font-family="sans-serif" font-size="11" fill="#fde68a" text-anchor="middle">OK</text>
+
+    <!-- Step 4: Verification -->
+    <g transform="translate(760, 150)" filter="url(#shadow)">
+      <rect width="150" height="220" rx="10" fill="url(#cardGreen)" stroke="#10b981" stroke-width="1.5"/>
+      <text x="75" y="32" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">4. Active License</text>
+      <rect x="15" y="50" width="120" height="40" rx="6" fill="#0f172a"/>
+      <text x="75" y="74" font-family="sans-serif" font-size="11" font-weight="700" fill="#6ee7b7" text-anchor="middle">LVE / CageFS OK</text>
+
+      <text x="12" y="116" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; cPanel WHM synced</text>
+      <text x="12" y="136" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Green status badge</text>
+      <text x="12" y="156" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; LVE Manager active</text>
+      <text x="12" y="176" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; MySQL Governor on</text>
+    </g>
+    
+</svg>

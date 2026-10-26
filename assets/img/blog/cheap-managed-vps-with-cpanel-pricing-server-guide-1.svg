@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#881337" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b0717" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title Header -->
+  <rect x="0" y="0" width="960" height="76" fill="#0b1329" fill-opacity="0.6"/>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Cheap Managed VPS with cPanel: Hardware & Cost Decision Matrix</text>
+  <text x="480" y="58" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Selecting the ideal compute tier, storage type, and licensing model for multi-tenant hosting</text>
+
+  
+    <!-- Box 1: Starter Agency Tier -->
+    <g transform="translate(50, 96)" filter="url(#shadow)">
+      <rect width="260" height="340" rx="12" fill="url(#cardBlue)" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect width="260" height="40" rx="12" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="20" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8">Tier 1: Starter Agency</text>
+      
+      <g transform="translate(15, 54)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" font-weight="700" fill="#e0f2fe">Hardware: 2 vCPU / 4GB RAM</text>
+      </g>
+      <g transform="translate(15, 96)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">Storage: 60GB NVMe SSD</text>
+      </g>
+      <g transform="translate(15, 138)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">Capacity: 1 - 5 Client Accounts</text>
+      </g>
+      <g transform="translate(15, 180)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">cPanel Tier: Admin (5 Accts)</text>
+      </g>
+
+      <g transform="translate(15, 240)">
+        <rect width="230" height="54" rx="8" fill="#1e3a8a" stroke="#38bdf8"/>
+        <text x="115" y="22" font-family="sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">VPS Compute: ~$5.50/mo</text>
+        <text x="115" y="40" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">cPanel Wholesale: $5.99/mo</text>
+      </g>
+    </g>
+
+    <!-- Box 2: Growth Business Tier -->
+    <g transform="translate(350, 96)" filter="url(#shadow)">
+      <rect width="260" height="340" rx="12" fill="url(#cardGreen)" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="260" height="40" rx="12" fill="#059669" fill-opacity="0.25"/>
+      <text x="20" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399">Tier 2: Growth Production</text>
+      
+      <g transform="translate(15, 54)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" font-weight="700" fill="#ecfdf5">Hardware: 4 vCPU / 8GB RAM</text>
+      </g>
+      <g transform="translate(15, 96)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">Storage: 160GB NVMe SSD</text>
+      </g>
+      <g transform="translate(15, 138)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">Capacity: 10 - 30 Client Accounts</text>
+      </g>
+      <g transform="translate(15, 180)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">cPanel Tier: Pro (30 Accts)</text>
+      </g>
+
+      <g transform="translate(15, 240)">
+        <rect width="230" height="54" rx="8" fill="#064e3b" stroke="#10b981"/>
+        <text x="115" y="22" font-family="sans-serif" font-size="12" font-weight="700" fill="#ecfdf5" text-anchor="middle">VPS Compute: ~$10.00/mo</text>
+        <text x="115" y="40" font-family="sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">cPanel Wholesale: $5.99/mo</text>
+      </g>
+    </g>
+
+    <!-- Box 3: High-Density Host -->
+    <g transform="translate(650, 96)" filter="url(#shadow)">
+      <rect width="260" height="340" rx="12" fill="url(#cardPurple)" stroke="#c084fc" stroke-width="1.5"/>
+      <rect width="260" height="40" rx="12" fill="#7e22ce" fill-opacity="0.25"/>
+      <text x="20" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#d8b4fe">Tier 3: High-Density VPS</text>
+      
+      <g transform="translate(15, 54)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" font-weight="700" fill="#f3e8ff">Hardware: 8 vCPU / 16GB RAM</text>
+      </g>
+      <g transform="translate(15, 96)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">Storage: 300GB NVMe SSD</text>
+      </g>
+      <g transform="translate(15, 138)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">Capacity: 50 - 100 Accounts</text>
+      </g>
+      <g transform="translate(15, 180)">
+        <rect width="230" height="36" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="22" font-family="sans-serif" font-size="11" fill="#cbd5e1">cPanel Tier: Premier Cloud</text>
+      </g>
+
+      <g transform="translate(15, 240)">
+        <rect width="230" height="54" rx="8" fill="#4c1d95" stroke="#c084fc"/>
+        <text x="115" y="22" font-family="sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">VPS Compute: ~$22.00/mo</text>
+        <text x="115" y="40" font-family="sans-serif" font-size="11" font-weight="700" fill="#d8b4fe" text-anchor="middle">cPanel Wholesale: $5.99/mo</text>
+      </g>
+    </g>
+    
+</svg>
