@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardSlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title & Subtitle Header -->
+  <rect x="0" y="0" width="960" height="76" fill="#0b1329" fill-opacity="0.6"/>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">2026 Cheap Managed cPanel VPS Cost Architecture</text>
+  <text x="480" y="58" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Comprehensive comparison of retail managed hosting fees vs unmanaged VPS + LicenBase wholesale licensing</text>
+
+  
+    <!-- Column 1: Traditional Retail Managed Hosting -->
+    <g transform="translate(60, 96)" filter="url(#shadow)">
+      <rect width="390" height="340" rx="12" fill="url(#cardAmber)" stroke="#f59e0b" stroke-width="1.5"/>
+      <rect width="390" height="42" rx="12" fill="#d97706" fill-opacity="0.25"/>
+      <text x="20" y="27" font-family="sans-serif" font-size="14" font-weight="700" fill="#fbbf24">Retail Managed cPanel VPS ($85 - $150/mo)</text>
+      
+      <g transform="translate(20, 60)">
+        <rect width="350" height="48" rx="8" fill="#18181b" stroke="#27272a"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f43f5e">Cloud Compute (2 vCPU / 4GB RAM)</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#a1a1aa">Bundled proprietary cloud provider markup: ~$35 - $50/mo</text>
+      </g>
+      
+      <g transform="translate(20, 118)">
+        <rect width="350" height="48" rx="8" fill="#18181b" stroke="#27272a"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f43f5e">Official cPanel Admin / Pro License</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#a1a1aa">Retail license tier fees: $29.99 - $44.99/mo per instance</text>
+      </g>
+
+      <g transform="translate(20, 176)">
+        <rect width="350" height="48" rx="8" fill="#18181b" stroke="#27272a"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f43f5e">Mandatory Managed Support Surcharge</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#a1a1aa">Automated updates, basic cPanel monitoring: $30 - $60/mo</text>
+      </g>
+
+      <g transform="translate(20, 240)">
+        <rect width="350" height="60" rx="8" fill="#451a03" stroke="#f59e0b" stroke-width="1.2"/>
+        <text x="175" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#fef3c7" text-anchor="middle">Annual TCO: $1,020 - $1,800 / year</text>
+        <text x="175" y="46" font-family="sans-serif" font-size="11" fill="#fed7aa" text-anchor="middle">Inflated lock-in with bundled account restrictions</text>
+      </g>
+    </g>
+
+    <!-- Column 2: Self-Optimized LicenBase Architecture -->
+    <g transform="translate(510, 96)" filter="url(#shadow)">
+      <rect width="390" height="340" rx="12" fill="url(#cardGreen)" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="390" height="42" rx="12" fill="#059669" fill-opacity="0.25"/>
+      <text x="20" y="27" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399">Unmanaged Cloud VPS + LicenBase ($12 - $17/mo)</text>
+      
+      <g transform="translate(20, 60)">
+        <rect width="350" height="48" rx="8" fill="#064e3b" stroke="#047857"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">Raw NVMe VPS (Hetzner / Contabo / OVH)</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#6ee7b7">4 vCPU, 8GB RAM, 100GB NVMe storage: ~$5.50 - $10/mo</text>
+      </g>
+      
+      <g transform="translate(20, 118)">
+        <rect width="350" height="48" rx="8" fill="#064e3b" stroke="#047857"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">LicenBase Automated cPanel License</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#6ee7b7">Uncapped accounts, genuine IP activation: ~$5.99/mo</text>
+      </g>
+
+      <g transform="translate(20, 176)">
+        <rect width="350" height="48" rx="8" fill="#064e3b" stroke="#047857"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">Automated Management &amp; Security Tools</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#6ee7b7">Auto-updates, CSF Firewall, Munin monitoring: $0/mo free</text>
+      </g>
+
+      <g transform="translate(20, 240)">
+        <rect width="350" height="60" rx="8" fill="#022c22" stroke="#10b981" stroke-width="1.2"/>
+        <text x="175" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#ecfdf5" text-anchor="middle">Annual TCO: $144 - $204 / year</text>
+        <text x="175" y="46" font-family="sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">Save over $876 - $1,596 every year (85% savings)</text>
+      </g>
+    </g>
+    
+</svg>

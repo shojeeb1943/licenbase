@@ -26,38 +26,38 @@
   </script>
   <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cPanel Webmail Ports 2095 & 2096 Explained | LicenBase</title>
-  <meta name="description" content="Master cPanel webmail ports 2095 & 2096. Learn why corporate firewalls block them, how SSL certificates work, and how to fix login and connection failures." />
+  <title>cPanel Webmail Ports 2095 vs 2096 SSL & Fixes | LicenBase</title>
+  <meta name="description" content="Master cPanel webmail ports 2095 and 2096. Learn direct login URLs, SSL certificate configuration, corporate firewall unblocking, and Roundcube memory fixes." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="LicenBase" />
-  <meta property="og:title" content="cPanel Webmail Ports 2095 & 2096 Explained" />
-  <meta property="og:description" content="Master cPanel webmail ports 2095 & 2096. Learn why corporate firewalls block them, how SSL certificates work, and how to fix login and connection failures." />
+  <meta property="og:title" content="cPanel Webmail Ports 2095 vs 2096 SSL & Fixes" />
+  <meta property="og:description" content="Master cPanel webmail ports 2095 and 2096. Learn direct login URLs, SSL certificate configuration, corporate firewall unblocking, and Roundcube memory fixes." />
   <meta property="og:url" content="https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096" />
   <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-cpanel-webmail-ports-explained-2095-2096.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="cPanel webmail ports 2095 and 2096 architecture and firewall routing diagram" />
+  <meta property="og:image:alt" content="cPanel webmail ports 2095 and 2096 network architecture, SSL encryption, and firewall packet inspection diagram" />
   <meta property="og:locale" content="en_US" />
-  <meta property="article:published_time" content="2026-10-17" />
-  <meta property="article:modified_time" content="2026-10-17" />
-  <meta property="article:section" content="How-to" />
+  <meta property="article:published_time" content="2026-10-26" />
+  <meta property="article:modified_time" content="2026-10-26" />
+  <meta property="article:section" content="Guide" />
   <meta property="article:author" content="LicenBase" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-cpanel-webmail-ports-explained-2095-2096.png" />
-  <meta name="twitter:image:alt" content="cPanel webmail ports 2095 and 2096 architecture and firewall routing diagram" />
-  <meta name="twitter:title" content="cPanel Webmail Ports 2095 & 2096 Explained" />
-  <meta name="twitter:description" content="Master cPanel webmail ports 2095 & 2096. Learn why corporate firewalls block them, how SSL certificates work, and how to fix login and connection failures." />
+  <meta name="twitter:image:alt" content="cPanel webmail ports 2095 and 2096 network architecture, SSL encryption, and firewall packet inspection diagram" />
+  <meta name="twitter:title" content="cPanel Webmail Ports 2095 vs 2096 SSL & Fixes" />
+  <meta name="twitter:description" content="Master cPanel webmail ports 2095 and 2096. Learn direct login URLs, SSL certificate configuration, corporate firewall unblocking, and Roundcube memory fixes." />
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "cPanel Webmail Ports Explained: 2095, 2096 & Login Problems", "item": "https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "cPanel Webmail Ports Explained: 2095, 2096 & Login Problems", "description": "Master cPanel webmail ports 2095 & 2096. Learn why corporate firewalls block them, how SSL certificates work, and how to fix login and connection failures.", "image": ["https://licenbase.com/assets/img/og/blog-cpanel-webmail-ports-explained-2095-2096.png"], "datePublished": "2026-10-17", "dateModified": "2026-10-17", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 718}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between cPanel webmail port 2095 and 2096?", "acceptedAnswer": {"@type": "Answer", "text": "Port 2095 is the unencrypted HTTP webmail port, which sends credentials over plaintext and is vulnerable to network sniffing. Port 2096 is the encrypted HTTPS/TLS webmail port, which protects email transmissions with an SSL certificate. Modern browsers automatically redirect port 2095 to 2096."}}, {"@type": "Question", "name": "Why do office and school Wi-Fi networks block cPanel webmail?", "acceptedAnswer": {"@type": "Answer", "text": "Many corporate and public Wi-Fi firewalls block non-standard ports (such as 2082, 2083, 2095, and 2096) to restrict unauthorized traffic, allowing only standard HTTP (port 80) and HTTPS (port 443)."}}, {"@type": "Question", "name": "How can users access webmail if port 2096 is blocked by a firewall?", "acceptedAnswer": {"@type": "Answer", "text": "Enable cPanel Proxy Subdomains in WHM (Tweak Settings). This routes webmail through standard HTTPS port 443 via webmail.yourdomain.com, completely bypassing network port restrictions."}}, {"@type": "Question", "name": "Why does webmail show an \"Invalid Login\" error when the password is correct?", "acceptedAnswer": {"@type": "Answer", "text": "Common causes include cPHulk brute-force protection blocking your client IP address after failed attempts, entering an incomplete username (you must enter user@yourdomain.com, not just user), or mailbox quota exhaustion."}}, {"@type": "Question", "name": "How do I fix SSL certificate warnings when accessing port 2096?", "acceptedAnswer": {"@type": "Answer", "text": "Run /usr/local/cpanel/bin/checkallsslcerts in SSH as root. This checks your cPanel service certificates and automatically installs a valid signed certificate for your server hostname."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "cPanel Webmail Ports 2095 vs 2096: Login URLs, SSL & Firewall Fixes", "item": "https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "cPanel Webmail Ports 2095 vs 2096: Login URLs, SSL & Firewall Fixes", "description": "Master cPanel webmail ports 2095 and 2096. Learn direct login URLs, SSL certificate configuration, corporate firewall unblocking, and Roundcube memory fixes.", "image": ["https://licenbase.com/assets/img/og/blog-cpanel-webmail-ports-explained-2095-2096.png"], "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096"}, "articleSection": "Guide", "inLanguage": "en", "wordCount": 1056}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between port 2095 and port 2096 in cPanel Webmail?", "acceptedAnswer": {"@type": "Answer", "text": "Port 2095 serves unencrypted plaintext HTTP traffic, transmitting user login credentials and email messages across the network without encryption. Port 2096 serves encrypted HTTPS traffic over TLS/SSL, encrypting all communication between the user's browser and the webmail server. Modern hosting environments enforce port 2096 exclusively."}}, {"@type": "Question", "name": "How do I access cPanel Webmail if my corporate office blocks ports 2095 and 2096?", "acceptedAnswer": {"@type": "Answer", "text": "Many enterprise networks, schools, and hotel Wi-Fi routers block non-standard ports like 2095 and 2096. You can bypass this restriction by using cPanel's built-in Webmail Proxy Subdomain: 'https://webmail.yourdomain.com'. This routes through standard HTTPS port 443, which is universally open on all networks."}}, {"@type": "Question", "name": "Why does my browser display an SSL certificate privacy warning on port 2096?", "acceptedAnswer": {"@type": "Answer", "text": "SSL warnings occur when you access port 2096 using a domain name or IP address that does not match the server's primary SSL certificate. For example, accessing 'https://server-ip:2096' triggers a Common Name (CN) mismatch warning because certificates cannot validate raw IPs. Always access webmail using your fully qualified domain name (e.g. 'https://example.com:2096') with an active AutoSSL certificate."}}, {"@type": "Question", "name": "Which firewall command opens port 2096 on CSF or firewalld?", "acceptedAnswer": {"@type": "Answer", "text": "On servers running ConfigServer Security & Firewall (CSF), edit '/etc/csf/csf.conf', add 2095 and 2096 to the 'TCP_IN' directive, and run 'csf -r'. On RHEL/AlmaLinux servers using firewalld, execute: 'firewall-cmd --permanent --add-port=2096/tcp && firewall-cmd --reload'."}}]}</script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
@@ -214,15 +214,15 @@
           <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
           <a href="/blog/" class="transition hover:text-brand">Blog</a>
           <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
-          <span class="text-brand">How-to</span>
+          <span class="text-brand">Guide</span>
         </nav>
-        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">How-to</span>
-        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">cPanel Webmail Ports Explained: 2095, 2096 &amp; Login Problems</h1>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Guide</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">cPanel Webmail Ports 2095 vs 2096: Login URLs, SSL &amp; Firewall Fixes</h1>
         <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
           <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
-          <span>Published <time datetime="2026-10-17">October 17, 2026</time></span>
+          <span>Published <time datetime="2026-10-26">October 26, 2026</time></span>
           
-          <span>4 min read</span>
+          <span>6 min read</span>
         </div>
       </div>
     </div>
@@ -233,107 +233,151 @@
       <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
         <div class="min-w-0 max-w-3xl">
           <figure>
-            <img src="/assets/img/blog/cpanel-webmail-ports-explained-2095-2096-feature.webp" alt="cPanel webmail ports 2095 and 2096 architecture and firewall routing diagram" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+            <img src="/assets/img/blog/cpanel-webmail-ports-explained-2095-2096-feature.webp" alt="cPanel webmail ports 2095 and 2096 network architecture, SSL encryption, and firewall packet inspection diagram" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
           </figure>
           <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
-<p class="text-lg text-gray-600">Accessing webmail is one of the most frequent daily tasks for business email users on cPanel servers. Yet support desks routinely receive urgent customer inquiries: <em>"Webmail won't load," "My connection timed out,"</em> or <em>"I get a security warning when opening my email."</em> In almost every instance, these issues are directly tied to how cPanel handles service networking. Unlike public websites that operate on standard ports 80 and 443, cPanel webmail defaults to specialized non-standard service ports. In this technical networking guide, we explain <strong>cPanel webmail ports 2095 (HTTP) and 2096 (HTTPS)</strong>, examine why corporate networks block them, and provide step-by-step methods to fix login failures.</p>
+
+<p class="text-lg text-gray-600">Accessing webmail is an essential daily routine for millions of business users, yet email connection failures on <strong>cPanel webmail port</strong> configurations remain one of the most persistent support headaches for hosting providers. When users attempt to check their inboxes, they frequently encounter connection timed-out errors, SSL security warnings, or blocked port errors. Understanding the architectural differences between <strong>port 2095</strong> and <strong>port 2096</strong>, mastering proper login URL syntax, and knowing how to unblock corporate firewalls will resolve webmail issues permanently.</p>
 
 <section class="space-y-4">
-  <h2 id="port-2095-vs-port-2096-plaintext-vs-tls-encryption" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Port 2095 vs Port 2096: Plaintext vs TLS Encryption</h2>
-  <p>cPanel allocates dedicated ports for webmail access to separate administrative mail traffic from standard website requests:</p>
-  <ul class="list-disc space-y-2 pl-6">
-    <li><strong>Port 2095 (Unencrypted HTTP):</strong> Used for legacy plaintext webmail connections (e.g., <code>http://example.com:2095</code>). Because passwords and email contents are transmitted unencrypted, modern web browsers flag this port as insecure. cPanel automatically attempts to redirect incoming traffic from port 2095 to port 2096.</li>
-    <li><strong>Port 2096 (Encrypted HTTPS / TLS):</strong> The official secure port for cPanel webmail (e.g., <code>https://example.com:2096</code>). It establishes a TLS 1.2 or 1.3 cryptographic handshake using the server's cPanel service SSL certificate, ensuring all credentials, attachments, and messages are shielded from network eavesdropping.</li>
+  <h2 id="port-2095-vs-port-2096-plaintext-vs-tls-ssl-encrypted-delivery" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Port 2095 vs. Port 2096: Plaintext vs. TLS/SSL Encrypted Delivery</h2>
+  <p>cPanel &amp; WHM dedicates two standardized network ports for internal webmail daemon services (specifically the <code>cpsrvd</code> daemon powering Roundcube and Horde):</p>
+  <ul class="list-disc pl-6 space-y-2 text-gray-700">
+    <li><strong>Port 2095 (Unencrypted HTTP):</strong> Connects users over standard, cleartext HTTP. Passwords, usernames, session cookies, and sensitive email communications are transmitted across the internet without cryptographic protection. Anyone on the same public Wi-Fi network or local router can sniff credentials using basic packet inspection tools. Port 2095 is deprecated and should always be redirected to secure HTTPS.</li>
+    <li><strong>Port 2096 (Encrypted HTTPS / TLS):</strong> Wraps the webmail session inside modern TLS 1.2 / TLS 1.3 encryption. Passwords and email data are completely shielded from man-in-the-middle (MITM) eavesdropping. Port 2096 is the mandatory production standard for all commercial webmail access.</li>
   </ul>
+  <p>To automatically force all users accessing unencrypted port 2095 over to encrypted port 2096, navigate to <strong>WHM &raquo; Server Configuration &raquo; Tweak Settings &raquo; Redirection</strong> and enable <em>"Always redirect to SSL/TLS"</em> and <em>"Require SSL for cPanel/WHM/Webmail service access"</em>.</p>
   <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
-    <img src="/assets/img/blog/cpanel-webmail-ports-explained-2095-2096-1.svg" alt="cPanel webmail ports 2095 and 2096 architecture and firewall routing diagram" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
-    <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">How cPanel routes webmail requests across port 2095, port 2096, and proxy subdomains.</figcaption>
-  </figure>
+  <img src="/assets/img/blog/cpanel-webmail-ports-explained-2095-2096-1.svg" alt="cPanel webmail ports 2095 and 2096 network architecture, SSL encryption, and firewall packet inspection diagram" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+  <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Figure 1: Network architecture and protocol routing for cPanel webmail ports 2095 (HTTP) and 2096 (HTTPS/TLS).</figcaption>
+</figure>
 </section>
 
 <section class="space-y-4">
-  <h2 id="the-corporate-firewall-dilemma-proxy-subdomains-fix" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">The Corporate Firewall Dilemma &amp; Proxy Subdomains Fix</h2>
-  <p>The most common reason users cannot load <code>https://example.com:2096</code> is that corporate office routers, hotel Wi-Fi networks, and public institutions block traffic on non-standard ports, permitting only port 80 (HTTP) and port 443 (HTTPS).</p>
-  <p>To resolve this restriction permanently for all clients, configure <strong>cPanel Proxy Subdomains</strong>:</p>
-  <ol class="list-decimal space-y-2 pl-6">
-    <li>Log into WHM as root and navigate to <strong>Server Configuration &raquo; Tweak Settings</strong>.</li>
-    <li>Under the <strong>Domains</strong> tab, locate <em>Proxy subdomains</em> and ensure it is set to <strong>On</strong>.</li>
-    <li>Verify that your DNS zone contains an A or CNAME record pointing <code>webmail.yourdomain.com</code> to your server IP.</li>
-    <li>Now, users can access their email via <code>https://webmail.yourdomain.com</code>. This URL connects over standard HTTPS port 443, bypassing corporate firewall blocks completely.</li>
-  </ol>
+  <h2 id="canonical-cpanel-webmail-login-urls-proxy-subdomains" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Canonical cPanel Webmail Login URLs &amp; Proxy Subdomains</h2>
+  <p>Depending on your DNS propagation and client network constraints, cPanel offers several methods to reach the webmail interface:</p>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full min-w-[34rem] text-sm">
+      <thead>
+        <tr class="bg-gray-100 text-left text-xs font-bold uppercase tracking-wider text-gray-700">
+          <th class="p-3 border-b">Access Method</th>
+          <th class="p-3 border-b">URL Pattern</th>
+          <th class="p-3 border-b">Port</th>
+          <th class="p-3 border-b">Firewall Resistance</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">Direct Secure Port</td>
+          <td class="p-3 text-gray-600"><code>https://example.com:2096</code></td>
+          <td class="p-3 text-gray-600">2096 (TCP)</td>
+          <td class="p-3 text-rose-600 font-semibold">Low (Often blocked by office firewalls)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">Virtual URL Alias</td>
+          <td class="p-3 text-gray-600"><code>https://example.com/webmail</code></td>
+          <td class="p-3 text-gray-600">443 &rarr; 2096</td>
+          <td class="p-3 text-amber-600 font-semibold">Moderate (Redirects browser to 2096)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold text-gray-900">Webmail Proxy Subdomain</td>
+          <td class="p-3 text-gray-600"><code>https://webmail.example.com</code></td>
+          <td class="p-3 text-gray-600">443 (TCP)</td>
+          <td class="p-3 text-emerald-600 font-semibold">Maximum (100% bypass on all networks)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>The Corporate Firewall Bypass:</strong> In corporate offices, banks, airports, and universities, network security appliances routinely restrict outbound connections to standard web ports (80 and 443), dropping traffic bound for port 2096. Utilizing the <strong>Proxy Subdomain</strong> (<code>https://webmail.example.com</code>) proxies inbound traffic through Apache or LiteSpeed on port 443 directly to <code>cpsrvd</code> internally, allowing employees to access their mail seamlessly from any locked-down network.</p>
 </section>
 
 <section class="space-y-4">
-  <h2 id="troubleshooting-common-webmail-login-failures" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Troubleshooting Common Webmail Login Failures</h2>
-  <p>If the webmail page loads but users cannot log in, troubleshoot these three primary failure points:</p>
-  <ul class="list-disc space-y-2 pl-6">
-    <li><strong>Incomplete Username Syntax:</strong> Unlike cPanel account logins (which use a short system username), webmail strictly requires the full email address format: <code>user@example.com</code>.</li>
-    <li><strong>cPHulk Brute Force Lockouts:</strong> If a user mistypes their password several times, cPanel's cPHulk security daemon blocks their IP address. To unblock an IP, run:
-      <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>/usr/local/cpanel/scripts/cphulkdwhitelist &lt;CLIENT_IP&gt;</code></pre>
-    </li>
-    <li><strong>Mailbox Quota Exceeded:</strong> If an inbox reaches 100% capacity, Roundcube may fail to open the session. Increase the mailbox quota inside cPanel under <em>Email Accounts</em>.</li>
+  <h2 id="troubleshooting-ssl-certificate-warnings-on-port-2096" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Troubleshooting SSL Certificate Warnings on Port 2096</h2>
+  <p>A frequent support ticket occurs when users see a red warning stating <em>"Your connection is not private" (NET::ERR_CERT_COMMON_NAME_INVALID)</em> when loading port 2096. This occurs for one of two common reasons:</p>
+  <ul class="list-disc pl-6 space-y-2 text-gray-700">
+    <li><strong>Connecting via Raw Server IP:</strong> Browsing to <code>https://198.51.100.25:2096</code> causes an immediate certificate mismatch because SSL certificates validate domain hostnames, not IP addresses. Instruct users to always access webmail using their registered domain.</li>
+    <li><strong>AutoSSL Not Generated for Service Subdomains:</strong> If <code>mail.example.com</code> or <code>webmail.example.com</code> lacks an SSL certificate, the browser rejects the connection. In WHM, navigate to <strong>Manage AutoSSL &raquo; Run AutoSSL for All Users</strong> to issue valid, free Let's Encrypt or Sectigo certificates for all mail routing hostnames.</li>
   </ul>
-  <p>Ensure your server infrastructure is fully backed by an authentic <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a>, accelerate mail web serving with <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed</a>, and protect your mail relay reputation with <a href="/imunify360-license" class="text-blue-600 font-semibold hover:underline">Imunify360</a>.</p>
-  <p>Discover our budget-friendly <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo software packs</a>, read our company background <a href="/about" class="text-blue-600 font-semibold hover:underline">about us</a>, review our transparent <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">licensing policy</a>, or get in touch with our team on our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
 </section>
+
+<section class="space-y-4">
+  <h2 id="firewall-unblocking-commands-csf-firewalld-iptables" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Firewall Unblocking Commands: CSF, Firewalld &amp; iptables</h2>
+  <p>If your server administrators cannot connect to port 2096 or receive persistent connection timeout errors, the port is likely closed in your VPS host firewall:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# 1. Check if cPanel cpsrvd daemon is actively listening on port 2096
+netstat -tulpn | grep 2096
+# Output should show: tcp 0 0 0.0.0.0:2096 0.0.0.0:* LISTEN /usr/local/cpanel/cpsrvd
+
+# 2. ConfigServer Security &amp; Firewall (CSF):
+# Edit /etc/csf/csf.conf and ensure 2095,2096 are in TCP_IN and TCP_OUT
+sed -i 's/TCP_IN = "/TCP_IN = "2095,2096,/g' /etc/csf/csf.conf
+csf -r
+
+# 3. Firewalld (AlmaLinux / Rocky Linux):
+firewall-cmd --permanent --zone=public --add-port=2095/tcp
+firewall-cmd --permanent --zone=public --add-port=2096/tcp
+firewall-cmd --reload
+  </div>
+  <p>If you run an external cloud firewall (such as AWS Security Groups, Hetzner Cloud Firewalls, or DigitalOcean Cloud Firewalls), verify that an inbound TCP rule permits traffic on destination port 2096 from <code>0.0.0.0/0</code>.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="roundcube-performance-optimization-php-memory-tuning" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Roundcube Performance Optimization &amp; PHP Memory Tuning</h2>
+  <p>Beyond port accessibility and firewall whitelisting, users frequently report webmail timeouts when opening large inboxes with thousands of messages or downloading MIME attachments. Because cPanel executes Roundcube under internal PHP constraints, insufficient memory allocation causes silent worker termination:</p>
+  <ul class="list-disc pl-6 space-y-2 text-gray-700">
+    <li><strong>Increasing cPanel PHP Memory:</strong> In WHM, navigate to <em>Server Configuration &raquo; Tweak Settings &raquo; System</em> and adjust <code>cPanel PHP max POST size</code> and <code>cPanel PHP max upload size</code> to 64M or 128M to permit smooth attachment processing.</li>
+    <li><strong>Dovecot IMAP Idle Tuning:</strong> To prevent premature session disconnection on mobile devices and webmail tabs, ensure <code>imap_idle_notify_interval</code> in <code>/etc/dovecot/dovecot.conf</code> is set to at least 2 minutes, maintaining persistent socket keep-alives without overloading system RAM.</li>
+  </ul>
+  <p>Pairing your production email stack with an automated <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a>, shielding it with an <a href="/imunify360-license" class="text-blue-600 font-semibold hover:underline">Imunify360 license</a>, and isolating tenants with a <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux license</a> guarantees smooth, secure email delivery across all customer accounts.</p>
+  <p>Learn more about our team on the <a href="/about" class="text-blue-600 font-semibold hover:underline">about page</a>, review our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">License Policy</a>, or speak with our engineers on our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
+</section>
+
 <section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
         <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">What is the difference between cPanel webmail port 2095 and 2096?</span>
+            <span class="lb-faq-question">What is the difference between port 2095 and port 2096 in cPanel Webmail?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Port 2095 is the unencrypted HTTP webmail port, which sends credentials over plaintext and is vulnerable to network sniffing. Port 2096 is the encrypted HTTPS/TLS webmail port, which protects email transmissions with an SSL certificate. Modern browsers automatically redirect port 2095 to 2096.</p>
+              <p class="lb-faq-answer">Port 2095 serves unencrypted plaintext HTTP traffic, transmitting user login credentials and email messages across the network without encryption. Port 2096 serves encrypted HTTPS traffic over TLS/SSL, encrypting all communication between the user&#x27;s browser and the webmail server. Modern hosting environments enforce port 2096 exclusively.</p>
             </div>
           </div>
         </div>
         <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">Why do office and school Wi-Fi networks block cPanel webmail?</span>
+            <span class="lb-faq-question">How do I access cPanel Webmail if my corporate office blocks ports 2095 and 2096?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Many corporate and public Wi-Fi firewalls block non-standard ports (such as 2082, 2083, 2095, and 2096) to restrict unauthorized traffic, allowing only standard HTTP (port 80) and HTTPS (port 443).</p>
+              <p class="lb-faq-answer">Many enterprise networks, schools, and hotel Wi-Fi routers block non-standard ports like 2095 and 2096. You can bypass this restriction by using cPanel&#x27;s built-in Webmail Proxy Subdomain: &#x27;https://webmail.yourdomain.com&#x27;. This routes through standard HTTPS port 443, which is universally open on all networks.</p>
             </div>
           </div>
         </div>
         <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">How can users access webmail if port 2096 is blocked by a firewall?</span>
+            <span class="lb-faq-question">Why does my browser display an SSL certificate privacy warning on port 2096?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Enable cPanel Proxy Subdomains in WHM (Tweak Settings). This routes webmail through standard HTTPS port 443 via webmail.yourdomain.com, completely bypassing network port restrictions.</p>
+              <p class="lb-faq-answer">SSL warnings occur when you access port 2096 using a domain name or IP address that does not match the server&#x27;s primary SSL certificate. For example, accessing &#x27;https://server-ip:2096&#x27; triggers a Common Name (CN) mismatch warning because certificates cannot validate raw IPs. Always access webmail using your fully qualified domain name (e.g. &#x27;https://example.com:2096&#x27;) with an active AutoSSL certificate.</p>
             </div>
           </div>
         </div>
         <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">Why does webmail show an &quot;Invalid Login&quot; error when the password is correct?</span>
+            <span class="lb-faq-question">Which firewall command opens port 2096 on CSF or firewalld?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Common causes include cPHulk brute-force protection blocking your client IP address after failed attempts, entering an incomplete username (you must enter user@yourdomain.com, not just user), or mailbox quota exhaustion.</p>
-            </div>
-          </div>
-        </div>
-        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
-          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
-            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">How do I fix SSL certificate warnings when accessing port 2096?</span>
-            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
-          </button>
-          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
-            <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Run /usr/local/cpanel/bin/checkallsslcerts in SSH as root. This checks your cPanel service certificates and automatically installs a valid signed certificate for your server hostname.</p>
+              <p class="lb-faq-answer">On servers running ConfigServer Security &amp; Firewall (CSF), edit &#x27;/etc/csf/csf.conf&#x27;, add 2095 and 2096 to the &#x27;TCP_IN&#x27; directive, and run &#x27;csf -r&#x27;. On RHEL/AlmaLinux servers using firewalld, execute: &#x27;firewall-cmd --permanent --add-port=2096/tcp &amp;&amp; firewall-cmd --reload&#x27;.</p>
             </div>
           </div>
         </div>
@@ -342,7 +386,7 @@
           </article>
           <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
             <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096&amp;text=cPanel%20Webmail%20Ports%20Explained%3A%202095%2C%202096%20%26%20Login%20Problems" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=cPanel%20Webmail%20Ports%20Explained%3A%202095%2C%202096%20%26%20Login%20Problems&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096&amp;text=cPanel%20Webmail%20Ports%202095%20vs%202096%3A%20Login%20URLs%2C%20SSL%20%26%20Firewall%20Fixes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=cPanel%20Webmail%20Ports%202095%20vs%202096%3A%20Login%20URLs%2C%20SSL%20%26%20Firewall%20Fixes&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fcpanel-webmail-ports-explained-2095-2096" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
           </div>
         </div>
 
@@ -350,11 +394,11 @@
           <div class="space-y-6 lg:sticky lg:top-28">
             <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
-              <div class="mt-3 space-y-0.5"><a href="#port-2095-vs-port-2096-plaintext-vs-tls-encryption" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Port 2095 vs Port 2096: Plaintext vs TLS Encryption</a><a href="#the-corporate-firewall-dilemma-proxy-subdomains-fix" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Corporate Firewall Dilemma &amp; Proxy Subdomains Fix</a><a href="#troubleshooting-common-webmail-login-failures" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Troubleshooting Common Webmail Login Failures</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+              <div class="mt-3 space-y-0.5"><a href="#port-2095-vs-port-2096-plaintext-vs-tls-ssl-encrypted-delivery" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Port 2095 vs. Port 2096: Plaintext vs. TLS/SSL Encrypted Delivery</a><a href="#canonical-cpanel-webmail-login-urls-proxy-subdomains" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Canonical cPanel Webmail Login URLs &amp; Proxy Subdomains</a><a href="#troubleshooting-ssl-certificate-warnings-on-port-2096" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Troubleshooting SSL Certificate Warnings on Port 2096</a><a href="#firewall-unblocking-commands-csf-firewalld-iptables" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Firewall Unblocking Commands: CSF, Firewalld &amp; iptables</a><a href="#roundcube-performance-optimization-php-memory-tuning" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Roundcube Performance Optimization &amp; PHP Memory Tuning</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
             </nav>
             <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
               <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
-              <ul class="mt-3 space-y-1"><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/litespeed-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">LiteSpeed License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <ul class="mt-3 space-y-1"><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/imunify360-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Imunify360 license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux OS license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
               <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
             </div>
           </div>
@@ -367,16 +411,33 @@
     <div class="lb-shell">
       <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
       <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <a href="/blog/cpanel-webmail-ports-ssl-login-issues-fixed" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/cpanel-webmail-ports-ssl-login-issues-fixed-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+        <a href="/blog/cheap-managed-cpanel-vps-hosting-cost-breakdown-2026" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cheap-managed-cpanel-vps-hosting-cost-breakdown-2026-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
           <div class="flex flex-1 flex-col justify-between p-6">
             <div>
               <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">3 min read</span>
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">6 min read</span>
               </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Webmail Ports (2095 &amp; 2096): Fix SSL &amp; Login Issues</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Master cPanel Webmail port configuration for 2095 and 2096, fix SSL handshake errors, open firewall rules, and resolve login timeouts.</p>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Cheap Managed cPanel VPS Hosting: 2026 License &amp; Server Cost Breakdown</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Complete 2026 cost breakdown of cheap managed cPanel VPS hosting: compute, wholesale licensing, management overhead, and optimization.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 26, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/imunify360-license-pricing-plans-roi-guide" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/imunify360-license-pricing-plans-roi-guide-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Imunify360 License Pricing Guide: Plans, Features &amp; ROI</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A complete guide to Imunify360 license tiers, comparing Single User, 30 Users, and Unlimited plans with practical server security ROI.</p>
             </div>
             <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
               <span class="font-medium text-gray-400">October 24, 2026</span>
@@ -384,16 +445,50 @@
             </div>
           </div>
         </a>
-        <a href="/blog/fix-cpanel-update-failed-rpm-errors-whm" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/fix-cpanel-update-failed-rpm-errors-whm-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+        <a href="/blog/cpanel-vps-cost-configuration-practical-guide" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/cpanel-vps-cost-configuration-practical-guide-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
           <div class="flex flex-1 flex-col justify-between p-6">
             <div>
               <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">7 min read</span>
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
               </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Update Failed? How to Fix RPM Errors &amp; Restore WHM</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Diagnose and fix cPanel update failures, inspect updatelogs, resolve RPM database locks and repository conflicts, and safely restore WHM.</p>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel VPS Cost &amp; Configuration Guide: Practical Setup</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">A practical guide to cPanel VPS hardware sizing, hypervisor selection, tier pricing, and total cost optimization for hosting servers.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 24, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/php-security-troubleshooting-guide-cpanel" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/php-security-troubleshooting-guide-cpanel-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">PHP Security &amp; Troubleshooting Guide for cPanel Servers</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Harden PHP execution, tune PHP-FPM pools, eliminate gateway timeouts, and secure cPanel servers with CloudLinux CageFS.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 24, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/protect-cpanel-session-hijacking-cookie-theft" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/protect-cpanel-session-hijacking-cookie-theft-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Protect cPanel from Session Hijacking and Cookie Theft</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Harden cPanel and WHM against cookie theft and session hijacking caused by infostealer malware like RedLine and Lumma.</p>
             </div>
             <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
               <span class="font-medium text-gray-400">October 22, 2026</span>
@@ -401,67 +496,16 @@
             </div>
           </div>
         </a>
-        <a href="/blog/whm-dns-cluster-not-syncing-diagnose-fix" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/whm-dns-cluster-not-syncing-diagnose-fix-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+        <a href="/blog/linux-vps-swapping-when-ram-available-fix" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/linux-vps-swapping-when-ram-available-fix-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
           <div class="flex flex-1 flex-col justify-between p-6">
             <div>
               <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">6 min read</span>
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">Guide</span>
+                <span class="text-gray-400 font-medium">4 min read</span>
               </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">WHM DNS Cluster Not Syncing: Diagnose &amp; Fix Zone Errors</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Diagnose and fix WHM DNS cluster synchronization failures, cPanel DNSOnly communication timeouts, and corrupted BIND zones.</p>
-            </div>
-            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
-              <span class="font-medium text-gray-400">October 22, 2026</span>
-              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
-            </div>
-          </div>
-        </a>
-        <a href="/blog/fix-mysql-too-many-connections-cpanel-server" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/fix-mysql-too-many-connections-cpanel-server-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
-          <div class="flex flex-1 flex-col justify-between p-6">
-            <div>
-              <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">5 min read</span>
-              </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix MySQL Too Many Connections on a cPanel Server</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Solve MySQL Error 1040 Too Many Connections in cPanel. Learn how to adjust max_connections, purge sleeping queries, and optimize memory.</p>
-            </div>
-            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
-              <span class="font-medium text-gray-400">October 22, 2026</span>
-              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
-            </div>
-          </div>
-        </a>
-        <a href="/blog/fix-508-resource-limit-reached-error-cpanel" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/fix-508-resource-limit-reached-error-cpanel-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
-          <div class="flex flex-1 flex-col justify-between p-6">
-            <div>
-              <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">5 min read</span>
-              </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix 508 Resource Limit Reached Error in cPanel</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Troubleshoot and fix HTTP 508 Resource Limit Reached errors in cPanel. Identify CPU, memory, Entry Processes, and I/O bottlenecks.</p>
-            </div>
-            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
-              <span class="font-medium text-gray-400">October 22, 2026</span>
-              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
-            </div>
-          </div>
-        </a>
-        <a href="/blog/fix-failed-cpanel-backups-disk-space-logs" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/fix-failed-cpanel-backups-disk-space-logs-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
-          <div class="flex flex-1 flex-col justify-between p-6">
-            <div>
-              <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">5 min read</span>
-              </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix Failed cPanel Backups: Disk Space &amp; Logs</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Solve failed cPanel and WHM backups. Troubleshoot disk exhaustion, staging folder permissions, and transport timeout errors.</p>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">Why Is Your Linux VPS Swapping When RAM Seems Available?</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Discover why Linux servers swap pages despite having available memory, and tune vm.swappiness for peak hosting performance.</p>
             </div>
             <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
               <span class="font-medium text-gray-400">October 22, 2026</span>

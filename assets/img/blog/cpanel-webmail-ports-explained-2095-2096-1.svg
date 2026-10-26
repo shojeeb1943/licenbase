@@ -1,44 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgwebmailport" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#1e293b" />
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardSlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
   </defs>
-  <rect width="800" height="420" rx="16" fill="url(#bgwebmailport)"/>
-  <text x="400" y="45" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">cPanel Webmail Ports & Protocol Routing Architecture</text>
-  <text x="400" y="72" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="13" text-anchor="middle">Port 2095 (HTTP) vs Port 2096 (HTTPS) and Firewall Navigation</text>
 
-  <rect x="40" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-  <text x="150" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Port 2095 (Plain)</text>
-  <text x="150" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Unencrypted HTTP Webmail</text>
-  <line x1="60" y1="180" x2="240" y2="180" stroke="#334155"/>
-  <text x="60" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• No SSL handshake overhead</text>
-  <text x="60" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Insecure public networks</text>
-  <text x="60" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Browser security warnings</text>
-  <text x="60" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Auto-redirect to 2096</text>
-  <rect x="60" y="325" width="180" height="32" rx="6" fill="#ef4444" fill-opacity="0.2"/>
-  <text x="150" y="346" fill="#f87171" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Deprecated</text>
+  <rect width="960" height="480" fill="url(#bg)"/>
 
-  <rect x="290" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
-  <text x="400" y="140" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Port 2096 (SSL/TLS)</text>
-  <text x="400" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Encrypted HTTPS Webmail</text>
-  <line x1="310" y1="180" x2="490" y2="180" stroke="#334155"/>
-  <text x="310" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• TLS 1.2 & 1.3 encryption</text>
-  <text x="310" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• cPanel service SSL cert</text>
-  <text x="310" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Corporate firewall blocks</text>
-  <text x="310" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Recommended secure path</text>
-  <rect x="310" y="325" width="180" height="32" rx="6" fill="#0284c7" fill-opacity="0.2"/>
-  <text x="400" y="346" fill="#38bdf8" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Default Standard</text>
+  <!-- Title & Subtitle Header -->
+  <rect x="0" y="0" width="960" height="76" fill="#0b1329" fill-opacity="0.6"/>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">cPanel Webmail Ports Architecture: 2095 (HTTP) vs. 2096 (HTTPS/TLS)</text>
+  <text x="480" y="58" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Port inspection, SSL handshakes, reverse proxy webmail subdomains, and firewall routing</text>
 
-  <rect x="540" y="105" width="220" height="270" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
-  <text x="650" y="140" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Proxy Subdomains</text>
-  <text x="650" y="165" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">Bypassing Port Filters</text>
-  <line x1="560" y1="180" x2="740" y2="180" stroke="#334155"/>
-  <text x="560" y="210" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• webmail.domain.com routing</text>
-  <text x="560" y="235" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Uses standard port 443</text>
-  <text x="560" y="260" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Works on restricted Wi-Fi</text>
-  <text x="560" y="285" fill="#f8fafc" font-family="system-ui,-apple-system,sans-serif" font-size="12">• Configured in DNS zone</text>
-  <rect x="560" y="325" width="180" height="32" rx="6" fill="#10b981" fill-opacity="0.2"/>
-  <text x="650" y="346" fill="#34d399" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">100% Accessible</text>
+  
+    <!-- Port 2095: Insecure HTTP -->
+    <g transform="translate(60, 96)" filter="url(#shadow)">
+      <rect width="390" height="340" rx="12" fill="url(#cardAmber)" stroke="#f59e0b" stroke-width="1.5"/>
+      <rect width="390" height="42" rx="12" fill="#d97706" fill-opacity="0.25"/>
+      <text x="20" y="27" font-family="sans-serif" font-size="14" font-weight="700" fill="#fbbf24">Port 2095: Plaintext cPanel Webmail (Insecure)</text>
+      
+      <g transform="translate(20, 60)">
+        <rect width="350" height="48" rx="8" fill="#18181b" stroke="#27272a"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f87171">Connection: Unencrypted Cleartext (HTTP)</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#94a3b8">URL format: http://mail.example.com:2095</text>
+      </g>
+      
+      <g transform="translate(20, 118)">
+        <rect width="350" height="48" rx="8" fill="#18181b" stroke="#27272a"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f87171">Security Vulnerability: Credential Sniffing</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#94a3b8">Passwords &amp; email messages transmitted in raw text over LAN</text>
+      </g>
+
+      <g transform="translate(20, 176)">
+        <rect width="350" height="48" rx="8" fill="#18181b" stroke="#27272a"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Production Recommendation: Redirect to 2096</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#94a3b8">WHM Tweak Settings &raquo; Require SSL for cPanel/Webmail Services</text>
+      </g>
+
+      <g transform="translate(20, 240)">
+        <rect width="350" height="60" rx="8" fill="#451a03" stroke="#f59e0b"/>
+        <text x="175" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#fef3c7" text-anchor="middle">Deprecated Protocol</text>
+        <text x="175" y="46" font-family="sans-serif" font-size="11" fill="#fed7aa" text-anchor="middle">Corporate firewalls frequently block unencrypted email ports</text>
+      </g>
+    </g>
+
+    <!-- Port 2096: Encrypted HTTPS / TLS -->
+    <g transform="translate(510, 96)" filter="url(#shadow)">
+      <rect width="390" height="340" rx="12" fill="url(#cardGreen)" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="390" height="42" rx="12" fill="#059669" fill-opacity="0.25"/>
+      <text x="20" y="27" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399">Port 2096: Encrypted Webmail (TLS / SSL)</text>
+      
+      <g transform="translate(20, 60)">
+        <rect width="350" height="48" rx="8" fill="#064e3b" stroke="#047857"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">Connection: High-Grade TLS 1.3 Encryption</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#6ee7b7">URL format: https://mail.example.com:2096</text>
+      </g>
+      
+      <g transform="translate(20, 118)">
+        <rect width="350" height="48" rx="8" fill="#064e3b" stroke="#047857"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">Firewall Rules: CSF / Firewalld TCP Inbound</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#6ee7b7">Must whitelist TCP port 2096 in CSF TCP_IN configuration</text>
+      </g>
+
+      <g transform="translate(20, 176)">
+        <rect width="350" height="48" rx="8" fill="#064e3b" stroke="#047857"/>
+        <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">Firewall Bypass Alternative: Webmail Proxy</text>
+        <text x="15" y="40" font-family="sans-serif" font-size="11" fill="#6ee7b7">https://webmail.example.com (routes over standard port 443)</text>
+      </g>
+
+      <g transform="translate(20, 240)">
+        <rect width="350" height="60" rx="8" fill="#022c22" stroke="#10b981"/>
+        <text x="175" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#ecfdf5" text-anchor="middle">Standard Production Webmail Standard</text>
+        <text x="175" y="46" font-family="sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">End-to-end encrypted session with Roundcube Webmail</text>
+      </g>
+    </g>
+    
 </svg>

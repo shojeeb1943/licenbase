@@ -26,38 +26,38 @@
   </script>
   <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>.htaccess Generator: Rewrite Rules & Caching | LicenBase</title>
-  <meta name="description" content="Master .htaccess configuration for Apache and LiteSpeed. Configure HTTPS redirects, browser caching, block hotlinking, and test our free .htaccess generator." />
+  <title>How to Generate .htaccess Rewrite Rules Guide | LicenBase</title>
+  <meta name="description" content="Learn how to generate .htaccess rewrite rules with our free generator guide. Copy tested regex examples for HTTPS, non-www, clean URLs, and fast 301 redirects." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://licenbase.com/blog/htaccess-generator-rewrite-rules-optimization-guide" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="LicenBase" />
-  <meta property="og:title" content=".htaccess Generator: Rewrite Rules & Caching" />
-  <meta property="og:description" content="Master .htaccess configuration for Apache and LiteSpeed. Configure HTTPS redirects, browser caching, block hotlinking, and test our free .htaccess generator." />
+  <meta property="og:title" content="How to Generate .htaccess Rewrite Rules Guide" />
+  <meta property="og:description" content="Learn how to generate .htaccess rewrite rules with our free generator guide. Copy tested regex examples for HTTPS, non-www, clean URLs, and fast 301 redirects." />
   <meta property="og:url" content="https://licenbase.com/blog/htaccess-generator-rewrite-rules-optimization-guide" />
   <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-htaccess-generator-rewrite-rules-optimization-guide.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content=".htaccess rewrite rule workflow, URL canonicalization and browser caching architecture diagram" />
+  <meta property="og:image:alt" content="How to generate htaccess rewrite rules logic flow diagram for Apache and LiteSpeed web servers" />
   <meta property="og:locale" content="en_US" />
-  <meta property="article:published_time" content="2026-10-17" />
-  <meta property="article:modified_time" content="2026-10-17" />
+  <meta property="article:published_time" content="2026-10-26" />
+  <meta property="article:modified_time" content="2026-10-26" />
   <meta property="article:section" content="How-to" />
   <meta property="article:author" content="LicenBase" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-htaccess-generator-rewrite-rules-optimization-guide.png" />
-  <meta name="twitter:image:alt" content=".htaccess rewrite rule workflow, URL canonicalization and browser caching architecture diagram" />
-  <meta name="twitter:title" content=".htaccess Generator: Rewrite Rules & Caching" />
-  <meta name="twitter:description" content="Master .htaccess configuration for Apache and LiteSpeed. Configure HTTPS redirects, browser caching, block hotlinking, and test our free .htaccess generator." />
+  <meta name="twitter:image:alt" content="How to generate htaccess rewrite rules logic flow diagram for Apache and LiteSpeed web servers" />
+  <meta name="twitter:title" content="How to Generate .htaccess Rewrite Rules Guide" />
+  <meta name="twitter:description" content="Learn how to generate .htaccess rewrite rules with our free generator guide. Copy tested regex examples for HTTPS, non-www, clean URLs, and fast 301 redirects." />
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": ".htaccess Generator: How to Optimize Rewrite Rules & Caching", "item": "https://licenbase.com/blog/htaccess-generator-rewrite-rules-optimization-guide"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": ".htaccess Generator: How to Optimize Rewrite Rules & Caching", "description": "Master .htaccess configuration for Apache and LiteSpeed. Configure HTTPS redirects, browser caching, block hotlinking, and test our free .htaccess generator.", "image": ["https://licenbase.com/assets/img/og/blog-htaccess-generator-rewrite-rules-optimization-guide.png"], "datePublished": "2026-10-17", "dateModified": "2026-10-17", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/htaccess-generator-rewrite-rules-optimization-guide"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 710}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an .htaccess file in Apache and LiteSpeed web servers?", "acceptedAnswer": {"@type": "Answer", "text": "An .htaccess (Hypertext Access) file is a directory-level configuration file that allows administrators and website owners to configure URL rewrites, redirect rules, security access restrictions, password protection, and browser caching policies without editing root server configuration files."}}, {"@type": "Question", "name": "Does LiteSpeed Web Server support .htaccess rules natively?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Unlike Nginx (which does not support .htaccess files), LiteSpeed Web Server natively parses and executes Apache .htaccess files directly with 100% compatibility, while executing rewrite rules up to 5x faster via its event-driven caching engine."}}, {"@type": "Question", "name": "How do I force canonical HTTPS and non-WWW in .htaccess?", "acceptedAnswer": {"@type": "Answer", "text": "Add: RewriteEngine On followed by RewriteCond %{HTTPS} off [OR] RewriteCond %{HTTP_HOST} ^www\\.(.*)$ [NC] and RewriteRule ^(.*)$ https://%1/$1 [R=301,L]."}}, {"@type": "Question", "name": "Where can I generate verified .htaccess rules online for free?", "acceptedAnswer": {"@type": "Answer", "text": "Use our free interactive <a href=\"/tools/htaccess-generator\" class=\"text-blue-600 font-semibold hover:underline\">.htaccess Generator Tool</a> and optimize static asset caching with our <a href=\"/tools/cache-control-generator\" class=\"text-blue-600 font-semibold hover:underline\">Cache-Control Header Generator</a>."}}, {"@type": "Question", "name": "Why should you always test .htaccess changes before deploying them to production?", "acceptedAnswer": {"@type": "Answer", "text": "A single syntax typo or unclosed directive in an .htaccess file will cause Apache or LiteSpeed to return an immediate 500 Internal Server Error across the entire website. Always maintain a backup copy before making modifications."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Generate .htaccess Rewrite Rules: Generator & Redirect Guide", "item": "https://licenbase.com/blog/htaccess-generator-rewrite-rules-optimization-guide"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Generate .htaccess Rewrite Rules: Generator & Redirect Guide", "description": "Learn how to generate .htaccess rewrite rules with our free generator guide. Copy tested regex examples for HTTPS, non-www, clean URLs, and fast 301 redirects.", "image": ["https://licenbase.com/assets/img/og/blog-htaccess-generator-rewrite-rules-optimization-guide.png"], "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/htaccess-generator-rewrite-rules-optimization-guide"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 1049}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do RewriteRule and RewriteCond directives work in .htaccess?", "acceptedAnswer": {"@type": "Answer", "text": "The mod_rewrite module evaluates rules sequentially. A 'RewriteCond' directive defines a test condition (such as checking if HTTPS is off or if a file does not exist). If the condition evaluates to true, Apache or LiteSpeed executes the immediate following 'RewriteRule' directive, transforming the requested URI using regular expressions."}}, {"@type": "Question", "name": "What is the difference between [R=301,L] and [L] flags in .htaccess?", "acceptedAnswer": {"@type": "Answer", "text": "The [R=301] flag triggers an external HTTP 301 Permanent Redirect response to the client browser, instructing search engines to transfer all SEO ranking equity to the new destination URL. In contrast, [L] indicates 'Last rule', instructing the server engine to stop processing subsequent rewrite rules for the current iteration. When combined as [R=301,L], the server immediately sends the 301 response."}}, {"@type": "Question", "name": "Does LiteSpeed Web Server support Apache .htaccess rewrite rules natively?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LiteSpeed Enterprise is engineered as an exact drop-in replacement for Apache. It reads .htaccess directives natively in real time, executing rewrite rules, environment variables, and caching headers with zero conversion required while delivering up to 5x higher throughput."}}, {"@type": "Question", "name": "How can I resolve ERR_TOO_MANY_REDIRECTS when forcing HTTPS in .htaccess?", "acceptedAnswer": {"@type": "Answer", "text": "Infinite redirect loops typically occur when your server sits behind a reverse proxy, CDN (like Cloudflare Flexible SSL), or load balancer that terminates SSL externally and speaks plain HTTP on port 80 to your origin. To resolve this, check the 'HTTP:X-Forwarded-Proto' header instead of '%{HTTPS}': RewriteCond %{HTTP:X-Forwarded-Proto} !https."}}]}</script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
@@ -217,12 +217,12 @@
           <span class="text-brand">How-to</span>
         </nav>
         <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">How-to</span>
-        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">.htaccess Generator: How to Optimize Rewrite Rules &amp; Caching</h1>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">How to Generate .htaccess Rewrite Rules: Generator &amp; Redirect Guide</h1>
         <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
           <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
-          <span>Published <time datetime="2026-10-17">October 17, 2026</time></span>
+          <span>Published <time datetime="2026-10-26">October 26, 2026</time></span>
           
-          <span>4 min read</span>
+          <span>6 min read</span>
         </div>
       </div>
     </div>
@@ -233,125 +233,171 @@
       <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
         <div class="min-w-0 max-w-3xl">
           <figure>
-            <img src="/assets/img/blog/htaccess-generator-rewrite-rules-optimization-guide-feature.webp" alt=".htaccess rewrite rule workflow, URL canonicalization and browser caching architecture diagram" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+            <img src="/assets/img/blog/htaccess-generator-rewrite-rules-optimization-guide-feature.webp" alt="How to generate htaccess rewrite rules logic flow diagram for Apache and LiteSpeed web servers" width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
           </figure>
           <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
-<p class="text-lg text-gray-600">On Linux web hosting servers running Apache or LiteSpeed Web Server, the humble <code>.htaccess</code> file is the ultimate command center for per-directory web administration. With just a few lines of configuration directives, you can force canonical HTTPS encryption, clean up messy URL query parameters, block malicious scraper user-agents, prevent image bandwidth theft, and configure long-term browser caching. However, writing <strong>mod_rewrite regular expressions</strong> from scratch is notoriously error-prone: a missing flag or accidental regex loop can instantly crash your production website with a <code>500 Internal Server Error</code>. In this practical optimization tutorial, we demonstrate <strong>how to write high-performance .htaccess rules, configure browser caching, and use our free .htaccess generator</strong>.</p>
+
+<p class="text-lg text-gray-600">The <code>.htaccess</code> distributed configuration file is one of the most powerful tools available to webmasters, developers, and system administrators running Apache or LiteSpeed Web Server. However, crafting regular expressions for the <code>mod_rewrite</code> engine can quickly become frustrating, often leading to 500 Internal Server Errors or infinite <code>ERR_TOO_MANY_REDIRECTS</code> loops. Whether you are using our online <strong>htaccess rewrite rule generator</strong> or writing rules by hand, this definitive guide provides copy-paste, battle-tested rewrite recipes to master URL redirection, enforce HTTPS, and supercharge server performance.</p>
 
 <section class="space-y-4">
-  <h2 id="1-essential-rewrite-rules-canonical-https-and-non-www" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">1. Essential Rewrite Rules: Canonical HTTPS and Non-WWW</h2>
-  <p>Search engines heavily penalize websites that allow content to be accessed across multiple URL permutations (such as both HTTP and HTTPS, or with and without the <code>www.</code> prefix). Standardize your canonical URL structure with these clean directives:</p>
-  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>RewriteEngine On
-# Force HTTPS and remove WWW prefix in a single redirect
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]</code></pre>
-  <p>Generate tested rewrite blocks and security filters using our free online <a href="/tools/htaccess-generator" class="text-blue-600 font-semibold hover:underline">.htaccess Generator Tool</a> and build speed-optimized browser expiration rules with the <a href="/tools/cache-control-generator" class="text-blue-600 font-semibold hover:underline">Cache-Control Header Generator</a>.</p>
+  <h2 id="how-mod-rewrite-operates-conditions-rules-flags" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">How mod_rewrite Operates: Conditions, Rules &amp; Flags</h2>
+  <p>The Apache and LiteSpeed URL rewriting engine operates as a sequential rule pipeline. Before diving into specific configurations, you must understand the basic anatomy of a rewrite directive:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# Basic mod_rewrite structural anatomy:
+RewriteEngine On
+RewriteBase /
+
+# 1. Condition (Evaluates server variables)
+RewriteCond %{SERVER_PORT} 80 [NC]
+
+# 2. Rule (Pattern Match -> Target Substitution [Flags])
+RewriteRule ^(.*)$ https://example.com/$1 [R=301,L]
+  </div>
+  <p>Every rewrite directive consists of three distinct elements:</p>
+  <ul class="list-disc pl-6 space-y-2 text-gray-700">
+    <li><strong>RewriteEngine On:</strong> Initializes the rewrite module for the current directory and its child paths.</li>
+    <li><strong>RewriteCond:</strong> A gatekeeper directive. The following RewriteRule will execute <em>only</em> if the RewriteCond condition matches. Multiple conditions can be chained; by default, they evaluate as logical <code>AND</code> unless qualified with the <code>[OR]</code> flag.</li>
+    <li><strong>Flags:</strong> Modifiers placed in brackets at the end of a rule. Key flags include <code>[NC]</code> (Case-Insensitive match), <code>[R=301]</code> (Permanent 301 HTTP status header), <code>[L]</code> (Last rule; halt further rule processing), and <code>[QSA]</code> (Query String Append; preserves inbound <code>?query=params</code>).</li>
+  </ul>
   <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
-    <img src="/assets/img/blog/htaccess-generator-rewrite-rules-optimization-guide-1.svg" alt=".htaccess rewrite rule workflow, URL canonicalization and browser caching architecture diagram" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
-    <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Optimizing mod_rewrite, HTTP/HTTPS canonicalization, directory protection, and browser cache.</figcaption>
-  </figure>
+  <img src="/assets/img/blog/htaccess-generator-rewrite-rules-optimization-guide-1.svg" alt="How to generate htaccess rewrite rules logic flow diagram for Apache and LiteSpeed web servers" width="800" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+  <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Figure 1: Step-by-step request flow through Apache and LiteSpeed mod_rewrite engine directives.</figcaption>
+</figure>
 </section>
 
 <section class="space-y-4">
-  <h2 id="2-directory-browsing-protection-and-hotlinking-prevention" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">2. Directory Browsing Protection and Hotlinking Prevention</h2>
-  <p>By default, web servers without index files will display an open directory listing of your files. Prevent unauthorized file indexing and block external websites from stealing your bandwidth with image hotlinking rules:</p>
-  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code># Disable directory browsing
-Options -Indexes
-
-# Block image hotlinking
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https://(www\.)?example\.com/ [NC]
-RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]</code></pre>
-  <p>Learn how to calculate and monitor network egress savings in our <a href="/blog/vps-bandwidth-calculator-data-transfer-costs" class="text-blue-600 font-semibold hover:underline">VPS Bandwidth &amp; Data Transfer Cost Guide</a>.</p>
+  <h2 id="production-rule-1-enforcing-universal-https-redirection" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Production Rule 1: Enforcing Universal HTTPS Redirection</h2>
+  <p>Serving unencrypted HTTP in 2026 harms organic search rankings and triggers browser security warnings. To permanently redirect all incoming visitors to secure TLS/SSL, insert this clean block at the very top of your <code>.htaccess</code> file:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# Universal HTTPS Redirection
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  </div>
+  <p><strong>Reverse Proxy &amp; Cloudflare CDN Adjustment:</strong> If your web server sits behind Cloudflare, AWS CloudFront, or an NGINX reverse proxy terminating SSL, testing <code>%{HTTPS}</code> can cause an infinite redirect loop. In that scenario, evaluate the forwarded protocol header instead:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# HTTPS Redirection behind Cloudflare / Reverse Proxy
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  </div>
 </section>
 
 <section class="space-y-4">
-  <h2 id="3-browser-caching-and-static-asset-compression" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">3. Browser Caching and Static Asset Compression</h2>
-  <p>Instructing client browsers to store static media locally eliminates repetitive HTTP requests, reducing server bandwidth consumption by over 60% and vastly improving Core Web Vitals:</p>
-  <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>&lt;IfModule mod_expires.c&gt;
+  <h2 id="production-rule-2-canonical-domain-routing-www-vs-non-www" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Production Rule 2: Canonical Domain Routing (www vs. non-www)</h2>
+  <p>Search engines treat <code>example.com</code> and <code>www.example.com</code> as distinct web entities. Serving identical content across both hostnames splits search equity and introduces duplicate content penalties. Choose one canonical format and enforce it consistently:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# Option A: Force non-www (https://example.com)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Option B: Force www (https://www.example.com)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+  </div>
+  <p>Notice the backreference <code>%1</code> in Option A; this variable automatically captures the domain name from the matched <code>RewriteCond</code> pattern, making the snippet fully portable across multiple domains without hardcoding.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="production-rule-3-clean-urls-query-parameter-rewriting" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Production Rule 3: Clean URLs &amp; Query Parameter Rewriting</h2>
+  <p>For custom PHP web applications and static portfolios, exposing raw file extensions like <code>.php</code> or <code>.html</code> looks dated and harms click-through rates. These rules cleanly rewrite incoming user-friendly paths to the underlying application file:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# 1. Remove .php file extension from URLs
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# 2. Redirect query string to clean path (e.g., /user.php?id=42 -> /user/42)
+RewriteRule ^user/([0-9]+)/?$ user.php?id=$1 [NC,L,QSA]
+
+# 3. Remove trailing slashes from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+  </div>
+  <p>The <code>!-d</code> condition verifies that the requested string is not an existing physical directory, while <code>-f</code> verifies that the physical target file exists on disk before applying the rule.</p>
+</section>
+
+<section class="space-y-4">
+  <h2 id="performance-optimization-browser-caching-security-headers" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Performance Optimization: Browser Caching &amp; Security Headers</h2>
+  <p>In addition to rewriting URLs, <code>.htaccess</code> allows webmasters to configure browser caching expiry and modern HTTP security headers, elevating Google PageSpeed scores dramatically:</p>
+  <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-200">
+# Leverage Browser Caching (mod_expires)
+&lt;IfModule mod_expires.c&gt;
   ExpiresActive On
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
-&lt;/IfModule&gt;</code></pre>
+&lt;/IfModule&gt;
+
+# Inject Security Headers
+&lt;IfModule mod_headers.c&gt;
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+&lt;/IfModule&gt;
+  </div>
 </section>
 
 <section class="space-y-4">
-  <h2 id="4-litespeed-high-speed-native-htaccess-execution" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">4. LiteSpeed: High-Speed Native .htaccess Execution</h2>
-  <p>While Apache must re-read <code>.htaccess</code> files from disk on every single incoming web request, <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed Web Server</a> reads and caches <code>.htaccess</code> rules directly in RAM. This delivers the full flexibility of per-directory Apache rules with the high-concurrency speed of Nginx. Sizing details are available in our <a href="/blog/litespeed-license-calculator-worker-sizing" class="text-blue-600 font-semibold hover:underline">LiteSpeed License Calculator Guide</a>.</p>
+  <h2 id="litespeed-vs-apache-processing-htaccess-rules-at-scale" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">LiteSpeed vs. Apache: Processing .htaccess Rules at Scale</h2>
+  <p>On legacy Apache web servers, every single HTTP request forces the server to traverse up the directory hierarchy to read, parse, and evaluate <code>.htaccess</code> files. Under high concurrency, this disk I/O introduces severe performance bottlenecks.</p>
+  <p>Migrating to a <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed Enterprise license</a> completely bypasses this limitation. LiteSpeed caches parsed <code>.htaccess</code> rewrite tables in RAM, evaluating rules instantly at web server line speeds while remaining 100% compatible with existing Apache syntax. You can manage these settings smoothly across your domains using a <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a> or isolate them with a <a href="/cloudlinux-license" class="text-blue-600 font-semibold hover:underline">CloudLinux license</a>.</p>
+  <p>Review our company details on the <a href="/about" class="text-blue-600 font-semibold hover:underline">about page</a>, inspect our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">License Policy</a>, or contact our engineering support desk on our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
 </section>
 
-<section class="space-y-4">
-  <h2 id="5-deploying-optimized-web-hosting-with-licenbase" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">5. Deploying Optimized Web Hosting with LicenBase</h2>
-  <p>Combine flexible server rules with enterprise wholesale licensing from LicenBase:</p>
-  <ul class="list-disc space-y-2 pl-6">
-    <li>Deploy lightning-fast .htaccess execution with an authentic <a href="/litespeed-license" class="text-blue-600 font-semibold hover:underline">LiteSpeed license</a> for $5.00/mo.</li>
-    <li>Manage web directories easily with an official <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a>.</li>
-    <li>Enforce secure file access rights with our <a href="/blog/chmod-calculator-linux-file-permissions-guide" class="text-blue-600 font-semibold hover:underline">Linux Chmod File Permissions Guide</a>.</li>
-    <li>Harden browser execution with our <a href="/blog/csp-generator-content-security-policy-guide" class="text-blue-600 font-semibold hover:underline">CSP Generator &amp; Content Security Guide</a>.</li>
-  </ul>
-  <p>Explore our discounted <a href="/deals" class="text-blue-600 font-semibold hover:underline">combo packages</a>, read our company background <a href="/about" class="text-blue-600 font-semibold hover:underline">about us</a>, check our <a href="/license-policy" class="text-blue-600 font-semibold hover:underline">license policy</a>, or connect with our support specialists on our <a href="/contact" class="text-blue-600 font-semibold hover:underline">contact page</a>.</p>
-</section>
 <section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
         <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">What is an .htaccess file in Apache and LiteSpeed web servers?</span>
+            <span class="lb-faq-question">How do RewriteRule and RewriteCond directives work in .htaccess?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">An .htaccess (Hypertext Access) file is a directory-level configuration file that allows administrators and website owners to configure URL rewrites, redirect rules, security access restrictions, password protection, and browser caching policies without editing root server configuration files.</p>
+              <p class="lb-faq-answer">The mod_rewrite module evaluates rules sequentially. A &#x27;RewriteCond&#x27; directive defines a test condition (such as checking if HTTPS is off or if a file does not exist). If the condition evaluates to true, Apache or LiteSpeed executes the immediate following &#x27;RewriteRule&#x27; directive, transforming the requested URI using regular expressions.</p>
             </div>
           </div>
         </div>
         <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">Does LiteSpeed Web Server support .htaccess rules natively?</span>
+            <span class="lb-faq-question">What is the difference between [R=301,L] and [L] flags in .htaccess?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Yes. Unlike Nginx (which does not support .htaccess files), LiteSpeed Web Server natively parses and executes Apache .htaccess files directly with 100% compatibility, while executing rewrite rules up to 5x faster via its event-driven caching engine.</p>
+              <p class="lb-faq-answer">The [R=301] flag triggers an external HTTP 301 Permanent Redirect response to the client browser, instructing search engines to transfer all SEO ranking equity to the new destination URL. In contrast, [L] indicates &#x27;Last rule&#x27;, instructing the server engine to stop processing subsequent rewrite rules for the current iteration. When combined as [R=301,L], the server immediately sends the 301 response.</p>
             </div>
           </div>
         </div>
         <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">How do I force canonical HTTPS and non-WWW in .htaccess?</span>
+            <span class="lb-faq-question">Does LiteSpeed Web Server support Apache .htaccess rewrite rules natively?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Add: RewriteEngine On followed by RewriteCond %{HTTPS} off [OR] RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC] and RewriteRule ^(.*)$ https://%1/$1 [R=301,L].</p>
+              <p class="lb-faq-answer">Yes. LiteSpeed Enterprise is engineered as an exact drop-in replacement for Apache. It reads .htaccess directives natively in real time, executing rewrite rules, environment variables, and caching headers with zero conversion required while delivering up to 5x higher throughput.</p>
             </div>
           </div>
         </div>
         <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
           <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
             <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">Where can I generate verified .htaccess rules online for free?</span>
+            <span class="lb-faq-question">How can I resolve ERR_TOO_MANY_REDIRECTS when forcing HTTPS in .htaccess?</span>
             <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
           </button>
           <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
             <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">Use our free interactive &lt;a href=&quot;/tools/htaccess-generator&quot; class=&quot;text-blue-600 font-semibold hover:underline&quot;&gt;.htaccess Generator Tool&lt;/a&gt; and optimize static asset caching with our &lt;a href=&quot;/tools/cache-control-generator&quot; class=&quot;text-blue-600 font-semibold hover:underline&quot;&gt;Cache-Control Header Generator&lt;/a&gt;.</p>
-            </div>
-          </div>
-        </div>
-        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
-          <button id="faq-question-5" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-5">
-            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
-            <span class="lb-faq-question">Why should you always test .htaccess changes before deploying them to production?</span>
-            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
-          </button>
-          <div id="faq-answer-5" class="lb-faq-panel" role="region" aria-labelledby="faq-question-5">
-            <div class="lb-faq-answer-wrap">
-              <p class="lb-faq-answer">A single syntax typo or unclosed directive in an .htaccess file will cause Apache or LiteSpeed to return an immediate 500 Internal Server Error across the entire website. Always maintain a backup copy before making modifications.</p>
+              <p class="lb-faq-answer">Infinite redirect loops typically occur when your server sits behind a reverse proxy, CDN (like Cloudflare Flexible SSL), or load balancer that terminates SSL externally and speaks plain HTTP on port 80 to your origin. To resolve this, check the &#x27;HTTP:X-Forwarded-Proto&#x27; header instead of &#x27;%{HTTPS}&#x27;: RewriteCond %{HTTP:X-Forwarded-Proto} !https.</p>
             </div>
           </div>
         </div>
@@ -360,7 +406,7 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]</code></pre>
           </article>
           <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
             <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide&amp;text=.htaccess%20Generator%3A%20How%20to%20Optimize%20Rewrite%20Rules%20%26%20Caching" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=.htaccess%20Generator%3A%20How%20to%20Optimize%20Rewrite%20Rules%20%26%20Caching&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide&amp;text=How%20to%20Generate%20.htaccess%20Rewrite%20Rules%3A%20Generator%20%26%20Redirect%20Guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=How%20to%20Generate%20.htaccess%20Rewrite%20Rules%3A%20Generator%20%26%20Redirect%20Guide&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Fhtaccess-generator-rewrite-rules-optimization-guide" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
           </div>
         </div>
 
@@ -368,11 +414,11 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]</code></pre>
           <div class="space-y-6 lg:sticky lg:top-28">
             <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
-              <div class="mt-3 space-y-0.5"><a href="#1-essential-rewrite-rules-canonical-https-and-non-www" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">1. Essential Rewrite Rules: Canonical HTTPS and Non-WWW</a><a href="#2-directory-browsing-protection-and-hotlinking-prevention" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">2. Directory Browsing Protection and Hotlinking Prevention</a><a href="#3-browser-caching-and-static-asset-compression" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">3. Browser Caching and Static Asset Compression</a><a href="#4-litespeed-high-speed-native-htaccess-execution" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">4. LiteSpeed: High-Speed Native .htaccess Execution</a><a href="#5-deploying-optimized-web-hosting-with-licenbase" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">5. Deploying Optimized Web Hosting with LicenBase</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+              <div class="mt-3 space-y-0.5"><a href="#how-mod-rewrite-operates-conditions-rules-flags" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">How mod_rewrite Operates: Conditions, Rules &amp; Flags</a><a href="#production-rule-1-enforcing-universal-https-redirection" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Production Rule 1: Enforcing Universal HTTPS Redirection</a><a href="#production-rule-2-canonical-domain-routing-www-vs-non-www" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Production Rule 2: Canonical Domain Routing (www vs. non-www)</a><a href="#production-rule-3-clean-urls-query-parameter-rewriting" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Production Rule 3: Clean URLs &amp; Query Parameter Rewriting</a><a href="#performance-optimization-browser-caching-security-headers" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Performance Optimization: Browser Caching &amp; Security Headers</a><a href="#litespeed-vs-apache-processing-htaccess-rules-at-scale" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">LiteSpeed vs. Apache: Processing .htaccess Rules at Scale</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
             </nav>
             <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
               <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
-              <ul class="mt-3 space-y-1"><li><a href="/litespeed-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">LiteSpeed License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/imunify360-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Imunify360 License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <ul class="mt-3 space-y-1"><li><a href="/litespeed-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">LiteSpeed license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cloudlinux-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">CloudLinux OS license<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
               <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
             </div>
           </div>
@@ -385,23 +431,6 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]</code></pre>
     <div class="lb-shell">
       <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
       <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <a href="/blog/cpanel-webmail-ports-ssl-login-issues-fixed" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
-          <img src="/assets/img/blog/cpanel-webmail-ports-ssl-login-issues-fixed-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
-          <div class="flex flex-1 flex-col justify-between p-6">
-            <div>
-              <div class="flex items-center justify-between text-xs">
-                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
-                <span class="text-gray-400 font-medium">3 min read</span>
-              </div>
-              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">cPanel Webmail Ports (2095 &amp; 2096): Fix SSL &amp; Login Issues</h2>
-              <p class="mt-2 text-sm leading-relaxed text-gray-500">Master cPanel Webmail port configuration for 2095 and 2096, fix SSL handshake errors, open firewall rules, and resolve login timeouts.</p>
-            </div>
-            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
-              <span class="font-medium text-gray-400">October 24, 2026</span>
-              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
-            </div>
-          </div>
-        </a>
         <a href="/blog/fix-cpanel-update-failed-rpm-errors-whm" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
           <img src="/assets/img/blog/fix-cpanel-update-failed-rpm-errors-whm-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
           <div class="flex flex-1 flex-col justify-between p-6">
@@ -480,6 +509,23 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]</code></pre>
               </div>
               <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix Failed cPanel Backups: Disk Space &amp; Logs</h2>
               <p class="mt-2 text-sm leading-relaxed text-gray-500">Solve failed cPanel and WHM backups. Troubleshoot disk exhaustion, staging folder permissions, and transport timeout errors.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">October 22, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/troubleshoot-stuck-exim-mail-queue-whm" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/troubleshoot-stuck-exim-mail-queue-whm-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">5 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Troubleshoot Stuck Exim Mail Queue on WHM</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Diagnose and clear stuck or frozen Exim mail queues on cPanel & WHM without losing legitimate customer messages.</p>
             </div>
             <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
               <span class="font-medium text-gray-400">October 22, 2026</span>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cardSlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="480" fill="url(#bg)"/>
+
+  <!-- Title & Subtitle Header -->
+  <rect x="0" y="0" width="960" height="76" fill="#0b1329" fill-opacity="0.6"/>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">LiteSpeed vs. DirectAdmin: VPS Architecture & Cost Optimization</text>
+  <text x="480" y="58" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Pairing DirectAdmin control panel with LiteSpeed Web Server to achieve 80% licensing cost reduction</text>
+
+  
+    <!-- Box 1: DirectAdmin (Control Panel) -->
+    <g transform="translate(60, 96)" filter="url(#shadow)">
+      <rect width="390" height="340" rx="12" fill="url(#cardBlue)" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect width="390" height="42" rx="12" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="20" y="27" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8">DirectAdmin: Lightweight Control Panel</text>
+      
+      <g transform="translate(20, 56)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" font-weight="700" fill="#e0f2fe">Role: Account, DNS, Email &amp; Database Management</text>
+      </g>
+      <g transform="translate(20, 102)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Ultra-low memory footprint (~15 MB RAM idle)</text>
+      </g>
+      <g transform="translate(20, 148)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Full cPanel backup import compatibility via CustomBuild</text>
+      </g>
+      <g transform="translate(20, 194)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Unlimited domains without per-account micro-tier penalization</text>
+      </g>
+
+      <g transform="translate(20, 246)">
+        <rect width="350" height="54" rx="8" fill="#1e3a8a" stroke="#38bdf8"/>
+        <text x="175" y="23" font-family="sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">Retail: $15 - $29/mo | LicenBase: $4.99/mo</text>
+        <text x="175" y="41" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">Cuts control panel licensing by up to 75%</text>
+      </g>
+    </g>
+
+    <!-- Box 2: LiteSpeed (Web Server) -->
+    <g transform="translate(510, 96)" filter="url(#shadow)">
+      <rect width="390" height="340" rx="12" fill="url(#cardGreen)" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="390" height="42" rx="12" fill="#059669" fill-opacity="0.25"/>
+      <text x="20" y="27" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399">LiteSpeed Enterprise: High-Performance Engine</text>
+      
+      <g transform="translate(20, 56)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" font-weight="700" fill="#ecfdf5">Role: High-Concurrency HTTP/3 Web Acceleration</text>
+      </g>
+      <g transform="translate(20, 102)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Drop-in Apache replacement (reads .htaccess natively)</text>
+      </g>
+      <g transform="translate(20, 148)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Built-in LSCache &amp; ESI engine for instant WordPress loading</text>
+      </g>
+      <g transform="translate(20, 194)">
+        <rect width="350" height="38" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="12" y="23" font-family="sans-serif" font-size="11" fill="#cbd5e1">&bull; Multiplies VPS tenant density by 300% to 500%</text>
+      </g>
+
+      <g transform="translate(20, 246)">
+        <rect width="350" height="54" rx="8" fill="#022c22" stroke="#10b981"/>
+        <text x="175" y="23" font-family="sans-serif" font-size="12" font-weight="700" fill="#ecfdf5" text-anchor="middle">Retail: $10 - $65/mo | LicenBase: $5.99/mo</text>
+        <text x="175" y="41" font-family="sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">Wholesale performance without enterprise cost</text>
+      </g>
+    </g>
+    
+</svg>
