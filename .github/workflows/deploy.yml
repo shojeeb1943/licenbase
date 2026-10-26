@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -19,12 +21,23 @@ jobs:
           ssh-keyscan -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
       # tar over ssh: the server has no rsync. Extract only adds/overwrites, so server-only
       # files (.well-known, cgi-bin) stay safe. ponytail: deleted repo files linger on the server.
+      # Push: upload only files changed since the previous commit. Manual run, first push or
+      # unknown previous commit: upload everything.
       - name: Upload
+        shell: bash
+        env:
+          BEFORE: ${{ github.event.before }}
         run: |
+          SRC=(.)
+          if [ "${{ github.event_name }}" = push ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            git diff --name-only --diff-filter=d -z "$BEFORE" "$GITHUB_SHA" > /tmp/changed.lst
+            if [ ! -s /tmp/changed.lst ]; then echo "No changed files"; exit 0; fi
+            SRC=(--null -T /tmp/changed.lst)
+          fi
           tar czf - \
             --exclude='.git' --exclude='.github' --exclude='.agents' --exclude='.freebuff' \
             --exclude='.playwright-mcp' --exclude='graphify-out' --exclude='__pycache__' \
             --exclude='scratch' --exclude='docs' --exclude='*.py' --exclude='*.md' \
-            --exclude='all_toolkit_tools.json' --exclude='licenbase design guide.txt' . \
+            --exclude='all_toolkit_tools.json' --exclude='licenbase design guide.txt' "${SRC[@]}" \
           | ssh -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
               "tar xzf - -C '${{ secrets.DEPLOY_PATH }}'"
