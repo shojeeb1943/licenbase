@@ -1,0 +1,29 @@
+name: Deploy to cPanel
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency: deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+      # No --delete: files on the server that aren't in the repo (.well-known, cgi-bin) stay safe.
+      # ponytail: add --delete once a --dry-run shows nothing needed is removed.
+      - name: Upload
+        run: |
+          rsync -rlptz -e "ssh -p ${{ secrets.SSH_PORT }}" \
+            --exclude '.git' --exclude '.github' --exclude '.agents' --exclude '.freebuff' \
+            --exclude '.playwright-mcp' --exclude 'graphify-out' --exclude '__pycache__' \
+            --exclude 'scratch' --exclude 'docs' --exclude '*.py' --exclude '*.md' \
+            --exclude 'all_toolkit_tools.json' --exclude 'licenbase design guide.txt' \
+            ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/"
