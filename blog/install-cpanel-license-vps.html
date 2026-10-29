@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script src="/assets/js/consent.js"></script>
     <!-- Google Tag Manager (Non-blocking) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -108,20 +109,6 @@
 
           <!-- Desktop nav -->
           <nav class="lb-nav" aria-label="Main navigation">
-            <a href="/" class="lb-nav-link">Home</a>
-
-            <!-- Software mega menu -->
-            <div class="lb-drop lb-drop--mega">
-              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
-                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
-              </button>
-              <div class="lb-drop-panel">
-                <div class="lb-mega-soon">
-                  <p>New products coming soon.</p>
-                </div>
-              </div>
-            </div>
-
             <!-- Hosting -->
             <div class="lb-drop lb-drop--mega">
               <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
@@ -142,7 +129,7 @@
                     <span>Plesk License</span>
                   </a>
                   <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <img src="/assets/img/icons/whmcs.png" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WHMCS License</span>
                   </a>
                   <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
@@ -445,6 +432,7 @@ sh latest</code></pre>
           <ul class="space-y-2 text-xs">
             <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
             <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings class="transition hover:text-brand">Cookie Settings</a></li>
             <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
             <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
             <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
@@ -477,7 +465,6 @@ sh latest</code></pre>
       <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
         <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
         <ul class="mt-3 space-y-1">
-          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
           <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
           <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
           <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>

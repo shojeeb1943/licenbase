@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "whmcs": {
+      "command": "python",
+      "args": ["c:/dev/Licenbase.com/scripts/whmcs_mcp_bridge.py"],
+      "env": {
+        "WHMCS_MCP_TOKEN": "wmcp_LpWwGF3bwDciFosJFXmMnJayuT9OdnLXXdKsfS-2E8I",
+        "WHMCS_MCP_ENDPOINT": "https://dashboard.licenbase.com/modules/addons/whmcsmcp/mcp.php"
+      }
+    }
+  }
+}

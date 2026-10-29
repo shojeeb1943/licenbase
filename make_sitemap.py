@@ -8,7 +8,7 @@ from datetime import date
 
 BASE = "https://licenbase.com"
 SKIP = {"404.html"}
-PRIORITY = {"index": "1.0", "products": "0.9", "deals": "0.9", "about": "0.5", "contact": "0.5"}
+PRIORITY = {"index": "1.0", "products": "0.9", "deals": "0.9", "about": "0.5", "contact": "0.5", "managed-vps": "0.8", "unmanaged-vps": "0.8", "port-25-open-vps": "0.8", "business-email": "0.8", "n8n-hosting": "0.8", "openclaw-hosting": "0.8", "hermes-agent-hosting": "0.8", "reseller-hosting": "0.8", "shared-hosting": "0.8"}
 
 PAGE_IMAGES = {
     "blog/index": ("assets/img/og/blog.png", "LicenBase Blog – Hosting Guides & License Comparisons", "Guides and comparisons on cPanel, Plesk, LiteSpeed and other hosting licenses"),
@@ -18,6 +18,15 @@ PAGE_IMAGES = {
     "products": ("assets/img/og/products.png", "All Hosting Software Licenses – LicenBase", "Browse all cPanel, LiteSpeed, Plesk, and server management licenses"),
     "deals": ("assets/img/og/deals.png", "Hosting License Bundles & Combo Deals – LicenBase", "Save more with server licensing stacks and combo discounts"),
     "free-trial": ("assets/img/og/free-trial.png", "3-Day Free Trial – LicenBase", "Try a hosting license on your server free for 3 days"),
+    "managed-vps": ("assets/img/og/managed-vps.png", "Managed VPS – LicenBase", "VPS with license included"),
+    "unmanaged-vps": ("assets/img/og/unmanaged-vps.png", "Unmanaged VPS – LicenBase", "Root access, no license"),
+    "port-25-open-vps": ("assets/img/og/port-25-open-vps.png", "Port 25 Open VPS – LicenBase", "Outbound port 25 open"),
+    "n8n-hosting": ("assets/img/og/n8n-hosting.png", "n8n Hosting – LicenBase", "Host your own n8n"),
+    "openclaw-hosting": ("assets/img/og/openclaw-hosting.png", "OpenClaw Hosting – LicenBase", "Host your own OpenClaw"),
+    "hermes-agent-hosting": ("assets/img/og/hermes-agent-hosting.png", "Hermes Agent Hosting – LicenBase", "Host your own Hermes Agent"),
+    "business-email": ("assets/img/og/business-email.png", "Business Email – LicenBase", "Email on your own domain"),
+    "reseller-hosting": ("assets/img/og/reseller-hosting.png", "Reseller Hosting – LicenBase", "Monthly, yearly or lifetime"),
+    "shared-hosting": ("assets/img/og/shared-hosting.png", "Shared Hosting – LicenBase", "Monthly, yearly or lifetime"),
     "privacy-policy": ("assets/img/og/policies.png", "Privacy Policy – LicenBase", "LicenBase privacy policy and data protection terms"),
     "terms-of-service": ("assets/img/og/policies.png", "Terms of Service – LicenBase", "LicenBase general terms and conditions of service"),
     "refund-policy": ("assets/img/og/policies.png", "Refund Policy – LicenBase", "LicenBase refund policy and money-back guarantee terms"),

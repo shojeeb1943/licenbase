@@ -43,9 +43,10 @@ gen_content = gen_content.replace('assets/js/main.js?v=6', 'assets/js/main.min.j
 with open("generate_pages.py", "w", encoding="utf-8") as f:
     f.write(gen_content)
 
-# 5. Run generate_pages.py
-print("4. Regenerating product pages...")
+# 5. Run generate_pages.py & generate_hosting.py
+print("4. Regenerating product & hosting pages...")
 subprocess.run(["python", "generate_pages.py"], check=True)
+subprocess.run(["python", "generate_hosting.py"], check=True)
 
 # 6. Update all HTML files with main.min.js and ensure image dimensions
 print("5. Updating all HTML files...")

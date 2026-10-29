@@ -12,7 +12,7 @@ related_icon_map = {
     "cpanel-license.html": "cpanel.svg",
     "litespeed-license.html": "litespeed.svg",
     "plesk-license.html": "plesk.svg",
-    "whmcs-license.html": "whmcs.svg",
+    "whmcs-license.html": "whmcs.png",
     "cloudlinux-license.html": "cloudlinux.svg",
     "virtualizor-license.html": "virtualizor.svg",
     "sitepad-license.html": "sitepad.svg",
@@ -29,7 +29,7 @@ slug_to_icon = {
     "cpanel": "cpanel.svg",
     "litespeed": "litespeed.svg",
     "plesk": "plesk.svg",
-    "whmcs": "whmcs.svg",
+    "whmcs": "whmcs.png",
     "cloudlinux": "cloudlinux.svg",
     "virtualizor": "virtualizor.svg",
     "sitepad": "sitepad.svg",
@@ -74,7 +74,7 @@ new_mega_menu = '''                <div class="lb-mega-tiles">
                     <span>Plesk License</span>
                   </a>
                   <a href="whmcs-license.html" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="assets/img/icons/whmcs.svg" alt="WHMCS" class="h-4 w-4 shrink-0 object-contain" />
+                    <img src="assets/img/icons/whmcs.png" alt="WHMCS" class="h-4 w-4 shrink-0 object-contain" />
                     <span>WHMCS License</span>
                   </a>
                   <a href="cloudlinux-license.html" class="lb-mega-tile flex items-center gap-2.5">
@@ -136,7 +136,7 @@ new_related_code = '''    related_html = ""
         "cpanel-license.html": "cpanel.svg",
         "litespeed-license.html": "litespeed.svg",
         "plesk-license.html": "plesk.svg",
-        "whmcs-license.html": "whmcs.svg",
+        "whmcs-license.html": "whmcs.png",
         "cloudlinux-license.html": "cloudlinux.svg",
         "virtualizor-license.html": "virtualizor.svg",
         "sitepad-license.html": "sitepad.svg",
@@ -333,7 +333,7 @@ new_brands_bar = '''      <div class="lb-brands mt-8 flex flex-wrap items-center
         </div>
         <!-- WHMCS -->
         <div class="lb-brand-item flex items-center gap-2.5" title="WHMCS">
-          <img src="assets/img/icons/whmcs.svg" alt="WHMCS" class="h-7 w-7 object-contain" />
+          <img src="assets/img/icons/whmcs.png" alt="WHMCS" class="h-7 w-7 object-contain" />
           <span class="font-display text-lg font-extrabold text-navy">WHMCS</span>
         </div>
         <!-- Imunify360 -->
@@ -361,7 +361,7 @@ swiper_replacements = [
      '<span class="grid h-11 w-11 place-items-center rounded-xl bg-mist border border-gray-100 p-1.5 shadow-sm"><img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux" class="h-8 w-8 object-contain" /></span>'),
 
     ('<span class="grid h-11 w-11 place-items-center rounded-xl bg-cyan-50 font-display text-sm font-bold text-cyan-600">WH</span>',
-     '<span class="grid h-11 w-11 place-items-center rounded-xl bg-mist border border-gray-100 p-1.5 shadow-sm"><img src="assets/img/icons/whmcs.svg" alt="WHMCS" class="h-8 w-8 object-contain" /></span>'),
+     '<span class="grid h-11 w-11 place-items-center rounded-xl bg-mist border border-gray-100 p-1.5 shadow-sm"><img src="assets/img/icons/whmcs.png" alt="WHMCS" class="h-8 w-8 object-contain" /></span>'),
 
     ('<span class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-50 font-display text-sm font-bold text-emerald-600">I360</span>',
      '<span class="grid h-11 w-11 place-items-center rounded-xl bg-mist border border-gray-100 p-1.5 shadow-sm"><img src="assets/img/icons/imunify360.svg" alt="Imunify360" class="h-8 w-8 object-contain" /></span>'),
@@ -441,7 +441,7 @@ products_cards_icons = [
      '<span class="grid h-12 w-12 place-items-center rounded-2xl bg-mist border border-gray-100 p-2 shadow-sm transition-transform group-hover:scale-105">\n                <img src="assets/img/icons/plesk.svg" alt="Plesk" class="h-8 w-8 object-contain" />\n              </span>'),
     # 4. WHMCS
     ('<span class="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-50 text-cyan-600 transition-colors group-hover:bg-cyan-600 group-hover:text-white">\n                <i data-lucide="credit-card" class="h-6 w-6"></i>\n              </span>',
-     '<span class="grid h-12 w-12 place-items-center rounded-2xl bg-mist border border-gray-100 p-2 shadow-sm transition-transform group-hover:scale-105">\n                <img src="assets/img/icons/whmcs.svg" alt="WHMCS" class="h-8 w-8 object-contain" />\n              </span>'),
+     '<span class="grid h-12 w-12 place-items-center rounded-2xl bg-mist border border-gray-100 p-2 shadow-sm transition-transform group-hover:scale-105">\n                <img src="assets/img/icons/whmcs.png" alt="WHMCS" class="h-8 w-8 object-contain" />\n              </span>'),
     # 5. CloudLinux
     ('<span class="grid h-12 w-12 place-items-center rounded-2xl bg-amber-50 text-amber-700 transition-colors group-hover:bg-amber-700 group-hover:text-white">\n                <i data-lucide="shield-check" class="h-6 w-6"></i>\n              </span>',
      '<span class="grid h-12 w-12 place-items-center rounded-2xl bg-mist border border-gray-100 p-2 shadow-sm transition-transform group-hover:scale-105">\n                <img src="assets/img/icons/cloudlinux.svg" alt="CloudLinux" class="h-8 w-8 object-contain" />\n              </span>'),

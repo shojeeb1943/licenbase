@@ -8,7 +8,7 @@ PRODUCT_ASSETS = {
     "cpanel": "cpanel.svg",
     "litespeed": "litespeed.svg",
     "plesk": "plesk.svg",
-    "whmcs": "whmcs.svg",
+    "whmcs": "whmcs.png",
     "cloudlinux": "cloudlinux.png",
     "virtualizor": "virtualizor.png",
     "imunify360": "imunify360.png",
@@ -26,7 +26,7 @@ PRODUCTS_LIST = [
     ("cpanel-license.html", "cPanel License", "cpanel.svg"),
     ("litespeed-license.html", "LiteSpeed License", "litespeed.svg"),
     ("plesk-license.html", "Plesk License", "plesk.svg"),
-    ("whmcs-license.html", "WHMCS License", "whmcs.svg"),
+    ("whmcs-license.html", "WHMCS License", "whmcs.png"),
     ("cloudlinux-license.html", "CloudLinux License", "cloudlinux.png"),
     ("virtualizor-license.html", "Virtualizor License", "virtualizor.png"),
     ("sitepad-license.html", "SitePad License", "sitepad.png"),
@@ -77,7 +77,7 @@ gen_code = re.sub(
 old_icon_map = '''        "cpanel-license.html": "cpanel.svg",
         "litespeed-license.html": "litespeed.svg",
         "plesk-license.html": "plesk.svg",
-        "whmcs-license.html": "whmcs.svg",
+        "whmcs-license.html": "whmcs.png",
         "cloudlinux-license.html": "cloudlinux.svg",
         "virtualizor-license.html": "virtualizor.svg",
         "sitepad-license.html": "sitepad.svg",
@@ -91,7 +91,7 @@ old_icon_map = '''        "cpanel-license.html": "cpanel.svg",
 new_icon_map = '''        "cpanel-license.html": "cpanel.svg",
         "litespeed-license.html": "litespeed.svg",
         "plesk-license.html": "plesk.svg",
-        "whmcs-license.html": "whmcs.svg",
+        "whmcs-license.html": "whmcs.png",
         "cloudlinux-license.html": "cloudlinux.png",
         "virtualizor-license.html": "virtualizor.png",
         "sitepad-license.html": "sitepad.png",
@@ -176,7 +176,7 @@ index_content = re.sub(
         </div>
         <!-- WHMCS -->
         <div class="lb-brand-item flex items-center gap-2.5" title="WHMCS">
-          <img src="assets/img/icons/whmcs.svg" alt="WHMCS" class="h-7 w-7 object-contain" />
+          <img src="assets/img/icons/whmcs.png" alt="WHMCS" class="h-7 w-7 object-contain" />
           <span class="font-display text-lg font-extrabold text-navy">WHMCS</span>
         </div>
         <!-- Imunify360 -->
@@ -197,7 +197,7 @@ swiper_icons = {
     'litespeed.svg': 'litespeed.svg',
     'plesk.svg': 'plesk.svg',
     'cloudlinux.svg': 'cloudlinux.png',
-    'whmcs.svg': 'whmcs.svg',
+    'whmcs.png': 'whmcs.png',
     'imunify360.svg': 'imunify360.png',
     'jetbackup.svg': 'jetbackup.png',
     'virtualizor.svg': 'virtualizor.png',

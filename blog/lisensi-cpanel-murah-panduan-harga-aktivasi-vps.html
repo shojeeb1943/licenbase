@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script src="/assets/js/consent.js"></script>
     <!-- Google Tag Manager (Non-blocking) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -108,24 +109,10 @@
 
           <!-- Desktop nav -->
           <nav class="lb-nav" aria-label="Main navigation">
-            <a href="/" class="lb-nav-link">Home</a>
-
-            <!-- Software mega menu -->
-            <div class="lb-drop lb-drop--mega">
-              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
-                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
-              </button>
-              <div class="lb-drop-panel">
-                <div class="lb-mega-soon">
-                  <p>New products coming soon.</p>
-                </div>
-              </div>
-            </div>
-
             <!-- Hosting -->
             <div class="lb-drop lb-drop--mega">
               <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
-                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                Licenses <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
               </button>
               <div class="lb-drop-panel">
                                 <div class="lb-mega-tiles">
@@ -142,7 +129,7 @@
                     <span>Plesk License</span>
                   </a>
                   <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
-                    <img src="/assets/img/icons/whmcs.svg" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <img src="/assets/img/icons/whmcs.png" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WHMCS License</span>
                   </a>
                   <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
@@ -180,6 +167,64 @@
                   <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
                     <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
                     <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-tiles">
+                  <a href="/shared-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="globe" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Shared Hosting<small class="block text-xs font-normal text-gray-500">Monthly, yearly &amp; lifetime</small></span>
+                  </a>
+                  <a href="/reseller-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="users" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Reseller Hosting<small class="block text-xs font-normal text-gray-500">Monthly, yearly &amp; lifetime</small></span>
+                  </a>
+                  <a href="/business-email" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="mail" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Business Email<small class="block text-xs font-normal text-gray-500">Email on your own domain</small></span>
+                  </a>
+                  <a href="/n8n-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="workflow" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>n8n Hosting<small class="block text-xs font-normal text-gray-500">Host your own n8n</small></span>
+                  </a>
+                  <a href="/openclaw-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="bot" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>OpenClaw Hosting<small class="block text-xs font-normal text-gray-500">Host your own OpenClaw</small></span>
+                  </a>
+                  <a href="/hermes-agent-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="bot" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Hermes Agent Hosting<small class="block text-xs font-normal text-gray-500">Host your own Hermes Agent</small></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- VPS mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                VPS <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-tiles">
+                  <a href="/managed-vps" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="server" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Managed VPS<small class="block text-xs font-normal text-gray-500">cPanel &amp; license included</small></span>
+                  </a>
+                  <a href="/unmanaged-vps" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="terminal" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Unmanaged VPS<small class="block text-xs font-normal text-gray-500">Root access, no license</small></span>
+                  </a>
+                  <a href="/port-25-open-vps" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="mail" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Port 25 Open VPS<small class="block text-xs font-normal text-gray-500">Outbound port 25 open</small></span>
                   </a>
                 </div>
               </div>
@@ -587,6 +632,18 @@
             <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
             <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
           </ul>
+          <h3 class="pt-3 font-display text-xs font-bold uppercase tracking-wider text-navy">Hosting &amp; VPS</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/managed-vps" class="transition hover:text-brand">Managed VPS</a></li>
+            <li><a href="/unmanaged-vps" class="transition hover:text-brand">Unmanaged VPS</a></li>
+            <li><a href="/port-25-open-vps" class="transition hover:text-brand">Port 25 Open VPS</a></li>
+            <li><a href="/shared-hosting" class="transition hover:text-brand">Shared Hosting</a></li>
+            <li><a href="/reseller-hosting" class="transition hover:text-brand">Reseller Hosting</a></li>
+            <li><a href="/business-email" class="transition hover:text-brand">Business Email</a></li>
+            <li><a href="/n8n-hosting" class="transition hover:text-brand">n8n Hosting</a></li>
+            <li><a href="/openclaw-hosting" class="transition hover:text-brand">OpenClaw Hosting</a></li>
+            <li><a href="/hermes-agent-hosting" class="transition hover:text-brand">Hermes Agent Hosting</a></li>
+          </ul>
         </div>
 
         <!-- Col 4: Legal & Policies -->
@@ -595,6 +652,7 @@
           <ul class="space-y-2 text-xs">
             <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
             <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings class="transition hover:text-brand">Cookie Settings</a></li>
             <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
             <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
             <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
@@ -627,14 +685,28 @@
       <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
         <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
         <ul class="mt-3 space-y-1">
-          <li><a href="/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Home</a></li>
           <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
           <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
           <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
           <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
           <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
         </ul>
-        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting Licenses</p>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">VPS</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/managed-vps" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Managed VPS</a></li>
+          <li><a href="/unmanaged-vps" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Unmanaged VPS</a></li>
+          <li><a href="/port-25-open-vps" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Port 25 Open VPS</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/shared-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Shared Hosting</a></li>
+          <li><a href="/reseller-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Reseller Hosting</a></li>
+          <li><a href="/business-email" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Business Email</a></li>
+          <li><a href="/n8n-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">n8n Hosting</a></li>
+          <li><a href="/openclaw-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">OpenClaw Hosting</a></li>
+          <li><a href="/hermes-agent-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Hermes Agent Hosting</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Licenses</p>
         <ul class="mt-3 space-y-1">
           <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
           <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>

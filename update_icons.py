@@ -36,7 +36,7 @@ icons = {
   <path d="M66 18V23M66 45V50M50 34H55M77 34H82M54.7 22.7L58.2 26.2M73.8 41.8L77.3 45.3M54.7 45.3L58.2 41.8M73.8 26.2L77.3 22.7" stroke="#F4911E" stroke-width="2.5" stroke-linecap="round"/>
 </svg>''',
 
-    'whmcs.svg': '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+    'whmcs.png': '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <rect width="100" height="100" rx="22" fill="#52BBE6"/>
   <path d="M20 32L34 52L20 72H31L40 58L49 72H60L46 52L60 32H49L40 46L31 32H20Z" fill="white"/>
   <path d="M63 32H73V72H63V32Z" fill="white"/>

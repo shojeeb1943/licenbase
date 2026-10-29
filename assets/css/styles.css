@@ -1982,3 +1982,6 @@ footer[id] {
   }
 }
 
+
+/* wordmark logos (whmcs/plesk) are wide, not square */
+img[src$="icons/whmcs.png"],img[src$="icons/plesk.svg"]{width:auto!important;height:1.1rem!important;max-width:none!important}:has(>img[src$="icons/whmcs.png"]),:has(>img[src$="icons/plesk.svg"]){width:auto!important;min-width:2.75rem;padding-inline:.5rem!important}

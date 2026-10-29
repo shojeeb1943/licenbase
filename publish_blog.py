@@ -14,6 +14,7 @@ STEPS = [
     ("Validate posts and build blog pages", [PY, "generate_blog.py"]),
     ("Render social card + feature/thumb images", [PY, "generate_og.py", "--blog"]),
     ("Rebuild product pages (guide cards)", [PY, "generate_pages.py"]),
+    ("Rebuild hosting pages", [PY, "generate_hosting.py"]),
     ("Rebuild sitemap", [PY, "make_sitemap.py"]),
     ("Rebuild CSS", [PY, "build_css.py"]),
 ]

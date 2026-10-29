@@ -6,7 +6,7 @@ mega_menu_items = [
     ("cpanel-license.html", "cPanel License", "cpanel.svg"),
     ("litespeed-license.html", "LiteSpeed License", "litespeed.svg"),
     ("plesk-license.html", "Plesk License", "plesk.svg"),
-    ("whmcs-license.html", "WHMCS License", "whmcs.svg"),
+    ("whmcs-license.html", "WHMCS License", "whmcs.png"),
     ("cloudlinux-license.html", "CloudLinux License", "cloudlinux.svg"),
     ("virtualizor-license.html", "Virtualizor License", "virtualizor.svg"),
     ("sitepad-license.html", "SitePad License", "sitepad.svg"),

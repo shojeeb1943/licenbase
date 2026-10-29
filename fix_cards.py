@@ -9,7 +9,7 @@ products_map = [
     ("cpanel-license.html", "cpanel.svg", "cPanel"),
     ("litespeed-license.html", "litespeed.svg", "LiteSpeed"),
     ("plesk-license.html", "plesk.svg", "Plesk"),
-    ("whmcs-license.html", "whmcs.svg", "WHMCS"),
+    ("whmcs-license.html", "whmcs.png", "WHMCS"),
     ("cloudlinux-license.html", "cloudlinux.svg", "CloudLinux"),
     ("virtualizor-license.html", "virtualizor.svg", "Virtualizor"),
     ("sitepad-license.html", "sitepad.svg", "SitePad"),
