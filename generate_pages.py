@@ -80,7 +80,7 @@ products = [
                 "price": "$8.00",
                 "period": "per month",
                 "popular": True,
-                "badge": "Most Popular · Bare Metal",
+                "badge": "Bare Metal",
                 "desc": "Engineered for high-traffic bare-metal dedicated servers requiring maximum performance.",
                 "features": [
                     "Unlimited cPanel & WHM Accounts",
@@ -176,7 +176,7 @@ products = [
                 "price": "$7.50",
                 "period": "per month",
                 "popular": True,
-                "badge": "Most Popular · High Traffic",
+                "badge": "High Traffic",
                 "desc": "Optimized for high-concurrency production servers, WooCommerce, and agency nodes.",
                 "features": [
                     "Up to 4 CPU Cores Allocation",
@@ -305,7 +305,7 @@ products = [
                 "price": "$6.50",
                 "period": "per month",
                 "popular": True,
-                "badge": "Most Popular · Bare Metal",
+                "badge": "Bare Metal",
                 "desc": "Engineered for high-capacity dedicated servers running intensive web applications.",
                 "features": [
                     "Unlimited Domains & Client Accounts",
@@ -1095,7 +1095,7 @@ def generate_page(p):
         top_cards_html = ""
         for t in top_tiers:
             pop_border = "border-2 border-brand shadow-xl relative scale-[1.02] z-10" if t["popular"] else "border border-gray-200 shadow-md"
-            pop_badge = f'<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">⭐ Most Popular</div>' if t["popular"] else ""
+            pop_badge = f'<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">Most Popular</div>' if t["popular"] else ""
             features_li = "".join([f'<li class="flex items-start gap-3 text-sm text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent mt-0.5" aria-hidden="true"></i><span>{feat}</span></li>' for feat in t["features"]])
             btn_class = "lb-btn lb-btn--primary w-full shadow-md" if t["popular"] else "lb-btn lb-btn--secondary w-full"
             
@@ -1105,7 +1105,7 @@ def generate_page(p):
                 {pop_badge}
                 <div class="flex items-center justify-between">
                   <span class="rounded-full bg-brandSoft px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">{t["badge"]}</span>
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent"><i data-lucide="zap" class="h-3.5 w-3.5"></i> Instant Setup</span>
+                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent">Instant Setup</span>
                 </div>
                 
                 <h3 class="mt-4 font-display text-2xl font-bold text-navy">{t["name"]}</h3>
@@ -1144,10 +1144,10 @@ def generate_page(p):
             <div class="space-y-4">
               <div class="flex flex-wrap items-center gap-3">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
-                  <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> Enterprise Unlimited
+                  Enterprise Unlimited
                 </span>
                 <span class="inline-flex items-center gap-1 text-xs font-bold text-accentDeep bg-emerald-100/70 px-3 py-1 rounded-full">
-                  <i data-lucide="zap" class="h-3.5 w-3.5"></i> Zero CPU Core Limits
+                  Zero CPU Core Limits
                 </span>
               </div>
 
@@ -1188,7 +1188,7 @@ def generate_page(p):
         tiers_html = f'<div class="grid gap-8 {grid_cols}">'
         for t in p["tiers"]:
             pop_border = "border-2 border-brand shadow-xl relative scale-[1.02] z-10" if t["popular"] else "border border-gray-200 shadow-md"
-            pop_badge = f'<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">⭐ Most Popular</div>' if t["popular"] else ""
+            pop_badge = f'<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">Most Popular</div>' if t["popular"] else ""
             
             features_li = "".join([f'<li class="flex items-start gap-3 text-sm text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent mt-0.5" aria-hidden="true"></i><span>{feat}</span></li>' for feat in t["features"]])
             
@@ -1200,7 +1200,7 @@ def generate_page(p):
                 {pop_badge}
                 <div class="flex items-center justify-between">
                   <span class="rounded-full bg-brandSoft px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">{t["badge"]}</span>
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent"><i data-lucide="zap" class="h-3.5 w-3.5"></i> Instant Setup</span>
+                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent">Instant Setup</span>
                 </div>
                 
                 <h3 class="mt-4 font-display text-2xl font-bold text-navy">{t["name"]}</h3>

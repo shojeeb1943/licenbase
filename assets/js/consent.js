@@ -28,7 +28,7 @@
     if (document.getElementById('lb-consent')) return;
     var css = document.createElement('style');
     css.textContent =
-      '#lb-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:2147483000;max-width:440px;' +
+      '#lb-consent{position:fixed;left:auto;right:16px;width:calc(100% - 32px);bottom:16px;z-index:2147483000;max-width:440px;' +
       'background:#fff;color:#111827;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;' +
       'box-shadow:0 10px 30px rgba(17,24,39,.18);font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}' +
       '#lb-consent p{margin:0 0 12px}#lb-consent a{color:#1E40AF;text-decoration:underline}' +

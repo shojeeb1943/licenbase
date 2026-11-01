@@ -221,12 +221,12 @@ HOSTING_PRODUCTS = [
         "name": "Shared Hosting",
         "seo_title": "Cheap Shared Hosting – Fast NVMe & cPanel | LicenBase",
         "og_title": "Cheap Shared Hosting with Monthly, Yearly & Lifetime Plans",
-        "seo_desc": "Blazing fast shared web hosting with cPanel, LiteSpeed web server & NVMe SSD storage from $2.50/mo or $49 lifetime. Free SSL, 1-click installer & 99.9% uptime.",
+        "seo_desc": "Ultra-fast shared hosting with cPanel, LiteSpeed & NVMe storage from $2.99/mo or $129 lifetime. Free SSL, 1-click apps & 99.9% uptime.",
         "seo_h2": "Ultra-Fast NVMe Shared Web Hosting with Monthly, Yearly & Lifetime Billing",
         "seo_p1": "Experience web hosting engineered for speed, stability, and simplicity. LicenBase Shared Hosting leverages enterprise LiteSpeed web servers and pure PCIe NVMe solid-state storage to deliver up to 20x faster page loading speeds than conventional Apache hosting. With the industry-standard cPanel control panel included, managing your files, databases, domain names, and business emails takes just seconds.",
         "seo_p2": "Say goodbye to recurring annual price hikes: LicenBase is one of the few premium hosting platforms offering flexible Monthly, Yearly, and genuine one-time Lifetime billing options. Every plan comes packed with free automated Let's Encrypt SSL certificates, over 450 one-click script installers via Softaculous, proactive malware scanning, and reliable 24/7 technical assistance.",
         "title": "High-Speed NVMe Shared Web Hosting",
-        "meta_desc": "Blazing fast shared web hosting with cPanel, LiteSpeed web server & NVMe SSD storage from $2.50/mo or $49 lifetime. Free SSL, 1-click installer & 99.9% uptime.",
+        "meta_desc": "Ultra-fast shared hosting with cPanel, LiteSpeed & NVMe storage from $2.99/mo or $129 lifetime. Free SSL, 1-click apps & 99.9% uptime.",
         "badge": "High-Speed LiteSpeed & cPanel Web Hosting",
         "icon": "globe",
         "headline": "High-Speed Shared Hosting",
@@ -261,7 +261,7 @@ HOSTING_PRODUCTS = [
             }
         ],
         "related": [
-            {"title": "Reseller Hosting", "price": "From $9.00/mo", "url": "/reseller-hosting", "desc": "White-label cPanel reseller hosting with lifetime plans.", "icon": "users"},
+            {"title": "Reseller Hosting", "price": "From $28.00/mo", "url": "/reseller-hosting", "desc": "White-label cPanel reseller hosting with lifetime plans.", "icon": "users"},
             {"title": "Business Email", "price": "From $1.50/mo", "url": "/business-email", "desc": "Custom domain business email with 99.9% deliverability.", "icon": "mail"},
             {"title": "Managed VPS", "price": "From $19.00/mo", "url": "/managed-vps", "desc": "Dedicated KVM resources bundled with cPanel license.", "icon": "server"},
             {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "10x faster PHP & WordPress speeds with LSCache.", "icon": "litespeed.svg"}
@@ -273,12 +273,12 @@ HOSTING_PRODUCTS = [
         "name": "Reseller Hosting",
         "seo_title": "Cheap Reseller Hosting – White-Label WHM | LicenBase",
         "og_title": "Cheap Reseller Hosting with White-Label WHM & Lifetime Plans",
-        "seo_desc": "Start your web hosting agency with white-label cPanel reseller hosting from $9/mo or $129 lifetime. Private nameservers, overselling enabled, NVMe & 24/7 support.",
+        "seo_desc": "Start your web hosting agency with white-label cPanel reseller hosting from $28/mo or $360 lifetime. Private nameservers, NVMe disk & 24/7 support.",
         "seo_h2": "White-Label cPanel & WHM Reseller Hosting with Lifetime Options",
         "seo_p1": "Launch your own independent web hosting brand or streamline hosting for your agency clients with LicenBase Reseller Hosting. Powered by WebHost Manager (WHM) and CloudLinux OS, our reseller infrastructure lets you create customized cPanel packages, allocate disk space and bandwidth quotas, and rebrand client control panels with your company's logo and private nameservers.",
         "seo_p2": "With overselling enabled across all tiers, you maximize your profit margins by selling your full allocation of resources without artificial limits. Choose between convenient monthly billing or lock in permanent agency margins with our one-time Lifetime reseller plans. All accounts benefit from LiteSpeed web caching, automated daily backups, and free WHM account migration assistance.",
         "title": "White-Label cPanel & WHM Reseller Hosting",
-        "meta_desc": "Start your web hosting agency with white-label cPanel reseller hosting from $9/mo or $129 lifetime. Private nameservers, overselling enabled, NVMe & 24/7 support.",
+        "meta_desc": "Start your web hosting agency with white-label cPanel reseller hosting from $28/mo or $360 lifetime. Private nameservers, NVMe disk & 24/7 support.",
         "badge": "100% White-Label Web Hosting Reseller Platform",
         "icon": "users",
         "headline": "White-Label Reseller Hosting",
@@ -286,6 +286,7 @@ HOSTING_PRODUCTS = [
         "hero_desc": "Start your own hosting business or host all your agency clients under one roof. Full WHM root control, 100% white-label branding, private nameservers, and lifetime billing options.",
         "specs": ["Full WebHost Manager (WHM)", "Overselling Enabled", "100% White-Label Branding", "Private Custom Nameservers", "LiteSpeed Acceleration", "Lifetime Plans Available"],
         "terms": ["monthly", "yearly", "lifetime"],
+        "yearly_label": "Yearly (5 Mo Free · Save 42%)",
         "faqs": [
             {
                 "q": "What is white-label reseller hosting?",
@@ -313,7 +314,7 @@ HOSTING_PRODUCTS = [
             }
         ],
         "related": [
-            {"title": "Shared Hosting", "price": "From $2.50/mo", "url": "/shared-hosting", "desc": "Affordable NVMe web hosting for individual websites.", "icon": "globe"},
+            {"title": "Shared Hosting", "price": "From $2.99/mo", "url": "/shared-hosting", "desc": "Affordable NVMe web hosting for individual websites.", "icon": "globe"},
             {"title": "WHMReseller License", "price": "$1.50/mo", "url": "/whmreseller-license", "desc": "Unlock Master & Alpha reseller capabilities inside WHM.", "icon": "whmreseller.png"},
             {"title": "WHMCS License", "price": "From $4.00/mo", "url": "/whmcs-license", "desc": "Automate billing, domain management, and client support.", "icon": "whmcs.svg"},
             {"title": "Managed VPS", "price": "From $19.00/mo", "url": "/managed-vps", "desc": "Dedicated cloud VPS with cPanel license and 24/7 admin.", "icon": "server"}
@@ -325,12 +326,12 @@ HOSTING_PRODUCTS = [
         "name": "Business Email",
         "seo_title": "Cheap Business Email Hosting – Custom Domain | LicenBase",
         "og_title": "Professional Business Email Hosting on Your Custom Domain",
-        "seo_desc": "Professional business email hosting on your custom domain from $2.49/mo. 5GB storage per account, ClamAV antivirus, mobile IMAP sync, auto-responders & 99.99% uptime.",
+        "seo_desc": "Professional business email hosting on your custom domain from $2.49/mo. 5GB storage, ClamAV antivirus, mobile IMAP sync, auto-responders & 99.99% uptime.",
         "seo_h2": "Professional Business Email Hosting on Your Custom Domain",
         "seo_p1": "Enhance your business credibility with a personalized email using your domain name instead of free email IDs. A unique email identity helps customers establish their brand, project corporate reliability, and make a lasting impression on clients. LicenBase Business Email delivers dedicated, ad-free mailboxes engineered for fast delivery and seamless multi-device synchronization.",
         "seo_p2": "Built around high-performance storage infrastructure with a 99.99% uptime SLA, each account receives 5 GB of dedicated space, inbuilt ClamAV antivirus protection, and automated auto-responder tools. Easily scale from a single professional address up to 49 mailboxes with flexible per-address billing and 24/7 technical assistance.",
         "title": "Business Email Hosting on Custom Domain",
-        "meta_desc": "Professional business email hosting on your custom domain from $2.49/mo. 5GB storage per account, ClamAV antivirus, mobile IMAP sync, auto-responders & 99.99% uptime.",
+        "meta_desc": "Professional business email hosting on your custom domain from $2.49/mo. 5GB storage, ClamAV antivirus, mobile IMAP sync, auto-responders & 99.99% uptime.",
         "badge": "Personalized Domain Business Email Hosting",
         "icon": "mail",
         "headline": "Business Email Hosting",
@@ -463,9 +464,9 @@ HOSTING_PRODUCTS = [
             }
         ],
         "related": [
-            {"title": "Shared Hosting", "price": "From $2.50/mo", "url": "/shared-hosting", "desc": "Web hosting with cPanel, LiteSpeed & free email accounts.", "icon": "globe"},
+            {"title": "Shared Hosting", "price": "From $2.99/mo", "url": "/shared-hosting", "desc": "Web hosting with cPanel, LiteSpeed & free email accounts.", "icon": "globe"},
             {"title": "Port 25 Open VPS", "price": "From $12.00/mo", "url": "/port-25-open-vps", "desc": "Dedicated server with unblocked outbound port 25 for relays.", "icon": "mail"},
-            {"title": "Reseller Hosting", "price": "From $9.00/mo", "url": "/reseller-hosting", "desc": "White-label hosting to sell web hosting & email to clients.", "icon": "users"},
+            {"title": "Reseller Hosting", "price": "From $28.00/mo", "url": "/reseller-hosting", "desc": "White-label hosting to sell web hosting & email to clients.", "icon": "users"},
             {"title": "cPanel License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Host unlimited email accounts on your own private server.", "icon": "cpanel.svg"}
         ]
     },
@@ -475,19 +476,19 @@ HOSTING_PRODUCTS = [
         "name": "n8n Hosting",
         "seo_title": "n8n Hosting – Self-Hosted Workflow Automation | LicenBase",
         "og_title": "Managed n8n Hosting – Self-Hosted Workflow Automation",
-        "seo_desc": "Deploy dedicated n8n workflow automation hosting from $9/mo. Unlimited executions, PostgreSQL database, Redis queue mode, custom webhooks & zero cold-start delays.",
+        "seo_desc": "Deploy dedicated n8n workflow hosting from $9/mo or $420 lifetime. Unlimited executions, PostgreSQL, daily backups, 99.99% uptime SLA & instant setup.",
         "seo_h2": "Production-Ready Dedicated n8n Workflow Automation Cloud Hosting",
         "seo_p1": "Take complete ownership of your workflow automations without being penalized by per-execution billing limits. LicenBase n8n Hosting provisions a dedicated, fully managed environment running the powerful open-source n8n workflow engine on high-speed NVMe servers. Automate cross-platform pipelines, connect custom APIs, and execute complex conditional logic with zero restrictions.",
-        "seo_p2": "Unlike multi-tenant cloud platforms that throttle executions during peak periods, every LicenBase n8n instance features dedicated vCPU and RAM allocations, a pre-configured PostgreSQL database, optional Redis queue mode for heavy task concurrency, and automated SSL encryption. Easily install community nodes, trigger secure webhooks, and enjoy automated daily database snapshots.",
+        "seo_p2": "Unlike multi-tenant cloud platforms that throttle executions during peak periods, every LicenBase n8n instance features dedicated compute allocations, a pre-configured PostgreSQL database, priority queue capabilities for heavy task concurrency, and automated SSL encryption. Easily install community nodes, trigger secure webhooks, and enjoy automated daily database snapshots.",
         "title": "Dedicated Cloud Hosting for n8n Workflow Automation",
-        "meta_desc": "Deploy dedicated n8n workflow automation hosting from $9/mo. Unlimited executions, PostgreSQL database, Redis queue mode, custom webhooks & zero cold-start delays.",
+        "meta_desc": "Deploy dedicated n8n workflow hosting from $9/mo or $420 lifetime. Unlimited executions, PostgreSQL, daily backups, 99.99% uptime SLA & instant setup.",
         "badge": "Dedicated Self-Hosted n8n Workflow Automation Platform",
         "icon": "workflow",
         "headline": "Dedicated n8n Hosting",
         "headline_sub": "Self-Hosted Automation with Unlimited Runs.",
-        "hero_desc": "Host your own n8n automation engine on dedicated cloud instances. Execute unlimited workflow runs, integrate hundreds of services, connect custom webhooks, and keep your data 100% private.",
-        "specs": ["Unlimited Executions", "Dedicated vCPU & RAM", "PostgreSQL & Redis Queue", "Custom Subdomain & Free SSL", "Zero Cold Starts", "Automated Daily Snapshots"],
-        "terms": ["monthly", "yearly"],
+        "hero_desc": "Host your own n8n automation engine on dedicated cloud instances from $9/mo or $420 lifetime. Execute unlimited workflow runs, integrate services, connect webhooks, and automate forever.",
+        "specs": ["Unlimited Executions", "Unlimited Workflows", "Unlimited Storage", "PostgreSQL Database", "Custom Subdomain & Free SSL", "Daily Automated Backups"],
+        "terms": None,
         "faqs": [
             {
                 "q": "Why choose self-hosted n8n over n8n Cloud?",
@@ -506,8 +507,8 @@ HOSTING_PRODUCTS = [
                 "a": "Yes, you can bind your instance to your custom domain or subdomain (e.g., auto.yourcompany.com). An automated Let's Encrypt SSL certificate is provisioned and renewed automatically."
             },
             {
-                "q": "How does queue mode work on the Pro and Enterprise tiers?",
-                "a": "On our higher tiers, we configure Redis queue mode with separate worker processes so long-running or webhook-intensive tasks never block the main web UI or trigger timeout errors."
+                "q": "How does high-volume execution work across tiers?",
+                "a": "On our Professional, Growth, and Lifetime tiers, we configure dedicated compute allocations and priority worker queues so long-running or webhook-intensive tasks never block the main web UI or trigger timeout errors."
             },
             {
                 "q": "Are automated backups included?",
@@ -521,56 +522,52 @@ HOSTING_PRODUCTS = [
             {"title": "Managed VPS", "price": "From $19.00/mo", "url": "/managed-vps", "desc": "Fully managed KVM cloud VPS with cPanel license included.", "icon": "server"}
         ]
     },
-    {
+        {
         "filename": "openclaw-hosting.html",
         "slug": "openclaw-hosting",
         "name": "OpenClaw Hosting",
-        "seo_title": "OpenClaw Hosting – Dedicated Browser Automation | LicenBase",
-        "og_title": "OpenClaw Hosting – High-Concurrency Web Scraping Cloud",
-        "seo_desc": "High-speed dedicated cloud hosting for OpenClaw web scraping & browser automation from $9/mo. Headless Chromium, anti-fingerprinting, proxy routing & 1 Gbps port.",
-        "seo_h2": "High-Speed Dedicated Cloud Hosting for OpenClaw Web Automation",
-        "seo_p1": "Extract data at scale and automate web workflows without crashing your local machine or hitting resource constraints. LicenBase OpenClaw Hosting delivers dedicated cloud environments pre-configured with headless Chromium and Firefox browsers, anti-detection stealth extensions, and optimized Node.js and Python runtimes for high-concurrency web crawling.",
-        "seo_p2": "Engineered specifically for heavy scraping jobs, headless browser clusters, and automated data pipelines, our servers feature high-frequency CPU cores, large RAM buffers to prevent browser memory leaks, low-latency gigabit network connections, and built-in proxy rotation support. Monitor your scraping workers around the clock with our automated process health watchdog.",
-        "title": "Dedicated OpenClaw Browser Automation Cloud",
-        "meta_desc": "High-speed dedicated cloud hosting for OpenClaw web scraping & browser automation from $9/mo. Headless Chromium, anti-fingerprinting, proxy routing & 1 Gbps port.",
-        "badge": "High-Concurrency Browser Automation & Web Scraping Cloud",
+        "seo_title": "OpenClaw Hosting – Multi-Channel AI Bot Cloud | LicenBase",
+        "og_title": "OpenClaw Hosting – Dedicated Multi-Channel AI Bot Platform",
+        "seo_desc": "Deploy OpenClaw AI bots on high-performance cloud hosting from $14/mo or $380 lifetime. Connect GPT-4o, Claude, Llama & Kimi to WhatsApp, Telegram & Discord.",
+        "seo_h2": "Autonomous Multi-Channel AI Bot Cloud Hosting with Lifetime Billing",
+        "seo_p1": "Automate customer support, lead qualification, conversational sales, and repetitive workflows with dedicated cloud infrastructure for OpenClaw AI agents. Connect leading frontier models including OpenAI GPT-4o, Anthropic Claude, Meta Llama, and Moonshot Kimi directly to your favorite business messaging channels.",
+        "seo_p2": "Enjoy zero per-message surcharges and complete architectural control. OpenClaw provides direct integrations across WhatsApp, Telegram, Discord, and 40+ messaging networks with customizable bot personas, full administrative dashboards, automated skills, and 99.99% guaranteed uptime.",
+        "title": "OpenClaw Multi-Channel AI Bot Cloud Hosting",
+        "meta_desc": "Deploy OpenClaw AI bots on high-performance cloud hosting from $14/mo or $380 lifetime. Connect GPT-4o, Claude, Llama & Kimi to WhatsApp, Telegram & Discord.",
+        "badge": "Multi-Channel Autonomous AI Bot Platform",
         "icon": "bot",
-        "headline": "OpenClaw Cloud Hosting",
-        "headline_sub": "High-Concurrency Web Scraping & Automation.",
-        "hero_desc": "Deploy dedicated high-speed server instances tuned for OpenClaw browser automation, web scraping, and data extraction. Pre-installed headless Chromium, stealth plugins, and proxy support.",
-        "specs": ["Headless Chromium & Firefox", "Node.js & Python Ready", "Anti-Fingerprinting Stealth", "Dedicated RAM & Gen4 NVMe", "Low-Latency Proxy Routing", "Automated Process Watchdog"],
-        "terms": ["monthly", "yearly"],
+        "headline": "OpenClaw AI Hosting",
+        "headline_sub": "Autonomous Multi-Channel AI Bots.",
+        "hero_desc": "Run autonomous AI bots and smart conversational agents 24/7 across WhatsApp, Telegram, Discord, and 40+ channels. Powered by GPT-4o, Claude, Llama, and Kimi with zero message fees.",
+        "specs": ["GPT-4o, Claude, Llama & Kimi", "WhatsApp, Telegram, Discord & 40+ Channels", "Unlimited Skills & Workflows", "Custom Bot Personas", "99.99% Uptime SLA", "Free Installation & White-Glove Setup"],
+        "terms": ["monthly", "lifetime"],
         "faqs": [
             {
-                "q": "What is OpenClaw hosting optimized for?",
-                "a": "It is optimized for running heavy headless browser automation frameworks (Puppeteer, Playwright, Selenium, and OpenClaw scripts) without running out of RAM or having processes killed by the kernel."
+                "q": "What is OpenClaw AI hosting?",
+                "a": "OpenClaw hosting provides a dedicated, high-availability cloud environment engineered to host and run autonomous AI chatbots and workflows connected to LLMs like GPT-4o, Claude, and Llama."
             },
             {
-                "q": "Are headless browsers pre-installed on the server?",
-                "a": "Yes! Up-to-date versions of headless Chromium, Google Chrome, and Firefox along with required system rendering libraries (Xvfb, mesa, fontconfig) are pre-installed and ready to use."
+                "q": "Which messaging channels are supported by OpenClaw?",
+                "a": "OpenClaw natively supports 40+ channels including WhatsApp Business API, Telegram Bot API, Discord, Slack, Messenger, email, and REST webhooks."
             },
             {
-                "q": "Can I route scraping traffic through residential or datacenter proxies?",
-                "a": "Yes! The environment includes native proxy chaining and rotation configurations for BrightData, Oxylabs, Smartproxy, or your own private proxy lists."
+                "q": "Can I connect my own AI API keys or models?",
+                "a": "Yes. OpenClaw lets you bring your own API keys for OpenAI (GPT-4o), Anthropic (Claude 3.5 Sonnet / Opus), Meta Llama, and Moonshot Kimi, or route requests through custom local or cloud inference endpoints."
             },
             {
-                "q": "How does the memory watchdog protect the server?",
-                "a": "Browser automation often suffers from memory leaks over long extraction cycles. Our daemon automatically recycles idle browser contexts while keeping your scraping task queue active."
+                "q": "Is free setup and migration assistance included?",
+                "a": "Yes, our technical team provides complimentary white-glove setup, assisting you with channel webhook configurations and prompt persona onboarding."
             },
             {
-                "q": "Do I have root access to install additional packages?",
-                "a": "Yes! You have full root administrative access to install any pip, npm, or system packages your scraping workflow requires."
-            },
-            {
-                "q": "Can I trigger scrapers via REST webhooks?",
-                "a": "Yes, our pre-configured webhook endpoint service lets you invoke scraping tasks and receive structured JSON payloads directly into your databases or webhooks."
+                "q": "How does the Lifetime license work?",
+                "a": "The OpenClaw Lifetime plan is a single one-time payment of $380 with zero recurring subscription fees. It includes unlimited storage, unlimited skills, lifetime platform updates, and priority technical support."
             }
         ],
         "related": [
-            {"title": "n8n Hosting", "price": "From $9.00/mo", "url": "/n8n-hosting", "desc": "Self-hosted workflow automation for pipeline processing.", "icon": "workflow"},
-            {"title": "Hermes Agent Hosting", "price": "From $9.00/mo", "url": "/hermes-agent-hosting", "desc": "Continuous runtime for autonomous AI agents.", "icon": "bot"},
-            {"title": "Unmanaged VPS", "price": "From $4.50/mo", "url": "/unmanaged-vps", "desc": "Pure KVM compute with full root access.", "icon": "terminal"},
-            {"title": "Port 25 Open VPS", "price": "From $12.00/mo", "url": "/port-25-open-vps", "desc": "High-throughput mail server with unblocked port 25.", "icon": "mail"}
+            {"title": "n8n Cloud Hosting", "price": "From $9.00/mo", "url": "/n8n-hosting", "desc": "Self-hosted workflow automation with unlimited runs.", "icon": "workflow"},
+            {"title": "Hermes Agent Hosting", "price": "From $12.00/mo", "url": "/hermes-agent-hosting", "desc": "Autonomous LLM reasoning & agent execution environment.", "icon": "brain"},
+            {"title": "Managed VPS", "price": "From $19.00/mo", "url": "/managed-vps", "desc": "Dedicated KVM resources bundled with cPanel license.", "icon": "server"},
+            {"title": "Shared Hosting", "price": "From $2.99/mo", "url": "/shared-hosting", "desc": "High-speed NVMe hosting with cPanel & LiteSpeed.", "icon": "globe"}
         ]
     },
     {
@@ -579,19 +576,19 @@ HOSTING_PRODUCTS = [
         "name": "Hermes Agent Hosting",
         "seo_title": "Hermes Agent Hosting – Autonomous AI Agent Cloud | LicenBase",
         "og_title": "Hermes Agent Hosting – Autonomous AI Agent Infrastructure",
-        "seo_desc": "Deploy autonomous AI agents with dedicated Hermes Agent cloud hosting from $9/mo. Persistent state, vector database support, zero cold starts & 24/7 daemon watch.",
+        "seo_desc": "Deploy autonomous AI agents with dedicated Hermes Agent cloud hosting from $14/mo or $380 lifetime. Auto-deployed, private SSL subdomain & 99.99% SLA.",
         "seo_h2": "Dedicated Cloud Infrastructure for Hermes Agent & Autonomous AI Workflows",
         "seo_p1": "Running autonomous AI agents and long-horizon tasks requires continuous, persistent execution environments that never sleep or drop context. LicenBase Hermes Agent Hosting provides dedicated cloud sandboxes purpose-built for executing agentic reasoning loops, background tool calls, local code interpreters, and multi-agent coordination frameworks.",
-        "seo_p2": "Each instance is pre-configured with modern Python 3.11+, persistent NVMe scratch disks for state management, ready-to-use vector databases (such as ChromaDB and Qdrant), and secure webhook and REST API endpoints. With automated process supervisors guaranteeing that your agent daemons stay online 24/7, you can deploy autonomous agents with absolute confidence.",
+        "seo_p2": "Each instance is pre-configured with modern Python 3.11+, persistent NVMe scratch disks for state management, ready-to-use vector databases, and secure webhook and REST API endpoints. With automated process supervisors guaranteeing that your agent daemons stay online 24/7, you can deploy autonomous agents with absolute confidence.",
         "title": "Hermes Agent Cloud Hosting Infrastructure",
-        "meta_desc": "Deploy autonomous AI agents with dedicated Hermes Agent cloud hosting from $9/mo. Persistent state, vector database support, zero cold starts & 24/7 daemon watch.",
+        "meta_desc": "Deploy autonomous AI agents with dedicated Hermes Agent cloud hosting from $14/mo or $380 lifetime. Auto-deployed, private SSL subdomain & 99.99% SLA.",
         "badge": "Continuous Cloud Runtime for Autonomous AI Agents",
         "icon": "bot",
         "headline": "Hermes Agent Hosting",
         "headline_sub": "Autonomous AI Agent Cloud Infrastructure.",
-        "hero_desc": "Deploy dedicated cloud sandboxes optimized for Hermes Agent and autonomous AI agent workflows. Persistent memory state, vector database integration, zero cold starts, and 24/7 daemon supervisors.",
-        "specs": ["Continuous Daemon Runtime", "Persistent Memory & State", "Vector Database Support", "Python 3.11+ & Code Sandboxes", "Zero Cold-Start Latency", "Daily Automated Snapshots"],
-        "terms": ["monthly", "yearly"],
+        "hero_desc": "Deploy dedicated cloud sandboxes optimized for Hermes Agent and autonomous AI agent workflows. Auto-deployed in minutes with private SSL subdomain, BYOK support, and full start/stop daemon controls.",
+        "specs": ["Auto-deployed in minutes", "Private SSL-secured subdomain", "Bring your own LLM key", "Start / stop / restart controls", "99.99% uptime SLA", "Zero recurring fees lifetime option"],
+        "terms": ["monthly", "lifetime"],
         "faqs": [
             {
                 "q": "What is Hermes Agent Hosting?",
@@ -602,25 +599,21 @@ HOSTING_PRODUCTS = [
                 "a": "Serverless platforms enforce harsh execution timeouts (usually 5 to 15 minutes) and suffer from cold-start penalties and stateless memory wipes. Hermes Agent Hosting provides 24/7 continuous execution with persistent local disk storage."
             },
             {
-                "q": "Which vector databases can I run locally?",
-                "a": "You can run embedded vector databases like ChromaDB, LanceDB, or SQLite-VSS directly on the instance, or run containerized vector engines like Qdrant and Milvus."
+                "q": "How does the BYOK (Bring Your Own Key) model work?",
+                "a": "You supply your own OpenAI, Anthropic, or open-source API keys directly into your private environment. LicenBase charges zero token markups or per-call query surcharges."
             },
             {
-                "q": "Can the agent execute code safely on the server?",
-                "a": "Yes! The environment includes Docker and isolated sub-process sandbox utilities so agents can write, test, and execute Python or shell scripts without destabilizing the host system."
+                "q": "Can I control my agent daemons directly?",
+                "a": "Yes! You have full web and API start, stop, and restart controls over your agent background services, as well as real-time terminal log streaming."
             },
             {
-                "q": "How do I interact with my hosted agent?",
-                "a": "Instances include pre-configured FastAPI endpoints and WebSocket channels, allowing you to trigger agent actions, stream token thoughts, or receive webhook alerts remotely."
-            },
-            {
-                "q": "Are API keys stored securely?",
-                "a": "Yes. All configuration files and environment variable stores reside on encrypted NVMe volumes that only your authenticated SSH user can access."
+                "q": "What is included with the Lifetime Plan?",
+                "a": "The Hermes Agent Lifetime plan is a single one-time payment of $380 with zero recurring monthly or annual bills. You receive persistent cloud resources, lifetime platform updates, and priority engineering support."
             }
         ],
         "related": [
-            {"title": "n8n Hosting", "price": "From $9.00/mo", "url": "/n8n-hosting", "desc": "Self-hosted workflow automation for pipeline processing.", "icon": "workflow"},
-            {"title": "OpenClaw Hosting", "price": "From $9.00/mo", "url": "/openclaw-hosting", "desc": "High-concurrency web scraping and browser automation cloud.", "icon": "bot"},
+            {"title": "OpenClaw Hosting", "price": "From $14.00/mo", "url": "/openclaw-hosting", "desc": "Multi-channel AI bot & agent automation cloud.", "icon": "bot"},
+            {"title": "n8n Cloud Hosting", "price": "From $9.00/mo", "url": "/n8n-hosting", "desc": "Self-hosted workflow automation for pipeline processing.", "icon": "workflow"},
             {"title": "Unmanaged VPS", "price": "From $4.50/mo", "url": "/unmanaged-vps", "desc": "Pure KVM compute with full root access.", "icon": "terminal"},
             {"title": "Managed VPS", "price": "From $19.00/mo", "url": "/managed-vps", "desc": "Fully managed KVM cloud VPS with cPanel license.", "icon": "server"}
         ]
@@ -634,73 +627,45 @@ def generate_hosting_page(p):
     plans = PLANS.get(p["slug"], [])
     terms = p.get("terms", ["monthly", "yearly"])
 
-    # Billing Switcher Tabs
-    tabs_html = ""
-    if len(terms) > 1:
-        labels = {"monthly": "Monthly Billing", "yearly": "Yearly (Save ~17%)", "lifetime": "Lifetime Plan (Pay Once)"}
-        tab_buttons = "".join(
-            f'<button type="button" data-term="{t}" aria-pressed="{"true" if t == terms[0] else "false"}" '
-            f'class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 {"bg-brand text-white shadow-md shadow-brand/20" if t == terms[0] else "text-gray-600 hover:text-navy"}">{labels.get(t, t.title())}</button>'
-            for t in terms
-        )
-        tabs_html = f"""
-        <div class="mb-10 flex justify-center">
-          <div role="group" aria-label="Billing period switcher" class="inline-flex rounded-2xl border border-gray-200 bg-mist p-1.5 shadow-inner">
-            {tab_buttons}
-          </div>
-        </div>
-        """
+    if p["slug"] in ("n8n-hosting", "openclaw-hosting", "hermes-agent-hosting"):
+        # 4 distinct package cards in a responsive grid
+        card_items = []
+        for t in plans:
+            is_pop = t.get("popular", False)
+            pop_border = "border-2 border-brand shadow-xl relative scale-[1.02] z-10" if is_pop else "border border-gray-200 shadow-md"
+            pop_badge = '<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">Most Popular</div>' if is_pop else ""
+            btn_class = "lb-btn lb-btn--primary w-full shadow-md shadow-brand/20" if is_pop else "lb-btn lb-btn--secondary w-full"
 
-    # Multi-term cards
-    grid_cols = "md:grid-cols-2" if len(plans) == 2 else ("md:grid-cols-3" if len(plans) == 3 else "max-w-xl mx-auto")
-    tiers_html = f'{tabs_html}<div class="grid gap-8 {grid_cols}">'
+            features_li = "".join([
+                f'<li class="flex items-start gap-2.5 text-sm text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent mt-0.5" aria-hidden="true"></i><span>{feat}</span></li>'
+                for feat in t.get("specs", [])
+            ])
 
-    for t in plans:
-        pop_border = "border-2 border-brand shadow-xl relative scale-[1.02] z-10" if t.get("popular") else "border border-gray-200 shadow-md"
-        pop_badge = f'<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">⭐ Most Popular</div>' if t.get("popular") else ""
+            savings_html = f'<div class="mt-2 text-xs font-semibold text-accentDeep bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full inline-block">{t["savings"]}</div>' if "savings" in t else ""
 
-        features_li = "".join([
-            f'<li class="flex items-start gap-3 text-sm text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent mt-0.5" aria-hidden="true"></i><span>{feat}</span></li>'
-            for feat in t.get("specs", [])
-        ])
-
-        btn_class = "lb-btn lb-btn--primary w-full shadow-md" if t.get("popular") else "lb-btn lb-btn--secondary w-full"
-
-        # Price elements for each term
-        price_elements = ""
-        for term in terms:
-            hidden_class = "" if term == terms[0] else "hidden "
-            if term in t["prices"]:
-                period_label = "per month" if term == "monthly" else ("per year" if term == "yearly" else "one-time")
-                price_str = f"${t['prices'][term]:,.2f}"
-                price_elements += f"""
-                <div data-price="{term}" class="{hidden_class}mt-6 flex items-baseline gap-1 border-b border-gray-100 pb-6">
-                  <span class="font-display text-4xl font-extrabold tracking-tight text-navy">{price_str}</span>
-                  <span class="text-sm font-semibold text-gray-500">/{period_label}</span>
-                </div>
-                """
-            else:
-                price_elements += f"""
-                <div data-price="{term}" class="{hidden_class}mt-6 flex items-baseline gap-1 border-b border-gray-100 pb-6">
-                  <span class="font-display text-3xl font-bold tracking-tight text-navy">Contact Sales</span>
-                </div>
-                """
-
-        tiers_html += f"""
-        <div class="flex flex-col justify-between rounded-3xl bg-white p-7 sm:p-9 {pop_border} transition-all duration-300 hover:shadow-2xl">
+            card_items.append(f"""
+        <div class="flex flex-col justify-between rounded-3xl bg-white p-6 sm:p-7 {pop_border} transition-all duration-300 hover:shadow-2xl">
           <div>
             {pop_badge}
             <div class="flex items-center justify-between">
               <span class="rounded-full bg-brandSoft px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">{t["badge"]}</span>
-              <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent"><i data-lucide="zap" class="h-3.5 w-3.5"></i> Instant Setup</span>
+              <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent">Instant Setup</span>
             </div>
 
             <h3 class="mt-4 font-display text-2xl font-bold text-navy">{t["name"]}</h3>
+            <p class="mt-1 text-xs font-semibold text-brand">{t.get("tagline", "")}</p>
             <p class="mt-2 text-xs leading-relaxed text-gray-500">{t["desc"]}</p>
 
-            {price_elements}
+            <div class="mt-5 border-y border-gray-100 py-4 bg-mist/40 -mx-6 px-6 sm:-mx-7 sm:px-7">
+              <div class="flex items-baseline gap-1">
+                <span class="font-display text-4xl font-extrabold tracking-tight text-navy">{t["price_str"]}</span>
+                <span class="text-sm font-semibold text-gray-500">/{t.get("period_label", "mo")}</span>
+              </div>
+              <p class="mt-1 text-xs font-medium text-gray-600">{t.get("cycle_label", "")}</p>
+              {savings_html}
+            </div>
 
-            <ul class="mt-6 space-y-3.5">
+            <ul class="mt-6 space-y-3">
               {features_li}
             </ul>
           </div>
@@ -710,16 +675,958 @@ def generate_hosting_page(p):
               <span>Order {t['name']}</span>
               <i data-lucide="arrow-right" class="h-4 w-4"></i>
             </a>
-            <p class="mt-2.5 text-center text-[11px] text-gray-400">Instant Automated Provisioning · Guaranteed Uptime</p>
+            <p class="mt-2 text-center text-[11px] text-gray-400">Instant Automated Provisioning · Guaranteed Uptime</p>
+          </div>
+        </div>
+            """)
+
+        grid_cls = "grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto" if len(plans) == 2 else "grid gap-6 sm:grid-cols-2 xl:grid-cols-4"
+        tiers_html = f'<div class="{grid_cls}">{"".join(card_items)}</div>'
+    else:
+        # Billing Switcher Tabs
+        tabs_html = ""
+        if terms and len(terms) > 1:
+            yearly_label = p.get("yearly_label", "Yearly (Save ~17%)")
+            labels = {"monthly": "Monthly Billing", "yearly": yearly_label, "lifetime": "Lifetime Plan (Pay Once)"}
+            tab_buttons = "".join(
+                f'<button type="button" data-term="{t}" aria-pressed="{"true" if t == terms[0] else "false"}" '
+                f'class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 {"bg-brand text-white shadow-md shadow-brand/20" if t == terms[0] else "text-gray-600 hover:text-navy"}">{labels.get(t, t.title())}</button>'
+                for t in terms
+            )
+            tabs_html = f"""
+        <div class="mb-10 flex justify-center">
+          <div role="group" aria-label="Billing period switcher" class="inline-flex rounded-2xl border border-gray-200 bg-mist p-1.5 shadow-inner">
+            {tab_buttons}
           </div>
         </div>
         """
 
-    tiers_html += "</div>"
+        # Multi-term cards
+        grid_cols = "md:grid-cols-2" if len(plans) == 2 else ("md:grid-cols-3" if len(plans) == 3 else "max-w-xl mx-auto")
+        tiers_html = f'{tabs_html}<div class="grid gap-8 {grid_cols}">'
 
-    # Lifetime Note if applicable
-    if "lifetime" in terms and LIFETIME_NOTE:
-        tiers_html += f'<p class="mt-6 text-center text-xs text-gray-500 hidden" data-lifetime-note>{LIFETIME_NOTE}</p>'
+        for t in plans:
+            pop_border = "border-2 border-brand shadow-xl relative scale-[1.02] z-10" if t.get("popular") else "border border-gray-200 shadow-md"
+            pop_badge = f'<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">Most Popular</div>' if t.get("popular") else ""
+
+            features_li = "".join([
+                f'<li class="flex items-start gap-3 text-sm text-gray-600"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent mt-0.5" aria-hidden="true"></i><span>{feat}</span></li>'
+                for feat in t.get("specs", [])
+            ])
+
+            btn_class = "lb-btn lb-btn--primary w-full shadow-md" if t.get("popular") else "lb-btn lb-btn--secondary w-full"
+
+            # Price elements for each term
+            price_elements = ""
+            for term in (terms or []):
+                hidden_class = "" if term == terms[0] else "hidden "
+                if term in t["prices"]:
+                    period_label = "per month" if term == "monthly" else ("per year" if term == "yearly" else "one-time")
+                    price_str = f"${t['prices'][term]:,.2f}"
+                    discount_sub = ""
+                    if term == "yearly" and "yearly_base" in t:
+                        badge_text = t.get("discount_badge", "Save 17%")
+                        discount_sub = f'<span class="ml-2 text-xs font-semibold text-accentDeep bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">{badge_text}</span><span class="ml-1 text-xs line-through text-gray-400">${t["yearly_base"]:,.2f}</span>'
+                    price_elements += f"""
+                    <div data-price="{term}" class="{hidden_class}mt-6 flex flex-wrap items-baseline gap-1 border-b border-gray-100 pb-6">
+                      <span class="font-display text-4xl font-extrabold tracking-tight text-navy">{price_str}</span>
+                      <span class="text-sm font-semibold text-gray-500">/{period_label}</span>
+                      {discount_sub}
+                    </div>
+                    """
+                else:
+                    price_elements += f"""
+                    <div data-price="{term}" class="{hidden_class}mt-6 flex items-baseline gap-1 border-b border-gray-100 pb-6">
+                      <span class="font-display text-3xl font-bold tracking-tight text-navy">Contact Sales</span>
+                    </div>
+                    """
+
+            # CTA buttons for each term
+            cta_buttons = ""
+            for term in (terms or []):
+                hidden_class = "" if term == terms[0] else "hidden "
+                term_url = t.get("urls", {}).get(term, t.get("url"))
+                term_label = f"Order {t['name']}"
+                if term == "monthly":
+                    term_label = f"Order {t['name']} (Monthly)"
+                elif term == "yearly":
+                    term_label = f"Order {t['name']} (Annual)"
+                elif term == "lifetime":
+                    term_label = f"Order {t['name']} (Lifetime)"
+
+                cta_buttons += f"""
+                <div data-cta="{term}" class="{hidden_class}w-full">
+                  <a href="{term_url}" class="{btn_class}">
+                    <span>{term_label}</span>
+                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                  </a>
+                </div>
+                """
+
+            tiers_html += f"""
+            <div class="flex flex-col justify-between rounded-3xl bg-white p-7 sm:p-9 {pop_border} transition-all duration-300 hover:shadow-2xl">
+              <div>
+                {pop_badge}
+                <div class="flex items-center justify-between">
+                  <span class="rounded-full bg-brandSoft px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">{t["badge"]}</span>
+                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-accent">Instant Setup</span>
+                </div>
+
+                <h3 class="mt-4 font-display text-2xl font-bold text-navy">{t["name"]}</h3>
+                <p class="mt-2 text-xs leading-relaxed text-gray-500">{t["desc"]}</p>
+
+                {price_elements}
+
+                <ul class="mt-6 space-y-3.5">
+                  {features_li}
+                </ul>
+              </div>
+
+              <div class="mt-8 pt-4 border-t border-gray-100">
+                {cta_buttons}
+                <p class="mt-2.5 text-center text-[11px] text-gray-400">Instant Automated Provisioning · Guaranteed Uptime</p>
+              </div>
+            </div>
+            """
+
+        tiers_html += "</div>"
+
+        # Lifetime Note if applicable
+        if terms and "lifetime" in terms and LIFETIME_NOTE:
+            tiers_html += f'<p class="mt-6 text-center text-xs text-gray-500 hidden" data-lifetime-note>{LIFETIME_NOTE}</p>'
+
+    # Dedicated Comparison Matrix Section for Shared Hosting
+    matrix_section_html = ""
+    if p["slug"] == "shared-hosting":
+        matrix_section_html = """
+  <!-- ============ 03-MATRIX · QUICK COMPARISON MATRIX ============ -->
+  <section id="comparison-matrix" class="py-20 lg:py-28 bg-mist/60 border-b border-gray-200">
+    <div class="lb-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="lb-eyebrow">Plan Specification Breakdown</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          Quick Comparison Matrix
+        </h2>
+        <p class="mt-3 text-base text-gray-500">
+          Compare specifications, compute power, and pricing across all shared hosting tiers. Switch between recurring subscriptions and lifetime packages below.
+        </p>
+
+        <!-- Toggle Switcher -->
+        <div class="mt-8 flex justify-center">
+          <div role="group" aria-label="Comparison Table Switcher" class="inline-flex rounded-2xl border border-gray-200 bg-white p-1.5 shadow-sm">
+            <button type="button" data-matrix-toggle="recurring" aria-pressed="true" class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 bg-brand text-white shadow-md shadow-brand/20">
+              Recurring Subscriptions (Monthly &amp; Annual)
+            </button>
+            <button type="button" data-matrix-toggle="lifetime" aria-pressed="false" class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 text-gray-600 hover:text-navy">
+              Lifetime Plans (Pay Once · No Renewals)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 1: Subscription Plans Table -->
+      <div data-matrix-panel="recurring" class="transition-all duration-300">
+        <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+          <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="font-display text-base font-bold text-navy">Recurring Subscription Plans</h3>
+              <p class="text-xs text-gray-500">Billed monthly or annually with ~17% annual discount included.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+              Save ~17% on Annual Billing
+            </span>
+          </div>
+
+          <table class="w-full text-left text-sm border-collapse">
+            <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+              <tr>
+                <th class="py-4 px-6 font-bold">Plan Name</th>
+                <th class="py-4 px-5 font-bold">Storage</th>
+                <th class="py-4 px-5 font-bold">vCPU / RAM</th>
+                <th class="py-4 px-5 font-bold">Monthly Price</th>
+                <th class="py-4 px-5 font-bold">12-Mo Base</th>
+                <th class="py-4 px-5 font-bold">Discounted Year</th>
+                <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-600">
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Personal NVMe</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Unlimited Websites · LiteSpeed Cache</span>
+                </td>
+                <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">10 GB NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$2.99 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-5 line-through text-gray-400 whitespace-nowrap">$35.88</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$29.78 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=27&billingcycle=monthly" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Personal</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold text-navy">Professional NVMe</span>
+                    <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Popular</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-500 mt-0.5">High Performance · 2x RAM Allocation</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">30 GB NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$4.99 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-5 line-through text-gray-400 whitespace-nowrap">$59.88</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$49.70 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=28&billingcycle=monthly" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                    <span>Order Professional</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Turbo NVMe</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Maximum Capacity · Imunify360 Security</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$7.99 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-5 line-through text-gray-400 whitespace-nowrap">$95.88</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$79.58 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=29&billingcycle=monthly" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Turbo</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel 2: Lifetime Plans Table -->
+      <div data-matrix-panel="lifetime" class="hidden transition-all duration-300">
+        <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+          <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="font-display text-base font-bold text-navy">Lifetime Plans (One-Time Purchase)</h3>
+              <p class="text-xs text-gray-500">Pay once and keep your hosting account permanently active. Zero monthly or annual renewal fees.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+              Pay Once · Host Forever
+            </span>
+          </div>
+
+          <table class="w-full text-left text-sm border-collapse">
+            <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+              <tr>
+                <th class="py-4 px-6 font-bold">Lifetime Plan</th>
+                <th class="py-4 px-5 font-bold">Storage</th>
+                <th class="py-4 px-5 font-bold">vCPU / RAM</th>
+                <th class="py-4 px-5 font-bold">One-Time Price</th>
+                <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-600">
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Personal NVMe - Lifetime</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Permanent Single Payment · No Renewals</span>
+                </td>
+                <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">10 GB NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-extrabold text-navy text-lg whitespace-nowrap">$129.00 <span class="text-xs font-normal text-gray-500">USD</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=31" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Personal Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold text-navy">Professional NVMe - Lifetime</span>
+                    <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Popular</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-500 mt-0.5">30 GB NVMe · Permanent Business Hosting</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">30 GB NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-extrabold text-navy text-lg whitespace-nowrap">$229.00 <span class="text-xs font-normal text-gray-500">USD</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=32" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                    <span>Order Professional Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Turbo NVMe - Lifetime</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Unlimited NVMe · Permanent VIP Tier</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-extrabold text-navy text-lg whitespace-nowrap">$399.00 <span class="text-xs font-normal text-gray-500">USD</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=30" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Turbo Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Public Catalog Footer Strip -->
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-brandSoft text-brand shrink-0">
+            <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h4 class="text-sm font-bold text-navy">Looking for custom addons or domain registration?</h4>
+            <p class="text-xs text-gray-500">Explore the complete storefront catalog with instant ordering and configuration.</p>
+          </div>
+        </div>
+        <a href="https://dashboard.licenbase.com/store/shared-hosting" class="inline-flex items-center gap-2 rounded-xl bg-mist px-4 py-2.5 text-xs font-bold text-navy border border-gray-200 transition hover:bg-white hover:text-brand hover:border-brand/40 shadow-xs">
+          <span>Open Shared Hosting Store</span>
+          <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+"""
+    elif p["slug"] == "reseller-hosting":
+        matrix_section_html = """
+  <!-- ============ 03-MATRIX · QUICK COMPARISON MATRIX ============ -->
+  <section id="comparison-matrix" class="py-20 lg:py-28 bg-mist/60 border-b border-gray-200">
+    <div class="lb-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="lb-eyebrow">Agency Specification Breakdown</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          Quick Comparison Matrix
+        </h2>
+        <p class="mt-3 text-base text-gray-500">
+          Compare cPanel account quotas, NVMe disk allocations, compute power, and pricing across all reseller tiers. Switch between recurring subscriptions and lifetime packages below.
+        </p>
+
+        <!-- Toggle Switcher -->
+        <div class="mt-8 flex justify-center">
+          <div role="group" aria-label="Comparison Table Switcher" class="inline-flex rounded-2xl border border-gray-200 bg-white p-1.5 shadow-sm">
+            <button type="button" data-matrix-toggle="recurring" aria-pressed="true" class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 bg-brand text-white shadow-md shadow-brand/20">
+              Recurring Subscriptions (Monthly &amp; Annual)
+            </button>
+            <button type="button" data-matrix-toggle="lifetime" aria-pressed="false" class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 text-gray-600 hover:text-navy">
+              Lifetime Plans (Pay Once · No Renewals)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 1: Subscription Plans Table -->
+      <div data-matrix-panel="recurring" class="transition-all duration-300">
+        <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+          <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="font-display text-base font-bold text-navy">Recurring Agency Subscriptions</h3>
+              <p class="text-xs text-gray-500">Billed monthly or annually with 5 Months Free (~42% discount) on yearly terms.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+              5 Months Free on Annual Billing
+            </span>
+          </div>
+
+          <table class="w-full text-left text-sm border-collapse">
+            <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+              <tr>
+                <th class="py-4 px-6 font-bold">Plan Name</th>
+                <th class="py-4 px-5 font-bold">Accounts</th>
+                <th class="py-4 px-5 font-bold">NVMe Disk</th>
+                <th class="py-4 px-5 font-bold">vCPU / RAM</th>
+                <th class="py-4 px-5 font-bold">Monthly Price</th>
+                <th class="py-4 px-5 font-bold">12-Mo Base</th>
+                <th class="py-4 px-5 font-bold">Yearly (5 Mo Free)</th>
+                <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-600">
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Bronze Reseller</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">20 cPanel Accounts · WHM Control</span>
+                </td>
+                <td class="py-5 px-5 font-semibold text-navy whitespace-nowrap">20 Accounts</td>
+                <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">20 GB NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$28.00 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-5 line-through text-gray-400 whitespace-nowrap">$336.00</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$196.00 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=33&billingcycle=monthly" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Bronze</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold text-navy">Silver Reseller</span>
+                    <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Popular</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-500 mt-0.5">50 cPanel Accounts · Unlimited NVMe</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">50 Accounts</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$65.00 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-5 line-through text-gray-400 whitespace-nowrap">$780.00</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$455.00 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=34&billingcycle=monthly" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                    <span>Order Silver</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Gold Enterprise Reseller</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">100 cPanel Accounts · Master Fleet Scale</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">100 Accounts</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$95.00 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-5 line-through text-gray-400 whitespace-nowrap">$1,140.00</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$665.00 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=35&billingcycle=monthly" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Gold Enterprise</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel 2: Lifetime Plans Table -->
+      <div data-matrix-panel="lifetime" class="hidden transition-all duration-300">
+        <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+          <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="font-display text-base font-bold text-navy">Lifetime Reseller Plans (One-Time Purchase)</h3>
+              <p class="text-xs text-gray-500">Pay once and keep your WHM reseller account permanently active. Lock in 100% agency hosting margins.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+              Pay Once · Host Clients Forever
+            </span>
+          </div>
+
+          <table class="w-full text-left text-sm border-collapse">
+            <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+              <tr>
+                <th class="py-4 px-6 font-bold">Lifetime Plan</th>
+                <th class="py-4 px-5 font-bold">Accounts</th>
+                <th class="py-4 px-5 font-bold">NVMe Disk</th>
+                <th class="py-4 px-5 font-bold">vCPU / RAM</th>
+                <th class="py-4 px-5 font-bold">One-Time Price</th>
+                <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-600">
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Bronze Reseller - Lifetime</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Permanent WHM Agency Account · Zero Renewals</span>
+                </td>
+                <td class="py-5 px-5 font-semibold text-navy whitespace-nowrap">20 Accounts</td>
+                <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">20 GB NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-extrabold text-navy text-lg whitespace-nowrap">$360.00 <span class="text-xs font-normal text-gray-500">USD</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=36" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Bronze Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold text-navy">Silver Reseller - Lifetime</span>
+                    <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Popular</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-500 mt-0.5">50 Accounts · Unlimited NVMe · Permanent Agency Pick</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">50 Accounts</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-extrabold text-navy text-lg whitespace-nowrap">$665.00 <span class="text-xs font-normal text-gray-500">USD</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=37" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                    <span>Order Silver Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Gold Enterprise Reseller - Lifetime</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">100 Accounts · Unlimited NVMe · Permanent Enterprise Fleet</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">100 Accounts</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited NVMe</td>
+                <td class="py-5 px-5 whitespace-nowrap">2 vCPU / 2 GB</td>
+                <td class="py-5 px-5 font-extrabold text-navy text-lg whitespace-nowrap">$980.00 <span class="text-xs font-normal text-gray-500">USD</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=38" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Gold Enterprise Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Public Catalog Footer Strip -->
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-brandSoft text-brand shrink-0">
+            <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h4 class="text-sm font-bold text-navy">Looking for custom WHM allocations or private IP blocks?</h4>
+            <p class="text-xs text-gray-500">Explore the complete storefront catalog with instant ordering and configuration.</p>
+          </div>
+        </div>
+        <a href="https://dashboard.licenbase.com/store/reseller-hosting" class="inline-flex items-center gap-2 rounded-xl bg-mist px-4 py-2.5 text-xs font-bold text-navy border border-gray-200 transition hover:bg-white hover:text-brand hover:border-brand/40 shadow-xs">
+          <span>Open Reseller Hosting Store</span>
+          <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+"""
+    elif p["slug"] == "n8n-hosting":
+        matrix_section_html = """
+  <!-- ============ 03-MATRIX · QUICK COMPARISON MATRIX ============ -->
+  <section id="comparison-matrix" class="py-20 lg:py-28 bg-mist/60 border-b border-gray-200">
+    <div class="lb-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="lb-eyebrow">Workflow Automation Breakdown</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          Quick Comparison Matrix
+        </h2>
+        <p class="mt-3 text-base text-gray-500">
+          Compare execution power, database architecture, SLA support, and pricing across all four n8n hosting packages. Switch between recurring subscriptions and the lifetime package below.
+        </p>
+
+        <!-- Toggle Switcher -->
+        <div class="mt-8 flex justify-center">
+          <div role="group" aria-label="Comparison Table Switcher" class="inline-flex rounded-2xl border border-gray-200 bg-white p-1.5 shadow-sm">
+            <button type="button" data-matrix-toggle="recurring" aria-pressed="true" class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 bg-brand text-white shadow-md shadow-brand/20">
+              Recurring Subscriptions (Monthly · Annual · 2-Year)
+            </button>
+            <button type="button" data-matrix-toggle="lifetime" aria-pressed="false" class="rounded-xl px-5 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 text-gray-600 hover:text-navy">
+              Lifetime Plan (Pay Once · Automate Forever)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 1: Subscription Plans Table -->
+      <div data-matrix-panel="recurring" class="transition-all duration-300">
+        <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+          <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="font-display text-base font-bold text-navy">Recurring Automation Subscriptions</h3>
+              <p class="text-xs text-gray-500">Flexible monthly, annual, and 2-year billing with price lock guarantees.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+              Save up to $18/yr on Multi-Term Plans
+            </span>
+          </div>
+
+          <table class="w-full text-left text-sm border-collapse">
+            <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+              <tr>
+                <th class="py-4 px-6 font-bold">Plan Name</th>
+                <th class="py-4 px-5 font-bold">Billing Cycle</th>
+                <th class="py-4 px-5 font-bold">Workflows &amp; Runs</th>
+                <th class="py-4 px-5 font-bold">Storage &amp; DB</th>
+                <th class="py-4 px-5 font-bold">SLA &amp; Support</th>
+                <th class="py-4 px-5 font-bold">Price</th>
+                <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-600">
+              <!-- Starter -->
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Starter</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Great for Getting Started</span>
+                </td>
+                <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">Monthly</td>
+                <td class="py-5 px-5 whitespace-nowrap font-medium text-navy">Unlimited</td>
+                <td class="py-5 px-5 whitespace-nowrap">Unlimited NVMe · Postgres</td>
+                <td class="py-5 px-5 whitespace-nowrap">99.99% SLA · 24/7 Chat</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$9.00 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=39" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Starter</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Professional -->
+              <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold text-navy">Professional</span>
+                    <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Popular</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-500 mt-0.5">Best Value for Teams · Free Upgrades</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Annually <span class="block text-[11px] font-medium text-emerald-600">$7.50/mo equiv.</span></td>
+                <td class="py-5 px-5 whitespace-nowrap font-bold text-navy">Unlimited</td>
+                <td class="py-5 px-5 whitespace-nowrap">Unlimited NVMe · Postgres</td>
+                <td class="py-5 px-5 whitespace-nowrap">Priority Support · Advanced Monitoring</td>
+                <td class="py-5 px-5 font-bold text-accentDeep whitespace-nowrap">$90.00 <span class="text-xs font-normal text-gray-500">/ yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=40" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                    <span>Order Professional</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Growth -->
+              <tr class="hover:bg-mist/30 transition-colors">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold">Growth</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-400 mt-0.5">Dedicated Performance · 2-Yr Price Lock</span>
+                </td>
+                <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">Every 2 Years <span class="block text-[11px] font-medium text-brand">$7.50/mo equiv.</span></td>
+                <td class="py-5 px-5 whitespace-nowrap font-medium text-navy">Unlimited</td>
+                <td class="py-5 px-5 whitespace-nowrap">Unlimited NVMe · Postgres</td>
+                <td class="py-5 px-5 whitespace-nowrap">Priority Support · Advanced Monitoring</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">$180.00 <span class="text-xs font-normal text-gray-500">/ 2yr</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=41" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                    <span>Order Growth</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel 2: Lifetime Plan Table -->
+      <div data-matrix-panel="lifetime" class="hidden transition-all duration-300">
+        <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+          <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="font-display text-base font-bold text-navy">Lifetime Plan (One-Time Purchase)</h3>
+              <p class="text-xs text-gray-500">Pay once, automate forever. Zero renewal bills, lifetime updates, and priority support.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+              Pay Once, Automate Forever · Zero Recurring Fees
+            </span>
+          </div>
+
+          <table class="w-full text-left text-sm border-collapse">
+            <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+              <tr>
+                <th class="py-4 px-6 font-bold">Lifetime Plan</th>
+                <th class="py-4 px-5 font-bold">Billing Term</th>
+                <th class="py-4 px-5 font-bold">Workflows &amp; Runs</th>
+                <th class="py-4 px-5 font-bold">Updates &amp; SLA</th>
+                <th class="py-4 px-5 font-bold">Support</th>
+                <th class="py-4 px-5 font-bold">One-Time Price</th>
+                <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-600">
+              <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+                <td class="py-5 px-6 font-semibold text-navy">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-bold text-navy">Lifetime</span>
+                    <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Best Deal</span>
+                  </div>
+                  <span class="block text-xs font-normal text-gray-500 mt-0.5">Pay Once, Automate Forever · Unlimited Everything</span>
+                </td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">One-Time Purchase</td>
+                <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">Unlimited Everything</td>
+                <td class="py-5 px-5 whitespace-nowrap">Lifetime Updates · 99.99% SLA</td>
+                <td class="py-5 px-5 whitespace-nowrap font-medium text-navy">Priority Support</td>
+                <td class="py-5 px-5 font-extrabold text-navy whitespace-nowrap text-lg">$420.00 <span class="text-xs font-normal text-gray-500 block">no renewals</span></td>
+                <td class="py-5 px-6 text-right whitespace-nowrap">
+                  <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=42" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                    <span>Order Lifetime</span>
+                    <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Public Catalog Footer Strip -->
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-brandSoft text-brand shrink-0">
+            <i data-lucide="workflow" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h4 class="text-sm font-bold text-navy">Looking for custom worker nodes or private multi-tenant clusters?</h4>
+            <p class="text-xs text-gray-500">Explore the complete n8n hosting catalog with instant automated provisioning.</p>
+          </div>
+        </div>
+        <a href="https://dashboard.licenbase.com/store/n8n-hosting" class="inline-flex items-center gap-2 rounded-xl bg-mist px-4 py-2.5 text-xs font-bold text-navy border border-gray-200 transition hover:bg-white hover:text-brand hover:border-brand/40 shadow-xs">
+          <span>Open n8n Hosting Store</span>
+          <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+"""
+    elif p["slug"] == "openclaw-hosting":
+        matrix_section_html = """
+  <!-- ============ 03-MATRIX · QUICK COMPARISON MATRIX ============ -->
+  <section id="comparison-matrix" class="py-20 lg:py-28 bg-mist/60 border-b border-gray-200">
+    <div class="lb-shell max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="lb-eyebrow">AI Agent Platform Breakdown</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          Quick Comparison Matrix
+        </h2>
+        <p class="mt-3 text-base text-gray-500">
+          Compare specifications, model integrations, channel access, and pricing between monthly subscription and lifetime packages.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+        <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="font-display text-base font-bold text-navy">OpenClaw Cloud Packages</h3>
+            <p class="text-xs text-gray-500">Transparent pricing with zero per-message fees or token surcharges.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+            Instant Deployment &amp; Free White-Glove Setup
+          </span>
+        </div>
+
+        <table class="w-full text-left text-sm border-collapse">
+          <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+            <tr>
+              <th class="py-4 px-6 font-bold">Package</th>
+              <th class="py-4 px-5 font-bold">Billing Cycle</th>
+              <th class="py-4 px-5 font-bold">Supported Models</th>
+              <th class="py-4 px-5 font-bold">Support &amp; Updates</th>
+              <th class="py-4 px-5 font-bold">Price</th>
+              <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 text-gray-600">
+            <tr class="hover:bg-mist/30 transition-colors">
+              <td class="py-5 px-6 font-semibold text-navy">
+                <span class="text-base font-bold">OpenClaw Hosting</span>
+                <span class="block text-xs font-normal text-gray-400 mt-0.5">Monthly Cloud Subscription</span>
+              </td>
+              <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">Monthly Recurring</td>
+              <td class="py-5 px-5 whitespace-nowrap">GPT-4o, Claude, Llama, Kimi</td>
+              <td class="py-5 px-5 whitespace-nowrap">Standard Support · Free Setup</td>
+              <td class="py-5 px-5 font-bold text-navy whitespace-nowrap text-base">$14.00 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+              <td class="py-5 px-6 text-right whitespace-nowrap">
+                <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=43" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                  <span>Order Monthly</span>
+                  <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                </a>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+              <td class="py-5 px-6 font-semibold text-navy">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-navy">OpenClaw Hosting Lifetime</span>
+                  <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Best Deal</span>
+                </div>
+                <span class="block text-xs font-normal text-gray-500 mt-0.5">Pay Once, Run Forever · Zero Renewal Fees</span>
+              </td>
+              <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">One-Time Payment</td>
+              <td class="py-5 px-5 whitespace-nowrap font-medium text-navy">GPT-4o, Claude, Llama, Kimi</td>
+              <td class="py-5 px-5 whitespace-nowrap font-semibold text-accentDeep">Lifetime Priority Support &amp; Updates</td>
+              <td class="py-5 px-5 font-extrabold text-navy whitespace-nowrap text-lg">$380.00 <span class="text-xs font-normal text-gray-500 block">one-time</span></td>
+              <td class="py-5 px-6 text-right whitespace-nowrap">
+                <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=44" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                  <span>Order Lifetime</span>
+                  <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Public Catalog Footer Strip -->
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-brandSoft text-brand shrink-0">
+            <i data-lucide="bot" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h4 class="text-sm font-bold text-navy">Need custom bot skills or multi-agent orchestration?</h4>
+            <p class="text-xs text-gray-500">Explore the complete OpenClaw hosting storefront with instant automated provisioning.</p>
+          </div>
+        </div>
+        <a href="https://dashboard.licenbase.com/store/openclaw-hosting" class="inline-flex items-center gap-2 rounded-xl bg-mist px-4 py-2.5 text-xs font-bold text-navy border border-gray-200 transition hover:bg-white hover:text-brand hover:border-brand/40 shadow-xs">
+          <span>Open OpenClaw Store</span>
+          <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+"""
+    elif p["slug"] == "hermes-agent-hosting":
+        matrix_section_html = """
+  <!-- ============ 03-MATRIX · QUICK COMPARISON MATRIX ============ -->
+  <section id="comparison-matrix" class="py-20 lg:py-28 bg-mist/60 border-b border-gray-200">
+    <div class="lb-shell max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="lb-eyebrow">Autonomous AI Agent Platform Breakdown</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          Quick Comparison Matrix
+        </h2>
+        <p class="mt-3 text-base text-gray-500">
+          Compare specifications, deployment controls, subdomain access, and pricing between monthly subscription and lifetime packages.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-md">
+        <div class="px-6 py-4 bg-mist/50 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="font-display text-base font-bold text-navy">Hermes Agent Cloud Packages</h3>
+            <p class="text-xs text-gray-500">Transparent pricing with zero per-message fees or token surcharges.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-accentDeep">
+            Instant Deployment &amp; Private SSL Subdomain
+          </span>
+        </div>
+
+        <table class="w-full text-left text-sm border-collapse">
+          <thead class="bg-gray-50/80 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-700">
+            <tr>
+              <th class="py-4 px-6 font-bold">Package</th>
+              <th class="py-4 px-5 font-bold">Billing Cycle</th>
+              <th class="py-4 px-5 font-bold">LLM Model Keys</th>
+              <th class="py-4 px-5 font-bold">Price</th>
+              <th class="py-4 px-6 font-bold text-right">Direct Cart Link</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 text-gray-600">
+            <tr class="hover:bg-mist/30 transition-colors">
+              <td class="py-5 px-6 font-semibold text-navy">
+                <span class="text-base font-bold">Hermes Agent</span>
+                <span class="block text-xs font-normal text-gray-400 mt-0.5">Monthly Cloud Subscription</span>
+              </td>
+              <td class="py-5 px-5 font-medium text-navy whitespace-nowrap">Monthly Recurring</td>
+              <td class="py-5 px-5 whitespace-nowrap">Bring Your Own Key (BYOK)</td>
+              <td class="py-5 px-5 font-bold text-navy whitespace-nowrap text-base">$14.00 <span class="text-xs font-normal text-gray-500">/ mo</span></td>
+              <td class="py-5 px-6 text-right whitespace-nowrap">
+                <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=45" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-sm inline-flex items-center gap-1.5">
+                  <span>Order Monthly</span>
+                  <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                </a>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-brandSoft/20 bg-brandSoft/10 transition-colors border-l-4 border-l-brand">
+              <td class="py-5 px-6 font-semibold text-navy">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-navy">Hermes Agent Lifetime</span>
+                  <span class="rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xs">Best Deal</span>
+                </div>
+                <span class="block text-xs font-normal text-gray-500 mt-0.5">Pay Once, Run Forever · Zero Renewal Fees</span>
+              </td>
+              <td class="py-5 px-5 font-bold text-navy whitespace-nowrap">One-Time Payment</td>
+              <td class="py-5 px-5 whitespace-nowrap font-medium text-navy">Bring Your Own Key (BYOK)</td>
+              <td class="py-5 px-5 font-extrabold text-navy whitespace-nowrap text-lg">$380.00 <span class="text-xs font-normal text-gray-500 block">one-time</span></td>
+              <td class="py-5 px-6 text-right whitespace-nowrap">
+                <a href="https://dashboard.licenbase.com/cart.php?a=add&pid=46" class="lb-btn lb-btn--primary py-2 px-4 text-xs font-bold shadow-md shadow-brand/20 inline-flex items-center gap-1.5">
+                  <span>Order Lifetime</span>
+                  <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Public Catalog Footer Strip -->
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-brandSoft text-brand shrink-0">
+            <i data-lucide="brain" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h4 class="text-sm font-bold text-navy">Need dedicated agent clusters or custom vector stores?</h4>
+            <p class="text-xs text-gray-500">Explore the complete Hermes Agent hosting storefront with instant automated provisioning.</p>
+          </div>
+        </div>
+        <a href="https://dashboard.licenbase.com/store/hermes-agent" class="inline-flex items-center gap-2 rounded-xl bg-mist px-4 py-2.5 text-xs font-bold text-navy border border-gray-200 transition hover:bg-white hover:text-brand hover:border-brand/40 shadow-xs">
+          <span>Open Hermes Agent Store</span>
+          <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+"""
 
     # FAQs HTML
     faqs_html = ""
@@ -873,8 +1780,13 @@ def generate_hosting_page(p):
             f'<span>{feat}</span></li>'
             for feat in pop.get("specs", [])[:5]
         ])
-        price_val = pop["prices"].get("monthly") or list(pop["prices"].values())[0]
-        price_period = "per month" if "monthly" in pop["prices"] else "starting price"
+        price_val = pop.get("price") or pop["prices"].get("monthly") or list(pop["prices"].values())[0]
+        price_period = pop.get("period_label") or ("per month" if "monthly" in pop.get("prices", {}) else ("per year" if "yearly" in pop.get("prices", {}) else "starting price"))
+        if price_period == "yr":
+            price_period = "year"
+        elif price_period == "mo":
+            price_period = "month"
+        pop_url = pop.get("url") or pop.get("urls", {}).get("monthly") or list(pop.get("urls", {}).values())[0]
         hero_popular_card = f"""
         <!-- Visual Hero Card: Most Popular Package -->
         <div class="relative mx-auto w-full max-w-lg">
@@ -883,10 +1795,10 @@ def generate_hosting_page(p):
             <!-- Header Badges -->
             <div class="flex items-center justify-between border-b border-gray-100 pb-5">
               <span class="inline-flex items-center gap-1.5 rounded-full bg-brand px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
-                <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> Most Popular Choice
+                Most Popular Choice
               </span>
               <span class="inline-flex items-center gap-1 text-xs font-semibold text-accentDeep bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
-                <i data-lucide="zap" class="h-3.5 w-3.5"></i> Instant Setup
+                Instant Setup
               </span>
             </div>
 
@@ -917,7 +1829,7 @@ def generate_hosting_page(p):
 
               <!-- Order Button -->
               <div class="mt-6">
-                <a href="{pop['url']}" class="lb-btn lb-btn--primary w-full py-3.5 text-sm font-bold shadow-lg shadow-brand/25 flex items-center justify-center gap-2">
+                <a href="{pop_url}" class="lb-btn lb-btn--primary w-full py-3.5 text-sm font-bold shadow-lg shadow-brand/25 flex items-center justify-center gap-2">
                   <span>Order {pop['name']}</span>
                   <i data-lucide="arrow-right" class="h-4 w-4"></i>
                 </a>
@@ -1210,18 +2122,6 @@ def generate_hosting_page(p):
 
           <!-- Desktop nav -->
           <nav class="lb-nav" aria-label="Main navigation">
-            <!-- Software mega menu -->
-            <div class="lb-drop lb-drop--mega">
-              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
-                Software <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
-              </button>
-              <div class="lb-drop-panel">
-                <div class="lb-mega-soon">
-                  <p>New products coming soon.</p>
-                </div>
-              </div>
-            </div>
-
             <!-- Licenses mega menu -->
             <div class="lb-drop lb-drop--mega">
               <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
@@ -1463,6 +2363,8 @@ def generate_hosting_page(p):
       </div>
     </div>
   </section>
+
+  {matrix_section_html}
 
   <!-- ============ 03b · SEO COPY ============ -->
   <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
@@ -1750,8 +2652,37 @@ def generate_hosting_page(p):
         document.querySelectorAll('[data-price]').forEach(function (p) {{
           p.classList.toggle('hidden', p.dataset.price !== t);
         }});
+        document.querySelectorAll('[data-cta]').forEach(function (c) {{
+          c.classList.toggle('hidden', c.dataset.cta !== t);
+        }});
         var n = document.querySelector('[data-lifetime-note]');
         if (n) n.classList.toggle('hidden', t !== 'lifetime');
+
+        // Synchronize with Comparison Matrix panel toggle
+        var mTarget = t === 'lifetime' ? 'lifetime' : 'recurring';
+        var mBtn = document.querySelector('[data-matrix-toggle="' + mTarget + '"]');
+        if (mBtn && mBtn.getAttribute('aria-pressed') !== 'true') {{
+          mBtn.click();
+        }}
+      }});
+    }});
+
+    // Comparison Matrix Switcher Script
+    document.querySelectorAll('[data-matrix-toggle]').forEach(function (b) {{
+      b.addEventListener('click', function () {{
+        var target = b.dataset.matrixToggle;
+        document.querySelectorAll('[data-matrix-toggle]').forEach(function (x) {{
+          var on = x === b;
+          x.setAttribute('aria-pressed', on);
+          x.classList.toggle('bg-brand', on);
+          x.classList.toggle('text-white', on);
+          x.classList.toggle('shadow-md', on);
+          x.classList.toggle('shadow-brand/20', on);
+          x.classList.toggle('text-gray-600', !on);
+        }});
+        document.querySelectorAll('[data-matrix-panel]').forEach(function (p) {{
+          p.classList.toggle('hidden', p.dataset.matrixPanel !== target);
+        }});
       }});
     }});
   </script>

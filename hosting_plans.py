@@ -31,7 +31,7 @@ PLANS = {
         },
         {
             "name": "Managed VPS Pro",
-            "badge": "Most Popular · Agency Pick",
+            "badge": "Agency Pick",
             "desc": "Engineered for digital agencies, high-traffic WooCommerce shops, and multi-tenant hosting.",
             "specs": [
                 "4 vCPU AMD EPYC Cores",
@@ -87,7 +87,7 @@ PLANS = {
         },
         {
             "name": "KVM NVMe 2",
-            "badge": "Most Popular · Developer Pick",
+            "badge": "Developer Pick",
             "desc": "Balanced compute and memory power for Docker containers, web servers, and databases.",
             "specs": [
                 "2 vCPU AMD EPYC Cores",
@@ -143,7 +143,7 @@ PLANS = {
         },
         {
             "name": "SMTP Pro VPS",
-            "badge": "Most Popular · High Volume",
+            "badge": "High Volume",
             "desc": "High-throughput mail server engineered for marketing campaigns, SaaS alerts, and relays.",
             "specs": [
                 "4 vCPU Cores",
@@ -181,110 +181,193 @@ PLANS = {
     "shared-hosting": [
         {
             "name": "Personal NVMe",
-            "badge": "Single Website Starter",
-            "desc": "Perfect for personal blogs, portfolios, and lightweight starter projects.",
+            "badge": "Personal & Starter Sites",
+            "desc": "High-performance NVMe cloud hosting with LiteSpeed cache and cPanel for personal websites and blogs.",
             "specs": [
-                "1 Website Hosted",
-                "10 GB NVMe SSD Storage",
-                "Unmetered Monthly Bandwidth",
-                "Free AutoSSL Certificates",
-                "5 Business Email Accounts",
-                "cPanel & Softaculous 1-Click Apps",
-                "Automated Daily Remote Backups"
+                "Unlimited Websites Hosted",
+                "10 GB Pure NVMe Storage",
+                "2 vCPU | 2 GB Dedicated RAM",
+                "IO: 50 MB/s, IOPS: 1024, EP: 30",
+                "Daily Automated Remote Backups",
+                "1-Click Softaculous / Script Installer",
+                "LiteSpeed Web Server with LSCache",
+                "cPanel Control Panel Included",
+                "Free SSL Certificate"
             ],
-            "prices": {"monthly": 2.50, "yearly": 25.00, "lifetime": 49.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=110",
+            "prices": {"monthly": 2.99, "yearly": 29.78, "lifetime": 129.00},
+            "yearly_base": 35.88,
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=27&billingcycle=monthly",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=27&billingcycle=monthly",
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=27&billingcycle=annually",
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=31"
+            },
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/shared-hosting/personal-nvme",
+                "yearly": "https://dashboard.licenbase.com/store/shared-hosting/personal-nvme",
+                "lifetime": "https://dashboard.licenbase.com/store/shared-hosting/personal-nvme-lifetime"
+            },
             "popular": False
         },
         {
             "name": "Professional NVMe",
-            "badge": "Most Popular · Unlimited Sites",
-            "desc": "Blazing-fast LiteSpeed hosting with unmetered websites for businesses and creators.",
+            "badge": "High Speed",
+            "desc": "Blazing-fast LiteSpeed hosting with 30 GB NVMe disk and 2 vCPU compute for business and eCommerce.",
             "specs": [
                 "Unlimited Websites Hosted",
-                "50 GB NVMe SSD Storage",
-                "Unmetered Monthly Bandwidth",
-                "Free Unlimited SSL Certificates",
-                "Unlimited Business Email Accounts",
-                "LiteSpeed Web Server + LSCache",
-                "2x CPU & RAM Allocation",
-                "Free White-Glove Site Migration"
+                "30 GB Pure NVMe Storage",
+                "2 vCPU | 2 GB Dedicated RAM",
+                "IO: 50 MB/s, IOPS: 1024, EP: 30",
+                "Daily Automated Remote Backups",
+                "1-Click Softaculous / Script Installer",
+                "LiteSpeed Web Server with LSCache",
+                "cPanel Control Panel Included",
+                "Free SSL Certificate"
             ],
-            "prices": {"monthly": 4.99, "yearly": 49.00, "lifetime": 89.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=111",
+            "prices": {"monthly": 4.99, "yearly": 49.70, "lifetime": 229.00},
+            "yearly_base": 59.88,
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=28&billingcycle=monthly",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=28&billingcycle=monthly",
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=28&billingcycle=annually",
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=32"
+            },
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/shared-hosting/professional-nvme",
+                "yearly": "https://dashboard.licenbase.com/store/shared-hosting/professional-nvme",
+                "lifetime": "https://dashboard.licenbase.com/store/shared-hosting/professional-nvme-lifetime"
+            },
             "popular": True
         },
         {
             "name": "Turbo NVMe",
-            "badge": "Maximum Speed & Security",
-            "desc": "Highest tier computing power with Imunify360 AI defense and unmetered NVMe disk.",
+            "badge": "Maximum NVMe Capacity",
+            "desc": "Unlimited NVMe storage powered by LiteSpeed Enterprise, high I/O throughput, and unmetered websites.",
             "specs": [
                 "Unlimited Websites Hosted",
-                "Unlimited NVMe SSD Storage",
-                "Unmetered Monthly Bandwidth",
-                "Free Dedicated IPv4 Address",
-                "4x CPU & RAM Allocation",
-                "LiteSpeed Enterprise Acceleration",
-                "Imunify360 Proactive Defense",
-                "Priority 24/7 VIP Support"
+                "Unlimited Pure NVMe Storage",
+                "2 vCPU | 2 GB Dedicated RAM",
+                "IO: 50 MB/s, IOPS: 1024, EP: 30",
+                "Daily Automated Remote Backups",
+                "1-Click Softaculous / Script Installer",
+                "LiteSpeed Web Server with LSCache",
+                "cPanel Control Panel Included",
+                "Free SSL Certificate"
             ],
-            "prices": {"monthly": 8.99, "yearly": 89.00, "lifetime": 149.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=112",
+            "prices": {"monthly": 7.99, "yearly": 79.58, "lifetime": 399.00},
+            "yearly_base": 95.88,
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=29&billingcycle=monthly",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=29&billingcycle=monthly",
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=29&billingcycle=annually",
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=30"
+            },
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/shared-hosting/turbo-nvme",
+                "yearly": "https://dashboard.licenbase.com/store/shared-hosting/turbo-nvme",
+                "lifetime": "https://dashboard.licenbase.com/store/shared-hosting/turbo-nvme-lifetime"
+            },
             "popular": False
         }
     ],
     "reseller-hosting": [
         {
             "name": "Bronze Reseller",
-            "badge": "Starter Reseller Plan",
-            "desc": "Ideal for freelance web designers and developers hosting their first client websites.",
+            "badge": "Starter Agency Plan",
+            "desc": "Perfect for freelancers and web studios managing up to 20 client cPanel accounts.",
             "specs": [
-                "25 cPanel Accounts",
-                "50 GB Pure NVMe Storage",
-                "1 TB Monthly Bandwidth",
-                "Full WebHost Manager (WHM) Access",
-                "Free AutoSSL for All Clients",
-                "Private Custom Nameservers",
-                "Free Softaculous 1-Click Apps"
+                "20 cPanel Accounts",
+                "20 GB NVMe SSD Disk Space",
+                "Unlimited Bandwidth",
+                "2 vCPU | 2 GB RAM Per cPanel",
+                "24/7 Instant Response Support",
+                "WHM (Admin Control Panel)",
+                "Daily Automated Remote Backups",
+                "Custom Private Nameservers",
+                "100% Whitelabel / Unbranded",
+                "Free Reseller Migration",
+                "Free SSL Certificates"
             ],
-            "prices": {"monthly": 9.00, "yearly": 90.00, "lifetime": 129.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=113",
+            "prices": {"monthly": 28.00, "yearly": 196.00, "lifetime": 360.00},
+            "yearly_base": 336.00,
+            "discount_badge": "5 Months Free (Save 42%)",
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=33&billingcycle=monthly",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=33&billingcycle=monthly",
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=33&billingcycle=annually",
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=36"
+            },
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/reseller-hosting/bronze-reseller",
+                "yearly": "https://dashboard.licenbase.com/store/reseller-hosting/bronze-reseller",
+                "lifetime": "https://dashboard.licenbase.com/store/reseller-hosting/bronze-reseller-lifetime"
+            },
             "popular": False
         },
         {
             "name": "Silver Reseller",
-            "badge": "Most Popular · Agency Standard",
-            "desc": "The complete agency standard with overselling enabled and LiteSpeed acceleration.",
+            "badge": "Agency Standard",
+            "desc": "Our most popular agency tier with 50 accounts, unlimited NVMe disk, and high performance.",
             "specs": [
-                "60 cPanel Accounts",
-                "120 GB Pure NVMe Storage",
-                "3 TB Monthly Bandwidth",
-                "Full WHM Administrative Access",
-                "Overselling Enabled Across Accounts",
-                "LiteSpeed Web Server Acceleration",
-                "Free Billing Software Integration",
-                "Automated Daily Remote Backups"
+                "50 cPanel Accounts",
+                "Unlimited NVMe SSD Disk Space",
+                "Unlimited Bandwidth",
+                "2 vCPU | 2 GB RAM Per cPanel",
+                "24/7 Instant Response Support",
+                "WHM (Admin Control Panel)",
+                "Daily Automated Remote Backups",
+                "Custom Private Nameservers",
+                "100% Whitelabel / Unbranded",
+                "Free Reseller Migration",
+                "Free SSL Certificates"
             ],
-            "prices": {"monthly": 16.00, "yearly": 160.00, "lifetime": 219.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=114",
+            "prices": {"monthly": 65.00, "yearly": 455.00, "lifetime": 665.00},
+            "yearly_base": 780.00,
+            "discount_badge": "5 Months Free (Save 42%)",
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=34&billingcycle=monthly",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=34&billingcycle=monthly",
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=34&billingcycle=annually",
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=37"
+            },
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/reseller-hosting/silver-reseller",
+                "yearly": "https://dashboard.licenbase.com/store/reseller-hosting/silver-reseller",
+                "lifetime": "https://dashboard.licenbase.com/store/reseller-hosting/silver-reseller-lifetime"
+            },
             "popular": True
         },
         {
             "name": "Gold Enterprise Reseller",
-            "badge": "Master WHM Enterprise",
-            "desc": "Maximum account volume with Master WHM plugins and VIP technical agency support.",
+            "badge": "Master Enterprise Fleet",
+            "desc": "High-capacity tier for large web agencies hosting 100 client sites with unlimited NVMe.",
             "specs": [
-                "150 cPanel Accounts",
-                "250 GB Pure NVMe Storage",
-                "6 TB Monthly Bandwidth",
-                "Master WHM & WHMReseller Plugin",
-                "Overselling Enabled Across Accounts",
-                "100% White-Label Branding",
-                "Imunify360 Security Suite Included",
-                "VIP Priority 24/7 Agency Desk"
+                "100 cPanel Accounts",
+                "Unlimited NVMe SSD Disk Space",
+                "Unlimited Bandwidth",
+                "2 vCPU | 2 GB RAM Per cPanel",
+                "24/7 Instant Response Support",
+                "WHM (Admin Control Panel)",
+                "Daily Automated Remote Backups",
+                "Custom Private Nameservers",
+                "100% Whitelabel / Unbranded",
+                "Free Reseller Migration",
+                "Free SSL Certificates"
             ],
-            "prices": {"monthly": 28.00, "yearly": 280.00, "lifetime": 349.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=115",
+            "prices": {"monthly": 95.00, "yearly": 665.00, "lifetime": 980.00},
+            "yearly_base": 1140.00,
+            "discount_badge": "5 Months Free (Save 42%)",
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=35&billingcycle=monthly",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=35&billingcycle=monthly",
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=35&billingcycle=annually",
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=38"
+            },
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/reseller-hosting/gold-enterprise-reseller",
+                "yearly": "https://dashboard.licenbase.com/store/reseller-hosting/gold-enterprise-reseller",
+                "lifetime": "https://dashboard.licenbase.com/store/reseller-hosting/gold-enterprise-reseller-lifetime"
+            },
             "popular": False
         }
     ],
@@ -312,167 +395,240 @@ PLANS = {
     ],
     "n8n-hosting": [
         {
-            "name": "n8n Starter",
+            "name": "Starter",
+            "pid": 39,
             "badge": "Solo Automation Node",
+            "tagline": "Great for Getting Started",
             "desc": "Dedicated instance for personal workflow pipelines, webhooks, and light automations.",
             "specs": [
-                "Dedicated Cloud Instance",
-                "2 vCPU Cores & 4 GB RAM",
-                "40 GB NVMe Storage",
-                "Unlimited Active Workflows",
-                "Pre-configured PostgreSQL Database",
-                "Custom Subdomain & Automated SSL",
-                "Unlimited Webhook Triggers"
+                "Great for Getting Started",
+                "Unlimited Workflows",
+                "Unlimited Executions",
+                "Unlimited Storage",
+                "Daily Backups",
+                "99.99% Uptime SLA",
+                "24/7 Live Chat"
             ],
-            "prices": {"monthly": 9.00, "yearly": 90.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=119",
+            "price": 9.00,
+            "price_str": "$9.00",
+            "period_label": "mo",
+            "cycle_label": "Billed Monthly",
+            "prices": {"monthly": 9.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=39",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=39"
+            },
+            "store_url": "https://dashboard.licenbase.com/store/n8n-hosting/starter",
+            "store_urls": {
+                "monthly": "https://dashboard.licenbase.com/store/n8n-hosting/starter"
+            },
             "popular": False
         },
         {
-            "name": "n8n Production",
-            "badge": "Most Popular · High Concurrency",
-            "desc": "Production-grade queue architecture with Redis and high-speed database execution.",
+            "name": "Professional",
+            "pid": 40,
+            "badge": "Agency & Team Pick",
+            "tagline": "Best Value for Teams",
+            "desc": "Engineered for high-volume webhook automations, version upgrades, and advanced monitoring.",
             "specs": [
-                "Dedicated High-Compute Instance",
-                "4 vCPU Cores & 8 GB RAM",
-                "80 GB NVMe Storage",
-                "High-Concurrency Queue Mode",
-                "Redis Queue + Dedicated PostgreSQL",
-                "Community & Custom Node Support",
-                "Zero Cold Starts & Dedicated CPU",
-                "Automated Daily Instance Snapshots"
+                "Best Value for Teams",
+                "Everything in Starter",
+                "Unlimited Workflows",
+                "Unlimited Executions",
+                "Unlimited Storage",
+                "Priority Support",
+                "Advanced Monitoring",
+                "Free Version Upgrades",
+                "Daily Backups",
+                "99.99% Uptime SLA",
+                "24/7 Live Chat"
             ],
-            "prices": {"monthly": 19.00, "yearly": 190.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=120",
+            "price": 90.00,
+            "price_str": "$90.00",
+            "period_label": "yr",
+            "cycle_label": "Billed Annually",
+            "savings": "Save $18/yr ($7.50/mo equiv.)",
+            "prices": {"yearly": 90.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=40",
+            "urls": {
+                "yearly": "https://dashboard.licenbase.com/cart.php?a=add&pid=40"
+            },
+            "store_url": "https://dashboard.licenbase.com/store/n8n-hosting/professional",
+            "store_urls": {
+                "yearly": "https://dashboard.licenbase.com/store/n8n-hosting/professional"
+            },
             "popular": True
         },
         {
-            "name": "n8n Enterprise Cluster",
-            "badge": "Multi-Worker Cluster",
-            "desc": "Multi-worker scaling cluster for high-volume enterprise automation pipelines.",
+            "name": "Growth",
+            "pid": 41,
+            "badge": "Dedicated Performance",
+            "tagline": "Scale with Confidence",
+            "desc": "Dedicated compute with 2-year price lock protection for scaling automation pipelines.",
             "specs": [
-                "Multi-Worker Scaling Architecture",
-                "8 vCPU Cores & 16 GB RAM",
-                "160 GB NVMe Storage",
-                "High-Availability Redis & DB Cluster",
-                "Multi-Tenant Team Collaboration",
-                "Dedicated IP & Custom Domain",
-                "SLA 99.99% Execution Uptime",
-                "24/7 Sysadmin Automation Support"
+                "Scale with Confidence",
+                "Unlimited Workflows",
+                "Unlimited Executions",
+                "Dedicated Performance",
+                "Priority Support",
+                "Advanced Monitoring",
+                "Price Lock for 2 Years",
+                "Daily Backups",
+                "99.99% Uptime SLA",
+                "24/7 Live Chat"
             ],
-            "prices": {"monthly": 39.00, "yearly": 390.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=121",
+            "price": 180.00,
+            "price_str": "$180.00",
+            "period_label": "2yr",
+            "cycle_label": "Billed Every 2 Years",
+            "savings": "Price Lock for 2 Years ($7.50/mo)",
+            "prices": {"biennial": 180.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=41",
+            "urls": {
+                "biennial": "https://dashboard.licenbase.com/cart.php?a=add&pid=41"
+            },
+            "store_url": "https://dashboard.licenbase.com/store/n8n-hosting/growth",
+            "store_urls": {
+                "biennial": "https://dashboard.licenbase.com/store/n8n-hosting/growth"
+            },
+            "popular": False
+        },
+        {
+            "name": "Lifetime",
+            "pid": 42,
+            "badge": "★ Best Deal · Pay Once",
+            "tagline": "Pay Once, Automate Forever",
+            "desc": "Pay once and automate forever. Zero renewal bills, lifetime updates, and priority support.",
+            "specs": [
+                "★ Best Deal — Pay Once, Automate Forever",
+                "No renewals. No hidden fees. Ever.",
+                "Unlimited Everything — Forever",
+                "Lifetime Updates",
+                "Lifetime Monitoring",
+                "Priority Support",
+                "99.99% Uptime SLA",
+                "Zero Recurring Fees"
+            ],
+            "price": 420.00,
+            "price_str": "$420.00",
+            "period_label": "one-time",
+            "cycle_label": "One-Time Purchase",
+            "savings": "Zero Recurring Fees Ever",
+            "prices": {"lifetime": 420.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=42",
+            "urls": {
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=42"
+            },
+            "store_url": "https://dashboard.licenbase.com/store/n8n-hosting/lifetime",
+            "store_urls": {
+                "lifetime": "https://dashboard.licenbase.com/store/n8n-hosting/lifetime"
+            },
             "popular": False
         }
     ],
     "openclaw-hosting": [
         {
-            "name": "Crawler Node",
-            "badge": "Single Browser Node",
-            "desc": "Dedicated cloud environment for automated testing, single-worker scrapers, and cron tasks.",
+            "name": "OpenClaw Hosting",
+            "badge": "Monthly Subscription",
+            "tagline": "Autonomous Multi-Channel AI Agent",
+            "desc": "Dedicated cloud runtime for autonomous AI bots connected to WhatsApp, Telegram, Discord, and 40+ channels.",
             "specs": [
-                "Dedicated Browser Environment",
-                "2 vCPU Cores & 4 GB RAM",
-                "50 GB NVMe Storage",
-                "Pre-installed Chromium & Node Runtime",
-                "Headless Browser Automation Ready",
-                "Custom Webhook Triggering",
-                "Residential & Datacenter Proxy Ready"
+                "Unlimited storage and resource usage",
+                "Unlimited skills and automation",
+                "All AI models (GPT-4o, Claude, Llama, Kimi)",
+                "WhatsApp, Telegram, Discord and 40+ channels",
+                "Full management dashboard",
+                "Custom bot personas",
+                "99.99% uptime SLA",
+                "Free installation and setup"
             ],
-            "prices": {"monthly": 9.00, "yearly": 90.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=122",
+            "price": 14.00,
+            "price_str": "$14.00",
+            "period_label": "mo",
+            "cycle_label": "Monthly Recurring Billing",
+            "prices": {"monthly": 14.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=43",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=43"
+            },
             "popular": False
         },
         {
-            "name": "Scraper Pro",
-            "badge": "Most Popular · High Volume",
-            "desc": "Multi-threaded headless browser swarm with anti-fingerprinting stealth plugins.",
+            "name": "OpenClaw Hosting Lifetime",
+            "badge": "★ Best Deal · Pay Once",
+            "tagline": "Pay Once, Run Bots Forever",
+            "desc": "Lifetime access with all future updates, priority support, and zero renewal fees ever.",
             "specs": [
-                "High-Concurrency Scraping Node",
-                "4 vCPU Cores & 8 GB RAM",
-                "100 GB NVMe Storage",
-                "Multi-Threaded Headless Browser Swarm",
-                "Anti-Fingerprinting Stealth Modules",
-                "Redis Queue Task Pipeline",
-                "Dedicated 1 Gbps Port",
-                "Automated Process Watchdog"
+                "Unlimited storage and resource usage",
+                "Unlimited skills and automation",
+                "All AI models (GPT-4o, Claude, Llama, Kimi)",
+                "WhatsApp, Telegram, Discord and 40+ channels",
+                "Full management dashboard",
+                "Custom bot personas",
+                "99.99% uptime SLA",
+                "All future features and updates",
+                "Lifetime priority support"
             ],
-            "prices": {"monthly": 19.00, "yearly": 190.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=123",
+            "price": 380.00,
+            "price_str": "$380.00",
+            "period_label": "one-time",
+            "cycle_label": "One-Time Purchase",
+            "savings": "Zero Recurring Fees Ever",
+            "prices": {"lifetime": 380.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=44",
+            "urls": {
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=44"
+            },
             "popular": True
-        },
-        {
-            "name": "Enterprise Farm",
-            "badge": "Distributed Cluster",
-            "desc": "Massive extraction capacity for web data intelligence, market scrapers, and datasets.",
-            "specs": [
-                "Distributed Scraping Cluster",
-                "8 vCPU Cores & 16 GB RAM",
-                "200 GB NVMe Storage",
-                "Massive Concurrent Page Extractions",
-                "Zero Browser Memory Leaks",
-                "Custom Proxy Rotation Engine",
-                "Persistent Storage & Data Pipelines",
-                "24/7 Scraping Infrastructure Support"
-            ],
-            "prices": {"monthly": 39.00, "yearly": 390.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=124",
-            "popular": False
         }
     ],
     "hermes-agent-hosting": [
         {
-            "name": "Agent Starter",
-            "badge": "Autonomous Sandbox",
-            "desc": "Dedicated AI agent sandbox for experimentation, local tool calling, and solo agents.",
+            "name": "Hermes Agent",
+            "badge": "Monthly Subscription",
+            "tagline": "Autonomous AI Agent Cloud",
+            "desc": "Dedicated cloud runtime for continuous autonomous AI agents, tool-calling loops, and reasoning workflows.",
             "specs": [
-                "Dedicated AI Agent Sandbox",
-                "2 vCPU Cores & 4 GB RAM",
-                "50 GB NVMe Storage",
-                "Python 3.11+ & Node Environment",
-                "Hermes Agent Framework Pre-installed",
-                "ChromaDB / Qdrant Vector Ready",
-                "REST & Webhook Execution API"
+                "Auto-deployed in minutes",
+                "Private SSL-secured subdomain",
+                "Bring your own LLM key",
+                "Start / stop / restart controls",
+                "99.99% uptime SLA"
             ],
-            "prices": {"monthly": 9.00, "yearly": 90.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=125",
+            "price": 14.00,
+            "price_str": "$14.00",
+            "period_label": "mo",
+            "cycle_label": "Monthly Recurring Billing",
+            "prices": {"monthly": 14.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=45",
+            "urls": {
+                "monthly": "https://dashboard.licenbase.com/cart.php?a=add&pid=45"
+            },
             "popular": False
         },
         {
-            "name": "Agent Pro",
-            "badge": "Most Popular · Production Agent",
-            "desc": "Persistent agent workstation with long-term memory store and multi-agent coordination.",
+            "name": "Hermes Agent Lifetime",
+            "badge": "★ Best Deal · Pay Once",
+            "tagline": "Pay Once, Run Agents Forever",
+            "desc": "Lifetime access with persistent storage, full daemon controls, zero renewal bills, and priority support.",
             "specs": [
-                "Autonomous Agent Workstation",
-                "4 vCPU Cores & 8 GB RAM",
-                "100 GB NVMe Storage",
-                "Multi-Agent Concurrent Orchestration",
-                "Persistent State & Long-Term Memory",
-                "Redis Memory Cache & Session Store",
-                "High-Speed Inference API Endpoints",
-                "Automatic Process Respawn Daemon"
+                "Auto-deployed in minutes",
+                "Private SSL-secured subdomain",
+                "Bring your own LLM key",
+                "Start / stop / restart controls",
+                "No recurring fees"
             ],
-            "prices": {"monthly": 19.00, "yearly": 190.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=126",
+            "price": 380.00,
+            "price_str": "$380.00",
+            "period_label": "one-time",
+            "cycle_label": "One-Time Purchase",
+            "savings": "Zero Recurring Fees Ever",
+            "prices": {"lifetime": 380.00},
+            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=46",
+            "urls": {
+                "lifetime": "https://dashboard.licenbase.com/cart.php?a=add&pid=46"
+            },
             "popular": True
-        },
-        {
-            "name": "Agent Cluster",
-            "badge": "Enterprise AI Swarm",
-            "desc": "High-compute swarm node for long-running autonomous workflows and agent fleets.",
-            "specs": [
-                "Enterprise Autonomous Swarm",
-                "8 vCPU Cores & 16 GB RAM",
-                "200 GB NVMe Storage",
-                "Full Local Tool & Code Execution Sandbox",
-                "Distributed Task Queue & Scheduler",
-                "Dedicated High-Throughput Network",
-                "Daily Automated State Snapshots",
-                "24/7 AI Infrastructure Specialist Support"
-            ],
-            "prices": {"monthly": 39.00, "yearly": 390.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=127",
-            "popular": False
         }
     ]
 }
