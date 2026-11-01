@@ -682,6 +682,221 @@ def generate_hosting_page(p):
 
         grid_cls = "grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto" if len(plans) == 2 else "grid gap-6 sm:grid-cols-2 xl:grid-cols-4"
         tiers_html = f'<div class="{grid_cls}">{"".join(card_items)}</div>'
+    elif p["slug"] == "port-25-open-vps":
+        tiers_html = """
+<div id="vps-plans-widget" style="width: 100%; max-width: 1200px; margin: 2rem auto; box-sizing: border-box; font-family: inherit;">
+  <div id="vps-plans-state" style="text-align: center; padding: 2.5rem 1rem; color: #64748b; font-size: 0.95rem;">
+    Loading available VPS plans...
+  </div>
+</div>
+
+<script>
+(function () {
+  var PORT25_PLAN_IDS = [];
+  var DASH = 'https://dashboard.licenbase.com/index.php?m=vpsorder';
+
+  var container = document.getElementById('vps-plans-widget');
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function parsePrice(s) {
+    if (!s) return Infinity;
+    var n = parseFloat(String(s).replace(/[^0-9.]/g, ''));
+    return isNaN(n) ? Infinity : n;
+  }
+
+  function renderFallback() {
+    container.innerHTML =
+      '<div style="text-align: center; padding: 2.5rem 1.5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 1rem;">' +
+        '<p style="font-size: 1rem; color: #1e293b; font-weight: 600; margin: 0 0 1rem 0;">Explore VPS Plans</p>' +
+        '<a href="' + esc(DASH) + '" style="display: inline-block; background: #2563eb; color: #ffffff; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; text-decoration: none; font-size: 0.9rem;">View plans &rarr;</a>' +
+      '</div>';
+  }
+
+  fetch(DASH + '&action=plans&src=mkt', { credentials: 'omit' })
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      if (!data || !Array.isArray(data.locations)) {
+        renderFallback();
+        return;
+      }
+
+      var allItems = [];
+      var activeLocations = [];
+      var dupMap = {};
+
+      data.locations.forEach(function (loc) {
+        var locName = loc.name || '';
+        var locFlag = loc.flag || '';
+        var locPlansCount = 0;
+
+        (loc.dcs || []).forEach(function (dc) {
+          if (dc.soldout) return;
+          var dcId = dc.id;
+          var dcCpu = dc.cpu || '';
+
+          (dc.plans || []).forEach(function (plan) {
+            var planId = plan.id;
+            if (PORT25_PLAN_IDS.length > 0 && PORT25_PLAN_IDS.indexOf(planId) === -1) {
+              return;
+            }
+            var p1 = (plan.prices && (plan.prices['1'] || plan.prices[1])) || '';
+            var item = {
+              dcId: dcId,
+              dcCpu: dcCpu,
+              planId: planId,
+              name: plan.name || '',
+              cpu: plan.cpu,
+              ram: plan.ram,
+              disk: plan.disk,
+              eth: plan.eth || '',
+              location: locName,
+              flag: locFlag,
+              priceStr: p1,
+              priceNum: parsePrice(p1)
+            };
+
+            allItems.push(item);
+            locPlansCount++;
+
+            var dupKey = locName + '||' + item.name + '||' + p1;
+            dupMap[dupKey] = (dupMap[dupKey] || 0) + 1;
+          });
+        });
+
+        if (locPlansCount > 0) {
+          activeLocations.push({
+            name: locName,
+            flag: locFlag
+          });
+        }
+      });
+
+      if (!allItems.length) {
+        renderFallback();
+        return;
+      }
+
+      var currentLoc = 'all';
+
+      container.innerHTML =
+        '<div id="vps-loc-tabs" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; align-items: center; margin-bottom: 2rem;"></div>' +
+        '<div id="vps-plans-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem;"></div>';
+
+      var tabsContainer = document.getElementById('vps-loc-tabs');
+      var gridContainer = document.getElementById('vps-plans-grid');
+
+      function getTabStyle(isActive) {
+        if (isActive) {
+          return 'background: #2563eb; color: #ffffff; border: 1px solid #2563eb; padding: 0.45rem 0.85rem; border-radius: 9999px; font-size: 0.825rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; box-shadow: 0 2px 4px rgba(37,99,235,0.2); transition: all 0.15s ease;';
+        }
+        return 'background: #ffffff; color: #475569; border: 1px solid #cbd5e1; padding: 0.45rem 0.85rem; border-radius: 9999px; font-size: 0.825rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; transition: all 0.15s ease;';
+      }
+
+      function renderTabs() {
+        var tabsHtml = '';
+        var isAllActive = (currentLoc === 'all');
+        tabsHtml += '<button type="button" data-loc="all" style="' + getTabStyle(isAllActive) + '">All</button>';
+
+        activeLocations.forEach(function (loc) {
+          var isActive = (currentLoc === loc.name);
+          var flagImg = loc.flag
+            ? '<img src="https://flagcdn.com/w20/' + esc(loc.flag.toLowerCase()) + '.png" alt="" width="16" height="12" style="width: 16px !important; height: 12px !important; min-width: 16px !important; max-height: 12px !important; display: inline-block !important; object-fit: cover; border-radius: 2px; vertical-align: middle; margin-right: 6px; flex-shrink: 0;">'
+            : '';
+          tabsHtml +=
+            '<button type="button" data-loc="' + esc(loc.name) + '" style="' + getTabStyle(isActive) + '">' +
+              flagImg +
+              '<span>' + esc(loc.name) + '</span>' +
+            '</button>';
+        });
+
+        tabsContainer.innerHTML = tabsHtml;
+
+        var buttons = tabsContainer.querySelectorAll('button[data-loc]');
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            currentLoc = btn.getAttribute('data-loc');
+            renderTabs();
+            renderGrid();
+          });
+        });
+      }
+
+      function renderGrid() {
+        var filtered = allItems.filter(function (item) {
+          if (currentLoc === 'all') return true;
+          return item.location === currentLoc;
+        });
+
+        filtered.sort(function (a, b) {
+          return a.priceNum - b.priceNum;
+        });
+
+        if (!filtered.length) {
+          gridContainer.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: #64748b;">No plans currently available in this location.</div>';
+          return;
+        }
+
+        var out = '';
+        filtered.forEach(function (p) {
+          var orderUrl = DASH + '&dc=' + encodeURIComponent(p.dcId) + '&tarif=' + encodeURIComponent(p.planId);
+          var flagEl = p.flag
+            ? '<img src="https://flagcdn.com/w20/' + esc(p.flag.toLowerCase()) + '.png" alt="" width="16" height="12" style="width: 16px !important; height: 12px !important; min-width: 16px !important; max-height: 12px !important; display: inline-block !important; object-fit: cover; border-radius: 2px; vertical-align: middle; margin: 0 !important; padding: 0 !important; flex-shrink: 0;">'
+            : '';
+
+          var dupKey = p.location + '||' + p.name + '||' + p.priceStr;
+          var cpuLine = (dupMap[dupKey] > 1 && p.dcCpu)
+            ? '<div style="font-size: 0.75rem; color: #64748b; margin-top: -0.25rem; margin-bottom: 0.6rem; line-height: 1.3;">' + esc(p.dcCpu) + '</div>'
+            : '';
+
+          out +=
+            '<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">' +
+              '<div>' +
+                '<div style="margin-bottom: 0.75rem;">' +
+                  '<span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 0.25rem 0.65rem; border-radius: 9999px; text-transform: uppercase;">' +
+                    flagEl +
+                    '<span>' + esc(p.location) + '</span>' +
+                  '</span>' +
+                '</div>' +
+                '<h4 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin: 0 0 0.5rem 0;">' + esc(p.name) + '</h4>' +
+                cpuLine +
+                '<div style="font-size: 1.65rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.75rem;">' +
+                  esc(p.priceStr) + '<span style="font-size: 0.875rem; font-weight: 500; color: #64748b;"> / mo</span>' +
+                '</div>' +
+                '<ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.875rem; color: #475569; display: grid; gap: 0.5rem;">' +
+                  '<li><strong>' + esc(p.cpu) + '</strong> vCPU</li>' +
+                  '<li><strong>' + esc(p.ram) + ' GB</strong> RAM</li>' +
+                  '<li><strong>' + esc(p.disk) + ' GB</strong> Disk</li>' +
+                  '<li><strong>' + esc(p.eth) + '</strong> Network</li>' +
+                '</ul>' +
+              '</div>' +
+              '<a href="' + esc(orderUrl) + '" style="display: block; text-align: center; background: #2563eb; color: #ffffff; padding: 0.75rem 1rem; border-radius: 0.5rem; font-weight: 700; text-decoration: none; font-size: 0.9rem;">Order now &rarr;</a>' +
+            '</div>';
+        });
+
+        gridContainer.innerHTML = out;
+      }
+
+      renderTabs();
+      renderGrid();
+    })
+    .catch(function () {
+      renderFallback();
+    });
+})();
+</script>
+"""
     else:
         # Billing Switcher Tabs
         tabs_html = ""

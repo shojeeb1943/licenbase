@@ -124,57 +124,57 @@ PLANS = {
     ],
     "port-25-open-vps": [
         {
-            "name": "SMTP Starter VPS",
+            "name": "Port 25 VPS Starter",
             "badge": "Entry Mail Relay",
-            "desc": "Unblocked port 25 server for transactional emails, notifications, and small newsletters.",
+            "desc": "Unblocked port 25 cloud server for transactional emails, notifications, and mail relays.",
             "specs": [
-                "2 vCPU Cores",
-                "4 GB High-Speed RAM",
-                "60 GB Gen4 NVMe Storage",
-                "4 TB Monthly Bandwidth",
+                "1 vCPU AMD EPYC Core",
+                "1 GB High-Speed RAM",
+                "10 GB Gen4 NVMe Storage",
+                "2 Gbit/s High-Speed Network",
                 "Outbound Port 25 Unblocked",
                 "1 Clean Dedicated IPv4 Address",
                 "Self-Service rDNS / PTR Setup",
-                "SPF, DKIM & DMARC Ready"
+                "30+ Global Datacenter Locations"
             ],
-            "prices": {"monthly": 12.00, "yearly": 120.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=107",
+            "prices": {"monthly": 9.96, "yearly": 99.60},
+            "url": "https://dashboard.licenbase.com/index.php?m=vpsorder&dc=5&tarif=13",
             "popular": False
         },
         {
-            "name": "SMTP Pro VPS",
-            "badge": "High Volume",
-            "desc": "High-throughput mail server engineered for marketing campaigns, SaaS alerts, and relays.",
+            "name": "Port 25 Open VPS",
+            "badge": "Most Popular Choice",
+            "desc": "High-throughput cloud server with unrestricted outbound port 25 for marketing campaigns, SaaS alerts, and relays.",
             "specs": [
-                "4 vCPU Cores",
-                "8 GB High-Speed RAM",
-                "120 GB Gen4 NVMe Storage",
-                "8 TB Monthly Bandwidth",
+                "2 vCPU AMD EPYC Cores",
+                "4 GB High-Speed RAM",
+                "25 GB Gen4 NVMe Storage",
+                "2 Gbit/s High-Speed Network",
                 "Outbound Port 25 Unblocked",
-                "2 Clean Dedicated IPv4 Addresses",
+                "1 Clean Dedicated IPv4 Address",
                 "Instant PTR Record Delegation",
-                "Optimized Mail Transfer Agents"
+                "30+ Global Datacenter Locations"
             ],
-            "prices": {"monthly": 24.00, "yearly": 240.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=108",
+            "prices": {"monthly": 18.23, "yearly": 182.30},
+            "url": "https://dashboard.licenbase.com/index.php?m=vpsorder&dc=5&tarif=15",
             "popular": True
         },
         {
-            "name": "SMTP Fleet VPS",
-            "badge": "Enterprise Mail Hub",
-            "desc": "Maximum mail queue capacity with multiple clean dedicated IPs for agency delivery fleets.",
+            "name": "Port 25 VPS Pro",
+            "badge": "High Volume",
+            "desc": "Maximum queue capacity with dedicated compute for high-volume email delivery infrastructure.",
             "specs": [
-                "8 vCPU Cores",
-                "16 GB High-Speed RAM",
-                "240 GB Gen4 NVMe Storage",
-                "15 TB Monthly Bandwidth",
+                "4 vCPU AMD EPYC Cores",
+                "4 GB High-Speed RAM",
+                "40 GB Gen4 NVMe Storage",
+                "2 Gbit/s High-Speed Network",
                 "Outbound Port 25 Unblocked",
-                "4 Clean Dedicated IPv4 Addresses",
-                "Multi-IP Queue Balancing",
-                "24/7 Deliverability Support"
+                "1 Clean Dedicated IPv4 Address",
+                "Instant PTR Record Delegation",
+                "30+ Global Datacenter Locations"
             ],
-            "prices": {"monthly": 45.00, "yearly": 450.00},
-            "url": "https://dashboard.licenbase.com/cart.php?a=add&pid=109",
+            "prices": {"monthly": 36.45, "yearly": 364.50},
+            "url": "https://dashboard.licenbase.com/index.php?m=vpsorder&dc=5&tarif=16",
             "popular": False
         }
     ],
