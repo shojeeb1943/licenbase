@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Cheap Managed cPanel VPS Architecture</title>
+  <desc id="d">Architecture comparing high-cost retail managed VPS hosting with affordable bundled cPanel VPS infrastructure.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Managed cPanel VPS: Architecture &amp; Cost Comparison</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Root WHM Access</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#EF4444"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#EF4444">Traditional Retail Managed VPS ($60 - $120/mo)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">High retail markups, strict account limits, locked root access</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ Base Compute: Marked up 200% ($25 - $45/mo)</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ cPanel Solo/Admin License: Retail retail ($22 - $40/mo)</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ Support Surcharge: Basic monitoring ($30+/mo)</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ WHM Restrictions: Restricted shell, limited root privileges</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#EF4444" text-anchor="middle">Total: $77 - $115 / month</text>
+  </g>
+
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">LicenBase Managed VPS Stack ($18 - $30/mo)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">High-speed NVMe KVM node, genuine cPanel license, full root</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ High-Speed Cloud VPS: 4 vCPU, 8GB RAM, NVMe ($14.99/mo)</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Genuine cPanel &amp; WHM: Automated IP license ($4.00/mo)</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Managed Hardening: CSF firewall, AutoSSL, PHP tuning</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Unrestricted Root: Full WHM administrator control</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#10B981" text-anchor="middle">Total: $18.99 / month (Save 75%)</text>
+  </g>
+</svg>

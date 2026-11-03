@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">WHMCS License Activation Diagnostics</title>
+  <desc id="d">Architecture and 5 key verification checkpoints for fixing WHMCS License Activation Failed errors.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">WHMCS License Activation: 5 Verification Checkpoints</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Billing Engine Fix</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="165" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="165" height="6" rx="3" fill="#38BDF8"/>
+    <text x="15" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">1. IP Mismatch</text>
+    <text x="15" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">Primary IP</text>
+    <path d="M15 72 h135" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="96" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• WHMCS checks</text>
+    <text x="15" y="116" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">  server outbound IP</text>
+    <text x="15" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Reissue IP in portal</text>
+    <text x="15" y="156" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Check NAT / SNAT</text>
+    <rect x="15" y="232" width="135" height="32" rx="8" fill="#0F172A"/>
+    <text x="82" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#38BDF8" text-anchor="middle">Reissue IP</text>
+  </g>
+
+  <g transform="translate(215, 104)">
+    <rect width="165" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="165" height="6" rx="3" fill="#10B981"/>
+    <text x="15" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">2. Directory Path</text>
+    <text x="15" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#10B981">Valid Path</text>
+    <path d="M15 72 h135" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="96" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Valid directory</text>
+    <text x="15" y="116" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">  path registered</text>
+    <text x="15" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• /home/user/public</text>
+    <text x="15" y="156" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Auto-sync on rerun</text>
+    <rect x="15" y="232" width="135" height="32" rx="8" fill="#0F172A"/>
+    <text x="82" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#10B981" text-anchor="middle">Path Sync</text>
+  </g>
+
+  <g transform="translate(395, 104)">
+    <rect width="165" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="165" height="6" rx="3" fill="#EF4444"/>
+    <text x="15" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">3. cURL 60 SSL</text>
+    <text x="15" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#EF4444">CA Bundle</text>
+    <path d="M15 72 h135" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="96" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Expired CA certs</text>
+    <text x="15" y="116" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• ca-certificates pkg</text>
+    <text x="15" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• update-ca-trust</text>
+    <text x="15" y="156" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Test curl to WHMCS</text>
+    <rect x="15" y="232" width="135" height="32" rx="8" fill="#0F172A"/>
+    <text x="82" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#EF4444" text-anchor="middle">Update CA</text>
+  </g>
+
+  <g transform="translate(575, 104)">
+    <rect width="165" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="165" height="6" rx="3" fill="#F59E0B"/>
+    <text x="15" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">4. Local Key</text>
+    <text x="15" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F59E0B">Stale Cache</text>
+    <path d="M15 72 h135" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="96" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• tblconfiguration</text>
+    <text x="15" y="116" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Clear LicenseKey</text>
+    <text x="15" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Force new handshake</text>
+    <text x="15" y="156" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Re-save key in config</text>
+    <rect x="15" y="232" width="135" height="32" rx="8" fill="#0F172A"/>
+    <text x="82" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#F59E0B" text-anchor="middle">Flush DB Key</text>
+  </g>
+
+  <g transform="translate(755, 104)">
+    <rect width="170" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="170" height="6" rx="3" fill="#A855F7"/>
+    <text x="15" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">5. Outbound Port</text>
+    <text x="15" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#A855F7">Port 443 TCP</text>
+    <path d="M15 72 h140" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="96" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• CSF TCP_OUT block</text>
+    <text x="15" y="116" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Ensure 443 outbound</text>
+    <text x="15" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• Check DNS resolvers</text>
+    <text x="15" y="156" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">• 8.8.8.8 / 1.1.1.1</text>
+    <rect x="15" y="232" width="140" height="32" rx="8" fill="#0F172A"/>
+    <text x="85" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#A855F7" text-anchor="middle">Firewall Pass</text>
+  </g>
+</svg>

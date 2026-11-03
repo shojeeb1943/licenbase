@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">LiteSpeed Web Server License Pricing Plans</title>
+  <desc id="d">Comparison of LiteSpeed Web Server license tiers including Free Starter, Site Owner, Web Host Lite, and Web Host Elite.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">LiteSpeed Web Server License Tiers &amp; Sizing</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">VPS Acceleration</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Free Starter</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#38BDF8">$0<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 1 Domain Limit</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 1 Worker Process</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Max 2GB RAM</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• LSCache included</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Dev &amp; staging sites</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Testing / Hobby</text>
+  </g>
+
+  <g transform="translate(263, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Site Owner</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Up to 5 Domains</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 1 Worker Process</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Max 8GB RAM</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• cPanel / DirectAdmin</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• High-traffic eCom</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Small Business</text>
+  </g>
+
+  <g transform="translate(491, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Web Host Lite</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#F59E0B">$4.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Unlimited Domains</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 1 Worker Process</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Max 8GB RAM</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Shared hosting VPS</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Drop-in Apache swap</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Web Hosting VPS</text>
+  </g>
+
+  <g transform="translate(719, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#A855F7"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Web Host Elite</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#A855F7">$5.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Unlimited Domains</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Multi-Worker (2-4+)</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Unlimited Server RAM</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• High-concurrency nodes</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 100k+ req/sec</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#A855F7" text-anchor="middle">Enterprise Cluster</text>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">CloudLinux OS Pricing and Server Optimization</title>
+  <desc id="d">Breakdown of CloudLinux OS pricing tiers, resource containment with LVE, and shared hosting cost reduction strategies.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">CloudLinux OS Licensing &amp; Server Cost Optimization</text>
+  <text x="740" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#10B981">Shared Hosting ROI</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#EF4444"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Retail Licensing</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#EF4444">$16 - $32<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Direct vendor price</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Per-server margin load</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Add-on pricing traps</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Inflated cluster TCO</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Squeezes host margins</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#EF4444" text-anchor="middle">Expensive Overhead</text>
+  </g>
+
+  <g transform="translate(263, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">LicenBase License</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 100% Genuine IP active</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Instant activation sync</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• All features unlocked</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Seamless OS updates</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Up to 75% savings</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">High Profit Margin</text>
+  </g>
+
+  <g transform="translate(491, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">LVE &amp; CageFS</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#38BDF8">Isolation</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Caps runaway tenant CPU</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Memory &amp; IOPS limits</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Per-tenant file isolation</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Multi-PHP version selector</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Zero noisy neighbors</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Kernel Stability</text>
+  </g>
+
+  <g transform="translate(719, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Server Density</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#F59E0B">+300% Sites</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Triple hosting density</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Eliminates server crashes</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Cuts hardware costs</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Reduces tier-1 tickets</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Maximum hosting ROI</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Infrastructure ROI</text>
+  </g>
+</svg>

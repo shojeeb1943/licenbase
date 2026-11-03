@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">PHP-FPM Process Pool and Memory Sizing Architecture</title>
+  <desc id="d">Diagram illustrating cPanel Apache reverse proxy to PHP-FPM socket, worker process pool lifecycle, and pm.max_children memory allocation calculation.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">PHP-FPM Architecture: Eliminating 504 Timeouts &amp; OOM Crashes</text>
+  <text x="740" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Pool Tuning</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="270" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="270" height="6" rx="3" fill="#EF4444"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#EF4444">Symptoms of Pool Exhaustion</text>
+    <path d="M20 54 h230" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 504 Gateway Timeout from Apache</text>
+    <text x="20" y="104" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• "server reached pm.max_children"</text>
+    <text x="20" y="128" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• High load average &amp; swapping</text>
+    <text x="20" y="152" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Linux OOM Killer terminating PHP</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Slow database queries blocking pool</text>
+    <rect x="20" y="226" width="230" height="34" rx="8" fill="#0F172A"/>
+    <text x="135" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#EF4444" text-anchor="middle">Resource Bottleneck</text>
+  </g>
+
+  <g transform="translate(325, 104)">
+    <rect width="310" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="310" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#38BDF8">Optimal Pool Math Formula</text>
+    <path d="M20 54 h270" stroke="#334155" stroke-width="1"/>
+    <rect x="18" y="70" width="274" height="44" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="155" y="97" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">pm.max_children = (Avail RAM) / (Avg PHP RAM)</text>
+    <text x="20" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 8GB VPS: Dedicate 5.5GB to PHP-FPM</text>
+    <text x="20" y="164" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Average WordPress worker: ~65MB</text>
+    <text x="20" y="188" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 5,632MB / 65MB = 86 max_children</text>
+    <rect x="20" y="226" width="270" height="34" rx="8" fill="#0F172A"/>
+    <text x="155" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Zero Swapping Guarantee</text>
+  </g>
+
+  <g transform="translate(655, 104)">
+    <rect width="270" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="270" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#10B981">Key Configuration Tweaks</text>
+    <path d="M20 54 h230" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="80" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• pm = ondemand / dynamic</text>
+    <text x="20" y="104" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• pm.max_requests = 1000 (leaks)</text>
+    <text x="20" y="128" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• request_terminate_timeout = 120s</text>
+    <text x="20" y="152" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• cPanel YAML pool overrides</text>
+    <text x="20" y="176" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Switch to LiteSpeed for 10x I/O</text>
+    <rect x="20" y="226" width="230" height="34" rx="8" fill="#0F172A"/>
+    <text x="135" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Production Stable</text>
+  </g>
+</svg>

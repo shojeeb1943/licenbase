@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Imunify360 License Pricing and Security Architecture</title>
+  <desc id="d">Comparison of Imunify360 license tiers and the 6-layer automated security stack for Linux web hosting servers.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Imunify360 License Pricing &amp; Multi-Layer Defense</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">2026 Security Matrix</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Single User Tier</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#38BDF8">$6.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 1 cPanel User Account</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Dedicated VPS Nodes</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Full WAF &amp; IDS/IPS</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Automated Cleanup</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Proactive Defense</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">E-Commerce / Solo</text>
+  </g>
+
+  <g transform="translate(263, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">30-User Agency</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$6.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Up to 30 Accounts</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Central WHM Console</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Real-Time File Monitor</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• WordPress Hardening</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Botnet Traffic Shield</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Web Design Studios</text>
+  </g>
+
+  <g transform="translate(491, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Unlimited Tier</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#F59E0B">$6.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Unlimited Accounts</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Bare-Metal or Cloud</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Reputation Network</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• DoS/Brute Force Filter</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Zero-Day Exploit Guard</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Hosting Providers</text>
+  </g>
+
+  <g transform="translate(719, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#A855F7"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">6-Layer Stack</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#A855F7">AI Engine</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">1. Smart ModSec WAF</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">2. Real-Time IDS/IPS</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">3. Malware Decontamination</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">4. PHP Proactive Defense</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">5. PAM Brute-Force Guard</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#A855F7" text-anchor="middle">Automated Ops</text>
+  </g>
+</svg>

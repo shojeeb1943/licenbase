@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Virtualizor KVM Node Capacity and License Architecture</title>
+  <desc id="d">Diagram illustrating Virtualizor Master and Slave hypervisor clustering, KVM compute overcommit ratios, and license pricing economics.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Virtualizor KVM Node Architecture &amp; Density Planning</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">VPS Hypervisors</text>
+
+  <g transform="translate(35, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Master Node</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#38BDF8">$4.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Central WHMCS API</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Cluster dashboard UI</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• IP pool management</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Billing automation hook</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Automated backups</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Control Plane</text>
+  </g>
+
+  <g transform="translate(263, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">KVM Slave Node</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#10B981">$4.00<tspan font-size="11" font-weight="400" fill="#94A3B8">/mo</tspan></text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Bare-metal hypervisor</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• AMD EPYC / Xeon CPUs</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• NVMe RAID-10 storage</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Up to 60-120 VPS VMs</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Full hardware passthrough</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Compute Node</text>
+  </g>
+
+  <g transform="translate(491, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Density Math</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#F59E0B">2:1 Ratio</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• CPU overcommit: 2x - 3x</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• RAM: 1:1 strict allocate</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• ZFS or LVM Thin Pool</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• IOPS burst throttling</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Zero noisy neighbor</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Resource Balance</text>
+  </g>
+
+  <g transform="translate(719, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#A855F7"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Provider Profit</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#A855F7">85% Margin</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Node fee: $4/mo</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 60 VPS @ $8/mo = $480</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Bare-metal node: $120</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Software: $8 (M+S)</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Net profit: $352/mo/node</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#A855F7" text-anchor="middle">High ROI Engine</text>
+  </g>
+</svg>
