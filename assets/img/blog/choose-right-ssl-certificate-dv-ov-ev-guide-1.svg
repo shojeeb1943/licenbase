@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">SSL Certificate Types: DV vs OV vs EV Comparison</title>
+  <desc id="d">Comparison of SSL certificate validation levels covering Domain Validation (DV), Organization Validation (OV), and Extended Validation (EV).</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">SSL Certificate Hierarchy: DV vs OV vs EV Validation</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Security &amp; Trust</text>
+
+  <!-- 3 Validation Tiers -->
+  <g transform="translate(35, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Domain Validation (DV)</text>
+    <text x="20" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Instant automated domain ownership check</text>
+    <path d="M20 76 h240" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Validation: Automated DNS or HTTP file</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Issuance Time: Under 2 minutes</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Browser: Padlock icon &amp; HTTPS encryption</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Cost: Free via AutoSSL / Let's Encrypt</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Best For: Blogs, portfolios, brochure sites</text>
+    <rect x="20" y="226" width="240" height="34" rx="8" fill="#0F172A"/>
+    <text x="140" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Standard Encryption</text>
+  </g>
+
+  <g transform="translate(340, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">Organization Validation (OV)</text>
+    <text x="20" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Legitimate business registry verification</text>
+    <path d="M20 76 h240" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Validation: Government business registry</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Issuance Time: 1 to 3 business days</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Browser: Verified company details in cert</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Warranty: $50,000 - $250,000 protection</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Best For: E-commerce stores, portals &amp; SaaS</text>
+    <rect x="20" y="226" width="240" height="34" rx="8" fill="#0F172A"/>
+    <text x="140" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Business Verified Trust</text>
+  </g>
+
+  <g transform="translate(645, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#F59E0B">Extended Validation (EV)</text>
+    <text x="20" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Highest tier legal and operational background audit</text>
+    <path d="M20 76 h240" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Validation: Full operational &amp; legal audit</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Issuance Time: 3 to 7 business days</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Browser: Highest authentication certificate</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Warranty: $1,000,000+ CA guarantee</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Best For: Banks, fintech, enterprise brands</text>
+    <rect x="20" y="226" width="240" height="34" rx="8" fill="#0F172A"/>
+    <text x="140" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Enterprise Grade</text>
+  </g>
+</svg>

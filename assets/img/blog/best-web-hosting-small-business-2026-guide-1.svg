@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Best Web Hosting Architecture for Small Businesses in 2026</title>
+  <desc id="d">Key evaluation criteria for small business web hosting: NVMe storage performance, cPanel control, LiteSpeed server caching, and automated security.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Small Business Web Hosting: 2026 Evaluation Matrix</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Performance &amp; ROI</text>
+
+  <!-- 4 Pillars -->
+  <g transform="translate(35, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">1. Storage &amp; Speed</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#38BDF8">Pure NVMe</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Gen4 NVMe RAID-10</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 6,000+ MB/s read I/O</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Instant MySQL lookups</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Eliminates I/O wait lag</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Sub-100ms TTFB</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Hardware Layer</text>
+  </g>
+
+  <g transform="translate(263, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">2. Control Panel</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#10B981">cPanel / WHM</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 1-Click WordPress installs</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Domain &amp; DNS routing</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Webmail &amp; email routing</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• phpMyAdmin &amp; cron</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Automated AutoSSL</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Management</text>
+  </g>
+
+  <g transform="translate(491, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">3. Acceleration</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#F59E0B">LiteSpeed</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Event-driven architecture</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Server-level LSCache</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• HTTP/3 &amp; QUIC protocol</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 5x faster dynamic PHP</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• WooCommerce optimized</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Turbo Engine</text>
+  </g>
+
+  <g transform="translate(719, 104)">
+    <rect width="205" height="280" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect width="205" height="6" rx="3" fill="#A855F7"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">4. Enterprise Guard</text>
+    <text x="20" y="64" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#A855F7">Security Stack</text>
+    <path d="M20 80 h165" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• CloudLinux CageFS</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Imunify360 WAF &amp; IDS</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Auto malware cleanup</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Automated daily backups</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• 99.99% SLA guarantee</text>
+    <rect x="18" y="232" width="169" height="32" rx="8" fill="#0F172A"/>
+    <text x="102" y="252" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#A855F7" text-anchor="middle">Protection</text>
+  </g>
+</svg>
