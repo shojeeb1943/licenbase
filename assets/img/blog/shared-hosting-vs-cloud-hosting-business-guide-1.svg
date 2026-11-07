@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Shared Hosting vs Cloud Hosting Architecture</title>
+  <desc id="d">Architecture comparison between shared hosting with CloudLinux tenant isolation and multi-node redundant cloud hosting infrastructure.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Shared Hosting vs Cloud Hosting: Infrastructure Model</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Architecture Matrix</text>
+
+  <!-- Left: Shared Hosting -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">Shared Web Hosting (Cost-Efficient Power)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Multiple containerized websites hosted on a single bare-metal server</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Pricing: Inexpensive flat monthly rate ($3.50 - $8.00/mo)</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Resource Guard: CloudLinux LVE prevents noisy neighbor crashes</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Maintenance: Zero technical sysadmin knowledge required</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Best For: Small business portals, local services, corporate blogs</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#10B981" text-anchor="middle">Entry Cost: $3.50/mo | Effort: Zero Maintenance</text>
+  </g>
+
+  <!-- Right: Cloud Hosting -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#38BDF8"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Cloud Hosting (Dynamic High-Availability)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Virtual instances distributed across a clustered hypervisor pool</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Redundancy: Automatic node failover if physical hardware fails</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ On-Demand Scaling: Instantly add vCPU &amp; RAM during flash sales</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Dedicated Capacity: 100% reserved compute without contention</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Best For: High-traffic e-commerce, SaaS platforms, busy agencies</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8" text-anchor="middle">Entry Cost: $18.99/mo | Enterprise Resiliency</text>
+  </g>
+</svg>

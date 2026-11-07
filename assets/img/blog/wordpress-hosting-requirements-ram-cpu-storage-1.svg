@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">WordPress Hosting Requirements Resource Matrix</title>
+  <desc id="d">Resource sizing matrix illustrating RAM, CPU cores, and NVMe storage requirements across different WordPress website stages.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">WordPress Sizing Guide: RAM, CPU &amp; Storage Specs</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Resource Planning</text>
+
+  <!-- 3 Stages -->
+  <g transform="translate(35, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#38BDF8"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Starter / Brochure Blog</text>
+    <text x="20" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Up to 30,000 monthly visitors</text>
+    <path d="M20 76 h240" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• vCPU: 1 Core (Shared / Dedicated)</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• RAM: 1GB - 2GB Physical RAM</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• PHP Memory Limit: 256 MB</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Storage: 10GB NVMe SSD</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Caching: LiteSpeed LSCache</text>
+    <rect x="20" y="226" width="240" height="34" rx="8" fill="#0F172A"/>
+    <text x="140" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Plan: Shared NVMe ($3.50/mo)</text>
+  </g>
+
+  <g transform="translate(340, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">Growth Business / LMS</text>
+    <text x="20" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">30,000 - 150,000 monthly visitors</text>
+    <path d="M20 76 h240" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• vCPU: 2 - 4 Dedicated Cores</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• RAM: 4GB - 8GB Dedicated RAM</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• PHP Memory Limit: 512 MB</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Storage: 30GB - 60GB NVMe SSD</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Caching: Redis + LiteSpeed</text>
+    <rect x="20" y="226" width="240" height="34" rx="8" fill="#0F172A"/>
+    <text x="140" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Plan: Managed VPS ($18.99/mo)</text>
+  </g>
+
+  <g transform="translate(645, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#F59E0B">High-Traffic WooCommerce</text>
+    <text x="20" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">150,000+ visitors &amp; high checkout concurrency</text>
+    <path d="M20 76 h240" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• vCPU: 4 - 8 High-Frequency Cores</text>
+    <text x="20" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• RAM: 8GB - 16GB Dedicated RAM</text>
+    <text x="20" y="154" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• PHP Memory Limit: 768 MB - 1GB</text>
+    <text x="20" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Storage: 100GB+ NVMe RAID-10</text>
+    <text x="20" y="202" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#CBD5E1">• Database: MariaDB InnoDB buffer pool</text>
+    <rect x="20" y="226" width="240" height="34" rx="8" fill="#0F172A"/>
+    <text x="140" y="248" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">Plan: Scale VPS / Dedicated</text>
+  </g>
+</svg>
