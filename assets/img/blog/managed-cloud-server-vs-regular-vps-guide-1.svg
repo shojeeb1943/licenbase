@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Managed Cloud Server vs Regular VPS Architecture</title>
+  <desc id="d">Comparison of single-node regular VPS architecture against redundant, clustered managed cloud server infrastructure.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Managed Cloud Server vs Regular VPS Architecture</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Resilience Matrix</text>
+
+  <!-- Left: Regular VPS -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#F59E0B"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#F59E0B">Regular VPS (Single Bare-Metal Node)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">KVM instance tied to one physical motherboard &amp; storage drive</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ Hardware Single Point of Failure: If host node dies, VPS halts</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ Fixed Hardware Limits: Resizing requires server reboot and downtime</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ Local Disk Storage: I/O bound to local host NVMe/SATA controller</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Best For: Non-critical staging, personal blogs, dev testbeds</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F59E0B" text-anchor="middle">Single Node Tied | Low Cost ($4.50 - $10/mo)</text>
+  </g>
+
+  <!-- Right: Managed Cloud Server -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">Managed Cloud Server (Clustered Hypervisors)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Distributed compute pool with centralized SAN/Ceph storage</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Auto-Healing Failover: Instant live migration if a host node dies</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Elastic On-Demand Scaling: Hot-add CPU &amp; RAM without downtime</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ 24/7 Managed Care: Security hardening, proactive patches &amp; alerts</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Best For: Production e-commerce, busy agencies, corporate SaaS</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#10B981" text-anchor="middle">Clustered HA Failover | Enterprise SLA ($18.99/mo)</text>
+  </g>
+</svg>

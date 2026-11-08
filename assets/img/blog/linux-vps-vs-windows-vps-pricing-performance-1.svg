@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Linux VPS vs Windows VPS Architecture and Pricing</title>
+  <desc id="d">Comparison of Linux VPS and Windows VPS covering operating system licensing fees, RAM overhead, management protocols, and primary web workloads.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Linux VPS vs Windows VPS: Architecture &amp; Cost</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Platform Comparison</text>
+
+  <!-- Left: Linux VPS -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">Linux VPS (AlmaLinux, Ubuntu, Debian)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">High-efficiency open-source web server foundation</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ OS Licensing: $0 Free (AlmaLinux, Rocky, Ubuntu)</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ RAM Overhead: Ultra-lean 256MB - 512MB idle memory</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Administration: Secure Shell (SSH), Bash, Ansible, Docker</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Primary Stacks: LAMP, LEMP, LiteSpeed, WordPress, Node, Python</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#10B981" text-anchor="middle">Base Cost: $4.50/mo | 90% of Global Web</text>
+  </g>
+
+  <!-- Right: Windows VPS -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#38BDF8"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Windows Server VPS (2022 / 2025)</text>
+    <text x="25" y="60" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Proprietary Microsoft enterprise ecosystem</text>
+    <path d="M25 76 h380" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="106" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ OS Licensing: $15 - $35/mo per-core Microsoft license fee</text>
+    <text x="25" y="136" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✖ RAM Overhead: Heavy 2GB - 3GB idle GUI memory footprint</text>
+    <text x="25" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Administration: Remote Desktop Protocol (RDP), PowerShell</text>
+    <text x="25" y="196" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#CBD5E1">✔ Primary Stacks: ASP.NET Core, MSSQL, Active Directory, C#</text>
+    <rect x="25" y="226" width="380" height="38" rx="8" fill="#0F172A"/>
+    <text x="215" y="250" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8" text-anchor="middle">Base Cost: $25.00+/mo | Microsoft Ecosystem</text>
+  </g>
+</svg>
