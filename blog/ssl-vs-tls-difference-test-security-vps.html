@@ -344,7 +344,7 @@
   <h2 id="how-to-test-your-website-certificate-and-tls-version" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">How to Test Your Website Certificate and TLS Version</h2>
   <p>To verify that your server is properly configured and does not support dangerous legacy protocols:</p>
   <ol class="list-decimal space-y-2 pl-6">
-    <li><strong>Online Inspection:</strong> Use the free LicenBase <a href="/tools/ssl-checker" class="text-blue-600 font-semibold hover:underline">SSL Checker Tool</a> to inspect your domain's certificate validity, issuer authority, expiration date, and cipher strength.</li>
+    <li><strong>Online Inspection:</strong> Use the free LicenBase <a href="/tools/ssl-checker/" class="text-blue-600 font-semibold hover:underline">SSL Checker Tool</a> to inspect your domain's certificate validity, issuer authority, expiration date, and cipher strength.</li>
     <li><strong>Terminal OpenSSL Test:</strong> Verify TLS 1.3 support directly via terminal:
       <pre class="bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto my-2"><code>openssl s_client -connect yourdomain.com:443 -tls1_3</code></pre>
       Check that the handshake succeeds and reports <code>Protocol : TLSv1.3</code>.

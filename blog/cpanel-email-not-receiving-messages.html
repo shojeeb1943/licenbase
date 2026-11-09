@@ -318,7 +318,7 @@ dig A mail.yourdomain.com +short</code></pre>
     <li><strong>Pointing MX to a CNAME Alias:</strong> An MX target must resolve to a direct <code>A</code> (or <code>AAAA</code>) record. Directing an MX record to a CNAME alias causes mail routing loops and delivery rejections by external MTAs.</li>
     <li><strong>Cloudflare Proxying the Mail Subdomain:</strong> If your DNS is hosted on Cloudflare, ensure the <code>mail</code> subdomain record has the proxy status set to <strong>DNS Only</strong> (grey cloud). Cloudflare proxies HTTP/HTTPS traffic on ports 80 and 443; proxying mail records will drop incoming SMTP connections on port 25.</li>
   </ul>
-  <p>You can audit DNS propagation and test records across global resolvers using our free <a href="/tools/dns-tools" class="text-blue-600 font-semibold hover:underline">DNS tools suite</a> or check out our in-depth <a href="/blog/dns-resolver-checker-troubleshoot-records-guide" class="text-blue-600 font-semibold hover:underline">DNS resolver troubleshooting guide</a>.</p>
+  <p>You can audit DNS propagation and test records across global resolvers using our free <a href="/tools/dns-tools/" class="text-blue-600 font-semibold hover:underline">DNS tools suite</a> or check out our in-depth <a href="/blog/dns-resolver-checker-troubleshoot-records-guide" class="text-blue-600 font-semibold hover:underline">DNS resolver troubleshooting guide</a>.</p>
 </section>
 
 <section class="space-y-4">

@@ -5,6 +5,11 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Removed/legacy URLs -> current equivalents (fixes GSC 404s)
+RewriteRule ^blog/cpanel-webmail-ports-ssl-login-issues-fixed/?$ /blog/cpanel-webmail-ports-explained-2095-2096 [L,R=301]
+RewriteRule ^(site-map|sitemap)/?$ /sitemap.xml [L,R=301]
+RewriteRule ^manifest\.json$ /site.webmanifest [L,R=301]
+
 # Force HTTPS + non-www (single canonical host)
 RewriteCond %{HTTP_HOST} ^(www\.)?licenbase\.com$ [NC]
 RewriteCond %{HTTPS} off [OR]
