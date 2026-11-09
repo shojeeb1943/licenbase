@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">CloudLinux vs Standard AlmaLinux Shared Hosting Architecture</title>
+  <desc id="d5">System architecture comparison contrasting unconstrained AlmaLinux shared hosting with CloudLinux isolated Lightweight Virtual Environments and MySQL Governor.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">CloudLinux vs Standard AlmaLinux: Shared Hosting Security</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">OS Comparison</text>
+
+  <!-- Left: Standard AlmaLinux -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#EF4444"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#EF4444">Standard AlmaLinux (Open-Source RHEL)</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Shared unconstrained kernel process boundaries</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Tenant Isolation: <tspan fill="#F87171" font-weight="600">Shared resource pool (No LVE)</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Noisy Neighbor Impact: <tspan fill="#F87171" font-weight="600">1 site spike can crash entire node</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Filesystem Security: <tspan fill="#F87171" font-weight="600">Standard /home permissions (no CageFS)</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">PHP Version Support: <tspan fill="#F87171" font-weight="600">Global or manual EasyApache build</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right: CloudLinux OS -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">CloudLinux OS (Enterprise Multi-Tenant)</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Kernel-level isolation specifically tuned for hosting</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Tenant Isolation: <tspan fill="#34D399" font-weight="600">Strict LVE CPU, RAM &amp; IO limits</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Database Governor: <tspan fill="#34D399" font-weight="600">MySQL Governor throttles slow queries</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">CageFS Virtualization: <tspan fill="#34D399" font-weight="600">Jails users inside isolated virtual root</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">PHP Hardened Selector: <tspan fill="#34D399" font-weight="600">PHP 5.6 to 8.4+ per user with CVE patches</tspan></text>
+    </g>
+  </g>
+</svg>

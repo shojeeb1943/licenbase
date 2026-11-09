@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t2 d2">
+  <title id="t2">SMTP vs IMAP vs POP3 Email Protocols</title>
+  <desc id="d2">Flow of email messages showing SMTP for outbound submission and delivery, IMAP for multi-device folder sync, and POP3 for local mailbox download.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">SMTP vs IMAP vs POP3: Port &amp; Protocol Architecture</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Protocol Guide</text>
+
+  <!-- Card 1: SMTP -->
+  <g transform="translate(35, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#3B82F6"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#60A5FA">SMTP (Outbound Push)</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Simple Mail Transfer Protocol</text>
+
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Direction &amp; Role</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Client-to-Server &amp; MTA Relay</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Standard Ports</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#60A5FA">Port 587 (TLS) / 465 (SSL)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Server Relay Port</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Port 25 (Server-to-Server)</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Outbound emails &amp; web apps</text>
+    </g>
+  </g>
+
+  <!-- Card 2: IMAP -->
+  <g transform="translate(340, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#34D399">IMAP (Two-Way Sync)</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Internet Message Access Protocol</text>
+
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Direction &amp; Role</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Live Folder &amp; Read/Unread Sync</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Secure Port</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34D399">Port 993 (IMAPS / SSL)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Storage Location</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Stored permanently on Mail Server</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Multi-device (phone + laptop)</text>
+    </g>
+  </g>
+
+  <!-- Card 3: POP3 -->
+  <g transform="translate(645, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#F59E0B"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FBBF24">POP3 (Download &amp; Cut)</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Post Office Protocol version 3</text>
+
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Direction &amp; Role</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Downloads to 1 Local Device</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Secure Port</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">Port 995 (POP3S / SSL)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Server Disk Impact</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Deletes from server (zero quota)</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Single PC offline archiving</text>
+    </g>
+  </g>
+</svg>

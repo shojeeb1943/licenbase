@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t4 d4">
+  <title id="t4">cPanel vs DirectAdmin vs Plesk Comparison Matrix</title>
+  <desc id="d4">Comparison of cPanel, DirectAdmin, and Plesk covering memory overhead, user interface responsiveness, licensing cost model, and operating system support.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel vs DirectAdmin vs Plesk: Control Panel Matrix</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Feature Analysis</text>
+
+  <!-- Column 1: cPanel & WHM -->
+  <g transform="translate(35, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#F97316" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#F97316"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FB923C">cPanel &amp; WHM</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">The Industry Standard</text>
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">RAM Footprint</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">1.2 GB - 2.0 GB Idle</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Licensing Model</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#FB923C">Tiered Account Quotas (1/5/30/100+)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Supported Platforms</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">AlmaLinux, CloudLinux, Ubuntu</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Commercial Shared Hosting</text>
+    </g>
+  </g>
+
+  <!-- Column 2: DirectAdmin -->
+  <g transform="translate(340, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#06B6D4" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#06B6D4"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#22D3EE">DirectAdmin</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Lightweight &amp; Agile</text>
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">RAM Footprint</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#22D3EE">300 MB - 600 MB Idle (Ultralight)</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Licensing Model</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#22D3EE">Flat Rate / Unlimited Accounts</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Supported Platforms</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">AlmaLinux, Debian, FreeBSD, Ubuntu</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Budget VPS &amp; Resellers</text>
+    </g>
+  </g>
+
+  <!-- Column 3: Plesk -->
+  <g transform="translate(645, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#6366F1" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#6366F1"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#818CF8">Plesk Obsidian</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Multi-Platform &amp; WordPress Toolkit</text>
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">RAM Footprint</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">1.0 GB - 1.8 GB Idle</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Licensing Model</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#818CF8">Domain-Tiers (10 / 30 / Unlimited)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Supported Platforms</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#818CF8">Linux + Windows Server (Dual OS)</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Agencies, Developers &amp; Windows</text>
+    </g>
+  </g>
+</svg>

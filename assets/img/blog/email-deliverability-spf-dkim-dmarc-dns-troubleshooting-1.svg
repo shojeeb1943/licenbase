@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Email Deliverability DNS Validation Stack</title>
+  <desc id="d3">Email validation workflow showing how receiving mail servers verify SPF authorized IPs, DKIM public cryptographic keys, and DMARC enforcement policies.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Email Deliverability Defense: SPF, DKIM, DMARC &amp; PTR Stack</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">DNS Security</text>
+
+  <!-- Step 1: SPF -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#38BDF8"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#38BDF8">1. SPF Record</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Sender Policy Framework</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">DNS Record Type</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#38BDF8">TXT @ "v=spf1 ... -all"</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">What It Verifies</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Validates sending MTA IP matches approved IP pool</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#F87171">Pitfall: &gt;10 DNS lookups</text>
+    </g>
+  </g>
+
+  <!-- Step 2: DKIM -->
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#10B981"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#34D399">2. DKIM Key</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">DomainKeys Identified Mail</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">DNS Record Type</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#34D399">TXT default._domainkey</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">What It Verifies</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Cryptographic RSA signature proves body integrity</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#34D399">Standard: 2048-bit key</text>
+    </g>
+  </g>
+
+  <!-- Step 3: DMARC -->
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#A855F7" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#A855F7"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#C084FC">3. DMARC Policy</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Domain Message Auth Reporting</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">DNS Record Type</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C084FC">TXT _dmarc.domain.com</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">What It Verifies</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">SPF &amp; DKIM alignment; instructs inbox action</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#C084FC">Policy: none &gt; quarantine &gt; reject</text>
+    </g>
+  </g>
+
+  <!-- Step 4: PTR (rDNS) -->
+  <g transform="translate(715, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">4. Reverse DNS (PTR)</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">IP to Hostname Pointer</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">DNS Record Type</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#FBBF24">PTR in-addr.arpa</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">What It Verifies</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Server IP resolves back to mail hostname</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#FBBF24">FCrDNS: Forward &amp; reverse match</text>
+    </g>
+  </g>
+</svg>

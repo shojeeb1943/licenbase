@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Business Email Architecture vs Free Webmail</title>
+  <desc id="d1">Architectural comparison of professional business email with custom domain, DKIM, and spam filtering against personal free webmail.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Business Email Hosting Architecture &amp; Deliverability</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Infrastructure Setup</text>
+
+  <!-- Left: Free Webmail Limitations -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#EF4444"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#EF4444">Personal Free Webmail (@gmail.com)</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Consumer mailbox without custom domain branding</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Brand Identity: <tspan fill="#F87171" font-weight="600">Generic @gmail/@yahoo address</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">DNS Authentication: <tspan fill="#F87171" font-weight="600">No domain SPF/DKIM controls</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Enterprise Storage: <tspan fill="#F87171" font-weight="600">Shared with Drive/Photos</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Corporate Governance: <tspan fill="#F87171" font-weight="600">No admin employee handoff</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right: Professional Business Email -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#10B981">Dedicated Business Email (you@company.com)</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Isolated mail transport with automated DKIM &amp; TLS</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Brand Identity: <tspan fill="#34D399" font-weight="600">Professional custom domain trust</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">DNS Authentication: <tspan fill="#34D399" font-weight="600">Full SPF, DKIM 2048-bit &amp; DMARC</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Security &amp; Hygiene: <tspan fill="#34D399" font-weight="600">Outbound queue &amp; RBL reputation</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Admin Control: <tspan fill="#34D399" font-weight="600">Centralized aliases, forwarders &amp; quotas</tspan></text>
+    </g>
+  </g>
+</svg>
