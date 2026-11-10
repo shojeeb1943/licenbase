@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">cPanel Dedicated vs VPS License Architecture &amp; Pricing</title>
+  <desc id="d1">Architectural comparison of cPanel Dedicated versus VPS licenses detailing virtualization detection, account limits, and pricing tiers.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel &amp; WHM: Dedicated Server vs. VPS License</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Edition Comparison</text>
+
+  <!-- Left: VPS License (Virtual Server) -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#38BDF8"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">cPanel VPS Edition (KVM / Xen / VMware)</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Virtual hypervisor hypercall-detected environment</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Account Tiers: <tspan fill="#38BDF8" font-weight="600">Admin (1), Pro (30), Plus (50), Premier</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">LicenBase Wholesale Cost: <tspan fill="#34D399" font-weight="600">$9.50 - $14.50 / mo</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Hardware Target: <tspan fill="#E2E8F0" font-weight="600">Cloud VPS, KVM nodes, 2 to 8 vCPUs</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Environment Type: <tspan fill="#38BDF8" font-weight="600">Virtualized OS instance</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right: Dedicated Server License (Bare Metal) -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#F97316" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#F97316"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FB923C">cPanel Dedicated Edition (Bare Metal)</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Direct hardware access without virtualization layers</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Account Tiers: <tspan fill="#FB923C" font-weight="600">Premier tier only (100+ accounts standard)</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">LicenBase Wholesale Cost: <tspan fill="#34D399" font-weight="600">$18.00 - $24.00 / mo</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Hardware Target: <tspan fill="#E2E8F0" font-weight="600">Physical servers, dual Xeon / EPYC, 64GB+ RAM</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Environment Type: <tspan fill="#FB923C" font-weight="600">Physical Bare-Metal Node</tspan></text>
+    </g>
+  </g>
+</svg>

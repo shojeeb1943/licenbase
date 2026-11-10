@@ -582,6 +582,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cheap-managed-vps-cpanel-2026-price-comparison-guide</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cheap-managed-vps-cpanel-2026-price-comparison-guide.png</image:loc>
+      <image:title>Cheap Managed VPS with cPanel: 2026 Price Guide</image:title>
+      <image:caption>Discover cheap managed VPS hosting with cPanel in 2026. Compare server specs, automated cPanel licensing, NVMe storage performance, and 24/7 support.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cheap-managed-vps-with-cpanel-pricing-server-guide</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.7</priority>
@@ -959,6 +969,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-cost-per-month-license-pricing-explained.png</image:loc>
       <image:title>How Much Does cPanel Cost Per Month? 2026</image:title>
       <image:caption>How much does cPanel cost per month in 2026? Learn about Solo, Admin, Pro, and Premier license tiers, per-account fees, and wholesale savings.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/cpanel-dedicated-vs-vps-license-pricing-guide</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-dedicated-vs-vps-license-pricing-guide.png</image:loc>
+      <image:title>cPanel Dedicated vs VPS License: Pricing Guide</image:title>
+      <image:caption>Compare cPanel &amp; WHM Dedicated vs VPS licenses. Learn virtualization detection, account tier pricing differences, kernel limits, and hardware allocation.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1642,6 +1662,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/fix-cpanel-webmail-login-errors-ports-2095-2096</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-fix-cpanel-webmail-login-errors-ports-2095-2096.png</image:loc>
+      <image:title>Fix cPanel Webmail Login on Port 2095 &amp; 2096</image:title>
+      <image:caption>Fix cPanel Webmail login errors on ports 2095 and 2096. Step-by-step troubleshooting for SSL certificate mismatches, firewall rules, and cpkeyclt.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/fix-failed-cpanel-backups-disk-space-logs</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.7</priority>
@@ -1649,6 +1679,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-failed-cpanel-backups-disk-space-logs.png</image:loc>
       <image:title>How to Fix Failed cPanel Backups: Full Guide</image:title>
       <image:caption>Fix failed cPanel &amp; WHM backups caused by disk exhaustion, permission errors, timeout limits, and corrupted backup transport. Inspect logs and restore backups.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/fix-full-var-partition-linux-vps-without-downtime</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-fix-full-var-partition-linux-vps-without-downtime.png</image:loc>
+      <image:title>Fix Full /var Partition on Linux VPS Safely</image:title>
+      <image:caption>Resolve a 100% full /var partition on your Linux VPS without server downtime. Step-by-step cleanup for journal logs, cPanel backups, and MySQL logs.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1759,6 +1799,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-fix-whmcs-cron-job-errors.png</image:loc>
       <image:title>How to Fix WHMCS Cron Job Errors &amp; Issues</image:title>
       <image:caption>Troubleshoot and fix WHMCS cron job errors. Resolve PHP CLI path mismatches, memory limit exhaustion, email invoice failures, and task timeouts.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/free-htaccess-rewrite-rule-generator-redirect-examples</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-free-htaccess-rewrite-rule-generator-redirect-examples.png</image:loc>
+      <image:title>Free .htaccess Generator &amp; 10 Redirect Examples</image:title>
+      <image:caption>Generate optimized Apache and LiteSpeed mod_rewrite rules with our free .htaccess generator. Includes 10 common 301 redirects, SSL, and canonical tips.</image:caption>
     </image:image>
   </url>
   <url>

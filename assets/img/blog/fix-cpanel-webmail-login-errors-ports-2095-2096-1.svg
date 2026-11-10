@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t2 d2">
+  <title id="t2">cPanel Webmail Ports 2095 vs 2096 Troubleshooting Flowchart</title>
+  <desc id="d2">Troubleshooting flowchart for cPanel webmail ports 2095 unencrypted and 2096 SSL showing CSF firewall, CPSrvd, and SSL checks.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel Webmail Ports 2095 &amp; 2096: Diagnostic Flow</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Diagnostic Pipeline</text>
+
+  <!-- Step 1: Port Selection -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#38BDF8"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#38BDF8">1. Port &amp; Protocol</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Connection Target</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Port 2096 (Secure)</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#34D399">HTTPS Webmail (Default)</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Port 2095 (Insecure)</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#F87171">HTTP (Redirects to 2096)</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">URL Format:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#38BDF8">https://mail.domain:2096</text>
+    </g>
+  </g>
+
+  <!-- Step 2: Service Status -->
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#10B981"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#34D399">2. CPSrvd Service</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Daemon Health</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Check Command</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">/usr/local/cpanel/cpsrvd</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Restart Action</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">/scripts/restartsrv_cpsrvd</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">License Sync:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">/usr/local/cpanel/cpkeyclt</text>
+    </g>
+  </g>
+
+  <!-- Step 3: Firewall Rules -->
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">3. CSF / Firewall</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Port Ingress Whitelist</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">CSF TCP_IN Filter</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#FBBF24">Include 2095,2096</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">IPTables Check</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">iptables -L -n | grep 2096</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Quick Reload:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#FBBF24">csf -r (Reload daemon)</text>
+    </g>
+  </g>
+
+  <!-- Step 4: SSL Certificate -->
+  <g transform="translate(715, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#A855F7" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#A855F7"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#C084FC">4. Service SSL</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Certificate Alignment</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Hostname Match</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#C084FC">CN must match FQDN</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">AutoSSL Command</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">checkallsslcerts --force</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Result:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">Zero SSL Browser Warnings</text>
+    </g>
+  </g>
+</svg>

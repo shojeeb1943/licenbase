@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Fix Full /var Partition on Linux VPS Without Downtime</title>
+  <desc id="d3">Disk usage breakdown of Linux /var partition showing systemd journal logs, cPanel backup archives, MySQL ibdata1, and spool directories.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Linux VPS: Zero-Downtime /var Disk Recovery</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Storage Management</text>
+
+  <!-- 4 Sectors of /var -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#EF4444"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#EF4444">1. /var/log/journal</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Systemd Journal Bloat</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Typical Waste</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#EF4444">5 GB - 25 GB Unpruned</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Safe Zero-Downtime Fix</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">journalctl --vacuum-time=3d</text>
+      <text x="10" y="54" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">journalctl --vacuum-size=500M</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Instant Recovery: 90% space</text>
+    </g>
+  </g>
+
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">2. /var/lib/mysql</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Binary Logs &amp; Temp Data</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Typical Waste</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">Binlogs (binlog.00000X)</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Safe Zero-Downtime Fix</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">PURGE BINARY LOGS</text>
+      <text x="10" y="54" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">BEFORE NOW() - INTERVAL 3 DAY;</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Preserves DB integrity</text>
+    </g>
+  </g>
+
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#3B82F6"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#60A5FA">3. /var/spool/exim</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Frozen Mail Queues</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Typical Waste</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#60A5FA">Thousands of stuck spam emails</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Safe Zero-Downtime Fix</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">exiqgrep -z -i |</text>
+      <text x="10" y="54" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">xargs exim -Mrm</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Frees Inodes &amp; disk immediately</text>
+    </g>
+  </g>
+
+  <g transform="translate(715, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#10B981"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#34D399">4. /var/cpanel/backups</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Orphaned Staging Dumps</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Typical Waste</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34D399">Abandoned tar.gz archives</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Safe Zero-Downtime Fix</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">find /var/cpanel/backup*</text>
+      <text x="10" y="54" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">-type f -mtime +7 -delete</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Reclaims massive GB blocks</text>
+    </g>
+  </g>
+</svg>

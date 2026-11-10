@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Apache and LiteSpeed .htaccess Rewrite Rules Execution Flow</title>
+  <desc id="d5">Architecture diagram of Apache and LiteSpeed mod_rewrite engine evaluating incoming HTTP requests against .htaccess rules.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">.htaccess mod_rewrite: Execution Pipeline &amp; Performance</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Rule Engine</text>
+
+  <!-- Step 1: Inbound HTTP Request -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#3B82F6"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#60A5FA">1. Inbound Request</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Browser / Bot Call</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Client Query</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#60A5FA">http://example.com/page</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Headers Checked</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">HTTPS, Host, User-Agent</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Engine Init:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#60A5FA">RewriteEngine On</text>
+    </g>
+  </g>
+
+  <!-- Step 2: Condition Evaluation -->
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">2. RewriteCond</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Condition Match</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">HTTPS Test</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#FBBF24">RewriteCond %{HTTPS} off</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Canonical Domain Test</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">RewriteCond %{HTTP_HOST} ^www\.</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Status:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">Evaluates True / False</text>
+    </g>
+  </g>
+
+  <!-- Step 3: RewriteRule Application -->
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#10B981"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#34D399">3. RewriteRule</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">URL Transformation</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Transformation Rule</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">RewriteRule ^(.*)$ https://...</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Execution Flags</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">[R=301,L,NE]</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Flag Meaning:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">301 Permanent, Last Rule</text>
+    </g>
+  </g>
+
+  <!-- Step 4: Web Server Response -->
+  <g transform="translate(715, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#A855F7" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#A855F7"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#C084FC">4. Dispatch</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Apache vs LiteSpeed</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Apache Handling</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#C084FC">Reads .htaccess per-request</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">LiteSpeed Handling</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">In-memory caching (8x faster)</text>
+    </g>
+    <g transform="translate(14, 215)">
+      <rect width="182" height="50" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Final Delivery:</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">HTTP 301 Moved Permanently</text>
+    </g>
+  </g>
+</svg>
