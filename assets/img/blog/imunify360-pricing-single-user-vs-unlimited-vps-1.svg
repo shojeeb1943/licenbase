@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Imunify360 Single-User vs Unlimited VPS Tiers</title>
+  <desc id="d1">Comparison matrix of Imunify360 Single-User versus Unlimited VPS protection tiers showing WAF, malware scanner, and costs.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Imunify360: Single-User vs. Unlimited VPS Protection</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Security Licensing</text>
+
+  <!-- Left: Single-User (Dedicated Site/App) -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#38BDF8"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Imunify360 Single-User Tier</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Tailored for single-tenant VPS, WooCommerce &amp; agencies</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Account Limit: <tspan fill="#38BDF8" font-weight="600">Strictly 1 cPanel/Plesk User Account</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Security Features: <tspan fill="#34D399" font-weight="600">Full 6-layer defense (WAF, IDS/IPS, Anti-Malware)</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">LicenBase Wholesale Cost: <tspan fill="#34D399" font-weight="600">$6.50 / mo (Retail $12.00)</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Best For: <tspan fill="#38BDF8" font-weight="600">High-value single e-commerce or SaaS VPS</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right: Unlimited VPS Tier -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#34D399">Imunify360 Unlimited VPS Tier</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Enterprise multi-tenant protection for commercial hosting</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Account Limit: <tspan fill="#34D399" font-weight="600">Unlimited Shared Accounts &amp; Domains</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Security Features: <tspan fill="#34D399" font-weight="600">Automated multi-tenant isolation &amp; cleanups</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">LicenBase Wholesale Cost: <tspan fill="#34D399" font-weight="600">$10.50 / mo (Retail $25.00)</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Best For: <tspan fill="#34D399" font-weight="600">Reseller hosts, web agencies, multi-site nodes</tspan></text>
+    </g>
+  </g>
+</svg>

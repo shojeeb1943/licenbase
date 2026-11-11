@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">VPS Bandwidth Cost Calculator and Estimation Flowchart</title>
+  <desc id="d5">Calculation flowchart estimating monthly VPS bandwidth needs based on daily visitors, page weight, and CDN caching.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">VPS Bandwidth Estimation: The Data Transfer Formula</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Data Modeling</text>
+
+  <!-- 4 Step Pipeline -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#38BDF8"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#38BDF8">1. Page Payload</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Average Web Weight</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Typical HTML/JS</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#38BDF8">1.5 MB - 2.5 MB / page</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Pageviews / User</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">Averages 2.5 to 3.8 pages per session</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Base Raw Transfer</text>
+    </g>
+  </g>
+
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">2. Traffic Volume</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Monthly Visitors</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Example Scale</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">100,000 Visitors / mo</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Total Raw Demand</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">100k x 3 x 2 MB = 600 GB / month</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#FBBF24">Multiplied by 30 days</text>
+    </g>
+  </g>
+
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#34D399">3. CDN Caching &amp; Compression Offload</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Edge caching slashes origin egress bandwidth</text>
+
+    <g transform="translate(16, 75)">
+      <rect width="398" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Cloudflare / Fastly CDN Caching</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34D399">Absorbs 65% - 85% of static image &amp; asset bandwidth</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="398" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Brotli / Gzip Compression</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Reduces HTML, CSS, and JS transfer payload by up to 70%</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="398" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Actual Origin Server Egress</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#34D399">600 GB drops to ~120 GB / mo (Easily within 2TB VPS limits)</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="398" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Result: Zero bandwidth overage penalties</text>
+    </g>
+  </g>
+</svg>

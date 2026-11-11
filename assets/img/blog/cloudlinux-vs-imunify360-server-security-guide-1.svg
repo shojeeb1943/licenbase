@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t4 d4">
+  <title id="t4">CloudLinux vs Imunify360 Server Security Architecture</title>
+  <desc id="d4">Comparison matrix of CloudLinux kernel isolation versus Imunify360 proactive application WAF and real-time malware cleanup.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">CloudLinux vs Imunify360: Defense Layer Comparison</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Defense Matrix</text>
+
+  <!-- Left: CloudLinux OS (Kernel Layer) -->
+  <g transform="translate(35, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#38BDF8"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">CloudLinux OS: Kernel Isolation Layer</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Enforces resource containment and user filesystem jailing</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Primary Mechanism: <tspan fill="#38BDF8" font-weight="600">LVE (Lightweight Virtual Environments)</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Filesystem Sandbox: <tspan fill="#38BDF8" font-weight="600">CageFS isolates users in private chroot</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Database Defense: <tspan fill="#38BDF8" font-weight="600">MySQL Governor prevents query overload</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">What It Doesn't Do: <tspan fill="#F87171" font-weight="600">Does not scan or clean WordPress malware</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right: Imunify360 (Application Threat Layer) -->
+  <g transform="translate(495, 104)">
+    <rect width="430" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="430" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#34D399">Imunify360: Proactive Threat Defense</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Neutralizes web exploits, malware injections &amp; brute force</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Primary Mechanism: <tspan fill="#34D399" font-weight="600">AI-Powered Web Application Firewall (WAF)</tspan></text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Malware Cleanup: <tspan fill="#34D399" font-weight="600">Automated real-time file disinfection</tspan></text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Network Defense: <tspan fill="#34D399" font-weight="600">Global Grey-list &amp; DoS Protection</tspan></text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="380" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="13" fill="#E2E8F0">Ideal Synergy: <tspan fill="#34D399" font-weight="600">Combine with CloudLinux for 100% full-stack defense</tspan></text>
+    </g>
+  </g>
+</svg>
