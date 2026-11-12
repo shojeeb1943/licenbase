@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t8 d8">
+  <title id="t8">Identify and Stop Outbound Spam on Port 25 Open VPS</title>
+  <desc id="d8">Outbound email security pipeline showing Exim mail queue monitoring, script origin tracing, and CSF rate-limiting on Port 25.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Port 25 Open VPS: Outbound Spam Defense Pipeline</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Spam Mitigation</text>
+
+  <!-- Step 1: Detect Queue Surge -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#EF4444"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#EF4444">1. Queue Inspection</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Exim Spool Monitor</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Count Messages</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#EF4444">exim -bpc</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Alert Threshold</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">&gt; 1,000 messages indicates active spam eruption</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#F87171">High Blacklist Risk</text>
+    </g>
+  </g>
+
+  <!-- Step 2: Trace Script Origin -->
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">2. Trace Script Origin</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Find Malicious PHP</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">View Header</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#FBBF24">exim -Mvh [Message_ID]</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Key Header Tag</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">X-PHP-Originating-Script / Current-Directory</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Pinpoints rogue script path</text>
+    </g>
+  </g>
+
+  <!-- Step 3: Purge Queue -->
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#3B82F6"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#60A5FA">3. Purge Spool</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Immediate Flush</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Purge Spam Senders</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#60A5FA">exiqgrep -f [user] -i |</text>
+      <text x="10" y="52" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#60A5FA">xargs exim -Mrm</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Freeze Queue</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">Stops outbound SMTP relay immediately</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Protects server IP reputation</text>
+    </g>
+  </g>
+
+  <!-- Step 4: Enforce Caps -->
+  <g transform="translate(715, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#10B981"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#34D399">4. Rate Limit Caps</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Permanent Defense</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Hourly Email Limit</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">Max 100 emails/hour</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Imunify360 WAF</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">Proactively blocks web shells &amp; malicious mailers</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#34D399">Zero RBL Blacklisting</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Apache .htaccess HTTPS Redirect and Non-WWW Canonicalization</title>
+  <desc id="d5">URL canonicalization diagram showing HTTP and WWW variants rewriting to secure HTTPS non-WWW canonical destination.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Apache .htaccess: HTTPS &amp; Non-WWW Canonical Architecture</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">SEO Redirects</text>
+
+  <!-- Left: Inbound URL Variations -->
+  <g transform="translate(35, 104)">
+    <rect width="380" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="380" height="6" rx="3" fill="#EF4444"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#EF4444">Fragmented Inbound Traffic</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">4 URL variants split ranking signals &amp; trigger duplicate penalties</text>
+
+    <g transform="translate(25, 75)">
+      <rect width="330" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#F87171">http://example.com/page (Insecure non-WWW)</text>
+    </g>
+    <g transform="translate(25, 123)">
+      <rect width="330" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#F87171">http://www.example.com/page (Insecure WWW)</text>
+    </g>
+    <g transform="translate(25, 171)">
+      <rect width="330" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#FBBF24">https://www.example.com/page (Secure WWW)</text>
+    </g>
+    <g transform="translate(25, 219)">
+      <rect width="330" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#F87171">http://example.com/page/ (Trailing Slash Split)</text>
+    </g>
+  </g>
+
+  <!-- Middle: Mod_Rewrite Rule Engine -->
+  <g transform="translate(435, 190)">
+    <circle cx="45" cy="45" r="32" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+    <text x="45" y="49" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" text-anchor="middle">301</text>
+    <text x="45" y="95" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">RewriteRule</text>
+  </g>
+
+  <!-- Right: Single Canonical Destination -->
+  <g transform="translate(545, 104)">
+    <rect width="380" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="380" height="6" rx="3" fill="#10B981"/>
+    <text x="25" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#34D399">Single Canonical Destination</text>
+    <text x="25" y="58" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Consolidates 100% of link equity &amp; enforces HSTS encryption</text>
+
+    <g transform="translate(25, 80)">
+      <rect width="330" height="80" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+      <text x="14" y="26" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Enforced Production Target:</text>
+      <text x="14" y="52" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#34D399">https://example.com/page</text>
+    </g>
+    <g transform="translate(25, 180)">
+      <rect width="330" height="60" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">SEO Equity: <tspan fill="#34D399" font-weight="600">100% Link Juice Preserved</tspan></text>
+      <text x="14" y="44" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">SSL Security: <tspan fill="#34D399" font-weight="600">Strict Transport Security (HSTS)</tspan></text>
+    </g>
+  </g>
+</svg>

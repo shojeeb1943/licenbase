@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Solve CloudLinux License Not Detected on cPanel Flowchart</title>
+  <desc id="d3">Troubleshooting flowchart for CloudLinux license not detected errors showing CLN server verification and clnreg commands.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">CloudLinux: License Verification &amp; CLN Recovery</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Diagnostic Guide</text>
+
+  <!-- 4 Step Flow -->
+  <g transform="translate(35, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#EF4444"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#EF4444">1. License Check</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Local Token State</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Command</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#EF4444">cldiag --check-license</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Common Error</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">"License not detected" or IP not registered</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Initial diagnostic trigger</text>
+    </g>
+  </g>
+
+  <g transform="translate(262, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#F59E0B"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FBBF24">2. CLN Connectivity</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Network &amp; Firewalls</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Test Endpoint</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#FBBF24">cln.cloudlinux.com</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Port Requirement</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">Outbound TCP 443 must be whitelisted</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Check CSF / iptables</text>
+    </g>
+  </g>
+
+  <g transform="translate(489, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#3B82F6"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#60A5FA">3. Registration Sync</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">clnreg &amp; rhn_check</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">IP Auto-Register</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#60A5FA">clnreg_ks --force</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">RHN Profile Sync</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">rhn_check</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#38BDF8">Rebuilds /etc/sysconfig/rhn</text>
+    </g>
+  </g>
+
+  <g transform="translate(715, 104)">
+    <rect width="210" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="210" height="6" rx="3" fill="#10B981"/>
+    <text x="16" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#34D399">4. cPanel WHM Bind</text>
+    <text x="16" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">LVE Manager Online</text>
+    <g transform="translate(14, 75)">
+      <rect width="182" height="60" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Verification</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#34D399">cliconf --check-license</text>
+    </g>
+    <g transform="translate(14, 145)">
+      <rect width="182" height="70" rx="6" fill="#0F172A"/>
+      <text x="10" y="20" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">WHM Status</text>
+      <text x="10" y="38" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">LVE Manager, CageFS &amp; MySQL Gov active</text>
+    </g>
+    <g transform="translate(14, 225)">
+      <rect width="182" height="40" rx="6" fill="#0F172A"/>
+      <text x="10" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#34D399">Full Multi-Tenant Protection</text>
+    </g>
+  </g>
+</svg>

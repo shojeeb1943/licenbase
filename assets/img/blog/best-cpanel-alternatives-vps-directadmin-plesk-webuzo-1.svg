@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t9 d9">
+  <title id="t9">Best cPanel Alternatives DirectAdmin vs Plesk vs Webuzo</title>
+  <desc id="d9">Comparison matrix of cPanel alternatives evaluating DirectAdmin, Plesk Obsidian, and Webuzo on RAM footprint, UI, and cost.</desc>
+  <rect width="960" height="420" rx="20" fill="#0F172A"/>
+  <rect x="35" y="24" width="890" height="60" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="55" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">cPanel Alternatives 2026: DirectAdmin vs. Plesk vs. Webuzo</text>
+  <text x="730" y="61" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Panel Matrix</text>
+
+  <!-- Column 1: DirectAdmin -->
+  <g transform="translate(35, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#06B6D4" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#06B6D4"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#22D3EE">DirectAdmin</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Ultralight C++ Architecture</text>
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Idle RAM Consumption</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#22D3EE">300 MB - 500 MB (Lightest)</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Licensing Model</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#22D3EE">Flat Rate / Unlimited Accounts</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">cPanel Migration</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">cpmove import utility included</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: High-density budget VPS</text>
+    </g>
+  </g>
+
+  <!-- Column 2: Plesk Obsidian -->
+  <g transform="translate(340, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#6366F1" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#6366F1"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#818CF8">Plesk Obsidian</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">WordPress &amp; Agency Powerhouse</text>
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Idle RAM Consumption</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">1.0 GB - 1.8 GB</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Licensing Model</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#818CF8">Domain-Tiers (10 / 30 / Unlimited)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Specialty Capability</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#818CF8">Windows Server + WP Toolkit</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Agencies &amp; multi-OS stacks</text>
+    </g>
+  </g>
+
+  <!-- Column 3: Webuzo -->
+  <g transform="translate(645, 104)">
+    <rect width="280" height="280" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <rect width="280" height="6" rx="3" fill="#10B981"/>
+    <text x="20" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#34D399">Webuzo v3</text>
+    <text x="20" y="56" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Softaculous-Integrated Multi-User</text>
+    <g transform="translate(16, 75)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Idle RAM Consumption</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34D399">500 MB - 800 MB (Very Light)</text>
+    </g>
+    <g transform="translate(16, 127)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Licensing Model</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34D399">Lowest Cost ($2.50 - $4.00/mo)</text>
+    </g>
+    <g transform="translate(16, 179)">
+      <rect width="248" height="42" rx="6" fill="#0F172A"/>
+      <text x="12" y="18" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#94A3B8">Native 1-Click Apps</text>
+      <text x="12" y="34" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34D399">450+ Softaculous scripts built-in</text>
+    </g>
+    <g transform="translate(16, 231)">
+      <rect width="248" height="34" rx="6" fill="#0F172A"/>
+      <text x="12" y="22" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#CBD5E1">Best For: Budget webmasters &amp; VPS</text>
+    </g>
+  </g>
+</svg>
