@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <rect x="20" y="20" width="920" height="380" rx="16" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="50" y="60" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">WHMCS Automation Architecture &amp; Licensing Lifecycle</text>
+  <text x="50" y="85" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Automated client billing, control panel provisioning, and IP-based license validation</text>
+
+  <!-- Step 1: Client Order -->
+  <rect x="50" y="125" width="180" height="230" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="50" y="125" width="180" height="40" rx="12" fill="#0369a1"/>
+  <text x="140" y="150" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">1. Client Order</text>
+  <text x="70" y="195" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">• Storefront Checkout</text>
+  <text x="70" y="225" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Invoice Generation</text>
+  <text x="70" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Gateway Callback</text>
+  <text x="70" y="285" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• FraudLabs / MaxMind</text>
+  <text x="70" y="325" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Paid Status Confirmed</text>
+
+  <!-- Flow Arrow 1 -->
+  <path d="M 235 240 L 275 240" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4,4"/>
+
+  <!-- Step 2: WHMCS Core -->
+  <rect x="280" y="125" width="200" height="230" rx="12" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="280" y="125" width="200" height="40" rx="12" fill="#2563eb"/>
+  <text x="380" y="150" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">2. WHMCS Core</text>
+  <text x="300" y="195" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">• cron.php Automation</text>
+  <text x="300" y="225" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Module Command Hook</text>
+  <text x="300" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Client Limit Counter</text>
+  <text x="300" y="285" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• LicenBase Key Check</text>
+  <text x="300" y="325" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="600">IP Key Synchronized</text>
+
+  <!-- Flow Arrow 2 -->
+  <path d="M 485 240 L 525 240" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Step 3: Server Provisioning -->
+  <rect x="530" y="125" width="190" height="230" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <rect x="530" y="125" width="190" height="40" rx="12" fill="#059669"/>
+  <text x="625" y="150" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">3. Auto Provisioning</text>
+  <text x="550" y="195" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">• cPanel / WHM API</text>
+  <text x="550" y="225" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Virtualizor KVM VPS</text>
+  <text x="550" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• DirectAdmin Accounts</text>
+  <text x="550" y="285" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Root Password Encrypt</text>
+  <text x="550" y="325" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Instant Server Online</text>
+
+  <!-- Flow Arrow 3 -->
+  <path d="M 725 240 L 765 240" stroke="#34d399" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Step 4: Enduser Notification -->
+  <rect x="770" y="125" width="140" height="230" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="770" y="125" width="140" height="40" rx="12" fill="#d97706"/>
+  <text x="840" y="150" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">4. Delivery</text>
+  <text x="785" y="195" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">• Welcome Email</text>
+  <text x="785" y="225" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Nameserver IPs</text>
+  <text x="785" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Control Panel SSO</text>
+  <text x="785" y="285" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">• Support Ticket Portal</text>
+  <text x="785" y="325" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="600">100% Turnkey</text>
+</svg>
