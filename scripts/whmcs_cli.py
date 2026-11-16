@@ -14,7 +14,7 @@ import urllib.request
 import urllib.error
 
 ENDPOINT = os.environ.get("WHMCS_MCP_ENDPOINT", "https://dashboard.licenbase.com/modules/addons/whmcsmcp/mcp.php")
-TOKEN = os.environ.get("WHMCS_MCP_TOKEN", "wmcp_LpWwGF3bwDciFosJFXmMnJayuT9OdnLXXdKsfS-2E8I")
+TOKEN = os.environ.get("WHMCS_MCP_TOKEN", "wmcp_ypbKEJuEEdjkOyPZShd1RCymAvnoiHjM1DdXNXI4o_8")
 
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",

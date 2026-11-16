@@ -1,0 +1,62 @@
+{
+  "48": {
+    "name": "Managed Cloud VPS 4",
+    "monthly": 21.6,
+    "approval_id": "e9eab5df515c619b37e9f15198d4e4da",
+    "args": {
+      "productid": 48,
+      "currency": 1,
+      "monthly": 21.6
+    }
+  },
+  "49": {
+    "name": "Managed Cloud VPS 6",
+    "monthly": 24.0,
+    "approval_id": "939e6eb954f8e1dc4e1ae211024f0524",
+    "args": {
+      "productid": 49,
+      "currency": 1,
+      "monthly": 24.0
+    }
+  },
+  "50": {
+    "name": "Managed Cloud VPS 8",
+    "monthly": 31.8,
+    "approval_id": "2afde737b0c7403264f0074f9ef64c34",
+    "args": {
+      "productid": 50,
+      "currency": 1,
+      "monthly": 31.8
+    }
+  },
+  "51": {
+    "name": "Managed Cloud VPS 12",
+    "monthly": 45.0,
+    "approval_id": "a6f20701a015932057e698f6b9d22eab",
+    "args": {
+      "productid": 51,
+      "currency": 1,
+      "monthly": 45.0
+    }
+  },
+  "52": {
+    "name": "Managed Cloud VPS 16",
+    "monthly": 59.5,
+    "approval_id": "7dc6abaf2b93d00aa60d37c9309d7568",
+    "args": {
+      "productid": 52,
+      "currency": 1,
+      "monthly": 59.5
+    }
+  },
+  "53": {
+    "name": "Managed Cloud VPS 18",
+    "monthly": 73.8,
+    "approval_id": "14b85c352cc4acbb97a61d0a60a3037b",
+    "args": {
+      "productid": 53,
+      "currency": 1,
+      "monthly": 73.8
+    }
+  }
+}

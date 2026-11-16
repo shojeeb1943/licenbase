@@ -65,19 +65,19 @@ HOSTING_PRODUCTS = [
         "name": "Managed VPS",
         "seo_title": "Cheap Managed VPS with cPanel License | LicenBase",
         "og_title": "Cheap Managed VPS with cPanel License Included",
-        "seo_desc": "High-performance managed VPS hosting with cPanel & WHM license included from $19/mo. Dedicated NVMe storage, 24/7 admin support, free migration & instant setup.",
+        "seo_desc": "High-performance managed VPS hosting with cPanel & WHM license included from $21.60/mo. Dedicated NVMe storage, 24/7 admin support, free migration & instant setup.",
         "seo_h2": "High-Performance Managed KVM VPS with Free cPanel & WHM License",
         "seo_p1": "Running a business website or digital agency shouldn't require juggling separate server and control panel invoices. LicenBase Managed VPS bundles enterprise-grade KVM virtual servers with genuine cPanel & WHM licenses activated directly on your server's dedicated IP address. Every instance is built on PCIe Gen4 NVMe storage and high-frequency AMD EPYC processors, delivering lightning-fast database queries and sub-second page loads.",
         "seo_p2": "Our team of experienced Linux systems administrators handles the heavy lifting: initial control panel hardening, web server optimization, firewall configuration, automated nightly backups, and seamless site migrations from your old host. With root access available upon request, you get the dedicated performance of a private server paired with the peace of mind of round-the-clock proactive management.",
         "title": "Managed VPS with License Included",
-        "meta_desc": "High-performance managed VPS hosting with cPanel & WHM license included from $19/mo. Dedicated NVMe storage, 24/7 admin support, free migration & instant setup.",
+        "meta_desc": "High-performance managed VPS hosting with cPanel & WHM license included from $21.60/mo. Dedicated NVMe storage, 24/7 admin support, free migration & instant setup.",
         "badge": "Fully Managed KVM Cloud Virtual Private Servers",
         "icon": "server",
         "headline": "Managed Cloud VPS",
         "headline_sub": "cPanel & WHM License Included.",
         "hero_desc": "Deploy fully managed, high-performance KVM virtual private servers with genuine cPanel & WHM licenses bundled directly into your plan. Enjoy dedicated NVMe storage, free white-glove migration, and 24/7 server administrator management.",
         "specs": ["cPanel License Included", "Gen4 NVMe Storage", "Full Root / WHM Access", "Free Site Migration", "24/7 Proactive Management", "99.99% Network Uptime"],
-        "terms": ["monthly", "yearly"],
+        "terms": ["monthly"],
         "faqs": [
             {
                 "q": "What does Managed VPS with license mean?",
@@ -105,7 +105,7 @@ HOSTING_PRODUCTS = [
             }
         ],
         "related": [
-            {"title": "Unmanaged VPS", "price": "From $4.50/mo", "url": "/unmanaged-vps", "desc": "Raw KVM cloud compute with full root access for custom stacks.", "icon": "server"},
+            {"title": "Unmanaged VPS", "price": "From $5.98/mo", "url": "/unmanaged-vps", "desc": "Raw KVM cloud compute with full root access for custom stacks.", "icon": "server"},
             {"title": "cPanel License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Industry leading hosting control panel with unlimited accounts.", "icon": "cpanel.svg"},
             {"title": "LiteSpeed Web Server", "price": "From $4.00/mo", "url": "/litespeed-license", "desc": "Drop-in Apache replacement for 10x faster PHP and WordPress.", "icon": "litespeed.svg"},
             {"title": "Imunify360 Security", "price": "$1.50/mo", "url": "/imunify360-license", "desc": "AI firewall, proactive defense, and automated malware cleanup.", "icon": "imunify360.png"}
@@ -117,19 +117,19 @@ HOSTING_PRODUCTS = [
         "name": "Unmanaged VPS",
         "seo_title": "Cheap Unmanaged VPS – High Performance KVM | LicenBase",
         "og_title": "Cheap Unmanaged VPS with Root Access",
-        "seo_desc": "High-performance unmanaged KVM VPS hosting from $4.50/mo. Full root access, Gen4 NVMe storage, 1 Gbps port, instant OS provisioning & automated DDoS protection.",
+        "seo_desc": "High-performance unmanaged KVM VPS hosting from $5.98/mo. Full root access, Gen4 NVMe storage, 1 Gbps port, instant OS provisioning & automated DDoS protection.",
         "seo_h2": "High-Speed Unmanaged KVM Cloud VPS with Complete Root Control",
         "seo_p1": "For systems administrators, developers, and hosting professionals who want total control over their stack, LicenBase Unmanaged VPS provides clean, unthrottled KVM virtualization. You get pure compute power with zero bloatware or mandatory license bundles. Choose your preferred Linux distribution—including AlmaLinux, Rocky Linux, Ubuntu, Debian, or custom ISOs—and install whatever software stack your project demands.",
         "seo_p2": "Every unmanaged virtual server is backed by enterprise-grade hardware nodes featuring PCIe Gen4 NVMe storage in RAID-10 arrays and redundant 1 Gbps uplinks. With automated provisioning, self-service reboot and OS reinstall tools via our control panel, and optional wholesale licenses available directly from LicenBase at anytime, you get maximum flexibility at unbeatable prices.",
         "title": "Unmanaged VPS with Root Access",
-        "meta_desc": "High-performance unmanaged KVM VPS hosting from $4.50/mo. Full root access, Gen4 NVMe storage, 1 Gbps port, instant OS provisioning & automated DDoS protection.",
+        "meta_desc": "High-performance unmanaged KVM VPS hosting from $5.98/mo. Full root access, Gen4 NVMe storage, 1 Gbps port, instant OS provisioning & automated DDoS protection.",
         "badge": "Pure Hardware Compute · 100% Unrestricted Root Access",
         "icon": "terminal",
         "headline": "Unmanaged KVM VPS",
         "headline_sub": "Full Root Access & Pure Performance.",
         "hero_desc": "Deploy raw cloud compute power on high-frequency enterprise KVM nodes. Get 100% root access, dedicated Gen4 NVMe storage, unmetered network performance, and the freedom to configure your own software stack.",
         "specs": ["100% Root Access", "Gen4 NVMe RAID-10", "1 Gbps Network Port", "AlmaLinux / Ubuntu / Debian", "Virtualizor Control Panel", "Automated DDoS Defense"],
-        "terms": ["monthly", "yearly"],
+        "terms": ["monthly"],
         "faqs": [
             {
                 "q": "What does Unmanaged VPS mean?",
@@ -157,7 +157,7 @@ HOSTING_PRODUCTS = [
             }
         ],
         "related": [
-            {"title": "Managed VPS", "price": "From $19.00/mo", "url": "/managed-vps", "desc": "Fully managed server with free cPanel license and 24/7 admin support.", "icon": "server"},
+            {"title": "Managed VPS", "price": "From $21.60/mo", "url": "/managed-vps", "desc": "Fully managed server with free cPanel license and 24/7 admin support.", "icon": "server"},
             {"title": "Port 25 Open VPS", "price": "From $12.00/mo", "url": "/port-25-open-vps", "desc": "Specialized cloud VPS with unblocked outbound port 25 for mail.", "icon": "mail"},
             {"title": "cPanel License", "price": "From $4.00/mo", "url": "/cpanel-license", "desc": "Unlimited cPanel accounts with instant IP activation.", "icon": "cpanel.svg"},
             {"title": "Virtualizor License", "price": "$3.50/mo", "url": "/virtualizor-license", "desc": "Automated virtual machine orchestration and hypervisor control.", "icon": "virtualizor.png"}
@@ -917,7 +917,7 @@ def generate_hosting_page(p):
         """
 
         # Multi-term cards
-        grid_cols = "md:grid-cols-2" if len(plans) == 2 else ("md:grid-cols-3" if len(plans) == 3 else "max-w-xl mx-auto")
+        grid_cols = "md:grid-cols-2 lg:grid-cols-3" if len(plans) >= 3 else ("md:grid-cols-2" if len(plans) == 2 else "max-w-xl mx-auto")
         tiers_html = f'{tabs_html}<div class="grid gap-8 {grid_cols}">'
 
         for t in plans:

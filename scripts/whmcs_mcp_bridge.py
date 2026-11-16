@@ -16,7 +16,7 @@ ENDPOINT_URL = os.environ.get(
 )
 TOKEN = os.environ.get(
     "WHMCS_MCP_TOKEN",
-    "wmcp_LpWwGF3bwDciFosJFXmMnJayuT9OdnLXXdKsfS-2E8I"
+    "wmcp_ypbKEJuEEdjkOyPZShd1RCymAvnoiHjM1DdXNXI4o_8"
 )
 
 def main():
