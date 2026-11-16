@@ -1,0 +1,140 @@
+[
+  [
+    "Managed Cloud VPS 4",
+    21.6,
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Approval required for tool: create_product"
+          }
+        ],
+        "structuredContent": {
+          "error": "Approval required for tool: create_product",
+          "details": {
+            "approval_id": "b3e1cf89a3ece6cfa4580df3075edcf7"
+          }
+        },
+        "isError": true
+      }
+    }
+  ],
+  [
+    "Managed Cloud VPS 6",
+    24.0,
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Approval required for tool: create_product"
+          }
+        ],
+        "structuredContent": {
+          "error": "Approval required for tool: create_product",
+          "details": {
+            "approval_id": "9493b6d20a7e2d428a43cce2f9c72ea9"
+          }
+        },
+        "isError": true
+      }
+    }
+  ],
+  [
+    "Managed Cloud VPS 8",
+    31.8,
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Approval required for tool: create_product"
+          }
+        ],
+        "structuredContent": {
+          "error": "Approval required for tool: create_product",
+          "details": {
+            "approval_id": "93b0991ad1f0df66fd3ea3a41292031d"
+          }
+        },
+        "isError": true
+      }
+    }
+  ],
+  [
+    "Managed Cloud VPS 12",
+    45.0,
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Approval required for tool: create_product"
+          }
+        ],
+        "structuredContent": {
+          "error": "Approval required for tool: create_product",
+          "details": {
+            "approval_id": "a00d62c9d3c46fd9ef0d5bb427f4dccd"
+          }
+        },
+        "isError": true
+      }
+    }
+  ],
+  [
+    "Managed Cloud VPS 16",
+    59.5,
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Approval required for tool: create_product"
+          }
+        ],
+        "structuredContent": {
+          "error": "Approval required for tool: create_product",
+          "details": {
+            "approval_id": "221ec961422a80951a3b6bf292957a6c"
+          }
+        },
+        "isError": true
+      }
+    }
+  ],
+  [
+    "Managed Cloud VPS 18",
+    73.8,
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Approval required for tool: create_product"
+          }
+        ],
+        "structuredContent": {
+          "error": "Approval required for tool: create_product",
+          "details": {
+            "approval_id": "ddbfb332082db3bc2e3e2d179134e67c"
+          }
+        },
+        "isError": true
+      }
+    }
+  ]
+]
