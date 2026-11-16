@@ -34,6 +34,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
 
+# Enforce canonical trailing slash on all /tools/ directory routes (prevents GSC split signals)
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{DOCUMENT_ROOT}/tools/$1 -d
+RewriteRule ^tools/([^/]+)$ /tools/$1/ [L,R=301]
+
 # /blog/post -> blog/post.html internally
 RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
 RewriteRule ^blog/([^/]+)$ blog/$1.html [L]

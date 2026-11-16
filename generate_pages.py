@@ -1313,6 +1313,36 @@ def generate_page(p):
         </a>
         """
 
+    calc_map = {
+        "cpanel": ("/tools/cpanel-license-calculator/", "cPanel License Cost"),
+        "litespeed": ("/tools/litespeed-license-calculator/", "LiteSpeed License Cost"),
+        "plesk": ("/tools/plesk-license-calculator/", "Plesk License Cost"),
+        "whmcs": ("/tools/whmcs-license-calculator/", "WHMCS License Cost"),
+        "cloudlinux": ("/tools/cloudlinux-license-calculator/", "CloudLinux OS Cost"),
+        "virtualizor": ("/tools/virtualizor-license-calculator/", "Virtualizor Node Cost"),
+        "sitepad": ("/tools/sitepad-license-calculator/", "SitePad Builder Cost"),
+        "whmreseller": ("/tools/whmreseller-license-calculator/", "WHMReseller Cost"),
+        "softaculous": ("/tools/softaculous-license-calculator/", "Softaculous Cost"),
+        "jetbackup": ("/tools/jetbackup-license-calculator/", "JetBackup Storage & License Cost"),
+        "imunify360": ("/tools/imunify360-license-calculator/", "Imunify360 Security Cost"),
+    }
+    calc_info = calc_map.get(p["slug"])
+    if calc_info:
+        calc_url, calc_label = calc_info
+        calc_html = f'''<div class="mt-8 rounded-2xl border border-blue-200/80 bg-gradient-to-r from-blue-50/60 via-indigo-50/40 to-blue-50/60 p-4 text-center text-xs text-gray-700 max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 shadow-sm">
+        <span class="font-bold text-navy flex items-center gap-1.5"><i data-lucide="calculator" class="h-4 w-4 text-brand"></i> Cost Calculators:</span>
+        <a href="{calc_url}" class="font-semibold text-brand hover:underline inline-flex items-center gap-1">Calculate Your {calc_label} <i data-lucide="arrow-right" class="h-3 w-3"></i></a>
+        <span class="text-gray-300">•</span>
+        <a href="/tools/vps-cost-calculator/" class="font-semibold text-brand hover:underline inline-flex items-center gap-1">Calculate Total VPS + License Cost <i data-lucide="arrow-right" class="h-3 w-3"></i></a>
+      </div>'''
+    else:
+        calc_html = '''<div class="mt-8 rounded-2xl border border-blue-200/80 bg-gradient-to-r from-blue-50/60 via-indigo-50/40 to-blue-50/60 p-4 text-center text-xs text-gray-700 max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 shadow-sm">
+        <span class="font-bold text-navy flex items-center gap-1.5"><i data-lucide="calculator" class="h-4 w-4 text-brand"></i> Server Planning:</span>
+        <a href="/tools/vps-cost-calculator/" class="font-semibold text-brand hover:underline inline-flex items-center gap-1">Calculate Total VPS + License Cost <i data-lucide="arrow-right" class="h-3 w-3"></i></a>
+        <span class="text-gray-300">•</span>
+        <a href="/tools/server-capacity-calculator/" class="font-semibold text-brand hover:underline inline-flex items-center gap-1">Server Capacity Estimator <i data-lucide="arrow-right" class="h-3 w-3"></i></a>
+      </div>'''
+
     specs_pills = "".join([f'<span class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-navy border border-gray-200 shadow-sm"><i data-lucide="check" class="h-3.5 w-3.5 text-accent"></i> {spec}</span>' for spec in p["specs"]])
 
     url = "https://licenbase.com/" + p["filename"][:-5]
@@ -1692,6 +1722,8 @@ def generate_page(p):
       <div class="mt-12">
         {tiers_html}
       </div>
+
+      {calc_html}
 
       <!-- Buying reassurance -->
       <div class="mt-12 grid gap-4 sm:grid-cols-3 max-w-4xl mx-auto">
