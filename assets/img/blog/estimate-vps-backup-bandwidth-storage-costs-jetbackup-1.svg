@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t5 d5">
+  <title id="t5">VPS Backup Bandwidth and Storage Sizing Flow</title>
+  <desc id="d5">Diagram detailing daily incremental deduplication, network bandwidth consumption, and Wasabi or S3 storage retention math.</desc>
+  <rect width="960" height="420" rx="16" fill="#0B1528"/>
+
+  <!-- Source VPS -->
+  <g transform="translate(50, 60)">
+    <rect width="230" height="290" rx="12" fill="#13233E" stroke="#3B82F6" stroke-width="2"/>
+    <text x="115" y="40" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">PRODUCTION VPS</text>
+    <text x="115" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800" text-anchor="middle">200 GB SSD</text>
+    <path d="M 20 95 L 210 95" stroke="#1E3A8A" stroke-width="1"/>
+    <text x="25" y="130" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">• Active Sites &amp; Databases</text>
+    <text x="25" y="160" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">• Daily Change Rate: ~3-5%</text>
+    <text x="25" y="190" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">• 6 - 10 GB Changed / Day</text>
+    <rect x="20" y="225" width="190" height="45" rx="8" fill="#1E3A8A"/>
+    <text x="115" y="252" fill="#93C5FD" font-family="monospace" font-size="11" text-anchor="middle">JetBackup Daemon</text>
+  </g>
+
+  <!-- Network Bandwidth Pipe -->
+  <g transform="translate(320, 150)">
+    <rect width="280" height="110" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="140" y="30" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">EGRESS BANDWIDTH</text>
+    <text x="140" y="60" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="800" text-anchor="middle">Block-Level Transfer</text>
+    <text x="140" y="88" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Gzip / Zstd Compression (2:1)</text>
+    <path d="M -40 55 L -5 55" stroke="#3B82F6" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M 285 55 L 320 55" stroke="#10B981" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Remote Storage Destination -->
+  <g transform="translate(640, 60)">
+    <rect width="270" height="290" rx="12" fill="#13233E" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="135" y="40" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">DESTINATION REPO</text>
+    <text x="135" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800" text-anchor="middle">S3 / Wasabi / B2</text>
+    <path d="M 20 95 L 250 95" stroke="#3730A3" stroke-width="1"/>
+    <text x="25" y="130" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">• Initial Full Backup: ~100 GB</text>
+    <text x="25" y="160" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">• 30 Days Retention: ~220 GB</text>
+    <text x="25" y="190" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">• Deduplicated Hardlinks</text>
+    <rect x="20" y="225" width="230" height="45" rx="8" fill="#312E81"/>
+    <text x="135" y="252" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Est. Storage: $1.30 - $2.50 / mo</text>
+  </g>
+</svg>

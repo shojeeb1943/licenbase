@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">VPS Hosting Cost Breakdown: Compute vs Software Licensing</title>
+  <desc id="d1">Visual breakdown comparing raw hardware server cost against control panel and security software licenses.</desc>
+  <rect width="960" height="420" rx="16" fill="#0F172A"/>
+
+  <!-- Left: Raw Hardware Tier -->
+  <g transform="translate(40, 40)">
+    <rect width="260" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+    <rect x="20" y="20" width="220" height="40" rx="8" fill="#3B82F6" fill-opacity="0.2"/>
+    <text x="130" y="45" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle">BASE HARDWARE</text>
+    <text x="130" y="105" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" text-anchor="middle">~20% - 30%</text>
+    <text x="130" y="130" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">Total Monthly Stack Cost</text>
+    
+    <path d="M 30 160 L 230 160" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="195" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• 2-4 vCPU AMD / Xeon</text>
+    <text x="35" y="225" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• 4-8 GB RAM Memory</text>
+    <text x="35" y="255" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• 80-160 GB NVMe Storage</text>
+    <text x="35" y="285" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• 1 Gbps Port Uplink</text>
+    <text x="130" y="345" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">$6.00 - $18.00 / mo</text>
+  </g>
+
+  <!-- Middle: Software Licensing (The Hidden Cost) -->
+  <g transform="translate(330, 40)">
+    <rect width="300" height="340" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="20" y="20" width="260" height="40" rx="8" fill="#F59E0B" fill-opacity="0.2"/>
+    <text x="150" y="45" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle">SOFTWARE LICENSES</text>
+    <text x="150" y="105" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" text-anchor="middle">~70% - 80%</text>
+    <text x="150" y="130" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">The Real Production Burden</text>
+    
+    <path d="M 30 160 L 270 160" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="195" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• cPanel Admin (5 Accts): $31+/mo</text>
+    <text x="35" y="225" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• CloudLinux OS: $14 - $18/mo</text>
+    <text x="35" y="255" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• Imunify360 (Unlimited): $16 - $25/mo</text>
+    <text x="35" y="285" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• JetBackup Remote: $5.95/mo</text>
+    <text x="150" y="345" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">$65.00 - $90.00 / mo</text>
+  </g>
+
+  <!-- Right: The LicenBase Solution -->
+  <g transform="translate(660, 40)">
+    <rect width="260" height="340" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <rect x="20" y="20" width="220" height="40" rx="8" fill="#10B981" fill-opacity="0.2"/>
+    <text x="130" y="45" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle">LICENBASE OPTIMIZED</text>
+    <text x="130" y="105" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" text-anchor="middle">SAVE 75%+</text>
+    <text x="130" y="130" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">Wholesale Automated Licensing</text>
+    
+    <path d="M 30 160 L 230 160" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="195" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• cPanel License from $4.00/mo</text>
+    <text x="35" y="225" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• CloudLinux from $4.00/mo</text>
+    <text x="35" y="255" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• Imunify360 from $1.50/mo</text>
+    <text x="35" y="285" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">• Instant IP-Bound Sync</text>
+    <text x="130" y="345" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Stack Under $30.00 / mo</text>
+  </g>
+</svg>

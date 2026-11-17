@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t4 d4">
+  <title id="t4">CloudLinux Solo vs Admin vs Shared Pro Feature Matrix</title>
+  <desc id="d4">Feature breakdown of CloudLinux editions showing account limits, CageFS, and LVE resource limits.</desc>
+  <rect width="960" height="420" rx="16" fill="#0A0F1D"/>
+
+  <!-- Solo -->
+  <g transform="translate(40, 45)">
+    <rect width="270" height="330" rx="12" fill="#131C31" stroke="#2563EB" stroke-width="2"/>
+    <text x="25" y="40" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="13" font-weight="700">CLOUDLINUX SOLO</text>
+    <text x="25" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="800">1 Account (VPS)</text>
+    <path d="M 25 95 L 245 95" stroke="#1E293B" stroke-width="1"/>
+    <text x="25" y="130" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Single-Tenant Workload</text>
+    <text x="25" y="160" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ PHP X-Ray Performance</text>
+    <text x="25" y="190" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Slow-Query Database Tracer</text>
+    <text x="25" y="220" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ HardenedPHP Security</text>
+    <text x="25" y="250" fill="#64748B" font-family="system-ui, sans-serif" font-size="13">✗ No Multi-Tenant CageFS</text>
+    <rect x="25" y="280" width="220" height="40" rx="8" fill="#1E293B"/>
+    <text x="135" y="305" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Single WooCommerce / SaaS</text>
+  </g>
+
+  <!-- Admin -->
+  <g transform="translate(345, 45)">
+    <rect width="270" height="330" rx="12" fill="#131C31" stroke="#10B981" stroke-width="2"/>
+    <text x="25" y="40" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="700">CLOUDLINUX ADMIN</text>
+    <text x="25" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="800">Up to 5 Accounts</text>
+    <path d="M 25 95 L 245 95" stroke="#1E293B" stroke-width="1"/>
+    <text x="25" y="130" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Multi-Account Isolation</text>
+    <text x="25" y="160" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Full CageFS File Isolation</text>
+    <text x="25" y="190" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Per-User LVE Limits</text>
+    <text x="25" y="220" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Multiple PHP Versions</text>
+    <text x="25" y="250" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Resource Usage Monitor</text>
+    <rect x="25" y="280" width="220" height="40" rx="8" fill="#064E3B"/>
+    <text x="135" y="305" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Digital Agencies / Resellers</text>
+  </g>
+
+  <!-- Shared Pro -->
+  <g transform="translate(650, 45)">
+    <rect width="270" height="330" rx="12" fill="#131C31" stroke="#F59E0B" stroke-width="2"/>
+    <text x="25" y="40" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="13" font-weight="700">CLOUDLINUX PRO</text>
+    <text x="25" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="800">Unlimited Accounts</text>
+    <path d="M 25 95 L 245 95" stroke="#1E293B" stroke-width="1"/>
+    <text x="25" y="130" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Full Multi-Tenant Hosting</text>
+    <text x="25" y="160" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Dynamic Centralized LVE</text>
+    <text x="25" y="190" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ MySQL Governor Throttling</text>
+    <text x="25" y="220" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Mod_lsapi High-Speed PHP</text>
+    <text x="25" y="250" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">✓ Inode &amp; IOPS Hard Limits</text>
+    <rect x="25" y="280" width="220" height="40" rx="8" fill="#78350F"/>
+    <text x="135" y="305" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Commercial Web Hosts</text>
+  </g>
+</svg>

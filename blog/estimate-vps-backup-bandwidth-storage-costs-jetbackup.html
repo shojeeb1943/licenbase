@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script src="/assets/js/consent.js"></script>
+    <!-- Google Tag Manager (Non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = document.getElementsByTagName('script')[0],
+          j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MWQQGP5R';
+      f.parentNode.insertBefore(j, f);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGTM, 1500); });
+    } else {
+      setTimeout(loadGTM, 2000);
+    }
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estimate VPS Backup Bandwidth & Storage Cost | LicenBase</title>
+  <meta name="description" content="Learn how to estimate VPS backup bandwidth and remote storage costs before scaling. Sizing formulas, compression ratios, and JetBackup configuration tips." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://licenbase.com/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="LicenBase" />
+  <meta property="og:title" content="Estimate VPS Backup Bandwidth & Storage Cost" />
+  <meta property="og:description" content="Learn how to estimate VPS backup bandwidth and remote storage costs before scaling. Sizing formulas, compression ratios, and JetBackup configuration tips." />
+  <meta property="og:url" content="https://licenbase.com/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup" />
+  <meta property="og:image" content="https://licenbase.com/assets/img/og/blog-estimate-vps-backup-bandwidth-storage-costs-jetbackup.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Diagram showing VPS backup bandwidth calculations, compression ratios, and remote cloud storage destination sizing." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-11-17" />
+  <meta property="article:modified_time" content="2026-11-17" />
+  <meta property="article:section" content="How-to" />
+  <meta property="article:author" content="LicenBase" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://licenbase.com/assets/img/og/blog-estimate-vps-backup-bandwidth-storage-costs-jetbackup.png" />
+  <meta name="twitter:image:alt" content="Diagram showing VPS backup bandwidth calculations, compression ratios, and remote cloud storage destination sizing." />
+  <meta name="twitter:title" content="Estimate VPS Backup Bandwidth & Storage Cost" />
+  <meta name="twitter:description" content="Learn how to estimate VPS backup bandwidth and remote storage costs before scaling. Sizing formulas, compression ratios, and JetBackup configuration tips." />
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://licenbase.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://licenbase.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Estimate VPS Backup Bandwidth & Storage Costs (JetBackup)", "item": "https://licenbase.com/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Estimate VPS Backup Bandwidth & Storage Costs (JetBackup)", "description": "Learn how to estimate VPS backup bandwidth and remote storage costs before scaling. Sizing formulas, compression ratios, and JetBackup configuration tips.", "image": ["https://licenbase.com/assets/img/og/blog-estimate-vps-backup-bandwidth-storage-costs-jetbackup.png"], "datePublished": "2026-11-17", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "LicenBase", "url": "https://licenbase.com/"}, "publisher": {"@type": "Organization", "name": "LicenBase", "logo": {"@type": "ImageObject", "url": "https://licenbase.com/assets/img/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://licenbase.com/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup"}, "articleSection": "How-to", "inLanguage": "en", "wordCount": 825}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does JetBackup reduce backup bandwidth consumption?", "acceptedAnswer": {"@type": "Answer", "text": "JetBackup uses block-level incremental snapshot technology and deduplication. Instead of re-uploading an entire 100 GB website every night, JetBackup transfers only the specific modified binary blocks or files since the previous snapshot, slashing daily network egress by up to 95%."}}, {"@type": "Question", "name": "What compression ratio should I expect for web hosting backups?", "acceptedAnswer": {"@type": "Answer", "text": "Standard web files, databases, and configuration scripts typically achieve a 2:1 to 3:1 compression ratio using modern algorithms like Zstandard (zstd) or Gzip. However, already compressed assets (such as JPEG, PNG, and MP4 media) will not compress further."}}, {"@type": "Question", "name": "Which remote storage destination is most cost-effective for JetBackup?", "acceptedAnswer": {"@type": "Answer", "text": "S3-compatible object storage providers like Wasabi ($6.99/TB/mo with zero egress fees) and Backblaze B2 ($6.00/TB/mo with generous free egress) offer massive cost advantages over traditional AWS S3 Standard ($23.00/TB/mo plus egress transfer penalties)."}}, {"@type": "Question", "name": "How do I calculate retention storage requirements for 30 daily backups?", "acceptedAnswer": {"@type": "Answer", "text": "Use the baseline retention formula: Storage = Base Compressed Size + (Daily Changed Data * Retention Days * Deduplication Efficiency Factor). For a 100 GB server with a 4% daily change rate and 30-day retention, total remote storage needs average 180 to 220 GB."}}]}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512x512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0f1d" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    <!-- Fonts (Optimized Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Manrope:wght@600..800&display=swap" /></noscript>
+
+  <!-- Swiper (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+  <!-- Precompiled Production CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css?v=2" />
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWQQGP5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============ 01 · TOP BAR ============ -->
+  <div class="lb-topbar">
+    <div class="lb-shell">
+
+
+      <header id="site-header" class="lb-header">
+        <div class="lb-header-inner">
+          <!-- Logo -->
+          <a href="/" class="lb-logo" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-logo-img" width="250" height="100" fetchpriority="high" decoding="async" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="lb-nav" aria-label="Main navigation">
+            <!-- Hosting -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Licenses <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                                <div class="lb-mega-tiles">
+                  <a href="/cpanel-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cpanel.svg" alt="cPanel License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>cPanel License</span>
+                  </a>
+                  <a href="/litespeed-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/litespeed.svg" alt="LiteSpeed License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>LiteSpeed License</span>
+                  </a>
+                  <a href="/plesk-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/plesk.svg" alt="Plesk License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Plesk License</span>
+                  </a>
+                  <a href="/whmcs-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmcs.png" alt="WHMCS License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMCS License</span>
+                  </a>
+                  <a href="/cloudlinux-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/cloudlinux.png" alt="CloudLinux License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>CloudLinux License</span>
+                  </a>
+                  <a href="/virtualizor-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/virtualizor.png" alt="Virtualizor License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Virtualizor License</span>
+                  </a>
+                  <a href="/sitepad-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/sitepad.png" alt="SitePad License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>SitePad License</span>
+                  </a>
+                  <a href="/whmreseller-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/whmreseller.png" alt="WHMReseller License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WHMReseller License</span>
+                  </a>
+                  <a href="/softaculous-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/softaculous.png" alt="Softaculous License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Softaculous License</span>
+                  </a>
+                  <a href="/jetbackup-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/jetbackup.png" alt="JetBackup License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>JetBackup License</span>
+                  </a>
+                  <a href="/imunify360-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/imunify360.png" alt="Imunify360 License" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Imunify360 License</span>
+                  </a>
+                  <a href="/webuzo-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/webuzo.png" alt="Webuzo Control Panel" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>Webuzo Control Panel</span>
+                  </a>
+                  <a href="/wp-squared-license" class="lb-mega-tile flex items-center gap-2.5">
+                    <img src="/assets/img/icons/wp-squared.svg" alt="WP Squared" class="h-4 w-4 shrink-0 object-contain"  width="16" height="16" decoding="async" loading="lazy" />
+                    <span>WP Squared</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                Hosting <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-tiles">
+                  <a href="/shared-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="globe" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Shared Hosting<small class="block text-xs font-normal text-gray-500">Monthly, yearly &amp; lifetime</small></span>
+                  </a>
+                  <a href="/reseller-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="users" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Reseller Hosting<small class="block text-xs font-normal text-gray-500">Monthly, yearly &amp; lifetime</small></span>
+                  </a>
+                  <a href="/business-email" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="mail" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Business Email<small class="block text-xs font-normal text-gray-500">Email on your own domain</small></span>
+                  </a>
+                  <a href="/n8n-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="workflow" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>n8n Hosting<small class="block text-xs font-normal text-gray-500">Host your own n8n</small></span>
+                  </a>
+                  <a href="/openclaw-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="bot" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>OpenClaw Hosting<small class="block text-xs font-normal text-gray-500">Host your own OpenClaw</small></span>
+                  </a>
+                  <a href="/hermes-agent-hosting" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="bot" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Hermes Agent Hosting<small class="block text-xs font-normal text-gray-500">Host your own Hermes Agent</small></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- VPS mega menu -->
+            <div class="lb-drop lb-drop--mega">
+              <button type="button" class="lb-nav-link" data-drop aria-haspopup="true" aria-expanded="false">
+                VPS <i data-lucide="chevron-down" class="h-3.5 w-3.5" aria-hidden="true"></i>
+              </button>
+              <div class="lb-drop-panel">
+                <div class="lb-mega-tiles">
+                  <a href="/managed-vps" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="server" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Managed VPS<small class="block text-xs font-normal text-gray-500">cPanel &amp; license included</small></span>
+                  </a>
+                  <a href="/unmanaged-vps" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="terminal" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Unmanaged VPS<small class="block text-xs font-normal text-gray-500">Root access, no license</small></span>
+                  </a>
+                  <a href="/port-25-open-vps" class="lb-mega-tile flex items-center gap-2.5">
+                    <i data-lucide="mail" class="h-4 w-4 shrink-0 text-brand" aria-hidden="true"></i>
+                    <span>Port 25 Open VPS<small class="block text-xs font-normal text-gray-500">Outbound port 25 open</small></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/deals" class="lb-nav-link lb-nav-link--plain">Deals</a>
+            <a href="/blog/" class="lb-nav-link lb-nav-link--plain text-brand font-bold" aria-current="page">Blog</a>
+            <a href="/tools/" class="lb-nav-link lb-nav-link--plain">Tools</a>
+            <a href="/contact" class="lb-nav-link lb-nav-link--plain">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="lb-header-actions">
+            <a href="/products" class="lb-header-signin">All Products</a>
+            <a href="https://dashboard.licenbase.com/clientarea.php" class="lb-btn lb-btn--primary lb-header-cta">Dashboard</a>
+            <button id="menu-open" type="button" class="lb-icon-btn lb-menu-toggle" aria-label="Open menu">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+
+  <section class="border-b border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="max-w-3xl">
+        <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+          <a href="/" class="transition hover:text-brand">Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <a href="/blog/" class="transition hover:text-brand">Blog</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-gray-400"></i>
+          <span class="text-brand">How-to</span>
+        </nav>
+        <span class="rounded-md bg-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">How-to</span>
+        <h1 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">Estimate VPS Backup Bandwidth &amp; Storage Costs (JetBackup)</h1>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+          <span>By <span class="font-semibold text-navy">LicenBase Team</span></span>
+          <span>Published <time datetime="2026-11-17">November 17, 2026</time></span>
+          
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16">
+    <div class="lb-shell">
+      <div class="grid gap-12 lg:grid-cols-[1fr_300px]">
+        <div class="min-w-0 max-w-3xl">
+          <figure>
+            <img src="/assets/img/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup-feature.webp" alt="Diagram showing VPS backup bandwidth calculations, compression ratios, and remote cloud storage destination sizing." width="1200" height="630" class="w-full rounded-2xl border border-gray-200" fetchpriority="high" decoding="async" />
+          </figure>
+          <article class="mt-10 space-y-10 leading-relaxed text-gray-700">
+
+<p class="text-lg text-gray-600">Disaster recovery is the single most vital insurance policy for any production hosting infrastructure. Yet many server administrators fail to accurately calculate remote backup overhead until their cloud provider hits them with unexpected network egress penalties and ballooning S3 storage bills. By pairing intelligent incremental backup software like JetBackup with our interactive <strong class="text-gray-900">backup bandwidth calculator</strong>, you can accurately forecast your storage footprint, retention schedules, and monthly data transfer costs before scaling your fleet.</p>
+
+<section class="space-y-4">
+  <h2 id="the-traditional-backup-trap-full-copies-vs-block-differentials" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">The Traditional Backup Trap: Full Copies vs. Block Differentials</h2>
+  <p>Historically, backup systems executed full archives nightly (e.g., standard cPanel <code>cpbackup</code> tarballs). If your VPS stored 200 GB of client websites, your server compressed and pushed 200 GB of data over the network every 24 hours. Over a 30-day month, that generated <strong>6,000 GB (6 TB)</strong> of outbound network traffic and required massive destination storage.</p>
+  <p>Modern backup solutions like JetBackup operate on <strong>block-level incremental differentials</strong>. After the initial baseline snapshot is pushed to remote storage, subsequent runs transfer only modified files and changed database rows. This cuts daily network bandwidth consumption by 90% to 95%.</p>
+  <figure class="my-6 rounded-xl overflow-hidden border border-gray-200 bg-gray-900/5 p-2">
+  <img src="/assets/img/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup-1.svg" alt="Diagram showing VPS backup bandwidth calculations, compression ratios, and remote cloud storage destination sizing." width="960" height="420" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+  <figcaption class="text-xs text-gray-500 text-center mt-2 px-2">Figure 1: Production VPS to remote S3/Wasabi backup pipeline and retention sizing.</figcaption>
+</figure>
+</section>
+
+<section class="space-y-4">
+  <h2 id="the-mathematical-formulas-for-bandwidth-storage-sizing" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">The Mathematical Formulas for Bandwidth &amp; Storage Sizing</h2>
+  <p>To project your infrastructure costs accurately, model your data using three primary mathematical equations:</p>
+
+  <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">1. Daily Network Egress Formula</h3>
+  <pre class="bg-gray-900 text-gray-100 p-4 rounded-xl text-xs sm:text-sm overflow-x-auto"><code>Daily Transfer (GB) = (Source Disk Used in GB * Daily Change Rate) / Compression Ratio
+
+# Example: 150 GB used storage, 5% daily change rate, 2:1 zstd compression:
+Daily Transfer = (150 * 0.05) / 2 = 3.75 GB / day
+Monthly Bandwidth = 3.75 GB * 30 days = 112.5 GB / month</code></pre>
+
+  <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">2. Total Remote Storage Retention Formula</h3>
+  <pre class="bg-gray-900 text-gray-100 p-4 rounded-xl text-xs sm:text-sm overflow-x-auto"><code>Total Destination Storage = Base Snapshot + (Daily Transfer * (Retention Days - 1) * Dedup Factor)
+
+# Example for 30 daily snapshots with 150 GB source data:
+Base Snapshot = 150 GB / 2 = 75 GB
+Incremental Pool = (3.75 GB * 29 * 0.85) = 92.4 GB
+Total Required Storage = 75 + 92.4 = 167.4 GB</code></pre>
+</section>
+
+<section class="space-y-4">
+  <h2 id="comparing-cloud-storage-destinations-wasabi-vs-b2-vs-s3" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Comparing Cloud Storage Destinations (Wasabi vs B2 vs S3)</h2>
+  <p>Where you send your backups drastically dictates your ongoing operational expenditure. Here is how leading S3-compatible cloud storage providers compare for a 1 TB backup repository:</p>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full text-left text-sm text-gray-700">
+      <thead class="bg-gray-50 text-xs font-semibold uppercase text-gray-900">
+        <tr>
+          <th class="p-3">Storage Provider</th>
+          <th class="p-3">Storage Cost (per TB/mo)</th>
+          <th class="p-3">Egress Cost (per TB restore)</th>
+          <th class="p-3">Best Architecture Fit</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <td class="p-3 font-semibold">Wasabi Hot Cloud Storage</td>
+          <td class="p-3 text-emerald-600 font-bold">$6.99 / TB</td>
+          <td class="p-3 text-emerald-600 font-bold">$0.00 (Zero Egress Fees)</td>
+          <td class="p-3">Best overall for high-frequency JetBackup repositories</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold">Backblaze B2</td>
+          <td class="p-3 text-emerald-600 font-bold">$6.00 / TB</td>
+          <td class="p-3 text-gray-600 font-medium">$10.00 / TB (Free 3x storage)</td>
+          <td class="p-3">Excellent for low-frequency archives &amp; secondary mirrors</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold">AWS S3 Standard</td>
+          <td class="p-3 text-red-600 font-medium">$23.00 / TB</td>
+          <td class="p-3 text-red-600 font-medium">$90.00 / TB</td>
+          <td class="p-3">Legacy enterprise setups with integrated AWS workloads</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold">Hetzner Storage Box</td>
+          <td class="p-3 text-emerald-600 font-bold">~$4.20 / TB</td>
+          <td class="p-3 text-emerald-600 font-bold">$0.00 (Unlimited via SSH/FTP)</td>
+          <td class="p-3">European workloads requiring direct rsync/SSH access</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="space-y-4">
+  <h2 id="configuring-jetbackup-for-maximum-bandwidth-efficiency" style="scroll-margin-top:7rem" class="text-2xl font-bold text-gray-900 mt-8 mb-3">Configuring JetBackup for Maximum Bandwidth Efficiency</h2>
+  <p>To keep data transfer and storage costs at absolute minimums, implement these four JetBackup configuration standards:</p>
+  <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+    <li><strong>Exclude Non-Critical Cache &amp; Logs:</strong> In JetBackup, configure exclude filters for <code>*/wp-content/cache/*</code>, <code>*/error_log</code>, and <code>*/tmp/*</code> to avoid wasting bandwidth transferring disposable assets.</li>
+    <li><strong>Enable Zstandard (zstd) Multithreaded Compression:</strong> Zstandard provides superior compression ratios compared to standard gzip while consuming significantly fewer CPU cycles on your server.</li>
+    <li><strong>Schedule Backups During Off-Peak Windows:</strong> Set your backup schedules between 02:00 and 04:00 AM server local time to prevent backup I/O from contending with production user traffic.</li>
+    <li><strong>Model Your Growth in Advance:</strong> Utilize our <a href="/tools/backup-bandwidth-calculator/" class="text-blue-600 font-semibold hover:underline">backup bandwidth calculator</a> to project data transfer limits and combine it with our <a href="/tools/vps-cost-calculator/" class="text-blue-600 font-semibold hover:underline">VPS cost calculator</a> for complete infrastructure forecasting.</li>
+  </ol>
+  <p>Deploying a licensed copy of JetBackup is cost-effective: you can license an active server instance through our <a href="/jetbackup-license" class="text-blue-600 font-semibold hover:underline">JetBackup license</a> portal for just <strong>$1.25 per month</strong>, backed by our team at <a href="/about" class="text-blue-600 font-semibold hover:underline">LicenBase</a>. Whether protecting accounts managed under a <a href="/cpanel-license" class="text-blue-600 font-semibold hover:underline">cPanel license</a> or a lightweight <a href="/directadmin-license" class="text-blue-600 font-semibold hover:underline">DirectAdmin license</a>, JetBackup ensures seamless data resilience.</p>
+</section>
+
+<section class="space-y-4"><h2 id="faq" style="scroll-margin-top:7rem" class="font-display text-2xl font-bold tracking-tight text-navy">Frequently asked questions</h2><div class="lb-stagger mt-6 space-y-3">
+        <div class="lb-faq lb-faq-active rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-1" class="lb-faq-btn" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How does JetBackup reduce backup bandwidth consumption?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-1" class="lb-faq-panel lb-faq-open" role="region" aria-labelledby="faq-question-1">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">JetBackup uses block-level incremental snapshot technology and deduplication. Instead of re-uploading an entire 100 GB website every night, JetBackup transfers only the specific modified binary blocks or files since the previous snapshot, slashing daily network egress by up to 95%.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-2" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">What compression ratio should I expect for web hosting backups?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-2" class="lb-faq-panel" role="region" aria-labelledby="faq-question-2">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Standard web files, databases, and configuration scripts typically achieve a 2:1 to 3:1 compression ratio using modern algorithms like Zstandard (zstd) or Gzip. However, already compressed assets (such as JPEG, PNG, and MP4 media) will not compress further.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-3" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">Which remote storage destination is most cost-effective for JetBackup?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-3" class="lb-faq-panel" role="region" aria-labelledby="faq-question-3">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">S3-compatible object storage providers like Wasabi ($6.99/TB/mo with zero egress fees) and Backblaze B2 ($6.00/TB/mo with generous free egress) offer massive cost advantages over traditional AWS S3 Standard ($23.00/TB/mo plus egress transfer penalties).</p>
+            </div>
+          </div>
+        </div>
+        <div class="lb-faq rounded-2xl border border-gray-200 bg-white shadow-sm transition">
+          <button id="faq-question-4" class="lb-faq-btn" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+            <span class="lb-faq-icon-wrap"><i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span class="lb-faq-question">How do I calculate retention storage requirements for 30 daily backups?</span>
+            <span class="lb-faq-chevron" aria-hidden="true"><i data-lucide="chevron-down" class="lb-faq-icon h-5 w-5"></i></span>
+          </button>
+          <div id="faq-answer-4" class="lb-faq-panel" role="region" aria-labelledby="faq-question-4">
+            <div class="lb-faq-answer-wrap">
+              <p class="lb-faq-answer">Use the baseline retention formula: Storage = Base Compressed Size + (Daily Changed Data * Retention Days * Deduplication Efficiency Factor). For a 100 GB server with a 4% daily change rate and 30-day retention, total remote storage needs average 180 to 220 GB.</p>
+            </div>
+          </div>
+        </div>
+</div></section>
+
+          </article>
+          <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-6">
+            <span class="mr-2 text-sm font-bold text-navy">Share this article</span>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flicenbase.com%2Fblog%2Festimate-vps-backup-bandwidth-storage-costs-jetbackup&amp;text=Estimate%20VPS%20Backup%20Bandwidth%20%26%20Storage%20Costs%20%28JetBackup%29" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="twitter" class="h-3.5 w-3.5"></i>X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flicenbase.com%2Fblog%2Festimate-vps-backup-bandwidth-storage-costs-jetbackup" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="linkedin" class="h-3.5 w-3.5"></i>LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flicenbase.com%2Fblog%2Festimate-vps-backup-bandwidth-storage-costs-jetbackup" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="facebook" class="h-3.5 w-3.5"></i>Facebook</a><a href="mailto:?subject=Estimate%20VPS%20Backup%20Bandwidth%20%26%20Storage%20Costs%20%28JetBackup%29&amp;body=https%3A%2F%2Flicenbase.com%2Fblog%2Festimate-vps-backup-bandwidth-storage-costs-jetbackup" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-brand/30 hover:text-brand"><i data-lucide="mail" class="h-3.5 w-3.5"></i>Email</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="space-y-6 lg:sticky lg:top-28">
+            <nav id="toc" aria-label="Table of contents" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">In this article</h2>
+              <div class="mt-3 space-y-0.5"><a href="#the-traditional-backup-trap-full-copies-vs-block-differentials" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Traditional Backup Trap: Full Copies vs. Block Differentials</a><a href="#the-mathematical-formulas-for-bandwidth-storage-sizing" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">The Mathematical Formulas for Bandwidth &amp; Storage Sizing</a><a href="#comparing-cloud-storage-destinations-wasabi-vs-b2-vs-s3" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Comparing Cloud Storage Destinations (Wasabi vs B2 vs S3)</a><a href="#configuring-jetbackup-for-maximum-bandwidth-efficiency" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Configuring JetBackup for Maximum Bandwidth Efficiency</a><a href="#faq" class="block rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 transition hover:bg-brandSoft hover:text-brand">Frequently asked questions</a></div>
+            </nav>
+            <div class="rounded-2xl border border-gray-200 bg-mist p-5 shadow-sm">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500">Related licenses</h2>
+              <ul class="mt-3 space-y-1"><li><a href="/jetbackup-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">JetBackup License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/cpanel-license" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">cPanel &amp; WHM License<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li><li><a href="/unmanaged-vps" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-navy transition hover:bg-brandSoft hover:text-brand">Unmanaged VPS<i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></a></li></ul>
+              <a href="/products" class="lb-btn lb-btn--primary mt-4 w-full text-center">Browse all licenses</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 bg-mist py-12 lg:py-16">
+    <div class="lb-shell">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-navy">Keep reading</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/install-imunify360-plesk-cpanel-setup-guide" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/install-imunify360-plesk-cpanel-setup-guide-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Install Imunify360 on Plesk &amp; cPanel: Complete Guide</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Complete step-by-step guide to install Imunify360 on cPanel and Plesk. CLI installation commands, firewall rules, and license options.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">November 17, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/fix-ssl-certificate-chain-handshake-failures-cpanel" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-ssl-certificate-chain-handshake-failures-cpanel-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix SSL Certificate Chain &amp; Handshake Failures on cPanel</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Troubleshoot SSL certificate chain and TLS handshake errors on cPanel. Resolve missing intermediate CA bundles, fix AutoSSL stall-outs, and test with OpenSSL.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">November 15, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/fix-whmcs-license-activation-failed-new-vps-installs" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-whmcs-license-activation-failed-new-vps-installs-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix &quot;WHMCS License Activation Failed&quot; on New VPS</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Resolve 'WHMCS license activation failed' on Linux VPS. Troubleshoot cURL SSL handshakes, re-issue IP addresses, and configure CSF firewall port 443.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">November 14, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/fix-ssh-connection-refused-port-22-timeout-linux-vps" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-ssh-connection-refused-port-22-timeout-linux-vps-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix SSH Connection Refused and Port 22 Timeout on VPS</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Troubleshoot SSH connection errors on Linux VPS. Resolve Port 22 connection refused vs timed out, reset iptables/CSF, and recover via VNC console.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">November 14, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/fix-virtualizor-provisioning-errors-ip-subnet-conflicts" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/fix-virtualizor-provisioning-errors-ip-subnet-conflicts-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Fix Virtualizor Provisioning Errors &amp; IP Conflicts</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Troubleshoot Virtualizor VPS creation errors. Fix storage pool exhaustion, network bridge viifbr0 drops, and IP subnet conflicts on KVM nodes.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">November 14, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+        <a href="/blog/identify-process-using-port-80-443-linux-vps" data-card-index="0" class="lb-blog-card group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:border-brand/30 hover:shadow-lg">
+          <img src="/assets/img/blog/identify-process-using-port-80-443-linux-vps-thumb.webp" alt="" width="640" height="336" class="aspect-[1200/630] w-full object-cover" loading="lazy" decoding="async" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="rounded-md bg-mist px-2.5 py-1 font-bold text-brand uppercase tracking-wider">How-to</span>
+                <span class="text-gray-400 font-medium">3 min read</span>
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold text-navy transition-colors group-hover:text-brand">How to Check Which Process Is Using Port 80 and 443 on Linux VPS</h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-500">Find which process is using Port 80 and 443 on Linux. Use lsof, ss, and netstat to resolve Nginx, Apache, and LiteSpeed port conflicts.</p>
+            </div>
+            <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-3 text-xs">
+              <span class="font-medium text-gray-400">November 12, 2026</span>
+              <span class="inline-flex items-center gap-1 font-bold text-brand">Read article <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="footer" class="border-t border-gray-200 bg-white pt-16 pb-12 text-sm text-gray-500">
+    <div class="lb-shell">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/" class="inline-block" aria-label="LicenBase home">
+            <img src="/assets/img/logo.png" alt="LicenBase" class="lb-footer-logo h-18 w-auto" width="250" height="100" loading="lazy" decoding="async" />
+          </a>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+            LicenBase is the trusted software licensing platform for web hosts, enterprises, and digital agencies. Fast, automated, authentic license deployment.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+            <i data-lucide="mail" class="h-4 w-4 text-brand"></i>
+            <a href="mailto:support@licenbase.com" class="transition hover:text-brand">support@licenbase.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Popular Licenses -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Popular Licenses</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/cpanel-license" class="transition hover:text-brand">cPanel &amp; WHM</a></li>
+            <li><a href="/litespeed-license" class="transition hover:text-brand">LiteSpeed Web Server</a></li>
+            <li><a href="/plesk-license" class="transition hover:text-brand">Plesk Control Panel</a></li>
+            <li><a href="/cloudlinux-license" class="transition hover:text-brand">CloudLinux OS</a></li>
+            <li><a href="/whmcs-license" class="transition hover:text-brand">WHMCS Billing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tools & Panels -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Panels &amp; Utilities</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/virtualizor-license" class="transition hover:text-brand">Virtualizor VPS</a></li>
+            <li><a href="/imunify360-license" class="transition hover:text-brand">Imunify360 Security</a></li>
+            <li><a href="/jetbackup-license" class="transition hover:text-brand">JetBackup 5</a></li>
+            <li><a href="/softaculous-license" class="transition hover:text-brand">Softaculous</a></li>
+            <li><a href="/sitepad-license" class="transition hover:text-brand">SitePad Builder</a></li>
+          </ul>
+          <h3 class="pt-3 font-display text-xs font-bold uppercase tracking-wider text-navy">Hosting &amp; VPS</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/managed-vps" class="transition hover:text-brand">Managed VPS</a></li>
+            <li><a href="/unmanaged-vps" class="transition hover:text-brand">Unmanaged VPS</a></li>
+            <li><a href="/port-25-open-vps" class="transition hover:text-brand">Port 25 Open VPS</a></li>
+            <li><a href="/shared-hosting" class="transition hover:text-brand">Shared Hosting</a></li>
+            <li><a href="/reseller-hosting" class="transition hover:text-brand">Reseller Hosting</a></li>
+            <li><a href="/business-email" class="transition hover:text-brand">Business Email</a></li>
+            <li><a href="/n8n-hosting" class="transition hover:text-brand">n8n Hosting</a></li>
+            <li><a href="/openclaw-hosting" class="transition hover:text-brand">OpenClaw Hosting</a></li>
+            <li><a href="/hermes-agent-hosting" class="transition hover:text-brand">Hermes Agent Hosting</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Policies -->
+        <div class="space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-navy">Legal &amp; Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/terms-of-service" class="transition hover:text-brand">Terms of Service</a></li>
+            <li><a href="/privacy-policy" class="transition hover:text-brand">Privacy Policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings class="transition hover:text-brand">Cookie Settings</a></li>
+            <li><a href="/refund-policy" class="transition hover:text-brand">Refund Policy</a></li>
+            <li><a href="/license-policy" class="transition hover:text-brand">License Policy</a></li>
+            <li><a href="/blog/" class="transition hover:text-brand">Blog</a></li>
+            <li><a href="/tools/" class="transition hover:text-brand">Network Tools</a></li>
+            <li><a href="/about" class="transition hover:text-brand">About Us</a></li>
+            <li><a href="/contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="https://dashboard.licenbase.com/submitticket.php" class="transition hover:text-brand">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 sm:flex-row">
+        <p>© 2026 LicenBase. All rights reserved. Registered trademark of genuine software licenses.</p>
+        <p class="flex items-center gap-1"><i data-lucide="lock" class="h-3.5 w-3.5 text-accent"></i> 256-Bit SSL Encrypted &amp; Non-Refundable Digital Provisioning</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-[60] lg:hidden" aria-hidden="true" inert>
+    <div id="drawer-backdrop" class="absolute inset-0 bg-navy/50 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="drawer" class="absolute right-0 top-0 flex h-full w-[85%] max-w-sm translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out">
+      <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+        <a href="/" class="inline-block" aria-label="LicenBase home">
+          <img src="/assets/img/logo.png" alt="LicenBase" class="h-8 w-auto" width="70" height="28" loading="lazy" decoding="async" />
+        </a>
+        <button id="menu-close" type="button" aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-lg text-gray-500 transition hover:bg-mist hover:text-navy">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto overscroll-contain px-5 py-4" aria-label="Mobile navigation" data-lenis-prevent>
+        <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Browse</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+          <li><a href="/deals" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Combo Deals</a></li>
+          <li><a href="/blog/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Blog</a></li>
+          <li><a href="/tools/" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Tools</a></li>
+          <li><a href="/contact" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Contact</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">VPS</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/managed-vps" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Managed VPS</a></li>
+          <li><a href="/unmanaged-vps" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Unmanaged VPS</a></li>
+          <li><a href="/port-25-open-vps" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Port 25 Open VPS</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Hosting</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/shared-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Shared Hosting</a></li>
+          <li><a href="/reseller-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Reseller Hosting</a></li>
+          <li><a href="/business-email" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Business Email</a></li>
+          <li><a href="/n8n-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">n8n Hosting</a></li>
+          <li><a href="/openclaw-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">OpenClaw Hosting</a></li>
+          <li><a href="/hermes-agent-hosting" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Hermes Agent Hosting</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Licenses</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="/cpanel-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">cPanel & WHM</a></li>
+          <li><a href="/litespeed-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">LiteSpeed Web Server</a></li>
+          <li><a href="/plesk-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Plesk Control Panel</a></li>
+          <li><a href="/whmcs-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHMCS License</a></li>
+          <li><a href="/cloudlinux-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">CloudLinux OS</a></li>
+          <li><a href="/virtualizor-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Virtualizor</a></li>
+          <li><a href="/imunify360-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Imunify360</a></li>
+          <li><a href="/jetbackup-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">JetBackup</a></li>
+          <li><a href="/softaculous-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Softaculous</a></li>
+          <li><a href="/sitepad-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">SitePad</a></li>
+          <li><a href="/whmreseller-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WHM Reseller</a></li>
+          <li><a href="/webuzo-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">Webuzo Panel</a></li>
+          <li><a href="/wp-squared-license" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">WP Squared</a></li>
+        </ul>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-gray-400">Account</p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="https://dashboard.licenbase.com/clientarea.php" class="lb-mobile-link block rounded-xl bg-brand px-3 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-brandDeep">Dashboard</a></li>
+          <li><a href="/products" class="lb-mobile-link block rounded-xl px-3 py-2.5 font-semibold text-navy transition hover:bg-mist">All Products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Scripts -->
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous"></script>
+
+  <!-- Lazy-Loaded Tawk.to Live Chat -->
+  <script>
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6aa54c1357bdd83448ee36a5/1k2ar2bta';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    }
+    window.loadTawk = loadTawk;
+    ['scroll', 'keydown', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+      window.addEventListener(e, loadTawk, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadTawk, 3500); });
+    } else {
+      setTimeout(loadTawk, 4000);
+    }
+  </script>
+
+  <script defer src="/assets/js/main.min.js?v=2"></script>
+</body>
+</html>

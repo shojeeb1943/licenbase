@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t2 d2">
+  <title id="t2">How to Install Imunify360 on Plesk and cPanel Architecture</title>
+  <desc id="d2">Deployment pipeline showing Imunify360 installation, automated PAM firewall rules, and real-time malware scanner integration.</desc>
+  <rect width="960" height="420" rx="16" fill="#0B1329"/>
+
+  <!-- Step 1: Pre-flight & Key -->
+  <g transform="translate(40, 50)">
+    <rect width="260" height="320" rx="12" fill="#152238" stroke="#1E3A8A" stroke-width="2"/>
+    <circle cx="45" cy="45" r="18" fill="#3B82F6"/>
+    <text x="45" y="51" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">1</text>
+    <text x="80" y="50" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Get IP License</text>
+    <text x="25" y="95" fill="#E2E8F0" font-family="monospace" font-size="11">wget imunify360.sh</text>
+    <text x="25" y="125" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Deploy on licensed dedicated IPv4.</text>
+    <text x="25" y="150" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Automatic IP authentication or</text>
+    <text x="25" y="170" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">activation key support.</text>
+    <rect x="25" y="210" width="210" height="80" rx="8" fill="#0F172A" stroke="#334155"/>
+    <text x="35" y="240" fill="#10B981" font-family="monospace" font-size="11"># cPanel / Plesk</text>
+    <text x="35" y="265" fill="#38BDF8" font-family="monospace" font-size="11">bash i360deploy.sh</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 315 210 L 345 210" stroke="#3B82F6" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Step 2: Core Daemons & Firewall -->
+  <g transform="translate(350, 50)">
+    <rect width="260" height="320" rx="12" fill="#152238" stroke="#10B981" stroke-width="2"/>
+    <circle cx="45" cy="45" r="18" fill="#10B981"/>
+    <text x="45" y="51" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">2</text>
+    <text x="80" y="50" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="16" font-weight="700">WAF &amp; Firewalls</text>
+    <text x="25" y="95" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• ModSecurity ruleset loaded</text>
+    <text x="25" y="125" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• PAM brute-force protection</text>
+    <text x="25" y="155" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• ipset / nftables hooks</text>
+    <text x="25" y="185" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Captcha &amp; Graylist routing</text>
+    <rect x="25" y="210" width="210" height="80" rx="8" fill="#0F172A" stroke="#334155"/>
+    <text x="35" y="240" fill="#10B981" font-family="monospace" font-size="11">systemctl status</text>
+    <text x="35" y="265" fill="#38BDF8" font-family="monospace" font-size="11">imunify360.service</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 625 210 L 655 210" stroke="#10B981" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Step 3: WHM & Plesk UI -->
+  <g transform="translate(660, 50)">
+    <rect width="260" height="320" rx="12" fill="#152238" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="45" cy="45" r="18" fill="#8B5CF6"/>
+    <text x="45" y="51" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">3</text>
+    <text x="80" y="50" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Control Panel UI</text>
+    <text x="25" y="95" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Plesk Extensions &gt; Imunify</text>
+    <text x="25" y="125" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• WHM Plugins &gt; Imunify360</text>
+    <text x="25" y="155" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Automated Malware Cleanup</text>
+    <text x="25" y="185" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Reputation Management</text>
+    <rect x="25" y="210" width="210" height="80" rx="8" fill="#0F172A" stroke="#334155"/>
+    <text x="35" y="240" fill="#10B981" font-family="monospace" font-size="11">imunify360-agent</text>
+    <text x="35" y="265" fill="#38BDF8" font-family="monospace" font-size="11">check-license</text>
+  </g>
+</svg>

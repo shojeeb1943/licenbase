@@ -393,7 +393,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-cloudlinux-license-cpanel-vps-guide</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cloudlinux-license-cpanel-vps-guide.png</image:loc>
@@ -493,7 +493,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-license-vps-hosting-pricing-tips</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-license-vps-hosting-pricing-tips.png</image:loc>
@@ -523,7 +523,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cheap-cpanel-vps-hosting-compare-costs</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-vps-hosting-compare-costs.png</image:loc>
@@ -823,7 +823,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cloudlinux-license-not-detected-cpanel-fixes</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-license-not-detected-cpanel-fixes.png</image:loc>
@@ -922,6 +922,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://licenbase.com/blog/cloudlinux-solo-vs-admin-vs-pro-pricing-guide</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-cloudlinux-solo-vs-admin-vs-pro-pricing-guide.png</image:loc>
+      <image:title>CloudLinux Solo vs Admin vs Pro Tier Guide</image:title>
+      <image:caption>Compare CloudLinux Solo, Admin, and Shared Pro editions. Understand CloudLinux pricing, per-user LVE limits, CageFS isolation, and PHP selector features.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://licenbase.com/blog/cloudlinux-vs-almalinux-shared-hosting-2026-guide</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.7</priority>
@@ -1013,7 +1023,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-cost-breakdown-license-fees-vps-hosting</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-cost-breakdown-license-fees-vps-hosting.png</image:loc>
@@ -1333,7 +1343,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-login-not-working-10-common-problems-fixes</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-login-not-working-10-common-problems-fixes.png</image:loc>
@@ -1523,7 +1533,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/cpanel-webmail-ports-explained-2095-2096</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cpanel-webmail-ports-explained-2095-2096.png</image:loc>
@@ -1669,6 +1679,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-email-deliverability-spf-dkim-dmarc-dns-troubleshooting.png</image:loc>
       <image:title>Email Deliverability: SPF, DKIM, DMARC Fixes</image:title>
       <image:caption>Fix email deliverability issues with step-by-step DNS troubleshooting for SPF records, DKIM public keys, DMARC alignment, and reverse DNS PTR.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/estimate-vps-backup-bandwidth-storage-costs-jetbackup</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-estimate-vps-backup-bandwidth-storage-costs-jetbackup.png</image:loc>
+      <image:title>Estimate VPS Backup Bandwidth &amp; Storage Cost</image:title>
+      <image:caption>Learn how to estimate VPS backup bandwidth and remote storage costs before scaling. Sizing formulas, compression ratios, and JetBackup configuration tips.</image:caption>
     </image:image>
   </url>
   <url>
@@ -2033,7 +2053,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-much-does-vps-cost-2026-pricing-breakdown</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-much-does-vps-cost-2026-pricing-breakdown.png</image:loc>
@@ -2079,6 +2099,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-activate-cpanel-license-vps-guide-2026.png</image:loc>
       <image:title>How to Activate cPanel License on VPS 2026</image:title>
       <image:caption>Step-by-step guide on how to activate a cPanel license on your Linux VPS. Learn installation commands, IP verification, and troubleshooting tips.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/how-to-buy-cpanel-license-pricing-activation-checklist</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-how-to-buy-cpanel-license-pricing-activation-checklist.png</image:loc>
+      <image:title>How to Buy a cPanel License in 2026 Guide</image:title>
+      <image:caption>A complete buyer guide on how to buy a cPanel license in 2026. Compare official store vs partner pricing, verify IP binding, and run the activation checklist.</image:caption>
     </image:image>
   </url>
   <url>
@@ -2233,7 +2263,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-fix-full-var-partition-linux</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-fix-full-var-partition-linux.png</image:loc>
@@ -2293,7 +2323,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/how-to-fix-virtualizor-errors-vps-provisioning</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-how-to-fix-virtualizor-errors-vps-provisioning.png</image:loc>
@@ -2533,7 +2563,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/imunify360-malware-scanner-not-working-fixes</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-imunify360-malware-scanner-not-working-fixes.png</image:loc>
@@ -2553,7 +2583,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/imunify360-pricing-features-license-costs-guide</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-imunify360-pricing-features-license-costs-guide.png</image:loc>
@@ -2593,7 +2623,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog.png</image:loc>
@@ -2639,6 +2669,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-install-directadmin-almalinux-9.png</image:loc>
       <image:title>Install DirectAdmin on AlmaLinux 9 Guide</image:title>
       <image:caption>Learn how to install DirectAdmin on AlmaLinux 9. Complete step-by-step tutorial covering system prerequisites, firewall setup, and CustomBuild 2.0.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/install-imunify360-plesk-cpanel-setup-guide</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-install-imunify360-plesk-cpanel-setup-guide.png</image:loc>
+      <image:title>Install Imunify360 on Plesk &amp; cPanel Guide</image:title>
+      <image:caption>Learn how to install Imunify360 on Plesk and cPanel servers. Step-by-step setup commands, firewall rule configuration, and licensing tier comparisons.</image:caption>
     </image:image>
   </url>
   <url>
@@ -3103,7 +3143,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/litespeed-license-pricing-costs-vps-requirements</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-pricing-costs-vps-requirements.png</image:loc>
@@ -3113,7 +3153,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/litespeed-license-pricing-explained-vps-plan-guide</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-litespeed-license-pricing-explained-vps-plan-guide.png</image:loc>
@@ -3563,7 +3603,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/softaculous-license-vs-free-alternatives-costs</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-softaculous-license-vs-free-alternatives-costs.png</image:loc>
@@ -3783,7 +3823,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/virtualizor-vps-not-starting-causes-fixes</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-virtualizor-vps-not-starting-causes-fixes.png</image:loc>
@@ -3869,6 +3909,16 @@
       <image:loc>https://licenbase.com/assets/img/og/blog-vps-disk-usage-90-100-percent-find-storage.png</image:loc>
       <image:title>VPS Disk at 90-100%: Find What Consumes Space</image:title>
       <image:caption>Find out what is eating your VPS disk space when usage reaches 90% or 100%. Master du, ncdu, journalctl, and find commands to locate and remove hidden files.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://licenbase.com/blog/vps-hosting-cost-breakdown-licenses-vs-hardware</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://licenbase.com/assets/img/og/blog-vps-hosting-cost-breakdown-licenses-vs-hardware.png</image:loc>
+      <image:title>Hidden VPS Hosting Cost: Hardware vs Licenses</image:title>
+      <image:caption>Break down the real VPS hosting cost in 2026. Compare raw compute fees against essential software licenses like cPanel, CloudLinux, and Imunify360.</image:caption>
     </image:image>
   </url>
   <url>
@@ -4133,7 +4183,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/whmcs-license-activation-failed-fixes-guide</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-whmcs-license-activation-failed-fixes-guide.png</image:loc>
@@ -4393,7 +4443,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/cloudlinux-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/cloudlinux.png</image:loc>
@@ -4413,7 +4463,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/cpanel-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/cpanel.png</image:loc>
@@ -4453,7 +4503,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/imunify360-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/imunify360.png</image:loc>
@@ -4473,7 +4523,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/jetbackup-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/jetbackup.png</image:loc>
@@ -4493,7 +4543,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/litespeed-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/litespeed.png</image:loc>
@@ -4503,7 +4553,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/managed-vps</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/managed-vps.png</image:loc>
@@ -4533,7 +4583,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/plesk-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/plesk.png</image:loc>
@@ -4583,7 +4633,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/reseller-hosting</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/reseller-hosting.png</image:loc>
@@ -4593,7 +4643,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/shared-hosting</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/shared-hosting.png</image:loc>
@@ -4603,7 +4653,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/sitepad-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/sitepad.png</image:loc>
@@ -4613,7 +4663,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/softaculous-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/softaculous.png</image:loc>
@@ -4633,7 +4683,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/unmanaged-vps</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/unmanaged-vps.png</image:loc>
@@ -4643,7 +4693,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/virtualizor-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/virtualizor.png</image:loc>
@@ -4653,7 +4703,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/webuzo-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/webuzo.png</image:loc>
@@ -4663,7 +4713,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/whmcs-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/whmcs.png</image:loc>
@@ -4673,7 +4723,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/whmreseller-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/whmreseller.png</image:loc>
@@ -4683,7 +4733,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/wp-squared-license</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -4723,7 +4773,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/backup-bandwidth-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -4803,7 +4853,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/cloudlinux-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -4828,7 +4878,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/cpanel-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5088,7 +5138,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/hosting-cost-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5208,7 +5258,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/imunify360-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5228,7 +5278,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/ip-abuse-contact-finder/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5258,7 +5308,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/jetbackup-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5328,7 +5378,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/litespeed-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5488,7 +5538,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/plesk-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5533,7 +5583,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/redirect-checker/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5618,7 +5668,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/serp-preview/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5663,7 +5713,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/sitepad-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5673,7 +5723,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/softaculous-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5693,7 +5743,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/ssl-checker/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5838,7 +5888,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/virtualizor-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5858,7 +5908,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/vps-cost-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5868,7 +5918,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/vps-pricing-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -5908,12 +5958,12 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/whmcs-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://licenbase.com/tools/whmreseller-license-calculator/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
