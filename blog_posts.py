@@ -40182,8 +40182,7 @@ POSTS = [{'body': '\n'
          '</section>\n',
  'category': 'Guide',
  'date': '2026-10-26',
- 'description': 'Complete guide to cPanel webmail ports 2095 (HTTP) and 2096 (HTTPS). Learn direct access URLs, SSL '
-                'security, firewall setup, and instant login fixes.',
+ 'description': 'Learn when to use cPanel webmail port 2096 (SSL) vs 2095, plus copy-paste CSF, firewalld, and iptables commands to fix blocked webmail logins fast.',
  'excerpt': 'cPanel webmail ports 2095 and 2096 explained: learn direct login URLs, SSL certificates, firewall rules, '
             'and how to fix connection errors.',
  'faq': [('What is the difference between port 2095 and port 2096 in cPanel Webmail?',
@@ -40213,10 +40212,10 @@ POSTS = [{'body': '\n'
  'related': [('cpanel-license', 'cPanel & WHM license'),
              ('imunify360-license', 'Imunify360 license'),
              ('cloudlinux-license', 'CloudLinux OS license')],
- 'seo_title': 'cPanel Webmail Ports 2095 & 2096 Explained',
+ 'seo_title': 'cPanel Webmail Ports 2095 & 2096: SSL & Firewall',
  'slug': 'cpanel-webmail-ports-explained-2095-2096',
  'title': 'cPanel Webmail Ports 2095 & 2096: URLs, SSL & Login Guide',
- 'updated': '2026-11-16'},
+ 'updated': '2026-11-18'},
  {'body': '<p class="text-lg text-gray-600">Every night, Linux servers running cPanel &amp; WHM execute an automated '
           'maintenance utility known as <strong>upcp</strong> (Update cPanel). This background process keeps your '
           'server hardened against emerging vulnerabilities, updates system RPMs via yum or dnf, refreshes virus '
