@@ -527,8 +527,8 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-cheap-cpanel-vps-hosting-compare-costs.png</image:loc>
-      <image:title>Cheap cPanel VPS Hosting: Cost &amp; License Guide</image:title>
-      <image:caption>Find cheap cPanel VPS hosting without performance loss. Compare server hardware specs, cPanel licensing tiers, managed vs unmanaged setups, and total costs.</image:caption>
+      <image:title>VPS Hosting Cost Breakdown: Server vs License</image:title>
+      <image:caption>VPS hosting cost breakdown for 2026. Compare raw server compute prices, cPanel licensing fees, managed vs unmanaged setups, and realistic total monthly TCO.</image:caption>
     </image:image>
   </url>
   <url>
@@ -2583,7 +2583,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/blog/imunify360-pricing-features-license-costs-guide</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://licenbase.com/assets/img/og/blog-imunify360-pricing-features-license-costs-guide.png</image:loc>
@@ -4853,7 +4853,7 @@
   </url>
   <url>
     <loc>https://licenbase.com/tools/cloudlinux-license-calculator/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
